@@ -25,13 +25,19 @@ version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-
 The goal of `broomExtra` is to provide helper functions that assist in
 data analysis workflows involving packages `broom` and `broom.mixed`.
 
-## Installation
+# Installation
 
 You can install the development version of `broomExtra` from GitHub:
 
 ``` r
 remotes::install_github("IndrajeetPatil/broomExtra")
 ```
+
+Although all the examples below use only `stats::lm` and `lme4::lmer`
+for consistency, these functions will work with any function that is
+currently supported in `broom` and/or `broom.mixed` packages.
+
+# generic functions
 
 ## tidy dataframe
 
@@ -148,6 +154,167 @@ broomExtra::augment(lm.mod)
 # in case no augment method is available (`NULL` will be returned)
 broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 #> NULL
+```
+
+# `grouped_` version of variant functions
+
+## `grouped_tidy`
+
+``` r
+# to speed up computation, let's use only 50% of the data
+set.seed(123)
+library(lme4)
+library(ggplot2)
+
+# linear model (tidy analysis across grouping combinations)
+broomExtra::grouped_tidy(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = c(cut, color),
+  formula = price ~ carat - 1,
+  ..f = stats::lm,
+  na.action = na.omit,
+  tidy.args = list(quick = TRUE)
+)
+#> # A tibble: 35 x 4
+#>    cut   color term  estimate
+#>    <ord> <ord> <chr>    <dbl>
+#>  1 Fair  D     carat    5162.
+#>  2 Fair  E     carat    5020.
+#>  3 Fair  F     carat    4780.
+#>  4 Fair  G     carat    4370.
+#>  5 Fair  H     carat    4329.
+#>  6 Fair  I     carat    4196.
+#>  7 Fair  J     carat    3934.
+#>  8 Good  D     carat    5213.
+#>  9 Good  E     carat    5114.
+#> 10 Good  F     carat    5165.
+#> # ... with 25 more rows
+
+# linear mixed effects model (tidy analysis across grouping combinations)
+broomExtra::grouped_tidy(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = cut,
+  ..f = lme4::lmer,
+  formula = price ~ carat + (carat | color) - 1,
+  control = lme4::lmerControl(optimizer = "bobyqa"),
+  tidy.args = list(conf.int = TRUE, conf.level = 0.99)
+)
+#> # A tibble: 25 x 9
+#>    cut   effect group term  estimate std.error statistic conf.low conf.high
+#>    <ord> <chr>  <chr> <chr>    <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
+#>  1 Fair  fixed  <NA>  carat  2.78e+3      228.      12.2    2194.     3370.
+#>  2 Fair  ran_p~ color sd__~  2.32e+3       NA       NA        NA        NA 
+#>  3 Fair  ran_p~ color sd__~  3.75e+3       NA       NA        NA        NA 
+#>  4 Fair  ran_p~ color cor_~ -9.91e-1       NA       NA        NA        NA 
+#>  5 Fair  ran_p~ Resi~ sd__~  1.54e+3       NA       NA        NA        NA 
+#>  6 Good  fixed  <NA>  carat  5.70e+3      214.      26.6    5146.     6249.
+#>  7 Good  ran_p~ color sd__~  2.61e+3       NA       NA        NA        NA 
+#>  8 Good  ran_p~ color sd__~  1.94e+3       NA       NA        NA        NA 
+#>  9 Good  ran_p~ color cor_~ -9.58e-1       NA       NA        NA        NA 
+#> 10 Good  ran_p~ Resi~ sd__~  1.36e+3       NA       NA        NA        NA 
+#> # ... with 15 more rows
+```
+
+## `grouped_glance`
+
+``` r
+# to speed up computation, let's use only 50% of the data
+set.seed(123)
+
+# linear model (model summaries across grouping combinations)
+broomExtra::grouped_glance(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = c(cut, color),
+  formula = price ~ carat - 1,
+  ..f = stats::lm,
+  na.action = na.omit
+)
+#> # A tibble: 35 x 13
+#>    cut   color r.squared adj.r.squared sigma statistic   p.value    df
+#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>     <dbl> <int>
+#>  1 Fair  D         0.893         0.892 1913.      654. 1.16e- 39     1
+#>  2 Fair  E         0.877         0.876 1761.      786. 6.59e- 52     1
+#>  3 Fair  F         0.873         0.872 1888.     1084. 1.20e- 72     1
+#>  4 Fair  G         0.857         0.857 1976.     1011. 5.70e- 73     1
+#>  5 Fair  H         0.885         0.884 2065.     1108. 1.66e- 69     1
+#>  6 Fair  I         0.886         0.885 2010.      724. 1.14e- 45     1
+#>  7 Fair  J         0.910         0.909 1996.      689. 2.59e- 37     1
+#>  8 Good  D         0.848         0.847 1827.     1817. 2.47e-135     1
+#>  9 Good  E         0.869         0.869 1636.     3365. 1.00e-225     1
+#> 10 Good  F         0.873         0.872 1700.     3054. 1.24e-201     1
+#> # ... with 25 more rows, and 5 more variables: logLik <dbl>, AIC <dbl>,
+#> #   BIC <dbl>, deviance <dbl>, df.residual <int>
+
+# linear mixed effects model (model summaries across grouping combinations)
+broomExtra::grouped_glance(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = cut,
+  ..f = lme4::lmer,
+  formula = price ~ carat + (carat | color) - 1,
+  control = lme4::lmerControl(optimizer = "bobyqa")
+)
+#> # A tibble: 5 x 7
+#>   cut       sigma  logLik     AIC     BIC REMLcrit df.residual
+#>   <ord>     <dbl>   <dbl>   <dbl>   <dbl>    <dbl>       <int>
+#> 1 Fair      1541.  -6945.  13901.  13924.   13891.         786
+#> 2 Good      1361. -21622.  43254.  43283.   43244.        2496
+#> 3 Very Good 1372. -52554. 105117. 105151.  105107.        6072
+#> 4 Premium   1574. -60379. 120767. 120801.  120757.        6868
+#> 5 Ideal     1294. -92129. 184268. 184304.  184258.       10723
+```
+
+## `grouped_augment`
+
+``` r
+# to speed up computation, let's use only 50% of the data
+set.seed(123)
+
+# linear model
+broomExtra::grouped_augment(
+  data = ggplot2::diamonds,
+  grouping.vars = c(cut, color),
+  ..f = stats::lm,
+  formula = price ~ carat - 1
+)
+#> # A tibble: 53,940 x 10
+#>    cut   color price carat .fitted .resid .std.resid    .hat .sigma .cooksd
+#>    <ord> <ord> <int> <dbl>   <dbl>  <dbl>      <dbl>   <dbl>  <dbl>   <dbl>
+#>  1 Fair  D      2848  0.75   3795.   947.     -0.522 0.00342  1822. 9.33e-4
+#>  2 Fair  D      2858  0.71   3593.   735.     -0.405 0.00306  1823. 5.03e-4
+#>  3 Fair  D      2885  0.9    4554.  1669.     -0.920 0.00492  1819. 4.19e-3
+#>  4 Fair  D      2974  1      5060.  2086.     -1.15  0.00607  1816. 8.09e-3
+#>  5 Fair  D      3003  1.01   5111.  2108.     -1.16  0.00620  1816. 8.43e-3
+#>  6 Fair  D      3047  0.73   3694.   647.     -0.356 0.00324  1823. 4.12e-4
+#>  7 Fair  D      3077  0.71   3593.   516.     -0.284 0.00306  1823. 2.48e-4
+#>  8 Fair  D      3079  0.91   4605.  1526.     -0.841 0.00503  1820. 3.58e-3
+#>  9 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 2.74e-3
+#> 10 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 2.74e-3
+#> # ... with 53,930 more rows
+
+# linear mixed-effects model
+broomExtra::grouped_augment(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = cut,
+  ..f = lme4::lmer,
+  formula = price ~ carat + (carat | color) - 1,
+  control = lme4::lmerControl(optimizer = "bobyqa")
+)
+#> singular fit
+#> # A tibble: 26,970 x 15
+#>    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu
+#>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>   <dbl>  <dbl> <dbl>
+#>  1 Fair   1323  0.5  D        975.   348. 0.00263 1.10e-4  1136.  975.
+#>  2 Fair   1939  0.9  G       3409. -1470. 0.00272 2.04e-3  2044. 3409.
+#>  3 Fair   5484  1    G       4006.  1478. 0.00356 2.70e-3  2271. 4006.
+#>  4 Fair   4939  1.5  H       6599. -1660. 0.00879 8.49e-3  3407. 6599.
+#>  5 Fair   3855  0.91 D       3990.  -135. 0.00542 3.43e-5  2067. 3990.
+#>  6 Fair   5096  1    D       4652.   444. 0.00759 5.24e-4  2271. 4652.
+#>  7 Fair    659  0.41 H        531.   128. 0.00314 1.79e-5   931.  531.
+#>  8 Fair   2724  0.84 G       3050.  -326. 0.00237 8.75e-5  1908. 3050.
+#>  9 Fair   4368  1.2  I       4830.  -462. 0.00667 4.98e-4  2726. 4830.
+#> 10 Fair   5350  1.02 E       5061.   289. 0.00893 2.61e-4  2317. 5061.
+#> # ... with 26,960 more rows, and 5 more variables: .offset <dbl>,
+#> #   .sqrtXwt <dbl>, .sqrtrwt <dbl>, .weights <dbl>, .wtres <dbl>
 ```
 
 # Code coverage

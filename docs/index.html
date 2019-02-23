@@ -91,12 +91,17 @@
 <!-- badges: start -->
 
 <p>The goal of <code>broomExtra</code> is to provide helper functions that assist in data analysis workflows involving packages <code>broom</code> and <code>broom.mixed</code>.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+</div>
+<div id="installation" class="section level1">
+<h1 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h1>
 <p>You can install the development version of <code>broomExtra</code> from GitHub:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"IndrajeetPatil/broomExtra"</span>)</a></code></pre></div>
+<p>Although all the examples below use only <code><a href="https://www.rdocumentation.org/packages/stats/topics/lm">stats::lm</a></code> and <code><a href="https://www.rdocumentation.org/packages/lme4/topics/lmer">lme4::lmer</a></code> for consistency, these functions will work with any function that is currently supported in <code>broom</code> and/or <code>broom.mixed</code> packages.</p>
 </div>
+<div id="generic-functions" class="section level1">
+<h1 class="hasAnchor">
+<a href="#generic-functions" class="anchor"></a>generic functions</h1>
 <div id="tidy-dataframe" class="section level2">
 <h2 class="hasAnchor">
 <a href="#tidy-dataframe" class="anchor"></a>tidy dataframe</h2>
@@ -210,6 +215,169 @@
 <a class="sourceLine" id="cb4-40" title="40"><span class="co"># in case no augment method is available (`NULL` will be returned)</span></a>
 <a class="sourceLine" id="cb4-41" title="41">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/augment.html">augment</a></span>(stats<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/anova">anova</a></span>(stats<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/lm">lm</a></span>(wt <span class="op">~</span><span class="st"> </span>am, mtcars)))</a>
 <a class="sourceLine" id="cb4-42" title="42"><span class="co">#&gt; NULL</span></a></code></pre></div>
+</div>
+</div>
+<div id="grouped_-version-of-variant-functions" class="section level1">
+<h1 class="hasAnchor">
+<a href="#grouped_-version-of-variant-functions" class="anchor"></a><code>grouped_</code> version of variant functions</h1>
+<div id="grouped_tidy" class="section level2">
+<h2 class="hasAnchor">
+<a href="#grouped_tidy" class="anchor"></a><code>grouped_tidy</code>
+</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="co"># to speed up computation, let's use only 50% of the data</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(lme4)</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
+<a class="sourceLine" id="cb5-5" title="5"></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="co"># linear model (tidy analysis across grouping combinations)</span></a>
+<a class="sourceLine" id="cb5-7" title="7">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/grouped_tidy.html">grouped_tidy</a></span>(</a>
+<a class="sourceLine" id="cb5-8" title="8">  <span class="dt">data =</span> dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="dt">tbl =</span> ggplot2<span class="op">::</span>diamonds, <span class="dt">size =</span> <span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb5-9" title="9">  <span class="dt">grouping.vars =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(cut, color),</a>
+<a class="sourceLine" id="cb5-10" title="10">  <span class="dt">formula =</span> price <span class="op">~</span><span class="st"> </span>carat <span class="op">-</span><span class="st"> </span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb5-11" title="11">  <span class="dt">..f =</span> stats<span class="op">::</span>lm,</a>
+<a class="sourceLine" id="cb5-12" title="12">  <span class="dt">na.action =</span> na.omit,</a>
+<a class="sourceLine" id="cb5-13" title="13">  <span class="dt">tidy.args =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">quick =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb5-14" title="14">)</a>
+<a class="sourceLine" id="cb5-15" title="15"><span class="co">#&gt; # A tibble: 35 x 4</span></a>
+<a class="sourceLine" id="cb5-16" title="16"><span class="co">#&gt;    cut   color term  estimate</span></a>
+<a class="sourceLine" id="cb5-17" title="17"><span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt; &lt;chr&gt;    &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb5-18" title="18"><span class="co">#&gt;  1 Fair  D     carat    5162.</span></a>
+<a class="sourceLine" id="cb5-19" title="19"><span class="co">#&gt;  2 Fair  E     carat    5020.</span></a>
+<a class="sourceLine" id="cb5-20" title="20"><span class="co">#&gt;  3 Fair  F     carat    4780.</span></a>
+<a class="sourceLine" id="cb5-21" title="21"><span class="co">#&gt;  4 Fair  G     carat    4370.</span></a>
+<a class="sourceLine" id="cb5-22" title="22"><span class="co">#&gt;  5 Fair  H     carat    4329.</span></a>
+<a class="sourceLine" id="cb5-23" title="23"><span class="co">#&gt;  6 Fair  I     carat    4196.</span></a>
+<a class="sourceLine" id="cb5-24" title="24"><span class="co">#&gt;  7 Fair  J     carat    3934.</span></a>
+<a class="sourceLine" id="cb5-25" title="25"><span class="co">#&gt;  8 Good  D     carat    5213.</span></a>
+<a class="sourceLine" id="cb5-26" title="26"><span class="co">#&gt;  9 Good  E     carat    5114.</span></a>
+<a class="sourceLine" id="cb5-27" title="27"><span class="co">#&gt; 10 Good  F     carat    5165.</span></a>
+<a class="sourceLine" id="cb5-28" title="28"><span class="co">#&gt; # ... with 25 more rows</span></a>
+<a class="sourceLine" id="cb5-29" title="29"></a>
+<a class="sourceLine" id="cb5-30" title="30"><span class="co"># linear mixed effects model (tidy analysis across grouping combinations)</span></a>
+<a class="sourceLine" id="cb5-31" title="31">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/grouped_tidy.html">grouped_tidy</a></span>(</a>
+<a class="sourceLine" id="cb5-32" title="32">  <span class="dt">data =</span> dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="dt">tbl =</span> ggplot2<span class="op">::</span>diamonds, <span class="dt">size =</span> <span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb5-33" title="33">  <span class="dt">grouping.vars =</span> cut,</a>
+<a class="sourceLine" id="cb5-34" title="34">  <span class="dt">..f =</span> lme4<span class="op">::</span>lmer,</a>
+<a class="sourceLine" id="cb5-35" title="35">  <span class="dt">formula =</span> price <span class="op">~</span><span class="st"> </span>carat <span class="op">+</span><span class="st"> </span>(carat <span class="op">|</span><span class="st"> </span>color) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb5-36" title="36">  <span class="dt">control =</span> lme4<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/lme4/topics/lmerControl">lmerControl</a></span>(<span class="dt">optimizer =</span> <span class="st">"bobyqa"</span>),</a>
+<a class="sourceLine" id="cb5-37" title="37">  <span class="dt">tidy.args =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">conf.int =</span> <span class="ot">TRUE</span>, <span class="dt">conf.level =</span> <span class="fl">0.99</span>)</a>
+<a class="sourceLine" id="cb5-38" title="38">)</a>
+<a class="sourceLine" id="cb5-39" title="39"><span class="co">#&gt; # A tibble: 25 x 9</span></a>
+<a class="sourceLine" id="cb5-40" title="40"><span class="co">#&gt;    cut   effect group term  estimate std.error statistic conf.low conf.high</span></a>
+<a class="sourceLine" id="cb5-41" title="41"><span class="co">#&gt;    &lt;ord&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb5-42" title="42"><span class="co">#&gt;  1 Fair  fixed  &lt;NA&gt;  carat  2.78e+3      228.      12.2    2194.     3370.</span></a>
+<a class="sourceLine" id="cb5-43" title="43"><span class="co">#&gt;  2 Fair  ran_p~ color sd__~  2.32e+3       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-44" title="44"><span class="co">#&gt;  3 Fair  ran_p~ color sd__~  3.75e+3       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-45" title="45"><span class="co">#&gt;  4 Fair  ran_p~ color cor_~ -9.91e-1       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-46" title="46"><span class="co">#&gt;  5 Fair  ran_p~ Resi~ sd__~  1.54e+3       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-47" title="47"><span class="co">#&gt;  6 Good  fixed  &lt;NA&gt;  carat  5.70e+3      214.      26.6    5146.     6249.</span></a>
+<a class="sourceLine" id="cb5-48" title="48"><span class="co">#&gt;  7 Good  ran_p~ color sd__~  2.61e+3       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-49" title="49"><span class="co">#&gt;  8 Good  ran_p~ color sd__~  1.94e+3       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-50" title="50"><span class="co">#&gt;  9 Good  ran_p~ color cor_~ -9.58e-1       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-51" title="51"><span class="co">#&gt; 10 Good  ran_p~ Resi~ sd__~  1.36e+3       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb5-52" title="52"><span class="co">#&gt; # ... with 15 more rows</span></a></code></pre></div>
+</div>
+<div id="grouped_glance" class="section level2">
+<h2 class="hasAnchor">
+<a href="#grouped_glance" class="anchor"></a><code>grouped_glance</code>
+</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co"># to speed up computation, let's use only 50% of the data</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb6-3" title="3"></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="co"># linear model (model summaries across grouping combinations)</span></a>
+<a class="sourceLine" id="cb6-5" title="5">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/grouped_glance.html">grouped_glance</a></span>(</a>
+<a class="sourceLine" id="cb6-6" title="6">  <span class="dt">data =</span> dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="dt">tbl =</span> ggplot2<span class="op">::</span>diamonds, <span class="dt">size =</span> <span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb6-7" title="7">  <span class="dt">grouping.vars =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(cut, color),</a>
+<a class="sourceLine" id="cb6-8" title="8">  <span class="dt">formula =</span> price <span class="op">~</span><span class="st"> </span>carat <span class="op">-</span><span class="st"> </span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb6-9" title="9">  <span class="dt">..f =</span> stats<span class="op">::</span>lm,</a>
+<a class="sourceLine" id="cb6-10" title="10">  <span class="dt">na.action =</span> na.omit</a>
+<a class="sourceLine" id="cb6-11" title="11">)</a>
+<a class="sourceLine" id="cb6-12" title="12"><span class="co">#&gt; # A tibble: 35 x 13</span></a>
+<a class="sourceLine" id="cb6-13" title="13"><span class="co">#&gt;    cut   color r.squared adj.r.squared sigma statistic   p.value    df</span></a>
+<a class="sourceLine" id="cb6-14" title="14"><span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt;     &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb6-15" title="15"><span class="co">#&gt;  1 Fair  D         0.893         0.892 1913.      654. 1.16e- 39     1</span></a>
+<a class="sourceLine" id="cb6-16" title="16"><span class="co">#&gt;  2 Fair  E         0.877         0.876 1761.      786. 6.59e- 52     1</span></a>
+<a class="sourceLine" id="cb6-17" title="17"><span class="co">#&gt;  3 Fair  F         0.873         0.872 1888.     1084. 1.20e- 72     1</span></a>
+<a class="sourceLine" id="cb6-18" title="18"><span class="co">#&gt;  4 Fair  G         0.857         0.857 1976.     1011. 5.70e- 73     1</span></a>
+<a class="sourceLine" id="cb6-19" title="19"><span class="co">#&gt;  5 Fair  H         0.885         0.884 2065.     1108. 1.66e- 69     1</span></a>
+<a class="sourceLine" id="cb6-20" title="20"><span class="co">#&gt;  6 Fair  I         0.886         0.885 2010.      724. 1.14e- 45     1</span></a>
+<a class="sourceLine" id="cb6-21" title="21"><span class="co">#&gt;  7 Fair  J         0.910         0.909 1996.      689. 2.59e- 37     1</span></a>
+<a class="sourceLine" id="cb6-22" title="22"><span class="co">#&gt;  8 Good  D         0.848         0.847 1827.     1817. 2.47e-135     1</span></a>
+<a class="sourceLine" id="cb6-23" title="23"><span class="co">#&gt;  9 Good  E         0.869         0.869 1636.     3365. 1.00e-225     1</span></a>
+<a class="sourceLine" id="cb6-24" title="24"><span class="co">#&gt; 10 Good  F         0.873         0.872 1700.     3054. 1.24e-201     1</span></a>
+<a class="sourceLine" id="cb6-25" title="25"><span class="co">#&gt; # ... with 25 more rows, and 5 more variables: logLik &lt;dbl&gt;, AIC &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb6-26" title="26"><span class="co">#&gt; #   BIC &lt;dbl&gt;, deviance &lt;dbl&gt;, df.residual &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb6-27" title="27"></a>
+<a class="sourceLine" id="cb6-28" title="28"><span class="co"># linear mixed effects model (model summaries across grouping combinations)</span></a>
+<a class="sourceLine" id="cb6-29" title="29">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/grouped_glance.html">grouped_glance</a></span>(</a>
+<a class="sourceLine" id="cb6-30" title="30">  <span class="dt">data =</span> dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="dt">tbl =</span> ggplot2<span class="op">::</span>diamonds, <span class="dt">size =</span> <span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb6-31" title="31">  <span class="dt">grouping.vars =</span> cut,</a>
+<a class="sourceLine" id="cb6-32" title="32">  <span class="dt">..f =</span> lme4<span class="op">::</span>lmer,</a>
+<a class="sourceLine" id="cb6-33" title="33">  <span class="dt">formula =</span> price <span class="op">~</span><span class="st"> </span>carat <span class="op">+</span><span class="st"> </span>(carat <span class="op">|</span><span class="st"> </span>color) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb6-34" title="34">  <span class="dt">control =</span> lme4<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/lme4/topics/lmerControl">lmerControl</a></span>(<span class="dt">optimizer =</span> <span class="st">"bobyqa"</span>)</a>
+<a class="sourceLine" id="cb6-35" title="35">)</a>
+<a class="sourceLine" id="cb6-36" title="36"><span class="co">#&gt; # A tibble: 5 x 7</span></a>
+<a class="sourceLine" id="cb6-37" title="37"><span class="co">#&gt;   cut       sigma  logLik     AIC     BIC REMLcrit df.residual</span></a>
+<a class="sourceLine" id="cb6-38" title="38"><span class="co">#&gt;   &lt;ord&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb6-39" title="39"><span class="co">#&gt; 1 Fair      1541.  -6945.  13901.  13924.   13891.         786</span></a>
+<a class="sourceLine" id="cb6-40" title="40"><span class="co">#&gt; 2 Good      1361. -21622.  43254.  43283.   43244.        2496</span></a>
+<a class="sourceLine" id="cb6-41" title="41"><span class="co">#&gt; 3 Very Good 1372. -52554. 105117. 105151.  105107.        6072</span></a>
+<a class="sourceLine" id="cb6-42" title="42"><span class="co">#&gt; 4 Premium   1574. -60379. 120767. 120801.  120757.        6868</span></a>
+<a class="sourceLine" id="cb6-43" title="43"><span class="co">#&gt; 5 Ideal     1294. -92129. 184268. 184304.  184258.       10723</span></a></code></pre></div>
+</div>
+<div id="grouped_augment" class="section level2">
+<h2 class="hasAnchor">
+<a href="#grouped_augment" class="anchor"></a><code>grouped_augment</code>
+</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="co"># to speed up computation, let's use only 50% of the data</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb7-3" title="3"></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="co"># linear model</span></a>
+<a class="sourceLine" id="cb7-5" title="5">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/grouped_augment.html">grouped_augment</a></span>(</a>
+<a class="sourceLine" id="cb7-6" title="6">  <span class="dt">data =</span> ggplot2<span class="op">::</span>diamonds,</a>
+<a class="sourceLine" id="cb7-7" title="7">  <span class="dt">grouping.vars =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(cut, color),</a>
+<a class="sourceLine" id="cb7-8" title="8">  <span class="dt">..f =</span> stats<span class="op">::</span>lm,</a>
+<a class="sourceLine" id="cb7-9" title="9">  <span class="dt">formula =</span> price <span class="op">~</span><span class="st"> </span>carat <span class="op">-</span><span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb7-10" title="10">)</a>
+<a class="sourceLine" id="cb7-11" title="11"><span class="co">#&gt; # A tibble: 53,940 x 10</span></a>
+<a class="sourceLine" id="cb7-12" title="12"><span class="co">#&gt;    cut   color price carat .fitted .resid .std.resid    .hat .sigma .cooksd</span></a>
+<a class="sourceLine" id="cb7-13" title="13"><span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt; &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb7-14" title="14"><span class="co">#&gt;  1 Fair  D      2848  0.75   3795.   947.     -0.522 0.00342  1822. 9.33e-4</span></a>
+<a class="sourceLine" id="cb7-15" title="15"><span class="co">#&gt;  2 Fair  D      2858  0.71   3593.   735.     -0.405 0.00306  1823. 5.03e-4</span></a>
+<a class="sourceLine" id="cb7-16" title="16"><span class="co">#&gt;  3 Fair  D      2885  0.9    4554.  1669.     -0.920 0.00492  1819. 4.19e-3</span></a>
+<a class="sourceLine" id="cb7-17" title="17"><span class="co">#&gt;  4 Fair  D      2974  1      5060.  2086.     -1.15  0.00607  1816. 8.09e-3</span></a>
+<a class="sourceLine" id="cb7-18" title="18"><span class="co">#&gt;  5 Fair  D      3003  1.01   5111.  2108.     -1.16  0.00620  1816. 8.43e-3</span></a>
+<a class="sourceLine" id="cb7-19" title="19"><span class="co">#&gt;  6 Fair  D      3047  0.73   3694.   647.     -0.356 0.00324  1823. 4.12e-4</span></a>
+<a class="sourceLine" id="cb7-20" title="20"><span class="co">#&gt;  7 Fair  D      3077  0.71   3593.   516.     -0.284 0.00306  1823. 2.48e-4</span></a>
+<a class="sourceLine" id="cb7-21" title="21"><span class="co">#&gt;  8 Fair  D      3079  0.91   4605.  1526.     -0.841 0.00503  1820. 3.58e-3</span></a>
+<a class="sourceLine" id="cb7-22" title="22"><span class="co">#&gt;  9 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 2.74e-3</span></a>
+<a class="sourceLine" id="cb7-23" title="23"><span class="co">#&gt; 10 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 2.74e-3</span></a>
+<a class="sourceLine" id="cb7-24" title="24"><span class="co">#&gt; # ... with 53,930 more rows</span></a>
+<a class="sourceLine" id="cb7-25" title="25"></a>
+<a class="sourceLine" id="cb7-26" title="26"><span class="co"># linear mixed-effects model</span></a>
+<a class="sourceLine" id="cb7-27" title="27">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/grouped_augment.html">grouped_augment</a></span>(</a>
+<a class="sourceLine" id="cb7-28" title="28">  <span class="dt">data =</span> dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="dt">tbl =</span> ggplot2<span class="op">::</span>diamonds, <span class="dt">size =</span> <span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb7-29" title="29">  <span class="dt">grouping.vars =</span> cut,</a>
+<a class="sourceLine" id="cb7-30" title="30">  <span class="dt">..f =</span> lme4<span class="op">::</span>lmer,</a>
+<a class="sourceLine" id="cb7-31" title="31">  <span class="dt">formula =</span> price <span class="op">~</span><span class="st"> </span>carat <span class="op">+</span><span class="st"> </span>(carat <span class="op">|</span><span class="st"> </span>color) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb7-32" title="32">  <span class="dt">control =</span> lme4<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/lme4/topics/lmerControl">lmerControl</a></span>(<span class="dt">optimizer =</span> <span class="st">"bobyqa"</span>)</a>
+<a class="sourceLine" id="cb7-33" title="33">)</a>
+<a class="sourceLine" id="cb7-34" title="34"><span class="co">#&gt; singular fit</span></a>
+<a class="sourceLine" id="cb7-35" title="35"><span class="co">#&gt; # A tibble: 26,970 x 15</span></a>
+<a class="sourceLine" id="cb7-36" title="36"><span class="co">#&gt;    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu</span></a>
+<a class="sourceLine" id="cb7-37" title="37"><span class="co">#&gt;    &lt;ord&gt; &lt;int&gt; &lt;dbl&gt; &lt;ord&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb7-38" title="38"><span class="co">#&gt;  1 Fair   1323  0.5  D        975.   348. 0.00263 1.10e-4  1136.  975.</span></a>
+<a class="sourceLine" id="cb7-39" title="39"><span class="co">#&gt;  2 Fair   1939  0.9  G       3409. -1470. 0.00272 2.04e-3  2044. 3409.</span></a>
+<a class="sourceLine" id="cb7-40" title="40"><span class="co">#&gt;  3 Fair   5484  1    G       4006.  1478. 0.00356 2.70e-3  2271. 4006.</span></a>
+<a class="sourceLine" id="cb7-41" title="41"><span class="co">#&gt;  4 Fair   4939  1.5  H       6599. -1660. 0.00879 8.49e-3  3407. 6599.</span></a>
+<a class="sourceLine" id="cb7-42" title="42"><span class="co">#&gt;  5 Fair   3855  0.91 D       3990.  -135. 0.00542 3.43e-5  2067. 3990.</span></a>
+<a class="sourceLine" id="cb7-43" title="43"><span class="co">#&gt;  6 Fair   5096  1    D       4652.   444. 0.00759 5.24e-4  2271. 4652.</span></a>
+<a class="sourceLine" id="cb7-44" title="44"><span class="co">#&gt;  7 Fair    659  0.41 H        531.   128. 0.00314 1.79e-5   931.  531.</span></a>
+<a class="sourceLine" id="cb7-45" title="45"><span class="co">#&gt;  8 Fair   2724  0.84 G       3050.  -326. 0.00237 8.75e-5  1908. 3050.</span></a>
+<a class="sourceLine" id="cb7-46" title="46"><span class="co">#&gt;  9 Fair   4368  1.2  I       4830.  -462. 0.00667 4.98e-4  2726. 4830.</span></a>
+<a class="sourceLine" id="cb7-47" title="47"><span class="co">#&gt; 10 Fair   5350  1.02 E       5061.   289. 0.00893 2.61e-4  2317. 5061.</span></a>
+<a class="sourceLine" id="cb7-48" title="48"><span class="co">#&gt; # ... with 26,960 more rows, and 5 more variables: .offset &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb7-49" title="49"><span class="co">#&gt; #   .sqrtXwt &lt;dbl&gt;, .sqrtrwt &lt;dbl&gt;, .weights &lt;dbl&gt;, .wtres &lt;dbl&gt;</span></a></code></pre></div>
 </div>
 </div>
 <div id="code-coverage" class="section level1">

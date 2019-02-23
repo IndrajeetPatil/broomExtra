@@ -26,6 +26,7 @@ Imports:
 Suggests: 
     covr,
     gapminder,
+    ggplot2,
     knitr,
     lme4,
     rmarkdown,

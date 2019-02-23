@@ -28,13 +28,15 @@ This output is created by
 Coverage summary is created using the
 [covr](https://github.com/r-lib/covr) package.
 
-| Object                                   | Coverage (%) |
-| :--------------------------------------- | :----------: |
-| broomExtra                               |    71.19     |
-| [R/grouped\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/grouped_tidy.R) |     0.00     |
-| [R/augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/augment.R)            |    100.00    |
-| [R/glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/glance.R)              |    100.00    |
-| [R/tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/tidy.R)                  |    100.00    |
+| Object                                         | Coverage (%) |
+| :--------------------------------------------- | :----------: |
+| broomExtra                                     |     100      |
+| [R/augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/augment.R)                  |     100      |
+| [R/glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/glance.R)                    |     100      |
+| [R/grouped\_augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/grouped_augment.R) |     100      |
+| [R/grouped\_glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/grouped_glance.R)   |     100      |
+| [R/grouped\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/grouped_tidy.R)       |     100      |
+| [R/tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/tidy.R)                        |     100      |
 
 <br>
 
@@ -44,22 +46,28 @@ Unit Test summary is created using the
 [testthat](https://github.com/r-lib/testthat)
 package.
 
-| file                                       | n | time | error | failed | skipped | warning |
-| :----------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test\_augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_augment.R) | 3 | 0.08 |     0 |      0 |       0 |       0 |
-| [test\_glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_glance.R)   | 3 | 0.05 |     0 |      0 |       0 |       0 |
-| [test\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_tidy.R)       | 3 | 0.04 |     0 |      0 |       0 |       0 |
+| file                                                        | n | time | error | failed | skipped | warning |
+| :---------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
+| [test\_augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_augment.R)                  | 3 | 0.07 |     0 |      0 |       0 |       0 |
+| [test\_glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_glance.R)                    | 3 | 0.18 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_grouped_augment.R) | 2 | 1.93 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_grouped_glance.R)   | 2 | 1.89 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_grouped_tidy.R)       | 2 | 2.19 |     0 |      0 |       0 |       0 |
+| [test\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_tidy.R)                        | 3 | 0.06 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
 <summary> Show Detailed Test Results
 </summary>
 
-| file                                               | context       | test              | status | n | time |
-| :------------------------------------------------- | :------------ | :---------------- | :----- | -: | ---: |
-| [test\_augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_augment.R#L13_L15) | augment works | `augment()` works | PASS   | 3 | 0.08 |
-| [test\_glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_glance.R#L13_L15)   | glance works  | `glance()` works  | PASS   | 3 | 0.05 |
-| [test\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_tidy.R#L13_L15)       | tidy works    | `tidy()` works    | PASS   | 3 | 0.04 |
+| file                                                            | context                | test                      | status | n | time |
+| :-------------------------------------------------------------- | :--------------------- | :------------------------ | :----- | -: | ---: |
+| [test\_augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_augment.R#L13_L15)              | augment works          | `augment()` works         | PASS   | 3 | 0.07 |
+| [test\_glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_glance.R#L13_L15)                | glance works           | `glance()` works          | PASS   | 3 | 0.18 |
+| [test\_grouped\_augment.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_grouped_augment.R#L19) | grouped\_augment works | `grouped_augment()` works | PASS   | 2 | 1.93 |
+| [test\_grouped\_glance.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_grouped_glance.R#L19)   | grouped\_glance works  | `grouped_glance()` works  | PASS   | 2 | 1.89 |
+| [test\_grouped\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_grouped_tidy.R#L20)       | grouped\_tidy works    | `grouped_tidy()` works    | PASS   | 2 | 2.19 |
+| [test\_tidy.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test_tidy.R#L13_L15)                    | tidy works             | `tidy()` works            | PASS   | 3 | 0.06 |
 
 </details>
 

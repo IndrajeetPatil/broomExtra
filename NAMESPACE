@@ -3,6 +3,8 @@
 export("%>%")
 export(augment)
 export(glance)
+export(grouped_augment)
+export(grouped_glance)
 export(grouped_tidy)
 export(tidy)
 importFrom(broom,augment)

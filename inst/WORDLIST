@@ -2,12 +2,16 @@ AppVeyor
 changedate
 codecov
 Codecov
+covr
+covrpage
 gh
 https
 img
 IndrajeetPatil
 io
 lifecycle
+mingw
 svg
+testthat
 tibble
 yellowgreen

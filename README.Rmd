@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra)
 [![Travis build status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)
 [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master) 
+[![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
@@ -28,11 +28,11 @@ knitr::opts_chunk$set(
 The goal of `broomExtra` is to provide helper functions that assist in data
 analysis workflows involving packages `broom` and `broom.mixed`.
 
-## Installation
+# Installation
 
 You can install the development version of `broomExtra` from GitHub:
 
-```{r echo=FALSE, results='hide',message=FALSE}
+```{r echo = FALSE, results = 'hide', message = FALSE}
 library(broom)
 library(broom.mixed)
 ```
@@ -40,6 +40,12 @@ library(broom.mixed)
 ```{r install, eval = FALSE}
 remotes::install_github("IndrajeetPatil/broomExtra")
 ```
+
+Although all the examples below use only `stats::lm` and `lme4::lmer` for
+consistency, these functions will work with any function that is currently
+supported in `broom` and/or `broom.mixed` packages.
+
+# generic functions
 
 ## tidy dataframe
 
@@ -96,6 +102,86 @@ broomExtra::augment(lm.mod)
 
 # in case no augment method is available (`NULL` will be returned)
 broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
+```
+
+# `grouped_` version of variant functions
+
+## `grouped_tidy`
+
+```{r grouped_tidy}
+# to speed up computation, let's use only 50% of the data
+set.seed(123)
+library(lme4)
+library(ggplot2)
+
+# linear model (tidy analysis across grouping combinations)
+broomExtra::grouped_tidy(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = c(cut, color),
+  formula = price ~ carat - 1,
+  ..f = stats::lm,
+  na.action = na.omit,
+  tidy.args = list(quick = TRUE)
+)
+
+# linear mixed effects model (tidy analysis across grouping combinations)
+broomExtra::grouped_tidy(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = cut,
+  ..f = lme4::lmer,
+  formula = price ~ carat + (carat | color) - 1,
+  control = lme4::lmerControl(optimizer = "bobyqa"),
+  tidy.args = list(conf.int = TRUE, conf.level = 0.99)
+)
+```
+
+## `grouped_glance`
+
+```{r grouped_glance}
+# to speed up computation, let's use only 50% of the data
+set.seed(123)
+
+# linear model (model summaries across grouping combinations)
+broomExtra::grouped_glance(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = c(cut, color),
+  formula = price ~ carat - 1,
+  ..f = stats::lm,
+  na.action = na.omit
+)
+
+# linear mixed effects model (model summaries across grouping combinations)
+broomExtra::grouped_glance(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = cut,
+  ..f = lme4::lmer,
+  formula = price ~ carat + (carat | color) - 1,
+  control = lme4::lmerControl(optimizer = "bobyqa")
+)
+```
+
+## `grouped_augment`
+
+```{r grouped_augment}
+# to speed up computation, let's use only 50% of the data
+set.seed(123)
+
+# linear model
+broomExtra::grouped_augment(
+  data = ggplot2::diamonds,
+  grouping.vars = c(cut, color),
+  ..f = stats::lm,
+  formula = price ~ carat - 1
+)
+
+# linear mixed-effects model
+broomExtra::grouped_augment(
+  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  grouping.vars = cut,
+  ..f = lme4::lmer,
+  formula = price ~ carat + (carat | color) - 1,
+  control = lme4::lmerControl(optimizer = "bobyqa")
+)
 ```
 
 # Code coverage
