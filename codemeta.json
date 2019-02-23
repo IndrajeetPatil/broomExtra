@@ -5,7 +5,7 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
-  "description": "Collection of functions to assist broom and\n    broom.mixed package-related workflows.",
+  "description": "Collection of functions to assist broom and\n    broom.mixed package-related data analysis workflows.",
   "name": "broomExtra: Grouped Statistical Analyses in a Tidy Way",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
   "relatedLink": "https://indrajeetpatil.github.io/broomExtra/",
@@ -158,8 +158,22 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "dplyr",
+      "name": "dplyr",
+      "version": ">= 0.8.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=dplyr"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "magrittr",
       "name": "magrittr",
+      "version": ">= 1.5",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -167,14 +181,28 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=magrittr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rlang",
+      "name": "rlang",
+      "version": ">= 0.3.1",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rlang"
     }
   ],
-  "fileSize": "18.533KB",
+  "fileSize": "20.985KB",
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
   "contIntegration": [
     "https://ci.appveyor.com/project/IndrajeetPatil/broomExtra",
     "https://travis-ci.org/IndrajeetPatil/broomExtra",
     "https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"
   ],
-  "developmentStatus": "http://www.repostatus.org/#active"
+  "developmentStatus": "http://www.repostatus.org/#active",
+  "releaseNotes": "https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md"
 }

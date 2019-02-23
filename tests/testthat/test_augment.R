@@ -20,7 +20,7 @@ testthat::test_that(
 
     # unsupported
     testthat::expect_null(
-      broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars))), NULL
+      broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
     )
   }
 )

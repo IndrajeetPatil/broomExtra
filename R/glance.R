@@ -1,5 +1,6 @@
 #' @title Retrieve model summary dataframe if it exists.
 #' @name glance
+#' @author Indrajeet Patil
 #' @description Check if a `glance` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`.

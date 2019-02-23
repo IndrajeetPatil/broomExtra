@@ -34,3 +34,6 @@ broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 }
 
 }
+\author{
+Indrajeet Patil
+}

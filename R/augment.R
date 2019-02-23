@@ -1,5 +1,6 @@
 #' @title Retrieve augmented dataframe if it exists.
 #' @name augment
+#' @author Indrajeet Patil
 #' @description Check if a `augment` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`.

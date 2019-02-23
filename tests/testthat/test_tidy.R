@@ -22,6 +22,6 @@ testthat::test_that(
     x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
     y <- c(1:6, 5:4, 3:1)
     appr <- stats::approx(x, y, xout = x)
-    testthat::expect_null(broomExtra::tidy(appr), NULL)
+    testthat::expect_null(broomExtra::tidy(appr))
   }
 )

@@ -11,4 +11,15 @@ authors:
   Indrajeet Patil:
     href: https://sites.google.com/site/indrajeetspatilmorality/
 
+reference:
+  - title: Generics for `broom` and `broom.mixed`
+    desc:  Generic functions used for tidy tibbles, model summaries, and augmented data frames.
+    contents:
+      - tidy
+      - glance
+      - augment
 
+  - title: Grouped variants of generics
+    desc: Using generic functions across all combinations of grouping variables in a dataframe.
+    contents:
+      - starts_with("grouped_")
