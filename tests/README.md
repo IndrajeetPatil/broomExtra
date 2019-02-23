@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-23 February, 2019 15:28:12
+23 February, 2019 15:40:24
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -34,10 +34,10 @@ package.
 | file                                                        | n | time | error | failed | skipped | warning |
 | :---------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
 | [test\_augment.R](testthat/test_augment.R)                  | 3 | 0.07 |     0 |      0 |       0 |       0 |
-| [test\_glance.R](testthat/test_glance.R)                    | 3 | 0.18 |     0 |      0 |       0 |       0 |
-| [test\_grouped\_augment.R](testthat/test_grouped_augment.R) | 2 | 1.93 |     0 |      0 |       0 |       0 |
-| [test\_grouped\_glance.R](testthat/test_grouped_glance.R)   | 2 | 1.89 |     0 |      0 |       0 |       0 |
-| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R)       | 2 | 2.19 |     0 |      0 |       0 |       0 |
+| [test\_glance.R](testthat/test_glance.R)                    | 3 | 0.19 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_augment.R](testthat/test_grouped_augment.R) | 2 | 1.83 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_glance.R](testthat/test_grouped_glance.R)   | 2 | 1.69 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R)       | 2 | 1.58 |     0 |      0 |       0 |       0 |
 | [test\_tidy.R](testthat/test_tidy.R)                        | 3 | 0.06 |     0 |      0 |       0 |       0 |
 
 <details closed>
@@ -48,10 +48,10 @@ package.
 | file                                                            | context                | test                      | status | n | time |
 | :-------------------------------------------------------------- | :--------------------- | :------------------------ | :----- | -: | ---: |
 | [test\_augment.R](testthat/test_augment.R#L13_L15)              | augment works          | `augment()` works         | PASS   | 3 | 0.07 |
-| [test\_glance.R](testthat/test_glance.R#L13_L15)                | glance works           | `glance()` works          | PASS   | 3 | 0.18 |
-| [test\_grouped\_augment.R](testthat/test_grouped_augment.R#L19) | grouped\_augment works | `grouped_augment()` works | PASS   | 2 | 1.93 |
-| [test\_grouped\_glance.R](testthat/test_grouped_glance.R#L19)   | grouped\_glance works  | `grouped_glance()` works  | PASS   | 2 | 1.89 |
-| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R#L20)       | grouped\_tidy works    | `grouped_tidy()` works    | PASS   | 2 | 2.19 |
+| [test\_glance.R](testthat/test_glance.R#L13_L15)                | glance works           | `glance()` works          | PASS   | 3 | 0.19 |
+| [test\_grouped\_augment.R](testthat/test_grouped_augment.R#L19) | grouped\_augment works | `grouped_augment()` works | PASS   | 2 | 1.83 |
+| [test\_grouped\_glance.R](testthat/test_grouped_glance.R#L19)   | grouped\_glance works  | `grouped_glance()` works  | PASS   | 2 | 1.69 |
+| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R#L20)       | grouped\_tidy works    | `grouped_tidy()` works    | PASS   | 2 | 1.58 |
 | [test\_tidy.R](testthat/test_tidy.R#L13_L15)                    | tidy works             | `tidy()` works            | PASS   | 3 | 0.06 |
 
 </details>

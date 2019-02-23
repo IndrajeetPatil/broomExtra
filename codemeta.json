@@ -208,7 +208,7 @@
       "sameAs": "https://CRAN.R-project.org/package=rlang"
     }
   ],
-  "fileSize": "23.975KB",
+  "fileSize": "23.982KB",
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
   "contIntegration": [
     "https://ci.appveyor.com/project/IndrajeetPatil/broomExtra",
