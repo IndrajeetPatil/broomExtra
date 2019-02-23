@@ -15,6 +15,9 @@ knitr::opts_chunk$set(
 # broomExtra
 
 <!-- badges: start -->
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra)
+[![Travis build status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)
+[![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)
 <!-- badges: end -->
 
 The goal of `broomExtra` is to provide helper functions that assist in data
@@ -33,6 +36,23 @@ library(broom.mixed)
 remotes::install_github("IndrajeetPatil/broomExtra")
 ```
 
+## tidy dataframe
+
+```{r tidy}
+library(lme4)
+
+# mixed-effects models (`broom.mixed` will be used)
+lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
+broomExtra::tidy(lmm.mod, effects = "fixed")
+
+# linear model (`broom` will be used)
+lm.mod <- lm(Reaction ~ Days, sleepstudy)
+broomExtra::tidy(lm.mod, exponentiate = TRUE, conf.int = TRUE)
+
+# another example with `broom`
+broomExtra::tidy(stats::anova(stats::lm(wt ~ am, mtcars)))
+```
+
 ## model summaries
 
 ```{r glance}
@@ -46,3 +66,18 @@ broomExtra::glance(lmm.mod)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 ```
+
+## augmented dataframe
+
+```{r augment}
+library(lme4)
+
+# mixed-effects model
+lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
+broomExtra::augment(lmm.mod)
+
+# linear model
+lm.mod <- lm(Reaction ~ Days, sleepstudy)
+broomExtra::augment(lm.mod)
+```
+

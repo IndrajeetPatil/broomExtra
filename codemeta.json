@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
   "description": "Collection of functions to assist broom and\n    broom.mixed package-related workflows.",
@@ -154,5 +157,7 @@
       "sameAs": "https://CRAN.R-project.org/package=magrittr"
     }
   ],
-  "fileSize": "2.499KB"
+  "fileSize": "4.267KB",
+  "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
+  "contIntegration": ["https://ci.appveyor.com/project/IndrajeetPatil/broomExtra", "https://travis-ci.org/IndrajeetPatil/broomExtra", "https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"]
 }

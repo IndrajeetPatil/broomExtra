@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Retrieve model summary dataframe if it exists. — glance • broomExtra</title>
+<title>Retrieve tidy dataframe if it exists. — tidy • broomExtra</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Retrieve model summary dataframe if it exists. — glance" />
+<meta property="og:title" content="Retrieve tidy dataframe if it exists. — tidy" />
 
-<meta property="og:description" content="Check if a glance method exits for a given object, either in
+<meta property="og:description" content="Check if a tidy method exits for a given object, either in
 broom or in broom.mixed. If it does, return the model summary
 dataframe, if not, return a NULL." />
 <meta name="twitter:card" content="summary" />
@@ -101,31 +101,31 @@ dataframe, if not, return a NULL." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Retrieve model summary dataframe if it exists.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/R/glance.R'><code>R/glance.R</code></a></small>
-    <div class="hidden name"><code>glance.Rd</code></div>
+    <h1>Retrieve tidy dataframe if it exists.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/R/tidy.R'><code>R/tidy.R</code></a></small>
+    <div class="hidden name"><code>tidy.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Check if a <code>glance</code> method exits for a given object, either in
+    <p>Check if a <code>tidy</code> method exits for a given object, either in
 <code>broom</code> or in <code>broom.mixed</code>. If it does, return the model summary
 dataframe, if not, return a <code>NULL</code>.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>glance</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>tidy</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>model or other R object to convert to single-row data frame</p></td>
+      <td><p>An object to be converted into a tidy <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code>.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>other arguments passed to methods</p></td>
+      <td><p>Additional arguments to tidying method.</p></td>
     </tr>
     </table>
     
@@ -135,19 +135,24 @@ dataframe, if not, return a <code>NULL</code>.</p>
 
 <span class='co'># mixed-effects models (`broom.mixed` will be used)</span>
 <span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/lme4/topics/lmer'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/glance.html'>glance</a></span>(<span class='no'>lmm.mod</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 6</span><span>
-#&gt;   sigma logLik   AIC   BIC REMLcrit df.residual
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span>  25.6  -</span><span style='color: #BB0000;'>872.</span><span> </span><span style='text-decoration: underline;'>1</span><span>756. </span><span style='text-decoration: underline;'>1</span><span>775.    </span><span style='text-decoration: underline;'>1</span><span>744.         174</div><div class='input'>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='no'>lmm.mod</span>, <span class='kw'>effects</span> <span class='kw'>=</span> <span class='st'>"fixed"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 5</span><span>
+#&gt;   effect term        estimate std.error statistic
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> fixed  (Intercept)    251.       6.82     36.8 
+#&gt; </span><span style='color: #555555;'>2</span><span> fixed  Days            10.5      1.55      6.77</div><div class='input'>
 <span class='co'># linear model (`broom` will be used)</span>
 <span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/lm'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/glance.html'>glance</a></span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 11</span><span>
-#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
-#&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span>     0.286         0.282  47.7      71.5 9.89</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-15</span><span>     2  -</span><span style='color: #BB0000;'>950.</span><span> </span><span style='text-decoration: underline;'>1</span><span>906. </span><span style='text-decoration: underline;'>1</span><span>916.
-#&gt; </span><span style='color: #555555;'># ... with 2 more variables: deviance </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, df.residual </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'>
-<span class='co'># no glance available (`NULL` will be returned)</span>
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/glance.html'>glance</a></span>(<span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/anova'>anova</a></span>(<span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/lm'>lm</a></span>(<span class='no'>wt</span> ~ <span class='no'>am</span>, <span class='no'>mtcars</span>)))</div><div class='output co'>#&gt; NULL</div></span><div class='input'>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='no'>lm.mod</span>, <span class='kw'>exponentiate</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Exponentiating coefficients, but model did not use a log or logit link function.</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 7</span><span>
+#&gt;   term        estimate std.error statistic  p.value conf.low conf.high
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> (Intercept) 1.53</span><span style='color: #555555;'>e</span><span>109      6.61     38.0  2.16</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-87</span><span> 3.30</span><span style='color: #555555;'>e</span><span>103  7.06</span><span style='color: #555555;'>e</span><span>114
+#&gt; </span><span style='color: #555555;'>2</span><span> Days        3.51</span><span style='color: #555555;'>e</span><span>  4      1.24      8.45 9.89</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-15</span><span> 3.05</span><span style='color: #555555;'>e</span><span>  3  4.05</span><span style='color: #555555;'>e</span><span>  5</div><div class='input'>
+<span class='co'># anova (`broom` will be used)</span>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/anova'>anova</a></span>(<span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/lm'>lm</a></span>(<span class='no'>wt</span> ~ <span class='no'>am</span>, <span class='no'>mtcars</span>)))</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 6</span><span>
+#&gt;   term         df sumsq meansq statistic    p.value
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> am            1  14.2 14.2        27.6  0.000</span><span style='text-decoration: underline;'>011</span><span>3
+#&gt; </span><span style='color: #555555;'>2</span><span> Residuals    30  15.4  0.515      </span><span style='color: #BB0000;'>NA</span><span>   </span><span style='color: #BB0000;'>NA</span><span>        </div></span><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
