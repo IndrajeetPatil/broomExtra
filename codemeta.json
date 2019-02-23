@@ -76,6 +76,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "lme4",
+      "name": "lme4",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=lme4"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "rmarkdown",
       "name": "rmarkdown",
       "provider": {
@@ -157,7 +169,12 @@
       "sameAs": "https://CRAN.R-project.org/package=magrittr"
     }
   ],
-  "fileSize": "4.267KB",
+  "fileSize": "18.533KB",
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
-  "contIntegration": ["https://ci.appveyor.com/project/IndrajeetPatil/broomExtra", "https://travis-ci.org/IndrajeetPatil/broomExtra", "https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"]
+  "contIntegration": [
+    "https://ci.appveyor.com/project/IndrajeetPatil/broomExtra",
+    "https://travis-ci.org/IndrajeetPatil/broomExtra",
+    "https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"
+  ],
+  "developmentStatus": "http://www.repostatus.org/#active"
 }

@@ -18,6 +18,11 @@ knitr::opts_chunk$set(
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra)
 [![Travis build status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)
 [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master) 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
 <!-- badges: end -->
 
 The goal of `broomExtra` is to provide helper functions that assist in data
@@ -51,6 +56,12 @@ broomExtra::tidy(lm.mod, exponentiate = TRUE, conf.int = TRUE)
 
 # another example with `broom`
 broomExtra::tidy(stats::anova(stats::lm(wt ~ am, mtcars)))
+
+# unsupported object (will return `NULL`)
+x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
+y <- c(1:6, 5:4, 3:1)
+appr <- stats::approx(x, y, xout = x)
+broomExtra::tidy(appr)
 ```
 
 ## model summaries
@@ -65,6 +76,9 @@ broomExtra::glance(lmm.mod)
 # linear model
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
+
+# in case no glance method is available (`NULL` will be returned)
+broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
 ```
 
 ## augmented dataframe
@@ -79,5 +93,24 @@ broomExtra::augment(lmm.mod)
 # linear model
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::augment(lm.mod)
+
+# in case no augment method is available (`NULL` will be returned)
+broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 ```
 
+# Code coverage
+
+As the code stands right now, here is the code coverage for all primary
+functions involved:
+<https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R>
+
+# Contributing
+
+I'm happy to receive bug reports, suggestions, questions, and (most of all)
+contributions to fix problems and add features. I personally prefer using the
+GitHub issues system over trying to reach out to me in other ways (personal
+e-mail, Twitter, etc.). Pull requests for contributions are encouraged.
+
+Please note that this project is released with a 
+[Contributor Code of Conduct](CONDUCT.md). By participating in this project
+you agree to abide by its terms.

@@ -22,14 +22,17 @@ library(lme4)
 
 # mixed-effects models (`broom.mixed` will be used)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
-broomExtra::tidy(lmm.mod, effects = "fixed")
+broomExtra::tidy(lmm.mod, effects = "fixed", exponentiate = TRUE)
 
 # linear model (`broom` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
-broomExtra::tidy(lm.mod, exponentiate = TRUE, conf.int = TRUE)
+broomExtra::tidy(lm.mod, conf.int = TRUE)
 
-# anova (`broom` will be used)
-broomExtra::tidy(stats::anova(stats::lm(wt ~ am, mtcars)))
+# unsupported object (will return `NULL`)
+x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
+y <- c(1:6, 5:4, 3:1)
+appr <- stats::approx(x, y, xout = x)
+broomExtra::tidy(appr)
 }
 
 }

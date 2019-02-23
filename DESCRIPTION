@@ -11,7 +11,7 @@ Authors@R:
 Maintainer: Indrajeet Patil <patilindrajeet.science@gmail.com>
 Description: Collection of functions to assist broom and
     broom.mixed package-related workflows.
-License: GPL-3
+License: GPL-3 | file LICENSE
 URL: https://indrajeetpatil.github.io/broomExtra/,
     https://github.com/IndrajeetPatil/broomExtra
 BugReports: https://github.com/IndrajeetPatil/broomExtra/issues
@@ -25,6 +25,7 @@ Suggests:
     covr,
     gapminder,
     knitr,
+    lme4,
     rmarkdown,
     spelling,
     testthat

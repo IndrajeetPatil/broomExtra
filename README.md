@@ -11,6 +11,15 @@ status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomE
 status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)
 [![Codecov test
 coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)
+[![Coverage
+Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)
+[![Project Status: Active - The project has reached a stable, usable
+state and is being actively
+developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--02--23-yellowgreen.svg)](/commits/master)
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![minimal R
+version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
 <!-- badges: end -->
 
 The goal of `broomExtra` is to provide helper functions that assist in
@@ -58,6 +67,13 @@ broomExtra::tidy(stats::anova(stats::lm(wt ~ am, mtcars)))
 #>   <chr>     <int> <dbl>  <dbl>     <dbl>      <dbl>
 #> 1 am            1  14.2 14.2        27.6  0.0000113
 #> 2 Residuals    30  15.4  0.515      NA   NA
+
+# unsupported object (will return `NULL`)
+x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
+y <- c(1:6, 5:4, 3:1)
+appr <- stats::approx(x, y, xout = x)
+broomExtra::tidy(appr)
+#> NULL
 ```
 
 ## model summaries
@@ -81,6 +97,10 @@ broomExtra::glance(lm.mod)
 #>       <dbl>         <dbl> <dbl>     <dbl>    <dbl> <int>  <dbl> <dbl> <dbl>
 #> 1     0.286         0.282  47.7      71.5 9.89e-15     2  -950. 1906. 1916.
 #> # ... with 2 more variables: deviance <dbl>, df.residual <int>
+
+# in case no glance method is available (`NULL` will be returned)
+broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
+#> NULL
 ```
 
 ## augmented dataframe
@@ -124,4 +144,26 @@ broomExtra::augment(lm.mod)
 #>  9     431.     8    335.  -95.4      2.01   0.0138    47.3 0.0284   
 #> 10     466.     9    346. -121.       2.56   0.0192    47.0 0.0639   
 #> # ... with 170 more rows
+
+# in case no augment method is available (`NULL` will be returned)
+broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
+#> NULL
 ```
+
+# Code coverage
+
+As the code stands right now, here is the code coverage for all primary
+functions involved:
+<https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R>
+
+# Contributing
+
+I’m happy to receive bug reports, suggestions, questions, and (most of
+all) contributions to fix problems and add features. I personally prefer
+using the GitHub issues system over trying to reach out to me in other
+ways (personal e-mail, Twitter, etc.). Pull requests for contributions
+are encouraged.
+
+Please note that this project is released with a [Contributor Code of
+Conduct](CONDUCT.md). By participating in this project you agree to
+abide by its terms.
