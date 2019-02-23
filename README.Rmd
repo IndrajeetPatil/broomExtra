@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# broomExtra
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of `broomExtra` is to provide helper functions that assist in data
+analysis workflows involving packages `broom` and `broom.mixed`.
+
+## Installation
+
+You can install the development version of `broomExtra` from GitHub:
+
+```{r echo=FALSE, results='hide',message=FALSE}
+library(broom)
+library(broom.mixed)
+```
+
+```{r install, eval = FALSE}
+remotes::install_github("IndrajeetPatil/broomExtra")
+```
+
+## model summaries
+
+```{r glance}
+library(lme4)
+
+# mixed-effects model
+lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
+broomExtra::glance(lmm.mod)
+
+# linear model
+lm.mod <- lm(Reaction ~ Days, sleepstudy)
+broomExtra::glance(lm.mod)
+```

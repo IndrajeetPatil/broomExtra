@@ -1,0 +1,14 @@
+url: https://indrajeetpatil.github.io/broomExtra/
+
+template:
+  params:
+    bootswatch: simplex
+
+development:
+  mode: unreleased
+
+authors:
+  Indrajeet Patil:
+    href: https://sites.google.com/site/indrajeetspatilmorality/
+
+
