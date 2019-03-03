@@ -9,6 +9,9 @@
 #' @importFrom rlang !! !!! exec quo_squash enquo
 #' @importFrom dplyr group_by ungroup mutate group_map
 #'
+#' @inherit augment return value
+#' @inheritSection augment Methods
+#'
 #' @examples
 #' set.seed(123)
 #' # to speed up computation, let's use only 50% of the data

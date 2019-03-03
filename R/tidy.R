@@ -1,17 +1,20 @@
 #' @title Retrieve tidy dataframe if it exists.
 #' @name tidy
 #' @author Indrajeet Patil
-#' @description Check if a `tidy` method exits for a given object, either in
-#'   `broom` or in `broom.mixed`. If it does, return the model summary
-#'   dataframe, if not, return a `NULL`.
+#' @description Checks if a `tidy` method exits for a given object, either in
+#'   `broom` or in `broom.mixed`. If it does, it turn an object into a tidy
+#'   tibble, if not, return a `NULL`.
 #'
 #' @inheritParams generics::tidy
 #'
 #' @importFrom broom tidy
 #' @importFrom broom.mixed tidy
 #'
+#' @inherit generics::tidy return value
+#' @inheritSection generics::tidy Methods
+#'
 #' @examples
-#' \dontrun{
+#' set.seed(123)
 #' library(lme4)
 #'
 #' # mixed-effects models (`broom.mixed` will be used)
@@ -27,8 +30,6 @@
 #' y <- c(1:6, 5:4, 3:1)
 #' appr <- stats::approx(x, y, xout = x)
 #' broomExtra::tidy(appr)
-#' }
-#'
 #' @export
 
 tidy <- function(x, ...) {

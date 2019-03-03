@@ -10,8 +10,11 @@
 #' @importFrom broom glance
 #' @importFrom broom.mixed glance
 #'
+#' @inherit generics::glance return value
+#' @inheritSection generics::glance Methods
+#'
 #' @examples
-#' \dontrun{
+#' set.seed(123)
 #' library(lme4)
 #'
 #' # mixed-effects models (`broom.mixed` will be used)
@@ -24,8 +27,6 @@
 #'
 #' # no glance available (`NULL` will be returned)
 #' broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
-#' }
-#'
 #' @export
 
 glance <- function(x, ...) {

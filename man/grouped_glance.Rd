@@ -22,6 +22,13 @@ These dots support \link{tidy-dots} features.}
 Model summary output from grouped analysis of any function that has
 \code{data} argument in its function call.
 }
+\section{Methods}{
+
+
+\Sexpr[stage=render,results=rd]{generics:::methods_rd("glance")}
+
+}
+
 \examples{
 set.seed(123)
 # to speed up computation, let's use only 50\% of the data

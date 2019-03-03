@@ -12,13 +12,23 @@ observations.}
 
 \item{...}{Addition arguments to \code{augment} method.}
 }
+\value{
+A \code{\link[tibble:tibble]{tibble::tibble()}} with information about data points.
+}
 \description{
 Check if a \code{augment} method exits for a given object, either in
 \code{broom} or in \code{broom.mixed}. If it does, return the model summary
 dataframe, if not, return a \code{NULL}.
 }
+\section{Methods}{
+
+
+\Sexpr[stage=render,results=rd]{generics:::methods_rd("augment")}
+
+}
+
 \examples{
-\dontrun{
+set.seed(123)
 library(lme4)
 
 # mixed-effects models (`broom.mixed` will be used)
@@ -31,8 +41,6 @@ broomExtra::augment(lm.mod)
 
 # no augment available (`NULL` will be returned)
 broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
-}
-
 }
 \author{
 Indrajeet Patil

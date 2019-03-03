@@ -20,10 +20,20 @@ These dots support \link{tidy-dots} features.}
 
 \item{tidy.args}{A list of arguments to be used in the relevant \code{S3} method.}
 }
+\value{
+A \code{\link[tibble:tibble]{tibble::tibble()}} with information about model components.
+}
 \description{
 Tidy output from grouped analysis of any function that has \code{data}
 argument in its function call.
 }
+\section{Methods}{
+
+
+\Sexpr[stage=render,results=rd]{generics:::methods_rd("tidy")}
+
+}
+
 \examples{
 set.seed(123)
 # to speed up computation, let's use only 50\% of the data

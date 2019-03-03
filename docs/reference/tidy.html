@@ -32,9 +32,9 @@
 
 <meta property="og:title" content="Retrieve tidy dataframe if it exists. — tidy" />
 
-<meta property="og:description" content="Check if a tidy method exits for a given object, either in
-broom or in broom.mixed. If it does, return the model summary
-dataframe, if not, return a NULL." />
+<meta property="og:description" content="Checks if a tidy method exits for a given object, either in
+broom or in broom.mixed. If it does, it turn an object into a tidy
+tibble, if not, return a NULL." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -123,9 +123,9 @@ dataframe, if not, return a NULL." />
 
     <div class="ref-description">
     
-    <p>Check if a <code>tidy</code> method exits for a given object, either in
-<code>broom</code> or in <code>broom.mixed</code>. If it does, return the model summary
-dataframe, if not, return a <code>NULL</code>.</p>
+    <p>Checks if a <code>tidy</code> method exits for a given object, either in
+<code>broom</code> or in <code>broom.mixed</code>. If it does, it turn an object into a tidy
+tibble, if not, return a <code>NULL</code>.</p>
     
     </div>
 
@@ -144,9 +144,124 @@ dataframe, if not, return a <code>NULL</code>.</p>
     </tr>
     </table>
     
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code> with information about model components.</p>
+    
+    <h2 class="hasAnchor" id="methods"><a class="anchor" href="#methods"></a>Methods</h2>
+
+    
+    <p>See the following help topics for more details about individual methods:
+    <code>broom</code>
+<ul>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/durbinWatsonTest_tidiers'>durbinWatsonTest_tidiers</a></code>: <code>durbinWatsonTest</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/list_tidiers'>list_tidiers</a></code>: <code>list</code></p></li>
+<li><p><code>mgcv_tidy_gam</code>: <code>gam</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/null_tidiers'>null_tidiers</a></code>: <code>NULL</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/ordinal_tidiers'>ordinal_tidiers</a></code>: <code>clm</code>, <code>clmm</code>, <code>polr</code>, <code>svyolr</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/sp_tidiers'>sp_tidiers</a></code>: <code>Line</code>, <code>Lines</code>, <code>Polygon</code>, <code>Polygons</code>, <code>SpatialLinesDataFrame</code>, <code>SpatialPolygons</code>, <code>SpatialPolygonsDataFrame</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/summary_tidiers'>summary_tidiers</a></code>: <code>summaryDefault</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.aareg'>tidy.aareg</a></code>: <code>aareg</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.acf'>tidy.acf</a></code>: <code>acf</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.anova'>tidy.anova</a></code>: <code>anova</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.aov'>tidy.aov</a></code>: <code>aov</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.aovlist'>tidy.aovlist</a></code>: <code>aovlist</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.Arima'>tidy.Arima</a></code>: <code>Arima</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.betareg'>tidy.betareg</a></code>: <code>betareg</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.biglm'>tidy.biglm</a></code>: <code>biglm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.binDesign'>tidy.binDesign</a></code>: <code>binDesign</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.binWidth'>tidy.binWidth</a></code>: <code>binWidth</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.boot'>tidy.boot</a></code>: <code>boot</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.btergm'>tidy.btergm</a></code>: <code>btergm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.cch'>tidy.cch</a></code>: <code>cch</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.cld'>tidy.cld</a></code>: <code>cld</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.coeftest'>tidy.coeftest</a></code>: <code>coeftest</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.confint.glht'>tidy.confint.glht</a></code>: <code>confint.glht</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.confusionMatrix'>tidy.confusionMatrix</a></code>: <code>confusionMatrix</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.coxph'>tidy.coxph</a></code>: <code>coxph</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.cv.glmnet'>tidy.cv.glmnet</a></code>: <code>cv.glmnet</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.density'>tidy.density</a></code>: <code>density</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.dist'>tidy.dist</a></code>: <code>dist</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.emmGrid'>tidy.emmGrid</a></code>: <code>emmGrid</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.ergm'>tidy.ergm</a></code>: <code>ergm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.factanal'>tidy.factanal</a></code>: <code>factanal</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.felm'>tidy.felm</a></code>: <code>felm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.fitdistr'>tidy.fitdistr</a></code>: <code>fitdistr</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.ftable'>tidy.ftable</a></code>: <code>ftable</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.Gam'>tidy.Gam</a></code>: <code>Gam</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.garch'>tidy.garch</a></code>: <code>garch</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.geeglm'>tidy.geeglm</a></code>: <code>geeglm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.glht'>tidy.glht</a></code>: <code>glht</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.glm'>tidy.glm</a></code>: <code>glm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.glmnet'>tidy.glmnet</a></code>: <code>glmnet</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.glmRob'>tidy.glmRob</a></code>: <code>glmRob</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.gmm'>tidy.gmm</a></code>: <code>gmm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.htest'>tidy.htest</a></code>: <code>htest</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.ivreg'>tidy.ivreg</a></code>: <code>ivreg</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.kappa'>tidy.kappa</a></code>: <code>kappa</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.kde'>tidy.kde</a></code>: <code>kde</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.Kendall'>tidy.Kendall</a></code>: <code>Kendall</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.kmeans'>tidy.kmeans</a></code>: <code>kmeans</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.lavaan'>tidy.lavaan</a></code>: <code>lavaan</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.lm.beta'>tidy.lm.beta</a></code>: <code>lm.beta</code>, <code>summary.lm.beta</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.lm'>tidy.lm</a></code>: <code>lm</code>, <code>summary.lm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.lmodel2'>tidy.lmodel2</a></code>: <code>lmodel2</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.lmRob'>tidy.lmRob</a></code>: <code>lmRob</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.lsmobj'>tidy.lsmobj</a></code>: <code>lsmobj</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.manova'>tidy.manova</a></code>: <code>manova</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.map'>tidy.map</a></code>: <code>map</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.Mclust'>tidy.Mclust</a></code>: <code>Mclust</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.mediate'>tidy.mediate</a></code>: <code>mediate</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.mjoint'>tidy.mjoint</a></code>: <code>mjoint</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.mle2'>tidy.mle2</a></code>: <code>mle2</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.muhaz'>tidy.muhaz</a></code>: <code>muhaz</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.multinom'>tidy.multinom</a></code>: <code>multinom</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.nlrq'>tidy.nlrq</a></code>: <code>nlrq</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.nls'>tidy.nls</a></code>: <code>nls</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.orcutt'>tidy.orcutt</a></code>: <code>orcutt</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.pairwise.htest'>tidy.pairwise.htest</a></code>: <code>pairwise.htest</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.plm'>tidy.plm</a></code>: <code>plm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.poLCA'>tidy.poLCA</a></code>: <code>poLCA</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.power.htest'>tidy.power.htest</a></code>: <code>power.htest</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.prcomp'>tidy.prcomp</a></code>: <code>prcomp</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.pyears'>tidy.pyears</a></code>: <code>pyears</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.rcorr'>tidy.rcorr</a></code>: <code>rcorr</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.ref.grid'>tidy.ref.grid</a></code>: <code>ref.grid</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.regsubsets'>tidy.regsubsets</a></code>: <code>regsubsets</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.ridgelm'>tidy.ridgelm</a></code>: <code>ridgelm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.rlm'>tidy.rlm</a></code>: <code>rlm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.roc'>tidy.roc</a></code>: <code>roc</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.rq'>tidy.rq</a></code>: <code>rq</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.rqs'>tidy.rqs</a></code>: <code>rqs</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.spec'>tidy.spec</a></code>: <code>spec</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.speedlm'>tidy.speedlm</a></code>: <code>speedlm</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.summary.glht'>tidy.summary.glht</a></code>: <code>summary.glht</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.survdiff'>tidy.survdiff</a></code>: <code>survdiff</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.survexp'>tidy.survexp</a></code>: <code>survexp</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.survfit'>tidy.survfit</a></code>: <code>survfit</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.survreg'>tidy.survreg</a></code>: <code>survreg</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.table'>tidy.table</a></code>: <code>table</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.ts'>tidy.ts</a></code>: <code>ts</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.TukeyHSD'>tidy.TukeyHSD</a></code>: <code>TukeyHSD</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/tidy.zoo'>tidy.zoo</a></code>: <code>zoo</code></p></li>
+</ul>
+<code>broom.mixed</code>
+<ul>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/brms_tidiers'>brms_tidiers</a></code>: <code>brmsfit</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/gamlss_tidiers'>gamlss_tidiers</a></code>: <code>gamlss</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/glmmadmb_tidiers'>glmmadmb_tidiers</a></code>: <code>glmmadmb</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/glmmTMB_tidiers'>glmmTMB_tidiers</a></code>: <code>glmmTMB</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/lme4_tidiers'>lme4_tidiers</a></code>: <code>merMod</code>, <code>rlmerMod</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/mcmc_tidiers'>mcmc_tidiers</a></code>: <code>mcmc</code>, <code>mcmc.list</code>, <code>MCMCglmm</code>, <code>rjags</code>, <code>stanfit</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/nlme_tidiers'>nlme_tidiers</a></code>: <code>gls</code>, <code>lme</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/rstanarm_tidiers'>rstanarm_tidiers</a></code>: <code>stanreg</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/tidy.TMB'>tidy.TMB</a></code>: <code>TMB</code></p></li>
+</ul></p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>lme4</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Random'>set.seed</a></span>(<span class='fl'>123</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>lme4</span>)
 
 <span class='co'># mixed-effects models (`broom.mixed` will be used)</span>
 <span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/lme4/topics/lmer'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
@@ -165,15 +280,17 @@ dataframe, if not, return a <code>NULL</code>.</p>
 <span class='co'># unsupported object (will return `NULL`)</span>
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>2</span>, <span class='fl'>2</span>:<span class='fl'>4</span>, <span class='fl'>4</span>, <span class='fl'>4</span>, <span class='fl'>5</span>, <span class='fl'>5</span>, <span class='fl'>7</span>, <span class='fl'>7</span>, <span class='fl'>7</span>)
 <span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1</span>:<span class='fl'>6</span>, <span class='fl'>5</span>:<span class='fl'>4</span>, <span class='fl'>3</span>:<span class='fl'>1</span>)
-<span class='no'>appr</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/approxfun'>approx</a></span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>xout</span> <span class='kw'>=</span> <span class='no'>x</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='no'>appr</span>)</div><div class='output co'>#&gt; NULL</div></span><div class='input'>
-</div></pre>
+<span class='no'>appr</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/approxfun'>approx</a></span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>xout</span> <span class='kw'>=</span> <span class='no'>x</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: collapsing to unique 'x' values</span></div><div class='input'><span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='no'>appr</span>)</div><div class='output co'>#&gt; NULL</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-            
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#methods">Methods</a></li>
+      
       <li><a href="#examples">Examples</a></li>
     </ul>
 

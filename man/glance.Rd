@@ -16,8 +16,15 @@ Check if a \code{glance} method exits for a given object, either in
 \code{broom} or in \code{broom.mixed}. If it does, return the model summary
 dataframe, if not, return a \code{NULL}.
 }
+\section{Methods}{
+
+
+\Sexpr[stage=render,results=rd]{generics:::methods_rd("glance")}
+
+}
+
 \examples{
-\dontrun{
+set.seed(123)
 library(lme4)
 
 # mixed-effects models (`broom.mixed` will be used)
@@ -30,8 +37,6 @@ broomExtra::glance(lm.mod)
 
 # no glance available (`NULL` will be returned)
 broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
-}
-
 }
 \author{
 Indrajeet Patil

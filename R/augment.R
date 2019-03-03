@@ -10,8 +10,11 @@
 #' @importFrom broom augment
 #' @importFrom broom.mixed augment
 #'
+#' @inherit generics::augment return value
+#' @inheritSection generics::augment Methods
+#'
 #' @examples
-#' \dontrun{
+#' set.seed(123)
 #' library(lme4)
 #'
 #' # mixed-effects models (`broom.mixed` will be used)
@@ -24,8 +27,6 @@
 #'
 #' # no augment available (`NULL` will be returned)
 #' broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
-#' }
-#'
 #' @export
 
 augment <- function(x, ...) {

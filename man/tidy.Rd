@@ -11,13 +11,23 @@ tidy(x, ...)
 
 \item{...}{Additional arguments to tidying method.}
 }
-\description{
-Check if a \code{tidy} method exits for a given object, either in
-\code{broom} or in \code{broom.mixed}. If it does, return the model summary
-dataframe, if not, return a \code{NULL}.
+\value{
+A \code{\link[tibble:tibble]{tibble::tibble()}} with information about model components.
 }
+\description{
+Checks if a \code{tidy} method exits for a given object, either in
+\code{broom} or in \code{broom.mixed}. If it does, it turn an object into a tidy
+tibble, if not, return a \code{NULL}.
+}
+\section{Methods}{
+
+
+\Sexpr[stage=render,results=rd]{generics:::methods_rd("tidy")}
+
+}
+
 \examples{
-\dontrun{
+set.seed(123)
 library(lme4)
 
 # mixed-effects models (`broom.mixed` will be used)
@@ -33,8 +43,6 @@ x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
 y <- c(1:6, 5:4, 3:1)
 appr <- stats::approx(x, y, xout = x)
 broomExtra::tidy(appr)
-}
-
 }
 \author{
 Indrajeet Patil
