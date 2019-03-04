@@ -18,7 +18,7 @@
     "version": "3.6.0",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R Under development (unstable) (2019-02-26 r76164)",
+  "runtimePlatform": "R Under development (unstable) (2019-03-02 r76189)",
   "author": [
     {
       "@type": "Person",
@@ -208,7 +208,7 @@
       "sameAs": "https://CRAN.R-project.org/package=rlang"
     }
   ],
-  "fileSize": "25.48KB",
+  "fileSize": "25.511KB",
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
   "contIntegration": [
     "https://ci.appveyor.com/project/IndrajeetPatil/broomExtra",

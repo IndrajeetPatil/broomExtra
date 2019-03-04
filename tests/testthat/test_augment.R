@@ -19,8 +19,8 @@ testthat::test_that(
     testthat::expect_equal(broomExtra::augment(lm.mod), broom::augment(lm.mod))
 
     # unsupported
-    testthat::expect_null(
+    suppressWarnings(testthat::expect_null(
       broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
-    )
+    ))
   }
 )

@@ -24,12 +24,6 @@
 #' # linear model (`broom` will be used)
 #' lm.mod <- lm(Reaction ~ Days, sleepstudy)
 #' broomExtra::tidy(lm.mod, conf.int = TRUE)
-#'
-#' # unsupported object (will return `NULL`)
-#' x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
-#' y <- c(1:6, 5:4, 3:1)
-#' appr <- stats::approx(x, y, xout = x)
-#' broomExtra::tidy(appr)
 #' @export
 
 tidy <- function(x, ...) {

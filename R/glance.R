@@ -24,9 +24,6 @@
 #' # linear model (`broom` will be used)
 #' lm.mod <- lm(Reaction ~ Days, sleepstudy)
 #' broomExtra::glance(lm.mod)
-#'
-#' # no glance available (`NULL` will be returned)
-#' broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
 #' @export
 
 glance <- function(x, ...) {

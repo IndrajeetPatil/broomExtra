@@ -24,9 +24,6 @@
 #' # linear model (`broom` will be used)
 #' lm.mod <- lm(Reaction ~ Days, sleepstudy)
 #' broomExtra::augment(lm.mod)
-#'
-#' # no augment available (`NULL` will be returned)
-#' broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 #' @export
 
 augment <- function(x, ...) {
