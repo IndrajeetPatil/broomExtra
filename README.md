@@ -16,7 +16,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--03--04-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--03--06-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -137,8 +137,8 @@ lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 #> # A tibble: 1 x 11
 #>   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
-#>       <dbl>         <dbl> <dbl>     <dbl>    <dbl> <int>  <dbl> <dbl> <dbl>
-#> 1     0.286         0.282  47.7      71.5 9.89e-15     2  -950. 1906. 1916.
+#>       <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>  <dbl> <dbl> <dbl>
+#> 1     0.286         0.282  47.7      71.5 9.89e-15     1  -950. 1906. 1916.
 #> # ... with 2 more variables: deviance <dbl>, df.residual <int>
 
 # another example with `broom`
@@ -307,7 +307,7 @@ broomExtra::grouped_glance(
 )
 #> # A tibble: 35 x 13
 #>    cut   color r.squared adj.r.squared sigma statistic   p.value    df
-#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>     <dbl> <int>
+#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>
 #>  1 Fair  D         0.884         0.883 1857.      641. 4.45e- 41     1
 #>  2 Fair  E         0.876         0.875 1370.      708. 3.52e- 47     1
 #>  3 Fair  F         0.874         0.873 1989.     1071. 1.68e- 71     1
@@ -375,7 +375,7 @@ broomExtra::grouped_augment(
   formula = price ~ carat + (carat | color) - 1,
   control = lme4::lmerControl(optimizer = "bobyqa")
 )
-#> singular fit
+#> boundary (singular) fit: see ?isSingular
 #> # A tibble: 26,970 x 15
 #>    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu
 #>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>   <dbl>  <dbl> <dbl>

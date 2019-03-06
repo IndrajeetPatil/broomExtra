@@ -5,7 +5,7 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
-  "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions 'tidy', 'glance', and 'augment' choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. Additionally, 'grouped_' variants\n    of the generics provides a convenient way to execute functions across\n    a combination of grouping variable(s) in a dataframe.",
+  "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions tidy(), glance(), and augment() choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. Additionally, 'grouped_' variants\n    of the generics provides a convenient way to execute functions across\n    a combination of grouping variable(s) in a dataframe.",
   "name": "broomExtra: Grouped Statistical Analyses in a Tidy Way",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
   "relatedLink": "https://indrajeetpatil.github.io/broomExtra/",
@@ -61,6 +61,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=gapminder"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "generics",
+      "name": "generics",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=generics"
     },
     {
       "@type": "SoftwareApplication",
@@ -124,6 +136,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "stringr",
+      "name": "stringr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=stringr"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
       "provider": {
@@ -133,6 +157,30 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "tibble",
+      "name": "tibble",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tibble"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "tidyr",
+      "name": "tidyr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tidyr"
     }
   ],
   "softwareRequirements": [
@@ -208,7 +256,6 @@
       "sameAs": "https://CRAN.R-project.org/package=rlang"
     }
   ],
-  "fileSize": "25.511KB",
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
   "contIntegration": [
     "https://ci.appveyor.com/project/IndrajeetPatil/broomExtra",

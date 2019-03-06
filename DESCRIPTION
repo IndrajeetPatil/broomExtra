@@ -11,7 +11,7 @@ Authors@R:
 Maintainer: Indrajeet Patil <patilindrajeet.science@gmail.com>
 Description: Collection of functions to assist 'broom' and
     'broom.mixed' package-related data analysis workflows. In particular,
-    the generic functions 'tidy', 'glance', and 'augment' choose
+    the generic functions tidy(), glance(), and augment() choose
     appropriate S3 methods from these two packages depending on which
     package exports the needed method. Additionally, 'grouped_' variants
     of the generics provides a convenient way to execute functions across
@@ -31,12 +31,16 @@ Imports:
 Suggests: 
     covr,
     gapminder,
+    generics,
     ggplot2,
     knitr,
     lme4,
     rmarkdown,
     spelling,
-    testthat
+    stringr,
+    testthat,
+    tibble,
+    tidyr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

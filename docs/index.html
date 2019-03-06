@@ -12,7 +12,7 @@
 <script src="pkgdown.js"></script><meta property="og:title" content="Grouped Statistical Analyses in a Tidy Way">
 <meta property="og:description" content="Collection of functions to assist 'broom' and
     'broom.mixed' package-related data analysis workflows. In particular,
-    the generic functions 'tidy', 'glance', and 'augment' choose
+    the generic functions tidy(), glance(), and augment() choose
     appropriate S3 methods from these two packages depending on which
     package exports the needed method. Additionally, 'grouped_' variants
     of the generics provides a convenient way to execute functions across
@@ -59,6 +59,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="articles/available_methods.html">Available methods</a>
+    </li>
+    <li>
       <a href="articles/tests_and_coverage.html">Tests and Coverage</a>
     </li>
   </ul>
@@ -190,8 +193,8 @@
 <a class="sourceLine" id="cb3-15" title="15">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/glance.html">glance</a></span>(lm.mod)</a>
 <a class="sourceLine" id="cb3-16" title="16"><span class="co">#&gt; # A tibble: 1 x 11</span></a>
 <a class="sourceLine" id="cb3-17" title="17"><span class="co">#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC</span></a>
-<a class="sourceLine" id="cb3-18" title="18"><span class="co">#&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb3-19" title="19"><span class="co">#&gt; 1     0.286         0.282  47.7      71.5 9.89e-15     2  -950. 1906. 1916.</span></a>
+<a class="sourceLine" id="cb3-18" title="18"><span class="co">#&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb3-19" title="19"><span class="co">#&gt; 1     0.286         0.282  47.7      71.5 9.89e-15     1  -950. 1906. 1916.</span></a>
 <a class="sourceLine" id="cb3-20" title="20"><span class="co">#&gt; # ... with 2 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;</span></a>
 <a class="sourceLine" id="cb3-21" title="21"></a>
 <a class="sourceLine" id="cb3-22" title="22"><span class="co"># another example with `broom`</span></a>
@@ -354,7 +357,7 @@
 <a class="sourceLine" id="cb6-11" title="11">)</a>
 <a class="sourceLine" id="cb6-12" title="12"><span class="co">#&gt; # A tibble: 35 x 13</span></a>
 <a class="sourceLine" id="cb6-13" title="13"><span class="co">#&gt;    cut   color r.squared adj.r.squared sigma statistic   p.value    df</span></a>
-<a class="sourceLine" id="cb6-14" title="14"><span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt;     &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb6-14" title="14"><span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt;     &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;</span></a>
 <a class="sourceLine" id="cb6-15" title="15"><span class="co">#&gt;  1 Fair  D         0.884         0.883 1857.      641. 4.45e- 41     1</span></a>
 <a class="sourceLine" id="cb6-16" title="16"><span class="co">#&gt;  2 Fair  E         0.876         0.875 1370.      708. 3.52e- 47     1</span></a>
 <a class="sourceLine" id="cb6-17" title="17"><span class="co">#&gt;  3 Fair  F         0.874         0.873 1989.     1071. 1.68e- 71     1</span></a>
@@ -422,7 +425,7 @@
 <a class="sourceLine" id="cb7-31" title="31">  <span class="dt">formula =</span> price <span class="op">~</span><span class="st"> </span>carat <span class="op">+</span><span class="st"> </span>(carat <span class="op">|</span><span class="st"> </span>color) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>,</a>
 <a class="sourceLine" id="cb7-32" title="32">  <span class="dt">control =</span> lme4<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/lme4/topics/lmerControl">lmerControl</a></span>(<span class="dt">optimizer =</span> <span class="st">"bobyqa"</span>)</a>
 <a class="sourceLine" id="cb7-33" title="33">)</a>
-<a class="sourceLine" id="cb7-34" title="34"><span class="co">#&gt; singular fit</span></a>
+<a class="sourceLine" id="cb7-34" title="34"><span class="co">#&gt; boundary (singular) fit: see ?isSingular</span></a>
 <a class="sourceLine" id="cb7-35" title="35"><span class="co">#&gt; # A tibble: 26,970 x 15</span></a>
 <a class="sourceLine" id="cb7-36" title="36"><span class="co">#&gt;    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu</span></a>
 <a class="sourceLine" id="cb7-37" title="37"><span class="co">#&gt;    &lt;ord&gt; &lt;int&gt; &lt;dbl&gt; &lt;ord&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;</span></a>
@@ -486,7 +489,7 @@
 <li><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master"><img src="https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master" alt="Coverage Status"></a></li>
 <li><a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active - The project has reached a stable, usable state and is being actively developed."></a></li>
-<li><a href="/commits/master"><img src="https://img.shields.io/badge/last%20change-2019--03--04-yellowgreen.svg" alt="Last-changedate"></a></li>
+<li><a href="/commits/master"><img src="https://img.shields.io/badge/last%20change-2019--03--06-yellowgreen.svg" alt="Last-changedate"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-red.svg" alt="lifecycle"></a></li>
 <li><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a></li>
 </ul>

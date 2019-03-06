@@ -1,0 +1,72 @@
+---
+title: "Available methods"
+author: "Indrajeet Patil"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    fig_width: 6
+    fig.align: 'center'
+    fig.asp: 0.618
+    dpi: 200
+    toc: true
+    warning: FALSE
+    message: FALSE
+vignette: >
+  %\VignetteIndexEntry{additional vignettes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+```{r setup}
+library(broomExtra)
+```
+
+Currently, `S3` methods for mixed-effects model objects are included in the
+`broom.mixed` package, while the rest of the object classes are included in the
+`broom` package. This means that you constantly need to keep track of the class
+of the object (e.g., "if it is `merMod` object, use
+`broom.mixed::tidy()`/`broom.mixed::glance()`/`broom.mixed::augment()`, but if
+it is `polr` object, use `broom::tidy()`/`broom::glance()`/`broom::augment()`").
+Using generics from `broomExtra` means you no longer have to worry about this,
+as calling `broomExtra::tidy()`/`broomExtra::glance()`/`broomExtra::augment()`
+will search the appropriate method from these two packages and return the
+results.
+
+# Methods
+
+In this vignette, we list all available methods currently available across these
+two packages.
+
+```{r list, echo = FALSE, message = FALSE}
+# loading the needed libraries
+library(dplyr)
+library(broom)
+library(broom.mixed)
+
+# function to extract methods
+method_df <- function(method_name) {
+  m <- as.vector(methods(method_name))
+  tibble::tibble(class = stringr::str_remove(
+    string = m,
+    pattern = stringr::str_c(method_name, "[.]")
+  ),
+  !!method_name := "x")
+}
+
+# preparing a table
+method_df("tidy") %>%
+  dplyr::left_join(x = ., y = method_df("glance")) %>%
+  dplyr::left_join(x = ., y = method_df("augment")) %>%
+  dplyr::mutate_all(.tbl = ., .funs = tidyr::replace_na, "") %>%
+  knitr::kable()
+```
+
