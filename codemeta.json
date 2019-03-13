@@ -8,10 +8,10 @@
   "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions tidy(), glance(), and augment() choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. Additionally, 'grouped_' variants\n    of the generics provides a convenient way to execute functions across\n    a combination of grouping variable(s) in a dataframe.",
   "name": "broomExtra: Grouped Statistical Analyses in a Tidy Way",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
-  "relatedLink": "https://indrajeetpatil.github.io/broomExtra/",
+  "relatedLink": ["https://indrajeetpatil.github.io/broomExtra/", "https://CRAN.R-project.org/package=broomExtra"],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.0.1",
+  "version": "0.0.1.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -263,5 +263,14 @@
     "https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"
   ],
   "developmentStatus": "http://www.repostatus.org/#active",
-  "releaseNotes": "https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md"
+  "releaseNotes": "https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {}
 }

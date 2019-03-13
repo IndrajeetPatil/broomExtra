@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Grouped Statistical Analyses in a Tidy Way
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",

@@ -66,7 +66,7 @@ data argument in its function call." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.1</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.1.9000</span>
       </span>
     </div>
 
@@ -165,6 +165,7 @@ data argument in its function call." />
 <ul>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/durbinWatsonTest_tidiers'>durbinWatsonTest_tidiers</a></code>: <code>durbinWatsonTest</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.aareg'>glance.aareg</a></code>: <code>aareg</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.aov'>glance.aov</a></code>: <code>aov</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.Arima'>glance.Arima</a></code>: <code>Arima</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.betareg'>glance.betareg</a></code>: <code>betareg</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.biglm'>glance.biglm</a></code>: <code>biglm</code></p></li>
@@ -195,6 +196,7 @@ data argument in its function call." />
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.nlrq'>glance.nlrq</a></code>: <code>nlrq</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.nls'>glance.nls</a></code>: <code>nls</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.orcutt'>glance.orcutt</a></code>: <code>orcutt</code></p></li>
+<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.pam'>glance.pam</a></code>: <code>pam</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.plm'>glance.plm</a></code>: <code>plm</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.poLCA'>glance.poLCA</a></code>: <code>poLCA</code></p></li>
 <li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/glance.pyears'>glance.pyears</a></code>: <code>pyears</code></p></li>
@@ -236,7 +238,7 @@ data argument in its function call." />
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>price</span> ~ <span class='no'>carat</span> - <span class='fl'>1</span>,
   <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='no'><a href='https://www.rdocumentation.org/packages/stats/topics/lm'>lm</a></span>,
   <span class='kw'>na.action</span> <span class='kw'>=</span> <span class='no'>na.omit</span>
-)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 35 x 13</span><span>
+)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 35 x 14</span><span>
 #&gt;    cut   color r.squared adj.r.squared sigma statistic   p.value    df logLik
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;ord&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;ord&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
 #&gt; </span><span style='color: #555555;'> 1</span><span> Fair  D         0.884         0.883 </span><span style='text-decoration: underline;'>1</span><span>857.      641. 4.45</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 41</span><span>     1  -</span><span style='color: #BB0000;'>760.</span><span>
@@ -249,8 +251,8 @@ data argument in its function call." />
 #&gt; </span><span style='color: #555555;'> 8</span><span> Good  D         0.860         0.860 </span><span style='text-decoration: underline;'>1</span><span>729.     </span><span style='text-decoration: underline;'>2</span><span>065. 2.66</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-145</span><span>     1 -</span><span style='color: #BB0000;text-decoration: underline;'>2</span><span style='color: #BB0000;'>981.</span><span>
 #&gt; </span><span style='color: #555555;'> 9</span><span> Good  E         0.870         0.870 </span><span style='text-decoration: underline;'>1</span><span>674.     </span><span style='text-decoration: underline;'>3</span><span>084. 2.50</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-206</span><span>     1 -</span><span style='color: #BB0000;text-decoration: underline;'>4</span><span style='color: #BB0000;'>084.</span><span>
 #&gt; </span><span style='color: #555555;'>10</span><span> Good  F         0.873         0.873 </span><span style='text-decoration: underline;'>1</span><span>677.     </span><span style='text-decoration: underline;'>3</span><span>110. 1.76</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-204</span><span>     1 -</span><span style='color: #BB0000;text-decoration: underline;'>3</span><span style='color: #BB0000;'>997.</span><span>
-#&gt; </span><span style='color: #555555;'># ... with 25 more rows, and 4 more variables: AIC </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, BIC </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
-#&gt; #   deviance </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, df.residual </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'>
+#&gt; </span><span style='color: #555555;'># ... with 25 more rows, and 5 more variables: AIC </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, BIC </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
+#&gt; #   deviance </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, df.residual </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, nobs </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'>
 <span class='co'># linear mixed effects model</span>
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/grouped_glance.html'>grouped_glance</a></span>(
   <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/sample.html'>sample_frac</a></span>(<span class='kw'>tbl</span> <span class='kw'>=</span> <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='no'><a href='https://ggplot2.tidyverse.org/reference/diamonds.html'>diamonds</a></span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>0.5</span>),

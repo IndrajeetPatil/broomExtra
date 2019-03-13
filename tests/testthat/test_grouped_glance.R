@@ -20,11 +20,11 @@ testthat::test_that(
 
     # broom
     lm_df <- broomExtra::grouped_glance(
-      data = ggplot2::diamonds,
-      grouping.vars = c(cut, color),
+      data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.1),
+      grouping.vars = color,
       ..f = stats::lm,
-      formula = price ~ carat - 1
+      formula = price ~ carat
     )
-    testthat::expect_equal(dim(lm_df), c(35L, 13L))
+    testthat::expect_equal(dim(lm_df)[1], 7L)
   }
 )
