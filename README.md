@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--03--13-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--03--14-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -134,16 +134,15 @@ broomExtra::tidy(
   conf.type = "Wald"
 )
 #> # A tibble: 7 x 8
-#>   term  estimate std.error statistic  p.value conf.low conf.high
-#>   <chr>    <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
-#> 1 1|2      0.244     0.545    -2.59  9.66e- 3   0.0837     0.710
-#> 2 2|3      3.14      0.510     2.24  2.48e- 2   1.16       8.52 
-#> 3 3|4     29.3       0.638     5.29  1.21e- 7   8.38     102.   
-#> 4 4|5    140.        0.751     6.58  4.66e-11  32.1      610.   
-#> 5 temp~   10.2       0.701     3.31  9.28e- 4   2.58      40.2  
-#> 6 cont~    3.85      0.660     2.04  4.13e- 2   1.05      14.0  
-#> 7 temp~    1.43      0.924     0.389 6.97e- 1   0.234      8.76 
-#> # ... with 1 more variable: coefficient_type <chr>
+#>   term   estimate std.error statistic  p.value conf.low conf.high coef.type
+#>   <chr>     <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl> <chr>    
+#> 1 1|2       0.244     0.545    -2.59  9.66e- 3   0.0837     0.710 intercept
+#> 2 2|3       3.14      0.510     2.24  2.48e- 2   1.16       8.52  intercept
+#> 3 3|4      29.3       0.638     5.29  1.21e- 7   8.38     102.    intercept
+#> 4 4|5     140.        0.751     6.58  4.66e-11  32.1      610.    intercept
+#> 5 tempw~   10.2       0.701     3.31  9.28e- 4   2.58      40.2   location 
+#> 6 conta~    3.85      0.660     2.04  4.13e- 2   1.05      14.0   location 
+#> 7 tempw~    1.43      0.924     0.389 6.97e- 1   0.234      8.76  location
 
 # unsupported object (the function will return `NULL` in such cases)
 x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
@@ -266,7 +265,7 @@ broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 #> NULL
 ```
 
-# `grouped_` version of variant functions
+# `grouped_` variants of generics
 
 `grouped` variants of the generic functions (`tidy`, `glance`, and
 `augment`) make it easy to execute the same analysis for all
@@ -321,13 +320,13 @@ broomExtra::grouped_tidy(
 #>    <ord> <chr>  <chr> <chr>    <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
 #>  1 Fair  fixed  <NA>  carat  3.80e+3      228.      16.7    3212.     4387.
 #>  2 Fair  ran_p~ color sd__~  2.16e+3       NA       NA        NA        NA 
-#>  3 Fair  ran_p~ color sd__~  2.54e+3       NA       NA        NA        NA 
-#>  4 Fair  ran_p~ color cor_~ -9.75e-1       NA       NA        NA        NA 
+#>  3 Fair  ran_p~ color cor_~ -9.75e-1       NA       NA        NA        NA 
+#>  4 Fair  ran_p~ color sd__~  2.54e+3       NA       NA        NA        NA 
 #>  5 Fair  ran_p~ Resi~ sd__~  1.83e+3       NA       NA        NA        NA 
 #>  6 Good  fixed  <NA>  carat  9.22e+3      105.      87.6    8946.     9488.
 #>  7 Good  ran_p~ color sd__~  2.69e+3       NA       NA        NA        NA 
-#>  8 Good  ran_p~ color sd__~  1.61e+3       NA       NA        NA        NA 
-#>  9 Good  ran_p~ color cor_~  9.98e-1       NA       NA        NA        NA 
+#>  8 Good  ran_p~ color cor_~  9.98e-1       NA       NA        NA        NA 
+#>  9 Good  ran_p~ color sd__~  1.61e+3       NA       NA        NA        NA 
 #> 10 Good  ran_p~ Resi~ sd__~  1.37e+3       NA       NA        NA        NA 
 #> # ... with 15 more rows
 ```

@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grouped Statistical Analyses in a Tidy Way • broomExtra</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Grouped Statistical Analyses in a Tidy Way">
 <meta property="og:description" content="Collection of functions to assist 'broom' and
@@ -44,7 +45,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -73,7 +74,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/IndrajeetPatil/broomExtra">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -164,25 +165,24 @@
 <a class="sourceLine" id="cb5-36" title="36">  <span class="dt">conf.type =</span> <span class="st">"Wald"</span></a>
 <a class="sourceLine" id="cb5-37" title="37">)</a>
 <a class="sourceLine" id="cb5-38" title="38"><span class="co">#&gt; # A tibble: 7 x 8</span></a>
-<a class="sourceLine" id="cb5-39" title="39"><span class="co">#&gt;   term  estimate std.error statistic  p.value conf.low conf.high</span></a>
-<a class="sourceLine" id="cb5-40" title="40"><span class="co">#&gt;   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb5-41" title="41"><span class="co">#&gt; 1 1|2      0.244     0.545    -2.59  9.66e- 3   0.0837     0.710</span></a>
-<a class="sourceLine" id="cb5-42" title="42"><span class="co">#&gt; 2 2|3      3.14      0.510     2.24  2.48e- 2   1.16       8.52 </span></a>
-<a class="sourceLine" id="cb5-43" title="43"><span class="co">#&gt; 3 3|4     29.3       0.638     5.29  1.21e- 7   8.38     102.   </span></a>
-<a class="sourceLine" id="cb5-44" title="44"><span class="co">#&gt; 4 4|5    140.        0.751     6.58  4.66e-11  32.1      610.   </span></a>
-<a class="sourceLine" id="cb5-45" title="45"><span class="co">#&gt; 5 temp~   10.2       0.701     3.31  9.28e- 4   2.58      40.2  </span></a>
-<a class="sourceLine" id="cb5-46" title="46"><span class="co">#&gt; 6 cont~    3.85      0.660     2.04  4.13e- 2   1.05      14.0  </span></a>
-<a class="sourceLine" id="cb5-47" title="47"><span class="co">#&gt; 7 temp~    1.43      0.924     0.389 6.97e- 1   0.234      8.76 </span></a>
-<a class="sourceLine" id="cb5-48" title="48"><span class="co">#&gt; # ... with 1 more variable: coefficient_type &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb5-49" title="49"></a>
-<a class="sourceLine" id="cb5-50" title="50"><span class="co"># unsupported object (the function will return `NULL` in such cases)</span></a>
-<a class="sourceLine" id="cb5-51" title="51">x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">2</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">7</span>)</a>
-<a class="sourceLine" id="cb5-52" title="52">y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dv">5</span><span class="op">:</span><span class="dv">4</span>, <span class="dv">3</span><span class="op">:</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb5-53" title="53">appr &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/approxfun">approx</a></span>(x, y, <span class="dt">xout =</span> x)</a>
-<a class="sourceLine" id="cb5-54" title="54"><span class="co">#&gt; Warning in regularize.values(x, y, ties, missing(ties)): collapsing to</span></a>
-<a class="sourceLine" id="cb5-55" title="55"><span class="co">#&gt; unique 'x' values</span></a>
-<a class="sourceLine" id="cb5-56" title="56">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/tidy.html">tidy</a></span>(appr)</a>
-<a class="sourceLine" id="cb5-57" title="57"><span class="co">#&gt; NULL</span></a></code></pre></div>
+<a class="sourceLine" id="cb5-39" title="39"><span class="co">#&gt;   term   estimate std.error statistic  p.value conf.low conf.high coef.type</span></a>
+<a class="sourceLine" id="cb5-40" title="40"><span class="co">#&gt;   &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    </span></a>
+<a class="sourceLine" id="cb5-41" title="41"><span class="co">#&gt; 1 1|2       0.244     0.545    -2.59  9.66e- 3   0.0837     0.710 intercept</span></a>
+<a class="sourceLine" id="cb5-42" title="42"><span class="co">#&gt; 2 2|3       3.14      0.510     2.24  2.48e- 2   1.16       8.52  intercept</span></a>
+<a class="sourceLine" id="cb5-43" title="43"><span class="co">#&gt; 3 3|4      29.3       0.638     5.29  1.21e- 7   8.38     102.    intercept</span></a>
+<a class="sourceLine" id="cb5-44" title="44"><span class="co">#&gt; 4 4|5     140.        0.751     6.58  4.66e-11  32.1      610.    intercept</span></a>
+<a class="sourceLine" id="cb5-45" title="45"><span class="co">#&gt; 5 tempw~   10.2       0.701     3.31  9.28e- 4   2.58      40.2   location </span></a>
+<a class="sourceLine" id="cb5-46" title="46"><span class="co">#&gt; 6 conta~    3.85      0.660     2.04  4.13e- 2   1.05      14.0   location </span></a>
+<a class="sourceLine" id="cb5-47" title="47"><span class="co">#&gt; 7 tempw~    1.43      0.924     0.389 6.97e- 1   0.234      8.76  location</span></a>
+<a class="sourceLine" id="cb5-48" title="48"></a>
+<a class="sourceLine" id="cb5-49" title="49"><span class="co"># unsupported object (the function will return `NULL` in such cases)</span></a>
+<a class="sourceLine" id="cb5-50" title="50">x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">2</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb5-51" title="51">y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dv">5</span><span class="op">:</span><span class="dv">4</span>, <span class="dv">3</span><span class="op">:</span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb5-52" title="52">appr &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/approxfun">approx</a></span>(x, y, <span class="dt">xout =</span> x)</a>
+<a class="sourceLine" id="cb5-53" title="53"><span class="co">#&gt; Warning in regularize.values(x, y, ties, missing(ties)): collapsing to</span></a>
+<a class="sourceLine" id="cb5-54" title="54"><span class="co">#&gt; unique 'x' values</span></a>
+<a class="sourceLine" id="cb5-55" title="55">broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/tidy.html">tidy</a></span>(appr)</a>
+<a class="sourceLine" id="cb5-56" title="56"><span class="co">#&gt; NULL</span></a></code></pre></div>
 </div>
 <div id="model-summaries" class="section level2">
 <h2 class="hasAnchor">
@@ -291,9 +291,9 @@
 <a class="sourceLine" id="cb7-63" title="63"><span class="co">#&gt; NULL</span></a></code></pre></div>
 </div>
 </div>
-<div id="grouped_-version-of-variant-functions" class="section level1">
+<div id="grouped_-variants-of-generics" class="section level1">
 <h1 class="hasAnchor">
-<a href="#grouped_-version-of-variant-functions" class="anchor"></a><code>grouped_</code> version of variant functions</h1>
+<a href="#grouped_-variants-of-generics" class="anchor"></a><code>grouped_</code> variants of generics</h1>
 <p><code>grouped</code> variants of the generic functions (<code>tidy</code>, <code>glance</code>, and <code>augment</code>) make it easy to execute the same analysis for all combinations of grouping variable(s) in a dataframe. Currently, these functions work only for methods that depend on a <code>data</code> argument (e.g., <code><a href="https://www.rdocumentation.org/packages/stats/topics/lm">stats::lm</a></code>), but not for functions that don’t (e.g., <code><a href="https://www.rdocumentation.org/packages/stats/topics/prop.test">stats::prop.test()</a></code>).</p>
 <div id="grouped_tidy" class="section level2">
 <h2 class="hasAnchor">
@@ -342,13 +342,13 @@
 <a class="sourceLine" id="cb8-41" title="41"><span class="co">#&gt;    &lt;ord&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span></a>
 <a class="sourceLine" id="cb8-42" title="42"><span class="co">#&gt;  1 Fair  fixed  &lt;NA&gt;  carat  3.80e+3      228.      16.7    3212.     4387.</span></a>
 <a class="sourceLine" id="cb8-43" title="43"><span class="co">#&gt;  2 Fair  ran_p~ color sd__~  2.16e+3       NA       NA        NA        NA </span></a>
-<a class="sourceLine" id="cb8-44" title="44"><span class="co">#&gt;  3 Fair  ran_p~ color sd__~  2.54e+3       NA       NA        NA        NA </span></a>
-<a class="sourceLine" id="cb8-45" title="45"><span class="co">#&gt;  4 Fair  ran_p~ color cor_~ -9.75e-1       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb8-44" title="44"><span class="co">#&gt;  3 Fair  ran_p~ color cor_~ -9.75e-1       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb8-45" title="45"><span class="co">#&gt;  4 Fair  ran_p~ color sd__~  2.54e+3       NA       NA        NA        NA </span></a>
 <a class="sourceLine" id="cb8-46" title="46"><span class="co">#&gt;  5 Fair  ran_p~ Resi~ sd__~  1.83e+3       NA       NA        NA        NA </span></a>
 <a class="sourceLine" id="cb8-47" title="47"><span class="co">#&gt;  6 Good  fixed  &lt;NA&gt;  carat  9.22e+3      105.      87.6    8946.     9488.</span></a>
 <a class="sourceLine" id="cb8-48" title="48"><span class="co">#&gt;  7 Good  ran_p~ color sd__~  2.69e+3       NA       NA        NA        NA </span></a>
-<a class="sourceLine" id="cb8-49" title="49"><span class="co">#&gt;  8 Good  ran_p~ color sd__~  1.61e+3       NA       NA        NA        NA </span></a>
-<a class="sourceLine" id="cb8-50" title="50"><span class="co">#&gt;  9 Good  ran_p~ color cor_~  9.98e-1       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb8-49" title="49"><span class="co">#&gt;  8 Good  ran_p~ color cor_~  9.98e-1       NA       NA        NA        NA </span></a>
+<a class="sourceLine" id="cb8-50" title="50"><span class="co">#&gt;  9 Good  ran_p~ color sd__~  1.61e+3       NA       NA        NA        NA </span></a>
 <a class="sourceLine" id="cb8-51" title="51"><span class="co">#&gt; 10 Good  ran_p~ Resi~ sd__~  1.37e+3       NA       NA        NA        NA </span></a>
 <a class="sourceLine" id="cb8-52" title="52"><span class="co">#&gt; # ... with 15 more rows</span></a></code></pre></div>
 </div>
@@ -510,7 +510,7 @@
 <li><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master"><img src="https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master" alt="Coverage Status"></a></li>
 <li><a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active - The project has reached a stable, usable state and is being actively developed."></a></li>
-<li><a href="/commits/master"><img src="https://img.shields.io/badge/last%20change-2019--03--13-yellowgreen.svg" alt="Last-changedate"></a></li>
+<li><a href="/commits/master"><img src="https://img.shields.io/badge/last%20change-2019--03--14-yellowgreen.svg" alt="Last-changedate"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-red.svg" alt="lifecycle"></a></li>
 <li><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a></li>
 </ul>

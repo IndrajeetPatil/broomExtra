@@ -174,7 +174,7 @@ broomExtra::augment(x = clm.mod, newdata = wine, type.predict = "prob")
 broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 ```
 
-# `grouped_` version of variant functions
+# `grouped_` variants of generics
 
 `grouped` variants of the generic functions (`tidy`, `glance`, and `augment`)
 make it easy to execute the same analysis for all combinations of grouping
