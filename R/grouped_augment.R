@@ -63,7 +63,7 @@ grouped_augment <- function(data,
   }
 
   # dataframe with grouped analysis results
-  if (utils::packageVersion("dplyr") > "0.8.0") {
+  if (utils::packageVersion("dplyr") > "0.8.0.1") {
     df_results <- data %>%
       dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
       dplyr::group_modify(.tbl = ., .f = augment_group, keep = TRUE) %>%

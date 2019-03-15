@@ -228,7 +228,7 @@
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
-      "version": ">= 0.8.0",
+      "version": ">= 0.8.0.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
