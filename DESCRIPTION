@@ -1,6 +1,6 @@
 Type: Package
 Package: broomExtra
-Title: Grouped Statistical Analyses in a Tidy Way
+Title: Enhancements for 'broom' Package Family
 Version: 0.0.1.9000
 Authors@R: 
     person(given = "Indrajeet",
@@ -40,7 +40,8 @@ Suggests:
     stringr,
     testthat,
     tibble,
-    tidyr
+    tidyr,
+    utils
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

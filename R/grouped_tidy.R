@@ -68,10 +68,17 @@ grouped_tidy <- function(data,
   }
 
   # dataframe with grouped analysis results
-  df_results <- data %>%
-    dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
-    dplyr::group_map(.tbl = ., .f = tidy_group) %>%
-    dplyr::ungroup(x = .)
+  if (utils::packageVersion("dplyr") > "0.8.0") {
+    df_results <- data %>%
+      dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
+      dplyr::group_modify(.tbl = ., .f = tidy_group, keep = TRUE) %>%
+      dplyr::ungroup(x = .)
+  } else {
+    df_results <- data %>%
+      dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
+      dplyr::group_map(.tbl = ., .f = tidy_group) %>%
+      dplyr::ungroup(x = .)
+  }
 
   # return the final dataframe with results
   return(df_results)
