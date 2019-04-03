@@ -5,11 +5,13 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 1 note
 
 * New submission
 
 ## Comments
 
 This is maintenance release to make the package compatible with upcoming release
-of `dplyr 0.8.1`.
+of `dplyr 0.8.1`. This is what the `NOTE` corresponds to. The `group_modify`
+function is currently not imported because it is being introduced in this new
+release.
