@@ -8,7 +8,7 @@
 [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN
 Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.1.9000-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.0.2.9000-orange.svg?style=flat-square)](commits/master)
 [![Daily downloads
 badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Weekly downloads
@@ -28,10 +28,11 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--03--15-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--04--03-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
+\[![dependencies](https://tinyverse.netlify.com/badge/broomExtra)
 <!-- badges: end -->
 
 The goal of `broomExtra` is to provide helper functions that assist in
@@ -39,14 +40,14 @@ data analysis workflows involving packages `broom` and `broom.mixed`.
 
 # Installation
 
-To get the latest, stable `CRAN` release (0.0.1):
+To get the latest, stable `CRAN` release (`0.0.2`):
 
 ``` r
-utils::install.packages(pkgs = "broomExtra") 
+utils::install.packages(pkgs = "broomExtra")
 ```
 
 You can get the **development** version of the package from GitHub
-(`0.0.1.9000`). To see what new changes (and bug fixes) have been made
+(`0.0.2.9000`). To see what new changes (and bug fixes) have been made
 to the package since the last release on `CRAN`, you can check the
 detailed log of changes here:
 <https://indrajeetpatil.github.io/broomExtra/news/index.html>
@@ -55,18 +56,20 @@ If you are in hurry and want to reduce the time of installation, prefer-
 
 ``` r
 # needed package to download from GitHub repo
-utils::install.packages(pkgs = "remotes")                 
-remotes::install_github(repo = "IndrajeetPatil/broomExtra",  # package path on GitHub
-                         quick = TRUE)                          # skips docs, demos, and vignettes
+utils::install.packages(pkgs = "remotes")
+remotes::install_github(
+  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
+  quick = TRUE                        # skips docs, demos, and vignettes
+) 
 ```
 
-If time is not a
-constraint-
+If time is not a constraint-
 
 ``` r
-remotes::install_github(repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-                         dependencies = TRUE,                  # installs packages which broomExtra depends on
-                         upgrade_dependencies = TRUE           # updates any out of date dependencies
+remotes::install_github(
+  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
+  dependencies = TRUE,                # installs packages which broomExtra depends on
+  upgrade_dependencies = TRUE         # updates any out of date dependencies
 )
 ```
 

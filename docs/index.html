@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.1.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.2</span>
       </span>
     </div>
 
@@ -98,25 +98,28 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#broomextra" class="anchor"></a>broomExtra</h1></div>
 <!-- badges: start -->
-
+<p><a href="https://CRAN.R-project.org/package=broomExtra"><img src="http://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a> <a href="https://cran.r-project.org/web/checks/check_results_broomExtra.html"><img src="https://cranchecks.info/badges/summary/broomExtra" alt="CRAN Checks"></a> <a href="commits/master"><img src="https://img.shields.io/badge/Package%20version-0.0.2.9000-orange.svg?style=flat-square" alt="packageversion"></a> <a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a> <a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue" alt="Weekly downloads badge"></a> <a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue" alt="Monthly downloads badge"></a> <a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue" alt="Total downloads badge"></a> <a href="https://ci.appveyor.com/project/IndrajeetPatil/broomExtra"><img src="https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&amp;svg=true" alt="AppVeyor build status"></a> <a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis build status"></a> <a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a> <a href="https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master"><img src="https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master" alt="Coverage Status"></a> <a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active - The project has reached a stable, usable state and is being actively developed."></a> <a href="/commits/master"><img src="https://img.shields.io/badge/last%20change-2019--04--03-yellowgreen.svg" alt="Last-changedate"></a> <a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-red.svg" alt="lifecycle"></a> <a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a> [<img src="https://tinyverse.netlify.com/badge/broomExtra" alt="dependencies"><!-- badges: end --></p>
 <p>The goal of <code>broomExtra</code> is to provide helper functions that assist in data analysis workflows involving packages <code>broom</code> and <code>broom.mixed</code>.</p>
 </div>
 <div id="installation" class="section level1">
 <h1 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h1>
-<p>To get the latest, stable <code>CRAN</code> release (0.0.1):</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">utils<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="dt">pkgs =</span> <span class="st">"broomExtra"</span>) </a></code></pre></div>
-<p>You can get the <strong>development</strong> version of the package from GitHub (<code>0.0.1.9000</code>). To see what new changes (and bug fixes) have been made to the package since the last release on <code>CRAN</code>, you can check the detailed log of changes here: <a href="https://indrajeetpatil.github.io/broomExtra/news/index.html" class="uri">https://indrajeetpatil.github.io/broomExtra/news/index.html</a></p>
+<p>To get the latest, stable <code>CRAN</code> release (<code>0.0.2</code>):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">utils<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="dt">pkgs =</span> <span class="st">"broomExtra"</span>)</a></code></pre></div>
+<p>You can get the <strong>development</strong> version of the package from GitHub (<code>0.0.2.9000</code>). To see what new changes (and bug fixes) have been made to the package since the last release on <code>CRAN</code>, you can check the detailed log of changes here: <a href="https://indrajeetpatil.github.io/broomExtra/news/index.html" class="uri">https://indrajeetpatil.github.io/broomExtra/news/index.html</a></p>
 <p>If you are in hurry and want to reduce the time of installation, prefer-</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># needed package to download from GitHub repo</span></a>
-<a class="sourceLine" id="cb2-2" title="2">utils<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="dt">pkgs =</span> <span class="st">"remotes"</span>)                 </a>
-<a class="sourceLine" id="cb2-3" title="3">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="dt">repo =</span> <span class="st">"IndrajeetPatil/broomExtra"</span>,  <span class="co"># package path on GitHub</span></a>
-<a class="sourceLine" id="cb2-4" title="4">                         <span class="dt">quick =</span> <span class="ot">TRUE</span>)                          <span class="co"># skips docs, demos, and vignettes</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-2" title="2">utils<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="dt">pkgs =</span> <span class="st">"remotes"</span>)</a>
+<a class="sourceLine" id="cb2-3" title="3">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(</a>
+<a class="sourceLine" id="cb2-4" title="4">  <span class="dt">repo =</span> <span class="st">"IndrajeetPatil/broomExtra"</span>, <span class="co"># package path on GitHub</span></a>
+<a class="sourceLine" id="cb2-5" title="5">  <span class="dt">quick =</span> <span class="ot">TRUE</span>                        <span class="co"># skips docs, demos, and vignettes</span></a>
+<a class="sourceLine" id="cb2-6" title="6">) </a></code></pre></div>
 <p>If time is not a constraint-</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="dt">repo =</span> <span class="st">"IndrajeetPatil/broomExtra"</span>, <span class="co"># package path on GitHub</span></a>
-<a class="sourceLine" id="cb3-2" title="2">                         <span class="dt">dependencies =</span> <span class="ot">TRUE</span>,                  <span class="co"># installs packages which broomExtra depends on</span></a>
-<a class="sourceLine" id="cb3-3" title="3">                         <span class="dt">upgrade_dependencies =</span> <span class="ot">TRUE</span>           <span class="co"># updates any out of date dependencies</span></a>
-<a class="sourceLine" id="cb3-4" title="4">)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="dt">repo =</span> <span class="st">"IndrajeetPatil/broomExtra"</span>, <span class="co"># package path on GitHub</span></a>
+<a class="sourceLine" id="cb3-3" title="3">  <span class="dt">dependencies =</span> <span class="ot">TRUE</span>,                <span class="co"># installs packages which broomExtra depends on</span></a>
+<a class="sourceLine" id="cb3-4" title="4">  <span class="dt">upgrade_dependencies =</span> <span class="ot">TRUE</span>         <span class="co"># updates any out of date dependencies</span></a>
+<a class="sourceLine" id="cb3-5" title="5">)</a></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"IndrajeetPatil/broomExtra"</span>)</a></code></pre></div>
 </div>
 <div id="generic-functions" class="section level1">
@@ -495,27 +498,7 @@
 </ul>
 </div>
 
-      <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="http://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></li>
-<li><a href="https://cran.r-project.org/web/checks/check_results_broomExtra.html"><img src="https://cranchecks.info/badges/summary/broomExtra" alt="CRAN Checks"></a></li>
-<li><a href="commits/master"><img src="https://img.shields.io/badge/Package%20version-0.0.1.9000-orange.svg?style=flat-square" alt="packageversion"></a></li>
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue" alt="Weekly downloads badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue" alt="Monthly downloads badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue" alt="Total downloads badge"></a></li>
-<li><a href="https://ci.appveyor.com/project/IndrajeetPatil/broomExtra"><img src="https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
-<li><a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis build status"></a></li>
-<li><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
-<li><a href="https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master"><img src="https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master" alt="Coverage Status"></a></li>
-<li><a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active - The project has reached a stable, usable state and is being actively developed."></a></li>
-<li><a href="/commits/master"><img src="https://img.shields.io/badge/last%20change-2019--03--15-yellowgreen.svg" alt="Last-changedate"></a></li>
-<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-red.svg" alt="lifecycle"></a></li>
-<li><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a></li>
-</ul>
-</div>
-</div>
+      </div>
 
 </div>
 

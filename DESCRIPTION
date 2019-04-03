@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' Package Family
-Version: 0.0.1.9000
+Version: 0.0.2
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",

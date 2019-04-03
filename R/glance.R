@@ -30,7 +30,7 @@ glance <- function(x, ...) {
 
   # check if `broom` has a glance method for a given object
   f <- tryCatch(
-    expr = broom.mixed::glance(x, ...),
+    expr = broom::glance(x, ...),
     error = function(x) {
       NULL
     }
@@ -39,7 +39,7 @@ glance <- function(x, ...) {
   # if not, check if `broom.mixed` has a glance method for a given object
   if (is.null(f)) {
     f <- tryCatch(
-      expr = broom::glance(x, ...),
+      expr = broom.mixed::glance(x, ...),
       error = function(x) {
         NULL
       }

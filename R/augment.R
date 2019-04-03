@@ -30,7 +30,7 @@ augment <- function(x, ...) {
 
   # check if `broom` has a augment method for a given object
   f <- tryCatch(
-    expr = broom.mixed::augment(x, ...),
+    expr = broom::augment(x, ...),
     error = function(x) {
       NULL
     }
@@ -39,7 +39,7 @@ augment <- function(x, ...) {
   # if not, check if `broom.mixed` has a augment method for a given object
   if (is.null(f)) {
     f <- tryCatch(
-      expr = broom::augment(x, ...),
+      expr = broom.mixed::augment(x, ...),
       error = function(x) {
         NULL
       }
