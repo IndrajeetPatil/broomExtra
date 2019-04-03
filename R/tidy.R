@@ -30,7 +30,7 @@ tidy <- function(x, ...) {
 
   # check if `broom` has a tidy method for a given object
   f <- tryCatch(
-    expr = broom.mixed::tidy(x, ...),
+    expr = broom::tidy(x, ...),
     error = function(x) {
       NULL
     }
@@ -39,7 +39,7 @@ tidy <- function(x, ...) {
   # if not, check if `broom.mixed` has a tidy method for a given object
   if (is.null(f)) {
     f <- tryCatch(
-      expr = broom::tidy(x, ...),
+      expr = broom.mixed::tidy(x, ...),
       error = function(x) {
         NULL
       }

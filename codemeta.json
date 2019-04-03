@@ -14,14 +14,14 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.0.1.9000",
+  "version": "0.0.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "version": "3.6.0",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R Under development (unstable) (2019-03-02 r76189)",
+  "runtimePlatform": "R version 3.6.0 alpha (2019-03-29 r76300)",
   "author": [
     {
       "@type": "Person",
