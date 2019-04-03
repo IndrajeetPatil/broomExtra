@@ -5,20 +5,11 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 note
 
 * New submission
 
 ## Comments
 
-I have addressed the following concerns (raised during prior submissions):
-- I have removed `\dontrun` from examples since none of the examples actually
-take more than 5s.
-- I have added more details to the `Description` section of the DESCRIPTION file
-and modified the text to reflect the stylistic recommendations on reporting
-package names and functions names ( Swetlana Herbrandt and Martina Schmirl).
-- Despite your recommendation, I would like to retain the `LICENSE` file because
-GitHub uses this file to attach the appropriate license label to my repository.
-- Added `generics` package to `Suggests` field.
-- Added a new vignette that lists all available S3 methods across `broom`
-packages.
+This is maintenance release to make the package compatible with upcoming release
+of `dplyr 0.8.1`.
