@@ -14,7 +14,7 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -228,7 +228,7 @@
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
-      "version": ">= 0.8.0.1",
+      "version": ">= 0.8.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -254,7 +254,7 @@
       "@type": "SoftwareApplication",
       "identifier": "rlang",
       "name": "rlang",
-      "version": ">= 0.3.1",
+      "version": ">= 0.3.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",

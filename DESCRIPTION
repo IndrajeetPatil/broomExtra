@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' Package Family
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -25,9 +25,9 @@ Depends:
 Imports: 
     broom (>= 0.5.1),
     broom.mixed (>= 0.2.4),
-    dplyr (>= 0.8.0.1),
+    dplyr (>= 0.8.1),
     magrittr (>= 1.5),
-    rlang (>= 0.3.1)
+    rlang (>= 0.3.4)
 Suggests: 
     covr,
     gapminder,
