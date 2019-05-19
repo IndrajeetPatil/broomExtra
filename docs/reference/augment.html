@@ -22,8 +22,9 @@
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -66,7 +67,7 @@ dataframe, if not, return a NULL." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.2</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.3</span>
       </span>
     </div>
 
@@ -159,54 +160,56 @@ observations.</p></td>
     <p>See the following help topics for more details about individual methods:
     <code>broom</code>
 <ul>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.betareg'>augment.betareg</a></code>: <code>betareg</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.clm'>augment.clm</a></code>: <code>clm</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.coxph'>augment.coxph</a></code>: <code>coxph</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.decomposed.ts'>augment.decomposed.ts</a></code>: <code>decomposed.ts</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.factanal'>augment.factanal</a></code>: <code>factanal</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.felm'>augment.felm</a></code>: <code>felm</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.glm'>augment.glm</a></code>: <code>glm</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.glmRob'>augment.glmRob</a></code>: <code>glmRob</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.htest'>augment.htest</a></code>: <code>htest</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.ivreg'>augment.ivreg</a></code>: <code>ivreg</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.kmeans'>augment.kmeans</a></code>: <code>kmeans</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.lm'>augment.lm</a></code>: <code>lm</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.lmRob'>augment.lmRob</a></code>: <code>lmRob</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.loess'>augment.loess</a></code>: <code>loess</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.Mclust'>augment.Mclust</a></code>: <code>Mclust</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.mjoint'>augment.mjoint</a></code>: <code>mjoint</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.nlrq'>augment.nlrq</a></code>: <code>nlrq</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.nls'>augment.nls</a></code>: <code>nls</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.pam'>augment.pam</a></code>: <code>pam</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.plm'>augment.plm</a></code>: <code>plm</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.poLCA'>augment.poLCA</a></code>: <code>poLCA</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.polr'>augment.polr</a></code>: <code>polr</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.prcomp'>augment.prcomp</a></code>: <code>prcomp</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.rlm'>augment.rlm</a></code>: <code>rlm</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.rq'>augment.rq</a></code>: <code>rq</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.rqs'>augment.rqs</a></code>: <code>rqs</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.smooth.spline'>augment.smooth.spline</a></code>: <code>smooth.spline</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.speedlm'>augment.speedlm</a></code>: <code>speedlm</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.stl'>augment.stl</a></code>: <code>stl</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/augment.survreg'>augment.survreg</a></code>: <code>survreg</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom/topics/null_tidiers'>null_tidiers</a></code>: <code>NULL</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.betareg.html'>augment.betareg</a></code>: <code>betareg</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.clm.html'>augment.clm</a></code>: <code>clm</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.coxph.html'>augment.coxph</a></code>: <code>coxph</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.decomposed.ts.html'>augment.decomposed.ts</a></code>: <code>decomposed.ts</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.drc.html'>augment.drc</a></code>: <code>drc</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.factanal.html'>augment.factanal</a></code>: <code>factanal</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.felm.html'>augment.felm</a></code>: <code>felm</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.glm.html'>augment.glm</a></code>: <code>glm</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.glmRob.html'>augment.glmRob</a></code>: <code>glmRob</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.htest.html'>augment.htest</a></code>: <code>htest</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.ivreg.html'>augment.ivreg</a></code>: <code>ivreg</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.kmeans.html'>augment.kmeans</a></code>: <code>kmeans</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.lm.html'>augment.lm</a></code>: <code>lm</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.lmRob.html'>augment.lmRob</a></code>: <code>lmRob</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.loess.html'>augment.loess</a></code>: <code>loess</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.Mclust.html'>augment.Mclust</a></code>: <code>Mclust</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.mjoint.html'>augment.mjoint</a></code>: <code>mjoint</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.nlrq.html'>augment.nlrq</a></code>: <code>nlrq</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.nls.html'>augment.nls</a></code>: <code>nls</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.pam.html'>augment.pam</a></code>: <code>pam</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.plm.html'>augment.plm</a></code>: <code>plm</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.poLCA.html'>augment.poLCA</a></code>: <code>poLCA</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.polr.html'>augment.polr</a></code>: <code>polr</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.prcomp.html'>augment.prcomp</a></code>: <code>prcomp</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.rlm.html'>augment.rlm</a></code>: <code>rlm</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.rma.html'>augment.rma</a></code>: <code>rma</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.rq.html'>augment.rq</a></code>: <code>rq</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.rqs.html'>augment.rqs</a></code>: <code>rqs</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.smooth.spline.html'>augment.smooth.spline</a></code>: <code>smooth.spline</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.speedlm.html'>augment.speedlm</a></code>: <code>speedlm</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.stl.html'>augment.stl</a></code>: <code>stl</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/augment.survreg.html'>augment.survreg</a></code>: <code>survreg</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom/man/null_tidiers.html'>null_tidiers</a></code>: <code>NULL</code></p></li>
 </ul>
 <code>broom.mixed</code>
 <ul>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/augment.ranef.mer'>augment.ranef.mer</a></code>: <code>ranef.mer</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/brms_tidiers'>brms_tidiers</a></code>: <code>brmsfit</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/glmmadmb_tidiers'>glmmadmb_tidiers</a></code>: <code>glmmadmb</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/glmmTMB_tidiers'>glmmTMB_tidiers</a></code>: <code>glmmTMB</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/lme4_tidiers'>lme4_tidiers</a></code>: <code>merMod</code></p></li>
-<li><p><code><a href='https://www.rdocumentation.org/packages/broom.mixed/topics/nlme_tidiers'>nlme_tidiers</a></code>: <code>gls</code>, <code>lme</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/augment.ranef.mer.html'>augment.ranef.mer</a></code>: <code>ranef.mer</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/brms_tidiers.html'>brms_tidiers</a></code>: <code>brmsfit</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmadmb_tidiers.html'>glmmadmb_tidiers</a></code>: <code>glmmadmb</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmTMB_tidiers.html'>glmmTMB_tidiers</a></code>: <code>glmmTMB</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/lme4_tidiers.html'>lme4_tidiers</a></code>: <code>merMod</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/nlme_tidiers.html'>nlme_tidiers</a></code>: <code>gls</code>, <code>lme</code></p></li>
 </ul></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Random'>set.seed</a></span>(<span class='fl'>123</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>lme4</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: Matrix</span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>lme4</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: Matrix</span></div><div class='input'>
 <span class='co'># mixed-effects models (`broom.mixed` will be used)</span>
-<span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/lme4/topics/lmer'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
+<span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/augment.html'>augment</a></span>(<span class='no'>lmm.mod</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 180 x 14</span><span>
 #&gt;    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset
 #&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
@@ -223,7 +226,7 @@ observations.</p></td>
 #&gt; </span><span style='color: #555555;'># ... with 170 more rows, and 4 more variables: .sqrtXwt </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, .sqrtrwt </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
 #&gt; #   .weights </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, .wtres </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span></div><div class='input'>
 <span class='co'># linear model (`broom` will be used)</span>
-<span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/lm'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
+<span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/augment.html'>augment</a></span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 180 x 8</span><span>
 #&gt;    Reaction  Days .fitted  .resid .std.resid    .hat .sigma   .cooksd
 #&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>

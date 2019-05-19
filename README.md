@@ -8,7 +8,7 @@
 [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN
 Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.2.9000-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.0.3-orange.svg?style=flat-square)](commits/master)
 [![Daily downloads
 badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Weekly downloads
@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--04--03-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--05--19-yellowgreen.svg)](/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -40,14 +40,14 @@ data analysis workflows involving packages `broom` and `broom.mixed`.
 
 # Installation
 
-To get the latest, stable `CRAN` release (`0.0.2`):
+To get the latest, stable `CRAN` release (`0.0.3`):
 
 ``` r
 utils::install.packages(pkgs = "broomExtra")
 ```
 
 You can get the **development** version of the package from GitHub
-(`0.0.2.9000`). To see what new changes (and bug fixes) have been made
+(`0.0.3.9000`). To see what new changes (and bug fixes) have been made
 to the package since the last release on `CRAN`, you can check the
 detailed log of changes here:
 <https://indrajeetpatil.github.io/broomExtra/news/index.html>
@@ -284,6 +284,11 @@ functions work only for methods that depend on a `data` argument (e.g.,
 set.seed(123)
 library(lme4)
 library(ggplot2)
+#> Registered S3 methods overwritten by 'ggplot2':
+#>   method         from 
+#>   [.quosures     rlang
+#>   c.quosures     rlang
+#>   print.quosures rlang
 
 # linear model (tidy analysis across grouping combinations)
 broomExtra::grouped_tidy(
@@ -321,16 +326,16 @@ broomExtra::grouped_tidy(
 #> # A tibble: 25 x 9
 #>    cut   effect group term  estimate std.error statistic conf.low conf.high
 #>    <ord> <chr>  <chr> <chr>    <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
-#>  1 Fair  fixed  <NA>  carat  3.80e+3      228.      16.7    3212.     4387.
-#>  2 Fair  ran_p~ color sd__~  2.16e+3       NA       NA        NA        NA 
-#>  3 Fair  ran_p~ color cor_~ -9.75e-1       NA       NA        NA        NA 
-#>  4 Fair  ran_p~ color sd__~  2.54e+3       NA       NA        NA        NA 
-#>  5 Fair  ran_p~ Resi~ sd__~  1.83e+3       NA       NA        NA        NA 
-#>  6 Good  fixed  <NA>  carat  9.22e+3      105.      87.6    8946.     9488.
-#>  7 Good  ran_p~ color sd__~  2.69e+3       NA       NA        NA        NA 
-#>  8 Good  ran_p~ color cor_~  9.98e-1       NA       NA        NA        NA 
-#>  9 Good  ran_p~ color sd__~  1.61e+3       NA       NA        NA        NA 
-#> 10 Good  ran_p~ Resi~ sd__~  1.37e+3       NA       NA        NA        NA 
+#>  1 Fair  fixed  <NA>  carat 3800.         228.      16.7    3212.     4387.
+#>  2 Fair  ran_p~ color sd__~ 2158.          NA       NA        NA        NA 
+#>  3 Fair  ran_p~ color cor_~   -0.975       NA       NA        NA        NA 
+#>  4 Fair  ran_p~ color sd__~ 2545.          NA       NA        NA        NA 
+#>  5 Fair  ran_p~ Resi~ sd__~ 1830.          NA       NA        NA        NA 
+#>  6 Good  fixed  <NA>  carat 9217.         105.      87.6    8946.     9488.
+#>  7 Good  ran_p~ color sd__~ 2686.          NA       NA        NA        NA 
+#>  8 Good  ran_p~ color cor_~    0.998       NA       NA        NA        NA 
+#>  9 Good  ran_p~ color sd__~ 1609.          NA       NA        NA        NA 
+#> 10 Good  ran_p~ Resi~ sd__~ 1373.          NA       NA        NA        NA 
 #> # ... with 15 more rows
 ```
 

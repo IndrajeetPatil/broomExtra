@@ -24,6 +24,10 @@ environment:
     R_ARCH: x64
     GCC_PATH: mingw_64
 
+  - R_VERSION: 3.6.0
+    R_ARCH: x64
+    GCC_PATH: mingw_64
+
   - R_VERSION: devel
     R_ARCH: x64
     GCC_PATH: mingw_64
