@@ -11,7 +11,6 @@
 
 ## Comments
 
-This is maintenance release to make the package compatible with upcoming release
-of `dplyr 0.8.1`. This is what the `NOTE` corresponds to. The `group_modify`
-function is currently not imported because it is being introduced in this new
-release.
+This is maintenance release to make the package compatible with `R 3.6.0`. It
+also gets read of the `NOTE` that CRAN checks are currently producing in daily
+checks.
