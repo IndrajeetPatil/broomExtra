@@ -44,7 +44,8 @@ broomExtra::grouped_augment(
   grouping.vars = c(cut, color),
   formula = price ~ carat - 1,
   ..f = stats::lm,
-  na.action = na.omit
+  na.action = na.omit,
+  augment.args = list(se_fit = TRUE)
 )
 
 # linear mixed effects model

@@ -1,11 +1,11 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' Package Family
-Version: 0.0.3
+Version: 0.0.3.9000
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
-           role = c("aut", "cre"),
+           role = c("aut", "cre", "ctb"),
            email = "patilindrajeet.science@gmail.com",
            comment = c(ORCID = "0000-0003-1995-6531"))
 Maintainer: Indrajeet Patil <patilindrajeet.science@gmail.com>
@@ -13,9 +13,10 @@ Description: Collection of functions to assist 'broom' and
     'broom.mixed' package-related data analysis workflows. In particular,
     the generic functions tidy(), glance(), and augment() choose
     appropriate S3 methods from these two packages depending on which
-    package exports the needed method. Additionally, 'grouped_' variants
-    of the generics provides a convenient way to execute functions across
-    a combination of grouping variable(s) in a dataframe.
+    package exports the needed method. Additionally, 'grouped_' and
+    'boot_' variants of the generics provides a convenient way to execute
+    functions across a combination of grouping variable(s) in a dataframe
+    or bootstrap them.
 License: GPL-3 | file LICENSE
 URL: https://indrajeetpatil.github.io/broomExtra/,
     https://github.com/IndrajeetPatil/broomExtra
@@ -27,7 +28,10 @@ Imports:
     broom.mixed (>= 0.2.4),
     dplyr (>= 0.8.1),
     magrittr (>= 1.5),
-    rlang (>= 0.3.4)
+    purrr (>= 0.3.2),
+    rlang (>= 0.3.4),
+    rsample (>= 0.0.4),
+    tidyr (>= 0.8.3)
 Suggests: 
     covr,
     gapminder,
@@ -39,9 +43,7 @@ Suggests:
     spelling,
     stringr,
     testthat,
-    tibble,
-    tidyr,
-    utils
+    tibble
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

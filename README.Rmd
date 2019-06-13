@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.3-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.0.3-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
 [![dependencies](https://tinyverse.netlify.com/badge/broomExtra)
@@ -57,16 +57,16 @@ If you are in hurry and want to reduce the time of installation, prefer-
 utils::install.packages(pkgs = "remotes")
 remotes::install_github(
   repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  quick = TRUE                        # skips docs, demos, and vignettes
-) 
+  quick = TRUE # skips docs, demos, and vignettes
+)
 ```
 
 If time is not a constraint-
 ```{r installation3, eval = FALSE, warning = FALSE, messsage = FALSE}
 remotes::install_github(
   repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  dependencies = TRUE,                # installs packages which broomExtra depends on
-  upgrade_dependencies = TRUE         # updates any out of date dependencies
+  dependencies = TRUE, # installs packages which broomExtra depends on
+  upgrade_dependencies = TRUE # updates any out of date dependencies
 )
 ```
 
@@ -264,6 +264,124 @@ broomExtra::grouped_augment(
 )
 ```
 
+# `boot_` variants of generics
+
+`boot` variants of the generic functions (`tidy`, `glance`, and `augment`) make
+it easy to create a tidy dataframe of estimates from each of the bootstrap
+samples (created using `rsample::bootstraps`). Currently, these functions work
+only for methods that depend on a `data` argument (e.g., `lme4::lmer`), but not
+for functions that don't (e.g., `stats::chisq.test()`).
+
+## `boot_tidy`
+
+Let's see an example with linear mixed-effects regression.
+
+```{r boot_tidy}
+# setup
+set.seed(123)
+library(lme4)
+library(ggplot2)
+library(broomExtra)
+
+# dataframe with estimates from each of the 25 bootstrap sample
+(df_boot <- broomExtra::boot_tidy(
+  data = sleepstudy,
+  times = 100,
+  ..f = lme4::lmer,
+  formula = Reaction ~ Days + (Days | Subject),
+  control = lme4::lmerControl(
+    check.conv.grad = .makeCC("ignore", tol = 2e-3, relTol = NULL),
+    check.conv.singular = .makeCC(action = "ignore", tol = 1e-4),
+    check.conv.hess = .makeCC(action = "ignore", tol = 1e-6)
+  ),
+  tidy.args = list(effects = "fixed")
+))
+
+# plotting estimates from each bootstrapped sample
+dplyr::filter(df_boot, term != "(Intercept)") %>%
+  tibble::rowid_to_column(.data = .) %>%
+  ggplot(data = ., aes(rowid, estimate)) +
+  geom_point(size = 3, alpha = 0.5, color = "red") + geom_line() +
+  ggstatsplot::theme_ggstatsplot() +
+  labs(
+    title = "regression estimates from bootstrap samples",
+    x = "bootstrap sample",
+    y = "regression estimate"
+  )
+```
+
+## `boot_glance`
+
+A similar function can also be used to extract model summaries from bootstrapped
+samples.
+
+```{r boot_glance}
+# setup
+set.seed(123)
+library(ggplot2)
+
+# dataframe with model summaries from each of the 500 bootstrap samples
+(df_glance <-
+  broomExtra::boot_glance(
+    data = mtcars,
+    times = 500,
+    ..f = stats::lm,
+    formula = mpg ~ wt,
+    na.action = na.omit
+  )
+)
+
+# plotting log-likelihood for the model for each of the samples
+tibble::rowid_to_column(.data = df_glance) %>%
+  ggplot(data = ., aes(rowid, logLik)) +
+  geom_point(size = 3, alpha = 0.5, color = "darkgreen") + geom_line() +
+  ggstatsplot::theme_ggstatsplot() +
+  labs(
+    title = "log-likelihood of the model from bootstrap samples",
+    x = "bootstrap sample",
+    y = "log-likelihood"
+  )
+```
+
+## `boot_augment`
+
+```{r boot_augment}
+# setup
+set.seed(123)
+library(ggplot2)
+
+# dataframe with augmented data from each of the 100 bootstrap samples
+(df_augment <-
+  broomExtra::boot_augment(
+    data = mtcars,
+    times = 500,
+    ..f = stats::lm,
+    formula = mpg ~ wt,
+    na.action = na.omit,
+    augment.args = list(se_fit = TRUE)
+  )
+)
+
+# plotting those estimates
+dplyr::group_by(.data = df_augment, id) %>%
+  dplyr::summarise(.data = ., mean.resid = mean(.resid)) %>%
+  dplyr::ungroup(x = .) %>% 
+  tibble::rowid_to_column(.data = .) %>% # creating a plot
+  ggplot(data = ., aes(rowid, mean.resid)) +
+  geom_point(size = 3, alpha = 0.5, color = "blue") + 
+  geom_line(color = "black") +
+  geom_hline(aes(yintercept = 0),
+             color = "red",
+             size = 1,
+             linetype = "dashed") +
+  ggstatsplot::theme_ggstatsplot() +
+  labs(
+    title = "mean difference between fitted and observed values from bootstrap samples",
+    x = "bootstrap sample",
+    y = "residual score"
+  )
+```
+
 # Code coverage
 
 As the code stands right now, here is the code coverage for all primary
@@ -274,9 +392,9 @@ functions involved:
 
 I'm happy to receive bug reports, suggestions, questions, and (most of all)
 contributions to fix problems and add features. I personally prefer using the
-GitHub issues system over trying to reach out to me in other ways (personal
+`GitHub` issues system over trying to reach out to me in other ways (personal
 e-mail, Twitter, etc.). Pull requests for contributions are encouraged.
 
 Please note that this project is released with a 
-[Contributor Code of Conduct](CONDUCT.md). By participating in this project
+[Contributor Code of Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md). By participating in this project
 you agree to abide by its terms.

@@ -182,7 +182,11 @@ utils::globalVariables(
     "Q",
     "tau",
     "tau2",
-    "id"
+    "id",
+    "splits",
+    "augment_df",
+    "glance_df",
+    "tidy_df"
   ),
   package = "broomExtra",
   add = FALSE

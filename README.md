@@ -8,7 +8,7 @@
 [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN
 Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.3-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.0.3-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![Daily downloads
 badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Weekly downloads
@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--05--19-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--13-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -59,8 +59,8 @@ If you are in hurry and want to reduce the time of installation, prefer-
 utils::install.packages(pkgs = "remotes")
 remotes::install_github(
   repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  quick = TRUE                        # skips docs, demos, and vignettes
-) 
+  quick = TRUE # skips docs, demos, and vignettes
+)
 ```
 
 If time is not a constraint-
@@ -68,8 +68,8 @@ If time is not a constraint-
 ``` r
 remotes::install_github(
   repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  dependencies = TRUE,                # installs packages which broomExtra depends on
-  upgrade_dependencies = TRUE         # updates any out of date dependencies
+  dependencies = TRUE, # installs packages which broomExtra depends on
+  upgrade_dependencies = TRUE # updates any out of date dependencies
 )
 ```
 
@@ -248,19 +248,19 @@ broomExtra::augment(lm.mod)
 # cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::augment(x = clm.mod, newdata = wine, type.predict = "prob")
-#> # A tibble: 72 x 8
-#>    response rating temp  contact bottle judge .fitted .se.fit
-#>       <dbl> <ord>  <fct> <fct>   <fct>  <fct>   <dbl>   <dbl>
-#>  1       36 2      cold  no      1      1      0.562   0.0885
-#>  2       48 3      cold  no      2      1      0.209   0.0788
-#>  3       47 3      cold  yes     3      1      0.435   0.0837
-#>  4       67 4      cold  yes     4      1      0.0894  0.0436
-#>  5       77 4      warm  no      5      1      0.190   0.0711
-#>  6       60 4      warm  no      6      1      0.190   0.0711
-#>  7       83 5      warm  yes     7      1      0.286   0.0993
-#>  8       90 5      warm  yes     8      1      0.286   0.0993
-#>  9       17 1      cold  no      1      2      0.196   0.0860
-#> 10       22 2      cold  no      2      2      0.562   0.0885
+#> # A tibble: 72 x 7
+#>    response rating temp  contact bottle judge .fitted
+#>       <dbl> <ord>  <fct> <fct>   <fct>  <fct>   <dbl>
+#>  1       36 2      cold  no      1      1      0.562 
+#>  2       48 3      cold  no      2      1      0.209 
+#>  3       47 3      cold  yes     3      1      0.435 
+#>  4       67 4      cold  yes     4      1      0.0894
+#>  5       77 4      warm  no      5      1      0.190 
+#>  6       60 4      warm  no      6      1      0.190 
+#>  7       83 5      warm  yes     7      1      0.286 
+#>  8       90 5      warm  yes     8      1      0.286 
+#>  9       17 1      cold  no      1      2      0.196 
+#> 10       22 2      cold  no      2      2      0.562 
 #> # ... with 62 more rows
 
 # in case no augment method is available (`NULL` will be returned)
@@ -284,11 +284,6 @@ functions work only for methods that depend on a `data` argument (e.g.,
 set.seed(123)
 library(lme4)
 library(ggplot2)
-#> Registered S3 methods overwritten by 'ggplot2':
-#>   method         from 
-#>   [.quosures     rlang
-#>   c.quosures     rlang
-#>   print.quosures rlang
 
 # linear model (tidy analysis across grouping combinations)
 broomExtra::grouped_tidy(
@@ -441,6 +436,192 @@ broomExtra::grouped_augment(
 #> #   .sqrtXwt <dbl>, .sqrtrwt <dbl>, .weights <dbl>, .wtres <dbl>
 ```
 
+# `boot_` variants of generics
+
+`boot` variants of the generic functions (`tidy`, `glance`, and
+`augment`) make it easy to create a tidy dataframe of estimates from
+each of the bootstrap samples (created using `rsample::bootstraps`).
+Currently, these functions work only for methods that depend on a `data`
+argument (e.g., `lme4::lmer`), but not for functions that don’t (e.g.,
+`stats::chisq.test()`).
+
+## `boot_tidy`
+
+Let’s see an example with linear mixed-effects regression.
+
+``` r
+# setup
+set.seed(123)
+library(lme4)
+library(ggplot2)
+library(broomExtra)
+#> 
+#> Attaching package: 'broomExtra'
+#> The following objects are masked from 'package:broom.mixed':
+#> 
+#>     augment, glance, tidy
+#> The following objects are masked from 'package:broom':
+#> 
+#>     augment, glance, tidy
+
+# dataframe with estimates from each of the 25 bootstrap sample
+(df_boot <- broomExtra::boot_tidy(
+  data = sleepstudy,
+  times = 100,
+  ..f = lme4::lmer,
+  formula = Reaction ~ Days + (Days | Subject),
+  control = lme4::lmerControl(
+    check.conv.grad = .makeCC("ignore", tol = 2e-3, relTol = NULL),
+    check.conv.singular = .makeCC(action = "ignore", tol = 1e-4),
+    check.conv.hess = .makeCC(action = "ignore", tol = 1e-6)
+  ),
+  tidy.args = list(effects = "fixed")
+))
+#> # A tibble: 200 x 6
+#>    id           effect term        estimate std.error statistic
+#>    <chr>        <chr>  <chr>          <dbl>     <dbl>     <dbl>
+#>  1 Bootstrap001 fixed  (Intercept)   251.        7.59     33.1 
+#>  2 Bootstrap001 fixed  Days           10.2       1.68      6.04
+#>  3 Bootstrap002 fixed  (Intercept)   247.        8.93     27.7 
+#>  4 Bootstrap002 fixed  Days           12.6       2.46      5.11
+#>  5 Bootstrap003 fixed  (Intercept)   254.        7.89     32.2 
+#>  6 Bootstrap003 fixed  Days           10.3       1.72      6.00
+#>  7 Bootstrap004 fixed  (Intercept)   254.        5.78     44.0 
+#>  8 Bootstrap004 fixed  Days            9.47      1.48      6.41
+#>  9 Bootstrap005 fixed  (Intercept)   246.        7.12     34.5 
+#> 10 Bootstrap005 fixed  Days           11.4       1.66      6.88
+#> # ... with 190 more rows
+
+# plotting estimates from each bootstrapped sample
+dplyr::filter(df_boot, term != "(Intercept)") %>%
+  tibble::rowid_to_column(.data = .) %>%
+  ggplot(data = ., aes(rowid, estimate)) +
+  geom_point(size = 3, alpha = 0.5, color = "red") + geom_line() +
+  ggstatsplot::theme_ggstatsplot() +
+  labs(
+    title = "regression estimates from bootstrap samples",
+    x = "bootstrap sample",
+    y = "regression estimate"
+  )
+#> Registered S3 methods overwritten by 'car':
+#>   method                          from
+#>   influence.merMod                lme4
+#>   cooks.distance.influence.merMod lme4
+#>   dfbeta.influence.merMod         lme4
+#>   dfbetas.influence.merMod        lme4
+#> Registered S3 method overwritten by 'coin':
+#>   method   from      
+#>   print.ci bayestestR
+```
+
+<img src="man/figures/README-boot_tidy-1.png" width="100%" />
+
+## `boot_glance`
+
+A similar function can also be used to extract model summaries from
+bootstrapped samples.
+
+``` r
+# setup
+set.seed(123)
+library(ggplot2)
+
+# dataframe with model summaries from each of the 500 bootstrap samples
+(df_glance <-
+  broomExtra::boot_glance(
+    data = mtcars,
+    times = 500,
+    ..f = stats::lm,
+    formula = mpg ~ wt,
+    na.action = na.omit
+  )
+)
+#> # A tibble: 500 x 14
+#>    splits id    r.squared adj.r.squared sigma statistic  p.value    df
+#>    <list> <chr>     <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>
+#>  1 <spli~ Boot~     0.799         0.792  2.71     119.  5.63e-12     1
+#>  2 <spli~ Boot~     0.726         0.717  2.49      79.6 6.06e-10     1
+#>  3 <spli~ Boot~     0.754         0.746  3.29      92.1 1.18e-10     1
+#>  4 <spli~ Boot~     0.731         0.722  2.74      81.7 4.59e-10     1
+#>  5 <spli~ Boot~     0.700         0.690  3.33      69.9 2.49e- 9     1
+#>  6 <spli~ Boot~     0.830         0.824  2.19     146.  4.70e-13     1
+#>  7 <spli~ Boot~     0.768         0.761  3.61      99.5 4.87e-11     1
+#>  8 <spli~ Boot~     0.550         0.535  3.01      36.6 1.20e- 6     1
+#>  9 <spli~ Boot~     0.815         0.809  2.66     132.  1.57e-12     1
+#> 10 <spli~ Boot~     0.680         0.670  3.32      63.8 6.43e- 9     1
+#> # ... with 490 more rows, and 6 more variables: logLik <dbl>, AIC <dbl>,
+#> #   BIC <dbl>, deviance <dbl>, df.residual <int>, nobs <int>
+
+# plotting log-likelihood for the model for each of the samples
+tibble::rowid_to_column(.data = df_glance) %>%
+  ggplot(data = ., aes(rowid, logLik)) +
+  geom_point(size = 3, alpha = 0.5, color = "darkgreen") + geom_line() +
+  ggstatsplot::theme_ggstatsplot() +
+  labs(
+    title = "log-likelihood of the model from bootstrap samples",
+    x = "bootstrap sample",
+    y = "log-likelihood"
+  )
+```
+
+<img src="man/figures/README-boot_glance-1.png" width="100%" />
+
+## `boot_augment`
+
+``` r
+# setup
+set.seed(123)
+library(ggplot2)
+
+# dataframe with augmented data from each of the 100 bootstrap samples
+(df_augment <-
+  broomExtra::boot_augment(
+    data = mtcars,
+    times = 500,
+    ..f = stats::lm,
+    formula = mpg ~ wt,
+    na.action = na.omit,
+    augment.args = list(se_fit = TRUE)
+  )
+)
+#> # A tibble: 16,000 x 11
+#>    id    .rownames   mpg    wt .fitted .se.fit  .resid .std.resid   .hat
+#>    <chr> <chr>     <dbl> <dbl>   <dbl>   <dbl>   <dbl>      <dbl>  <dbl>
+#>  1 Boot~ Maserati~  15    3.57   18.0    0.579  2.96      -1.12   0.0458
+#>  2 Boot~ Cadillac~  10.4  5.25    7.71   1.35  -2.69       1.15   0.250 
+#>  3 Boot~ Honda Ci~  30.4  1.62   29.9    0.902 -0.522      0.205  0.111 
+#>  4 Boot~ Merc 450~  15.2  3.78   16.7    0.653  1.48      -0.563  0.0582
+#>  5 Boot~ Datsun 7~  22.8  2.32   25.6    0.605  2.78      -1.05   0.0500
+#>  6 Boot~ Merc 280   19.2  3.44   18.8    0.542 -0.449      0.170  0.0401
+#>  7 Boot~ Fiat 128   32.4  2.2    26.3    0.649 -6.09       2.32   0.0574
+#>  8 Boot~ Dodge Ch~  15.5  3.52   18.3    0.564  2.76      -1.04   0.0435
+#>  9 Boot~ Merc 280C  17.8  3.44   18.8    0.542  0.951     -0.359  0.0401
+#> 10 Boot~ Hornet S~  18.7  3.44   18.8    0.542  0.0506    -0.0191 0.0401
+#> # ... with 15,990 more rows, and 2 more variables: .sigma <dbl>,
+#> #   .cooksd <dbl>
+
+# plotting those estimates
+dplyr::group_by(.data = df_augment, id) %>%
+  dplyr::summarise(.data = ., mean.resid = mean(.resid)) %>%
+  dplyr::ungroup(x = .) %>% 
+  tibble::rowid_to_column(.data = .) %>% # creating a plot
+  ggplot(data = ., aes(rowid, mean.resid)) +
+  geom_point(size = 3, alpha = 0.5, color = "blue") + 
+  geom_line(color = "black") +
+  geom_hline(aes(yintercept = 0),
+             color = "red",
+             size = 1,
+             linetype = "dashed") +
+  ggstatsplot::theme_ggstatsplot() +
+  labs(
+    title = "mean difference between fitted and observed values from bootstrap samples",
+    x = "bootstrap sample",
+    y = "residual score"
+  )
+```
+
+<img src="man/figures/README-boot_augment-1.png" width="100%" />
+
 # Code coverage
 
 As the code stands right now, here is the code coverage for all primary
@@ -451,10 +632,10 @@ functions involved:
 
 I’m happy to receive bug reports, suggestions, questions, and (most of
 all) contributions to fix problems and add features. I personally prefer
-using the GitHub issues system over trying to reach out to me in other
+using the `GitHub` issues system over trying to reach out to me in other
 ways (personal e-mail, Twitter, etc.). Pull requests for contributions
 are encouraged.
 
 Please note that this project is released with a [Contributor Code of
-Conduct](CONDUCT.md). By participating in this project you agree to
-abide by its terms.
+Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md).
+By participating in this project you agree to abide by its terms.
