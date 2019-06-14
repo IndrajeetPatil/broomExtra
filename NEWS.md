@@ -1,3 +1,8 @@
+# broomExtra 0.0.4
+
+* Adds new functions for bootstrapping: `boot_tidy`, `boot_glance`,
+`boot_augment`.
+
 # broomExtra 0.0.3
 
 * This is maintenance release to make the package compatible with `R 3.6.0`.

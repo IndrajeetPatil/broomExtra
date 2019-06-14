@@ -12,6 +12,9 @@ install:
 
 # Adapt as necessary starting from here
 
+# Do not build feature branch with open Pull Requests
+skip_branch_with_pr: true
+
 environment:
   global:
     USE_RTOOLS: true
@@ -20,11 +23,7 @@ environment:
     _R_CHECK_CRAN_INCOMING_: true
     #R_CHECK_ARGS: "--run-dontrun"
   matrix:
-  - R_VERSION: 3.5.0
-    R_ARCH: x64
-    GCC_PATH: mingw_64
-
-  - R_VERSION: 3.6.0
+  - R_VERSION: release
     R_ARCH: x64
     GCC_PATH: mingw_64
 

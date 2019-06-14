@@ -7,7 +7,6 @@
 #'
 #' @importFrom rlang !! !!! exec quo_squash enquo
 #' @importFrom dplyr group_by ungroup mutate group_map group_modify
-#' @importFrom utils packageVersion
 #'
 #' @inherit glance return value
 #' @inheritSection glance Methods

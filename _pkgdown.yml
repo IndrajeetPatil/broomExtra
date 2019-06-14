@@ -23,3 +23,14 @@ reference:
     desc: Using generic functions across all combinations of grouping variables in a dataframe.
     contents:
       - starts_with("grouped_")
+
+  - title: Bootstrapping variants of generics
+    desc: Creating dataframe with estimates from bootstrapped samples using generic functions.
+    contents:
+      - starts_with("boot_")
+
+  - title: Reexported functions
+    desc:  Useful functions re-exported from other packages.
+    contents:
+      - "%>%"
+      - "%<>%"

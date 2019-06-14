@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Retrieve tidy dataframe if it exists. — tidy • broomExtra</title>
+<title>Bootstrapped dataframe with estimates from each sample. — boot_tidy • broomExtra</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,11 +32,9 @@
 
 
 
-<meta property="og:title" content="Retrieve tidy dataframe if it exists. — tidy" />
+<meta property="og:title" content="Bootstrapped dataframe with estimates from each sample. — boot_tidy" />
 
-<meta property="og:description" content="Checks if a tidy method exits for a given object, either in
-broom or in broom.mixed. If it does, it turn an object into a tidy
-tibble, if not, return a NULL." />
+<meta property="og:description" content="Bootstrapped dataframe with estimates from each sample." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -121,31 +119,51 @@ tibble, if not, return a NULL." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Retrieve tidy dataframe if it exists.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/R/generic_tidy.R'><code>R/generic_tidy.R</code></a></small>
-    <div class="hidden name"><code>tidy.Rd</code></div>
+    <h1>Bootstrapped dataframe with estimates from each sample.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/R/boot_tidy.R'><code>R/boot_tidy.R</code></a></small>
+    <div class="hidden name"><code>boot_tidy.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Checks if a <code>tidy</code> method exits for a given object, either in
-<code>broom</code> or in <code>broom.mixed</code>. If it does, it turn an object into a tidy
-tibble, if not, return a <code>NULL</code>.</p>
+    <p>Bootstrapped dataframe with estimates from each sample.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>tidy</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>boot_tidy</span>(<span class='no'>data</span>, <span class='kw'>times</span> <span class='kw'>=</span> <span class='fl'>25</span>, <span class='kw'>strata</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>apparent</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>..f</span>,
+  <span class='no'>...</span>, <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>An object to be converted into a tidy <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code>.</p></td>
+      <th>data</th>
+      <td><p>Dataframe (or tibble) from which variables are to be taken.</p></td>
+    </tr>
+    <tr>
+      <th>times</th>
+      <td><p>The number of bootstrap samples.</p></td>
+    </tr>
+    <tr>
+      <th>strata</th>
+      <td><p>A variable that is used to conduct stratified sampling. When not <code>NULL</code>, each bootstrap sample is created within the stratification variable.</p></td>
+    </tr>
+    <tr>
+      <th>apparent</th>
+      <td><p>A logical. Should an extra resample be added where the analysis and holdout subset are the entire data set. This is required for some estimators used by the <code>summary</code> function that require the apparent error rate.</p></td>
+    </tr>
+    <tr>
+      <th>..f</th>
+      <td><p>A function, or function name as a string.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Additional arguments to tidying method.</p></td>
+      <td><p>Arguments to function.</p>
+<p>These dots support tidy-dots features.</p></td>
+    </tr>
+    <tr>
+      <th>tidy.args</th>
+      <td><p>A list of arguments to be used in the relevant <code>S3</code> method.</p></td>
     </tr>
     </table>
     
@@ -278,22 +296,52 @@ tibble, if not, return a <code>NULL</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
+
+<span class='co'># example-1: linear model</span>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/boot_tidy.html'>boot_tidy</a></span>(
+  <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>mtcars</span>,
+  <span class='kw'>times</span> <span class='kw'>=</span> <span class='fl'>500</span>,
+  <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>,
+  <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>mpg</span> ~ <span class='no'>wt</span>,
+  <span class='kw'>na.action</span> <span class='kw'>=</span> <span class='no'>na.omit</span>,
+  <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.50</span>)
+)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1,000 x 8</span><span>
+#&gt;    id         term      estimate std.error statistic  p.value conf.low conf.high
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'> 1</span><span> Bootstrap~ (Interce~    39.7      1.73      22.9  1.44</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-20</span><span>    38.5      40.9 
+#&gt; </span><span style='color: #555555;'> 2</span><span> Bootstrap~ wt           -</span><span style='color: #BB0000;'>6.10</span><span>     0.558    -</span><span style='color: #BB0000;'>10.9</span><span>  5.63</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-12</span><span>    -</span><span style='color: #BB0000;'>6.48</span><span>     -</span><span style='color: #BB0000;'>5.72</span><span>
+#&gt; </span><span style='color: #555555;'> 3</span><span> Bootstrap~ (Interce~    35.0      1.79      19.5  1.29</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-18</span><span>    33.8      36.2 
+#&gt; </span><span style='color: #555555;'> 4</span><span> Bootstrap~ wt           -</span><span style='color: #BB0000;'>4.76</span><span>     0.533     -</span><span style='color: #BB0000;'>8.92</span><span> 6.06</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.12</span><span>     -</span><span style='color: #BB0000;'>4.39</span><span>
+#&gt; </span><span style='color: #555555;'> 5</span><span> Bootstrap~ (Interce~    37.2      1.93      19.2  2.04</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-18</span><span>    35.9      38.5 
+#&gt; </span><span style='color: #555555;'> 6</span><span> Bootstrap~ wt           -</span><span style='color: #BB0000;'>5.11</span><span>     0.532     -</span><span style='color: #BB0000;'>9.60</span><span> 1.18</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.47</span><span>     -</span><span style='color: #BB0000;'>4.74</span><span>
+#&gt; </span><span style='color: #555555;'> 7</span><span> Bootstrap~ (Interce~    36.2      1.98      18.3  7.90</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-18</span><span>    34.8      37.5 
+#&gt; </span><span style='color: #555555;'> 8</span><span> Bootstrap~ wt           -</span><span style='color: #BB0000;'>5.24</span><span>     0.580     -</span><span style='color: #BB0000;'>9.04</span><span> 4.59</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.64</span><span>     -</span><span style='color: #BB0000;'>4.85</span><span>
+#&gt; </span><span style='color: #555555;'> 9</span><span> Bootstrap~ (Interce~    36.5      2.18      16.8  8.60</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-17</span><span>    35.0      38.0 
+#&gt; </span><span style='color: #555555;'>10</span><span> Bootstrap~ wt           -</span><span style='color: #BB0000;'>5.12</span><span>     0.613     -</span><span style='color: #BB0000;'>8.36</span><span> 2.49</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 9</span><span>    -</span><span style='color: #BB0000;'>5.54</span><span>     -</span><span style='color: #BB0000;'>4.71</span><span>
+#&gt; </span><span style='color: #555555;'># ... with 990 more rows</span><span></div><div class='input'>
+<span class='co'># example-2: linear mixed-effects model</span>
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>lme4</span>)
 
-<span class='co'># mixed-effects models (`broom.mixed` will be used)</span>
-<span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='no'>lmm.mod</span>, <span class='kw'>effects</span> <span class='kw'>=</span> <span class='st'>"fixed"</span>, <span class='kw'>exponentiate</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 5</span><span>
-#&gt;   effect term        estimate std.error statistic
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> fixed  (Intercept) 1.53</span><span style='color: #555555;'>e</span><span>109  1.04</span><span style='color: #555555;'>e</span><span>110     36.8 
-#&gt; </span><span style='color: #555555;'>2</span><span> fixed  Days        3.51</span><span style='color: #555555;'>e</span><span>  4  5.43</span><span style='color: #555555;'>e</span><span>  4      6.77</div><div class='input'>
-<span class='co'># linear model (`broom` will be used)</span>
-<span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='no'>lm.mod</span>, <span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 7</span><span>
-#&gt;   term        estimate std.error statistic  p.value conf.low conf.high
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> (Intercept)    251.       6.61     38.0  2.16</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-87</span><span>   238.       264. 
-#&gt; </span><span style='color: #555555;'>2</span><span> Days            10.5      1.24      8.45 9.89</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-15</span><span>     8.02      12.9</div></span></pre>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/boot_tidy.html'>boot_tidy</a></span>(
+  <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>sleepstudy</span>,
+  <span class='kw'>times</span> <span class='kw'>=</span> <span class='fl'>25</span>,
+  <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>,
+  <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>),
+  <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>effects</span> <span class='kw'>=</span> <span class='st'>"fixed"</span>)
+)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00205594 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00239836 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00226858 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00237924 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00278758 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00341433 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00943341 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00522705 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 50 x 6</span><span>
+#&gt;    id          effect term        estimate std.error statistic
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'> 1</span><span> Bootstrap01 fixed  (Intercept)   248.        7.94     31.3 
+#&gt; </span><span style='color: #555555;'> 2</span><span> Bootstrap01 fixed  Days           10.8       1.44      7.49
+#&gt; </span><span style='color: #555555;'> 3</span><span> Bootstrap02 fixed  (Intercept)   255.        8.42     30.3 
+#&gt; </span><span style='color: #555555;'> 4</span><span> Bootstrap02 fixed  Days            9.68      1.73      5.59
+#&gt; </span><span style='color: #555555;'> 5</span><span> Bootstrap03 fixed  (Intercept)   245.        7.56     32.5 
+#&gt; </span><span style='color: #555555;'> 6</span><span> Bootstrap03 fixed  Days           11.3       1.47      7.65
+#&gt; </span><span style='color: #555555;'> 7</span><span> Bootstrap04 fixed  (Intercept)   254.        6.85     37.1 
+#&gt; </span><span style='color: #555555;'> 8</span><span> Bootstrap04 fixed  Days           10.2       1.77      5.78
+#&gt; </span><span style='color: #555555;'> 9</span><span> Bootstrap05 fixed  (Intercept)   250.        8.19     30.5 
+#&gt; </span><span style='color: #555555;'>10</span><span> Bootstrap05 fixed  Days            9.78      1.66      5.88
+#&gt; </span><span style='color: #555555;'># ... with 40 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
