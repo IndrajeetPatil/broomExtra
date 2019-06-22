@@ -44,7 +44,6 @@ r_packages:
   - purrr
   - tidyr
   - dplyr
-  - readr
   - covr
 
 r_github_packages:

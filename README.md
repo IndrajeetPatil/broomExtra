@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--13-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--22-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -112,6 +112,9 @@ library(ordinal)
 # mixed-effects models (`broom.mixed` will be used)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::tidy(x = lmm.mod, effects = "fixed")
+#> Registered S3 method overwritten by 'broom.mixed':
+#>   method      from 
+#>   tidy.gamlss broom
 #> # A tibble: 2 x 5
 #>   effect term        estimate std.error statistic
 #>   <chr>  <chr>          <dbl>     <dbl>     <dbl>
@@ -455,14 +458,6 @@ set.seed(123)
 library(lme4)
 library(ggplot2)
 library(broomExtra)
-#> 
-#> Attaching package: 'broomExtra'
-#> The following objects are masked from 'package:broom.mixed':
-#> 
-#>     augment, glance, tidy
-#> The following objects are masked from 'package:broom':
-#> 
-#>     augment, glance, tidy
 
 # dataframe with estimates from each of the 25 bootstrap sample
 (df_boot <- broomExtra::boot_tidy(
@@ -509,9 +504,6 @@ dplyr::filter(df_boot, term != "(Intercept)") %>%
 #>   cooks.distance.influence.merMod lme4
 #>   dfbeta.influence.merMod         lme4
 #>   dfbetas.influence.merMod        lme4
-#> Registered S3 method overwritten by 'coin':
-#>   method   from      
-#>   print.ci bayestestR
 ```
 
 <img src="man/figures/README-boot_tidy-1.png" width="100%" />

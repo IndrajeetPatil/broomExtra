@@ -24,7 +24,7 @@ BugReports: https://github.com/IndrajeetPatil/broomExtra/issues
 Depends: 
     R (>= 3.5.0)
 Imports: 
-    broom (>= 0.5.1),
+    broom (>= 0.5.2),
     broom.mixed (>= 0.2.4),
     dplyr (>= 0.8.1),
     magrittr (>= 1.5),
@@ -33,8 +33,6 @@ Imports:
     rsample (>= 0.0.4),
     tidyr (>= 0.8.3)
 Suggests: 
-    covr,
-    gapminder,
     generics,
     ggplot2,
     knitr,
@@ -42,8 +40,7 @@ Suggests:
     rmarkdown,
     spelling,
     stringr,
-    testthat,
-    tibble
+    testthat
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

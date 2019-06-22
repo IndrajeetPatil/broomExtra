@@ -70,11 +70,6 @@ remotes::install_github(
 )
 ```
 
-```{r echo = FALSE, results = 'hide', message = FALSE}
-library(broom)
-library(broom.mixed)
-```
-
 ```{r install, eval = FALSE}
 remotes::install_github("IndrajeetPatil/broomExtra")
 ```

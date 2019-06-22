@@ -55,7 +55,7 @@ library(broom.mixed)
 # function to extract methods
 method_df <- function(method_name) {
   m <- as.vector(methods(method_name))
-  tibble::tibble(class = stringr::str_remove(
+  dplyr::tibble(class = stringr::str_remove(
     string = m,
     pattern = stringr::str_c(method_name, "[.]")
   ),

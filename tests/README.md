@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-13 June, 2019 18:26:28
+22 June, 2019 18:16:47
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -35,14 +35,14 @@ Unit Test summary is created using the
 
 | file                                                        | n | time | error | failed | skipped | warning |
 | :---------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test\_augment.R](testthat/test_augment.R)                  | 3 | 0.06 |     0 |      0 |       0 |       0 |
-| [test\_boot\_augment.R](testthat/test_boot_augment.R)       | 3 | 0.06 |     0 |      0 |       0 |       0 |
-| [test\_boot\_glance.R](testthat/test_boot_glance.R)         | 4 | 0.77 |     0 |      0 |       0 |       0 |
-| [test\_boot\_tidy.R](testthat/test_boot_tidy.R)             | 4 | 0.95 |     0 |      0 |       0 |       0 |
+| [test\_augment.R](testthat/test_augment.R)                  | 3 | 0.39 |     0 |      0 |       0 |       0 |
+| [test\_boot\_augment.R](testthat/test_boot_augment.R)       | 3 | 0.05 |     0 |      0 |       0 |       0 |
+| [test\_boot\_glance.R](testthat/test_boot_glance.R)         | 4 | 0.83 |     0 |      0 |       0 |       0 |
+| [test\_boot\_tidy.R](testthat/test_boot_tidy.R)             | 4 | 1.83 |     0 |      0 |       0 |       0 |
 | [test\_glance.R](testthat/test_glance.R)                    | 3 | 0.03 |     0 |      0 |       0 |       0 |
-| [test\_grouped\_augment.R](testthat/test_grouped_augment.R) | 2 | 2.58 |     0 |      0 |       0 |       0 |
-| [test\_grouped\_glance.R](testthat/test_grouped_glance.R)   | 2 | 1.81 |     0 |      0 |       0 |       0 |
-| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R)       | 2 | 1.91 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_augment.R](testthat/test_grouped_augment.R) | 2 | 2.67 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_glance.R](testthat/test_grouped_glance.R)   | 2 | 2.08 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R)       | 2 | 2.05 |     0 |      0 |       0 |       0 |
 | [test\_tidy.R](testthat/test_tidy.R)                        | 3 | 0.06 |     0 |      0 |       0 |       0 |
 
 <details closed>
@@ -51,14 +51,14 @@ Unit Test summary is created using the
 
 | file                                                            | context                | test                      | status | n | time |
 | :-------------------------------------------------------------- | :--------------------- | :------------------------ | :----- | -: | ---: |
-| [test\_augment.R](testthat/test_augment.R#L13_L15)              | augment works          | `augment()` works         | PASS   | 3 | 0.06 |
-| [test\_boot\_augment.R](testthat/test_boot_augment.R#L32)       | boot\_augment works    | `boot_augment()` works    | PASS   | 3 | 0.06 |
-| [test\_boot\_glance.R](testthat/test_boot_glance.R#L38)         | boot\_glance works     | `boot_glance()` works     | PASS   | 4 | 0.77 |
-| [test\_boot\_tidy.R](testthat/test_boot_tidy.R#L40)             | boot\_tidy works       | `boot_tidy()` works       | PASS   | 4 | 0.95 |
+| [test\_augment.R](testthat/test_augment.R#L13_L15)              | augment works          | `augment()` works         | PASS   | 3 | 0.39 |
+| [test\_boot\_augment.R](testthat/test_boot_augment.R#L32)       | boot\_augment works    | `boot_augment()` works    | PASS   | 3 | 0.05 |
+| [test\_boot\_glance.R](testthat/test_boot_glance.R#L38)         | boot\_glance works     | `boot_glance()` works     | PASS   | 4 | 0.83 |
+| [test\_boot\_tidy.R](testthat/test_boot_tidy.R#L40)             | boot\_tidy works       | `boot_tidy()` works       | PASS   | 4 | 1.83 |
 | [test\_glance.R](testthat/test_glance.R#L13_L15)                | glance works           | `glance()` works          | PASS   | 3 | 0.03 |
-| [test\_grouped\_augment.R](testthat/test_grouped_augment.R#L19) | grouped\_augment works | `grouped_augment()` works | PASS   | 2 | 2.58 |
-| [test\_grouped\_glance.R](testthat/test_grouped_glance.R#L19)   | grouped\_glance works  | `grouped_glance()` works  | PASS   | 2 | 1.81 |
-| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R#L20)       | grouped\_tidy works    | `grouped_tidy()` works    | PASS   | 2 | 1.91 |
+| [test\_grouped\_augment.R](testthat/test_grouped_augment.R#L19) | grouped\_augment works | `grouped_augment()` works | PASS   | 2 | 2.67 |
+| [test\_grouped\_glance.R](testthat/test_grouped_glance.R#L19)   | grouped\_glance works  | `grouped_glance()` works  | PASS   | 2 | 2.08 |
+| [test\_grouped\_tidy.R](testthat/test_grouped_tidy.R#L20)       | grouped\_tidy works    | `grouped_tidy()` works    | PASS   | 2 | 2.05 |
 | [test\_tidy.R](testthat/test_tidy.R#L13_L15)                    | tidy works             | `tidy()` works            | PASS   | 3 | 0.06 |
 
 </details>
