@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# broomExtra
+# `broomExtra`: Enhancements for `broom` Package Family
 
 <!-- badges: start -->
 [![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
@@ -45,7 +45,7 @@ To get the latest, stable `CRAN` release (`0.0.3`):
 utils::install.packages(pkgs = "broomExtra")
 ```
 
-You can get the **development** version of the package from GitHub
+You can get the **development** version of the package from `GitHub`
 (`0.0.3.9000`). To see what new changes (and bug fixes) have been made to the
 package since the last release on `CRAN`, you can check the detailed log of
 changes here: <https://indrajeetpatil.github.io/broomExtra/news/index.html> 
@@ -91,7 +91,7 @@ results.
 
 Let's get a tidy tibble back containing results from various regression models.
 
-```{r tidy}
+```{r tidy, error = TRUE}
 set.seed(123)
 library(lme4)
 library(ordinal)
@@ -125,7 +125,7 @@ broomExtra::tidy(appr)
 
 Getting a `tibble` containing model summary and other performance measures.
 
-```{r glance}
+```{r glance, error = TRUE}
 set.seed(123)
 library(lme4)
 library(ordinal)
@@ -151,7 +151,7 @@ broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
 
 Getting a `tibble` by augmenting data with information from an object.
 
-```{r augment}
+```{r augment, error = TRUE}
 set.seed(123)
 library(lme4)
 library(ordinal)

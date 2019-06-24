@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# broomExtra
+# `broomExtra`: Enhancements for `broom` Package Family
 
 <!-- badges: start -->
 
@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--22-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--24-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -46,7 +46,7 @@ To get the latest, stable `CRAN` release (`0.0.3`):
 utils::install.packages(pkgs = "broomExtra")
 ```
 
-You can get the **development** version of the package from GitHub
+You can get the **development** version of the package from `GitHub`
 (`0.0.3.9000`). To see what new changes (and bug fixes) have been made
 to the package since the last release on `CRAN`, you can check the
 detailed log of changes here:
