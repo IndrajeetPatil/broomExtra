@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' Package Family
-Version: 0.0.4
+Version: 0.0.4.9000
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -29,7 +29,7 @@ Imports:
     dplyr (>= 0.8.1),
     magrittr (>= 1.5),
     purrr (>= 0.3.2),
-    rlang (>= 0.3.4),
+    rlang (>= 0.4.0),
     rsample (>= 0.0.4),
     tidyr (>= 0.8.3)
 Suggests: 
