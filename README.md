@@ -8,7 +8,7 @@
 [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN
 Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.3-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.0.4-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![Daily downloads
 badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Weekly downloads
@@ -40,14 +40,14 @@ data analysis workflows involving packages `broom` and `broom.mixed`.
 
 # Installation
 
-To get the latest, stable `CRAN` release (`0.0.3`):
+To get the latest, stable `CRAN` release (`0.0.4`):
 
 ``` r
 utils::install.packages(pkgs = "broomExtra")
 ```
 
 You can get the **development** version of the package from `GitHub`
-(`0.0.3.9000`). To see what new changes (and bug fixes) have been made
+(`0.0.4.9000`). To see what new changes (and bug fixes) have been made
 to the package since the last release on `CRAN`, you can check the
 detailed log of changes here:
 <https://indrajeetpatil.github.io/broomExtra/news/index.html>

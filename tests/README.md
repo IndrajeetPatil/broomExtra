@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-24 June, 2019 16:00:00
+24 June, 2019 23:32:55
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -29,9 +29,9 @@ Unit Test summary is created using the
 
 | file                                                          |  n | time | error | failed | skipped | warning |
 | :------------------------------------------------------------ | -: | ---: | ----: | -----: | ------: | ------: |
-| [test\_boot\_generics.R](testthat/test_boot_generics.R)       | 11 | 1.98 |     0 |      0 |       0 |       0 |
-| [test\_generics.R](testthat/test_generics.R)                  |  9 | 0.17 |     0 |      0 |       0 |       0 |
-| [test\_grouped\_generics.R](testthat/test_grouped_generics.R) |  6 | 7.15 |     0 |      0 |       0 |       0 |
+| [test\_boot\_generics.R](testthat/test_boot_generics.R)       | 11 | 2.74 |     0 |      0 |       0 |       0 |
+| [test\_generics.R](testthat/test_generics.R)                  |  9 | 0.20 |     0 |      0 |       0 |       0 |
+| [test\_grouped\_generics.R](testthat/test_grouped_generics.R) |  6 | 7.61 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -39,15 +39,15 @@ Unit Test summary is created using the
 
 | file                                                              | context                 | test                      | status | n | time |
 | :---------------------------------------------------------------- | :---------------------- | :------------------------ | :----- | -: | ---: |
-| [test\_boot\_generics.R](testthat/test_boot_generics.R#L40)       | boot\_generics work     | `boot_tidy()` works       | PASS   | 4 | 1.07 |
-| [test\_boot\_generics.R](testthat/test_boot_generics.R#L82)       | boot\_generics work     | `boot_glance()` works     | PASS   | 4 | 0.88 |
-| [test\_boot\_generics.R](testthat/test_boot_generics.R#L118)      | boot\_generics work     | `boot_augment()` works    | PASS   | 3 | 0.03 |
-| [test\_generics.R](testthat/test_generics.R#L13_L15)              | generics work           | `tidy()` works            | PASS   | 3 | 0.06 |
-| [test\_generics.R](testthat/test_generics.R#L39_L41)              | generics work           | `glance()` works          | PASS   | 3 | 0.04 |
-| [test\_generics.R](testthat/test_generics.R#L65_L67)              | generics work           | `augment()` works         | PASS   | 3 | 0.07 |
-| [test\_grouped\_generics.R](testthat/test_grouped_generics.R#L20) | grouped\_generics works | `grouped_tidy()` works    | PASS   | 2 | 2.40 |
-| [test\_grouped\_generics.R](testthat/test_grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.36 |
-| [test\_grouped\_generics.R](testthat/test_grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.39 |
+| [test\_boot\_generics.R](testthat/test_boot_generics.R#L40)       | boot\_generics work     | `boot_tidy()` works       | PASS   | 4 | 1.61 |
+| [test\_boot\_generics.R](testthat/test_boot_generics.R#L82)       | boot\_generics work     | `boot_glance()` works     | PASS   | 4 | 1.07 |
+| [test\_boot\_generics.R](testthat/test_boot_generics.R#L118)      | boot\_generics work     | `boot_augment()` works    | PASS   | 3 | 0.06 |
+| [test\_generics.R](testthat/test_generics.R#L13_L15)              | generics work           | `tidy()` works            | PASS   | 3 | 0.08 |
+| [test\_generics.R](testthat/test_generics.R#L39_L41)              | generics work           | `glance()` works          | PASS   | 3 | 0.03 |
+| [test\_generics.R](testthat/test_generics.R#L65_L67)              | generics work           | `augment()` works         | PASS   | 3 | 0.09 |
+| [test\_grouped\_generics.R](testthat/test_grouped_generics.R#L20) | grouped\_generics works | `grouped_tidy()` works    | PASS   | 2 | 2.47 |
+| [test\_grouped\_generics.R](testthat/test_grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.50 |
+| [test\_grouped\_generics.R](testthat/test_grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.64 |
 
 </details>
 

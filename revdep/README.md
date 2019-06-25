@@ -10,13 +10,13 @@
 |collate  |English_United States.1252                |
 |ctype    |English_United States.1252                |
 |tz       |America/New_York                          |
-|date     |2019-06-22                                |
+|date     |2019-06-24                                |
 
 # Dependencies
 
 |package     |old       |new        |<U+0394>  |
 |:-----------|:---------|:----------|:--|
-|broomExtra  |0.0.3     |0.0.3.9000 |*  |
+|broomExtra  |0.0.3     |0.0.3.9999 |*  |
 |assertthat  |0.2.1     |0.2.1      |   |
 |backports   |1.1.4     |1.1.4      |   |
 |BH          |1.69.0-1  |1.69.0-1   |   |
