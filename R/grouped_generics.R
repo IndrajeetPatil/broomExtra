@@ -9,11 +9,16 @@
 #' @inheritParams rlang::exec
 #' @param tidy.args A list of arguments to be used in the relevant `S3` method.
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @importFrom rlang !! !!! exec quo_squash enquo
 #' @importFrom dplyr group_by ungroup mutate group_map
 #'
 #' @inherit tidy return value
 #' @inheritSection tidy Methods
+#'
+#' @seealso \code{\link{tidy}}, \code{\link{boot_tidy}}
 #'
 #' @examples
 #' set.seed(123)
@@ -82,6 +87,9 @@ grouped_tidy <- function(data,
 #' @name grouped_glance
 #' @author Indrajeet Patil
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams grouped_tidy
 #'
 #' @importFrom rlang !! !!! exec quo_squash enquo
@@ -89,6 +97,8 @@ grouped_tidy <- function(data,
 #'
 #' @inherit glance return value
 #' @inheritSection glance Methods
+#'
+#' @seealso \code{\link{glance}}, \code{\link{boot_glance}}
 #'
 #' @examples
 #' set.seed(123)
@@ -154,6 +164,9 @@ grouped_glance <- function(data,
 #' @name grouped_augment
 #' @author Indrajeet Patil
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams grouped_tidy
 #' @param augment.args A list of arguments to be used in the relevant `S3` method.
 #'
@@ -162,6 +175,8 @@ grouped_glance <- function(data,
 #'
 #' @inherit augment return value
 #' @inheritSection augment Methods
+#'
+#' @seealso \code{\link{augment}}, \code{\link{boot_augment}}
 #'
 #' @examples
 #' set.seed(123)

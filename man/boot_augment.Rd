@@ -30,6 +30,10 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with information about data poin
 \description{
 Bootstrapped dataframe with augmented predictions from each sample.
 }
+\note{
+For available methods, see-
+\url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+}
 \section{Methods}{
 
 
@@ -58,6 +62,9 @@ broomExtra::boot_augment(
   ..f = lme4::lmer,
   formula = Reaction ~ Days + (Days | Subject)
 )
+}
+\seealso{
+\code{\link{grouped_augment}}, \code{\link{augment}}
 }
 \author{
 Indrajeet Patil

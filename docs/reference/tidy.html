@@ -155,6 +155,11 @@ tibble, if not, return a <code>NULL</code>.</p>
 
     <p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code> with information about model components.</p>
     
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>For available methods, see-
+<a href='https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html'>https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html</a></p>
+    
     <h2 class="hasAnchor" id="methods"><a class="anchor" href="#methods"></a>Methods</h2>
 
     
@@ -278,6 +283,10 @@ tibble, if not, return a <code>NULL</code>.</p>
 <li><p><code><a href='https://rdrr.io/pkg/rsample/man/tidy.rsplit.html'>tidy.rsplit</a></code>: <code>nested_cv</code>, <code>rset</code>, <code>rsplit</code>, <code>vfold_cv</code></p></li>
 </ul></p>
     
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='grouped_tidy.html'>grouped_tidy</a></code>, <code><a href='boot_tidy.html'>boot_tidy</a></code></p></div>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
@@ -285,18 +294,18 @@ tibble, if not, return a <code>NULL</code>.</p>
 
 <span class='co'># mixed-effects models (`broom.mixed` will be used)</span>
 <span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>lmm.mod</span>, <span class='kw'>effects</span> <span class='kw'>=</span> <span class='st'>"fixed"</span>, <span class='kw'>exponentiate</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 5</span><span>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>lmm.mod</span>, <span class='kw'>effects</span> <span class='kw'>=</span> <span class='st'>"fixed"</span>, <span class='kw'>exponentiate</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 x 5</span><span>
 #&gt;   effect term        estimate std.error statistic
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> fixed  (Intercept) 1.53</span><span style='color: #555555;'>e</span><span>109  1.04</span><span style='color: #555555;'>e</span><span>110     36.8 
-#&gt; </span><span style='color: #555555;'>2</span><span> fixed  Days        3.51</span><span style='color: #555555;'>e</span><span>  4  5.43</span><span style='color: #555555;'>e</span><span>  4      6.77</div><div class='input'>
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> fixed  (Intercept) 1.53</span><span style='color: #949494;'>e</span><span>109  1.04</span><span style='color: #949494;'>e</span><span>110     36.8 
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> fixed  Days        3.51</span><span style='color: #949494;'>e</span><span>  4  5.43</span><span style='color: #949494;'>e</span><span>  4      6.77</div><div class='input'>
 <span class='co'># linear model (`broom` will be used)</span>
 <span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>lm.mod</span>, <span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 7</span><span>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/tidy.html'>tidy</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>lm.mod</span>, <span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 2 x 7</span><span>
 #&gt;   term        estimate std.error statistic  p.value conf.low conf.high
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> (Intercept)    251.       6.61     38.0  2.16</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-87</span><span>   238.       264. 
-#&gt; </span><span style='color: #555555;'>2</span><span> Days            10.5      1.24      8.45 9.89</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-15</span><span>     8.02      12.9</div></span></pre>
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> (Intercept)    251.       6.61     38.0  2.16</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-87</span><span>   238.       264. 
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> Days            10.5      1.24      8.45 9.89</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-15</span><span>     8.02      12.9</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -305,7 +314,11 @@ tibble, if not, return a <code>NULL</code>.</p>
       
       <li><a href="#value">Value</a></li>
 
+      <li><a href="#note">Note</a></li>
+
       <li><a href="#methods">Methods</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

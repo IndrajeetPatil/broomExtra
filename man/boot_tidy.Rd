@@ -30,6 +30,10 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with information about model com
 \description{
 Bootstrapped dataframe with estimates from each sample.
 }
+\note{
+For available methods, see-
+\url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+}
 \section{Methods}{
 
 
@@ -60,6 +64,9 @@ broomExtra::boot_tidy(
   formula = Reaction ~ Days + (Days | Subject),
   tidy.args = list(effects = "fixed")
 )
+}
+\seealso{
+\code{\link{grouped_tidy}}, \code{\link{tidy}}
 }
 \author{
 Indrajeet Patil

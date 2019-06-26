@@ -22,6 +22,10 @@ These dots support \link{tidy-dots} features.}
 Model summary output from grouped analysis of any function that has
 \code{data} argument in its function call.
 }
+\note{
+For available methods, see-
+\url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+}
 \section{Methods}{
 
 
@@ -50,6 +54,9 @@ broomExtra::grouped_glance(
   formula = price ~ carat + (carat | color) - 1,
   control = lme4::lmerControl(optimizer = "bobyqa")
 )
+}
+\seealso{
+\code{\link{glance}}, \code{\link{boot_glance}}
 }
 \author{
 Indrajeet Patil

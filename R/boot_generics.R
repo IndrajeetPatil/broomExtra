@@ -2,11 +2,16 @@
 #' @name boot_tidy
 #' @author Indrajeet Patil
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams grouped_tidy
 #' @inheritParams rsample::bootstraps
 #'
 #' @inherit tidy return value
 #' @inheritSection tidy Methods
+#'
+#' @seealso \code{\link{grouped_tidy}}, \code{\link{tidy}}
 #'
 #' @importFrom rlang !! !!! exec
 #' @importFrom dplyr mutate
@@ -86,11 +91,16 @@ boot_tidy <- function(data,
 #' @name boot_glance
 #' @author Indrajeet Patil
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams grouped_glance
 #' @inheritParams rsample::bootstraps
 #'
 #' @inherit glance return value
 #' @inheritSection glance Methods
+#'
+#' @seealso \code{\link{grouped_glance}}, \code{\link{glance}}
 #'
 #' @importFrom rlang !! !!! exec
 #' @importFrom dplyr mutate
@@ -167,11 +177,16 @@ boot_glance <- function(data,
 #' @name boot_augment
 #' @author Indrajeet Patil
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams grouped_augment
 #' @inheritParams rsample::bootstraps
 #'
 #' @inherit augment return value
 #' @inheritSection augment Methods
+#'
+#' @seealso \code{\link{grouped_augment}}, \code{\link{augment}}
 #'
 #' @importFrom rlang !! !!! exec
 #' @importFrom dplyr mutate

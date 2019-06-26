@@ -5,6 +5,9 @@
 #'   `broom` or in `broom.mixed`. If it does, it turn an object into a tidy
 #'   tibble, if not, return a `NULL`.
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams generics::tidy
 #'
 #' @importFrom broom tidy
@@ -12,6 +15,8 @@
 #'
 #' @inherit generics::tidy return value
 #' @inheritSection generics::tidy Methods
+#'
+#' @seealso \code{\link{grouped_tidy}}, \code{\link{boot_tidy}}
 #'
 #' @examples
 #' set.seed(123)
@@ -58,6 +63,9 @@ tidy <- function(x, ...) {
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`.
 #'
+#'@note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams generics::glance
 #'
 #' @importFrom broom glance
@@ -65,6 +73,8 @@ tidy <- function(x, ...) {
 #'
 #' @inherit generics::glance return value
 #' @inheritSection generics::glance Methods
+#'
+#' @seealso \code{\link{grouped_glance}}, \code{\link{boot_glance}}
 #'
 #' @examples
 #' set.seed(123)
@@ -110,6 +120,9 @@ glance <- function(x, ...) {
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`.
 #'
+#' @note For available methods, see-
+#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+#'
 #' @inheritParams generics::augment
 #'
 #' @importFrom broom augment
@@ -117,6 +130,8 @@ glance <- function(x, ...) {
 #'
 #' @inherit generics::augment return value
 #' @inheritSection generics::augment Methods
+#'
+#' @seealso \code{\link{grouped_augment}}, \code{\link{boot_augment}}
 #'
 #' @examples
 #' set.seed(123)

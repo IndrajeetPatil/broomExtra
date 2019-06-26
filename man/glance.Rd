@@ -16,6 +16,10 @@ Check if a \code{glance} method exits for a given object, either in
 \code{broom} or in \code{broom.mixed}. If it does, return the model summary
 dataframe, if not, return a \code{NULL}.
 }
+\note{
+For available methods, see-
+\url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+}
 \section{Methods}{
 
 
@@ -34,6 +38,9 @@ broomExtra::glance(lmm.mod)
 # linear model (`broom` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
+}
+\seealso{
+\code{\link{grouped_glance}}, \code{\link{boot_glance}}
 }
 \author{
 Indrajeet Patil

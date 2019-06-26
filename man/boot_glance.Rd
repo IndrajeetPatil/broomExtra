@@ -25,6 +25,10 @@ These dots support \link{tidy-dots} features.}
 \description{
 Bootstrapped dataframe with model summaries from each sample.
 }
+\note{
+For available methods, see-
+\url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
+}
 \section{Methods}{
 
 
@@ -53,6 +57,9 @@ broomExtra::boot_glance(
   ..f = lme4::lmer,
   formula = Reaction ~ Days + (Days | Subject)
 )
+}
+\seealso{
+\code{\link{grouped_glance}}, \code{\link{glance}}
 }
 \author{
 Indrajeet Patil
