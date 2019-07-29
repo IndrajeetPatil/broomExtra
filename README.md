@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--06--25-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--07--29-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -422,7 +422,6 @@ broomExtra::grouped_augment(
   control = lme4::lmerControl(optimizer = "bobyqa")
 )
 #> boundary (singular) fit: see ?isSingular
-#> boundary (singular) fit: see ?isSingular
 #> # A tibble: 26,970 x 15
 #>    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu
 #>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>   <dbl>  <dbl> <dbl>
@@ -473,19 +472,19 @@ library(broomExtra)
   ),
   tidy.args = list(effects = "fixed")
 ))
-#> # A tibble: 200 x 6
-#>    id           effect term        estimate std.error statistic
-#>    <chr>        <chr>  <chr>          <dbl>     <dbl>     <dbl>
-#>  1 Bootstrap001 fixed  (Intercept)   251.        7.59     33.1 
-#>  2 Bootstrap001 fixed  Days           10.2       1.68      6.04
-#>  3 Bootstrap002 fixed  (Intercept)   247.        8.93     27.7 
-#>  4 Bootstrap002 fixed  Days           12.6       2.46      5.11
-#>  5 Bootstrap003 fixed  (Intercept)   254.        7.89     32.2 
-#>  6 Bootstrap003 fixed  Days           10.3       1.72      6.00
-#>  7 Bootstrap004 fixed  (Intercept)   254.        5.78     44.0 
-#>  8 Bootstrap004 fixed  Days            9.47      1.48      6.41
-#>  9 Bootstrap005 fixed  (Intercept)   246.        7.12     34.5 
-#> 10 Bootstrap005 fixed  Days           11.4       1.66      6.88
+#> # A tibble: 200 x 8
+#>    splits     id       tidy_df   effect term   estimate std.error statistic
+#>    <list>     <chr>    <list>    <chr>  <chr>     <dbl>     <dbl>     <dbl>
+#>  1 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   251.        7.59     33.1 
+#>  2 <split [1~ Bootstr~ <tibble ~ fixed  Days      10.2       1.68      6.04
+#>  3 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   247.        8.93     27.7 
+#>  4 <split [1~ Bootstr~ <tibble ~ fixed  Days      12.6       2.46      5.11
+#>  5 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   254.        7.89     32.2 
+#>  6 <split [1~ Bootstr~ <tibble ~ fixed  Days      10.3       1.72      6.00
+#>  7 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   254.        5.78     44.0 
+#>  8 <split [1~ Bootstr~ <tibble ~ fixed  Days       9.47      1.48      6.41
+#>  9 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   246.        7.12     34.5 
+#> 10 <split [1~ Bootstr~ <tibble ~ fixed  Days      11.4       1.66      6.88
 #> # ... with 190 more rows
 
 # plotting estimates from each bootstrapped sample
@@ -529,21 +528,21 @@ library(ggplot2)
     na.action = na.omit
   )
 )
-#> # A tibble: 500 x 14
-#>    splits id    r.squared adj.r.squared sigma statistic  p.value    df
-#>    <list> <chr>     <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>
-#>  1 <spli~ Boot~     0.799         0.792  2.71     119.  5.63e-12     1
-#>  2 <spli~ Boot~     0.726         0.717  2.49      79.6 6.06e-10     1
-#>  3 <spli~ Boot~     0.754         0.746  3.29      92.1 1.18e-10     1
-#>  4 <spli~ Boot~     0.731         0.722  2.74      81.7 4.59e-10     1
-#>  5 <spli~ Boot~     0.700         0.690  3.33      69.9 2.49e- 9     1
-#>  6 <spli~ Boot~     0.830         0.824  2.19     146.  4.70e-13     1
-#>  7 <spli~ Boot~     0.768         0.761  3.61      99.5 4.87e-11     1
-#>  8 <spli~ Boot~     0.550         0.535  3.01      36.6 1.20e- 6     1
-#>  9 <spli~ Boot~     0.815         0.809  2.66     132.  1.57e-12     1
-#> 10 <spli~ Boot~     0.680         0.670  3.32      63.8 6.43e- 9     1
-#> # ... with 490 more rows, and 6 more variables: logLik <dbl>, AIC <dbl>,
-#> #   BIC <dbl>, deviance <dbl>, df.residual <int>, nobs <int>
+#> # A tibble: 500 x 15
+#>    splits id    glance_df r.squared adj.r.squared sigma statistic  p.value
+#>    <list> <chr> <list>        <dbl>         <dbl> <dbl>     <dbl>    <dbl>
+#>  1 <spli~ Boot~ <tibble ~     0.799         0.792  2.71     119.  5.63e-12
+#>  2 <spli~ Boot~ <tibble ~     0.726         0.717  2.49      79.6 6.06e-10
+#>  3 <spli~ Boot~ <tibble ~     0.754         0.746  3.29      92.1 1.18e-10
+#>  4 <spli~ Boot~ <tibble ~     0.731         0.722  2.74      81.7 4.59e-10
+#>  5 <spli~ Boot~ <tibble ~     0.700         0.690  3.33      69.9 2.49e- 9
+#>  6 <spli~ Boot~ <tibble ~     0.830         0.824  2.19     146.  4.70e-13
+#>  7 <spli~ Boot~ <tibble ~     0.768         0.761  3.61      99.5 4.87e-11
+#>  8 <spli~ Boot~ <tibble ~     0.550         0.535  3.01      36.6 1.20e- 6
+#>  9 <spli~ Boot~ <tibble ~     0.815         0.809  2.66     132.  1.57e-12
+#> 10 <spli~ Boot~ <tibble ~     0.680         0.670  3.32      63.8 6.43e- 9
+#> # ... with 490 more rows, and 7 more variables: df <dbl>, logLik <dbl>,
+#> #   AIC <dbl>, BIC <dbl>, deviance <dbl>, df.residual <int>, nobs <int>
 
 # plotting log-likelihood for the model for each of the samples
 tibble::rowid_to_column(.data = df_glance) %>%
@@ -577,21 +576,21 @@ library(ggplot2)
     augment.args = list(se_fit = TRUE)
   )
 )
-#> # A tibble: 16,000 x 11
-#>    id    .rownames   mpg    wt .fitted .se.fit  .resid .std.resid   .hat
-#>    <chr> <chr>     <dbl> <dbl>   <dbl>   <dbl>   <dbl>      <dbl>  <dbl>
-#>  1 Boot~ Maserati~  15    3.57   18.0    0.579  2.96      -1.12   0.0458
-#>  2 Boot~ Cadillac~  10.4  5.25    7.71   1.35  -2.69       1.15   0.250 
-#>  3 Boot~ Honda Ci~  30.4  1.62   29.9    0.902 -0.522      0.205  0.111 
-#>  4 Boot~ Merc 450~  15.2  3.78   16.7    0.653  1.48      -0.563  0.0582
-#>  5 Boot~ Datsun 7~  22.8  2.32   25.6    0.605  2.78      -1.05   0.0500
-#>  6 Boot~ Merc 280   19.2  3.44   18.8    0.542 -0.449      0.170  0.0401
-#>  7 Boot~ Fiat 128   32.4  2.2    26.3    0.649 -6.09       2.32   0.0574
-#>  8 Boot~ Dodge Ch~  15.5  3.52   18.3    0.564  2.76      -1.04   0.0435
-#>  9 Boot~ Merc 280C  17.8  3.44   18.8    0.542  0.951     -0.359  0.0401
-#> 10 Boot~ Hornet S~  18.7  3.44   18.8    0.542  0.0506    -0.0191 0.0401
-#> # ... with 15,990 more rows, and 2 more variables: .sigma <dbl>,
-#> #   .cooksd <dbl>
+#> # A tibble: 16,000 x 13
+#>    splits id    augment_df .rownames   mpg    wt .fitted .se.fit  .resid
+#>    <list> <chr> <list>     <chr>     <dbl> <dbl>   <dbl>   <dbl>   <dbl>
+#>  1 <spli~ Boot~ <tibble [~ Maserati~  15    3.57   18.0    0.579  2.96  
+#>  2 <spli~ Boot~ <tibble [~ Cadillac~  10.4  5.25    7.71   1.35  -2.69  
+#>  3 <spli~ Boot~ <tibble [~ Honda Ci~  30.4  1.62   29.9    0.902 -0.522 
+#>  4 <spli~ Boot~ <tibble [~ Merc 450~  15.2  3.78   16.7    0.653  1.48  
+#>  5 <spli~ Boot~ <tibble [~ Datsun 7~  22.8  2.32   25.6    0.605  2.78  
+#>  6 <spli~ Boot~ <tibble [~ Merc 280   19.2  3.44   18.8    0.542 -0.449 
+#>  7 <spli~ Boot~ <tibble [~ Fiat 128   32.4  2.2    26.3    0.649 -6.09  
+#>  8 <spli~ Boot~ <tibble [~ Dodge Ch~  15.5  3.52   18.3    0.564  2.76  
+#>  9 <spli~ Boot~ <tibble [~ Merc 280C  17.8  3.44   18.8    0.542  0.951 
+#> 10 <spli~ Boot~ <tibble [~ Hornet S~  18.7  3.44   18.8    0.542  0.0506
+#> # ... with 15,990 more rows, and 4 more variables: .std.resid <dbl>,
+#> #   .hat <dbl>, .sigma <dbl>, .cooksd <dbl>
 
 # plotting those estimates
 dplyr::group_by(.data = df_augment, id) %>%

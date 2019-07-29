@@ -1,5 +1,5 @@
 {
-  "index_name": "groupedstats",
+  "index_name": "broomextra",
   "start_urls": [
     {
       "url": "https://indrajeetpatil.github.io/broomExtra//index.html",
@@ -92,3 +92,4 @@
     ]
   }
 }
+
