@@ -63,7 +63,7 @@ tidy <- function(x, ...) {
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`.
 #'
-#'@note For available methods, see-
+#' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
 #'
 #' @inheritParams generics::glance

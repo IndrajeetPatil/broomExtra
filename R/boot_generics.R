@@ -81,7 +81,12 @@ boot_tidy <- function(data,
         .f = tidy_group
       )
     ) %>%
-    tidyr::unnest(data = ., tidy_df)
+    tidyr::unnest(
+      data = .,
+      tidy_df,
+      .drop = FALSE,
+      .preserve = "tidy_df"
+    )
 
   # return the final dataframe
   return(boots_fits)
@@ -167,7 +172,12 @@ boot_glance <- function(data,
         .f = glance_group
       )
     ) %>%
-    tidyr::unnest(data = ., glance_df)
+    tidyr::unnest(
+      data = .,
+      glance_df,
+      .drop = FALSE,
+      .preserve = "glance_df"
+    )
 
   # return the final dataframe
   return(boots_fits)
@@ -254,7 +264,12 @@ boot_augment <- function(data,
         .f = augment_group
       )
     ) %>%
-    tidyr::unnest(data = ., augment_df)
+    tidyr::unnest(
+      data = .,
+      augment_df,
+      .drop = FALSE,
+      .preserve = "augment_df"
+    )
 
   # return the final dataframe
   return(boots_fits)
