@@ -52,8 +52,7 @@ grouped_tidy <- function(data,
                          ...,
                          tidy.args = list()) {
   # check how many variables were entered for grouping variable vector
-  grouping.vars <-
-    as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
+  grouping.vars <- as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
   grouping.vars <-
     if (length(grouping.vars) == 1) {
       grouping.vars
@@ -129,8 +128,7 @@ grouped_glance <- function(data,
                            ..f,
                            ...) {
   # check how many variables were entered for grouping variable vector
-  grouping.vars <-
-    as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
+  grouping.vars <- as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
   grouping.vars <-
     if (length(grouping.vars) == 1) {
       grouping.vars
@@ -209,8 +207,7 @@ grouped_augment <- function(data,
                             ...,
                             augment.args = list()) {
   # check how many variables were entered for grouping variable vector
-  grouping.vars <-
-    as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
+  grouping.vars <- as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
   grouping.vars <-
     if (length(grouping.vars) == 1) {
       grouping.vars
