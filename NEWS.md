@@ -1,4 +1,4 @@
-# broomExtra 0.0.4.9000
+# broomExtra 0.0.5
 
   - Minor refactoring of `boot_` generic functions to make them compatible with
     upcoming release of `tidyr`.
