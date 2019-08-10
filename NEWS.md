@@ -1,5 +1,10 @@
 # broomExtra 0.0.5
 
+  - In addition to trying to extract results using tidiers from `broom` and
+    `broom.mixed`, `broomExtra::tidy` now also attempts to convert the entered
+    object into a `tibble` dataframe. This is solely to deal with dataframes
+    which are often encountered while writing wrapper functions around `tidy`.
+    
   - Minor refactoring of `boot_` generic functions to make them compatible with
     upcoming release of `tidyr`.
 

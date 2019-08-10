@@ -17,4 +17,5 @@ packageversion
 svg
 testthat
 tibble
+tidiers
 yellowgreen

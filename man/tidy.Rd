@@ -17,7 +17,8 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with information about model com
 \description{
 Checks if a \code{tidy} method exits for a given object, either in
 \code{broom} or in \code{broom.mixed}. If it does, it turn an object into a tidy
-tibble, if not, return a \code{NULL}.
+tibble, if not, return a \code{NULL}. In case of data frames, a tibble data
+frame is returned.
 }
 \note{
 For available methods, see-
@@ -41,10 +42,17 @@ broomExtra::tidy(x = lmm.mod, effects = "fixed", exponentiate = TRUE)
 # linear model (`broom` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::tidy(x = lm.mod, conf.int = TRUE)
+
+# in case you enter a dataframe, tidier will return data as a tibble
+# note that rownames are preserved but other attributes might be lost
+broomExtra::tidy(mtcars)
+
+# unsupported object (the function will return `NULL` in such cases)
+broomExtra::tidy(list(1, c("x", "y")))
 }
 \seealso{
 \code{\link{grouped_tidy}}, \code{\link{boot_tidy}}
 }
 \author{
-Indrajeet Patil
+\href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 }

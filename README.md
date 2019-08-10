@@ -8,7 +8,7 @@
 [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN
 Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.4-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.0.5-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![Daily downloads
 badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Weekly downloads
@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--08--09-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--08--10-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -40,14 +40,14 @@ data analysis workflows involving packages `broom` and `broom.mixed`.
 
 # Installation
 
-To get the latest, stable `CRAN` release (`0.0.4`):
+To get the latest, stable `CRAN` release (`0.0.5`):
 
 ``` r
 utils::install.packages(pkgs = "broomExtra")
 ```
 
 You can get the **development** version of the package from `GitHub`
-(`0.0.4.9000`). To see what new changes (and bug fixes) have been made
+(`0.0.5.9000`). To see what new changes (and bug fixes) have been made
 to the package since the last release on `CRAN`, you can check the
 detailed log of changes here:
 <https://indrajeetpatil.github.io/broomExtra/news/index.html>
@@ -151,12 +151,7 @@ broomExtra::tidy(
 #> 7 tempw~    1.43      0.924     0.389 6.97e- 1   0.234      8.76  location
 
 # unsupported object (the function will return `NULL` in such cases)
-x <- c(2, 2:4, 4, 4, 5, 5, 7, 7, 7)
-y <- c(1:6, 5:4, 3:1)
-appr <- stats::approx(x, y, xout = x)
-#> Warning in regularize.values(x, y, ties, missing(ties)): collapsing to
-#> unique 'x' values
-broomExtra::tidy(appr)
+broomExtra::tidy(list(1, c("x", "y")))
 #> NULL
 ```
 

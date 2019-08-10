@@ -1,6 +1,6 @@
 #' @title Bootstrapped dataframe with estimates from each sample.
 #' @name boot_tidy
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #'
 #' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
@@ -75,7 +75,7 @@ boot_tidy <- function(data,
 
 #' @title Bootstrapped dataframe with model summaries from each sample.
 #' @name boot_glance
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #'
 #' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
@@ -147,7 +147,7 @@ boot_glance <- function(data,
 
 #' @title Bootstrapped dataframe with augmented predictions from each sample.
 #' @name boot_augment
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #'
 #' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
@@ -219,7 +219,7 @@ boot_augment <- function(data,
 }
 
 #' @name boot_unnest
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #'
 #' @inheritParams rsample::int_pctl
 #' @param .fn A function to execute on a dataframe containing bootstrap

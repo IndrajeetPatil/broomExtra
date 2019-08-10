@@ -65,5 +65,5 @@ broomExtra::grouped_augment(
 \code{\link{augment}}, \code{\link{boot_augment}}
 }
 \author{
-Indrajeet Patil
+\href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 }

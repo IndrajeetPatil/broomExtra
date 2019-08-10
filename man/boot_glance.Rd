@@ -68,5 +68,5 @@ broomExtra::boot_glance(
 \code{\link{grouped_glance}}, \code{\link{glance}}
 }
 \author{
-Indrajeet Patil
+\href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 }

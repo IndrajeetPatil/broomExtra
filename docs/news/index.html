@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.5</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.4.9000</span>
       </span>
     </div>
 
@@ -139,7 +139,8 @@
 <a href="#broomextra-005" class="anchor"></a>broomExtra 0.0.5<small> Unreleased </small>
 </h1>
 <ul>
-<li>Minor refactoring of <code>boot_</code> generic functions to make them compatible with upcoming release of <code>tidyr</code>.</li>
+<li><p>In addition to trying to extract results using tidiers from <code>broom</code> and <code>broom.mixed</code>, <code><a href="../reference/tidy.html">broomExtra::tidy</a></code> now also attempts to convert the entered object into a <code>tibble</code> dataframe. This is solely to deal with dataframes which are often encountered while writing wrapper functions around <code>tidy</code>.</p></li>
+<li><p>Minor refactoring of <code>boot_</code> generic functions to make them compatible with upcoming release of <code>tidyr</code>.</p></li>
 </ul>
 </div>
     <div id="broomextra-004" class="section level1">
