@@ -1,9 +1,10 @@
 #' @title Retrieve tidy dataframe if it exists.
 #' @name tidy
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #' @description Checks if a `tidy` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, it turn an object into a tidy
-#'   tibble, if not, return a `NULL`.
+#'   tibble, if not, return a `NULL`. In case of data frames, a tibble data
+#'   frame is returned.
 #'
 #' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
@@ -13,6 +14,7 @@
 #' @importFrom rlang is_null
 #' @importFrom broom tidy
 #' @importFrom broom.mixed tidy
+#' @importFrom dplyr as_tibble
 #'
 #' @inherit generics::tidy return value
 #' @inheritSection generics::tidy Methods
@@ -30,6 +32,13 @@
 #' # linear model (`broom` will be used)
 #' lm.mod <- lm(Reaction ~ Days, sleepstudy)
 #' broomExtra::tidy(x = lm.mod, conf.int = TRUE)
+#'
+#' # in case you enter a dataframe, tidier will return data as a tibble
+#' # note that rownames are preserved but other attributes might be lost
+#' broomExtra::tidy(mtcars)
+#'
+#' # unsupported object (the function will return `NULL` in such cases)
+#' broomExtra::tidy(list(1, c("x", "y")))
 #' @export
 
 tidy <- function(x, ...) {
@@ -48,6 +57,14 @@ tidy <- function(x, ...) {
     )
   }
 
+  # if not, try to convert it to a tibble (relevant for dataframe)
+  if (rlang::is_null(f)) {
+    f <- tryCatch(
+      expr = dplyr::as_tibble(x, ..., rownames = "rownames"),
+      error = function(e) NULL
+    )
+  }
+
   # return the tidy
   return(f)
 }
@@ -55,7 +72,7 @@ tidy <- function(x, ...) {
 
 #' @title Retrieve model summary dataframe if it exists.
 #' @name glance
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #' @description Check if a `glance` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`.
@@ -108,7 +125,7 @@ glance <- function(x, ...) {
 
 #' @title Retrieve augmented dataframe if it exists.
 #' @name augment
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #' @description Check if a `augment` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`.

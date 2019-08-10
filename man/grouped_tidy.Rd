@@ -66,5 +66,5 @@ broomExtra::grouped_tidy(
 \code{\link{tidy}}, \code{\link{boot_tidy}}
 }
 \author{
-Indrajeet Patil
+\href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 }

@@ -1,7 +1,7 @@
 #' @title Tidy output from grouped analysis of any function that has `data`
 #'   argument in its function call.
 #' @name grouped_tidy
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #'
 #' @param data Dataframe (or tibble) from which variables are to be taken.
 #' @param grouping.vars Grouping variables.
@@ -84,7 +84,7 @@ grouped_tidy <- function(data,
 #' @title Model summary output from grouped analysis of any function that has
 #'   `data` argument in its function call.
 #' @name grouped_glance
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #'
 #' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
@@ -160,7 +160,7 @@ grouped_glance <- function(data,
 #' @title Augmented data from grouped analysis of any function that has `data`
 #'   argument in its function call.
 #' @name grouped_augment
-#' @author Indrajeet Patil
+#' @author \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 #'
 #' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
