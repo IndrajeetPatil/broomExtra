@@ -186,7 +186,8 @@ utils::globalVariables(
     "splits",
     "augment_df",
     "glance_df",
-    "tidy_df"
+    "tidy_df",
+    "results"
   ),
   package = "broomExtra",
   add = FALSE

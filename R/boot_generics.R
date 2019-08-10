@@ -72,24 +72,8 @@ boot_tidy <- function(data,
     rlang::exec(.fn = broomExtra::tidy, model, !!!tidy.args)
   }
 
-  # execute function for each bootstrapped sample and tidy output
-  boots_fits <- boots %>%
-    dplyr::mutate(
-      .data = .,
-      tidy_df = purrr::map(
-        .x = splits,
-        .f = tidy_group
-      )
-    ) %>%
-    tidyr::unnest(
-      data = .,
-      tidy_df,
-      .drop = FALSE,
-      .preserve = "tidy_df"
-    )
-
   # return the final dataframe
-  return(boots_fits)
+  return(boot_unnest(boots, tidy_group))
 }
 
 #' @title Bootstrapped dataframe with model summaries from each sample.
@@ -163,24 +147,8 @@ boot_glance <- function(data,
     rlang::exec(.fn = broomExtra::glance, model)
   }
 
-  # execute function for each bootstrapped sample and tidy output
-  boots_fits <- boots %>%
-    dplyr::mutate(
-      .data = .,
-      glance_df = purrr::map(
-        .x = splits,
-        .f = glance_group
-      )
-    ) %>%
-    tidyr::unnest(
-      data = .,
-      glance_df,
-      .drop = FALSE,
-      .preserve = "glance_df"
-    )
-
   # return the final dataframe
-  return(boots_fits)
+  return(boot_unnest(boots, glance_group))
 }
 
 #' @title Bootstrapped dataframe with augmented predictions from each sample.
@@ -255,22 +223,27 @@ boot_augment <- function(data,
     rlang::exec(.fn = broomExtra::augment, model, !!!augment.args)
   }
 
-  # execute function for each bootstrapped sample and tidy output
-  boots_fits <- boots %>%
+  # return the final dataframe
+  return(boot_unnest(boots, augment_group))
+}
+
+
+#' @noRd
+#' @keywords internal
+
+boot_unnest <- function(boots, .f_boot) {
+  boots %>%
     dplyr::mutate(
       .data = .,
-      augment_df = purrr::map(
+      results = purrr::map(
         .x = splits,
-        .f = augment_group
+        .f = .f_boot
       )
     ) %>%
     tidyr::unnest(
-      data = .,
-      augment_df,
+      .,
+      results,
       .drop = FALSE,
-      .preserve = "augment_df"
+      .preserve = "results"
     )
-
-  # return the final dataframe
-  return(boots_fits)
 }
