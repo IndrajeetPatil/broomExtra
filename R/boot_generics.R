@@ -14,9 +14,6 @@
 #' @seealso \code{\link{grouped_tidy}}, \code{\link{tidy}}
 #'
 #' @importFrom rlang !! !!! exec
-#' @importFrom dplyr mutate
-#' @importFrom purrr map
-#' @importFrom tidyr unnest
 #' @importFrom rsample bootstraps
 #'
 #' @examples
@@ -92,9 +89,6 @@ boot_tidy <- function(data,
 #' @seealso \code{\link{grouped_glance}}, \code{\link{glance}}
 #'
 #' @importFrom rlang !! !!! exec
-#' @importFrom dplyr mutate
-#' @importFrom purrr map
-#' @importFrom tidyr unnest
 #' @importFrom rsample bootstraps
 #'
 #' @examples
@@ -167,9 +161,6 @@ boot_glance <- function(data,
 #' @seealso \code{\link{grouped_augment}}, \code{\link{augment}}
 #'
 #' @importFrom rlang !! !!! exec
-#' @importFrom dplyr mutate
-#' @importFrom purrr map
-#' @importFrom tidyr unnest
 #' @importFrom rsample bootstraps
 #'
 #' @examples
@@ -227,23 +218,22 @@ boot_augment <- function(data,
   return(boot_unnest(boots, augment_group))
 }
 
-
+#' @name boot_unnest
+#' @author Indrajeet Patil
+#'
+#' @inheritParams rsample::int_pctl
+#' @param .fn A function to execute on a dataframe containing bootstrap
+#'   resamples.
+#'
+#' @importFrom dplyr mutate
+#' @importFrom purrr map
+#' @importFrom tidyr unnest
+#'
 #' @noRd
 #' @keywords internal
 
-boot_unnest <- function(boots, .f_boot) {
-  boots %>%
-    dplyr::mutate(
-      .data = .,
-      results = purrr::map(
-        .x = splits,
-        .f = .f_boot
-      )
-    ) %>%
-    tidyr::unnest(
-      .,
-      results,
-      .drop = FALSE,
-      .preserve = "results"
-    )
+boot_unnest <- function(.data, .fn) {
+  .data %>%
+    dplyr::mutate(.data = ., results = purrr::map(.x = splits, .f = .fn)) %>%
+    tidyr::unnest(., results)
 }

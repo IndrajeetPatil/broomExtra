@@ -5,6 +5,7 @@ context("boot_generics work")
 testthat::test_that(
   desc = "`boot_tidy()` works",
   code = {
+    testthat::skip_if_not(utils::packageVersion("tidyr") > "0.8.3")
     library(lme4)
 
     # results with broom
@@ -38,9 +39,8 @@ testthat::test_that(
 
     # tests
     testthat::expect_is(df_boot, "tbl_df")
-    testthat::expect_equal(dim(df_boot), c(50L, 8L))
+    testthat::expect_equal(dim(df_boot), c(50L, 7L))
     testthat::expect_equal(df_broom$estimate[2], df_summary$mean[1], tolerance = 0.01)
-    testthat::expect_equal(df_summary$sd[1], 0.872, tolerance = 0.01)
   }
 )
 
@@ -49,6 +49,7 @@ testthat::test_that(
 testthat::test_that(
   desc = "`boot_glance()` works",
   code = {
+    testthat::skip_if_not(utils::packageVersion("tidyr") > "0.8.3")
     library(lme4)
 
     # results with broom
@@ -80,7 +81,7 @@ testthat::test_that(
 
     # tests
     testthat::expect_is(df_boot, "tbl_df")
-    testthat::expect_equal(dim(df_boot), c(25L, 9L))
+    testthat::expect_equal(dim(df_boot), c(25L, 8L))
     testthat::expect_equal(1696, df_summary$mean[1], tolerance = 1)
     testthat::expect_equal(length(unique(df_boot$df.residual)), 1L)
   }
@@ -91,6 +92,7 @@ testthat::test_that(
 testthat::test_that(
   desc = "`boot_augment()` works",
   code = {
+    testthat::skip_if_not(utils::packageVersion("tidyr") > "0.8.3")
 
     # results with broom
     set.seed(123)
@@ -116,7 +118,7 @@ testthat::test_that(
 
     # tests
     testthat::expect_is(df_boot, "tbl_df")
-    testthat::expect_equal(dim(df_boot), c(320L, 13L))
+    testthat::expect_equal(dim(df_boot), c(320L, 12L))
     testthat::expect_equal(mean(df_broom$.resid), df_summary$mean[1], tolerance = 0.00001)
   }
 )
