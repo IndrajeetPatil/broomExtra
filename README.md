@@ -472,19 +472,19 @@ library(broomExtra)
   ),
   tidy.args = list(effects = "fixed")
 ))
-#> # A tibble: 200 x 8
-#>    splits     id       results   effect term   estimate std.error statistic
-#>    <list>     <chr>    <list>    <chr>  <chr>     <dbl>     <dbl>     <dbl>
-#>  1 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   251.        7.59     33.1 
-#>  2 <split [1~ Bootstr~ <tibble ~ fixed  Days      10.2       1.68      6.04
-#>  3 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   247.        8.93     27.7 
-#>  4 <split [1~ Bootstr~ <tibble ~ fixed  Days      12.6       2.46      5.11
-#>  5 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   254.        7.89     32.2 
-#>  6 <split [1~ Bootstr~ <tibble ~ fixed  Days      10.3       1.72      6.00
-#>  7 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   254.        5.78     44.0 
-#>  8 <split [1~ Bootstr~ <tibble ~ fixed  Days       9.47      1.48      6.41
-#>  9 <split [1~ Bootstr~ <tibble ~ fixed  (Inte~   246.        7.12     34.5 
-#> 10 <split [1~ Bootstr~ <tibble ~ fixed  Days      11.4       1.66      6.88
+#> # A tibble: 200 x 7
+#>    splits         id          effect term      estimate std.error statistic
+#>    <list>         <chr>       <chr>  <chr>        <dbl>     <dbl>     <dbl>
+#>  1 <split [180/6~ Bootstrap0~ fixed  (Interce~   251.        7.59     33.1 
+#>  2 <split [180/6~ Bootstrap0~ fixed  Days         10.2       1.68      6.04
+#>  3 <split [180/6~ Bootstrap0~ fixed  (Interce~   247.        8.93     27.7 
+#>  4 <split [180/6~ Bootstrap0~ fixed  Days         12.6       2.46      5.11
+#>  5 <split [180/6~ Bootstrap0~ fixed  (Interce~   254.        7.89     32.2 
+#>  6 <split [180/6~ Bootstrap0~ fixed  Days         10.3       1.72      6.00
+#>  7 <split [180/6~ Bootstrap0~ fixed  (Interce~   254.        5.78     44.0 
+#>  8 <split [180/6~ Bootstrap0~ fixed  Days          9.47      1.48      6.41
+#>  9 <split [180/6~ Bootstrap0~ fixed  (Interce~   246.        7.12     34.5 
+#> 10 <split [180/6~ Bootstrap0~ fixed  Days         11.4       1.66      6.88
 #> # ... with 190 more rows
 
 # plotting estimates from each bootstrapped sample
@@ -528,21 +528,21 @@ library(ggplot2)
     na.action = na.omit
   )
 )
-#> # A tibble: 500 x 15
-#>    splits id    results r.squared adj.r.squared sigma statistic  p.value
-#>    <list> <chr> <list>      <dbl>         <dbl> <dbl>     <dbl>    <dbl>
-#>  1 <spli~ Boot~ <tibbl~     0.799         0.792  2.71     119.  5.63e-12
-#>  2 <spli~ Boot~ <tibbl~     0.726         0.717  2.49      79.6 6.06e-10
-#>  3 <spli~ Boot~ <tibbl~     0.754         0.746  3.29      92.1 1.18e-10
-#>  4 <spli~ Boot~ <tibbl~     0.731         0.722  2.74      81.7 4.59e-10
-#>  5 <spli~ Boot~ <tibbl~     0.700         0.690  3.33      69.9 2.49e- 9
-#>  6 <spli~ Boot~ <tibbl~     0.830         0.824  2.19     146.  4.70e-13
-#>  7 <spli~ Boot~ <tibbl~     0.768         0.761  3.61      99.5 4.87e-11
-#>  8 <spli~ Boot~ <tibbl~     0.550         0.535  3.01      36.6 1.20e- 6
-#>  9 <spli~ Boot~ <tibbl~     0.815         0.809  2.66     132.  1.57e-12
-#> 10 <spli~ Boot~ <tibbl~     0.680         0.670  3.32      63.8 6.43e- 9
-#> # ... with 490 more rows, and 7 more variables: df <dbl>, logLik <dbl>,
-#> #   AIC <dbl>, BIC <dbl>, deviance <dbl>, df.residual <int>, nobs <int>
+#> # A tibble: 500 x 14
+#>    splits id    r.squared adj.r.squared sigma statistic  p.value    df
+#>    <list> <chr>     <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>
+#>  1 <spli~ Boot~     0.799         0.792  2.71     119.  5.63e-12     1
+#>  2 <spli~ Boot~     0.726         0.717  2.49      79.6 6.06e-10     1
+#>  3 <spli~ Boot~     0.754         0.746  3.29      92.1 1.18e-10     1
+#>  4 <spli~ Boot~     0.731         0.722  2.74      81.7 4.59e-10     1
+#>  5 <spli~ Boot~     0.700         0.690  3.33      69.9 2.49e- 9     1
+#>  6 <spli~ Boot~     0.830         0.824  2.19     146.  4.70e-13     1
+#>  7 <spli~ Boot~     0.768         0.761  3.61      99.5 4.87e-11     1
+#>  8 <spli~ Boot~     0.550         0.535  3.01      36.6 1.20e- 6     1
+#>  9 <spli~ Boot~     0.815         0.809  2.66     132.  1.57e-12     1
+#> 10 <spli~ Boot~     0.680         0.670  3.32      63.8 6.43e- 9     1
+#> # ... with 490 more rows, and 6 more variables: logLik <dbl>, AIC <dbl>,
+#> #   BIC <dbl>, deviance <dbl>, df.residual <int>, nobs <int>
 
 # plotting log-likelihood for the model for each of the samples
 tibble::rowid_to_column(.data = df_glance) %>%
@@ -576,21 +576,21 @@ library(ggplot2)
     augment.args = list(se_fit = TRUE)
   )
 )
-#> # A tibble: 16,000 x 13
-#>    splits id    results .rownames   mpg    wt .fitted .se.fit  .resid
-#>    <list> <chr> <list>  <chr>     <dbl> <dbl>   <dbl>   <dbl>   <dbl>
-#>  1 <spli~ Boot~ <tibbl~ Maserati~  15    3.57   18.0    0.579  2.96  
-#>  2 <spli~ Boot~ <tibbl~ Cadillac~  10.4  5.25    7.71   1.35  -2.69  
-#>  3 <spli~ Boot~ <tibbl~ Honda Ci~  30.4  1.62   29.9    0.902 -0.522 
-#>  4 <spli~ Boot~ <tibbl~ Merc 450~  15.2  3.78   16.7    0.653  1.48  
-#>  5 <spli~ Boot~ <tibbl~ Datsun 7~  22.8  2.32   25.6    0.605  2.78  
-#>  6 <spli~ Boot~ <tibbl~ Merc 280   19.2  3.44   18.8    0.542 -0.449 
-#>  7 <spli~ Boot~ <tibbl~ Fiat 128   32.4  2.2    26.3    0.649 -6.09  
-#>  8 <spli~ Boot~ <tibbl~ Dodge Ch~  15.5  3.52   18.3    0.564  2.76  
-#>  9 <spli~ Boot~ <tibbl~ Merc 280C  17.8  3.44   18.8    0.542  0.951 
-#> 10 <spli~ Boot~ <tibbl~ Hornet S~  18.7  3.44   18.8    0.542  0.0506
-#> # ... with 15,990 more rows, and 4 more variables: .std.resid <dbl>,
-#> #   .hat <dbl>, .sigma <dbl>, .cooksd <dbl>
+#> # A tibble: 16,000 x 12
+#>    splits id    .rownames   mpg    wt .fitted .se.fit  .resid .std.resid
+#>    <list> <chr> <chr>     <dbl> <dbl>   <dbl>   <dbl>   <dbl>      <dbl>
+#>  1 <spli~ Boot~ Maserati~  15    3.57   18.0    0.579  2.96      -1.12  
+#>  2 <spli~ Boot~ Cadillac~  10.4  5.25    7.71   1.35  -2.69       1.15  
+#>  3 <spli~ Boot~ Honda Ci~  30.4  1.62   29.9    0.902 -0.522      0.205 
+#>  4 <spli~ Boot~ Merc 450~  15.2  3.78   16.7    0.653  1.48      -0.563 
+#>  5 <spli~ Boot~ Datsun 7~  22.8  2.32   25.6    0.605  2.78      -1.05  
+#>  6 <spli~ Boot~ Merc 280   19.2  3.44   18.8    0.542 -0.449      0.170 
+#>  7 <spli~ Boot~ Fiat 128   32.4  2.2    26.3    0.649 -6.09       2.32  
+#>  8 <spli~ Boot~ Dodge Ch~  15.5  3.52   18.3    0.564  2.76      -1.04  
+#>  9 <spli~ Boot~ Merc 280C  17.8  3.44   18.8    0.542  0.951     -0.359 
+#> 10 <spli~ Boot~ Hornet S~  18.7  3.44   18.8    0.542  0.0506    -0.0191
+#> # ... with 15,990 more rows, and 3 more variables: .hat <dbl>,
+#> #   .sigma <dbl>, .cooksd <dbl>
 
 # plotting those estimates
 dplyr::group_by(.data = df_augment, id) %>%
