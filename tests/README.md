@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-09 August, 2019 21:42:04
+10 August, 2019 11:15:13
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -29,9 +29,9 @@ Unit Test summary is created using the
 
 | file                                                         |  n | time | error | failed | skipped | warning |
 | :----------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test-boot\_generics.R](testthat/test-boot_generics.R)       | 10 | 2.56 |     0 |      0 |       0 |       0 |
-| [test-generics.R](testthat/test-generics.R)                  |  9 | 0.16 |     0 |      0 |       0 |       0 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 7.38 |     0 |      0 |       0 |       0 |
+| [test-boot\_generics.R](testthat/test-boot_generics.R)       | 10 | 3.28 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R)                  |  9 | 0.17 |     0 |      0 |       0 |       0 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 6.47 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -39,15 +39,15 @@ Unit Test summary is created using the
 
 | file                                                             | context                 | test                      | status | n | time |
 | :--------------------------------------------------------------- | :---------------------- | :------------------------ | :----- | -: | ---: |
-| [test-boot\_generics.R](testthat/test-boot_generics.R#L41)       | boot\_generics work     | `boot_tidy()` works       | PASS   | 3 | 1.22 |
-| [test-boot\_generics.R](testthat/test-boot_generics.R#L83)       | boot\_generics work     | `boot_glance()` works     | PASS   | 4 | 1.29 |
+| [test-boot\_generics.R](testthat/test-boot_generics.R#L41)       | boot\_generics work     | `boot_tidy()` works       | PASS   | 3 | 1.48 |
+| [test-boot\_generics.R](testthat/test-boot_generics.R#L83)       | boot\_generics work     | `boot_glance()` works     | PASS   | 4 | 1.75 |
 | [test-boot\_generics.R](testthat/test-boot_generics.R#L120)      | boot\_generics work     | `boot_augment()` works    | PASS   | 3 | 0.05 |
 | [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           | `tidy()` works            | PASS   | 3 | 0.06 |
-| [test-generics.R](testthat/test-generics.R#L39_L41)              | generics work           | `glance()` works          | PASS   | 3 | 0.04 |
+| [test-generics.R](testthat/test-generics.R#L39_L41)              | generics work           | `glance()` works          | PASS   | 3 | 0.05 |
 | [test-generics.R](testthat/test-generics.R#L65_L67)              | generics work           | `augment()` works         | PASS   | 3 | 0.06 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works | `grouped_tidy()` works    | PASS   | 2 | 2.25 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 1.77 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 3.36 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works | `grouped_tidy()` works    | PASS   | 2 | 2.24 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.01 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.22 |
 
 </details>
 

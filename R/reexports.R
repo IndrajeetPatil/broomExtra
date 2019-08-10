@@ -13,5 +13,5 @@ magrittr::`%<>%`
 magrittr::`%$%`
 
 #' @export
-#' @importFrom tibble tibble
-tibble::tibble
+#' @importFrom dplyr tibble
+dplyr::tibble
