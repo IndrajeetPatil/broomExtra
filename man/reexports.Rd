@@ -7,6 +7,8 @@
 \alias{\%<>\%}
 \alias{\%$\%}
 \alias{tibble}
+\alias{\%||\%}
+\alias{\%|\%}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -17,5 +19,7 @@ below to see their documentation.
   \item{dplyr}{\code{\link[dplyr]{tibble}}}
 
   \item{magrittr}{\code{\link[magrittr]{\%>\%}}, \code{\link[magrittr]{\%<>\%}}, \code{\link[magrittr]{\%$\%}}}
+
+  \item{rlang}{\code{\link[rlang]{\%||\%}}, \code{\link[rlang]{\%|\%}}}
 }}
 

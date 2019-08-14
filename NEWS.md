@@ -7,6 +7,8 @@
     
   - Minor refactoring of `boot_` generic functions to make them compatible with
     upcoming release of `tidyr`.
+    
+  - More operators from `tidyverse` added to reexports.
 
 # broomExtra 0.0.4
 

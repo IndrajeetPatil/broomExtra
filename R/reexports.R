@@ -15,3 +15,11 @@ magrittr::`%$%`
 #' @export
 #' @importFrom dplyr tibble
 dplyr::tibble
+
+#' @export
+#' @importFrom rlang "%||%"
+rlang::`%||%`
+
+#' @export
+#' @importFrom rlang "%|%"
+rlang::`%|%`
