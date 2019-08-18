@@ -43,10 +43,6 @@ broomExtra::tidy(x = lmm.mod, effects = "fixed", exponentiate = TRUE)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::tidy(x = lm.mod, conf.int = TRUE)
 
-# in case you enter a dataframe, tidier will return data as a tibble
-# note that rownames are preserved but other attributes might be lost
-broomExtra::tidy(mtcars)
-
 # unsupported object (the function will return `NULL` in such cases)
 broomExtra::tidy(list(1, c("x", "y")))
 }

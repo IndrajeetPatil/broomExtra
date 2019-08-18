@@ -28,7 +28,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--08--14-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--08--18-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -101,20 +101,11 @@ models.
 ``` r
 set.seed(123)
 library(lme4)
-#> Loading required package: Matrix
 library(ordinal)
-#> 
-#> Attaching package: 'ordinal'
-#> The following objects are masked from 'package:lme4':
-#> 
-#>     ranef, VarCorr
 
 # mixed-effects models (`broom.mixed` will be used)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::tidy(x = lmm.mod, effects = "fixed")
-#> Registered S3 method overwritten by 'broom.mixed':
-#>   method      from 
-#>   tidy.gamlss broom
 #> # A tibble: 2 x 5
 #>   effect term        estimate std.error statistic
 #>   <chr>  <chr>          <dbl>     <dbl>     <dbl>
@@ -416,7 +407,6 @@ broomExtra::grouped_augment(
   formula = price ~ carat + (carat | color) - 1,
   control = lme4::lmerControl(optimizer = "bobyqa")
 )
-#> boundary (singular) fit: see ?isSingular
 #> # A tibble: 26,970 x 15
 #>    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu
 #>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>   <dbl>  <dbl> <dbl>
@@ -493,12 +483,6 @@ dplyr::filter(df_boot, term != "(Intercept)") %>%
     x = "bootstrap sample",
     y = "regression estimate"
   )
-#> Registered S3 methods overwritten by 'car':
-#>   method                          from
-#>   influence.merMod                lme4
-#>   cooks.distance.influence.merMod lme4
-#>   dfbeta.influence.merMod         lme4
-#>   dfbetas.influence.merMod        lme4
 ```
 
 <img src="man/figures/README-boot_tidy-1.png" width="100%" />
@@ -590,15 +574,16 @@ library(ggplot2)
 # plotting those estimates
 dplyr::group_by(.data = df_augment, id) %>%
   dplyr::summarise(.data = ., mean.resid = mean(.resid)) %>%
-  dplyr::ungroup(x = .) %>% 
+  dplyr::ungroup(x = .) %>%
   tibble::rowid_to_column(.data = .) %>% # creating a plot
   ggplot(data = ., aes(rowid, mean.resid)) +
-  geom_point(size = 3, alpha = 0.5, color = "blue") + 
+  geom_point(size = 3, alpha = 0.5, color = "blue") +
   geom_line(color = "black") +
   geom_hline(aes(yintercept = 0),
-             color = "red",
-             size = 1,
-             linetype = "dashed") +
+    color = "red",
+    size = 1,
+    linetype = "dashed"
+  ) +
   ggstatsplot::theme_ggstatsplot() +
   labs(
     title = "mean difference between fitted and observed values from bootstrap samples",

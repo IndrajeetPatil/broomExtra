@@ -8,6 +8,8 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
+  message = FALSE,
+  warning = FALSE,
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
@@ -357,15 +359,16 @@ library(ggplot2)
 # plotting those estimates
 dplyr::group_by(.data = df_augment, id) %>%
   dplyr::summarise(.data = ., mean.resid = mean(.resid)) %>%
-  dplyr::ungroup(x = .) %>% 
+  dplyr::ungroup(x = .) %>%
   tibble::rowid_to_column(.data = .) %>% # creating a plot
   ggplot(data = ., aes(rowid, mean.resid)) +
-  geom_point(size = 3, alpha = 0.5, color = "blue") + 
+  geom_point(size = 3, alpha = 0.5, color = "blue") +
   geom_line(color = "black") +
   geom_hline(aes(yintercept = 0),
-             color = "red",
-             size = 1,
-             linetype = "dashed") +
+    color = "red",
+    size = 1,
+    linetype = "dashed"
+  ) +
   ggstatsplot::theme_ggstatsplot() +
   labs(
     title = "mean difference between fitted and observed values from bootstrap samples",

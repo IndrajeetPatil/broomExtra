@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-10 August, 2019 15:18:54
+18 August, 2019 17:11:28
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -29,9 +29,9 @@ Unit Test summary is created using the
 
 | file                                                         |  n | time | error | failed | skipped | warning |
 | :----------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test-boot\_generics.R](testthat/test-boot_generics.R)       | 10 | 1.94 |     0 |      0 |       0 |       0 |
-| [test-generics.R](testthat/test-generics.R)                  | 13 | 0.25 |     0 |      0 |       0 |       0 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 7.20 |     0 |      0 |       0 |       0 |
+| [test-boot\_generics.R](testthat/test-boot_generics.R)       | 10 | 3.06 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R)                  | 11 | 0.43 |     0 |      0 |       0 |       0 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 9.53 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -39,15 +39,15 @@ Unit Test summary is created using the
 
 | file                                                             | context                 | test                      | status | n | time |
 | :--------------------------------------------------------------- | :---------------------- | :------------------------ | :----- | -: | ---: |
-| [test-boot\_generics.R](testthat/test-boot_generics.R#L41)       | boot\_generics work     | `boot_tidy()` works       | PASS   | 3 | 1.13 |
-| [test-boot\_generics.R](testthat/test-boot_generics.R#L83)       | boot\_generics work     | `boot_glance()` works     | PASS   | 4 | 0.76 |
-| [test-boot\_generics.R](testthat/test-boot_generics.R#L120)      | boot\_generics work     | `boot_augment()` works    | PASS   | 3 | 0.05 |
-| [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           | `tidy()` works            | PASS   | 7 | 0.16 |
-| [test-generics.R](testthat/test-generics.R#L45_L47)              | generics work           | `glance()` works          | PASS   | 3 | 0.04 |
-| [test-generics.R](testthat/test-generics.R#L71_L73)              | generics work           | `augment()` works         | PASS   | 3 | 0.05 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works | `grouped_tidy()` works    | PASS   | 2 | 2.83 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.42 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 1.95 |
+| [test-boot\_generics.R](testthat/test-boot_generics.R#L41)       | boot\_generics work     | `boot_tidy()` works       | PASS   | 3 | 1.95 |
+| [test-boot\_generics.R](testthat/test-boot_generics.R#L83)       | boot\_generics work     | `boot_glance()` works     | PASS   | 4 | 1.03 |
+| [test-boot\_generics.R](testthat/test-boot_generics.R#L120)      | boot\_generics work     | `boot_augment()` works    | PASS   | 3 | 0.08 |
+| [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           | `tidy()` works            | PASS   | 5 | 0.27 |
+| [test-generics.R](testthat/test-generics.R#L45_L47)              | generics work           | `glance()` works          | PASS   | 3 | 0.06 |
+| [test-generics.R](testthat/test-generics.R#L71_L73)              | generics work           | `augment()` works         | PASS   | 3 | 0.10 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works | `grouped_tidy()` works    | PASS   | 2 | 3.36 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.85 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 3.32 |
 
 </details>
 

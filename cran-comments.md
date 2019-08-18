@@ -10,4 +10,4 @@
 ## Comments
 
 - Makes this package compatible with the upcoming release of `tidyr` package.
-- No problems revealed for any of the dependencies. 
+- No problems revealed for any of the strong dependencies. 
