@@ -8,10 +8,12 @@
 
 <title>Bootstrapped dataframe with model summaries from each sample. — boot_glance • broomExtra</title>
 
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,10 +40,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="Bootstrapped dataframe with model summaries from each sample. — boot_glance" />
 
+<meta property="og:title" content="Bootstrapped dataframe with model summaries from each sample. — boot_glance" />
 <meta property="og:description" content="Bootstrapped dataframe with model summaries from each sample." />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -72,7 +75,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.5</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.5.9000</span>
       </span>
     </div>
 
@@ -106,7 +109,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/IndrajeetPatil/broomExtra">
@@ -139,14 +141,12 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Bootstrapped dataframe with model summaries from each sample.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>boot_glance</span>(<span class='no'>data</span>, <span class='kw'>times</span> <span class='kw'>=</span> <span class='fl'>25</span>, <span class='kw'>strata</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>apparent</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>..f</span>,
   <span class='no'>...</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -182,24 +182,91 @@ error rate.</p></td>
 <p>These dots support tidy-dots features.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>For available methods, see-
 <a href='https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html'>https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html</a></p>
-    
     <h2 class="hasAnchor" id="methods"><a class="anchor" href="#methods"></a>Methods</h2>
 
     
 
 
-<p>c("See the following help topics for more details about individual methods:", "<code>broom</code>\n<ul>\n<li><p><code><a href='http://broom.tidyverse.org/reference/durbinWatsonTest_tidiers.html'>durbinWatsonTest_tidiers</a></code>: <code>durbinWatsonTest</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.aareg.html'>glance.aareg</a></code>: <code>aareg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.aov.html'>glance.aov</a></code>: <code>aov</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.Arima.html'>glance.Arima</a></code>: <code>Arima</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.betareg.html'>glance.betareg</a></code>: <code>betareg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.biglm.html'>glance.biglm</a></code>: <code>biglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.binDesign.html'>glance.binDesign</a></code>: <code>binDesign</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.cch.html'>glance.cch</a></code>: <code>cch</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.clm.html'>glance.clm</a></code>: <code>clm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.clmm.html'>glance.clmm</a></code>: <code>clmm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.coxph.html'>glance.coxph</a></code>: <code>coxph</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.cv.glmnet.html'>glance.cv.glmnet</a></code>: <code>cv.glmnet</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.drc.html'>glance.drc</a></code>: <code>drc</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.ergm.html'>glance.ergm</a></code>: <code>ergm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.factanal.html'>glance.factanal</a></code>: <code>factanal</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.felm.html'>glance.felm</a></code>: <code>felm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.fitdistr.html'>glance.fitdistr</a></code>: <code>fitdistr</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.Gam.html'>glance.Gam</a></code>: <code>Gam</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.garch.html'>glance.garch</a></code>: <code>garch</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.geeglm.html'>glance.geeglm</a></code>: <code>geeglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.glm.html'>glance.glm</a></code>: <code>glm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.glmnet.html'>glance.glmnet</a></code>: <code>glmnet</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.glmRob.html'>glance.glmRob</a></code>: <code>glmRob</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.gmm.html'>glance.gmm</a></code>: <code>gmm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.ivreg.html'>glance.ivreg</a></code>: <code>ivreg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.kmeans.html'>glance.kmeans</a></code>: <code>kmeans</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lavaan.html'>glance.lavaan</a></code>: <code>lavaan</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lm.html'>glance.lm</a></code>: <code>lm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lmodel2.html'>glance.lmodel2</a></code>: <code>lmodel2</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lmRob.html'>glance.lmRob</a></code>: <code>lmRob</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.Mclust.html'>glance.Mclust</a></code>: <code>Mclust</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.mjoint.html'>glance.mjoint</a></code>: <code>mjoint</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.muhaz.html'>glance.muhaz</a></code>: <code>muhaz</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.multinom.html'>glance.multinom</a></code>: <code>multinom</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.nlrq.html'>glance.nlrq</a></code>: <code>nlrq</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.nls.html'>glance.nls</a></code>: <code>nls</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.orcutt.html'>glance.orcutt</a></code>: <code>orcutt</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.pam.html'>glance.pam</a></code>: <code>pam</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.plm.html'>glance.plm</a></code>: <code>plm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.poLCA.html'>glance.poLCA</a></code>: <code>poLCA</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.polr.html'>glance.polr</a></code>: <code>polr</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.pyears.html'>glance.pyears</a></code>: <code>pyears</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.ridgelm.html'>glance.ridgelm</a></code>: <code>ridgelm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.rlm.html'>glance.rlm</a></code>: <code>rlm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.rma.html'>glance.rma</a></code>: <code>rma</code></p></li>\n<li><p><code>glance.robustbase.lmrob</code>: <code>lmrob</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.rq.html'>glance.rq</a></code>: <code>rq</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.smooth.spline.html'>glance.smooth.spline</a></code>: <code>smooth.spline</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.speedglm.html'>glance.speedglm</a></code>: <code>speedglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.speedlm.html'>glance.speedlm</a></code>: <code>speedlm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survdiff.html'>glance.survdiff</a></code>: <code>survdiff</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survexp.html'>glance.survexp</a></code>: <code>survexp</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survfit.html'>glance.survfit</a></code>: <code>survfit</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survreg.html'>glance.survreg</a></code>: <code>survreg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.svyglm.html'>glance.svyglm</a></code>: <code>svyglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/glance.svyolr.html'>glance.svyolr</a></code>: <code>svyolr</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/list_tidiers.html'>list_tidiers</a></code>: <code>list</code></p></li>\n<li><p><code>mgcv_glance_gam</code>: <code>gam</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/null_tidiers.html'>null_tidiers</a></code>: <code>NULL</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.htest.html'>tidy.htest</a></code>: <code>htest</code></p></li>\n</ul>\n<code>broom.mixed</code>\n<ul>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/brms_tidiers.html'>brms_tidiers</a></code>: <code>brmsfit</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmadmb_tidiers.html'>glmmadmb_tidiers</a></code>: <code>glmmadmb</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmTMB_tidiers.html'>glmmTMB_tidiers</a></code>: <code>glmmTMB</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/lme4_tidiers.html'>lme4_tidiers</a></code>: <code>merMod</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/nlme_tidiers.html'>nlme_tidiers</a></code>: <code>lme</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/rstanarm_tidiers.html'>rstanarm_tidiers</a></code>: <code>stanreg</code></p></li>\n</ul>\n"
-)</p>
-    
+<p>See the following help topics for more details about individual methods:<code>broom</code>
+<ul>
+<li><p><code><a href='http://broom.tidyverse.org/reference/durbinWatsonTest_tidiers.html'>durbinWatsonTest_tidiers</a></code>: <code>durbinWatsonTest</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.aareg.html'>glance.aareg</a></code>: <code>aareg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.aov.html'>glance.aov</a></code>: <code>aov</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.Arima.html'>glance.Arima</a></code>: <code>Arima</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.betareg.html'>glance.betareg</a></code>: <code>betareg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.biglm.html'>glance.biglm</a></code>: <code>biglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.binDesign.html'>glance.binDesign</a></code>: <code>binDesign</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.cch.html'>glance.cch</a></code>: <code>cch</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.clm.html'>glance.clm</a></code>: <code>clm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.clmm.html'>glance.clmm</a></code>: <code>clmm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.coxph.html'>glance.coxph</a></code>: <code>coxph</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.cv.glmnet.html'>glance.cv.glmnet</a></code>: <code>cv.glmnet</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.drc.html'>glance.drc</a></code>: <code>drc</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.ergm.html'>glance.ergm</a></code>: <code>ergm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.factanal.html'>glance.factanal</a></code>: <code>factanal</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.felm.html'>glance.felm</a></code>: <code>felm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.fitdistr.html'>glance.fitdistr</a></code>: <code>fitdistr</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.Gam.html'>glance.Gam</a></code>: <code>Gam</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.garch.html'>glance.garch</a></code>: <code>garch</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.geeglm.html'>glance.geeglm</a></code>: <code>geeglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.glm.html'>glance.glm</a></code>: <code>glm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.glmnet.html'>glance.glmnet</a></code>: <code>glmnet</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.glmRob.html'>glance.glmRob</a></code>: <code>glmRob</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.gmm.html'>glance.gmm</a></code>: <code>gmm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.ivreg.html'>glance.ivreg</a></code>: <code>ivreg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.kmeans.html'>glance.kmeans</a></code>: <code>kmeans</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lavaan.html'>glance.lavaan</a></code>: <code>lavaan</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lm.html'>glance.lm</a></code>: <code>lm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lmodel2.html'>glance.lmodel2</a></code>: <code>lmodel2</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.lmRob.html'>glance.lmRob</a></code>: <code>lmRob</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.Mclust.html'>glance.Mclust</a></code>: <code>Mclust</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.mjoint.html'>glance.mjoint</a></code>: <code>mjoint</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.muhaz.html'>glance.muhaz</a></code>: <code>muhaz</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.multinom.html'>glance.multinom</a></code>: <code>multinom</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.nlrq.html'>glance.nlrq</a></code>: <code>nlrq</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.nls.html'>glance.nls</a></code>: <code>nls</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.orcutt.html'>glance.orcutt</a></code>: <code>orcutt</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.pam.html'>glance.pam</a></code>: <code>pam</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.plm.html'>glance.plm</a></code>: <code>plm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.poLCA.html'>glance.poLCA</a></code>: <code>poLCA</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.polr.html'>glance.polr</a></code>: <code>polr</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.pyears.html'>glance.pyears</a></code>: <code>pyears</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.ridgelm.html'>glance.ridgelm</a></code>: <code>ridgelm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.rlm.html'>glance.rlm</a></code>: <code>rlm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.rma.html'>glance.rma</a></code>: <code>rma</code></p></li>
+<li><p><code>glance.robustbase.lmrob</code>: <code>lmrob</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.rq.html'>glance.rq</a></code>: <code>rq</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.smooth.spline.html'>glance.smooth.spline</a></code>: <code>smooth.spline</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.speedglm.html'>glance.speedglm</a></code>: <code>speedglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.speedlm.html'>glance.speedlm</a></code>: <code>speedlm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survdiff.html'>glance.survdiff</a></code>: <code>survdiff</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survexp.html'>glance.survexp</a></code>: <code>survexp</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survfit.html'>glance.survfit</a></code>: <code>survfit</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.survreg.html'>glance.survreg</a></code>: <code>survreg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.svyglm.html'>glance.svyglm</a></code>: <code>svyglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/glance.svyolr.html'>glance.svyolr</a></code>: <code>svyolr</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/list_tidiers.html'>list_tidiers</a></code>: <code>list</code></p></li>
+<li><p><code>mgcv_glance_gam</code>: <code>gam</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/null_tidiers.html'>null_tidiers</a></code>: <code>NULL</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.htest.html'>tidy.htest</a></code>: <code>htest</code></p></li>
+</ul>
+<code>broom.mixed</code>
+<ul>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/brms_tidiers.html'>brms_tidiers</a></code>: <code>brmsfit</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmadmb_tidiers.html'>glmmadmb_tidiers</a></code>: <code>glmmadmb</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmTMB_tidiers.html'>glmmTMB_tidiers</a></code>: <code>glmmTMB</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/lme4_tidiers.html'>lme4_tidiers</a></code>: <code>merMod</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/nlme_tidiers.html'>nlme_tidiers</a></code>: <code>lme</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/rstanarm_tidiers.html'>rstanarm_tidiers</a></code>: <code>stanreg</code></p></li>
+</ul></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='grouped_glance.html'>grouped_glance</a></code>, <code><a href='glance.html'>glance</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
@@ -211,21 +278,21 @@ error rate.</p></td>
   <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>,
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>mpg</span> ~ <span class='no'>wt</span>,
   <span class='kw'>na.action</span> <span class='kw'>=</span> <span class='no'>na.omit</span>
-)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 500 x 14</span><span>
+)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 500 x 14</span><span>
 #&gt;    splits id    r.squared adj.r.squared sigma statistic  p.value    df logLik
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.799         0.792  2.71     119.  5.63</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-12</span><span>     1  -</span><span style='color: #BB0000;'>76.2</span><span>
-#&gt; </span><span style='color: #555555;'> 2</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.726         0.717  2.49      79.6 6.06</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>73.6</span><span>
-#&gt; </span><span style='color: #555555;'> 3</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.754         0.746  3.29      92.1 1.18</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>82.4</span><span>
-#&gt; </span><span style='color: #555555;'> 4</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.731         0.722  2.74      81.7 4.59</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>76.6</span><span>
-#&gt; </span><span style='color: #555555;'> 5</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.700         0.690  3.33      69.9 2.49</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 9</span><span>     1  -</span><span style='color: #BB0000;'>82.9</span><span>
-#&gt; </span><span style='color: #555555;'> 6</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.830         0.824  2.19     146.  4.70</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-13</span><span>     1  -</span><span style='color: #BB0000;'>69.4</span><span>
-#&gt; </span><span style='color: #555555;'> 7</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.768         0.761  3.61      99.5 4.87</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-11</span><span>     1  -</span><span style='color: #BB0000;'>85.4</span><span>
-#&gt; </span><span style='color: #555555;'> 8</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.550         0.535  3.01      36.6 1.20</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 6</span><span>     1  -</span><span style='color: #BB0000;'>79.7</span><span>
-#&gt; </span><span style='color: #555555;'> 9</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.815         0.809  2.66     132.  1.57</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-12</span><span>     1  -</span><span style='color: #BB0000;'>75.7</span><span>
-#&gt; </span><span style='color: #555555;'>10</span><span> </span><span style='color: #555555;'>&lt;spli</span><span>~ Boot~     0.680         0.670  3.32      63.8 6.43</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 9</span><span>     1  -</span><span style='color: #BB0000;'>82.8</span><span>
-#&gt; </span><span style='color: #555555;'># ... with 490 more rows, and 5 more variables: AIC </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, BIC </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
-#&gt; #   deviance </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, df.residual </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, nobs </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'>
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.799         0.792  2.71     119.  5.63</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>     1  -</span><span style='color: #BB0000;'>76.2</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.726         0.717  2.49      79.6 6.06</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>73.6</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.754         0.746  3.29      92.1 1.18</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>82.4</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.731         0.722  2.74      81.7 4.59</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>76.6</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.700         0.690  3.33      69.9 2.49</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>     1  -</span><span style='color: #BB0000;'>82.9</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.830         0.824  2.19     146.  4.70</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-13</span><span>     1  -</span><span style='color: #BB0000;'>69.4</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.768         0.761  3.61      99.5 4.87</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-11</span><span>     1  -</span><span style='color: #BB0000;'>85.4</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.550         0.535  3.01      36.6 1.20</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 6</span><span>     1  -</span><span style='color: #BB0000;'>79.7</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.815         0.809  2.66     132.  1.57</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>     1  -</span><span style='color: #BB0000;'>75.7</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.680         0.670  3.32      63.8 6.43</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>     1  -</span><span style='color: #BB0000;'>82.8</span><span>
+#&gt; </span><span style='color: #949494;'># ... with 490 more rows, and 5 more variables: AIC </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, BIC </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>,
+#&gt; #   deviance </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, df.residual </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, nobs </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'>
 <span class='co'># example-2: linear mixed-effects model</span>
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>lme4</span>)
 
@@ -234,32 +301,28 @@ error rate.</p></td>
   <span class='kw'>times</span> <span class='kw'>=</span> <span class='fl'>25</span>,
   <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>,
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>)
-)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00205594 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00239836 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00226858 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00237924 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00278758 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00341433 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00943341 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00522705 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 25 x 8</span><span>
+)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00205594 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00239836 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00226858 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00237924 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00278758 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00341433 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00943341 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00522705 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 25 x 8</span><span>
 #&gt;    splits           id          sigma logLik   AIC   BIC REMLcrit df.residual
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> </span><span style='color: #555555;'>&lt;split [180/70]&gt;</span><span> Bootstrap01  27.1  -</span><span style='color: #BB0000;'>879.</span><span> </span><span style='text-decoration: underline;'>1</span><span>769. </span><span style='text-decoration: underline;'>1</span><span>788.    </span><span style='text-decoration: underline;'>1</span><span>757.         174
-#&gt; </span><span style='color: #555555;'> 2</span><span> </span><span style='color: #555555;'>&lt;split [180/71]&gt;</span><span> Bootstrap02  20.1  -</span><span style='color: #BB0000;'>838.</span><span> </span><span style='text-decoration: underline;'>1</span><span>687. </span><span style='text-decoration: underline;'>1</span><span>706.    </span><span style='text-decoration: underline;'>1</span><span>675.         174
-#&gt; </span><span style='color: #555555;'> 3</span><span> </span><span style='color: #555555;'>&lt;split [180/71]&gt;</span><span> Bootstrap03  28.9  -</span><span style='color: #BB0000;'>889.</span><span> </span><span style='text-decoration: underline;'>1</span><span>790. </span><span style='text-decoration: underline;'>1</span><span>809.    </span><span style='text-decoration: underline;'>1</span><span>778.         174
-#&gt; </span><span style='color: #555555;'> 4</span><span> </span><span style='color: #555555;'>&lt;split [180/58]&gt;</span><span> Bootstrap04  25.9  -</span><span style='color: #BB0000;'>875.</span><span> </span><span style='text-decoration: underline;'>1</span><span>762. </span><span style='text-decoration: underline;'>1</span><span>781.    </span><span style='text-decoration: underline;'>1</span><span>750.         174
-#&gt; </span><span style='color: #555555;'> 5</span><span> </span><span style='color: #555555;'>&lt;split [180/68]&gt;</span><span> Bootstrap05  22.1  -</span><span style='color: #BB0000;'>850.</span><span> </span><span style='text-decoration: underline;'>1</span><span>712. </span><span style='text-decoration: underline;'>1</span><span>731.    </span><span style='text-decoration: underline;'>1</span><span>700.         174
-#&gt; </span><span style='color: #555555;'> 6</span><span> </span><span style='color: #555555;'>&lt;split [180/68]&gt;</span><span> Bootstrap06  21.2  -</span><span style='color: #BB0000;'>847.</span><span> </span><span style='text-decoration: underline;'>1</span><span>705. </span><span style='text-decoration: underline;'>1</span><span>724.    </span><span style='text-decoration: underline;'>1</span><span>693.         174
-#&gt; </span><span style='color: #555555;'> 7</span><span> </span><span style='color: #555555;'>&lt;split [180/60]&gt;</span><span> Bootstrap07  22.2  -</span><span style='color: #BB0000;'>850.</span><span> </span><span style='text-decoration: underline;'>1</span><span>713. </span><span style='text-decoration: underline;'>1</span><span>732.    </span><span style='text-decoration: underline;'>1</span><span>701.         174
-#&gt; </span><span style='color: #555555;'> 8</span><span> </span><span style='color: #555555;'>&lt;split [180/67]&gt;</span><span> Bootstrap08  16.9  -</span><span style='color: #BB0000;'>808.</span><span> </span><span style='text-decoration: underline;'>1</span><span>627. </span><span style='text-decoration: underline;'>1</span><span>646.    </span><span style='text-decoration: underline;'>1</span><span>615.         174
-#&gt; </span><span style='color: #555555;'> 9</span><span> </span><span style='color: #555555;'>&lt;split [180/69]&gt;</span><span> Bootstrap09  20.6  -</span><span style='color: #BB0000;'>843.</span><span> </span><span style='text-decoration: underline;'>1</span><span>697. </span><span style='text-decoration: underline;'>1</span><span>716.    </span><span style='text-decoration: underline;'>1</span><span>685.         174
-#&gt; </span><span style='color: #555555;'>10</span><span> </span><span style='color: #555555;'>&lt;split [180/68]&gt;</span><span> Bootstrap10  23.7  -</span><span style='color: #BB0000;'>859.</span><span> </span><span style='text-decoration: underline;'>1</span><span>730. </span><span style='text-decoration: underline;'>1</span><span>749.    </span><span style='text-decoration: underline;'>1</span><span>718.         174
-#&gt; </span><span style='color: #555555;'># ... with 15 more rows</span><span></div></span></pre>
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;split [180/70]&gt;</span><span> Bootstrap01  27.1  -</span><span style='color: #BB0000;'>879.</span><span> </span><span style='text-decoration: underline;'>1</span><span>769. </span><span style='text-decoration: underline;'>1</span><span>788.    </span><span style='text-decoration: underline;'>1</span><span>757.         174
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;split [180/71]&gt;</span><span> Bootstrap02  20.1  -</span><span style='color: #BB0000;'>838.</span><span> </span><span style='text-decoration: underline;'>1</span><span>687. </span><span style='text-decoration: underline;'>1</span><span>706.    </span><span style='text-decoration: underline;'>1</span><span>675.         174
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;split [180/71]&gt;</span><span> Bootstrap03  28.9  -</span><span style='color: #BB0000;'>889.</span><span> </span><span style='text-decoration: underline;'>1</span><span>790. </span><span style='text-decoration: underline;'>1</span><span>809.    </span><span style='text-decoration: underline;'>1</span><span>778.         174
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;split [180/58]&gt;</span><span> Bootstrap04  25.9  -</span><span style='color: #BB0000;'>875.</span><span> </span><span style='text-decoration: underline;'>1</span><span>762. </span><span style='text-decoration: underline;'>1</span><span>781.    </span><span style='text-decoration: underline;'>1</span><span>750.         174
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;split [180/68]&gt;</span><span> Bootstrap05  22.1  -</span><span style='color: #BB0000;'>850.</span><span> </span><span style='text-decoration: underline;'>1</span><span>712. </span><span style='text-decoration: underline;'>1</span><span>731.    </span><span style='text-decoration: underline;'>1</span><span>700.         174
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;split [180/68]&gt;</span><span> Bootstrap06  21.2  -</span><span style='color: #BB0000;'>847.</span><span> </span><span style='text-decoration: underline;'>1</span><span>705. </span><span style='text-decoration: underline;'>1</span><span>724.    </span><span style='text-decoration: underline;'>1</span><span>693.         174
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;split [180/60]&gt;</span><span> Bootstrap07  22.2  -</span><span style='color: #BB0000;'>850.</span><span> </span><span style='text-decoration: underline;'>1</span><span>713. </span><span style='text-decoration: underline;'>1</span><span>732.    </span><span style='text-decoration: underline;'>1</span><span>701.         174
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;split [180/67]&gt;</span><span> Bootstrap08  16.9  -</span><span style='color: #BB0000;'>808.</span><span> </span><span style='text-decoration: underline;'>1</span><span>627. </span><span style='text-decoration: underline;'>1</span><span>646.    </span><span style='text-decoration: underline;'>1</span><span>615.         174
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;split [180/69]&gt;</span><span> Bootstrap09  20.6  -</span><span style='color: #BB0000;'>843.</span><span> </span><span style='text-decoration: underline;'>1</span><span>697. </span><span style='text-decoration: underline;'>1</span><span>716.    </span><span style='text-decoration: underline;'>1</span><span>685.         174
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split [180/68]&gt;</span><span> Bootstrap10  23.7  -</span><span style='color: #BB0000;'>859.</span><span> </span><span style='text-decoration: underline;'>1</span><span>730. </span><span style='text-decoration: underline;'>1</span><span>749.    </span><span style='text-decoration: underline;'>1</span><span>718.         174
+#&gt; </span><span style='color: #949494;'># ... with 15 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#note">Note</a></li>
-
       <li><a href="#methods">Methods</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
@@ -275,7 +338,7 @@ error rate.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
 </div>
 
       </footer>

@@ -8,10 +8,12 @@
 
 <title>Bootstrapped dataframe with estimates from each sample. — boot_tidy • broomExtra</title>
 
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,10 +40,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="Bootstrapped dataframe with estimates from each sample. — boot_tidy" />
 
+<meta property="og:title" content="Bootstrapped dataframe with estimates from each sample. — boot_tidy" />
 <meta property="og:description" content="Bootstrapped dataframe with estimates from each sample." />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -72,7 +75,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.5</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.5.9000</span>
       </span>
     </div>
 
@@ -106,7 +109,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/IndrajeetPatil/broomExtra">
@@ -139,14 +141,12 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Bootstrapped dataframe with estimates from each sample.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>boot_tidy</span>(<span class='no'>data</span>, <span class='kw'>times</span> <span class='kw'>=</span> <span class='fl'>25</span>, <span class='kw'>strata</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>apparent</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>..f</span>,
   <span class='no'>...</span>, <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>())</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -186,28 +186,145 @@ error rate.</p></td>
       <td><p>A list of arguments to be used in the relevant <code>S3</code> method.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code> with information about model components.</p>
-    
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>For available methods, see-
 <a href='https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html'>https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html</a></p>
-    
     <h2 class="hasAnchor" id="methods"><a class="anchor" href="#methods"></a>Methods</h2>
 
     
 
 
-<p>c("See the following help topics for more details about individual methods:", "<code>broom</code>\n<ul>\n<li><p><code><a href='http://broom.tidyverse.org/reference/durbinWatsonTest_tidiers.html'>durbinWatsonTest_tidiers</a></code>: <code>durbinWatsonTest</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/list_tidiers.html'>list_tidiers</a></code>: <code>list</code></p></li>\n<li><p><code>metafor_tidiers</code>: <code>rma</code></p></li>\n<li><p><code>mgcv_tidy_gam</code>: <code>gam</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/null_tidiers.html'>null_tidiers</a></code>: <code>NULL</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/sp_tidiers.html'>sp_tidiers</a></code>: <code>Line</code>, <code>Lines</code>, <code>Polygon</code>, <code>Polygons</code>, <code>SpatialLinesDataFrame</code>, <code>SpatialPolygons</code>, <code>SpatialPolygonsDataFrame</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.aareg.html'>tidy.aareg</a></code>: <code>aareg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.acf.html'>tidy.acf</a></code>: <code>acf</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.anova.html'>tidy.anova</a></code>: <code>anova</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.aov.html'>tidy.aov</a></code>: <code>aov</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.aovlist.html'>tidy.aovlist</a></code>: <code>aovlist</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Arima.html'>tidy.Arima</a></code>: <code>Arima</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.betareg.html'>tidy.betareg</a></code>: <code>betareg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.biglm.html'>tidy.biglm</a></code>: <code>biglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.binDesign.html'>tidy.binDesign</a></code>: <code>binDesign</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.binWidth.html'>tidy.binWidth</a></code>: <code>binWidth</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.boot.html'>tidy.boot</a></code>: <code>boot</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.btergm.html'>tidy.btergm</a></code>: <code>btergm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.cch.html'>tidy.cch</a></code>: <code>cch</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.cld.html'>tidy.cld</a></code>: <code>cld</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.clm.html'>tidy.clm</a></code>: <code>clm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.clmm.html'>tidy.clmm</a></code>: <code>clmm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.coeftest.html'>tidy.coeftest</a></code>: <code>coeftest</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.confint.glht.html'>tidy.confint.glht</a></code>: <code>confint.glht</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.confusionMatrix.html'>tidy.confusionMatrix</a></code>: <code>confusionMatrix</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.coxph.html'>tidy.coxph</a></code>: <code>coxph</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.cv.glmnet.html'>tidy.cv.glmnet</a></code>: <code>cv.glmnet</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.density.html'>tidy.density</a></code>: <code>density</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.dist.html'>tidy.dist</a></code>: <code>dist</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.drc.html'>tidy.drc</a></code>: <code>drc</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.emmGrid.html'>tidy.emmGrid</a></code>: <code>emmGrid</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.epi.2by2.html'>tidy.epi.2by2</a></code>: <code>epi.2by2</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ergm.html'>tidy.ergm</a></code>: <code>ergm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.factanal.html'>tidy.factanal</a></code>: <code>factanal</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.felm.html'>tidy.felm</a></code>: <code>felm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.fitdistr.html'>tidy.fitdistr</a></code>: <code>fitdistr</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ftable.html'>tidy.ftable</a></code>: <code>ftable</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Gam.html'>tidy.Gam</a></code>: <code>Gam</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.garch.html'>tidy.garch</a></code>: <code>garch</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.geeglm.html'>tidy.geeglm</a></code>: <code>geeglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glht.html'>tidy.glht</a></code>: <code>glht</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glm.html'>tidy.glm</a></code>: <code>glm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glmnet.html'>tidy.glmnet</a></code>: <code>glmnet</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glmRob.html'>tidy.glmRob</a></code>: <code>glmRob</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.gmm.html'>tidy.gmm</a></code>: <code>gmm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.htest.html'>tidy.htest</a></code>: <code>htest</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ivreg.html'>tidy.ivreg</a></code>: <code>ivreg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.kappa.html'>tidy.kappa</a></code>: <code>kappa</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.kde.html'>tidy.kde</a></code>: <code>kde</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Kendall.html'>tidy.Kendall</a></code>: <code>Kendall</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.kmeans.html'>tidy.kmeans</a></code>: <code>kmeans</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lavaan.html'>tidy.lavaan</a></code>: <code>lavaan</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lm.beta.html'>tidy.lm.beta</a></code>: <code>lm.beta</code>, <code>summary.lm.beta</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lm.html'>tidy.lm</a></code>: <code>lm</code>, <code>summary.lm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lmodel2.html'>tidy.lmodel2</a></code>: <code>lmodel2</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lmRob.html'>tidy.lmRob</a></code>: <code>lmRob</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lsmobj.html'>tidy.lsmobj</a></code>: <code>lsmobj</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.manova.html'>tidy.manova</a></code>: <code>manova</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.map.html'>tidy.map</a></code>: <code>map</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Mclust.html'>tidy.Mclust</a></code>: <code>Mclust</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mediate.html'>tidy.mediate</a></code>: <code>mediate</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mjoint.html'>tidy.mjoint</a></code>: <code>mjoint</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mle2.html'>tidy.mle2</a></code>: <code>mle2</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mlm.html'>tidy.mlm</a></code>: <code>mlm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.muhaz.html'>tidy.muhaz</a></code>: <code>muhaz</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.multinom.html'>tidy.multinom</a></code>: <code>multinom</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.nlrq.html'>tidy.nlrq</a></code>: <code>nlrq</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.nls.html'>tidy.nls</a></code>: <code>nls</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.orcutt.html'>tidy.orcutt</a></code>: <code>orcutt</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.pairwise.htest.html'>tidy.pairwise.htest</a></code>: <code>pairwise.htest</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.pam.html'>tidy.pam</a></code>: <code>pam</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.plm.html'>tidy.plm</a></code>: <code>plm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.poLCA.html'>tidy.poLCA</a></code>: <code>poLCA</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.polr.html'>tidy.polr</a></code>: <code>polr</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.power.htest.html'>tidy.power.htest</a></code>: <code>power.htest</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.prcomp.html'>tidy.prcomp</a></code>: <code>prcomp</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.pyears.html'>tidy.pyears</a></code>: <code>pyears</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rcorr.html'>tidy.rcorr</a></code>: <code>rcorr</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ref.grid.html'>tidy.ref.grid</a></code>: <code>ref.grid</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.regsubsets.html'>tidy.regsubsets</a></code>: <code>regsubsets</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ridgelm.html'>tidy.ridgelm</a></code>: <code>ridgelm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rlm.html'>tidy.rlm</a></code>: <code>rlm</code></p></li>\n<li><p><code>tidy.robustbase.glmrob</code>: <code>glmrob</code></p></li>\n<li><p><code>tidy.robustbase.lmrob</code>: <code>lmrob</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.roc.html'>tidy.roc</a></code>: <code>roc</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rq.html'>tidy.rq</a></code>: <code>rq</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rqs.html'>tidy.rqs</a></code>: <code>rqs</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.spec.html'>tidy.spec</a></code>: <code>spec</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.speedglm.html'>tidy.speedglm</a></code>: <code>speedglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.speedlm.html'>tidy.speedlm</a></code>: <code>speedlm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.summary.glht.html'>tidy.summary.glht</a></code>: <code>summary.glht</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.summary.manova.html'>tidy.summary.manova</a></code>: <code>summary.manova</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.summary_emm.html'>tidy.summary_emm</a></code>: <code>summary_emm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survdiff.html'>tidy.survdiff</a></code>: <code>survdiff</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survexp.html'>tidy.survexp</a></code>: <code>survexp</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survfit.html'>tidy.survfit</a></code>: <code>survfit</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survreg.html'>tidy.survreg</a></code>: <code>survreg</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.svyglm.html'>tidy.svyglm</a></code>: <code>svyglm</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.svyolr.html'>tidy.svyolr</a></code>: <code>svyolr</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.systemfit.html'>tidy.systemfit</a></code>: <code>systemfit</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.table.html'>tidy.table</a></code>: <code>table</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ts.html'>tidy.ts</a></code>: <code>ts</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.TukeyHSD.html'>tidy.TukeyHSD</a></code>: <code>TukeyHSD</code></p></li>\n<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.zoo.html'>tidy.zoo</a></code>: <code>zoo</code></p></li>\n</ul>\n<code>broom.mixed</code>\n<ul>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/brms_tidiers.html'>brms_tidiers</a></code>: <code>brmsfit</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/gamlss_tidiers.html'>gamlss_tidiers</a></code>: <code>gamlss</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmadmb_tidiers.html'>glmmadmb_tidiers</a></code>: <code>glmmadmb</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmTMB_tidiers.html'>glmmTMB_tidiers</a></code>: <code>glmmTMB</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/lme4_tidiers.html'>lme4_tidiers</a></code>: <code>merMod</code>, <code>rlmerMod</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/mcmc_tidiers.html'>mcmc_tidiers</a></code>: <code>mcmc</code>, <code>mcmc.list</code>, <code>MCMCglmm</code>, <code>rjags</code>, <code>stanfit</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/nlme_tidiers.html'>nlme_tidiers</a></code>: <code>gls</code>, <code>lme</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/rstanarm_tidiers.html'>rstanarm_tidiers</a></code>: <code>stanreg</code></p></li>\n<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/tidy.TMB.html'>tidy.TMB</a></code>: <code>TMB</code></p></li>\n</ul>\n<code>rsample</code>\n<ul>\n<li><p><code><a href='https://rdrr.io/pkg/rsample/man/tidy.rsplit.html'>tidy.rsplit</a></code>: <code>nested_cv</code>, <code>rset</code>, <code>rsplit</code>, <code>vfold_cv</code></p></li>\n</ul>\n"
-)</p>
-    
+<p>See the following help topics for more details about individual methods:<code>broom</code>
+<ul>
+<li><p><code><a href='http://broom.tidyverse.org/reference/durbinWatsonTest_tidiers.html'>durbinWatsonTest_tidiers</a></code>: <code>durbinWatsonTest</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/list_tidiers.html'>list_tidiers</a></code>: <code>list</code></p></li>
+<li><p><code>metafor_tidiers</code>: <code>rma</code></p></li>
+<li><p><code>mgcv_tidy_gam</code>: <code>gam</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/null_tidiers.html'>null_tidiers</a></code>: <code>NULL</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/sp_tidiers.html'>sp_tidiers</a></code>: <code>Line</code>, <code>Lines</code>, <code>Polygon</code>, <code>Polygons</code>, <code>SpatialLinesDataFrame</code>, <code>SpatialPolygons</code>, <code>SpatialPolygonsDataFrame</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.aareg.html'>tidy.aareg</a></code>: <code>aareg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.acf.html'>tidy.acf</a></code>: <code>acf</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.anova.html'>tidy.anova</a></code>: <code>anova</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.aov.html'>tidy.aov</a></code>: <code>aov</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.aovlist.html'>tidy.aovlist</a></code>: <code>aovlist</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Arima.html'>tidy.Arima</a></code>: <code>Arima</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.betareg.html'>tidy.betareg</a></code>: <code>betareg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.biglm.html'>tidy.biglm</a></code>: <code>biglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.binDesign.html'>tidy.binDesign</a></code>: <code>binDesign</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.binWidth.html'>tidy.binWidth</a></code>: <code>binWidth</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.boot.html'>tidy.boot</a></code>: <code>boot</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.btergm.html'>tidy.btergm</a></code>: <code>btergm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.cch.html'>tidy.cch</a></code>: <code>cch</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.cld.html'>tidy.cld</a></code>: <code>cld</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.clm.html'>tidy.clm</a></code>: <code>clm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.clmm.html'>tidy.clmm</a></code>: <code>clmm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.coeftest.html'>tidy.coeftest</a></code>: <code>coeftest</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.confint.glht.html'>tidy.confint.glht</a></code>: <code>confint.glht</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.confusionMatrix.html'>tidy.confusionMatrix</a></code>: <code>confusionMatrix</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.coxph.html'>tidy.coxph</a></code>: <code>coxph</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.cv.glmnet.html'>tidy.cv.glmnet</a></code>: <code>cv.glmnet</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.density.html'>tidy.density</a></code>: <code>density</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.dist.html'>tidy.dist</a></code>: <code>dist</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.drc.html'>tidy.drc</a></code>: <code>drc</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.emmGrid.html'>tidy.emmGrid</a></code>: <code>emmGrid</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.epi.2by2.html'>tidy.epi.2by2</a></code>: <code>epi.2by2</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ergm.html'>tidy.ergm</a></code>: <code>ergm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.factanal.html'>tidy.factanal</a></code>: <code>factanal</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.felm.html'>tidy.felm</a></code>: <code>felm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.fitdistr.html'>tidy.fitdistr</a></code>: <code>fitdistr</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ftable.html'>tidy.ftable</a></code>: <code>ftable</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Gam.html'>tidy.Gam</a></code>: <code>Gam</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.garch.html'>tidy.garch</a></code>: <code>garch</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.geeglm.html'>tidy.geeglm</a></code>: <code>geeglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glht.html'>tidy.glht</a></code>: <code>glht</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glm.html'>tidy.glm</a></code>: <code>glm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glmnet.html'>tidy.glmnet</a></code>: <code>glmnet</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.glmRob.html'>tidy.glmRob</a></code>: <code>glmRob</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.gmm.html'>tidy.gmm</a></code>: <code>gmm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.htest.html'>tidy.htest</a></code>: <code>htest</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ivreg.html'>tidy.ivreg</a></code>: <code>ivreg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.kappa.html'>tidy.kappa</a></code>: <code>kappa</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.kde.html'>tidy.kde</a></code>: <code>kde</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Kendall.html'>tidy.Kendall</a></code>: <code>Kendall</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.kmeans.html'>tidy.kmeans</a></code>: <code>kmeans</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lavaan.html'>tidy.lavaan</a></code>: <code>lavaan</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lm.beta.html'>tidy.lm.beta</a></code>: <code>lm.beta</code>, <code>summary.lm.beta</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lm.html'>tidy.lm</a></code>: <code>lm</code>, <code>summary.lm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lmodel2.html'>tidy.lmodel2</a></code>: <code>lmodel2</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lmRob.html'>tidy.lmRob</a></code>: <code>lmRob</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.lsmobj.html'>tidy.lsmobj</a></code>: <code>lsmobj</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.manova.html'>tidy.manova</a></code>: <code>manova</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.map.html'>tidy.map</a></code>: <code>map</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.Mclust.html'>tidy.Mclust</a></code>: <code>Mclust</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mediate.html'>tidy.mediate</a></code>: <code>mediate</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mjoint.html'>tidy.mjoint</a></code>: <code>mjoint</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mle2.html'>tidy.mle2</a></code>: <code>mle2</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.mlm.html'>tidy.mlm</a></code>: <code>mlm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.muhaz.html'>tidy.muhaz</a></code>: <code>muhaz</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.multinom.html'>tidy.multinom</a></code>: <code>multinom</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.nlrq.html'>tidy.nlrq</a></code>: <code>nlrq</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.nls.html'>tidy.nls</a></code>: <code>nls</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.orcutt.html'>tidy.orcutt</a></code>: <code>orcutt</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.pairwise.htest.html'>tidy.pairwise.htest</a></code>: <code>pairwise.htest</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.pam.html'>tidy.pam</a></code>: <code>pam</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.plm.html'>tidy.plm</a></code>: <code>plm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.poLCA.html'>tidy.poLCA</a></code>: <code>poLCA</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.polr.html'>tidy.polr</a></code>: <code>polr</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.power.htest.html'>tidy.power.htest</a></code>: <code>power.htest</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.prcomp.html'>tidy.prcomp</a></code>: <code>prcomp</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.pyears.html'>tidy.pyears</a></code>: <code>pyears</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rcorr.html'>tidy.rcorr</a></code>: <code>rcorr</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ref.grid.html'>tidy.ref.grid</a></code>: <code>ref.grid</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.regsubsets.html'>tidy.regsubsets</a></code>: <code>regsubsets</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ridgelm.html'>tidy.ridgelm</a></code>: <code>ridgelm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rlm.html'>tidy.rlm</a></code>: <code>rlm</code></p></li>
+<li><p><code>tidy.robustbase.glmrob</code>: <code>glmrob</code></p></li>
+<li><p><code>tidy.robustbase.lmrob</code>: <code>lmrob</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.roc.html'>tidy.roc</a></code>: <code>roc</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rq.html'>tidy.rq</a></code>: <code>rq</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.rqs.html'>tidy.rqs</a></code>: <code>rqs</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.spec.html'>tidy.spec</a></code>: <code>spec</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.speedglm.html'>tidy.speedglm</a></code>: <code>speedglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.speedlm.html'>tidy.speedlm</a></code>: <code>speedlm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.summary.glht.html'>tidy.summary.glht</a></code>: <code>summary.glht</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.summary.manova.html'>tidy.summary.manova</a></code>: <code>summary.manova</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.summary_emm.html'>tidy.summary_emm</a></code>: <code>summary_emm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survdiff.html'>tidy.survdiff</a></code>: <code>survdiff</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survexp.html'>tidy.survexp</a></code>: <code>survexp</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survfit.html'>tidy.survfit</a></code>: <code>survfit</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.survreg.html'>tidy.survreg</a></code>: <code>survreg</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.svyglm.html'>tidy.svyglm</a></code>: <code>svyglm</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.svyolr.html'>tidy.svyolr</a></code>: <code>svyolr</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.systemfit.html'>tidy.systemfit</a></code>: <code>systemfit</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.table.html'>tidy.table</a></code>: <code>table</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.ts.html'>tidy.ts</a></code>: <code>ts</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.TukeyHSD.html'>tidy.TukeyHSD</a></code>: <code>TukeyHSD</code></p></li>
+<li><p><code><a href='http://broom.tidyverse.org/reference/tidy.zoo.html'>tidy.zoo</a></code>: <code>zoo</code></p></li>
+</ul>
+<code>broom.mixed</code>
+<ul>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/brms_tidiers.html'>brms_tidiers</a></code>: <code>brmsfit</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/gamlss_tidiers.html'>gamlss_tidiers</a></code>: <code>gamlss</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmadmb_tidiers.html'>glmmadmb_tidiers</a></code>: <code>glmmadmb</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/glmmTMB_tidiers.html'>glmmTMB_tidiers</a></code>: <code>glmmTMB</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/lme4_tidiers.html'>lme4_tidiers</a></code>: <code>merMod</code>, <code>rlmerMod</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/mcmc_tidiers.html'>mcmc_tidiers</a></code>: <code>mcmc</code>, <code>mcmc.list</code>, <code>MCMCglmm</code>, <code>rjags</code>, <code>stanfit</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/nlme_tidiers.html'>nlme_tidiers</a></code>: <code>gls</code>, <code>lme</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/rstanarm_tidiers.html'>rstanarm_tidiers</a></code>: <code>stanreg</code></p></li>
+<li><p><code><a href='https://rdrr.io/pkg/broom.mixed/man/tidy.TMB.html'>tidy.TMB</a></code>: <code>TMB</code></p></li>
+</ul>
+<code>rsample</code>
+<ul>
+<li><p><code><a href='https://rdrr.io/pkg/rsample/man/tidy.rsplit.html'>tidy.rsplit</a></code>: <code>nested_cv</code>, <code>rset</code>, <code>rsplit</code>, <code>vfold_cv</code></p></li>
+</ul></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='grouped_tidy.html'>grouped_tidy</a></code>, <code><a href='tidy.html'>tidy</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
@@ -220,20 +337,20 @@ error rate.</p></td>
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>mpg</span> ~ <span class='no'>wt</span>,
   <span class='kw'>na.action</span> <span class='kw'>=</span> <span class='no'>na.omit</span>,
   <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.50</span>)
-)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1,000 x 9</span><span>
+)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 1,000 x 9</span><span>
 #&gt;    splits  id     term  estimate std.error statistic  p.value conf.low conf.high
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ (Int~    39.7      1.73      22.9  1.44</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-20</span><span>    38.5      40.9 
-#&gt; </span><span style='color: #555555;'> 2</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>6.10</span><span>     0.558    -</span><span style='color: #BB0000;'>10.9</span><span>  5.63</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-12</span><span>    -</span><span style='color: #BB0000;'>6.48</span><span>     -</span><span style='color: #BB0000;'>5.72</span><span>
-#&gt; </span><span style='color: #555555;'> 3</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ (Int~    35.0      1.79      19.5  1.29</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-18</span><span>    33.8      36.2 
-#&gt; </span><span style='color: #555555;'> 4</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>4.76</span><span>     0.533     -</span><span style='color: #BB0000;'>8.92</span><span> 6.06</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.12</span><span>     -</span><span style='color: #BB0000;'>4.39</span><span>
-#&gt; </span><span style='color: #555555;'> 5</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ (Int~    37.2      1.93      19.2  2.04</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-18</span><span>    35.9      38.5 
-#&gt; </span><span style='color: #555555;'> 6</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.11</span><span>     0.532     -</span><span style='color: #BB0000;'>9.60</span><span> 1.18</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.47</span><span>     -</span><span style='color: #BB0000;'>4.74</span><span>
-#&gt; </span><span style='color: #555555;'> 7</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ (Int~    36.2      1.98      18.3  7.90</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-18</span><span>    34.8      37.5 
-#&gt; </span><span style='color: #555555;'> 8</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.24</span><span>     0.580     -</span><span style='color: #BB0000;'>9.04</span><span> 4.59</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.64</span><span>     -</span><span style='color: #BB0000;'>4.85</span><span>
-#&gt; </span><span style='color: #555555;'> 9</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ (Int~    36.5      2.18      16.8  8.60</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-17</span><span>    35.0      38.0 
-#&gt; </span><span style='color: #555555;'>10</span><span> </span><span style='color: #555555;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.12</span><span>     0.613     -</span><span style='color: #BB0000;'>8.36</span><span> 2.49</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 9</span><span>    -</span><span style='color: #BB0000;'>5.54</span><span>     -</span><span style='color: #BB0000;'>4.71</span><span>
-#&gt; </span><span style='color: #555555;'># ... with 990 more rows</span><span></div><div class='input'>
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    39.7      1.73      22.9  1.44</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-20</span><span>    38.5      40.9 
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>6.10</span><span>     0.558    -</span><span style='color: #BB0000;'>10.9</span><span>  5.63</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>    -</span><span style='color: #BB0000;'>6.48</span><span>     -</span><span style='color: #BB0000;'>5.72</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    35.0      1.79      19.5  1.29</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    33.8      36.2 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>4.76</span><span>     0.533     -</span><span style='color: #BB0000;'>8.92</span><span> 6.06</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.12</span><span>     -</span><span style='color: #BB0000;'>4.39</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    37.2      1.93      19.2  2.04</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    35.9      38.5 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.11</span><span>     0.532     -</span><span style='color: #BB0000;'>9.60</span><span> 1.18</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.47</span><span>     -</span><span style='color: #BB0000;'>4.74</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    36.2      1.98      18.3  7.90</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    34.8      37.5 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.24</span><span>     0.580     -</span><span style='color: #BB0000;'>9.04</span><span> 4.59</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.64</span><span>     -</span><span style='color: #BB0000;'>4.85</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    36.5      2.18      16.8  8.60</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-17</span><span>    35.0      38.0 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.12</span><span>     0.613     -</span><span style='color: #BB0000;'>8.36</span><span> 2.49</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>    -</span><span style='color: #BB0000;'>5.54</span><span>     -</span><span style='color: #BB0000;'>4.71</span><span>
+#&gt; </span><span style='color: #949494;'># ... with 990 more rows</span><span></div><div class='input'>
 <span class='co'># example-2: linear mixed-effects model</span>
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>lme4</span>)
 
@@ -243,34 +360,29 @@ error rate.</p></td>
   <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>,
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>),
   <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>effects</span> <span class='kw'>=</span> <span class='st'>"fixed"</span>)
-)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00205594 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00239836 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00226858 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00237924 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00278758 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00341433 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00943341 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00522705 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 50 x 7</span><span>
+)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00205594 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00239836 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00226858 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00237924 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00278758 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00341433 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00943341 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00522705 (tol = 0.002, component 1)</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 50 x 7</span><span>
 #&gt;    splits           id          effect term        estimate std.error statistic
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> </span><span style='color: #555555;'>&lt;split [180/70]&gt;</span><span> Bootstrap01 fixed  (Intercept)   248.        7.94     31.3 
-#&gt; </span><span style='color: #555555;'> 2</span><span> </span><span style='color: #555555;'>&lt;split [180/70]&gt;</span><span> Bootstrap01 fixed  Days           10.8       1.44      7.49
-#&gt; </span><span style='color: #555555;'> 3</span><span> </span><span style='color: #555555;'>&lt;split [180/71]&gt;</span><span> Bootstrap02 fixed  (Intercept)   255.        8.42     30.3 
-#&gt; </span><span style='color: #555555;'> 4</span><span> </span><span style='color: #555555;'>&lt;split [180/71]&gt;</span><span> Bootstrap02 fixed  Days            9.68      1.73      5.59
-#&gt; </span><span style='color: #555555;'> 5</span><span> </span><span style='color: #555555;'>&lt;split [180/71]&gt;</span><span> Bootstrap03 fixed  (Intercept)   245.        7.56     32.5 
-#&gt; </span><span style='color: #555555;'> 6</span><span> </span><span style='color: #555555;'>&lt;split [180/71]&gt;</span><span> Bootstrap03 fixed  Days           11.3       1.47      7.65
-#&gt; </span><span style='color: #555555;'> 7</span><span> </span><span style='color: #555555;'>&lt;split [180/58]&gt;</span><span> Bootstrap04 fixed  (Intercept)   254.        6.85     37.1 
-#&gt; </span><span style='color: #555555;'> 8</span><span> </span><span style='color: #555555;'>&lt;split [180/58]&gt;</span><span> Bootstrap04 fixed  Days           10.2       1.77      5.78
-#&gt; </span><span style='color: #555555;'> 9</span><span> </span><span style='color: #555555;'>&lt;split [180/68]&gt;</span><span> Bootstrap05 fixed  (Intercept)   250.        8.19     30.5 
-#&gt; </span><span style='color: #555555;'>10</span><span> </span><span style='color: #555555;'>&lt;split [180/68]&gt;</span><span> Bootstrap05 fixed  Days            9.78      1.66      5.88
-#&gt; </span><span style='color: #555555;'># ... with 40 more rows</span><span></div></span></pre>
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;split [180/70]&gt;</span><span> Bootstrap01 fixed  (Intercept)   248.        7.94     31.3 
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;split [180/70]&gt;</span><span> Bootstrap01 fixed  Days           10.8       1.44      7.49
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;split [180/71]&gt;</span><span> Bootstrap02 fixed  (Intercept)   255.        8.42     30.3 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;split [180/71]&gt;</span><span> Bootstrap02 fixed  Days            9.68      1.73      5.59
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;split [180/71]&gt;</span><span> Bootstrap03 fixed  (Intercept)   245.        7.56     32.5 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;split [180/71]&gt;</span><span> Bootstrap03 fixed  Days           11.3       1.47      7.65
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;split [180/58]&gt;</span><span> Bootstrap04 fixed  (Intercept)   254.        6.85     37.1 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;split [180/58]&gt;</span><span> Bootstrap04 fixed  Days           10.2       1.77      5.78
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;split [180/68]&gt;</span><span> Bootstrap05 fixed  (Intercept)   250.        8.19     30.5 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split [180/68]&gt;</span><span> Bootstrap05 fixed  Days            9.78      1.66      5.88
+#&gt; </span><span style='color: #949494;'># ... with 40 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#note">Note</a></li>
-
       <li><a href="#methods">Methods</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
@@ -286,7 +398,7 @@ error rate.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
 </div>
 
       </footer>
