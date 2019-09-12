@@ -5,7 +5,6 @@ context("boot_generics work")
 testthat::test_that(
   desc = "`boot_tidy()` works",
   code = {
-    testthat::skip_if_not(utils::packageVersion("tidyr") > "0.8.3")
     library(lme4)
 
     # results with broom
@@ -49,7 +48,6 @@ testthat::test_that(
 testthat::test_that(
   desc = "`boot_glance()` works",
   code = {
-    testthat::skip_if_not(utils::packageVersion("tidyr") > "0.8.3")
     library(lme4)
 
     # results with broom
@@ -92,7 +90,6 @@ testthat::test_that(
 testthat::test_that(
   desc = "`boot_augment()` works",
   code = {
-    testthat::skip_if_not(utils::packageVersion("tidyr") > "0.8.3")
 
     # results with broom
     set.seed(123)

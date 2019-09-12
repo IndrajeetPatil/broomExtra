@@ -31,8 +31,7 @@ Imports:
     purrr (>= 0.3.2),
     rlang (>= 0.4.0),
     rsample (>= 0.0.4),
-    tidyr (>= 0.8.3),
-    utils
+    tidyr (>= 1.0.0)
 Suggests: 
     generics,
     ggplot2,
