@@ -4,8 +4,7 @@
 \alias{boot_glance}
 \title{Bootstrapped dataframe with model summaries from each sample.}
 \usage{
-boot_glance(data, times = 25, strata = NULL, apparent = FALSE, ..f,
-  ...)
+boot_glance(data, times = 25, strata = NULL, apparent = FALSE, ..f, ...)
 }
 \arguments{
 \item{data}{Dataframe (or tibble) from which variables are to be taken.}
@@ -26,7 +25,7 @@ error rate.}
 
 \item{...}{Arguments to function.
 
-These dots support \link{tidy-dots} features.}
+These dots support \link[rlang]{tidy-dots} features.}
 }
 \description{
 Bootstrapped dataframe with model summaries from each sample.

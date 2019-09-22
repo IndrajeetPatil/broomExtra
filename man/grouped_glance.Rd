@@ -16,7 +16,7 @@ grouped_glance(data, grouping.vars, ..f, ...)
 
 \item{...}{Arguments to function.
 
-These dots support \link{tidy-dots} features.}
+These dots support \link[rlang]{tidy-dots} features.}
 }
 \description{
 Model summary output from grouped analysis of any function that has

@@ -16,7 +16,7 @@ grouped_tidy(data, grouping.vars, ..f, ..., tidy.args = list())
 
 \item{...}{Arguments to function.
 
-These dots support \link{tidy-dots} features.}
+These dots support \link[rlang]{tidy-dots} features.}
 
 \item{tidy.args}{A list of arguments to be used in the relevant \code{S3} method.}
 }

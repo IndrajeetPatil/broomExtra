@@ -4,8 +4,15 @@
 \alias{boot_augment}
 \title{Bootstrapped dataframe with augmented predictions from each sample.}
 \usage{
-boot_augment(data, times = 25, strata = NULL, apparent = FALSE, ..f,
-  ..., augment.args = list())
+boot_augment(
+  data,
+  times = 25,
+  strata = NULL,
+  apparent = FALSE,
+  ..f,
+  ...,
+  augment.args = list()
+)
 }
 \arguments{
 \item{data}{Dataframe (or tibble) from which variables are to be taken.}
@@ -26,7 +33,7 @@ error rate.}
 
 \item{...}{Arguments to function.
 
-These dots support \link{tidy-dots} features.}
+These dots support \link[rlang]{tidy-dots} features.}
 
 \item{augment.args}{A list of arguments to be used in the relevant \code{S3} method.}
 }
