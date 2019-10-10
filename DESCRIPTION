@@ -26,7 +26,7 @@ Depends:
 Imports: 
     broom (>= 0.5.2),
     broom.mixed (>= 0.2.4),
-    dplyr (>= 0.8.3),
+    dplyr (>= 0.8.3.9000),
     magrittr (>= 1.5),
     purrr (>= 0.3.2),
     rlang (>= 0.4.0),
@@ -41,6 +41,8 @@ Suggests:
     spelling,
     stringr,
     testthat
+Remotes:
+    tidyverse/dplyr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
