@@ -9,5 +9,5 @@
 
 ## Comments
 
-- Makes this package compatible with the upcoming release of `tidyr` package.
+- Makes this package compatible with the upcoming release of `dplyr` package.
 - No problems revealed for any of the strong dependencies. 

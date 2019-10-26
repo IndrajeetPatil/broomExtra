@@ -74,7 +74,7 @@ grouped_tidy <- function(data,
   # dataframe with grouped analysis results
   df_results <- data %>%
     dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
-    dplyr::group_modify(.data = ., .f = tidy_group, keep = TRUE) %>%
+    dplyr::group_modify(.f = tidy_group, keep = TRUE) %>%
     dplyr::ungroup(x = .)
 
   # return the final dataframe with results
@@ -150,7 +150,7 @@ grouped_glance <- function(data,
   # dataframe with grouped analysis results
   df_results <- data %>%
     dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
-    dplyr::group_modify(.data = ., .f = glance_group, keep = TRUE) %>%
+    dplyr::group_modify(.f = glance_group, keep = TRUE) %>%
     dplyr::ungroup(x = .)
 
   # return the final dataframe with results
@@ -229,7 +229,7 @@ grouped_augment <- function(data,
   # dataframe with grouped analysis results
   df_results <- data %>%
     dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
-    dplyr::group_modify(.data = ., .f = augment_group, keep = TRUE) %>%
+    dplyr::group_modify(.f = augment_group, keep = TRUE) %>%
     dplyr::ungroup(x = .)
 
   # return the final dataframe with results

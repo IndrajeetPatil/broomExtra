@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' Package Family
-Version: 0.0.5.9000
+Version: 0.0.6
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -26,11 +26,11 @@ Depends:
 Imports: 
     broom (>= 0.5.2),
     broom.mixed (>= 0.2.4),
-    dplyr (>= 0.8.3.9000),
+    dplyr (>= 0.8.3),
     magrittr (>= 1.5),
-    purrr (>= 0.3.2),
-    rlang (>= 0.4.0),
-    rsample (>= 0.0.4),
+    purrr (>= 0.3.3),
+    rlang (>= 0.4.1),
+    rsample (>= 0.0.5),
     tidyr (>= 1.0.0)
 Suggests: 
     generics,
@@ -41,8 +41,6 @@ Suggests:
     spelling,
     stringr,
     testthat
-Remotes:
-    tidyverse/dplyr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
