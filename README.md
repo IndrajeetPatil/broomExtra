@@ -21,6 +21,8 @@ badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](htt
 status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra)
 [![Travis build
 status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)
+[![R build
+status](https://github.com/r-lib/actions/workflows/R/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions?workflow=R)
 [![Codecov test
 coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)
 [![Coverage
@@ -28,7 +30,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--10--26-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--11--12-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)

@@ -44,7 +44,8 @@ r_packages:
   - purrr
   - tidyr
   - dplyr
-  - covr
+  - broom.mixed
+  - broom
 
 r_github_packages:
   - jimhester/lintr
