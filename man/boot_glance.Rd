@@ -23,9 +23,7 @@ error rate.}
 
 \item{..f}{A function, or function name as a string.}
 
-\item{...}{Arguments to function.
-
-These dots support \link[rlang]{tidy-dots} features.}
+\item{...}{<\link[rlang:dyn-dots]{dynamic}> Arguments for \code{.fn}.}
 }
 \description{
 Bootstrapped dataframe with model summaries from each sample.

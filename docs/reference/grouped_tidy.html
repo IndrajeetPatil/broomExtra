@@ -78,7 +78,7 @@ argument in its function call." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6.9000</span>
       </span>
     </div>
 
@@ -168,8 +168,7 @@ argument in its function call.</p>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Arguments to function.</p>
-<p>These dots support <a href='https://rlang.r-lib.org/reference/tidy-dots.html'>tidy-dots</a> features.</p></td>
+      <td><p>&lt;<a href='https://rlang.r-lib.org/reference/dyn-dots.html'>dynamic</a>&gt; Arguments for <code>.fn</code>.</p></td>
     </tr>
     <tr>
       <th>tidy.args</th>
@@ -351,21 +350,33 @@ argument in its function call.</p>
   <span class='kw'>control</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmerControl.html'>lmerControl</a></span>(<span class='kw'>optimizer</span> <span class='kw'>=</span> <span class='st'>"bobyqa"</span>),
   <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.99</span>)
 )</div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 25 x 9</span><span>
-#&gt;    cut   effect  group  term     estimate std.error statistic conf.low conf.high
-#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;ord&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> Fair  fixed   </span><span style='color: #BB0000;'>NA</span><span>     carat    </span><span style='text-decoration: underline;'>3</span><span>800.         228.      16.7    </span><span style='text-decoration: underline;'>3</span><span>212.     </span><span style='text-decoration: underline;'>4</span><span>387.
-#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> Fair  ran_pa~ color  sd__(In~ </span><span style='text-decoration: underline;'>2</span><span>158.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> Fair  ran_pa~ color  cor__(I~   -</span><span style='color: #BB0000;'>0.975</span><span>       </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> Fair  ran_pa~ color  sd__car~ </span><span style='text-decoration: underline;'>2</span><span>545.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> Fair  ran_pa~ Resid~ sd__Obs~ </span><span style='text-decoration: underline;'>1</span><span>830.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> Good  fixed   </span><span style='color: #BB0000;'>NA</span><span>     carat    </span><span style='text-decoration: underline;'>9</span><span>217.         105.      87.6    </span><span style='text-decoration: underline;'>8</span><span>946.     </span><span style='text-decoration: underline;'>9</span><span>488.
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> Good  ran_pa~ color  sd__(In~ </span><span style='text-decoration: underline;'>2</span><span>686.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Good  ran_pa~ color  cor__(I~    0.998       </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> Good  ran_pa~ color  sd__car~ </span><span style='text-decoration: underline;'>1</span><span>609.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'>10</span><span> Good  ran_pa~ Resid~ sd__Obs~ </span><span style='text-decoration: underline;'>1</span><span>373.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt;    cut   effect   group    term                   estimate std.error statistic
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;ord&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> Fair  fixed    </span><span style='color: #BB0000;'>NA</span><span>       carat                  </span><span style='text-decoration: underline;'>3</span><span>800.         228.      16.7
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> Fair  ran_pars color    sd__(Intercept)        </span><span style='text-decoration: underline;'>2</span><span>158.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> Fair  ran_pars color    cor__(Intercept).carat   -</span><span style='color: #BB0000;'>0.975</span><span>       </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> Fair  ran_pars color    sd__carat              </span><span style='text-decoration: underline;'>2</span><span>545.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> Fair  ran_pars Residual sd__Observation        </span><span style='text-decoration: underline;'>1</span><span>830.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> Good  fixed    </span><span style='color: #BB0000;'>NA</span><span>       carat                  </span><span style='text-decoration: underline;'>9</span><span>217.         105.      87.6
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> Good  ran_pars color    sd__(Intercept)        </span><span style='text-decoration: underline;'>2</span><span>686.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Good  ran_pars color    cor__(Intercept).carat    0.998       </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> Good  ran_pars color    sd__carat              </span><span style='text-decoration: underline;'>1</span><span>609.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> Good  ran_pars Residual sd__Observation        </span><span style='text-decoration: underline;'>1</span><span>373.          </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>  
+#&gt;    conf.low conf.high
+#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>    </span><span style='text-decoration: underline;'>3</span><span>212.     </span><span style='text-decoration: underline;'>4</span><span>387.
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>    </span><span style='text-decoration: underline;'>8</span><span>946.     </span><span style='text-decoration: underline;'>9</span><span>488.
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>      </span><span style='color: #BB0000;'>NA</span><span>        </span><span style='color: #BB0000;'>NA</span><span> 
 #&gt; </span><span style='color: #949494;'># ... with 15 more rows</span><span></div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>

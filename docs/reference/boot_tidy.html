@@ -75,7 +75,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6.9000</span>
       </span>
     </div>
 
@@ -185,8 +185,7 @@ error rate.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Arguments to function.</p>
-<p>These dots support <a href='https://rlang.r-lib.org/reference/tidy-dots.html'>tidy-dots</a> features.</p></td>
+      <td><p>&lt;<a href='https://rlang.r-lib.org/reference/dyn-dots.html'>dynamic</a>&gt; Arguments for <code>.fn</code>.</p></td>
     </tr>
     <tr>
       <th>tidy.args</th>
@@ -345,18 +344,30 @@ error rate.</p></td>
   <span class='kw'>na.action</span> <span class='kw'>=</span> <span class='no'>na.omit</span>,
   <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.50</span>)
 )</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 1,000 x 9</span><span>
-#&gt;    splits  id     term  estimate std.error statistic  p.value conf.low conf.high
-#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    39.7      1.73      22.9  1.44</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-20</span><span>    38.5      40.9 
-#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>6.10</span><span>     0.558    -</span><span style='color: #BB0000;'>10.9</span><span>  5.63</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>    -</span><span style='color: #BB0000;'>6.48</span><span>     -</span><span style='color: #BB0000;'>5.72</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    35.0      1.79      19.5  1.29</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    33.8      36.2 
-#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>4.76</span><span>     0.533     -</span><span style='color: #BB0000;'>8.92</span><span> 6.06</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.12</span><span>     -</span><span style='color: #BB0000;'>4.39</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    37.2      1.93      19.2  2.04</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    35.9      38.5 
-#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.11</span><span>     0.532     -</span><span style='color: #BB0000;'>9.60</span><span> 1.18</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.47</span><span>     -</span><span style='color: #BB0000;'>4.74</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    36.2      1.98      18.3  7.90</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    34.8      37.5 
-#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.24</span><span>     0.580     -</span><span style='color: #BB0000;'>9.04</span><span> 4.59</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.64</span><span>     -</span><span style='color: #BB0000;'>4.85</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ (Int~    36.5      2.18      16.8  8.60</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-17</span><span>    35.0      38.0 
-#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split</span><span>~ Boots~ wt       -</span><span style='color: #BB0000;'>5.12</span><span>     0.613     -</span><span style='color: #BB0000;'>8.36</span><span> 2.49</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>    -</span><span style='color: #BB0000;'>5.54</span><span>     -</span><span style='color: #BB0000;'>4.71</span><span>
+#&gt;    splits          id           term        estimate std.error statistic
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;split [32/11]&gt;</span><span> Bootstrap001 (Intercept)    39.7      1.73      22.9 
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;split [32/11]&gt;</span><span> Bootstrap001 wt             -</span><span style='color: #BB0000;'>6.10</span><span>     0.558    -</span><span style='color: #BB0000;'>10.9</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;split [32/9]&gt;</span><span>  Bootstrap002 (Intercept)    35.0      1.79      19.5 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;split [32/9]&gt;</span><span>  Bootstrap002 wt             -</span><span style='color: #BB0000;'>4.76</span><span>     0.533     -</span><span style='color: #BB0000;'>8.92</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;split [32/10]&gt;</span><span> Bootstrap003 (Intercept)    37.2      1.93      19.2 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;split [32/10]&gt;</span><span> Bootstrap003 wt             -</span><span style='color: #BB0000;'>5.11</span><span>     0.532     -</span><span style='color: #BB0000;'>9.60</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;split [32/14]&gt;</span><span> Bootstrap004 (Intercept)    36.2      1.98      18.3 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;split [32/14]&gt;</span><span> Bootstrap004 wt             -</span><span style='color: #BB0000;'>5.24</span><span>     0.580     -</span><span style='color: #BB0000;'>9.04</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;split [32/11]&gt;</span><span> Bootstrap005 (Intercept)    36.5      2.18      16.8 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split [32/11]&gt;</span><span> Bootstrap005 wt             -</span><span style='color: #BB0000;'>5.12</span><span>     0.613     -</span><span style='color: #BB0000;'>8.36</span><span>
+#&gt;     p.value conf.low conf.high
+#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> 1.44</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-20</span><span>    38.5      40.9 
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> 5.63</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>    -</span><span style='color: #BB0000;'>6.48</span><span>     -</span><span style='color: #BB0000;'>5.72</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> 1.29</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    33.8      36.2 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> 6.06</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.12</span><span>     -</span><span style='color: #BB0000;'>4.39</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> 2.04</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    35.9      38.5 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> 1.18</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.47</span><span>     -</span><span style='color: #BB0000;'>4.74</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> 7.90</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-18</span><span>    34.8      37.5 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> 4.59</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>    -</span><span style='color: #BB0000;'>5.64</span><span>     -</span><span style='color: #BB0000;'>4.85</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> 8.60</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-17</span><span>    35.0      38.0 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> 2.49</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>    -</span><span style='color: #BB0000;'>5.54</span><span>     -</span><span style='color: #BB0000;'>4.71</span><span>
 #&gt; </span><span style='color: #949494;'># ... with 990 more rows</span><span></div><div class='input'>
 <span class='co'># example-2: linear mixed-effects model</span>
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>lme4</span>)
@@ -382,7 +393,7 @@ error rate.</p></td>
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split [180/68]&gt;</span><span> Bootstrap05 fixed  Days            9.78      1.66      5.88
 #&gt; </span><span style='color: #949494;'># ... with 40 more rows</span><span></div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>

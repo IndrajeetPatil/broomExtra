@@ -78,7 +78,7 @@ data argument in its function call." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6.9000</span>
       </span>
     </div>
 
@@ -168,8 +168,7 @@ data argument in its function call." />
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Arguments to function.</p>
-<p>These dots support <a href='https://rlang.r-lib.org/reference/tidy-dots.html'>tidy-dots</a> features.</p></td>
+      <td><p>&lt;<a href='https://rlang.r-lib.org/reference/dyn-dots.html'>dynamic</a>&gt; Arguments for <code>.fn</code>.</p></td>
     </tr>
     </table>
 
@@ -282,8 +281,19 @@ data argument in its function call." />
 #&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Good  D         0.860         0.860 </span><span style='text-decoration: underline;'>1</span><span>729.     </span><span style='text-decoration: underline;'>2</span><span>065. 2.66</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-145</span><span>     1 -</span><span style='color: #BB0000;text-decoration: underline;'>2</span><span style='color: #BB0000;'>981.</span><span>
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span> Good  E         0.870         0.870 </span><span style='text-decoration: underline;'>1</span><span>674.     </span><span style='text-decoration: underline;'>3</span><span>084. 2.50</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-206</span><span>     1 -</span><span style='color: #BB0000;text-decoration: underline;'>4</span><span style='color: #BB0000;'>084.</span><span>
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> Good  F         0.873         0.873 </span><span style='text-decoration: underline;'>1</span><span>677.     </span><span style='text-decoration: underline;'>3</span><span>110. 1.76</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-204</span><span>     1 -</span><span style='color: #BB0000;text-decoration: underline;'>3</span><span style='color: #BB0000;'>997.</span><span>
-#&gt; </span><span style='color: #949494;'># ... with 25 more rows, and 5 more variables: AIC </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, BIC </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>,
-#&gt; #   deviance </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, df.residual </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, nobs </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'>
+#&gt;      AIC   BIC    deviance df.residual  nobs
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='text-decoration: underline;'>1</span><span>524. </span><span style='text-decoration: underline;'>1</span><span>529.  289</span><span style='text-decoration: underline;'>568</span><span>733.          84    85
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='text-decoration: underline;'>1</span><span>749. </span><span style='text-decoration: underline;'>1</span><span>754.  187</span><span style='text-decoration: underline;'>724</span><span>139.         100   101
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='text-decoration: underline;'>2</span><span>816. </span><span style='text-decoration: underline;'>2</span><span>822.  613</span><span style='text-decoration: underline;'>473</span><span>518.         155   156
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='text-decoration: underline;'>2</span><span>893. </span><span style='text-decoration: underline;'>2</span><span>899.  722</span><span style='text-decoration: underline;'>351</span><span>124.         158   159
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='text-decoration: underline;'>2</span><span>618. </span><span style='text-decoration: underline;'>2</span><span>624.  820</span><span style='text-decoration: underline;'>050</span><span>299.         141   142
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='text-decoration: underline;'>1</span><span>400. </span><span style='text-decoration: underline;'>1</span><span>405.  177</span><span style='text-decoration: underline;'>605</span><span>917.          79    80
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='text-decoration: underline;'>1</span><span>005. </span><span style='text-decoration: underline;'>1</span><span>009.  258</span><span style='text-decoration: underline;'>660</span><span>541.          54    55
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='text-decoration: underline;'>5</span><span>966. </span><span style='text-decoration: underline;'>5</span><span>974. </span><span style='text-decoration: underline;'>1</span><span>001</span><span style='text-decoration: underline;'>144</span><span>317.         335   336
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='text-decoration: underline;'>8</span><span>173. </span><span style='text-decoration: underline;'>8</span><span>181. </span><span style='text-decoration: underline;'>1</span><span>291</span><span style='text-decoration: underline;'>712</span><span>250.         461   462
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='text-decoration: underline;'>7</span><span>998. </span><span style='text-decoration: underline;'>8</span><span>006. </span><span style='text-decoration: underline;'>1</span><span>267</span><span style='text-decoration: underline;'>954</span><span>026.         451   452
+#&gt; </span><span style='color: #949494;'># ... with 25 more rows</span><span></div><div class='input'>
 <span class='co'># linear mixed effects model</span>
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/grouped_glance.html'>grouped_glance</a></span>(
   <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/sample.html'>sample_frac</a></span>(<span class='kw'>tbl</span> <span class='kw'>=</span> <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='no'><a href='https://ggplot2.tidyverse.org/reference/diamonds.html'>diamonds</a></span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>0.5</span>),
@@ -300,7 +310,7 @@ data argument in its function call." />
 #&gt; </span><span style='color: #BCBCBC;'>4</span><span> Premium   </span><span style='text-decoration: underline;'>1</span><span>557. -</span><span style='color: #BB0000;text-decoration: underline;'>60</span><span style='color: #BB0000;'>736.</span><span> </span><span style='text-decoration: underline;'>121</span><span>482. </span><span style='text-decoration: underline;'>121</span><span>516.  </span><span style='text-decoration: underline;'>121</span><span>472.        </span><span style='text-decoration: underline;'>6</span><span>917
 #&gt; </span><span style='color: #BCBCBC;'>5</span><span> Ideal     </span><span style='text-decoration: underline;'>1</span><span>257. -</span><span style='color: #BB0000;text-decoration: underline;'>92</span><span style='color: #BB0000;'>766.</span><span> </span><span style='text-decoration: underline;'>185</span><span>542. </span><span style='text-decoration: underline;'>185</span><span>579.  </span><span style='text-decoration: underline;'>185</span><span>532.       </span><span style='text-decoration: underline;'>10</span><span>833</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>

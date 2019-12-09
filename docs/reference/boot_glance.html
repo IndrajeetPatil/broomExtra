@@ -75,7 +75,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6.9000</span>
       </span>
     </div>
 
@@ -177,8 +177,7 @@ error rate.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Arguments to function.</p>
-<p>These dots support <a href='https://rlang.r-lib.org/reference/tidy-dots.html'>tidy-dots</a> features.</p></td>
+      <td><p>&lt;<a href='https://rlang.r-lib.org/reference/dyn-dots.html'>dynamic</a>&gt; Arguments for <code>.fn</code>.</p></td>
     </tr>
     </table>
 
@@ -278,20 +277,31 @@ error rate.</p></td>
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>mpg</span> ~ <span class='no'>wt</span>,
   <span class='kw'>na.action</span> <span class='kw'>=</span> <span class='no'>na.omit</span>
 )</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 500 x 14</span><span>
-#&gt;    splits id    r.squared adj.r.squared sigma statistic  p.value    df logLik
-#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.799         0.792  2.71     119.  5.63</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>     1  -</span><span style='color: #BB0000;'>76.2</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.726         0.717  2.49      79.6 6.06</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>73.6</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.754         0.746  3.29      92.1 1.18</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>82.4</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.731         0.722  2.74      81.7 4.59</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>     1  -</span><span style='color: #BB0000;'>76.6</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.700         0.690  3.33      69.9 2.49</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>     1  -</span><span style='color: #BB0000;'>82.9</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.830         0.824  2.19     146.  4.70</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-13</span><span>     1  -</span><span style='color: #BB0000;'>69.4</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.768         0.761  3.61      99.5 4.87</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-11</span><span>     1  -</span><span style='color: #BB0000;'>85.4</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.550         0.535  3.01      36.6 1.20</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 6</span><span>     1  -</span><span style='color: #BB0000;'>79.7</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.815         0.809  2.66     132.  1.57</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>     1  -</span><span style='color: #BB0000;'>75.7</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;spli</span><span>~ Boot~     0.680         0.670  3.32      63.8 6.43</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>     1  -</span><span style='color: #BB0000;'>82.8</span><span>
-#&gt; </span><span style='color: #949494;'># ... with 490 more rows, and 5 more variables: AIC </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, BIC </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>,
-#&gt; #   deviance </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, df.residual </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, nobs </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span></div><div class='input'>
+#&gt;    splits          id           r.squared adj.r.squared sigma statistic  p.value
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> </span><span style='color: #949494;'>&lt;split [32/11]&gt;</span><span> Bootstrap001     0.799         0.792  2.71     119.  5.63</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> </span><span style='color: #949494;'>&lt;split [32/9]&gt;</span><span>  Bootstrap002     0.726         0.717  2.49      79.6 6.06</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> </span><span style='color: #949494;'>&lt;split [32/10]&gt;</span><span> Bootstrap003     0.754         0.746  3.29      92.1 1.18</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> </span><span style='color: #949494;'>&lt;split [32/14]&gt;</span><span> Bootstrap004     0.731         0.722  2.74      81.7 4.59</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-10</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> </span><span style='color: #949494;'>&lt;split [32/11]&gt;</span><span> Bootstrap005     0.700         0.690  3.33      69.9 2.49</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> </span><span style='color: #949494;'>&lt;split [32/8]&gt;</span><span>  Bootstrap006     0.830         0.824  2.19     146.  4.70</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-13</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> </span><span style='color: #949494;'>&lt;split [32/12]&gt;</span><span> Bootstrap007     0.768         0.761  3.61      99.5 4.87</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-11</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> </span><span style='color: #949494;'>&lt;split [32/13]&gt;</span><span> Bootstrap008     0.550         0.535  3.01      36.6 1.20</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 6</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> </span><span style='color: #949494;'>&lt;split [32/15]&gt;</span><span> Bootstrap009     0.815         0.809  2.66     132.  1.57</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-12</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split [32/12]&gt;</span><span> Bootstrap010     0.680         0.670  3.32      63.8 6.43</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 9</span><span>
+#&gt;       df logLik   AIC   BIC deviance df.residual  nobs
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>     1  -</span><span style='color: #BB0000;'>76.2</span><span>  158.  163.     220.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>     1  -</span><span style='color: #BB0000;'>73.6</span><span>  153.  158.     186.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>     1  -</span><span style='color: #BB0000;'>82.4</span><span>  171.  175.     324.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>     1  -</span><span style='color: #BB0000;'>76.6</span><span>  159.  164.     225.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>     1  -</span><span style='color: #BB0000;'>82.9</span><span>  172.  176.     333.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>     1  -</span><span style='color: #BB0000;'>69.4</span><span>  145.  149.     144.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>     1  -</span><span style='color: #BB0000;'>85.4</span><span>  177.  181.     390.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>     1  -</span><span style='color: #BB0000;'>79.7</span><span>  165.  170.     273.          30    32
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>     1  -</span><span style='color: #BB0000;'>75.7</span><span>  157.  162.     212.          30    32
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>     1  -</span><span style='color: #BB0000;'>82.8</span><span>  172.  176.     331.          30    32
+#&gt; </span><span style='color: #949494;'># ... with 490 more rows</span><span></div><div class='input'>
 <span class='co'># example-2: linear mixed-effects model</span>
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>lme4</span>)
 
@@ -315,7 +325,7 @@ error rate.</p></td>
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #949494;'>&lt;split [180/68]&gt;</span><span> Bootstrap10  23.7  -</span><span style='color: #BB0000;'>859.</span><span> </span><span style='text-decoration: underline;'>1</span><span>730. </span><span style='text-decoration: underline;'>1</span><span>749.    </span><span style='text-decoration: underline;'>1</span><span>718.         174
 #&gt; </span><span style='color: #949494;'># ... with 15 more rows</span><span></div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>

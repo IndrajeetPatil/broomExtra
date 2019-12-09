@@ -14,9 +14,7 @@ grouped_augment(data, grouping.vars, ..f, ..., augment.args = list())
 
 \item{..f}{A function, or function name as a string.}
 
-\item{...}{Arguments to function.
-
-These dots support \link[rlang]{tidy-dots} features.}
+\item{...}{<\link[rlang:dyn-dots]{dynamic}> Arguments for \code{.fn}.}
 
 \item{augment.args}{A list of arguments to be used in the relevant \code{S3} method.}
 }

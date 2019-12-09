@@ -77,7 +77,7 @@ dataframe, if not, return a NULL." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.6.9000</span>
       </span>
     </div>
 
@@ -245,8 +245,19 @@ observations.</p></td>
 #&gt; </span><span style='color: #BCBCBC;'> 8</span><span>     290.     7 308        391. -</span><span style='color: #BB0000;'>101.</span><span>   0.162  1.81      325.  391.       0
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span>     431.     8 308        411.   19.6  0.219  0.106     335.  411.       0
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span>     466.     9 308        431.   35.7  0.293  0.571     346.  431.       0
-#&gt; </span><span style='color: #949494;'># ... with 170 more rows, and 4 more variables: .sqrtXwt </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, .sqrtrwt </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>,
-#&gt; #   .weights </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, .wtres </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span></div><div class='input'>
+#&gt;    .sqrtXwt .sqrtrwt .weights  .wtres
+#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>        1        1        1   -</span><span style='color: #BB0000;'>4.10</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>        1        1        1  -</span><span style='color: #BB0000;'>14.6</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>        1        1        1  -</span><span style='color: #BB0000;'>42.2</span><span> 
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>        1        1        1    8.78
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>        1        1        1   24.5 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>        1        1        1   62.7 
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>        1        1        1   10.5 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>        1        1        1 -</span><span style='color: #BB0000;'>101.</span><span>  
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>        1        1        1   19.6 
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>        1        1        1   35.7 
+#&gt; </span><span style='color: #949494;'># ... with 170 more rows</span><span></div><div class='input'>
 <span class='co'># linear model (`broom` will be used)</span>
 <span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/augment.html'>augment</a></span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 180 x 8</span><span>
@@ -264,7 +275,7 @@ observations.</p></td>
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span>     466.     9    346. -</span><span style='color: #BB0000;'>121.</span><span>       2.56   0.019</span><span style='text-decoration: underline;'>2</span><span>    47.0 0.063</span><span style='text-decoration: underline;'>9</span><span>   
 #&gt; </span><span style='color: #949494;'># ... with 170 more rows</span><span></div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
