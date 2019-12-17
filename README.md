@@ -8,7 +8,7 @@
 [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN
 Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.6-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-1.0.0-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![Daily downloads
 badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Weekly downloads
@@ -22,7 +22,7 @@ status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomE
 [![Travis build
 status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)
 [![R build
-status](https://github.com/r-lib/actions/workflows/R/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions?workflow=R)
+status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions?workflow=R-CMD-check)
 [![Codecov test
 coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)
 [![Coverage
@@ -30,7 +30,7 @@ Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?br
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2019--11--12-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2019--12--17-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-red.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![minimal R
 version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -42,14 +42,14 @@ data analysis workflows involving packages `broom` and `broom.mixed`.
 
 # Installation
 
-To get the latest, stable `CRAN` release (`0.0.6`):
+To get the latest, stable `CRAN` release (`1.0.0`):
 
 ``` r
 utils::install.packages(pkgs = "broomExtra")
 ```
 
 You can get the **development** version of the package from `GitHub`
-(`0.0.6.9000`). To see what new changes (and bug fixes) have been made
+(`1.0.0.9000`). To see what new changes (and bug fixes) have been made
 to the package since the last release on `CRAN`, you can check the
 detailed log of changes here:
 <https://indrajeetpatil.github.io/broomExtra/news/index.html>
@@ -133,15 +133,15 @@ broomExtra::tidy(
   conf.type = "Wald"
 )
 #> # A tibble: 7 x 8
-#>   term   estimate std.error statistic  p.value conf.low conf.high coef.type
-#>   <chr>     <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl> <chr>    
-#> 1 1|2       0.244     0.545    -2.59  9.66e- 3   0.0837     0.710 intercept
-#> 2 2|3       3.14      0.510     2.24  2.48e- 2   1.16       8.52  intercept
-#> 3 3|4      29.3       0.638     5.29  1.21e- 7   8.38     102.    intercept
-#> 4 4|5     140.        0.751     6.58  4.66e-11  32.1      610.    intercept
-#> 5 tempw~   10.2       0.701     3.31  9.28e- 4   2.58      40.2   location 
-#> 6 conta~    3.85      0.660     2.04  4.13e- 2   1.05      14.0   location 
-#> 7 tempw~    1.43      0.924     0.389 6.97e- 1   0.234      8.76  location
+#>   term        estimate std.error statistic  p.value conf.low conf.high coef.type
+#>   <chr>          <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl> <chr>    
+#> 1 1|2            0.244     0.545    -2.59  9.66e- 3   0.0837     0.710 intercept
+#> 2 2|3            3.14      0.510     2.24  2.48e- 2   1.16       8.52  intercept
+#> 3 3|4           29.3       0.638     5.29  1.21e- 7   8.38     102.    intercept
+#> 4 4|5          140.        0.751     6.58  4.66e-11  32.1      610.    intercept
+#> 5 tempwarm      10.2       0.701     3.31  9.28e- 4   2.58      40.2   location 
+#> 6 contactyes     3.85      0.660     2.04  4.13e- 2   1.05      14.0   location 
+#> 7 tempwarm:c~    1.43      0.924     0.389 6.97e- 1   0.234      8.76  location
 
 # unsupported object (the function will return `NULL` in such cases)
 broomExtra::tidy(list(1, c("x", "y")))
@@ -202,20 +202,20 @@ library(ordinal)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::augment(lmm.mod)
 #> # A tibble: 180 x 14
-#>    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu
-#>       <dbl> <dbl> <fct>     <dbl>   <dbl>  <dbl>   <dbl>  <dbl> <dbl>
-#>  1     250.     0 308        254.   -4.10 0.229  0.00496   251.  254.
-#>  2     259.     1 308        273.  -14.6  0.170  0.0402    262.  273.
-#>  3     251.     2 308        293.  -42.2  0.127  0.226     272.  293.
-#>  4     321.     3 308        313.    8.78 0.101  0.00731   283.  313.
-#>  5     357.     4 308        332.   24.5  0.0910 0.0506    293.  332.
-#>  6     415.     5 308        352.   62.7  0.0981 0.362     304.  352.
-#>  7     382.     6 308        372.   10.5  0.122  0.0134    314.  372.
-#>  8     290.     7 308        391. -101.   0.162  1.81      325.  391.
-#>  9     431.     8 308        411.   19.6  0.219  0.106     335.  411.
-#> 10     466.     9 308        431.   35.7  0.293  0.571     346.  431.
-#> # ... with 170 more rows, and 5 more variables: .offset <dbl>,
-#> #   .sqrtXwt <dbl>, .sqrtrwt <dbl>, .weights <dbl>, .wtres <dbl>
+#>    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset
+#>       <dbl> <dbl> <fct>     <dbl>   <dbl>  <dbl>   <dbl>  <dbl> <dbl>   <dbl>
+#>  1     250.     0 308        254.   -4.10 0.229  0.00496   251.  254.       0
+#>  2     259.     1 308        273.  -14.6  0.170  0.0402    262.  273.       0
+#>  3     251.     2 308        293.  -42.2  0.127  0.226     272.  293.       0
+#>  4     321.     3 308        313.    8.78 0.101  0.00731   283.  313.       0
+#>  5     357.     4 308        332.   24.5  0.0910 0.0506    293.  332.       0
+#>  6     415.     5 308        352.   62.7  0.0981 0.362     304.  352.       0
+#>  7     382.     6 308        372.   10.5  0.122  0.0134    314.  372.       0
+#>  8     290.     7 308        391. -101.   0.162  1.81      325.  391.       0
+#>  9     431.     8 308        411.   19.6  0.219  0.106     335.  411.       0
+#> 10     466.     9 308        431.   35.7  0.293  0.571     346.  431.       0
+#> # ... with 170 more rows, and 4 more variables: .sqrtXwt <dbl>, .sqrtrwt <dbl>,
+#> #   .weights <dbl>, .wtres <dbl>
 
 # linear model
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
@@ -310,18 +310,18 @@ broomExtra::grouped_tidy(
   tidy.args = list(conf.int = TRUE, conf.level = 0.99)
 )
 #> # A tibble: 25 x 9
-#>    cut   effect group term  estimate std.error statistic conf.low conf.high
-#>    <ord> <chr>  <chr> <chr>    <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
-#>  1 Fair  fixed  <NA>  carat 3800.         228.      16.7    3212.     4387.
-#>  2 Fair  ran_p~ color sd__~ 2158.          NA       NA        NA        NA 
-#>  3 Fair  ran_p~ color cor_~   -0.975       NA       NA        NA        NA 
-#>  4 Fair  ran_p~ color sd__~ 2545.          NA       NA        NA        NA 
-#>  5 Fair  ran_p~ Resi~ sd__~ 1830.          NA       NA        NA        NA 
-#>  6 Good  fixed  <NA>  carat 9217.         105.      87.6    8946.     9488.
-#>  7 Good  ran_p~ color sd__~ 2686.          NA       NA        NA        NA 
-#>  8 Good  ran_p~ color cor_~    0.998       NA       NA        NA        NA 
-#>  9 Good  ran_p~ color sd__~ 1609.          NA       NA        NA        NA 
-#> 10 Good  ran_p~ Resi~ sd__~ 1373.          NA       NA        NA        NA 
+#>    cut   effect  group  term     estimate std.error statistic conf.low conf.high
+#>    <ord> <chr>   <chr>  <chr>       <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
+#>  1 Fair  fixed   <NA>   carat    3800.         228.      16.7    3212.     4387.
+#>  2 Fair  ran_pa~ color  sd__(In~ 2158.          NA       NA        NA        NA 
+#>  3 Fair  ran_pa~ color  cor__(I~   -0.975       NA       NA        NA        NA 
+#>  4 Fair  ran_pa~ color  sd__car~ 2545.          NA       NA        NA        NA 
+#>  5 Fair  ran_pa~ Resid~ sd__Obs~ 1830.          NA       NA        NA        NA 
+#>  6 Good  fixed   <NA>   carat    9217.         105.      87.6    8946.     9488.
+#>  7 Good  ran_pa~ color  sd__(In~ 2686.          NA       NA        NA        NA 
+#>  8 Good  ran_pa~ color  cor__(I~    0.998       NA       NA        NA        NA 
+#>  9 Good  ran_pa~ color  sd__car~ 1609.          NA       NA        NA        NA 
+#> 10 Good  ran_pa~ Resid~ sd__Obs~ 1373.          NA       NA        NA        NA 
 #> # ... with 15 more rows
 ```
 
@@ -340,20 +340,20 @@ broomExtra::grouped_glance(
   na.action = na.omit
 )
 #> # A tibble: 35 x 14
-#>    cut   color r.squared adj.r.squared sigma statistic   p.value    df
-#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>
-#>  1 Fair  D         0.884         0.883 1857.      641. 4.45e- 41     1
-#>  2 Fair  E         0.876         0.875 1370.      708. 3.52e- 47     1
-#>  3 Fair  F         0.874         0.873 1989.     1071. 1.68e- 71     1
-#>  4 Fair  G         0.849         0.848 2138.      887. 1.03e- 66     1
-#>  5 Fair  H         0.876         0.875 2412.      998. 7.68e- 66     1
-#>  6 Fair  I         0.915         0.914 1499.      850. 4.86e- 44     1
-#>  7 Fair  J         0.885         0.883 2189.      416. 4.80e- 27     1
-#>  8 Good  D         0.860         0.860 1729.     2065. 2.66e-145     1
-#>  9 Good  E         0.870         0.870 1674.     3084. 2.50e-206     1
-#> 10 Good  F         0.873         0.873 1677.     3110. 1.76e-204     1
-#> # ... with 25 more rows, and 6 more variables: logLik <dbl>, AIC <dbl>,
-#> #   BIC <dbl>, deviance <dbl>, df.residual <int>, nobs <int>
+#>    cut   color r.squared adj.r.squared sigma statistic   p.value    df logLik
+#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl>
+#>  1 Fair  D         0.884         0.883 1857.      641. 4.45e- 41     1  -760.
+#>  2 Fair  E         0.876         0.875 1370.      708. 3.52e- 47     1  -872.
+#>  3 Fair  F         0.874         0.873 1989.     1071. 1.68e- 71     1 -1406.
+#>  4 Fair  G         0.849         0.848 2138.      887. 1.03e- 66     1 -1444.
+#>  5 Fair  H         0.876         0.875 2412.      998. 7.68e- 66     1 -1307.
+#>  6 Fair  I         0.915         0.914 1499.      850. 4.86e- 44     1  -698.
+#>  7 Fair  J         0.885         0.883 2189.      416. 4.80e- 27     1  -501.
+#>  8 Good  D         0.860         0.860 1729.     2065. 2.66e-145     1 -2981.
+#>  9 Good  E         0.870         0.870 1674.     3084. 2.50e-206     1 -4084.
+#> 10 Good  F         0.873         0.873 1677.     3110. 1.76e-204     1 -3997.
+#> # ... with 25 more rows, and 5 more variables: AIC <dbl>, BIC <dbl>,
+#> #   deviance <dbl>, df.residual <int>, nobs <int>
 
 # linear mixed effects model (model summaries across grouping combinations)
 broomExtra::grouped_glance(
@@ -387,18 +387,18 @@ broomExtra::grouped_augment(
   formula = price ~ carat - 1
 )
 #> # A tibble: 53,940 x 10
-#>    cut   color price carat .fitted .resid .std.resid    .hat .sigma .cooksd
-#>    <ord> <ord> <int> <dbl>   <dbl>  <dbl>      <dbl>   <dbl>  <dbl>   <dbl>
-#>  1 Fair  D      2848  0.75   3795.   947.     -0.522 0.00342  1822. 9.33e-4
-#>  2 Fair  D      2858  0.71   3593.   735.     -0.405 0.00306  1823. 5.03e-4
-#>  3 Fair  D      2885  0.9    4554.  1669.     -0.920 0.00492  1819. 4.19e-3
-#>  4 Fair  D      2974  1      5060.  2086.     -1.15  0.00607  1816. 8.09e-3
-#>  5 Fair  D      3003  1.01   5111.  2108.     -1.16  0.00620  1816. 8.43e-3
-#>  6 Fair  D      3047  0.73   3694.   647.     -0.356 0.00324  1823. 4.12e-4
-#>  7 Fair  D      3077  0.71   3593.   516.     -0.284 0.00306  1823. 2.48e-4
-#>  8 Fair  D      3079  0.91   4605.  1526.     -0.841 0.00503  1820. 3.58e-3
-#>  9 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 2.74e-3
-#> 10 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 2.74e-3
+#>    cut   color price carat .fitted .resid .std.resid    .hat .sigma  .cooksd
+#>    <ord> <ord> <int> <dbl>   <dbl>  <dbl>      <dbl>   <dbl>  <dbl>    <dbl>
+#>  1 Fair  D      2848  0.75   3795.   947.     -0.522 0.00342  1822. 0.000933
+#>  2 Fair  D      2858  0.71   3593.   735.     -0.405 0.00306  1823. 0.000503
+#>  3 Fair  D      2885  0.9    4554.  1669.     -0.920 0.00492  1819. 0.00419 
+#>  4 Fair  D      2974  1      5060.  2086.     -1.15  0.00607  1816. 0.00809 
+#>  5 Fair  D      3003  1.01   5111.  2108.     -1.16  0.00620  1816. 0.00843 
+#>  6 Fair  D      3047  0.73   3694.   647.     -0.356 0.00324  1823. 0.000412
+#>  7 Fair  D      3077  0.71   3593.   516.     -0.284 0.00306  1823. 0.000248
+#>  8 Fair  D      3079  0.91   4605.  1526.     -0.841 0.00503  1820. 0.00358 
+#>  9 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 
+#> 10 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 
 #> # ... with 53,930 more rows
 
 # linear mixed-effects model
@@ -410,191 +410,21 @@ broomExtra::grouped_augment(
   control = lme4::lmerControl(optimizer = "bobyqa")
 )
 #> # A tibble: 26,970 x 15
-#>    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu
-#>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>   <dbl>  <dbl> <dbl>
-#>  1 Fair   8818  1.52 H       7001.  1817. 0.00806 8.37e-3  3519. 7001.
-#>  2 Fair   1881  0.65 F       2104.  -223. 0.00225 3.46e-5  1505. 2104.
-#>  3 Fair   2376  1.2  G       5439. -3063. 0.00651 1.91e-2  2778. 5439.
-#>  4 Fair   1323  0.5  D       1069.   254. 0.00281 5.65e-5  1158. 1069.
-#>  5 Fair   3282  0.92 F       3935.  -653. 0.00338 4.48e-4  2130. 3935.
-#>  6 Fair   2500  0.7  H       2259.   241. 0.00219 3.96e-5  1621. 2259.
-#>  7 Fair  13853  1.5  F       7868.  5985. 0.0149  1.70e-1  3473. 7868.
-#>  8 Fair   3869  1.01 H       4052.  -183. 0.00287 2.97e-5  2338. 4052.
-#>  9 Fair   1811  0.7  H       2259.  -448. 0.00219 1.37e-4  1621. 2259.
-#> 10 Fair   2788  1.01 E       4406. -1618. 0.0135  1.12e-2  2338. 4406.
-#> # ... with 26,960 more rows, and 5 more variables: .offset <dbl>,
-#> #   .sqrtXwt <dbl>, .sqrtrwt <dbl>, .weights <dbl>, .wtres <dbl>
+#>    cut   price carat color .fitted .resid    .hat .cooksd .fixed   .mu .offset
+#>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>   <dbl>  <dbl> <dbl>   <dbl>
+#>  1 Fair   8818  1.52 H       7001.  1817. 0.00806 8.37e-3  3519. 7001.       0
+#>  2 Fair   1881  0.65 F       2104.  -223. 0.00225 3.46e-5  1505. 2104.       0
+#>  3 Fair   2376  1.2  G       5439. -3063. 0.00651 1.91e-2  2778. 5439.       0
+#>  4 Fair   1323  0.5  D       1069.   254. 0.00281 5.65e-5  1158. 1069.       0
+#>  5 Fair   3282  0.92 F       3935.  -653. 0.00338 4.48e-4  2130. 3935.       0
+#>  6 Fair   2500  0.7  H       2259.   241. 0.00219 3.96e-5  1621. 2259.       0
+#>  7 Fair  13853  1.5  F       7868.  5985. 0.0149  1.70e-1  3473. 7868.       0
+#>  8 Fair   3869  1.01 H       4052.  -183. 0.00287 2.97e-5  2338. 4052.       0
+#>  9 Fair   1811  0.7  H       2259.  -448. 0.00219 1.37e-4  1621. 2259.       0
+#> 10 Fair   2788  1.01 E       4406. -1618. 0.0135  1.12e-2  2338. 4406.       0
+#> # ... with 26,960 more rows, and 4 more variables: .sqrtXwt <dbl>,
+#> #   .sqrtrwt <dbl>, .weights <dbl>, .wtres <dbl>
 ```
-
-# `boot_` variants of generics
-
-`boot` variants of the generic functions (`tidy`, `glance`, and
-`augment`) make it easy to create a tidy dataframe of estimates from
-each of the bootstrap samples (created using `rsample::bootstraps`).
-Currently, these functions work only for methods that depend on a `data`
-argument (e.g., `lme4::lmer`), but not for functions that don’t (e.g.,
-`stats::chisq.test()`).
-
-## `boot_tidy`
-
-Let’s see an example with linear mixed-effects regression.
-
-``` r
-# setup
-set.seed(123)
-library(lme4)
-library(ggplot2)
-library(broomExtra)
-
-# dataframe with estimates from each of the 25 bootstrap sample
-(df_boot <- broomExtra::boot_tidy(
-  data = sleepstudy,
-  times = 100,
-  ..f = lme4::lmer,
-  formula = Reaction ~ Days + (Days | Subject),
-  control = lme4::lmerControl(
-    check.conv.grad = .makeCC("ignore", tol = 2e-3, relTol = NULL),
-    check.conv.singular = .makeCC(action = "ignore", tol = 1e-4),
-    check.conv.hess = .makeCC(action = "ignore", tol = 1e-6)
-  ),
-  tidy.args = list(effects = "fixed")
-))
-#> # A tibble: 200 x 7
-#>    splits         id          effect term      estimate std.error statistic
-#>    <list>         <chr>       <chr>  <chr>        <dbl>     <dbl>     <dbl>
-#>  1 <split [180/6~ Bootstrap0~ fixed  (Interce~   251.        7.59     33.1 
-#>  2 <split [180/6~ Bootstrap0~ fixed  Days         10.2       1.68      6.04
-#>  3 <split [180/6~ Bootstrap0~ fixed  (Interce~   247.        8.93     27.7 
-#>  4 <split [180/6~ Bootstrap0~ fixed  Days         12.6       2.46      5.11
-#>  5 <split [180/6~ Bootstrap0~ fixed  (Interce~   254.        7.89     32.2 
-#>  6 <split [180/6~ Bootstrap0~ fixed  Days         10.3       1.72      6.00
-#>  7 <split [180/6~ Bootstrap0~ fixed  (Interce~   254.        5.78     44.0 
-#>  8 <split [180/6~ Bootstrap0~ fixed  Days          9.47      1.48      6.41
-#>  9 <split [180/6~ Bootstrap0~ fixed  (Interce~   246.        7.12     34.5 
-#> 10 <split [180/6~ Bootstrap0~ fixed  Days         11.4       1.66      6.88
-#> # ... with 190 more rows
-
-# plotting estimates from each bootstrapped sample
-dplyr::filter(df_boot, term != "(Intercept)") %>%
-  tibble::rowid_to_column(.data = .) %>%
-  ggplot(data = ., aes(rowid, estimate)) +
-  geom_point(size = 3, alpha = 0.5, color = "red") + geom_line() +
-  ggstatsplot::theme_ggstatsplot() +
-  labs(
-    title = "regression estimates from bootstrap samples",
-    x = "bootstrap sample",
-    y = "regression estimate"
-  )
-```
-
-<img src="man/figures/README-boot_tidy-1.png" width="100%" />
-
-## `boot_glance`
-
-A similar function can also be used to extract model summaries from
-bootstrapped samples.
-
-``` r
-# setup
-set.seed(123)
-library(ggplot2)
-
-# dataframe with model summaries from each of the 500 bootstrap samples
-(df_glance <-
-  broomExtra::boot_glance(
-    data = mtcars,
-    times = 500,
-    ..f = stats::lm,
-    formula = mpg ~ wt,
-    na.action = na.omit
-  )
-)
-#> # A tibble: 500 x 14
-#>    splits id    r.squared adj.r.squared sigma statistic  p.value    df
-#>    <list> <chr>     <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>
-#>  1 <spli~ Boot~     0.799         0.792  2.71     119.  5.63e-12     1
-#>  2 <spli~ Boot~     0.726         0.717  2.49      79.6 6.06e-10     1
-#>  3 <spli~ Boot~     0.754         0.746  3.29      92.1 1.18e-10     1
-#>  4 <spli~ Boot~     0.731         0.722  2.74      81.7 4.59e-10     1
-#>  5 <spli~ Boot~     0.700         0.690  3.33      69.9 2.49e- 9     1
-#>  6 <spli~ Boot~     0.830         0.824  2.19     146.  4.70e-13     1
-#>  7 <spli~ Boot~     0.768         0.761  3.61      99.5 4.87e-11     1
-#>  8 <spli~ Boot~     0.550         0.535  3.01      36.6 1.20e- 6     1
-#>  9 <spli~ Boot~     0.815         0.809  2.66     132.  1.57e-12     1
-#> 10 <spli~ Boot~     0.680         0.670  3.32      63.8 6.43e- 9     1
-#> # ... with 490 more rows, and 6 more variables: logLik <dbl>, AIC <dbl>,
-#> #   BIC <dbl>, deviance <dbl>, df.residual <int>, nobs <int>
-
-# plotting log-likelihood for the model for each of the samples
-tibble::rowid_to_column(.data = df_glance) %>%
-  ggplot(data = ., aes(rowid, logLik)) +
-  geom_point(size = 3, alpha = 0.5, color = "darkgreen") + geom_line() +
-  ggstatsplot::theme_ggstatsplot() +
-  labs(
-    title = "log-likelihood of the model from bootstrap samples",
-    x = "bootstrap sample",
-    y = "log-likelihood"
-  )
-```
-
-<img src="man/figures/README-boot_glance-1.png" width="100%" />
-
-## `boot_augment`
-
-``` r
-# setup
-set.seed(123)
-library(ggplot2)
-
-# dataframe with augmented data from each of the 100 bootstrap samples
-(df_augment <-
-  broomExtra::boot_augment(
-    data = mtcars,
-    times = 500,
-    ..f = stats::lm,
-    formula = mpg ~ wt,
-    na.action = na.omit,
-    augment.args = list(se_fit = TRUE)
-  )
-)
-#> # A tibble: 16,000 x 12
-#>    splits id    .rownames   mpg    wt .fitted .se.fit  .resid .std.resid
-#>    <list> <chr> <chr>     <dbl> <dbl>   <dbl>   <dbl>   <dbl>      <dbl>
-#>  1 <spli~ Boot~ Maserati~  15    3.57   18.0    0.579  2.96      -1.12  
-#>  2 <spli~ Boot~ Cadillac~  10.4  5.25    7.71   1.35  -2.69       1.15  
-#>  3 <spli~ Boot~ Honda Ci~  30.4  1.62   29.9    0.902 -0.522      0.205 
-#>  4 <spli~ Boot~ Merc 450~  15.2  3.78   16.7    0.653  1.48      -0.563 
-#>  5 <spli~ Boot~ Datsun 7~  22.8  2.32   25.6    0.605  2.78      -1.05  
-#>  6 <spli~ Boot~ Merc 280   19.2  3.44   18.8    0.542 -0.449      0.170 
-#>  7 <spli~ Boot~ Fiat 128   32.4  2.2    26.3    0.649 -6.09       2.32  
-#>  8 <spli~ Boot~ Dodge Ch~  15.5  3.52   18.3    0.564  2.76      -1.04  
-#>  9 <spli~ Boot~ Merc 280C  17.8  3.44   18.8    0.542  0.951     -0.359 
-#> 10 <spli~ Boot~ Hornet S~  18.7  3.44   18.8    0.542  0.0506    -0.0191
-#> # ... with 15,990 more rows, and 3 more variables: .hat <dbl>,
-#> #   .sigma <dbl>, .cooksd <dbl>
-
-# plotting those estimates
-dplyr::group_by(.data = df_augment, id) %>%
-  dplyr::summarise(.data = ., mean.resid = mean(.resid)) %>%
-  dplyr::ungroup(x = .) %>%
-  tibble::rowid_to_column(.data = .) %>% # creating a plot
-  ggplot(data = ., aes(rowid, mean.resid)) +
-  geom_point(size = 3, alpha = 0.5, color = "blue") +
-  geom_line(color = "black") +
-  geom_hline(aes(yintercept = 0),
-    color = "red",
-    size = 1,
-    linetype = "dashed"
-  ) +
-  ggstatsplot::theme_ggstatsplot() +
-  labs(
-    title = "mean difference between fitted and observed values from bootstrap samples",
-    x = "bootstrap sample",
-    y = "residual score"
-  )
-```
-
-<img src="man/figures/README-boot_augment-1.png" width="100%" />
 
 # Code coverage
 

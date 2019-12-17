@@ -19,7 +19,7 @@
 #' @inherit generics::tidy return value
 #' @inheritSection generics::tidy Methods
 #'
-#' @seealso \code{\link{grouped_tidy}}, \code{\link{boot_tidy}}
+#' @seealso \code{\link{grouped_tidy}}
 #'
 #' @examples
 #' set.seed(123)
@@ -84,7 +84,7 @@ tidy <- function(x, ...) {
 #' @inherit generics::glance return value
 #' @inheritSection generics::glance Methods
 #'
-#' @seealso \code{\link{grouped_glance}}, \code{\link{boot_glance}}
+#' @seealso \code{\link{grouped_glance}}
 #'
 #' @examples
 #' set.seed(123)
@@ -137,7 +137,7 @@ glance <- function(x, ...) {
 #' @inherit generics::augment return value
 #' @inheritSection generics::augment Methods
 #'
-#' @seealso \code{\link{grouped_augment}}, \code{\link{boot_augment}}
+#' @seealso \code{\link{grouped_augment}}
 #'
 #' @examples
 #' set.seed(123)

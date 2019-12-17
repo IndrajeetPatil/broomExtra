@@ -44,7 +44,7 @@ lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::augment(lm.mod)
 }
 \seealso{
-\code{\link{grouped_augment}}, \code{\link{boot_augment}}
+\code{\link{grouped_augment}}
 }
 \author{
 \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}

@@ -1,4 +1,6 @@
-# broomExtra 0.0.6.9000
+# broomExtra 1.0.0
+
+  - Deprecated `boot_` functions as they added nothing over and above `rsample`.
  
 # broomExtra 0.0.6
  
