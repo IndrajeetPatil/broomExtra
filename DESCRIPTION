@@ -28,7 +28,6 @@ Imports:
     broom.mixed (>= 0.2.4),
     dplyr (>= 0.8.3),
     magrittr (>= 1.5),
-    purrr (>= 0.3.3),
     rlang (>= 0.4.1)
 Suggests: 
     generics,
