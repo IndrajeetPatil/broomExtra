@@ -40,7 +40,7 @@ lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 }
 \seealso{
-\code{\link{grouped_glance}}, \code{\link{boot_glance}}
+\code{\link{grouped_glance}}
 }
 \author{
 \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}

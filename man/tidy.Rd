@@ -47,7 +47,7 @@ broomExtra::tidy(x = lm.mod, conf.int = TRUE)
 broomExtra::tidy(list(1, c("x", "y")))
 }
 \seealso{
-\code{\link{grouped_tidy}}, \code{\link{boot_tidy}}
+\code{\link{grouped_tidy}}
 }
 \author{
 \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}

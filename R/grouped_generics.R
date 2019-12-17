@@ -18,7 +18,7 @@
 #' @inherit tidy return value
 #' @inheritSection tidy Methods
 #'
-#' @seealso \code{\link{tidy}}, \code{\link{boot_tidy}}
+#' @seealso \code{\link{tidy}}
 #'
 #' @examples
 #' set.seed(123)
@@ -97,7 +97,7 @@ grouped_tidy <- function(data,
 #' @inherit glance return value
 #' @inheritSection glance Methods
 #'
-#' @seealso \code{\link{glance}}, \code{\link{boot_glance}}
+#' @seealso \code{\link{glance}}
 #'
 #' @examples
 #' set.seed(123)
@@ -174,7 +174,7 @@ grouped_glance <- function(data,
 #' @inherit augment return value
 #' @inheritSection augment Methods
 #'
-#' @seealso \code{\link{augment}}, \code{\link{boot_augment}}
+#' @seealso \code{\link{augment}}
 #'
 #' @examples
 #' set.seed(123)

@@ -60,7 +60,7 @@ broomExtra::grouped_augment(
 )
 }
 \seealso{
-\code{\link{augment}}, \code{\link{boot_augment}}
+\code{\link{augment}}
 }
 \author{
 \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}

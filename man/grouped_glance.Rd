@@ -54,7 +54,7 @@ broomExtra::grouped_glance(
 )
 }
 \seealso{
-\code{\link{glance}}, \code{\link{boot_glance}}
+\code{\link{glance}}
 }
 \author{
 \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
