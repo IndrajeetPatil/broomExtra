@@ -31,8 +31,8 @@ Coverage summary is created using the
 | Object                                           | Coverage (%) |
 | :----------------------------------------------- | :----------: |
 | broomExtra                                       |     100      |
-| [R/generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/R/generics.R)                  |     100      |
-| [R/grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/R/grouped_generics.R) |     100      |
+| [R/generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/generics.R)                  |     100      |
+| [R/grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/R/grouped_generics.R) |     100      |
 
 <br>
 
@@ -43,8 +43,8 @@ Unit Test summary is created using the
 
 | file                                                         |  n | time | error | failed | skipped | warning |
 | :----------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-generics.R)                  | 11 | 0.32 |     0 |      0 |       0 |       0 |
-| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-grouped_generics.R) |  6 | 8.22 |     0 |      0 |       0 |       0 |
+| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-generics.R)                  | 11 | 0.74 |     0 |      0 |       0 |       0 |
+| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-grouped_generics.R) |  6 | 7.00 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -52,12 +52,12 @@ Unit Test summary is created using the
 
 | file                                                             | context                 |           test            | status | n | time |
 | :--------------------------------------------------------------- | :---------------------- | :-----------------------: | :----- | -: | ---: |
-| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-generics.R#L13_L15)              | generics work           |      `tidy()` works       | PASS   | 5 | 0.20 |
-| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-generics.R#L50_L52)              | generics work           |     `glance()` works      | PASS   | 3 | 0.05 |
-| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-generics.R#L76_L78)              | generics work           |     `augment()` works     | PASS   | 3 | 0.07 |
-| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-grouped_generics.R#L20) | grouped\_generics works |  `grouped_tidy()` works   | PASS   | 2 | 2.77 |
-| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.46 |
-| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/remove_boot_generics/tests/testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.99 |
+| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-generics.R#L13_L15)              | generics work           |      `tidy()` works       | PASS   | 5 | 0.58 |
+| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-generics.R#L50_L52)              | generics work           |     `glance()` works      | PASS   | 3 | 0.08 |
+| [test-generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-generics.R#L76_L78)              | generics work           |     `augment()` works     | PASS   | 3 | 0.08 |
+| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-grouped_generics.R#L20) | grouped\_generics works |  `grouped_tidy()` works   | PASS   | 2 | 2.79 |
+| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.02 |
+| [test-grouped\_generics.R](https://github.com/IndrajeetPatil/broomExtra/tree/master/tests/testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.19 |
 
 </details>
 
