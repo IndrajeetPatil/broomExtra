@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-17 December, 2019 22:19:37
+01 January, 2020 17:36:46
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -28,8 +28,8 @@ Unit Test summary is created using the
 
 | file                                                         |  n | time | error | failed | skipped | warning |
 | :----------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test-generics.R](testthat/test-generics.R)                  | 11 | 0.74 |     0 |      0 |       0 |       0 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 7.00 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R)                  | 11 | 0.25 |     0 |      0 |       0 |       0 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 7.18 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -37,12 +37,12 @@ Unit Test summary is created using the
 
 | file                                                             | context                 |           test            | status | n | time |
 | :--------------------------------------------------------------- | :---------------------- | :-----------------------: | :----- | -: | ---: |
-| [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           |      `tidy()` works       | PASS   | 5 | 0.58 |
+| [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           |      `tidy()` works       | PASS   | 5 | 0.09 |
 | [test-generics.R](testthat/test-generics.R#L50_L52)              | generics work           |     `glance()` works      | PASS   | 3 | 0.08 |
 | [test-generics.R](testthat/test-generics.R#L76_L78)              | generics work           |     `augment()` works     | PASS   | 3 | 0.08 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works |  `grouped_tidy()` works   | PASS   | 2 | 2.79 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.02 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.19 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works |  `grouped_tidy()` works   | PASS   | 2 | 2.51 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.07 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.60 |
 
 </details>
 
@@ -52,7 +52,7 @@ Unit Test summary is created using the
 
 | Field    | Value                            |
 | :------- | :------------------------------- |
-| Version  | R version 3.6.1 (2019-07-05)     |
+| Version  | R version 3.6.2 (2019-12-12)     |
 | Platform | x86\_64-w64-mingw32/x64 (64-bit) |
 | Running  | Windows 10 x64 (build 16299)     |
 | Language | English\_United States           |

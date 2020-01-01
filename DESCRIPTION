@@ -24,11 +24,11 @@ BugReports: https://github.com/IndrajeetPatil/broomExtra/issues
 Depends: 
     R (>= 3.5.0)
 Imports: 
-    broom (>= 0.5.2),
+    broom (>= 0.5.3),
     broom.mixed (>= 0.2.4),
     dplyr (>= 0.8.3),
     magrittr (>= 1.5),
-    rlang (>= 0.4.1)
+    rlang (>= 0.4.2)
 Suggests: 
     generics,
     ggplot2,

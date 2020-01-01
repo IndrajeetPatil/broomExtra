@@ -18,10 +18,10 @@
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.1",
+    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.1 (2019-07-05)",
+  "runtimePlatform": "R version 3.6.2 (2019-12-12)",
   "author": [
     {
       "@type": "Person",
@@ -161,7 +161,7 @@
       "@type": "SoftwareApplication",
       "identifier": "broom",
       "name": "broom",
-      "version": ">= 0.5.2",
+      "version": ">= 0.5.3",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -213,7 +213,7 @@
       "@type": "SoftwareApplication",
       "identifier": "rlang",
       "name": "rlang",
-      "version": ">= 0.4.1",
+      "version": ">= 0.4.2",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",

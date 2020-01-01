@@ -12,8 +12,8 @@
 #' @note For available methods, see-
 #' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
 #'
-#' @importFrom rlang !! !!! exec quo_squash enquo
-#' @importFrom dplyr group_by ungroup mutate group_map
+#' @importFrom rlang !! !!! exec enquos
+#' @importFrom dplyr group_by_at ungroup mutate group_modify
 #'
 #' @inherit tidy return value
 #' @inheritSection tidy Methods
@@ -51,16 +51,8 @@ grouped_tidy <- function(data,
                          ..f,
                          ...,
                          tidy.args = list()) {
-  # check how many variables were entered for grouping variable vector
-  grouping.vars <- as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
-  grouping.vars <-
-    if (length(grouping.vars) == 1) {
-      grouping.vars
-    } else {
-      grouping.vars[-1]
-    }
 
-  # functions passed to `group_map` must accept
+  # functions passed to `group_modify` must accept
   # `.x` and `.y` arguments, where `.x` is the data
   tidy_group <- function(.x, .y) {
 
@@ -72,13 +64,10 @@ grouped_tidy <- function(data,
   }
 
   # dataframe with grouped analysis results
-  df_results <- data %>%
-    dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
+  data %>%
+    dplyr::group_by_at(rlang::enquos(grouping.vars), .drop = TRUE) %>%
     dplyr::group_modify(.f = tidy_group, keep = TRUE) %>%
     dplyr::ungroup(x = .)
-
-  # return the final dataframe with results
-  return(df_results)
 }
 
 #' @title Model summary output from grouped analysis of any function that has
@@ -91,8 +80,8 @@ grouped_tidy <- function(data,
 #'
 #' @inheritParams grouped_tidy
 #'
-#' @importFrom rlang !! !!! exec quo_squash enquo
-#' @importFrom dplyr group_by ungroup mutate group_map group_modify
+#' @importFrom rlang !! !!! exec enquos
+#' @importFrom dplyr group_by_at ungroup mutate group_modify
 #'
 #' @inherit glance return value
 #' @inheritSection glance Methods
@@ -127,16 +116,7 @@ grouped_glance <- function(data,
                            grouping.vars,
                            ..f,
                            ...) {
-  # check how many variables were entered for grouping variable vector
-  grouping.vars <- as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
-  grouping.vars <-
-    if (length(grouping.vars) == 1) {
-      grouping.vars
-    } else {
-      grouping.vars[-1]
-    }
-
-  # functions passed to `group_map` must accept
+  # functions passed to `group_modify` must accept
   # `.x` and `.y` arguments, where `.x` is the data
   glance_group <- function(.x, .y) {
 
@@ -148,13 +128,10 @@ grouped_glance <- function(data,
   }
 
   # dataframe with grouped analysis results
-  df_results <- data %>%
-    dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
+  data %>%
+    dplyr::group_by_at(rlang::enquos(grouping.vars), .drop = TRUE) %>%
     dplyr::group_modify(.f = glance_group, keep = TRUE) %>%
     dplyr::ungroup(x = .)
-
-  # return the final dataframe with results
-  return(df_results)
 }
 
 #' @title Augmented data from grouped analysis of any function that has `data`
@@ -168,8 +145,8 @@ grouped_glance <- function(data,
 #' @inheritParams grouped_tidy
 #' @param augment.args A list of arguments to be used in the relevant `S3` method.
 #'
-#' @importFrom rlang !! !!! exec quo_squash enquo
-#' @importFrom dplyr group_by ungroup mutate group_map
+#' @importFrom rlang !! !!! exec enquos
+#' @importFrom dplyr group_by_at ungroup mutate group_modify
 #'
 #' @inherit augment return value
 #' @inheritSection augment Methods
@@ -206,16 +183,7 @@ grouped_augment <- function(data,
                             ..f,
                             ...,
                             augment.args = list()) {
-  # check how many variables were entered for grouping variable vector
-  grouping.vars <- as.list(rlang::quo_squash(rlang::enquo(grouping.vars)))
-  grouping.vars <-
-    if (length(grouping.vars) == 1) {
-      grouping.vars
-    } else {
-      grouping.vars[-1]
-    }
-
-  # functions passed to `group_map` must accept
+  # functions passed to `group_modify` must accept
   # `.x` and `.y` arguments, where `.x` is the data
   augment_group <- function(.x, .y) {
 
@@ -227,11 +195,8 @@ grouped_augment <- function(data,
   }
 
   # dataframe with grouped analysis results
-  df_results <- data %>%
-    dplyr::group_by(.data = ., !!!grouping.vars, .drop = TRUE) %>%
+  data %>%
+    dplyr::group_by_at(rlang::enquos(grouping.vars), .drop = TRUE) %>%
     dplyr::group_modify(.f = augment_group, keep = TRUE) %>%
     dplyr::ungroup(x = .)
-
-  # return the final dataframe with results
-  return(df_results)
 }
