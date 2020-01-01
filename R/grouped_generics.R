@@ -197,7 +197,7 @@ grouped_augment <- function(data,
 
 grouped_cleanup <- function(data, .vars, .f) {
   data %>%
-  dplyr::group_by_at(.tbl = ., .vars = .vars, .drop = TRUE) %>%
-  dplyr::group_modify(.tbl = ., .f = .f, keep = TRUE) %>%
-  dplyr::ungroup(x = .)
+  dplyr::group_by_at(.vars, .drop = TRUE) %>%
+  dplyr::group_modify(.f, keep = TRUE) %>%
+  dplyr::ungroup(.)
 }
