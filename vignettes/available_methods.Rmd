@@ -55,11 +55,14 @@ library(broom.mixed)
 # function to extract methods
 method_df <- function(method_name) {
   m <- as.vector(methods(method_name))
-  dplyr::tibble(class = stringr::str_remove(
-    string = m,
-    pattern = stringr::str_c(method_name, "[.]")
-  ),
-  !!method_name := "x")
+  dplyr::tibble(
+    class = gsub(
+      x = m,
+      pattern = paste(method_name, "[.]", sep = ""),
+      replacement = ""
+    ),
+    !!method_name := "x"
+  )
 }
 
 # preparing a table
@@ -69,4 +72,3 @@ method_df("tidy") %>%
   dplyr::mutate_all(.tbl = ., .funs = tidyr::replace_na, "") %>%
   knitr::kable()
 ```
-

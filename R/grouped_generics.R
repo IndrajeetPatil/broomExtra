@@ -64,10 +64,7 @@ grouped_tidy <- function(data,
   }
 
   # dataframe with grouped analysis results
-  data %>%
-    dplyr::group_by_at(rlang::enquos(grouping.vars), .drop = TRUE) %>%
-    dplyr::group_modify(.f = tidy_group, keep = TRUE) %>%
-    dplyr::ungroup(x = .)
+  grouped_cleanup(data, rlang::enquos(grouping.vars), tidy_group)
 }
 
 #' @title Model summary output from grouped analysis of any function that has
@@ -128,10 +125,7 @@ grouped_glance <- function(data,
   }
 
   # dataframe with grouped analysis results
-  data %>%
-    dplyr::group_by_at(rlang::enquos(grouping.vars), .drop = TRUE) %>%
-    dplyr::group_modify(.f = glance_group, keep = TRUE) %>%
-    dplyr::ungroup(x = .)
+  grouped_cleanup(data, rlang::enquos(grouping.vars), glance_group)
 }
 
 #' @title Augmented data from grouped analysis of any function that has `data`
@@ -195,8 +189,15 @@ grouped_augment <- function(data,
   }
 
   # dataframe with grouped analysis results
+  grouped_cleanup(data, rlang::enquos(grouping.vars), augment_group)
+}
+
+
+#' @noRd
+
+grouped_cleanup <- function(data, .vars, .f) {
   data %>%
-    dplyr::group_by_at(rlang::enquos(grouping.vars), .drop = TRUE) %>%
-    dplyr::group_modify(.f = augment_group, keep = TRUE) %>%
-    dplyr::ungroup(x = .)
+  dplyr::group_by_at(.tbl = ., .vars = .vars, .drop = TRUE) %>%
+  dplyr::group_modify(.tbl = ., .f = .f, keep = TRUE) %>%
+  dplyr::ungroup(x = .)
 }

@@ -36,7 +36,6 @@ Suggests:
     lme4,
     rmarkdown,
     spelling,
-    stringr,
     testthat,
     tidyr
 VignetteBuilder: 
