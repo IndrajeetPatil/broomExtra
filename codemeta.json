@@ -5,7 +5,7 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
-  "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions tidy(), glance(), and augment() choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. Additionally, 'grouped_' and\n    'boot_' variants of the generics provides a convenient way to execute\n    functions across a combination of grouping variable(s) in a dataframe\n    or bootstrap them.",
+  "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions tidy(), glance(), and augment() choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. Additionally, 'grouped_' variants\n    of the generics provides a convenient way to execute functions across\n    a combination of grouping variable(s) in a dataframe.",
   "name": "broomExtra: Enhancements for 'broom' Package Family",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
   "relatedLink": [

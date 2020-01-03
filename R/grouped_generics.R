@@ -37,7 +37,7 @@
 #' # linear mixed effects model
 #' broomExtra::grouped_tidy(
 #'   data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-#'   grouping.vars = cut,
+#'   grouping.vars = "cut",
 #'   ..f = lme4::lmer,
 #'   formula = price ~ carat + (carat | color) - 1,
 #'   control = lme4::lmerControl(optimizer = "bobyqa"),
@@ -101,7 +101,7 @@ grouped_tidy <- function(data,
 #' # linear mixed effects model
 #' broomExtra::grouped_glance(
 #'   data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-#'   grouping.vars = cut,
+#'   grouping.vars = "cut",
 #'   ..f = lme4::lmer,
 #'   formula = price ~ carat + (carat | color) - 1,
 #'   control = lme4::lmerControl(optimizer = "bobyqa")
@@ -164,7 +164,7 @@ grouped_glance <- function(data,
 #' # linear mixed effects model
 #' broomExtra::grouped_augment(
 #'   data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-#'   grouping.vars = cut,
+#'   grouping.vars = "cut",
 #'   ..f = lme4::lmer,
 #'   formula = price ~ carat + (carat | color) - 1,
 #'   control = lme4::lmerControl(optimizer = "bobyqa")
@@ -197,7 +197,7 @@ grouped_augment <- function(data,
 
 grouped_cleanup <- function(data, .vars, .f) {
   data %>%
-  dplyr::group_by_at(.vars, .drop = TRUE) %>%
-  dplyr::group_modify(.f, keep = TRUE) %>%
-  dplyr::ungroup(.)
+    dplyr::group_by_at(.vars, .drop = TRUE) %>%
+    dplyr::group_modify(.f, keep = TRUE) %>%
+    dplyr::ungroup(.)
 }

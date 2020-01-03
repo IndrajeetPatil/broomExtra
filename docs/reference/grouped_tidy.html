@@ -340,7 +340,7 @@ argument in its function call.</p>
 <span class='co'># linear mixed effects model</span>
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://indrajeetpatil.github.io/broomExtra//reference/grouped_tidy.html'>grouped_tidy</a></span>(
   <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/sample.html'>sample_frac</a></span>(<span class='kw'>tbl</span> <span class='kw'>=</span> <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='no'><a href='https://ggplot2.tidyverse.org/reference/diamonds.html'>diamonds</a></span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>0.5</span>),
-  <span class='kw'>grouping.vars</span> <span class='kw'>=</span> <span class='no'>cut</span>,
+  <span class='kw'>grouping.vars</span> <span class='kw'>=</span> <span class='st'>"cut"</span>,
   <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>,
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>price</span> ~ <span class='no'>carat</span> + (<span class='no'>carat</span> <span class='kw'>|</span> <span class='no'>color</span>) - <span class='fl'>1</span>,
   <span class='kw'>control</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmerControl.html'>lmerControl</a></span>(<span class='kw'>optimizer</span> <span class='kw'>=</span> <span class='st'>"bobyqa"</span>),

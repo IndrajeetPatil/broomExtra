@@ -47,7 +47,7 @@ broomExtra::grouped_glance(
 # linear mixed effects model
 broomExtra::grouped_glance(
   data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = cut,
+  grouping.vars = "cut",
   ..f = lme4::lmer,
   formula = price ~ carat + (carat | color) - 1,
   control = lme4::lmerControl(optimizer = "bobyqa")

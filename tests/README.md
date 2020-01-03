@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-01 January, 2020 17:36:46
+03 January, 2020 20:02:42
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -28,8 +28,8 @@ Unit Test summary is created using the
 
 | file                                                         |  n | time | error | failed | skipped | warning |
 | :----------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test-generics.R](testthat/test-generics.R)                  | 11 | 0.25 |     0 |      0 |       0 |       0 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 7.18 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R)                  | 11 | 0.50 |     0 |      0 |       0 |       0 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 8.33 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -37,12 +37,12 @@ Unit Test summary is created using the
 
 | file                                                             | context                 |           test            | status | n | time |
 | :--------------------------------------------------------------- | :---------------------- | :-----------------------: | :----- | -: | ---: |
-| [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           |      `tidy()` works       | PASS   | 5 | 0.09 |
-| [test-generics.R](testthat/test-generics.R#L50_L52)              | generics work           |     `glance()` works      | PASS   | 3 | 0.08 |
-| [test-generics.R](testthat/test-generics.R#L76_L78)              | generics work           |     `augment()` works     | PASS   | 3 | 0.08 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works |  `grouped_tidy()` works   | PASS   | 2 | 2.51 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.07 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.60 |
+| [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           |      `tidy()` works       | PASS   | 5 | 0.34 |
+| [test-generics.R](testthat/test-generics.R#L50_L52)              | generics work           |     `glance()` works      | PASS   | 3 | 0.05 |
+| [test-generics.R](testthat/test-generics.R#L76_L78)              | generics work           |     `augment()` works     | PASS   | 3 | 0.11 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works |  `grouped_tidy()` works   | PASS   | 2 | 3.22 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 2.36 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.75 |
 
 </details>
 

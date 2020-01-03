@@ -22,7 +22,7 @@ testthat::test_that(
     # broom
     lm_df <- broomExtra::grouped_tidy(
       data = ggplot2::diamonds,
-      grouping.vars = c(cut, color),
+      grouping.vars = c(cut, "color"),
       ..f = stats::lm,
       formula = price ~ carat - 1,
       tidy.args = list(conf.int = TRUE, conf.level = 0.99)
@@ -42,7 +42,7 @@ testthat::test_that(
     # broom.mixed
     lmer_df <- broomExtra::grouped_glance(
       data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-      grouping.vars = cut,
+      grouping.vars = "cut",
       ..f = lme4::lmer,
       formula = price ~ carat + (carat | color) - 1,
       control = lme4::lmerControl(optimizer = "bobyqa")
@@ -52,7 +52,7 @@ testthat::test_that(
     # broom
     lm_df <- broomExtra::grouped_glance(
       data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.1),
-      grouping.vars = c(cut, color),
+      grouping.vars = c("cut", "color"),
       ..f = stats::lm,
       formula = price ~ carat
     )

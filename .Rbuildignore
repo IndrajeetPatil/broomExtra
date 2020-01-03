@@ -7,6 +7,7 @@
 ^Rplots.pdf$
 ^README-.*\.png$
 ^CONDUCT\.md$
+^SECURITY\.md$
 ^cran-comments\.md$
 ^CODE_OF_CONDUCT\.md$
 ^SUPPORT\.md$
@@ -29,5 +30,8 @@ tests\^spelling
 ^LICENSE\.md$
 ^\.lintr$
 ^\.circleci$
+^\.github/ISSUE_TEMPLATE$
 ^API$
 ^\.pre-commit-config\.yaml$
+^\.github/workflows/R\.yaml$
+^\.github/workflows/pr-commands\.yaml$
