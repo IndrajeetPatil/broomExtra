@@ -1,5 +1,5 @@
 ## Test environments
-* local Windows OS install, R 3.6.0
+* local Windows OS install, R 3.6.2
 * ubuntu 14.04 (on travis-ci; devel and release)
 * win-builder (on appveyor; devel and release)
 
@@ -9,4 +9,4 @@
 
 ## Comments
 
-- No problems revealed for any of the strong dependencies. 
+- Minor refactoring of internal functions. 
