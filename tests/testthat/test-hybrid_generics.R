@@ -65,9 +65,5 @@ testthat::test_that(
       tidy_parameters(mod_lavaan, effects = "fixed"),
       tidy_parameters(mod_lavaan, effects = "fixed", exponentiate = TRUE)
     )
-
-    # dataframe tests
-    testthat::expect_equal(dim(tidy_parameters(mtcars)), c(32L, 12L))
-    testthat::expect_null(glance_performance(mtcars), NULL)
   }
 )
