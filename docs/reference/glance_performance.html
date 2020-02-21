@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • broomExtra</title>
+<title>glance_performance — glance_performance • broomExtra</title>
 
 
 <!-- jquery -->
@@ -43,7 +43,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="glance_performance — glance_performance" />
+<meta property="og:description" content="Computes indices of model performance for regression models." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -62,7 +64,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -135,103 +137,60 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>glance_performance</h1>
+    <small class="dont-index">Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/R/generics_easystats.R'><code>R/generics_easystats.R</code></a></small>
+    <div class="hidden name"><code>glance_performance.Rd</code></div>
     </div>
 
-    <div id="broomextra-200" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-200" class="anchor"></a>broomExtra 2.0.0<small> Unreleased </small>
-</h1>
-<ul>
-<li>New functions that make it easy to access tidy dataframes from both <code>broom</code>-family and <code>easystats</code>-family packages with the following functions: <code>tidy_parameters</code> and <code>glance_performance</code>.</li>
-</ul>
-</div>
-    <div id="broomextra-101" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-101" class="anchor"></a>broomExtra 1.0.1<small> 2020-01-07 </small>
-</h1>
-<ul>
-<li>Minor internal refactoring of code.</li>
-</ul>
-</div>
-    <div id="broomextra-100" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-100" class="anchor"></a>broomExtra 1.0.0<small> 2019-12-17 </small>
-</h1>
-<ul>
-<li>Deprecated <code>boot_</code> functions as they added nothing over and above <code>rsample</code>.</li>
-</ul>
-</div>
-    <div id="broomextra-006" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-006" class="anchor"></a>broomExtra 0.0.6<small> 2019-10-26 </small>
-</h1>
-<ul>
-<li>Maintenance release to make package compatible with <code>dplyr 0.8.4</code>.</li>
-</ul>
-</div>
-    <div id="broomextra-005" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-005" class="anchor"></a>broomExtra 0.0.5<small> 2019-08-19 </small>
-</h1>
-<ul>
-<li><p>In addition to trying to extract results using tidiers from <code>broom</code> and <code>broom.mixed</code>, <code><a href="../reference/tidy.html">broomExtra::tidy</a></code> now also attempts to convert the entered object into a <code>tibble</code> dataframe. This is solely to deal with dataframes which are often encountered while writing wrapper functions around <code>tidy</code>.</p></li>
-<li><p>Minor refactoring of <code>boot_</code> generic functions to make them compatible with upcoming release of <code>tidyr</code>.</p></li>
-<li><p>More operators from <code>tidyverse</code> added to reexports.</p></li>
-</ul>
-</div>
-    <div id="broomextra-004" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-004" class="anchor"></a>broomExtra 0.0.4<small> 2019-06-25 </small>
-</h1>
-<ul>
-<li>Adds new functions for bootstrapping: <code>boot_tidy</code>, <code>boot_glance</code>, <code>boot_augment</code>.</li>
-</ul>
-</div>
-    <div id="broomextra-003" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-003" class="anchor"></a>broomExtra 0.0.3<small> 2019-05-20 </small>
-</h1>
-<ul>
-<li>This is maintenance release to make the package compatible with <code>R 3.6.0</code>.</li>
-</ul>
-</div>
-    <div id="broomextra-002" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-002" class="anchor"></a>broomExtra 0.0.2<small> 2019-04-03 </small>
-</h1>
-<ul>
-<li>This is maintenance release to make the package compatible with <code>dplyr 0.8.1</code>.</li>
-</ul>
-</div>
-    <div id="broomextra-001" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-001" class="anchor"></a>broomExtra 0.0.1<small> 2019-03-13 </small>
-</h1>
-<ul>
-<li>Initial release.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Computes indices of model performance for regression models.</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>glance_performance</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>model or other R object to convert to single-row data frame</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>other arguments passed to methods</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A data frame (with one row) and one column per "index".</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The function will attempt to get these details either using
+<code><a href='http://broom.tidyverse.org/reference/reexports.html'>broom::glance</a></code> or <code><a href='https://rdrr.io/pkg/performance/man/model_performance.html'>performance::model_performance</a></code>.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
+<span class='no'>mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>mpg</span> ~ <span class='no'>wt</span> + <span class='no'>cyl</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>mtcars</span>)
+<span class='fu'>glance_performance</span>(<span class='no'>mod</span>, <span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 12</span><span>
+#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
+#&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span>     0.830         0.819  2.57      70.9 6.81</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-12</span><span>     2  -</span><span style='color: #BB0000;'>74.0</span><span>  156.  162.
+#&gt;   deviance df.residual  nobs
+#&gt;      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span>     191.          29    32</div><div class='input'>
+</div></span></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#broomextra-200">2.0.0</a></li>
-        <li><a href="#broomextra-101">1.0.1</a></li>
-        <li><a href="#broomextra-100">1.0.0</a></li>
-        <li><a href="#broomextra-006">0.0.6</a></li>
-        <li><a href="#broomextra-005">0.0.5</a></li>
-        <li><a href="#broomextra-004">0.0.4</a></li>
-        <li><a href="#broomextra-003">0.0.3</a></li>
-        <li><a href="#broomextra-002">0.0.2</a></li>
-        <li><a href="#broomextra-001">0.0.1</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
+  </div>
 </div>
 
 

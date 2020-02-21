@@ -7,7 +7,13 @@
     <loc>https://indrajeetpatil.github.io/broomExtra//reference/augment.html</loc>
   </url>
   <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra//reference/easystats_to_tidy_names.html</loc>
+  </url>
+  <url>
     <loc>https://indrajeetpatil.github.io/broomExtra//reference/glance.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra//reference/glance_performance.html</loc>
   </url>
   <url>
     <loc>https://indrajeetpatil.github.io/broomExtra//reference/grouped_augment.html</loc>
@@ -23,6 +29,9 @@
   </url>
   <url>
     <loc>https://indrajeetpatil.github.io/broomExtra//reference/tidy.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra//reference/tidy_parameters.html</loc>
   </url>
   <url>
     <loc>https://indrajeetpatil.github.io/broomExtra//articles/available_methods.html</loc>

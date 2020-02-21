@@ -22,6 +22,12 @@ reference:
       - glance
       - augment
 
+  - title: Hybrid functions from `broom` and `easystats`
+    desc:  These functions combine functionalities from these two packages.
+    contents:
+      - tidy_parameters
+      - glance_performance
+
   - title: Grouped variants of generics
     desc: Using generic functions across all combinations of grouping variables in a dataframe.
     contents:
@@ -32,3 +38,13 @@ reference:
     contents:
       - "%>%"
       - "%<>%"
+      - "%$%"
+      - "%||%"
+      - "%|%"
+      - tibble
+      - as_tibble
+
+  - title: Helper functions
+    desc: For data wrangling.
+    contents:
+      - easystats_to_tidy_names

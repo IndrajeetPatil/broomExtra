@@ -1,6 +1,6 @@
-pandoc: '2.9'
+pandoc: 2.9.2
 pkgdown: 1.4.1.9000
-pkgdown_sha: 24ef1bbdec0de44fe11eb1d58b40dba961525d43
+pkgdown_sha: a78e04c8516894904c16da95c62f78907df29f36
 articles:
   available_methods: available_methods.html
   tests_and_coverage: tests_and_coverage.html

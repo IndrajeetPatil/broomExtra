@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-07 January, 2020 00:16:20
+21 February, 2020 22:02:53
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -13,11 +13,13 @@ This output is created by
 Coverage summary is created using the
 [covr](https://github.com/r-lib/covr) package.
 
-| Object                                           | Coverage (%) |
-| :----------------------------------------------- | :----------: |
-| broomExtra                                       |     100      |
-| [R/generics.R](../R/generics.R)                  |     100      |
-| [R/grouped\_generics.R](../R/grouped_generics.R) |     100      |
+| Object                                                           | Coverage (%) |
+| :--------------------------------------------------------------- | :----------: |
+| broomExtra                                                       |     100      |
+| [R/easystats\_to\_tidy\_names.R](../R/easystats_to_tidy_names.R) |     100      |
+| [R/generics.R](../R/generics.R)                                  |     100      |
+| [R/generics\_easystats.R](../R/generics_easystats.R)             |     100      |
+| [R/grouped\_generics.R](../R/grouped_generics.R)                 |     100      |
 
 <br>
 
@@ -26,23 +28,27 @@ Coverage summary is created using the
 Unit Test summary is created using the
 [testthat](https://github.com/r-lib/testthat) package.
 
-| file                                                         |  n | time | error | failed | skipped | warning |
-| :----------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| [test-generics.R](testthat/test-generics.R)                  | 11 | 1.06 |     0 |      0 |       0 |       0 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R) |  6 | 8.82 |     0 |      0 |       0 |       0 |
+| file                                                                         |  n | time | error | failed | skipped | warning |
+| :--------------------------------------------------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
+| [test-easystats\_to\_tidy\_names.R](testthat/test-easystats_to_tidy_names.R) |  3 | 0.16 |     0 |      0 |       0 |       0 |
+| [test-generics.R](testthat/test-generics.R)                                  | 11 | 0.75 |     0 |      0 |       0 |       0 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R)                 |  6 | 6.20 |     0 |      0 |       0 |       0 |
+| [test-hybrid\_generics.R](testthat/test-hybrid_generics.R)                   |  9 | 0.95 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
 <summary> Show Detailed Test Results </summary>
 
-| file                                                             | context                 |           test            | status | n | time |
-| :--------------------------------------------------------------- | :---------------------- | :-----------------------: | :----- | -: | ---: |
-| [test-generics.R](testthat/test-generics.R#L13_L15)              | generics work           |      `tidy()` works       | PASS   | 5 | 0.90 |
-| [test-generics.R](testthat/test-generics.R#L50_L52)              | generics work           |     `glance()` works      | PASS   | 3 | 0.07 |
-| [test-generics.R](testthat/test-generics.R#L76_L78)              | generics work           |     `augment()` works     | PASS   | 3 | 0.09 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20) | grouped\_generics works |  `grouped_tidy()` works   | PASS   | 2 | 3.18 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50) | grouped\_generics works | `grouped_glance()` works  | PASS   | 2 | 3.13 |
-| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79) | grouped\_generics works | `grouped_augment()` works | PASS   | 2 | 2.51 |
+| file                                                                             | context                    |                     test                     | status | n | time |
+| :------------------------------------------------------------------------------- | :------------------------- | :------------------------------------------: | :----- | -: | ---: |
+| [test-easystats\_to\_tidy\_names.R](testthat/test-easystats_to_tidy_names.R#L12) | easystats\_to\_tidy\_names | easystats\_to\_tidy\_names works as expected | PASS   | 3 | 0.16 |
+| [test-generics.R](testthat/test-generics.R#L13_L15)                              | generics work              |                `tidy()` works                | PASS   | 5 | 0.60 |
+| [test-generics.R](testthat/test-generics.R#L50_L52)                              | generics work              |               `glance()` works               | PASS   | 3 | 0.06 |
+| [test-generics.R](testthat/test-generics.R#L76_L78)                              | generics work              |              `augment()` works               | PASS   | 3 | 0.09 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L20)                 | grouped\_generics works    |            `grouped_tidy()` works            | PASS   | 2 | 2.33 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L50)                 | grouped\_generics works    |           `grouped_glance()` works           | PASS   | 2 | 1.84 |
+| [test-grouped\_generics.R](testthat/test-grouped_generics.R#L79)                 | grouped\_generics works    |          `grouped_augment()` works           | PASS   | 2 | 2.03 |
+| [test-hybrid\_generics.R](testthat/test-hybrid_generics.R#L12_L13)               | hybrid\_generics           |             hybrid methods works             | PASS   | 9 | 0.95 |
 
 </details>
 

@@ -5,11 +5,11 @@
 
 | Package                                                                                                                                                       | Status                                                                                                                                                                                     | Usage                                                                                                                                           | GitHub                                                                                                                                                       | References                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-1.0.1.9000-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)              | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
+| [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-2.0.0.9000-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)              | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
 | [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-2-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra)](https://www.rdocumentation.org/packages/broomExtra)                                        |
-| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-1.0.1-orange.svg?colorB=FF5722)](https://CRAN.R-project.org/package=broomExtra/vignettes/)                |
+| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-2-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722)](https://CRAN.R-project.org/package=broomExtra/vignettes/)                |
 | [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--01--07-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
+| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--02--21-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
 | [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)                                                   | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
 
 The goal of `broomExtra` is to provide helper functions that assist in
@@ -17,17 +17,16 @@ data analysis workflows involving packages `broom` and `broom.mixed`.
 
 # Installation
 
-To get the latest, stable `CRAN` release (`1.0.1`):
+To get the latest, stable `CRAN` release:
 
 ``` r
 utils::install.packages(pkgs = "broomExtra")
 ```
 
-You can get the **development** version of the package from `GitHub`
-(`1.0.1.9000`). To see what new changes (and bug fixes) have been made
-to the package since the last release on `CRAN`, you can check the
-detailed log of changes here:
-<https://indrajeetpatil.github.io/broomExtra/news/index.html>
+You can get the **development** version of the package from `GitHub`. To
+see what new changes (and bug fixes) have been made to the package since
+the last release on `CRAN`, you can check the detailed log of changes
+here: <https://indrajeetpatil.github.io/broomExtra/news/index.html>
 
 If you are in hurry and want to reduce the time of installation, prefer-
 
@@ -49,6 +48,8 @@ remotes::install_github(
   upgrade_dependencies = TRUE # updates any out of date dependencies
 )
 ```
+
+Otherwise, the quicker option is-
 
 ``` r
 remotes::install_github("IndrajeetPatil/broomExtra")
@@ -232,6 +233,144 @@ broomExtra::augment(x = clm.mod, newdata = wine, type.predict = "prob")
 # in case no augment method is available (`NULL` will be returned)
 broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 #> NULL
+```
+
+# hybrid generics
+
+`broom`-family of packages are not the only ones which return such tidy
+summaries for model parameters and performance. There is also
+`easystats`-family of packages that provide similar functions, more
+specifically [parameters](https://easystats.github.io/parameters/) and
+[performance](https://easystats.github.io/performance/). Sometimes
+although `broom` packages might not contain a method for a given
+regression object, `easystats` packages would and vice versa. The hybrid
+functions in `broomExtra` make it easy to retrieve these summaries with
+the appropriate method and does so robustly.
+
+## `tidy_parameters`
+
+The `tidy_parameters` will return a model summary either from
+`broom::tidy` or `parameters::model_parameters`:
+
+``` r
+# mixor object
+set.seed(123)
+library("mixor")
+data("SmokingPrevention")
+
+# data frame must be sorted by id variable
+SmokingPrevention <- SmokingPrevention[order(SmokingPrevention$class), ]
+
+# school model
+mod_mixor <-
+  mixor(
+    formula = thksord ~ thkspre + cc + tv + cctv,
+    data = SmokingPrevention,
+    id = school, link = "logit"
+  )
+
+# tidier in `broom`-family?
+broomExtra::tidy(mod_mixor)
+#> NULL
+
+# using hybrid function
+broomExtra::tidy_parameters(mod_mixor)
+#> # A tibble: 8 x 8
+#>   term           estimate std.error conf.low conf.high statistic p.value effects
+#>   <chr>             <dbl>     <dbl>    <dbl>     <dbl>     <dbl>   <dbl> <chr>  
+#> 1 (Intercept)      0.0882    0.313   -0.526      0.702     0.282  0.778  fixed  
+#> 2 Threshold2       1.24      0.0883   1.07       1.41     14.1    0      fixed  
+#> 3 Threshold3       2.42      0.0836   2.26       2.58     28.9    0      fixed  
+#> 4 thkspre          0.403     0.0429   0.319      0.487     9.39   0      fixed  
+#> 5 cc               0.924     0.371    0.196      1.65      2.49   0.0128 fixed  
+#> 6 tv               0.275     0.315   -0.342      0.893     0.873  0.383  fixed  
+#> 7 cctv            -0.466     0.406   -1.26       0.330    -1.15   0.251  fixed  
+#> 8 Random.(Inter~   0.0735    0.0495  -0.0235     0.170     1.49   0.137  random
+```
+
+These functions are also pretty robust such that they won’t fail if the
+`...` contains misspecified arguments. This makes these functions much
+easier to work with while writing wrapper functions around `broom::tidy`
+or `parameters::model_parameters`.
+
+``` r
+# setup
+set.seed(123)
+library(lavaan)
+
+# model specs
+HS.model <- " visual  =~ x1 + x2 + x3
+              textual =~ x4 + x5 + x6
+              speed   =~ x7 + x8 + x9 "
+
+# model
+mod_lavaan <-
+  lavaan(
+    HS.model,
+    data = HolzingerSwineford1939,
+    auto.var = TRUE,
+    auto.fix.first = TRUE,
+    auto.cov.lv.x = TRUE
+  )
+
+# tidy method with additional arguments
+broom::tidy(mod_lavaan, exponentiate = TRUE)
+#> Error in lavaan::parameterEstimates(x, ci = conf.int, level = conf.level, : unused argument (exponentiate = TRUE)
+
+# parameters method with additional arguments
+parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
+#> Error in lavaan::parameterEstimates(model, se = TRUE, level = ci, ...): unused argument (exponentiate = TRUE)
+
+# using hybrid function
+broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
+#> # A tibble: 24 x 11
+#>    term  op    estimate std.error statistic   p.value conf.low conf.high std.lv
+#>    <chr> <chr>    <dbl>     <dbl>     <dbl>     <dbl>    <dbl>     <dbl>  <dbl>
+#>  1 visu~ =~       1        0          NA    NA           1         1      0.900
+#>  2 visu~ =~       0.554    0.0997      5.55  2.80e- 8    0.358     0.749  0.498
+#>  3 visu~ =~       0.729    0.109       6.68  2.31e-11    0.516     0.943  0.656
+#>  4 text~ =~       1        0          NA    NA           1         1      0.990
+#>  5 text~ =~       1.11     0.0654     17.0   0.          0.985     1.24   1.10 
+#>  6 text~ =~       0.926    0.0554     16.7   0.          0.817     1.03   0.917
+#>  7 spee~ =~       1        0          NA    NA           1         1      0.619
+#>  8 spee~ =~       1.18     0.165       7.15  8.56e-13    0.857     1.50   0.731
+#>  9 spee~ =~       1.08     0.151       7.15  8.40e-13    0.785     1.38   0.670
+#> 10 x1 ~~ ~~       0.549    0.114       4.83  1.34e- 6    0.326     0.772  0.549
+#> # ... with 14 more rows, and 2 more variables: std.all <dbl>, std.nox <dbl>
+```
+
+## `glance_performance`
+
+The `glance_performance` will return a model summary either from
+`broom::glance` or `performance::model_performance`:
+
+``` r
+# mixor object
+set.seed(123)
+library("mixor")
+data("SmokingPrevention")
+
+# data frame must be sorted by id variable
+SmokingPrevention <- SmokingPrevention[order(SmokingPrevention$class), ]
+
+# school model
+mod_mixor <-
+  mixor(
+    formula = thksord ~ thkspre + cc + tv + cctv,
+    data = SmokingPrevention,
+    id = school, link = "logit"
+  )
+
+# glance method in `broom`-family?
+broomExtra::glance(mod_mixor)
+#> NULL
+
+# using hybrid function
+broomExtra::glance_performance(mod_mixor)
+#> # A tibble: 1 x 2
+#>      aic    bic
+#>    <dbl>  <dbl>
+#> 1 -2128. -2133.
 ```
 
 # `grouped_` variants of generics
