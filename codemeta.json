@@ -5,7 +5,7 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
-  "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions tidy(), glance(), and augment() choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. Additionally, 'grouped_' variants\n    of the generics provides a convenient way to execute functions across\n    a combination of grouping variable(s) in a dataframe.",
+  "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions tidy(), glance(), and augment() choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. The 'grouped_' variants of the\n    generics provides a convenient way to execute functions across a\n    combination of grouping variable(s) in a dataframe. Additionally,\n    tidy-and glance-like methods from 'parameters' and 'performance' can\n    also be accessed.",
   "name": "broomExtra: Enhancements for 'broom' Package Family",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
   "relatedLink": [
@@ -14,7 +14,7 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "1.0.1.9000",
+  "version": "2.0.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -79,6 +79,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "lavaan",
+      "name": "lavaan",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=lavaan"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "lme4",
       "name": "lme4",
       "provider": {
@@ -88,6 +100,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=lme4"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "mixor",
+      "name": "mixor",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=mixor"
     },
     {
       "@type": "SoftwareApplication",
@@ -149,7 +173,6 @@
       "@type": "SoftwareApplication",
       "identifier": "broom",
       "name": "broom",
-      "version": ">= 0.5.3",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -162,7 +185,6 @@
       "@type": "SoftwareApplication",
       "identifier": "broom.mixed",
       "name": "broom.mixed",
-      "version": ">= 0.2.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -175,7 +197,6 @@
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
-      "version": ">= 0.8.3",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -188,7 +209,6 @@
       "@type": "SoftwareApplication",
       "identifier": "magrittr",
       "name": "magrittr",
-      "version": ">= 1.5",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -199,9 +219,32 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "parameters",
+      "name": "parameters",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=parameters"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "performance",
+      "name": "performance",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=performance"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "rlang",
       "name": "rlang",
-      "version": ">= 0.4.2",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -209,6 +252,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=rlang"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "tibble",
+      "name": "tibble",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tibble"
     }
   ],
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",

@@ -1,5 +1,9 @@
-# broomExtra 1.0.1.9000
+# broomExtra 2.0.0
 
+  - New functions that make it easy to access tidy dataframes from both
+    `broom`-family and `easystats`-family packages with the following functions:
+    `tidy_parameters` and `glance_performance`.
+ 
 # broomExtra 1.0.1
 
   - Minor internal refactoring of code.

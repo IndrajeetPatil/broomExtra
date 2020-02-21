@@ -7,6 +7,7 @@
 \alias{\%<>\%}
 \alias{\%$\%}
 \alias{tibble}
+\alias{as_tibble}
 \alias{\%||\%}
 \alias{\%|\%}
 \title{Objects exported from other packages}
@@ -16,10 +17,10 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{dplyr}{\code{\link[dplyr]{tibble}}}
-
   \item{magrittr}{\code{\link[magrittr]{\%$\%}}, \code{\link[magrittr]{\%<>\%}}, \code{\link[magrittr]{\%>\%}}}
 
   \item{rlang}{\code{\link[rlang]{\%|\%}}, \code{\link[rlang]{\%||\%}}}
+
+  \item{tibble}{\code{\link[tibble]{as_tibble}}, \code{\link[tibble]{tibble}}}
 }}
 

@@ -13,8 +13,12 @@ magrittr::`%<>%`
 magrittr::`%$%`
 
 #' @export
-#' @importFrom dplyr tibble
-dplyr::tibble
+#' @importFrom tibble tibble
+tibble::tibble
+
+#' @export
+#' @importFrom tibble as_tibble
+tibble::as_tibble
 
 #' @export
 #' @importFrom rlang "%||%"
