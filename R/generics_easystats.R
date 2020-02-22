@@ -41,6 +41,14 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
     )
   }
 
+  if (rlang::is_null(m)) {
+    m <- tryCatch(
+      expr = parameters::model_parameters(x) %>%
+        easystats_to_tidy_names(.),
+      error = function(e) NULL
+    )
+  }
+
   # p-value check -----------------------------------------------
   if (!rlang::is_null(m) && !"p.value" %in% names(m)) {
     tryCatch(
