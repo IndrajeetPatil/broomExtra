@@ -65,6 +65,15 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
     )
   }
 
+  # last attempt: dataframe ---------------------------------------
+  # if not, try to convert it to a tibble (relevant for dataframe)
+  if (rlang::is_null(m)) {
+    m <- tryCatch(
+      expr = as_tibble(x, ...),
+      error = function(e) NULL
+    )
+  }
+
   # return the final object
   return(m)
 }

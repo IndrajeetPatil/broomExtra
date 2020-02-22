@@ -3,6 +3,9 @@
   - New functions that make it easy to access tidy dataframes from both
     `broom`-family and `easystats`-family packages with the following functions:
     `tidy_parameters` and `glance_performance`.
+  - `tidy` method no longer attempt to convert entered objects to a tibble as a
+    last resort as this was converting model objects in case the tidiers failed
+    for some reason.
  
 # broomExtra 1.0.1
 

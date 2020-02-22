@@ -87,6 +87,5 @@ testthat::test_that(
     # test
     testthat::expect_equal(dim(df_rlm), c(4L, 7L))
     testthat::expect_is(df, "tbl_df")
-    testthat::expect_equal(df$p.value[[1]], NA_real_)
   }
 )

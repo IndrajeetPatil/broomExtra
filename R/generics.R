@@ -52,14 +52,6 @@ tidy <- function(x, ...) {
     )
   }
 
-  # if not, try to convert it to a tibble (relevant for dataframe)
-  if (rlang::is_null(f)) {
-    f <- tryCatch(
-      expr = as_tibble(x, ...),
-      error = function(e) NULL
-    )
-  }
-
   # return the tidy
   return(f)
 }
