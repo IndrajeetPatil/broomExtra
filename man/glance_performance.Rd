@@ -2,7 +2,7 @@
 % Please edit documentation in R/generics_easystats.R
 \name{glance_performance}
 \alias{glance_performance}
-\title{glance_performance}
+\title{Model performance summary dataframes using \code{broom} and \code{easystats}.}
 \usage{
 glance_performance(x, ...)
 }
@@ -24,5 +24,6 @@ The function will attempt to get these details either using
 \examples{
 set.seed(123)
 mod <- lm(mpg ~ wt + cyl, data = mtcars)
-glance_performance(mod, conf.int = TRUE)
+broomExtra::glance_performance(mod)
+
 }

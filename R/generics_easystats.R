@@ -1,4 +1,5 @@
-#' @title tidy_parameters
+#' @name tidy_parameters
+#' @title Tidy dataframes of model parameters using `broom` and `easystats`.
 #' @description Computes parameters for regression models.
 #' @inheritParams tidy
 #' @param conf.int Indicating whether or not to include a confidence interval in
@@ -10,7 +11,7 @@
 #' @examples
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
-#' tidy_parameters(mod)
+#' broomExtra::tidy_parameters(mod)
 #' @importFrom rlang is_null
 #' @importFrom parameters model_parameters p_value
 #'
@@ -79,7 +80,8 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 }
 
 
-#' @title glance_performance
+#' @name glance_performance
+#' @title Model performance summary dataframes using `broom` and `easystats`.
 #' @description Computes indices of model performance for regression models.
 #' @inheritParams glance
 #' @return A data frame (with one row) and one column per "index".
@@ -89,7 +91,8 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' @examples
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
-#' glance_performance(mod, conf.int = TRUE)
+#' broomExtra::glance_performance(mod)
+#'
 #' @importFrom rlang is_null
 #' @importFrom performance model_performance
 #'

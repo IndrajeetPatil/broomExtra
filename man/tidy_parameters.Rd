@@ -2,7 +2,7 @@
 % Please edit documentation in R/generics_easystats.R
 \name{tidy_parameters}
 \alias{tidy_parameters}
-\title{tidy_parameters}
+\title{Tidy dataframes of model parameters using \code{broom} and \code{easystats}.}
 \usage{
 tidy_parameters(x, conf.int = TRUE, ...)
 }
@@ -27,5 +27,5 @@ The function will attempt to get these details either using
 \examples{
 set.seed(123)
 mod <- lm(mpg ~ wt + cyl, data = mtcars)
-tidy_parameters(mod)
+broomExtra::tidy_parameters(mod)
 }

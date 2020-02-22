@@ -75,7 +75,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.0.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.0.0.9000</span>
       </span>
     </div>
 
@@ -139,12 +139,19 @@
       <small>Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="broomextra-2009000" class="section level1">
+<h1 class="page-header">
+<a href="#broomextra-2009000" class="anchor"></a>broomExtra 2.0.0.9000<small> Unreleased </small>
+</h1>
+</div>
     <div id="broomextra-200" class="section level1">
 <h1 class="page-header">
 <a href="#broomextra-200" class="anchor"></a>broomExtra 2.0.0<small> Unreleased </small>
 </h1>
 <ul>
 <li>New functions that make it easy to access tidy dataframes from both <code>broom</code>-family and <code>easystats</code>-family packages with the following functions: <code>tidy_parameters</code> and <code>glance_performance</code>.</li>
+<li>
+<code>tidy</code> method no longer attempt to convert entered objects to a tibble as a last resort as this was converting model objects in case the tidiers failed for some reason.</li>
 </ul>
 </div>
     <div id="broomextra-101" class="section level1">
@@ -219,6 +226,7 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#broomextra-2009000">2.0.0.9000</a></li>
         <li><a href="#broomextra-200">2.0.0</a></li>
         <li><a href="#broomextra-101">1.0.1</a></li>
         <li><a href="#broomextra-100">1.0.0</a></li>

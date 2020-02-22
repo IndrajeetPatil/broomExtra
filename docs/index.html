@@ -42,7 +42,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.0.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.0.0.9000</span>
       </span>
     </div>
 
@@ -353,7 +353,15 @@
 <div id="hybrid-generics" class="section level1">
 <h1 class="hasAnchor">
 <a href="#hybrid-generics" class="anchor"></a>hybrid generics</h1>
-<p><code>broom</code>-family of packages are not the only ones which return such tidy summaries for model parameters and performance. There is also <code>easystats</code>-family of packages that provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes although <code>broom</code> packages might not contain a method for a given regression object, <code>easystats</code> packages would and vice versa. The hybrid functions in <code>broomExtra</code> make it easy to retrieve these summaries with the appropriate method and does so robustly.</p>
+<p>The <code>broom</code>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>easystats</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <code>broom</code> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>easystats</code> packages would and vice versa. The hybrid functions in <code>broomExtra</code> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
+<ul>
+<li>
+<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy</a></code> + <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code> = <code><a href="reference/tidy_parameters.html">broomExtra::tidy_parameters</a></code>
+</li>
+<li>
+<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance</a></code> + <code><a href="https://rdrr.io/pkg/performance/man/model_performance.html">performance::model_performance</a></code> = <code><a href="reference/glance_performance.html">broomExtra::glance_performance</a></code>
+</li>
+</ul>
 <div id="tidy_parameters" class="section level2">
 <h2 class="hasAnchor">
 <a href="#tidy_parameters" class="anchor"></a><code>tidy_parameters</code>

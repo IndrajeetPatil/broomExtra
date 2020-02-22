@@ -1,36 +1,43 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+
+
 # `broomExtra`: Enhancements for `broom` Package Family
 
-| Package                                                                                                                                                       | Status                                                                                                                                                                                     | Usage                                                                                                                                           | GitHub                                                                                                                                                       | References                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-2.0.0.9000-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)              | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
-| [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-2-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra)](https://www.rdocumentation.org/packages/broomExtra)                                        |
-| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722)](https://CRAN.R-project.org/package=broomExtra/vignettes/)                |
-| [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--02--22-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
-| [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)                                                   | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
+Package | Status | Usage | GitHub | References
+----------------- | ----------------- | ----------------- | ----------------- | -----------------
+[![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra) | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra) | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![GitHub version](https://img.shields.io/badge/GitHub-2.0.0.9000-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/) | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)
+[![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html) | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Forks](https://img.shields.io/badge/forks-2-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/) | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra)](https://www.rdocumentation.org/packages/broomExtra)
+[![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/) | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/) | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues) | [![vignettes](https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722)](https://CRAN.R-project.org/package=broomExtra/vignettes/)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master) | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)
+[![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master) | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra) | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--02--22-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master) | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
+[![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra) | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community) | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues)
 
-The goal of `broomExtra` is to provide helper functions that assist in
-data analysis workflows involving packages `broom` and `broom.mixed`.
+The goal of `broomExtra` is to provide helper functions that assist in data
+analysis workflows involving packages `broom` and `broom.mixed`.
 
 # Installation
 
 To get the latest, stable `CRAN` release:
 
-``` r
+
+```r
 utils::install.packages(pkgs = "broomExtra")
 ```
 
-You can get the **development** version of the package from `GitHub`. To
-see what new changes (and bug fixes) have been made to the package since
-the last release on `CRAN`, you can check the detailed log of changes
-here: <https://indrajeetpatil.github.io/broomExtra/news/index.html>
+You can get the **development** version of the package from `GitHub`. To see
+what new changes (and bug fixes) have been made to the package since the last
+release on `CRAN`, you can check the detailed log of changes here:
+<https://indrajeetpatil.github.io/broomExtra/news/index.html>
 
 If you are in hurry and want to reduce the time of installation, prefer-
 
-``` r
+
+```r
 # needed package to download from GitHub repo
 utils::install.packages(pkgs = "remotes")
 remotes::install_github(
@@ -41,7 +48,7 @@ remotes::install_github(
 
 If time is not a constraint-
 
-``` r
+```r
 remotes::install_github(
   repo = "IndrajeetPatil/broomExtra", # package path on GitHub
   dependencies = TRUE, # installs packages which broomExtra depends on
@@ -51,32 +58,30 @@ remotes::install_github(
 
 Otherwise, the quicker option is-
 
-``` r
+
+```r
 remotes::install_github("IndrajeetPatil/broomExtra")
 ```
 
 # generic functions
 
-Currently, `S3` methods for mixed-effects model objects are included in
-the `broom.mixed` package, while the rest of the object classes are
-included in the `broom` package. This means that you constantly need to
-keep track of the class of the object (e.g., “if it is `merMod` object,
-use
-`broom.mixed::tidy()`/`broom.mixed::glance()`/`broom.mixed::augment()`,
-but if it is `polr` object, use
-`broom::tidy()`/`broom::glance()`/`broom::augment()`”). Using generics
-from `broomExtra` means you no longer have to worry about this, as
-calling
-`broomExtra::tidy()`/`broomExtra::glance()`/`broomExtra::augment()` will
-search the appropriate method from these two packages and return the
+Currently, `S3` methods for mixed-effects model objects are included in the
+`broom.mixed` package, while the rest of the object classes are included in the
+`broom` package. This means that you constantly need to keep track of the class
+of the object (e.g., "if it is `merMod` object, use
+`broom.mixed::tidy()`/`broom.mixed::glance()`/`broom.mixed::augment()`, but if
+it is `polr` object, use `broom::tidy()`/`broom::glance()`/`broom::augment()`").
+Using generics from `broomExtra` means you no longer have to worry about this,
+as calling `broomExtra::tidy()`/`broomExtra::glance()`/`broomExtra::augment()`
+will search the appropriate method from these two packages and return the
 results.
 
 ## tidy dataframe
 
-Let’s get a tidy tibble back containing results from various regression
-models.
+Let's get a tidy tibble back containing results from various regression models.
 
-``` r
+
+```r
 set.seed(123)
 library(lme4)
 library(ordinal)
@@ -126,10 +131,10 @@ broomExtra::tidy(list(1, c("x", "y")))
 
 ## model summaries
 
-Getting a `tibble` containing model summary and other performance
-measures.
+Getting a `tibble` containing model summary and other performance measures.
 
-``` r
+
+```r
 set.seed(123)
 library(lme4)
 library(ordinal)
@@ -169,7 +174,8 @@ broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
 
 Getting a `tibble` by augmenting data with information from an object.
 
-``` r
+
+```r
 set.seed(123)
 library(lme4)
 library(ordinal)
@@ -237,27 +243,28 @@ broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 
 # hybrid generics
 
-The `broom`-family of packages are not the only ones which return such
-tidy summaries for model parameters and model performance. The
-`easystats`-family of packages also provide similar functions, more
-specifically [parameters](https://easystats.github.io/parameters/) and
-[performance](https://easystats.github.io/performance/). Sometimes the
-`broom` packages might not contain a `tidy`/`glance` method for a given
-regression object, while `easystats` packages would and vice versa. The
-hybrid functions in `broomExtra` make it easy to retrieve these
-summaries with the appropriate method and do so robustly:
+The `broom`-family of packages are not the only ones which return such tidy
+summaries for model parameters and model performance. The `easystats`-family of
+packages also provide similar functions, more specifically
+[parameters](https://easystats.github.io/parameters/) and
+[performance](https://easystats.github.io/performance/). Sometimes the `broom`
+packages might not contain a `tidy`/`glance` method for a given regression
+object, while `easystats` packages would and vice versa. The hybrid functions in
+`broomExtra` make it easy to retrieve these summaries with the appropriate
+method and do so robustly:
 
   - `broom::tidy` + `parameters::model_parameters` =
     `broomExtra::tidy_parameters`
   - `broom::glance` + `performance::model_performance` =
     `broomExtra::glance_performance`
 
-## `tidy_parameters`
+## `tidy_parameters` 
 
-The `tidy_parameters` will return a model summary either from
-`broom::tidy` or `parameters::model_parameters`:
+The `tidy_parameters` will return a model summary either from `broom::tidy` or
+`parameters::model_parameters`:
 
-``` r
+
+```r
 # mixor object
 set.seed(123)
 library("mixor")
@@ -293,12 +300,13 @@ broomExtra::tidy_parameters(mod_mixor)
 #> 8 Random.(Inter~   0.0735    0.0495  -0.0235     0.170     1.49   0.137  random
 ```
 
-These functions are also pretty robust such that they won’t fail if the
-`...` contains misspecified arguments. This makes these functions much
-easier to work with while writing wrapper functions around `broom::tidy`
-or `parameters::model_parameters`.
+These functions are also pretty robust such that they won't fail if the `...`
+contains misspecified arguments. This makes these functions much easier to work
+with while writing wrapper functions around `broom::tidy` or
+`parameters::model_parameters`.
 
-``` r
+
+```r
 # setup
 set.seed(123)
 library(lavaan)
@@ -344,11 +352,12 @@ broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
 #> # ... with 14 more rows, and 2 more variables: std.all <dbl>, std.nox <dbl>
 ```
 
-Additional benefit of using this function is that it will also make sure
-that *p*-values and confidence intervals for regression estimates are
-consistently included.
+Additional benefit of using this function is that it will also make sure that
+*p*-values and confidence intervals for regression estimates are consistently
+included.
 
-``` r
+
+```r
 # setup
 set.seed(123)
 library(MASS)
@@ -377,10 +386,11 @@ broomExtra::tidy_parameters(mod)
 
 ## `glance_performance`
 
-The `glance_performance` will return a model summary either from
-`broom::glance` or `performance::model_performance`:
+The `glance_performance` will return a model summary either from `broom::glance`
+or `performance::model_performance`:
 
-``` r
+
+```r
 # mixor object
 set.seed(123)
 library("mixor")
@@ -411,16 +421,16 @@ broomExtra::glance_performance(mod_mixor)
 
 # `grouped_` variants of generics
 
-`grouped` variants of the generic functions (`tidy`, `glance`, and
-`augment`) make it easy to execute the same analysis for all
-combinations of grouping variable(s) in a dataframe. Currently, these
-functions work only for methods that depend on a `data` argument (e.g.,
-`stats::lm`), but not for functions that don’t (e.g.,
-`stats::prop.test()`).
+`grouped` variants of the generic functions (`tidy`, `glance`, and `augment`)
+make it easy to execute the same analysis for all combinations of grouping
+variable(s) in a dataframe. Currently, these functions work only for methods
+that depend on a `data` argument (e.g., `stats::lm`), but not for functions that
+don't (e.g., `stats::prop.test()`).
 
 ## `grouped_tidy`
 
-``` r
+
+```r
 # to speed up computation, let's use only 50% of the data
 set.seed(123)
 library(lme4)
@@ -477,7 +487,8 @@ broomExtra::grouped_tidy(
 
 ## `grouped_glance`
 
-``` r
+
+```r
 # to speed up computation, let's use only 50% of the data
 set.seed(123)
 
@@ -525,7 +536,8 @@ broomExtra::grouped_glance(
 
 ## `grouped_augment`
 
-``` r
+
+```r
 # to speed up computation, let's use only 50% of the data
 set.seed(123)
 
@@ -584,12 +596,10 @@ functions involved:
 
 # Contributing
 
-I’m happy to receive bug reports, suggestions, questions, and (most of
-all) contributions to fix problems and add features. I personally prefer
-using the `GitHub` issues system over trying to reach out to me in other
-ways (personal e-mail, Twitter, etc.). Pull requests for contributions
-are encouraged.
+I'm happy to receive bug reports, suggestions, questions, and (most of all)
+contributions to fix problems and add features. I personally prefer using the
+`GitHub` issues system over trying to reach out to me in other ways (personal
+e-mail, Twitter, etc.). Pull requests for contributions are encouraged.
 
-Please note that this project is released with a [Contributor Code of
-Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md).
-By participating in this project you agree to abide by its terms.
+Please note that this project is released with a 
+[Contributor Code of Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.

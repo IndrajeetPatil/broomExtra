@@ -167,17 +167,22 @@ broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 
 # hybrid generics
 
-`broom`-family of packages are not the only ones which return such tidy
-summaries for model parameters and performance. There is also `easystats`-family
-of packages that provide similar functions, more specifically
+The `broom`-family of packages are not the only ones which return such tidy
+summaries for model parameters and model performance. The `easystats`-family of
+packages also provide similar functions, more specifically
 [parameters](https://easystats.github.io/parameters/) and
-[performance](https://easystats.github.io/performance/). Sometimes although
-`broom` packages might not contain a method for a given regression object,
-`easystats` packages would and vice versa. The hybrid functions in `broomExtra`
-make it easy to retrieve these summaries with the appropriate method and does so
-robustly.
+[performance](https://easystats.github.io/performance/). Sometimes the `broom`
+packages might not contain a `tidy`/`glance` method for a given regression
+object, while `easystats` packages would and vice versa. The hybrid functions in
+`broomExtra` make it easy to retrieve these summaries with the appropriate
+method and do so robustly:
 
-## `tidy_parameters`
+  - `broom::tidy` + `parameters::model_parameters` =
+    `broomExtra::tidy_parameters`
+  - `broom::glance` + `performance::model_performance` =
+    `broomExtra::glance_performance`
+
+## `tidy_parameters` 
 
 The `tidy_parameters` will return a model summary either from `broom::tidy` or
 `parameters::model_parameters`:
