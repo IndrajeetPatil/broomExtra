@@ -32,7 +32,6 @@ testthat::test_that(
       )
     )
 
-    testthat::expect_identical(names(broomExtra::tidy(mtcars, rownames = "rownames"))[1], "rownames")
     testthat::expect_null(broomExtra::tidy(list(1, c("x", "y"))), NULL)
   }
 )
