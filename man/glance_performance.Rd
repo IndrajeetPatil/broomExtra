@@ -25,5 +25,4 @@ The function will attempt to get these details either using
 set.seed(123)
 mod <- lm(mpg ~ wt + cyl, data = mtcars)
 glance_performance(mod, conf.int = TRUE)
-
 }

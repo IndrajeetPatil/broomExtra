@@ -31,8 +31,8 @@ testthat::test_that(
         "tbl_df"
       )
     )
-    # testthat::expect_equal(dim(broomExtra::tidy(mtcars)), c(32L, 12L))
-    # testthat::expect_identical(names(broomExtra::tidy(mtcars))[1], "rownames")
+
+    testthat::expect_identical(names(broomExtra::tidy(mtcars, rownames = "rownames"))[1], "rownames")
     testthat::expect_null(broomExtra::tidy(list(1, c("x", "y"))), NULL)
   }
 )

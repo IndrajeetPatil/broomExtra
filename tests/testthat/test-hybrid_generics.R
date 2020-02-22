@@ -9,20 +9,28 @@ testthat::test_that(
     lmm_mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 
     # test
-    testthat::expect_equal(tidy(lmm_mod, conf.int = TRUE, effects = "fixed"),
-                           tidy_parameters(lmm_mod, effects = "fixed"))
-    testthat::expect_equal(glance(lmm_mod, conf.int = TRUE, effects = "fixed"),
-                           glance_performance(lmm_mod, effects = "fixed"))
+    testthat::expect_equal(
+      tidy(lmm_mod, conf.int = TRUE, effects = "fixed"),
+      dplyr::select(tidy_parameters(lmm_mod, effects = "fixed"), -p.value)
+    )
+    testthat::expect_equal(
+      glance(lmm_mod, conf.int = TRUE, effects = "fixed"),
+      glance_performance(lmm_mod, effects = "fixed")
+    )
 
     # lm
     set.seed(123)
     lm_mod <- lm(Reaction ~ Days, sleepstudy)
 
     # test
-    testthat::expect_equal(tidy(lm_mod, conf.int = TRUE, effects = "fixed"),
-                           tidy_parameters(lm_mod, effects = "fixed"))
-    testthat::expect_equal(glance(lm_mod, conf.int = TRUE, effects = "fixed"),
-                           glance_performance(lm_mod, effects = "fixed"))
+    testthat::expect_equal(
+      tidy(lm_mod, conf.int = TRUE, effects = "fixed"),
+      tidy_parameters(lm_mod, effects = "fixed")
+    )
+    testthat::expect_equal(
+      glance(lm_mod, conf.int = TRUE, effects = "fixed"),
+      glance_performance(lm_mod, effects = "fixed")
+    )
 
     # mixor object
     set.seed(123)
@@ -60,10 +68,21 @@ testthat::test_that(
         auto.cov.lv.x = TRUE
       )
 
-     # test
+    # test
     testthat::expect_identical(
       tidy_parameters(mod_lavaan, effects = "fixed"),
       tidy_parameters(mod_lavaan, effects = "fixed", exponentiate = TRUE)
     )
+
+    # p-value check
+    library(MASS)
+    mod <- rlm(stack.loss ~ ., stackloss)
+    df_rlm <- tidy_parameters(mod)
+    df <- tidy_parameters(tidy(mod))
+
+    # test
+    testthat::expect_equal(dim(df_rlm), c(4L, 7L))
+    testthat::expect_is(df, "tbl_df")
+    testthat::expect_equal(df$p.value[[1]], NA_real_)
   }
 )

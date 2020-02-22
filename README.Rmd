@@ -241,6 +241,23 @@ parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
 broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
 ```
 
+Additional benefit of using this function is that it will also make sure that
+*p*-values and confidence intervals for regression estimates are consistently
+included.
+
+```{r tidy_parameters3}
+# setup
+set.seed(123)
+library(MASS)
+mod <- rlm(stack.loss ~ ., stackloss)
+
+# broom output (no p-values present)
+broomExtra::tidy(mod, conf.int = TRUE)
+
+# using `tidy_parameters` (p-values present)
+broomExtra::tidy_parameters(mod)
+```
+
 ## `glance_performance`
 
 The `glance_performance` will return a model summary either from `broom::glance`

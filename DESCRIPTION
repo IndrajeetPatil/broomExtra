@@ -39,6 +39,7 @@ Suggests:
     knitr,
     lavaan,
     lme4,
+    MASS,
     mixor,
     rmarkdown,
     spelling,

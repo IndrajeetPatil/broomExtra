@@ -11,9 +11,8 @@
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' tidy_parameters(mod)
-#'
 #' @importFrom rlang is_null
-#' @importFrom parameters model_parameters
+#' @importFrom parameters model_parameters p_value
 #'
 #' @export
 
@@ -42,6 +41,22 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
     )
   }
 
+  # p-value check -----------------------------------------------
+  if (!rlang::is_null(m) && !"p.value" %in% names(m)) {
+    tryCatch(
+      expr = m %<>%
+        dplyr::full_join(
+          x = .,
+          y = parameters::p_value(x, ...) %>%
+            dplyr::rename(.data = ., p.value = p),
+          by = c("term" = "Parameter")
+        ) %>%
+        dplyr::filter(.data = ., !is.na(estimate)) %>%
+        as_tibble(.),
+      error = function(e) m
+    )
+  }
+
   # return the final object
   return(m)
 }
@@ -58,7 +73,6 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' glance_performance(mod, conf.int = TRUE)
-#'
 #' @importFrom rlang is_null
 #' @importFrom performance model_performance
 #'
