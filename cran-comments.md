@@ -9,4 +9,5 @@
 
 ## Comments
 
-- Minor refactoring of internal functions. 
+- Minor refactoring of internal functions.
+- Adds two new functions.
