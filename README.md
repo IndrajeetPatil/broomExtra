@@ -7,20 +7,32 @@
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-2.0.0.9000-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)              | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
 | [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-2-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra)](https://www.rdocumentation.org/packages/broomExtra)                                        |
-| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722)](https://CRAN.R-project.org/package=broomExtra/vignettes/)                |
+| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-1-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722)](https://CRAN.R-project.org/package=broomExtra/vignettes/)                |
 | [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--02--22-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
+| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--03--09-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
 | [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)                                                   | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
 
+# Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
+
 The goal of `broomExtra` is to provide helper functions that assist in
-data analysis workflows involving packages `broom` and `broom.mixed`.
+data analysis workflows involving regression analyses. The goal is to
+combine the functionality offered by different set of packages through a
+common syntax.
+
+The package internally relies on the following packages that I
+contribute to:
+
+  - `broom`
+  - `broom.mixed`
+  - `parameters`
+  - `performance`
 
 # Installation
 
 To get the latest, stable `CRAN` release:
 
 ``` r
-utils::install.packages(pkgs = "broomExtra")
+install.packages("broomExtra")
 ```
 
 You can get the **development** version of the package from `GitHub`. To
@@ -156,9 +168,9 @@ broomExtra::glance(lm.mod)
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::glance(clm.mod)
 #> # A tibble: 1 x 6
-#>     edf   AIC   BIC logLik df.residual  nobs
-#>   <int> <dbl> <dbl>  <dbl>       <dbl> <dbl>
-#> 1     7  187.  203.  -86.4          65    72
+#>     edf   AIC   BIC logLik   df.residual  nobs
+#>   <int> <dbl> <dbl> <logLik>       <dbl> <dbl>
+#> 1     7  187.  203. -86.4162          65    72
 
 # in case no glance method is available (`NULL` will be returned)
 broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
@@ -464,13 +476,13 @@ broomExtra::grouped_tidy(
 #>    <ord> <chr>   <chr>  <chr>       <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
 #>  1 Fair  fixed   <NA>   carat    3800.         228.      16.7    3212.     4387.
 #>  2 Fair  ran_pa~ color  sd__(In~ 2158.          NA       NA        NA        NA 
-#>  3 Fair  ran_pa~ color  cor__(I~   -0.975       NA       NA        NA        NA 
-#>  4 Fair  ran_pa~ color  sd__car~ 2545.          NA       NA        NA        NA 
+#>  3 Fair  ran_pa~ color  sd__car~ 2545.          NA       NA        NA        NA 
+#>  4 Fair  ran_pa~ color  cor__(I~   -0.975       NA       NA        NA        NA 
 #>  5 Fair  ran_pa~ Resid~ sd__Obs~ 1830.          NA       NA        NA        NA 
 #>  6 Good  fixed   <NA>   carat    9217.         105.      87.6    8946.     9488.
 #>  7 Good  ran_pa~ color  sd__(In~ 2686.          NA       NA        NA        NA 
-#>  8 Good  ran_pa~ color  cor__(I~    0.998       NA       NA        NA        NA 
-#>  9 Good  ran_pa~ color  sd__car~ 1609.          NA       NA        NA        NA 
+#>  8 Good  ran_pa~ color  sd__car~ 1609.          NA       NA        NA        NA 
+#>  9 Good  ran_pa~ color  cor__(I~    0.998       NA       NA        NA        NA 
 #> 10 Good  ran_pa~ Resid~ sd__Obs~ 1373.          NA       NA        NA        NA 
 #> # ... with 15 more rows
 ```
@@ -593,3 +605,10 @@ are encouraged.
 Please note that this project is released with a [Contributor Code of
 Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md).
 By participating in this project you agree to abide by its terms.
+
+# Acknowledgments
+
+The hexsticker was generously designed by Sarah Otterstetter (Max Planck
+Institute for Human Development, Berlin). Thanks are also due to the
+maintainers and contributors to `broom`- and `easystats`-package
+families who have indulged in all my feature requests. 😄

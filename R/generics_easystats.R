@@ -92,7 +92,6 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::glance_performance(mod)
-#'
 #' @importFrom rlang is_null
 #' @importFrom performance model_performance
 #'

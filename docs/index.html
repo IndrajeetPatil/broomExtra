@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enhancements for broom Package Family • broomExtra</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous">
@@ -23,6 +29,7 @@
     combination of grouping variable(s) in a dataframe. Additionally,
     tidy-and glance-like methods from parameters and performance can
     also be accessed.">
+<meta property="og:image" content="https://indrajeetpatil.github.io/broomExtra/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -139,7 +146,7 @@
 <td><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a></td>
 <td><a href="https://www.tidyverse.org/lifecycle/"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue" alt="Monthly downloads badge"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-0-red.svg" alt="Github Issues"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-1-red.svg" alt="Github Issues"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra/vignettes/"><img src="https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722" alt="vignettes"></a></td>
 </tr>
 <tr class="even">
@@ -153,7 +160,7 @@
 <td><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/badge/licence-GPL--3-blue.svg" alt="Licence"></a></td>
 <td><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></td>
 <td><a href="http://hits.dwyl.io/IndrajeetPatil/broomExtra"><img src="http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg" alt="HitCount"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--02--22-yellowgreen.svg" alt="Last-changedate"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--03--09-yellowgreen.svg" alt="Last-changedate"></a></td>
 <td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg" alt="GitHub last commit"></a></td>
 </tr>
 <tr class="even">
@@ -165,13 +172,25 @@
 </tr>
 </tbody>
 </table>
-<p>The goal of <code>broomExtra</code> is to provide helper functions that assist in data analysis workflows involving packages <code>broom</code> and <code>broom.mixed</code>.</p>
+</div>
+<div id="raison-dêtre-" class="section level1">
+<h1 class="hasAnchor">
+<a href="#raison-d%C3%AAtre-" class="anchor"></a>Raison d’être <img src="reference/figures/logo.png" align="right" width="360">
+</h1>
+<p>The goal of <code>broomExtra</code> is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax.</p>
+<p>The package internally relies on the following packages that I contribute to:</p>
+<ul>
+<li><code>broom</code></li>
+<li><code>broom.mixed</code></li>
+<li><code>parameters</code></li>
+<li><code>performance</code></li>
+</ul>
 </div>
 <div id="installation" class="section level1">
 <h1 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h1>
 <p>To get the latest, stable <code>CRAN</code> release:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>utils<span class="op">::</span><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="dt">pkgs =</span> <span class="st">"broomExtra"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"broomExtra"</span>)</span></code></pre></div>
 <p>You can get the <strong>development</strong> version of the package from <code>GitHub</code>. To see what new changes (and bug fixes) have been made to the package since the last release on <code>CRAN</code>, you can check the detailed log of changes here: <a href="https://indrajeetpatil.github.io/broomExtra/news/index.html" class="uri">https://indrajeetpatil.github.io/broomExtra/news/index.html</a></p>
 <p>If you are in hurry and want to reduce the time of installation, prefer-</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># needed package to download from GitHub repo</span></span>
@@ -273,9 +292,9 @@
 <span id="cb6-24"><a href="#cb6-24"></a>clm.mod &lt;-<span class="st"> </span><span class="kw">clm</span>(rating <span class="op">~</span><span class="st"> </span>temp <span class="op">*</span><span class="st"> </span>contact, <span class="dt">data =</span> wine)</span>
 <span id="cb6-25"><a href="#cb6-25"></a>broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/glance.html">glance</a></span>(clm.mod)</span>
 <span id="cb6-26"><a href="#cb6-26"></a><span class="co">#&gt; # A tibble: 1 x 6</span></span>
-<span id="cb6-27"><a href="#cb6-27"></a><span class="co">#&gt;     edf   AIC   BIC logLik df.residual  nobs</span></span>
-<span id="cb6-28"><a href="#cb6-28"></a><span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span id="cb6-29"><a href="#cb6-29"></a><span class="co">#&gt; 1     7  187.  203.  -86.4          65    72</span></span>
+<span id="cb6-27"><a href="#cb6-27"></a><span class="co">#&gt;     edf   AIC   BIC logLik   df.residual  nobs</span></span>
+<span id="cb6-28"><a href="#cb6-28"></a><span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;logLik&gt;       &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span id="cb6-29"><a href="#cb6-29"></a><span class="co">#&gt; 1     7  187.  203. -86.4162          65    72</span></span>
 <span id="cb6-30"><a href="#cb6-30"></a></span>
 <span id="cb6-31"><a href="#cb6-31"></a><span class="co"># in case no glance method is available (`NULL` will be returned)</span></span>
 <span id="cb6-32"><a href="#cb6-32"></a>broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/glance.html">glance</a></span>(stats<span class="op">::</span><span class="kw"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span>(stats<span class="op">::</span><span class="kw"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(wt <span class="op">~</span><span class="st"> </span>am, mtcars)))</span>
@@ -554,13 +573,13 @@
 <span id="cb12-41"><a href="#cb12-41"></a><span class="co">#&gt;    &lt;ord&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span></span>
 <span id="cb12-42"><a href="#cb12-42"></a><span class="co">#&gt;  1 Fair  fixed   &lt;NA&gt;   carat    3800.         228.      16.7    3212.     4387.</span></span>
 <span id="cb12-43"><a href="#cb12-43"></a><span class="co">#&gt;  2 Fair  ran_pa~ color  sd__(In~ 2158.          NA       NA        NA        NA </span></span>
-<span id="cb12-44"><a href="#cb12-44"></a><span class="co">#&gt;  3 Fair  ran_pa~ color  cor__(I~   -0.975       NA       NA        NA        NA </span></span>
-<span id="cb12-45"><a href="#cb12-45"></a><span class="co">#&gt;  4 Fair  ran_pa~ color  sd__car~ 2545.          NA       NA        NA        NA </span></span>
+<span id="cb12-44"><a href="#cb12-44"></a><span class="co">#&gt;  3 Fair  ran_pa~ color  sd__car~ 2545.          NA       NA        NA        NA </span></span>
+<span id="cb12-45"><a href="#cb12-45"></a><span class="co">#&gt;  4 Fair  ran_pa~ color  cor__(I~   -0.975       NA       NA        NA        NA </span></span>
 <span id="cb12-46"><a href="#cb12-46"></a><span class="co">#&gt;  5 Fair  ran_pa~ Resid~ sd__Obs~ 1830.          NA       NA        NA        NA </span></span>
 <span id="cb12-47"><a href="#cb12-47"></a><span class="co">#&gt;  6 Good  fixed   &lt;NA&gt;   carat    9217.         105.      87.6    8946.     9488.</span></span>
 <span id="cb12-48"><a href="#cb12-48"></a><span class="co">#&gt;  7 Good  ran_pa~ color  sd__(In~ 2686.          NA       NA        NA        NA </span></span>
-<span id="cb12-49"><a href="#cb12-49"></a><span class="co">#&gt;  8 Good  ran_pa~ color  cor__(I~    0.998       NA       NA        NA        NA </span></span>
-<span id="cb12-50"><a href="#cb12-50"></a><span class="co">#&gt;  9 Good  ran_pa~ color  sd__car~ 1609.          NA       NA        NA        NA </span></span>
+<span id="cb12-49"><a href="#cb12-49"></a><span class="co">#&gt;  8 Good  ran_pa~ color  sd__car~ 1609.          NA       NA        NA        NA </span></span>
+<span id="cb12-50"><a href="#cb12-50"></a><span class="co">#&gt;  9 Good  ran_pa~ color  cor__(I~    0.998       NA       NA        NA        NA </span></span>
 <span id="cb12-51"><a href="#cb12-51"></a><span class="co">#&gt; 10 Good  ran_pa~ Resid~ sd__Obs~ 1373.          NA       NA        NA        NA </span></span>
 <span id="cb12-52"><a href="#cb12-52"></a><span class="co">#&gt; # ... with 15 more rows</span></span></code></pre></div>
 </div>
@@ -676,6 +695,11 @@
 <a href="#contributing" class="anchor"></a>Contributing</h1>
 <p>I’m happy to receive bug reports, suggestions, questions, and (most of all) contributions to fix problems and add features. I personally prefer using the <code>GitHub</code> issues system over trying to reach out to me in other ways (personal e-mail, Twitter, etc.). Pull requests for contributions are encouraged.</p>
 <p>Please note that this project is released with a <a href="https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+</div>
+<div id="acknowledgments" class="section level1">
+<h1 class="hasAnchor">
+<a href="#acknowledgments" class="anchor"></a>Acknowledgments</h1>
+<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <code>broom</code>- and <code>easystats</code>-package families who have indulged in all my feature requests. 😄</p>
 </div>
 
   </div>

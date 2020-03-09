@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# `broomExtra`: Enhancements for `broom` Package Family
+# `broomExtra`: Enhancements for `broom` Package Family 
 
 Package | Status | Usage | GitHub | References
 ----------------- | ----------------- | ----------------- | ----------------- | -----------------
@@ -27,15 +27,26 @@ Package | Status | Usage | GitHub | References
 [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master) | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra) | [![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master) | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)
 [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra) | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community) | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues)
 
+
+# Raison d'être <img src="man/figures/logo.png" align="right" width="360" />
+
 The goal of `broomExtra` is to provide helper functions that assist in data
-analysis workflows involving packages `broom` and `broom.mixed`.
+analysis workflows involving regression analyses. The goal is to combine the
+functionality offered by different set of packages through a common syntax.
+
+The package internally relies on the following packages that I contribute to:
+
+  - `broom`
+  - `broom.mixed`
+  - `parameters`
+  - `performance`
 
 # Installation
 
 To get the latest, stable `CRAN` release:
 
 ```{r installation1, eval = FALSE, warning = FALSE, messsage = FALSE}
-utils::install.packages(pkgs = "broomExtra")
+install.packages("broomExtra")
 ```
 
 You can get the **development** version of the package from `GitHub`. To see
@@ -393,3 +404,10 @@ e-mail, Twitter, etc.). Pull requests for contributions are encouraged.
 
 Please note that this project is released with a 
 [Contributor Code of Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+# Acknowledgments
+
+The hexsticker was generously designed by Sarah Otterstetter (Max Planck
+Institute for Human Development, Berlin). Thanks are also due to the maintainers
+and contributors to `broom`- and `easystats`-package families who have indulged
+in all my feature requests. `r emo::ji("smile")`

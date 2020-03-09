@@ -1,5 +1,7 @@
 # broomExtra 2.0.0.9000
 
+  - Thanks to Sarah, the package now has a hexsticker. 
+
 # broomExtra 2.0.0
 
   - New functions that make it easy to access tidy dataframes from both
