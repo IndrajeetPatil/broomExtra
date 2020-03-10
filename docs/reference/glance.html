@@ -53,7 +53,8 @@
 <meta property="og:title" content="Retrieve model summary dataframe if it exists. — glance" />
 <meta property="og:description" content="Check if a glance method exits for a given object, either in
 broom or in broom.mixed. If it does, return the model summary
-dataframe, if not, return a NULL." />
+dataframe, if not, return a NULL. In this case, you can try the
+broomExtra::glance_performance function." />
 <meta property="og:image" content="https://indrajeetpatil.github.io/broomExtra/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -155,7 +156,8 @@ dataframe, if not, return a NULL." />
     <div class="ref-description">
     <p>Check if a <code>glance</code> method exits for a given object, either in
 <code>broom</code> or in <code>broom.mixed</code>. If it does, return the model summary
-dataframe, if not, return a <code>NULL</code>.</p>
+dataframe, if not, return a <code>NULL</code>. In this case, you can try the
+<code><a href='glance_performance.html'>broomExtra::glance_performance</a></code> function.</p>
     </div>
 
     <pre class="usage"><span class='fu'>glance</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
@@ -256,7 +258,7 @@ dataframe, if not, return a <code>NULL</code>.</p>
 </ul></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='grouped_glance.html'>grouped_glance</a></code></p></div>
+    <div class='dont-index'><p><code><a href='grouped_glance.html'>grouped_glance</a></code>, <code><a href='glance_performance.html'>glance_performance</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)

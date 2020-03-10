@@ -1,6 +1,10 @@
 # broomExtra 2.0.0.9000
 
-  - Thanks to Sarah, the package now has a hexsticker. 
+  - The `glance_performance` function now returns a combined summary dataframe
+    from `broom` and `performance` packages, if both are available. This was
+    done to include some unique performance measures that only the `performance`
+    package contains (e.g., Nagelkerke's $R^2$, Tjur's $R^2$, etc.).
+  - Thanks to Sarah, the package now has a hexsticker.
 
 # broomExtra 2.0.0
 

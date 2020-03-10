@@ -85,13 +85,17 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' @description Computes indices of model performance for regression models.
 #' @inheritParams glance
 #' @return A data frame (with one row) and one column per "index".
+#'
 #' @details The function will attempt to get these details either using
-#'   `broom::glance` or `performance::model_performance`.
+#'   `broom::glance` or `performance::model_performance`. If both function
+#'   provide model performance measure summaries, the function will try to
+#'   combine them into a single dataframe.
 #'
 #' @examples
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::glance_performance(mod)
+#' @importFrom dplyr select intersect
 #' @importFrom rlang is_null
 #' @importFrom performance model_performance
 #'
@@ -100,21 +104,36 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 glance_performance <- function(x, ...) {
   # broom family --------------------------------------------
   # check if `broom` family has a tidy method for a given object
-  m <- tryCatch(
+  df_broom <- tryCatch(
     expr = broomExtra::glance(x),
     error = function(e) NULL
   )
 
+  # for consistency with `performance` output, convert column names to lowercase
+  if (!rlang::is_null(df_broom)) df_broom %<>% dplyr::rename_all(., .f = tolower)
+
   # easystats family ---------------------------------------
   # check if `easystats` family has a tidy method for a given object
-  if (rlang::is_null(m)) {
-    m <- tryCatch(
-      expr = performance::model_performance(x) %>%
-        easystats_to_tidy_names(.),
-      error = function(e) NULL
-    )
+  df_performance <- tryCatch(
+    expr = performance::model_performance(x, metrics = "all") %>%
+      easystats_to_tidy_names(.),
+    error = function(e) NULL
+  )
+
+  # marry the families ---------------------------------------
+  # combine if both are available
+  if (!rlang::is_null(df_broom) && !rlang::is_null(df_performance)) {
+    df_combined <-
+      dplyr::bind_cols(
+        df_broom,
+        dplyr::select(df_performance, -dplyr::intersect(names(df_broom), names(df_performance))),
+      )
   }
 
+  # otherwise return what's not a `NULL`
+  if (rlang::is_null(df_broom)) df_combined <- df_performance
+  if (rlang::is_null(df_performance)) df_combined <- df_broom
+
   # return the final object
-  return(m)
+  return(df_combined)
 }

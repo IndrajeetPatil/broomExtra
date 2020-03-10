@@ -45,6 +45,8 @@ easystats_to_tidy_names <- function(x) {
       t = "statistic",
       z = "statistic",
       df_error = "df.residual",
-      p = "p.value"
+      p = "p.value",
+      r2 = "r.squared",
+      r2.adjusted = "adj.r.squared"
     )
 }

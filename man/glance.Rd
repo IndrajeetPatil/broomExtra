@@ -14,7 +14,8 @@ glance(x, ...)
 \description{
 Check if a \code{glance} method exits for a given object, either in
 \code{broom} or in \code{broom.mixed}. If it does, return the model summary
-dataframe, if not, return a \code{NULL}.
+dataframe, if not, return a \code{NULL}. In this case, you can try the
+\code{broomExtra::glance_performance} function.
 }
 \note{
 For available methods, see-
@@ -40,7 +41,7 @@ lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 }
 \seealso{
-\code{\link{grouped_glance}}
+\code{\link{grouped_glance}}, \code{\link{glance_performance}}
 }
 \author{
 \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}

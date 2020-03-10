@@ -13,9 +13,9 @@ testthat::test_that(
       tidy(lmm_mod, conf.int = TRUE, effects = "fixed"),
       dplyr::select(tidy_parameters(lmm_mod, effects = "fixed"), -p.value)
     )
+
     testthat::expect_equal(
-      glance(lmm_mod, conf.int = TRUE, effects = "fixed"),
-      glance_performance(lmm_mod, effects = "fixed")
+      dim(glance_performance(lmm_mod, effects = "fixed")), c(1L, 10L)
     )
 
     # lm
@@ -28,8 +28,8 @@ testthat::test_that(
       tidy_parameters(lm_mod, effects = "fixed")
     )
     testthat::expect_equal(
-      glance(lm_mod, conf.int = TRUE, effects = "fixed"),
-      glance_performance(lm_mod, effects = "fixed")
+      dim(glance_performance(lm_mod, effects = "fixed")),
+      c(1L, 13L)
     )
 
     # mixor object
@@ -82,10 +82,8 @@ testthat::test_that(
     library(MASS)
     mod <- rlm(stack.loss ~ ., stackloss)
     df_rlm <- tidy_parameters(mod)
-    df <- tidy_parameters(tidy(mod))
 
     # test
     testthat::expect_equal(dim(df_rlm), c(4L, 7L))
-    testthat::expect_is(df, "tbl_df")
   }
 )

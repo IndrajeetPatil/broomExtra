@@ -18,7 +18,8 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with information about model com
 Checks if a \code{tidy} method exits for a given object, either in
 \code{broom} or in \code{broom.mixed}. If it does, it turn an object into a tidy
 tibble, if not, return a \code{NULL}. In case of data frames, a tibble data
-frame is returned.
+frame is returned. In this case, you can try the
+\code{broomExtra::tidy_parameters} function.
 }
 \note{
 For available methods, see-
@@ -47,7 +48,7 @@ broomExtra::tidy(x = lm.mod, conf.int = TRUE)
 broomExtra::tidy(list(1, c("x", "y")))
 }
 \seealso{
-\code{\link{grouped_tidy}}
+\code{\link{grouped_tidy}}, \code{\link{tidy_parameters}}
 }
 \author{
 \href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
