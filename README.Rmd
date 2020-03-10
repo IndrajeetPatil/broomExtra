@@ -32,7 +32,8 @@ Package | Status | Usage | GitHub | References
 
 The goal of `broomExtra` is to provide helper functions that assist in data
 analysis workflows involving regression analyses. The goal is to combine the
-functionality offered by different set of packages through a common syntax.
+functionality offered by different set of packages through a common syntax to
+return tidy tibbles containing model parameters and summaries.
 
 The package internally relies on the following packages that I contribute to:
 
@@ -40,6 +41,19 @@ The package internally relies on the following packages that I contribute to:
   - `broom.mixed`
   - `parameters`
   - `performance`
+
+Since it combines functionality from these two ecosystems, this package has the
+following advantages over the underlying individual packages (see examples
+below for concrete instantiations of these benefits):
+
+  - Covers more number of regression models than these individual packages.
+  - If possible to compute, the output tibbles contains a *p*-value column.
+  - More robust to extraneous input arguments that might sometimes cause
+    problems for the underlying methods.
+  - Follows consistent `tidymodels` column-naming schema.
+
+If you want to add support for a regression model, the natural place to do this
+would be to contribute either to `broom` or to `parameters`.
 
 # Installation
 
@@ -58,7 +72,7 @@ If you are in hurry and want to reduce the time of installation, prefer-
 
 ```{r installation2, eval = FALSE, warning = FALSE, messsage = FALSE}
 # needed package to download from GitHub repo
-utils::install.packages(pkgs = "remotes")
+install.packages("remotes")
 remotes::install_github(
   repo = "IndrajeetPatil/broomExtra", # package path on GitHub
   quick = TRUE # skips docs, demos, and vignettes
