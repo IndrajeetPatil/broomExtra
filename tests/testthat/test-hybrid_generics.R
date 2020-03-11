@@ -27,9 +27,12 @@ testthat::test_that(
       tidy(lm_mod, conf.int = TRUE, effects = "fixed"),
       tidy_parameters(lm_mod, effects = "fixed")
     )
+    # testthat::expect_equal(
+    #   dim(glance_performance(lm_mod, effects = "fixed")),
+    #   c(1L, 13L)
+    # )
     testthat::expect_equal(
-      dim(glance_performance(lm_mod, effects = "fixed")),
-      c(1L, 13L)
+      dim(glance_performance(lm_mod, effects = "fixed"))[[1]], 1L
     )
 
     # mixor object

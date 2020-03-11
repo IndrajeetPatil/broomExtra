@@ -5,7 +5,7 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
-  "description": "Collection of functions to assist 'broom' and\n    'broom.mixed' package-related data analysis workflows. In particular,\n    the generic functions tidy(), glance(), and augment() choose\n    appropriate S3 methods from these two packages depending on which\n    package exports the needed method. The 'grouped_' variants of the\n    generics provides a convenient way to execute functions across a\n    combination of grouping variable(s) in a dataframe. Additionally,\n    tidy-and glance-like methods from 'parameters' and 'performance' can\n    also be accessed.",
+  "description": "Provides helper functions that assist in data\n    analysis workflows involving regression analyses. The goal is to\n    combine the functionality offered by different set of packages\n    ('broom', 'broom.mixed', 'parameters', and 'performance') through a\n    common syntax to return tidy tibbles containing model parameters and\n    performance measure summaries. The 'grouped_' variants of the generics\n    provides a convenient way to execute functions across a combination of\n    grouping variable(s) in a dataframe.",
   "name": "broomExtra: Enhancements for 'broom' Package Family",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
   "relatedLink": [
@@ -14,7 +14,7 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "2.0.0.9000",
+  "version": "2.5.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",

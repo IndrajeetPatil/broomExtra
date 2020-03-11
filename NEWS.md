@@ -1,4 +1,4 @@
-# broomExtra 2.0.0.9000
+# broomExtra 2.5.0
 
   - The `glance_performance` function now returns a combined summary dataframe
     from `broom` and `performance` packages, if both are available. This was

@@ -20,15 +20,14 @@
 <link href="docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="Enhancements for broom Package Family">
-<meta property="og:description" content="Collection of functions to assist broom and
-    broom.mixed package-related data analysis workflows. In particular,
-    the generic functions tidy(), glance(), and augment() choose
-    appropriate S3 methods from these two packages depending on which
-    package exports the needed method. The grouped_ variants of the
-    generics provides a convenient way to execute functions across a
-    combination of grouping variable(s) in a dataframe. Additionally,
-    tidy-and glance-like methods from parameters and performance can
-    also be accessed.">
+<meta property="og:description" content="Provides helper functions that assist in data
+    analysis workflows involving regression analyses. The goal is to
+    combine the functionality offered by different set of packages
+    (broom, broom.mixed, parameters, and performance) through a
+    common syntax to return tidy tibbles containing model parameters and
+    performance measure summaries. The grouped_ variants of the generics
+    provides a convenient way to execute functions across a combination of
+    grouping variable(s) in a dataframe.">
 <meta property="og:image" content="https://indrajeetpatil.github.io/broomExtra/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -49,7 +48,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.5.0</span>
       </span>
     </div>
 
@@ -132,7 +131,7 @@
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="http://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></td>
 <td><a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis Build Status"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/"><img src="https://img.shields.io/badge/GitHub-2.0.0.9000-orange.svg?style=flat-square" alt="GitHub version"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/"><img src="https://img.shields.io/badge/GitHub-2.5.0.9000-orange.svg?style=flat-square" alt="GitHub version"></a></td>
 <td><a href="https://indrajeetpatil.github.io/broomExtra/"><img src="https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63" alt="Website"></a></td>
 </tr>
 <tr class="even">
@@ -146,7 +145,7 @@
 <td><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a></td>
 <td><a href="https://www.tidyverse.org/lifecycle/"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue" alt="Monthly downloads badge"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-1-red.svg" alt="Github Issues"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-0-red.svg" alt="Github Issues"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra/vignettes/"><img src="https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722" alt="vignettes"></a></td>
 </tr>
 <tr class="even">
@@ -160,7 +159,7 @@
 <td><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/badge/licence-GPL--3-blue.svg" alt="Licence"></a></td>
 <td><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></td>
 <td><a href="http://hits.dwyl.io/IndrajeetPatil/broomExtra"><img src="http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg" alt="HitCount"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--03--10-yellowgreen.svg" alt="Last-changedate"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--03--11-yellowgreen.svg" alt="Last-changedate"></a></td>
 <td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg" alt="GitHub last commit"></a></td>
 </tr>
 <tr class="even">
