@@ -17,12 +17,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
@@ -42,7 +42,7 @@
 
 <!-- docsearch -->
 <script src="../docsearch.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
 <link href="../docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
@@ -52,7 +52,6 @@
 
 <meta property="og:title" content="Changelog" />
 <meta property="og:image" content="https://indrajeetpatil.github.io/broomExtra/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -120,7 +119,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/IndrajeetPatil/broomExtra">
+  <a href="https://github.com/IndrajeetPatil/broomExtra/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -153,8 +152,8 @@
 <a href="#broomextra-250" class="anchor"></a>broomExtra 2.5.0<small> Unreleased </small>
 </h1>
 <ul>
-<li>The <code>glance_performance</code> function now returns a combined summary dataframe from <code>broom</code> and <code>performance</code> packages, if both are available. This was done to include some unique performance measures that only the <code>performance</code> package contains (e.g., Nagelkerke’s <span class="math inline"><em>R</em><sup>2</sup></span>, Tjur’s <span class="math inline"><em>R</em><sup>2</sup></span>, etc.).</li>
-<li>Thanks to Sarah, the package now has a hexsticker.</li>
+<li><p>The <code>glance_performance</code> function now returns a combined summary dataframe from <code>broom</code> and <code>performance</code> packages, if both are available. This was done to include some unique performance measures that only the <code>performance</code> package contains (e.g., Nagelkerke’s <span class="math inline"><em>R</em><sup>2</sup></span>, Tjur’s <span class="math inline"><em>R</em><sup>2</sup></span>, etc.).</p></li>
+<li><p>Thanks to Sarah, the package now has a hexsticker.</p></li>
 </ul>
 </div>
     <div id="broomextra-200" class="section level1">
@@ -162,9 +161,8 @@
 <a href="#broomextra-200" class="anchor"></a>broomExtra 2.0.0<small> 2020-02-22 </small>
 </h1>
 <ul>
-<li>New functions that make it easy to access tidy dataframes from both <code>broom</code>-family and <code>easystats</code>-family packages with the following functions: <code>tidy_parameters</code> and <code>glance_performance</code>.</li>
-<li>
-<code>tidy</code> method no longer attempt to convert entered objects to a tibble as a last resort as this was converting model objects in case the tidiers failed for some reason.</li>
+<li><p>New functions that make it easy to access tidy dataframes from both <code>broom</code>-family and <code>easystats</code>-family packages with the following functions: <code>tidy_parameters</code> and <code>glance_performance</code>.</p></li>
+<li><p><code>tidy</code> method no longer attempt to convert entered objects to a tibble as a last resort as this was converting model objects in case the tidiers failed for some reason.</p></li>
 </ul>
 </div>
     <div id="broomextra-101" class="section level1">

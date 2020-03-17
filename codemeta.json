@@ -5,8 +5,8 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
-  "description": "Provides helper functions that assist in data\n    analysis workflows involving regression analyses. The goal is to\n    combine the functionality offered by different set of packages\n    ('broom', 'broom.mixed', 'parameters', and 'performance') through a\n    common syntax to return tidy tibbles containing model parameters and\n    performance measure summaries. The 'grouped_' variants of the generics\n    provides a convenient way to execute functions across a combination of\n    grouping variable(s) in a dataframe.",
-  "name": "broomExtra: Enhancements for 'broom' Package Family",
+  "description": "Provides helper functions that assist in data\n    analysis workflows involving regression analyses. The goal is to\n    combine the functionality offered by different set of packages\n    ('broom', 'broom.mixed', 'parameters', and 'performance') through a\n    common syntax to return tidy dataframes containing model parameters and\n    performance measure summaries. The 'grouped_' variants of the generics\n    provides a convenient way to execute functions across a combination of\n    grouping variable(s) in a dataframe.",
+  "name": "broomExtra: Enhancements for 'broom' and 'easystats' Package Families",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
   "relatedLink": [
     "https://indrajeetpatil.github.io/broomExtra/",
@@ -124,6 +124,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=mixor"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "orcutt",
+      "name": "orcutt",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=orcutt"
     },
     {
       "@type": "SoftwareApplication",

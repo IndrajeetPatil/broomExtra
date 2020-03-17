@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 options(tibble.width = Inf)
 ```
 
-# `broomExtra`: Enhancements for `broom` Package Family 
+# `broomExtra`: Enhancements for `broom` and `easystats` Package Families 
 
 Package | Status | Usage | GitHub | References
 ----------------- | ----------------- | ----------------- | ----------------- | -----------------
@@ -118,7 +118,10 @@ method and do so robustly:
 ## `tidy_parameters` 
 
 The `tidy_parameters` will return a model summary either from `broom::tidy` or
-`parameters::model_parameters`:
+`parameters::model_parameters`.
+
+Sometimes the method will not be available in `broom`, while it will be in
+`parameters`:
 
 ```{r tidy_parameters1}
 # mixor object
@@ -144,12 +147,28 @@ broomExtra::tidy(mod_mixor)
 broomExtra::tidy_parameters(mod_mixor)
 ```
 
+While other times, it will be the other way around:
+
+```{r tidy_parameters2}
+# model
+library(orcutt)
+set.seed(123)
+reg <- stats::lm(formula = mpg ~ wt + qsec + disp, data = mtcars)
+co <- orcutt::cochrane.orcutt(reg)
+
+# no tidier available in `parameters`
+parameters::model_parameters(co)
+
+# `tidy_parameters` still won't fail
+broomExtra::tidy_parameters(co)
+```
+
 These functions are also pretty robust such that they won't fail if the `...`
 contains misspecified arguments. This makes these functions much easier to work
 with while writing wrapper functions around `broom::tidy` or
 `parameters::model_parameters`.
 
-```{r tidy_parameters2}
+```{r tidy_parameters3}
 # setup
 set.seed(123)
 library(lavaan)
@@ -183,7 +202,7 @@ Additional benefit of using this function is that it will also make sure that
 *p*-values and confidence intervals for regression estimates are consistently
 included.
 
-```{r tidy_parameters3}
+```{r tidy_parameters4}
 # setup
 set.seed(123)
 library(MASS)
@@ -225,13 +244,31 @@ broomExtra::glance(mod_mixor)
 broomExtra::glance_performance(mod_mixor)
 ```
 
+Sometimes the method will be available in `broom`, but not in `easystats`, but
+`glance_performance` will manage to choose the appropriate method for you. For
+example-
+
+```{r glance_performanc2}
+# model
+library(orcutt)
+set.seed(123)
+reg <- stats::lm(formula = mpg ~ wt + qsec + disp, data = mtcars)
+co <- orcutt::cochrane.orcutt(reg)
+
+# no method available in `performance`
+performance::model_performance(co)
+
+# `glance_performance` doesn't fail
+broomExtra::glance_performance(co)
+```
+
 Another benefit of using this function is that it will return model summary that
 contains combined metrics from these two packages. For example, some unique
 performance measures are present only in the `performance` package contains
 (e.g., Nagelkerke's R-squared, Tjur's R-squared, etc.), but not `broom` package
 and vice versa.
 
-```{r glance_performanc2}
+```{r glance_performanc3}
 # setup
 set.seed(123)
 
