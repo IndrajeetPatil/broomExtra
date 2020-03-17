@@ -92,19 +92,22 @@ tidy summaries for model parameters and model performance. The
 specifically [parameters](https://easystats.github.io/parameters/) and
 [performance](https://easystats.github.io/performance/). Sometimes the
 `broom` packages might not contain a `tidy`/`glance` method for a given
-regression object, while `easystats` packages would and vice versa. The
-hybrid functions in `broomExtra` make it easy to retrieve these
+regression object, while `easystats` packages would and *vice versa*.
+
+The hybrid functions in `broomExtra` make it easy to retrieve these
 summaries with the appropriate method and do so robustly:
 
   - `broom::tidy` + `parameters::model_parameters` =
     `broomExtra::tidy_parameters`
+
   - `broom::glance` + `performance::model_performance` =
     `broomExtra::glance_performance`
 
-## `tidy_parameters`
+## Benefits of using `tidy_parameters`
 
-The `tidy_parameters` will return a model summary either from
-`broom::tidy` or `parameters::model_parameters`.
+<font color="green"> The `tidy_parameters` will return a model summary
+either from `broomExtra::tidy` or `parameters::model_parameters`.
+</font>
 
 Sometimes the method will not be available in `broom`, while it will be
 in `parameters`:
@@ -179,10 +182,12 @@ broomExtra::tidy_parameters(co)
 #> 4 disp        -0.00136    0.0110    -0.123 0.903
 ```
 
-These functions are also pretty robust such that they won’t fail if the
-`...` contains misspecified arguments. This makes these functions much
-easier to work with while writing wrapper functions around `broom::tidy`
-or `parameters::model_parameters`.
+<font color="green"> These functions are robust such that they won’t
+fail if the `...` contains misspecified arguments. </font>
+
+This makes these functions much easier to work with while writing
+wrapper functions around `broomExtra::tidy` or
+`parameters::model_parameters`.
 
 ``` r
 # setup
@@ -242,9 +247,8 @@ broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
 #> # ... with 14 more rows
 ```
 
-Additional benefit of using this function is that it will also make sure
-that *p*-values and confidence intervals for regression estimates are
-consistently included.
+<font color="green"> Additionally, the *p*-values and confidence
+intervals for regression estimates are consistently included. </font>
 
 ``` r
 # setup
@@ -273,10 +277,11 @@ broomExtra::tidy_parameters(mod)
 #> 4 Acid.Conc.    -0.128     0.129    -0.992   -0.380     0.125 0.335
 ```
 
-## `glance_performance`
+## Benefits of using `glance_performance`
 
-The `glance_performance` will return a model summary either from
-`broom::glance` or `performance::model_performance`:
+<font color="green"> The `glance_performance` will return a model
+summary either from `broom::glance` or `performance::model_performance`.
+</font>
 
 ``` r
 # mixor object
@@ -333,11 +338,12 @@ broomExtra::glance_performance(co)
 #> 1           2.06               0.521    32
 ```
 
-Another benefit of using this function is that it will return model
-summary that contains combined metrics from these two packages. For
-example, some unique performance measures are present only in the
-`performance` package contains (e.g., Nagelkerke’s R-squared, Tjur’s
-R-squared, etc.), but not `broom` package and vice versa.
+<font color="green"> Additionally, it will return model summary that
+contains combined metrics from these two packages. </font>
+
+For example, some unique performance measures are present only in the
+`performance` package contains (e.g., Nagelkerke’s *R*-squared, Tjur’s
+*R*-squared, etc.), but not `broom` package and *vice versa*.
 
 ``` r
 # setup
@@ -378,9 +384,10 @@ keep track of the class of the object (e.g., “if it is `merMod` object,
 use
 `broom.mixed::tidy()`/`broom.mixed::glance()`/`broom.mixed::augment()`,
 but if it is `polr` object, use
-`broom::tidy()`/`broom::glance()`/`broom::augment()`”). Using generics
-from `broomExtra` means you no longer have to worry about this, as
-calling
+`broom::tidy()`/`broom::glance()`/`broom::augment()`”).
+
+Using generics from `broomExtra` means you no longer have to worry about
+this, as calling
 `broomExtra::tidy()`/`broomExtra::glance()`/`broomExtra::augment()` will
 search the appropriate method from these two packages and return the
 results.
@@ -406,7 +413,7 @@ broomExtra::tidy(x = lmm.mod, effects = "fixed")
 
 # linear model (`broom` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
-broomExtra::tidy(x = lm.mod, conf.int = TRUE)
+broomExtra::tidy(lm.mod, conf.int = TRUE)
 #> # A tibble: 2 x 7
 #>   term        estimate std.error statistic  p.value conf.low conf.high
 #>   <chr>          <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
@@ -416,31 +423,17 @@ broomExtra::tidy(x = lm.mod, conf.int = TRUE)
 # another example with `broom`
 # cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
-broomExtra::tidy(
-  x = clm.mod,
-  exponentiate = TRUE,
-  conf.int = TRUE,
-  conf.type = "Wald"
-)
-#> # A tibble: 7 x 8
-#>   term                estimate std.error statistic  p.value conf.low conf.high
-#>   <chr>                  <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
-#> 1 1|2                    0.244     0.545    -2.59  9.66e- 3   0.0837     0.710
-#> 2 2|3                    3.14      0.510     2.24  2.48e- 2   1.16       8.52 
-#> 3 3|4                   29.3       0.638     5.29  1.21e- 7   8.38     102.   
-#> 4 4|5                  140.        0.751     6.58  4.66e-11  32.1      610.   
-#> 5 tempwarm              10.2       0.701     3.31  9.28e- 4   2.58      40.2  
-#> 6 contactyes             3.85      0.660     2.04  4.13e- 2   1.05      14.0  
-#> 7 tempwarm:contactyes    1.43      0.924     0.389 6.97e- 1   0.234      8.76 
-#>   coef.type
-#>   <chr>    
-#> 1 intercept
-#> 2 intercept
-#> 3 intercept
-#> 4 intercept
-#> 5 location 
-#> 6 location 
-#> 7 location
+broomExtra::tidy(x = clm.mod, exponentiate = TRUE)
+#> # A tibble: 7 x 6
+#>   term                estimate std.error statistic  p.value coef.type
+#>   <chr>                  <dbl>     <dbl>     <dbl>    <dbl> <chr>    
+#> 1 1|2                    0.244     0.545    -2.59  9.66e- 3 intercept
+#> 2 2|3                    3.14      0.510     2.24  2.48e- 2 intercept
+#> 3 3|4                   29.3       0.638     5.29  1.21e- 7 intercept
+#> 4 4|5                  140.        0.751     6.58  4.66e-11 intercept
+#> 5 tempwarm              10.2       0.701     3.31  9.28e- 4 location 
+#> 6 contactyes             3.85      0.660     2.04  4.13e- 2 location 
+#> 7 tempwarm:contactyes    1.43      0.924     0.389 6.97e- 1 location
 
 # unsupported object (the function will return `NULL` in such cases)
 broomExtra::tidy(list(1, c("x", "y")))

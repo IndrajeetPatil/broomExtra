@@ -218,20 +218,17 @@
 <div id="hybrid-generics" class="section level1">
 <h1 class="hasAnchor">
 <a href="#hybrid-generics" class="anchor"></a>hybrid generics</h1>
-<p>The <code>broom</code>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>easystats</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <code>broom</code> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>easystats</code> packages would and vice versa. The hybrid functions in <code>broomExtra</code> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
+<p>The <code>broom</code>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>easystats</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <code>broom</code> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>easystats</code> packages would and <em>vice versa</em>.</p>
+<p>The hybrid functions in <code>broomExtra</code> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
 <ul>
-<li>
-<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy</a></code> + <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code> = <code><a href="reference/tidy_parameters.html">broomExtra::tidy_parameters</a></code>
-</li>
-<li>
-<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance</a></code> + <code><a href="https://rdrr.io/pkg/performance/man/model_performance.html">performance::model_performance</a></code> = <code><a href="reference/glance_performance.html">broomExtra::glance_performance</a></code>
-</li>
+<li><p><code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy</a></code> + <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code> = <code><a href="reference/tidy_parameters.html">broomExtra::tidy_parameters</a></code></p></li>
+<li><p><code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance</a></code> + <code><a href="https://rdrr.io/pkg/performance/man/model_performance.html">performance::model_performance</a></code> = <code><a href="reference/glance_performance.html">broomExtra::glance_performance</a></code></p></li>
 </ul>
-<div id="tidy_parameters" class="section level2">
+<div id="benefits-of-using-tidy_parameters" class="section level2">
 <h2 class="hasAnchor">
-<a href="#tidy_parameters" class="anchor"></a><code>tidy_parameters</code>
+<a href="#benefits-of-using-tidy_parameters" class="anchor"></a>Benefits of using <code>tidy_parameters</code>
 </h2>
-<p>The <code>tidy_parameters</code> will return a model summary either from <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy</a></code> or <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code>.</p>
+<p><font color="green"> The <code>tidy_parameters</code> will return a model summary either from <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code>. </font></p>
 <p>Sometimes the method will not be available in <code>broom</code>, while it will be in <code>parameters</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># mixor object</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">123</span>)</span>
@@ -296,7 +293,8 @@
 <span id="cb6-17"><a href="#cb6-17"></a><span class="co">#&gt; 2 wt          -4.85       1.33      -3.65  0.00112</span></span>
 <span id="cb6-18"><a href="#cb6-18"></a><span class="co">#&gt; 3 qsec         0.797      0.370      2.15  0.0402 </span></span>
 <span id="cb6-19"><a href="#cb6-19"></a><span class="co">#&gt; 4 disp        -0.00136    0.0110    -0.123 0.903</span></span></code></pre></div>
-<p>These functions are also pretty robust such that they won’t fail if the <code>...</code> contains misspecified arguments. This makes these functions much easier to work with while writing wrapper functions around <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy</a></code> or <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code>.</p>
+<p><font color="green"> These functions are robust such that they won’t fail if the <code>...</code> contains misspecified arguments. </font></p>
+<p>This makes these functions much easier to work with while writing wrapper functions around <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># setup</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">123</span>)</span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(lavaan)</span>
@@ -352,7 +350,7 @@
 <span id="cb7-53"><a href="#cb7-53"></a><span class="co">#&gt;  9  0.670   0.665   0.665</span></span>
 <span id="cb7-54"><a href="#cb7-54"></a><span class="co">#&gt; 10  0.549   0.404   0.404</span></span>
 <span id="cb7-55"><a href="#cb7-55"></a><span class="co">#&gt; # ... with 14 more rows</span></span></code></pre></div>
-<p>Additional benefit of using this function is that it will also make sure that <em>p</em>-values and confidence intervals for regression estimates are consistently included.</p>
+<p><font color="green"> Additionally, the <em>p</em>-values and confidence intervals for regression estimates are consistently included. </font></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># setup</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">123</span>)</span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(MASS)</span>
@@ -378,11 +376,11 @@
 <span id="cb8-23"><a href="#cb8-23"></a><span class="co">#&gt; 3 Water.Temp     0.926     0.303     3.05     0.331     1.52  0.00720    </span></span>
 <span id="cb8-24"><a href="#cb8-24"></a><span class="co">#&gt; 4 Acid.Conc.    -0.128     0.129    -0.992   -0.380     0.125 0.335</span></span></code></pre></div>
 </div>
-<div id="glance_performance" class="section level2">
+<div id="benefits-of-using-glance_performance" class="section level2">
 <h2 class="hasAnchor">
-<a href="#glance_performance" class="anchor"></a><code>glance_performance</code>
+<a href="#benefits-of-using-glance_performance" class="anchor"></a>Benefits of using <code>glance_performance</code>
 </h2>
-<p>The <code>glance_performance</code> will return a model summary either from <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance</a></code> or <code><a href="https://rdrr.io/pkg/performance/man/model_performance.html">performance::model_performance</a></code>:</p>
+<p><font color="green"> The <code>glance_performance</code> will return a model summary either from <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance</a></code> or <code><a href="https://rdrr.io/pkg/performance/man/model_performance.html">performance::model_performance</a></code>. </font></p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># mixor object</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">123</span>)</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"mixor"</span>)</span>
@@ -429,7 +427,8 @@
 <span id="cb10-17"><a href="#cb10-17"></a><span class="co">#&gt;   dw.transformed p.value.transformed  nobs</span></span>
 <span id="cb10-18"><a href="#cb10-18"></a><span class="co">#&gt;            &lt;dbl&gt;               &lt;dbl&gt; &lt;int&gt;</span></span>
 <span id="cb10-19"><a href="#cb10-19"></a><span class="co">#&gt; 1           2.06               0.521    32</span></span></code></pre></div>
-<p>Another benefit of using this function is that it will return model summary that contains combined metrics from these two packages. For example, some unique performance measures are present only in the <code>performance</code> package contains (e.g., Nagelkerke’s R-squared, Tjur’s R-squared, etc.), but not <code>broom</code> package and vice versa.</p>
+<p><font color="green"> Additionally, it will return model summary that contains combined metrics from these two packages. </font></p>
+<p>For example, some unique performance measures are present only in the <code>performance</code> package contains (e.g., Nagelkerke’s <em>R</em>-squared, Tjur’s <em>R</em>-squared, etc.), but not <code>broom</code> package and <em>vice versa</em>.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># setup</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="kw"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="dv">123</span>)</span>
 <span id="cb11-3"><a href="#cb11-3"></a></span>
@@ -462,7 +461,8 @@
 <div id="generic-functions" class="section level1">
 <h1 class="hasAnchor">
 <a href="#generic-functions" class="anchor"></a>generic functions</h1>
-<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <code>broom.mixed</code> package, while the rest of the object classes are included in the <code>broom</code> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::tidy()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::glance()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::augment()</a></code>”). Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="reference/glance.html">broomExtra::glance()</a></code>/<code><a href="reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
+<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <code>broom.mixed</code> package, while the rest of the object classes are included in the <code>broom</code> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::tidy()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::glance()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::augment()</a></code>”).</p>
+<p>Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="reference/glance.html">broomExtra::glance()</a></code>/<code><a href="reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
 <div id="tidy-dataframe" class="section level2">
 <h2 class="hasAnchor">
 <a href="#tidy-dataframe" class="anchor"></a>tidy dataframe</h2>
@@ -492,35 +492,37 @@
 <span id="cb12-23"><a href="#cb12-23"></a><span class="co"># another example with `broom`</span></span>
 <span id="cb12-24"><a href="#cb12-24"></a><span class="co"># cumulative Link Models</span></span>
 <span id="cb12-25"><a href="#cb12-25"></a>clm.mod &lt;-<span class="st"> </span><span class="kw">clm</span>(rating <span class="op">~</span><span class="st"> </span>temp <span class="op">*</span><span class="st"> </span>contact, <span class="dt">data =</span> wine)</span>
-<span id="cb12-26"><a href="#cb12-26"></a>broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/tidy.html">tidy</a></span>(</span>
-<span id="cb12-27"><a href="#cb12-27"></a>  <span class="dt">x =</span> clm.mod,</span>
-<span id="cb12-28"><a href="#cb12-28"></a>  <span class="dt">exponentiate =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb12-29"><a href="#cb12-29"></a>  <span class="dt">conf.int =</span> <span class="ot">TRUE</span>,</span>
-<span id="cb12-30"><a href="#cb12-30"></a>  <span class="dt">conf.type =</span> <span class="st">"Wald"</span></span>
-<span id="cb12-31"><a href="#cb12-31"></a>)</span>
-<span id="cb12-32"><a href="#cb12-32"></a><span class="co">#&gt; # A tibble: 7 x 8</span></span>
-<span id="cb12-33"><a href="#cb12-33"></a><span class="co">#&gt;   term                estimate std.error statistic  p.value conf.low conf.high</span></span>
-<span id="cb12-34"><a href="#cb12-34"></a><span class="co">#&gt;   &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span></span>
-<span id="cb12-35"><a href="#cb12-35"></a><span class="co">#&gt; 1 1|2                    0.244     0.545    -2.59  9.66e- 3   0.0837     0.710</span></span>
-<span id="cb12-36"><a href="#cb12-36"></a><span class="co">#&gt; 2 2|3                    3.14      0.510     2.24  2.48e- 2   1.16       8.52 </span></span>
-<span id="cb12-37"><a href="#cb12-37"></a><span class="co">#&gt; 3 3|4                   29.3       0.638     5.29  1.21e- 7   8.38     102.   </span></span>
-<span id="cb12-38"><a href="#cb12-38"></a><span class="co">#&gt; 4 4|5                  140.        0.751     6.58  4.66e-11  32.1      610.   </span></span>
-<span id="cb12-39"><a href="#cb12-39"></a><span class="co">#&gt; 5 tempwarm              10.2       0.701     3.31  9.28e- 4   2.58      40.2  </span></span>
-<span id="cb12-40"><a href="#cb12-40"></a><span class="co">#&gt; 6 contactyes             3.85      0.660     2.04  4.13e- 2   1.05      14.0  </span></span>
-<span id="cb12-41"><a href="#cb12-41"></a><span class="co">#&gt; 7 tempwarm:contactyes    1.43      0.924     0.389 6.97e- 1   0.234      8.76 </span></span>
-<span id="cb12-42"><a href="#cb12-42"></a><span class="co">#&gt;   coef.type</span></span>
-<span id="cb12-43"><a href="#cb12-43"></a><span class="co">#&gt;   &lt;chr&gt;    </span></span>
-<span id="cb12-44"><a href="#cb12-44"></a><span class="co">#&gt; 1 intercept</span></span>
-<span id="cb12-45"><a href="#cb12-45"></a><span class="co">#&gt; 2 intercept</span></span>
-<span id="cb12-46"><a href="#cb12-46"></a><span class="co">#&gt; 3 intercept</span></span>
-<span id="cb12-47"><a href="#cb12-47"></a><span class="co">#&gt; 4 intercept</span></span>
-<span id="cb12-48"><a href="#cb12-48"></a><span class="co">#&gt; 5 location </span></span>
-<span id="cb12-49"><a href="#cb12-49"></a><span class="co">#&gt; 6 location </span></span>
-<span id="cb12-50"><a href="#cb12-50"></a><span class="co">#&gt; 7 location</span></span>
-<span id="cb12-51"><a href="#cb12-51"></a></span>
-<span id="cb12-52"><a href="#cb12-52"></a><span class="co"># unsupported object (the function will return `NULL` in such cases)</span></span>
-<span id="cb12-53"><a href="#cb12-53"></a>broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/tidy.html">tidy</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dv">1</span>, <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"x"</span>, <span class="st">"y"</span>)))</span>
-<span id="cb12-54"><a href="#cb12-54"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
+<span id="cb12-26"><a href="#cb12-26"></a></span>
+<span id="cb12-27"><a href="#cb12-27"></a><span class="co"># tidy output</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a>broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/tidy.html">tidy</a></span>(</span>
+<span id="cb12-29"><a href="#cb12-29"></a>  <span class="dt">x =</span> clm.mod,</span>
+<span id="cb12-30"><a href="#cb12-30"></a>  <span class="dt">exponentiate =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb12-31"><a href="#cb12-31"></a>  <span class="dt">conf.int =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb12-32"><a href="#cb12-32"></a>  <span class="dt">conf.type =</span> <span class="st">"Wald"</span></span>
+<span id="cb12-33"><a href="#cb12-33"></a>)</span>
+<span id="cb12-34"><a href="#cb12-34"></a><span class="co">#&gt; # A tibble: 7 x 8</span></span>
+<span id="cb12-35"><a href="#cb12-35"></a><span class="co">#&gt;   term                estimate std.error statistic  p.value conf.low conf.high</span></span>
+<span id="cb12-36"><a href="#cb12-36"></a><span class="co">#&gt;   &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span></span>
+<span id="cb12-37"><a href="#cb12-37"></a><span class="co">#&gt; 1 1|2                    0.244     0.545    -2.59  9.66e- 3   0.0837     0.710</span></span>
+<span id="cb12-38"><a href="#cb12-38"></a><span class="co">#&gt; 2 2|3                    3.14      0.510     2.24  2.48e- 2   1.16       8.52 </span></span>
+<span id="cb12-39"><a href="#cb12-39"></a><span class="co">#&gt; 3 3|4                   29.3       0.638     5.29  1.21e- 7   8.38     102.   </span></span>
+<span id="cb12-40"><a href="#cb12-40"></a><span class="co">#&gt; 4 4|5                  140.        0.751     6.58  4.66e-11  32.1      610.   </span></span>
+<span id="cb12-41"><a href="#cb12-41"></a><span class="co">#&gt; 5 tempwarm              10.2       0.701     3.31  9.28e- 4   2.58      40.2  </span></span>
+<span id="cb12-42"><a href="#cb12-42"></a><span class="co">#&gt; 6 contactyes             3.85      0.660     2.04  4.13e- 2   1.05      14.0  </span></span>
+<span id="cb12-43"><a href="#cb12-43"></a><span class="co">#&gt; 7 tempwarm:contactyes    1.43      0.924     0.389 6.97e- 1   0.234      8.76 </span></span>
+<span id="cb12-44"><a href="#cb12-44"></a><span class="co">#&gt;   coef.type</span></span>
+<span id="cb12-45"><a href="#cb12-45"></a><span class="co">#&gt;   &lt;chr&gt;    </span></span>
+<span id="cb12-46"><a href="#cb12-46"></a><span class="co">#&gt; 1 intercept</span></span>
+<span id="cb12-47"><a href="#cb12-47"></a><span class="co">#&gt; 2 intercept</span></span>
+<span id="cb12-48"><a href="#cb12-48"></a><span class="co">#&gt; 3 intercept</span></span>
+<span id="cb12-49"><a href="#cb12-49"></a><span class="co">#&gt; 4 intercept</span></span>
+<span id="cb12-50"><a href="#cb12-50"></a><span class="co">#&gt; 5 location </span></span>
+<span id="cb12-51"><a href="#cb12-51"></a><span class="co">#&gt; 6 location </span></span>
+<span id="cb12-52"><a href="#cb12-52"></a><span class="co">#&gt; 7 location</span></span>
+<span id="cb12-53"><a href="#cb12-53"></a></span>
+<span id="cb12-54"><a href="#cb12-54"></a><span class="co"># unsupported object (the function will return `NULL` in such cases)</span></span>
+<span id="cb12-55"><a href="#cb12-55"></a>broomExtra<span class="op">::</span><span class="kw"><a href="https://indrajeetpatil.github.io/broomExtra//reference/tidy.html">tidy</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dv">1</span>, <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"x"</span>, <span class="st">"y"</span>)))</span>
+<span id="cb12-56"><a href="#cb12-56"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 </div>
 <div id="model-summaries" class="section level2">
 <h2 class="hasAnchor">
