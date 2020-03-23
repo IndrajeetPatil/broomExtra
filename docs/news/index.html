@@ -24,16 +24,20 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
+
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -69,7 +73,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -143,13 +147,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
+      <h1 data-toc-skip>Changelog <small></small></h1>
       <small>Source: <a href='https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
     <div id="broomextra-250" class="section level1">
-<h1 class="page-header">
-<a href="#broomextra-250" class="anchor"></a>broomExtra 2.5.0<small> Unreleased </small>
+<h1 class="page-header" data-toc-text="2.5.0">
+<a href="#broomextra-250" class="anchor"></a>broomExtra 2.5.0<small> 2020-03-17 </small>
 </h1>
 <ul>
 <li><p>The <code>glance_performance</code> function now returns a combined summary dataframe from <code>broom</code> and <code>performance</code> packages, if both are available. This was done to include some unique performance measures that only the <code>performance</code> package contains (e.g., Nagelkerke’s <span class="math inline"><em>R</em><sup>2</sup></span>, Tjur’s <span class="math inline"><em>R</em><sup>2</sup></span>, etc.).</p></li>
@@ -157,7 +161,7 @@
 </ul>
 </div>
     <div id="broomextra-200" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="2.0.0">
 <a href="#broomextra-200" class="anchor"></a>broomExtra 2.0.0<small> 2020-02-22 </small>
 </h1>
 <ul>
@@ -166,7 +170,7 @@
 </ul>
 </div>
     <div id="broomextra-101" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.0.1">
 <a href="#broomextra-101" class="anchor"></a>broomExtra 1.0.1<small> 2020-01-07 </small>
 </h1>
 <ul>
@@ -174,7 +178,7 @@
 </ul>
 </div>
     <div id="broomextra-100" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.0.0">
 <a href="#broomextra-100" class="anchor"></a>broomExtra 1.0.0<small> 2019-12-17 </small>
 </h1>
 <ul>
@@ -182,7 +186,7 @@
 </ul>
 </div>
     <div id="broomextra-006" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.6">
 <a href="#broomextra-006" class="anchor"></a>broomExtra 0.0.6<small> 2019-10-26 </small>
 </h1>
 <ul>
@@ -190,7 +194,7 @@
 </ul>
 </div>
     <div id="broomextra-005" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.5">
 <a href="#broomextra-005" class="anchor"></a>broomExtra 0.0.5<small> 2019-08-19 </small>
 </h1>
 <ul>
@@ -200,7 +204,7 @@
 </ul>
 </div>
     <div id="broomextra-004" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.4">
 <a href="#broomextra-004" class="anchor"></a>broomExtra 0.0.4<small> 2019-06-25 </small>
 </h1>
 <ul>
@@ -208,7 +212,7 @@
 </ul>
 </div>
     <div id="broomextra-003" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.3">
 <a href="#broomextra-003" class="anchor"></a>broomExtra 0.0.3<small> 2019-05-20 </small>
 </h1>
 <ul>
@@ -216,7 +220,7 @@
 </ul>
 </div>
     <div id="broomextra-002" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.2">
 <a href="#broomextra-002" class="anchor"></a>broomExtra 0.0.2<small> 2019-04-03 </small>
 </h1>
 <ul>
@@ -224,7 +228,7 @@
 </ul>
 </div>
     <div id="broomextra-001" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0.1">
 <a href="#broomextra-001" class="anchor"></a>broomExtra 0.0.1<small> 2019-03-13 </small>
 </h1>
 <ul>
@@ -234,21 +238,9 @@
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#broomextra-250">2.5.0</a></li>
-        <li><a href="#broomextra-200">2.0.0</a></li>
-        <li><a href="#broomextra-101">1.0.1</a></li>
-        <li><a href="#broomextra-100">1.0.0</a></li>
-        <li><a href="#broomextra-006">0.0.6</a></li>
-        <li><a href="#broomextra-005">0.0.5</a></li>
-        <li><a href="#broomextra-004">0.0.4</a></li>
-        <li><a href="#broomextra-003">0.0.3</a></li>
-        <li><a href="#broomextra-002">0.0.2</a></li>
-        <li><a href="#broomextra-001">0.0.1</a></li>
-      </ul>
-    </div>
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>
