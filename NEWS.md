@@ -1,3 +1,8 @@
+# broomExtra 2.6.0
+
+  - Slight modification to `easystats_to_tidy_names` to cover naming patterns
+    from a few more `easystats` packages.
+
 # broomExtra 2.5.0
 
   - The `glance_performance` function now returns a combined summary dataframe

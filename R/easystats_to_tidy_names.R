@@ -35,18 +35,27 @@ easystats_to_tidy_names <- function(x) {
     dplyr::rename_all(
       .tbl = .,
       .funs = dplyr::recode,
-      parameter = "term",
-      coefficient = "estimate",
-      median = "estimate",
-      se = "std.error",
-      ci.low = "conf.low",
-      ci.high = "conf.high",
-      f = "statistic",
-      t = "statistic",
-      z = "statistic",
-      df_error = "df.error",
-      p = "p.value",
-      r2 = "r.squared",
-      r2.adjusted = "adj.r.squared"
+      # parameters
+      "parameter" = "term",
+      "coefficient" = "estimate",
+      "median" = "estimate",
+      "se" = "std.error",
+      "ci.low" = "conf.low",
+      "ci.high" = "conf.high",
+      "f" = "statistic",
+      "t" = "statistic",
+      "z" = "statistic",
+      "p" = "p.value",
+      # effectsize
+      "cohens.d" = "estimate",
+      "hedges.g" = "estimate",
+      # correlation
+      # "df" = "parameter",
+      "r" = "estimate",
+      "rho" = "estimate",
+      "s" = "statistic",
+      # performance
+      "r2" = "r.squared",
+      "r2.adjusted" = "adj.r.squared"
     )
 }
