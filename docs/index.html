@@ -48,7 +48,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.5.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.6.0</span>
       </span>
     </div>
 
@@ -131,7 +131,7 @@
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="http://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></td>
 <td><a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis Build Status"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/"><img src="https://img.shields.io/badge/GitHub-2.5.0.9000-orange.svg?style=flat-square" alt="GitHub version"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/"><img src="https://img.shields.io/badge/GitHub-2.6.0.9000-orange.svg?style=flat-square" alt="GitHub version"></a></td>
 <td><a href="https://indrajeetpatil.github.io/broomExtra/"><img src="https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63" alt="Website"></a></td>
 </tr>
 <tr class="even">
@@ -145,7 +145,7 @@
 <td><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg" alt="minimal R version"></a></td>
 <td><a href="https://www.tidyverse.org/lifecycle/"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue" alt="Monthly downloads badge"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-0-red.svg" alt="Github Issues"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-1-red.svg" alt="Github Issues"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra/vignettes/"><img src="https://img.shields.io/badge/vignettes-2.0.0-orange.svg?colorB=FF5722" alt="vignettes"></a></td>
 </tr>
 <tr class="even">
@@ -159,7 +159,7 @@
 <td><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/badge/licence-GPL--3-blue.svg" alt="Licence"></a></td>
 <td><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></td>
 <td><a href="http://hits.dwyl.io/IndrajeetPatil/broomExtra"><img src="http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg" alt="HitCount"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--03--23-yellowgreen.svg" alt="Last-changedate"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--04--01-yellowgreen.svg" alt="Last-changedate"></a></td>
 <td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg" alt="GitHub last commit"></a></td>
 </tr>
 <tr class="even">
@@ -201,17 +201,17 @@
 <div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"broomExtra"</span>)</pre></div>
 <p>You can get the <strong>development</strong> version of the package from <code>GitHub</code>. To see what new changes (and bug fixes) have been made to the package since the last release on <code>CRAN</code>, you can check the detailed log of changes here: <a href="https://indrajeetpatil.github.io/broomExtra/news/index.html" class="uri">https://indrajeetpatil.github.io/broomExtra/news/index.html</a></p>
 <p>If you are in hurry and want to reduce the time of installation, prefer-</p>
-<div class="sourceCode" id="cb2"><pre class="r"># needed package to download from GitHub repo
-install.packages("remotes")
-remotes::install_github(
-  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  quick = TRUE # skips docs, demos, and vignettes
+<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># needed package to download from GitHub repo</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)
+<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(
+  <span class="kw">repo</span> <span class="kw">=</span> <span class="st">"IndrajeetPatil/broomExtra"</span>, <span class="co"># package path on GitHub</span>
+  <span class="kw">quick</span> <span class="kw">=</span> <span class="fl">TRUE</span> <span class="co"># skips docs, demos, and vignettes</span>
 )</pre></div>
 <p>If time is not a constraint-</p>
-<div class="sourceCode" id="cb3"><pre class="r">remotes::install_github(
-  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  dependencies = TRUE, # installs packages which broomExtra depends on
-  upgrade_dependencies = TRUE # updates any out of date dependencies
+<div class="sourceCode" id="cb3"><pre class="r"><span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(
+  <span class="kw">repo</span> <span class="kw">=</span> <span class="st">"IndrajeetPatil/broomExtra"</span>, <span class="co"># package path on GitHub</span>
+  <span class="kw">dependencies</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="co"># installs packages which broomExtra depends on</span>
+  <span class="kw">upgrade_dependencies</span> <span class="kw">=</span> <span class="fl">TRUE</span> <span class="co"># updates any out of date dependencies</span>
 )</pre></div>
 <p>Otherwise, the quicker option is-</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"IndrajeetPatil/broomExtra"</span>)</pre></div>
@@ -231,169 +231,232 @@ remotes::install_github(
 </h2>
 <p><font color="green"> The <code>tidy_parameters</code> will return a model summary either from <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code>. </font></p>
 <p>Sometimes the method will not be available in <code>broom</code>, while it will be in <code>parameters</code>:</p>
-<div class="sourceCode" id="cb5"><pre class="r"># mixor object
-set.seed(123)
-library("mixor")
-data("SmokingPrevention")
+<div class="sourceCode" id="cb5"><pre class="r"><span class="co"># mixor object</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"mixor"</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">"SmokingPrevention"</span>)
 
-# data frame must be sorted by id variable
-SmokingPrevention  NULL
+<span class="co"># data frame must be sorted by id variable</span>
+<span class="no">SmokingPrevention</span> <span class="kw">&lt;-</span> <span class="no">SmokingPrevention</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">SmokingPrevention</span>$<span class="no">class</span>), ]
 
-# using hybrid function
-broomExtra::tidy_parameters(mod_mixor)
-#&gt; # A tibble: 8 x 8
-#&gt;   term               estimate std.error conf.low conf.high statistic p.value
-#&gt;   <chr><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt; 1 (Intercept)          0.0882    0.313   -0.526      0.702     0.282  0.778 
-#&gt; 2 Threshold2           1.24      0.0883   1.07       1.41     14.1    0     
-#&gt; 3 Threshold3           2.42      0.0836   2.26       2.58     28.9    0     
-#&gt; 4 thkspre              0.403     0.0429   0.319      0.487     9.39   0     
-#&gt; 5 cc                   0.924     0.371    0.196      1.65      2.49   0.0128
-#&gt; 6 tv                   0.275     0.315   -0.342      0.893     0.873  0.383 
-#&gt; 7 cctv                -0.466     0.406   -1.26       0.330    -1.15   0.251 
-#&gt; 8 Random.(Intercept)   0.0735    0.0495  -0.0235     0.170     1.49   0.137 
-#&gt;   effects
-#&gt;   <chr>  
-#&gt; 1 fixed  
-#&gt; 2 fixed  
-#&gt; 3 fixed  
-#&gt; 4 fixed  
-#&gt; 5 fixed  
-#&gt; 6 fixed  
-#&gt; 7 fixed  
-#&gt; 8 random</chr></dbl></dbl></dbl></dbl></dbl></dbl></chr></pre></div>
+<span class="co"># school model</span>
+<span class="no">mod_mixor</span> <span class="kw">&lt;-</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/mixor/man/mixor.html">mixor</a></span>(
+    <span class="kw">formula</span> <span class="kw">=</span> <span class="no">thksord</span> ~ <span class="no">thkspre</span> + <span class="no">cc</span> + <span class="no">tv</span> + <span class="no">cctv</span>,
+    <span class="kw">data</span> <span class="kw">=</span> <span class="no">SmokingPrevention</span>,
+    <span class="kw">id</span> <span class="kw">=</span> <span class="no">school</span>, <span class="kw">link</span> <span class="kw">=</span> <span class="st">"logit"</span>
+  )
+
+<span class="co"># tidier in `broom`-family?</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span>(<span class="no">mod_mixor</span>)
+<span class="co">#&gt; NULL</span>
+
+<span class="co"># using hybrid function</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span>(<span class="no">mod_mixor</span>)
+<span class="co">#&gt; # A tibble: 8 x 8</span>
+<span class="co">#&gt;   term               estimate std.error conf.low conf.high statistic p.value</span>
+<span class="co">#&gt;   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 (Intercept)          0.0882    0.313   -0.526      0.702     0.282  0.778 </span>
+<span class="co">#&gt; 2 Threshold2           1.24      0.0883   1.07       1.41     14.1    0     </span>
+<span class="co">#&gt; 3 Threshold3           2.42      0.0836   2.26       2.58     28.9    0     </span>
+<span class="co">#&gt; 4 thkspre              0.403     0.0429   0.319      0.487     9.39   0     </span>
+<span class="co">#&gt; 5 cc                   0.924     0.371    0.196      1.65      2.49   0.0128</span>
+<span class="co">#&gt; 6 tv                   0.275     0.315   -0.342      0.893     0.873  0.383 </span>
+<span class="co">#&gt; 7 cctv                -0.466     0.406   -1.26       0.330    -1.15   0.251 </span>
+<span class="co">#&gt; 8 Random.(Intercept)   0.0735    0.0495  -0.0235     0.170     1.49   0.137 </span>
+<span class="co">#&gt;   effects</span>
+<span class="co">#&gt;   &lt;chr&gt;  </span>
+<span class="co">#&gt; 1 fixed  </span>
+<span class="co">#&gt; 2 fixed  </span>
+<span class="co">#&gt; 3 fixed  </span>
+<span class="co">#&gt; 4 fixed  </span>
+<span class="co">#&gt; 5 fixed  </span>
+<span class="co">#&gt; 6 fixed  </span>
+<span class="co">#&gt; 7 fixed  </span>
+<span class="co">#&gt; 8 random</span></pre></div>
 <p>While other times, it will be the other way around:</p>
-<div class="sourceCode" id="cb6"><pre class="r"># model
-library(orcutt)
-set.seed(123)
-reg  Error in `[.data.frame`(md, , needed.vars, drop = FALSE): undefined columns selected
+<div class="sourceCode" id="cb6"><pre class="r"><span class="co"># model</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">orcutt</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="no">reg</span> <span class="kw">&lt;-</span> <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="kw">formula</span> <span class="kw">=</span> <span class="no">mpg</span> ~ <span class="no">wt</span> + <span class="no">qsec</span> + <span class="no">disp</span>, <span class="kw">data</span> <span class="kw">=</span> <span class="no">mtcars</span>)
+<span class="no">co</span> <span class="kw">&lt;-</span> <span class="kw pkg">orcutt</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/orcutt/man/cochrane.orcutt.html">cochrane.orcutt</a></span>(<span class="no">reg</span>)
 
-# `tidy_parameters` still won't fail
-broomExtra::tidy_parameters(co)
-#&gt; # A tibble: 4 x 5
-#&gt;   term        estimate std.error statistic p.value
-#&gt;   <chr><dbl><dbl><dbl><dbl>
-#&gt; 1 (Intercept) 21.8        6.63       3.29  0.00279
-#&gt; 2 wt          -4.85       1.33      -3.65  0.00112
-#&gt; 3 qsec         0.797      0.370      2.15  0.0402 
-#&gt; 4 disp        -0.00136    0.0110    -0.123 0.903</dbl></dbl></dbl></dbl></chr></pre></div>
+<span class="co"># no tidier available in `parameters`</span>
+<span class="kw pkg">parameters</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">model_parameters</a></span>(<span class="no">co</span>)
+<span class="co">#&gt; Error in `[.data.frame`(md, , needed.vars, drop = FALSE): undefined columns selected</span>
+
+<span class="co"># `tidy_parameters` still won't fail</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span>(<span class="no">co</span>)
+<span class="co">#&gt; # A tibble: 4 x 5</span>
+<span class="co">#&gt;   term        estimate std.error statistic p.value</span>
+<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 (Intercept) 21.8        6.63       3.29  0.00279</span>
+<span class="co">#&gt; 2 wt          -4.85       1.33      -3.65  0.00112</span>
+<span class="co">#&gt; 3 qsec         0.797      0.370      2.15  0.0402 </span>
+<span class="co">#&gt; 4 disp        -0.00136    0.0110    -0.123 0.903</span></pre></div>
 <p><font color="green"> These functions are robust such that they won’t fail if the <code>...</code> contains misspecified arguments. </font></p>
 <p>This makes these functions much easier to work with while writing wrapper functions around <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">parameters::model_parameters</a></code>.</p>
-<div class="sourceCode" id="cb7"><pre class="r"># setup
-set.seed(123)
-library(lavaan)
+<div class="sourceCode" id="cb7"><pre class="r"><span class="co"># setup</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">lavaan</span>)
 
-# model specs
-HS.model  Error in lavaan::parameterEstimates(x, ci = conf.int, level = conf.level, : unused argument (exponentiate = TRUE)
+<span class="co"># model specs</span>
+<span class="no">HS.model</span> <span class="kw">&lt;-</span> <span class="st">" visual  =~ x1 + x2 + x3
+              textual =~ x4 + x5 + x6
+              speed   =~ x7 + x8 + x9 "</span>
 
-# parameters method with additional arguments
-parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
-#&gt; Error in lavaan::parameterEstimates(model, se = TRUE, level = ci, ...): unused argument (exponentiate = TRUE)
+<span class="co"># model</span>
+<span class="no">mod_lavaan</span> <span class="kw">&lt;-</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/lavaan.html">lavaan</a></span>(
+    <span class="no">HS.model</span>,
+    <span class="kw">data</span> <span class="kw">=</span> <span class="no">HolzingerSwineford1939</span>,
+    <span class="kw">auto.var</span> <span class="kw">=</span> <span class="fl">TRUE</span>,
+    <span class="kw">auto.fix.first</span> <span class="kw">=</span> <span class="fl">TRUE</span>,
+    <span class="kw">auto.cov.lv.x</span> <span class="kw">=</span> <span class="fl">TRUE</span>
+  )
 
-# using hybrid function
-broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
-#&gt; # A tibble: 24 x 11
-#&gt;    term          op    estimate std.error statistic   p.value conf.low conf.high
-#&gt;    <chr><chr><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt;  1 visual =~ x1  =~       1        0          NA    NA           1         1    
-#&gt;  2 visual =~ x2  =~       0.554    0.0997      5.55  2.80e- 8    0.358     0.749
-#&gt;  3 visual =~ x3  =~       0.729    0.109       6.68  2.31e-11    0.516     0.943
-#&gt;  4 textual =~ x4 =~       1        0          NA    NA           1         1    
-#&gt;  5 textual =~ x5 =~       1.11     0.0654     17.0   0.          0.985     1.24 
-#&gt;  6 textual =~ x6 =~       0.926    0.0554     16.7   0.          0.817     1.03 
-#&gt;  7 speed =~ x7   =~       1        0          NA    NA           1         1    
-#&gt;  8 speed =~ x8   =~       1.18     0.165       7.15  8.56e-13    0.857     1.50 
-#&gt;  9 speed =~ x9   =~       1.08     0.151       7.15  8.40e-13    0.785     1.38 
-#&gt; 10 x1 ~~ x1      ~~       0.549    0.114       4.83  1.34e- 6    0.326     0.772
-#&gt;    std.lv std.all std.nox
-#&gt;     <dbl><dbl><dbl>
-#&gt;  1  0.900   0.772   0.772
-#&gt;  2  0.498   0.424   0.424
-#&gt;  3  0.656   0.581   0.581
-#&gt;  4  0.990   0.852   0.852
-#&gt;  5  1.10    0.855   0.855
-#&gt;  6  0.917   0.838   0.838
-#&gt;  7  0.619   0.570   0.570
-#&gt;  8  0.731   0.723   0.723
-#&gt;  9  0.670   0.665   0.665
-#&gt; 10  0.549   0.404   0.404
-#&gt; # ... with 14 more rows</dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></chr></chr></pre></div>
+<span class="co"># tidy method with additional arguments</span>
+<span class="kw pkg">broom</span><span class="kw ns">::</span><span class="fu"><a href="http://broom.tidyverse.org/reference/reexports.html">tidy</a></span>(<span class="no">mod_lavaan</span>, <span class="kw">exponentiate</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="co">#&gt; Error in lavaan::parameterEstimates(x, ci = conf.int, level = conf.level, : unused argument (exponentiate = TRUE)</span>
+
+<span class="co"># parameters method with additional arguments</span>
+<span class="kw pkg">parameters</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/parameters/man/model_parameters.html">model_parameters</a></span>(<span class="no">mod_lavaan</span>, <span class="kw">exponentiate</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="co">#&gt; Error in lavaan::parameterEstimates(model, se = TRUE, level = ci, ...): unused argument (exponentiate = TRUE)</span>
+
+<span class="co"># using hybrid function</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span>(<span class="no">mod_lavaan</span>, <span class="kw">exponentiate</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="co">#&gt; # A tibble: 24 x 11</span>
+<span class="co">#&gt;    term          op    estimate std.error statistic   p.value conf.low conf.high</span>
+<span class="co">#&gt;    &lt;chr&gt;         &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 visual =~ x1  =~       1        0          NA    NA           1         1    </span>
+<span class="co">#&gt;  2 visual =~ x2  =~       0.554    0.0997      5.55  2.80e- 8    0.358     0.749</span>
+<span class="co">#&gt;  3 visual =~ x3  =~       0.729    0.109       6.68  2.31e-11    0.516     0.943</span>
+<span class="co">#&gt;  4 textual =~ x4 =~       1        0          NA    NA           1         1    </span>
+<span class="co">#&gt;  5 textual =~ x5 =~       1.11     0.0654     17.0   0.          0.985     1.24 </span>
+<span class="co">#&gt;  6 textual =~ x6 =~       0.926    0.0554     16.7   0.          0.817     1.03 </span>
+<span class="co">#&gt;  7 speed =~ x7   =~       1        0          NA    NA           1         1    </span>
+<span class="co">#&gt;  8 speed =~ x8   =~       1.18     0.165       7.15  8.56e-13    0.857     1.50 </span>
+<span class="co">#&gt;  9 speed =~ x9   =~       1.08     0.151       7.15  8.40e-13    0.785     1.38 </span>
+<span class="co">#&gt; 10 x1 ~~ x1      ~~       0.549    0.114       4.83  1.34e- 6    0.326     0.772</span>
+<span class="co">#&gt;    std.lv std.all std.nox</span>
+<span class="co">#&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt;  1  0.900   0.772   0.772</span>
+<span class="co">#&gt;  2  0.498   0.424   0.424</span>
+<span class="co">#&gt;  3  0.656   0.581   0.581</span>
+<span class="co">#&gt;  4  0.990   0.852   0.852</span>
+<span class="co">#&gt;  5  1.10    0.855   0.855</span>
+<span class="co">#&gt;  6  0.917   0.838   0.838</span>
+<span class="co">#&gt;  7  0.619   0.570   0.570</span>
+<span class="co">#&gt;  8  0.731   0.723   0.723</span>
+<span class="co">#&gt;  9  0.670   0.665   0.665</span>
+<span class="co">#&gt; 10  0.549   0.404   0.404</span>
+<span class="co">#&gt; # ... with 14 more rows</span></pre></div>
 <p><font color="green"> Additionally, the <em>p</em>-values and confidence intervals for regression estimates are consistently included. </font></p>
-<div class="sourceCode" id="cb8"><pre class="r"># setup
-set.seed(123)
-library(MASS)
-mod  # A tibble: 4 x 6
-#&gt;   term        estimate std.error statistic conf.low conf.high
-#&gt; * <chr><dbl><dbl><dbl><dbl><dbl>
-#&gt; 1 (Intercept)  -41.0       9.81     -4.18   -60.2     -21.8  
-#&gt; 2 Air.Flow       0.829     0.111     7.46     0.611     1.05 
-#&gt; 3 Water.Temp     0.926     0.303     3.05     0.331     1.52 
-#&gt; 4 Acid.Conc.    -0.128     0.129    -0.992   -0.380     0.125
+<div class="sourceCode" id="cb8"><pre class="r"><span class="co"># setup</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">MASS</span>)
+<span class="no">mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MASS/man/rlm.html">rlm</a></span>(<span class="no">stack.loss</span> ~ <span class="no">.</span>, <span class="no">stackloss</span>)
 
-# using `tidy_parameters` (p-values present)
-broomExtra::tidy_parameters(mod)
-#&gt; # A tibble: 4 x 7
-#&gt;   term        estimate std.error statistic conf.low conf.high     p.value
-#&gt;   <chr><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt; 1 (Intercept)  -41.0       9.81     -4.18   -60.2     -21.8   0.000624   
-#&gt; 2 Air.Flow       0.829     0.111     7.46     0.611     1.05  0.000000933
-#&gt; 3 Water.Temp     0.926     0.303     3.05     0.331     1.52  0.00720    
-#&gt; 4 Acid.Conc.    -0.128     0.129    -0.992   -0.380     0.125 0.335</dbl></dbl></dbl></dbl></dbl></dbl></chr></dbl></dbl></dbl></dbl></dbl></chr></pre></div>
+<span class="co"># broom output (no p-values present)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span>(<span class="no">mod</span>, <span class="kw">conf.int</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="co">#&gt; # A tibble: 4 x 6</span>
+<span class="co">#&gt;   term        estimate std.error statistic conf.low conf.high</span>
+<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 (Intercept)  -41.0       9.81     -4.18   -60.2     -21.8  </span>
+<span class="co">#&gt; 2 Air.Flow       0.829     0.111     7.46     0.611     1.05 </span>
+<span class="co">#&gt; 3 Water.Temp     0.926     0.303     3.05     0.331     1.52 </span>
+<span class="co">#&gt; 4 Acid.Conc.    -0.128     0.129    -0.992   -0.380     0.125</span>
+
+<span class="co"># using `tidy_parameters` (p-values present)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span>(<span class="no">mod</span>)
+<span class="co">#&gt; # A tibble: 4 x 7</span>
+<span class="co">#&gt;   term        estimate std.error statistic conf.low conf.high     p.value</span>
+<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 (Intercept)  -41.0       9.81     -4.18   -60.2     -21.8   0.000624   </span>
+<span class="co">#&gt; 2 Air.Flow       0.829     0.111     7.46     0.611     1.05  0.000000933</span>
+<span class="co">#&gt; 3 Water.Temp     0.926     0.303     3.05     0.331     1.52  0.00720    </span>
+<span class="co">#&gt; 4 Acid.Conc.    -0.128     0.129    -0.992   -0.380     0.125 0.335</span></pre></div>
 </div>
 <div id="benefits-of-using-glance_performance" class="section level2">
 <h2 class="hasAnchor">
 <a href="#benefits-of-using-glance_performance" class="anchor"></a>Benefits of using <code>glance_performance</code>
 </h2>
 <p><font color="green"> The <code>glance_performance</code> will return a model summary either from <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance</a></code> or <code><a href="https://rdrr.io/pkg/performance/man/model_performance.html">performance::model_performance</a></code>. </font></p>
-<div class="sourceCode" id="cb9"><pre class="r"># mixor object
-set.seed(123)
-library("mixor")
-data("SmokingPrevention")
+<div class="sourceCode" id="cb9"><pre class="r"><span class="co"># mixor object</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"mixor"</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">"SmokingPrevention"</span>)
 
-# data frame must be sorted by id variable
-SmokingPrevention  NULL
+<span class="co"># data frame must be sorted by id variable</span>
+<span class="no">SmokingPrevention</span> <span class="kw">&lt;-</span> <span class="no">SmokingPrevention</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">SmokingPrevention</span>$<span class="no">class</span>), ]
 
-# using hybrid function
-broomExtra::glance_performance(mod_mixor)
-#&gt; # A tibble: 1 x 2
-#&gt;      aic    bic
-#&gt;    <dbl><dbl>
-#&gt; 1 -2128. -2133.</dbl></dbl></pre></div>
+<span class="co"># school model</span>
+<span class="no">mod_mixor</span> <span class="kw">&lt;-</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/mixor/man/mixor.html">mixor</a></span>(
+    <span class="kw">formula</span> <span class="kw">=</span> <span class="no">thksord</span> ~ <span class="no">thkspre</span> + <span class="no">cc</span> + <span class="no">tv</span> + <span class="no">cctv</span>,
+    <span class="kw">data</span> <span class="kw">=</span> <span class="no">SmokingPrevention</span>,
+    <span class="kw">id</span> <span class="kw">=</span> <span class="no">school</span>, <span class="kw">link</span> <span class="kw">=</span> <span class="st">"logit"</span>
+  )
+
+<span class="co"># glance method in `broom`-family?</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="no">mod_mixor</span>)
+<span class="co">#&gt; NULL</span>
+
+<span class="co"># using hybrid function</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance_performance.html">glance_performance</a></span>(<span class="no">mod_mixor</span>)
+<span class="co">#&gt; # A tibble: 1 x 2</span>
+<span class="co">#&gt;      aic    bic</span>
+<span class="co">#&gt;    &lt;dbl&gt;  &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 -2128. -2133.</span></pre></div>
 <p>Sometimes the method will be available in <code>broom</code>, but not in <code>easystats</code>, but <code>glance_performance</code> will manage to choose the appropriate method for you. For example-</p>
-<div class="sourceCode" id="cb10"><pre class="r"># model
-library(orcutt)
-set.seed(123)
-reg  Error in UseMethod("model_performance"): no applicable method for 'model_performance' applied to an object of class "orcutt"
+<div class="sourceCode" id="cb10"><pre class="r"><span class="co"># model</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">orcutt</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="no">reg</span> <span class="kw">&lt;-</span> <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="kw">formula</span> <span class="kw">=</span> <span class="no">mpg</span> ~ <span class="no">wt</span> + <span class="no">qsec</span> + <span class="no">disp</span>, <span class="kw">data</span> <span class="kw">=</span> <span class="no">mtcars</span>)
+<span class="no">co</span> <span class="kw">&lt;-</span> <span class="kw pkg">orcutt</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/orcutt/man/cochrane.orcutt.html">cochrane.orcutt</a></span>(<span class="no">reg</span>)
 
-# `glance_performance` doesn't fail
-broomExtra::glance_performance(co)
-#&gt; # A tibble: 1 x 9
-#&gt;   r.squared adj.r.squared   rho number.interaction dw.original p.value.original
-#&gt;       <dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt; 1     0.799         0.777 0.268                  7        1.50           0.0406
-#&gt;   dw.transformed p.value.transformed  nobs
-#&gt;            <dbl><dbl><int>
-#&gt; 1           2.06               0.521    32</int></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></pre></div>
+<span class="co"># no method available in `performance`</span>
+<span class="kw pkg">performance</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/performance/man/model_performance.html">model_performance</a></span>(<span class="no">co</span>)
+<span class="co">#&gt; Error in UseMethod("model_performance"): no applicable method for 'model_performance' applied to an object of class "orcutt"</span>
+
+<span class="co"># `glance_performance` doesn't fail</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance_performance.html">glance_performance</a></span>(<span class="no">co</span>)
+<span class="co">#&gt; # A tibble: 1 x 9</span>
+<span class="co">#&gt;   r.squared adj.r.squared   rho number.interaction dw.original p.value.original</span>
+<span class="co">#&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;              &lt;dbl&gt;       &lt;dbl&gt;            &lt;dbl&gt;</span>
+<span class="co">#&gt; 1     0.799         0.777 0.268                  7        1.50           0.0406</span>
+<span class="co">#&gt;   dw.transformed p.value.transformed  nobs</span>
+<span class="co">#&gt;            &lt;dbl&gt;               &lt;dbl&gt; &lt;int&gt;</span>
+<span class="co">#&gt; 1           2.06               0.521    32</span></pre></div>
 <p><font color="green"> Additionally, it will return model summary that contains combined metrics from these two packages. </font></p>
 <p>For example, some unique performance measures are present only in the <code>performance</code> package contains (e.g., Nagelkerke’s <em>R</em>-squared, Tjur’s <em>R</em>-squared, etc.), but not <code>broom</code> package and <em>vice versa</em>.</p>
-<div class="sourceCode" id="cb11"><pre class="r"># setup
-set.seed(123)
+<div class="sourceCode" id="cb11"><pre class="r"><span class="co"># setup</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
 
-# model
-model  # A tibble: 1 x 8
-#&gt;   null.deviance df.null logLik   AIC   BIC deviance df.residual  nobs
-#&gt;           <dbl><int><dbl><dbl><dbl><dbl><int><int>
-#&gt; 1          43.2      31  -7.37  20.7  25.1     14.7          29    32
+<span class="co"># model</span>
+<span class="no">model</span> <span class="kw">&lt;-</span>
+  <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span>(
+    <span class="kw">formula</span> <span class="kw">=</span> <span class="no">am</span> ~ <span class="no">wt</span> + <span class="no">cyl</span>,
+    <span class="kw">data</span> <span class="kw">=</span> <span class="no">mtcars</span>,
+    <span class="kw">family</span> <span class="kw">=</span> <span class="no">binomial</span>
+  )
 
-# combined output
-broomExtra::glance_performance(model)
-#&gt; # A tibble: 1 x 14
-#&gt;   null.deviance df.null loglik   aic   bic deviance df.residual  nobs r2.tjur
-#&gt; *         <dbl><int><dbl><dbl><dbl><dbl><int><int><dbl>
-#&gt; 1          43.2      31  -7.37  20.7  25.1     14.7          29    32   0.705
-#&gt;    rmse logloss score.log score.spherical   pcp
-#&gt; * <dbl><dbl><dbl><dbl><dbl>
-#&gt; 1 0.678   0.230     -19.0           0.116 0.858</dbl></dbl></dbl></dbl></dbl></dbl></int></int></dbl></dbl></dbl></dbl></int></dbl></int></int></dbl></dbl></dbl></dbl></int></dbl></pre></div>
+<span class="co"># `broom` output</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="no">model</span>)
+<span class="co">#&gt; # A tibble: 1 x 8</span>
+<span class="co">#&gt;   null.deviance df.null logLik   AIC   BIC deviance df.residual  nobs</span>
+<span class="co">#&gt;           &lt;dbl&gt;   &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt; &lt;int&gt;</span>
+<span class="co">#&gt; 1          43.2      31  -7.37  20.7  25.1     14.7          29    32</span>
+
+<span class="co"># combined output</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance_performance.html">glance_performance</a></span>(<span class="no">model</span>)
+<span class="co">#&gt; # A tibble: 1 x 14</span>
+<span class="co">#&gt;   null.deviance df.null loglik   aic   bic deviance df.residual  nobs r2.tjur</span>
+<span class="co">#&gt;           &lt;dbl&gt;   &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt; 1          43.2      31  -7.37  20.7  25.1     14.7          29    32   0.705</span>
+<span class="co">#&gt;    rmse logloss score.log score.spherical   pcp</span>
+<span class="co">#&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;           &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 0.678   0.230     -19.0           0.116 0.858</span></pre></div>
 </div>
 </div>
 <div id="generic-functions" class="section level1">
@@ -405,147 +468,165 @@ broomExtra::glance_performance(model)
 <h2 class="hasAnchor">
 <a href="#tidy-dataframe" class="anchor"></a>tidy dataframe</h2>
 <p>Let’s get a tidy tibble back containing results from various regression models.</p>
-<div class="sourceCode" id="cb12"><pre class="r">set.seed(123)
-library(lme4)
-library(ordinal)
+<div class="sourceCode" id="cb12"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">lme4</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ordinal</span>)
 
-# mixed-effects models (`broom.mixed` will be used)
-lmm.mod  # A tibble: 2 x 5
-#&gt;   effect term        estimate std.error statistic
-#&gt;   <chr><chr><dbl><dbl><dbl>
-#&gt; 1 fixed  (Intercept)    251.       6.82     36.8 
-#&gt; 2 fixed  Days            10.5      1.55      6.77
+<span class="co"># mixed-effects models (`broom.mixed` will be used)</span>
+<span class="no">lmm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>(<span class="no">Reaction</span> ~ <span class="no">Days</span> + (<span class="no">Days</span> <span class="kw">|</span> <span class="no">Subject</span>), <span class="no">sleepstudy</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">lmm.mod</span>, <span class="kw">effects</span> <span class="kw">=</span> <span class="st">"fixed"</span>)
+<span class="co">#&gt; # A tibble: 2 x 5</span>
+<span class="co">#&gt;   effect term        estimate std.error statistic</span>
+<span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 fixed  (Intercept)    251.       6.82     36.8 </span>
+<span class="co">#&gt; 2 fixed  Days            10.5      1.55      6.77</span>
 
-# linear model (`broom` will be used)
-lm.mod  # A tibble: 2 x 7
-#&gt;   term        estimate std.error statistic  p.value conf.low conf.high
-#&gt; * <chr><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt; 1 (Intercept)    251.       6.61     38.0  2.16e-87   238.       264. 
-#&gt; 2 Days            10.5      1.24      8.45 9.89e-15     8.02      12.9
+<span class="co"># linear model (`broom` will be used)</span>
+<span class="no">lm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="no">Reaction</span> ~ <span class="no">Days</span>, <span class="no">sleepstudy</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span>(<span class="no">lm.mod</span>, <span class="kw">conf.int</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="co">#&gt; # A tibble: 2 x 7</span>
+<span class="co">#&gt;   term        estimate std.error statistic  p.value conf.low conf.high</span>
+<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 (Intercept)    251.       6.61     38.0  2.16e-87   238.       264. </span>
+<span class="co">#&gt; 2 Days            10.5      1.24      8.45 9.89e-15     8.02      12.9</span>
 
-# another example with `broom`
-# cumulative Link Models
-clm.mod  # A tibble: 7 x 6
-#&gt;   term                estimate std.error statistic  p.value coef.type
-#&gt;   <chr><dbl><dbl><dbl><dbl><chr>    
-#&gt; 1 1|2                    0.244     0.545    -2.59  9.66e- 3 intercept
-#&gt; 2 2|3                    3.14      0.510     2.24  2.48e- 2 intercept
-#&gt; 3 3|4                   29.3       0.638     5.29  1.21e- 7 intercept
-#&gt; 4 4|5                  140.        0.751     6.58  4.66e-11 intercept
-#&gt; 5 tempwarm              10.2       0.701     3.31  9.28e- 4 location 
-#&gt; 6 contactyes             3.85      0.660     2.04  4.13e- 2 location 
-#&gt; 7 tempwarm:contactyes    1.43      0.924     0.389 6.97e- 1 location
+<span class="co"># another example with `broom`</span>
+<span class="co"># cumulative Link Models</span>
+<span class="no">clm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ordinal/man/clm.html">clm</a></span>(<span class="no">rating</span> ~ <span class="no">temp</span> * <span class="no">contact</span>, <span class="kw">data</span> <span class="kw">=</span> <span class="no">wine</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">clm.mod</span>, <span class="kw">exponentiate</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="co">#&gt; # A tibble: 7 x 6</span>
+<span class="co">#&gt;   term                estimate std.error statistic  p.value coef.type</span>
+<span class="co">#&gt;   &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;    </span>
+<span class="co">#&gt; 1 1|2                    0.244     0.545    -2.59  9.66e- 3 intercept</span>
+<span class="co">#&gt; 2 2|3                    3.14      0.510     2.24  2.48e- 2 intercept</span>
+<span class="co">#&gt; 3 3|4                   29.3       0.638     5.29  1.21e- 7 intercept</span>
+<span class="co">#&gt; 4 4|5                  140.        0.751     6.58  4.66e-11 intercept</span>
+<span class="co">#&gt; 5 tempwarm              10.2       0.701     3.31  9.28e- 4 location </span>
+<span class="co">#&gt; 6 contactyes             3.85      0.660     2.04  4.13e- 2 location </span>
+<span class="co">#&gt; 7 tempwarm:contactyes    1.43      0.924     0.389 6.97e- 1 location</span>
 
-# unsupported object (the function will return `NULL` in such cases)
-broomExtra::tidy(list(1, c("x", "y")))
-#&gt; NULL</chr></dbl></dbl></dbl></dbl></chr></dbl></dbl></dbl></dbl></dbl></dbl></chr></dbl></dbl></dbl></chr></chr></pre></div>
+<span class="co"># unsupported object (the function will return `NULL` in such cases)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"x"</span>, <span class="st">"y"</span>)))
+<span class="co">#&gt; NULL</span></pre></div>
 </div>
 <div id="model-summaries" class="section level2">
 <h2 class="hasAnchor">
 <a href="#model-summaries" class="anchor"></a>model summaries</h2>
 <p>Getting a <code>tibble</code> containing model summary and other performance measures.</p>
-<div class="sourceCode" id="cb13"><pre class="r">set.seed(123)
-library(lme4)
-library(ordinal)
+<div class="sourceCode" id="cb13"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">lme4</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ordinal</span>)
 
-# mixed-effects model
-lmm.mod  # A tibble: 1 x 6
-#&gt;   sigma logLik   AIC   BIC REMLcrit df.residual
-#&gt;   <dbl><dbl><dbl><dbl><dbl><int>
-#&gt; 1  25.6  -872. 1756. 1775.    1744.         174
+<span class="co"># mixed-effects model</span>
+<span class="no">lmm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>(<span class="no">Reaction</span> ~ <span class="no">Days</span> + (<span class="no">Days</span> <span class="kw">|</span> <span class="no">Subject</span>), <span class="no">sleepstudy</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="no">lmm.mod</span>)
+<span class="co">#&gt; # A tibble: 1 x 6</span>
+<span class="co">#&gt;   sigma logLik   AIC   BIC REMLcrit df.residual</span>
+<span class="co">#&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;</span>
+<span class="co">#&gt; 1  25.6  -872. 1756. 1775.    1744.         174</span>
 
-# linear model
-lm.mod  # A tibble: 1 x 12
-#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
-#&gt;       <dbl><dbl><dbl><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt; 1     0.286         0.282  47.7      71.5 9.89e-15     1  -950. 1906. 1916.
-#&gt;   deviance df.residual  nobs
-#&gt;      <dbl><int><int>
-#&gt; 1  405252.         178   180
+<span class="co"># linear model</span>
+<span class="no">lm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="no">Reaction</span> ~ <span class="no">Days</span>, <span class="no">sleepstudy</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="no">lm.mod</span>)
+<span class="co">#&gt; # A tibble: 1 x 12</span>
+<span class="co">#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC</span>
+<span class="co">#&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt; 1     0.286         0.282  47.7      71.5 9.89e-15     1  -950. 1906. 1916.</span>
+<span class="co">#&gt;   deviance df.residual  nobs</span>
+<span class="co">#&gt;      &lt;dbl&gt;       &lt;int&gt; &lt;int&gt;</span>
+<span class="co">#&gt; 1  405252.         178   180</span>
 
-# another example with `broom`
-# cumulative Link Models
-clm.mod  # A tibble: 1 x 6
-#&gt;     edf   AIC   BIC logLik   df.residual  nobs
-#&gt;   <int><dbl><dbl><loglik><dbl><dbl>
-#&gt; 1     7  187.  203. -86.4162          65    72
+<span class="co"># another example with `broom`</span>
+<span class="co"># cumulative Link Models</span>
+<span class="no">clm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ordinal/man/clm.html">clm</a></span>(<span class="no">rating</span> ~ <span class="no">temp</span> * <span class="no">contact</span>, <span class="kw">data</span> <span class="kw">=</span> <span class="no">wine</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="no">clm.mod</span>)
+<span class="co">#&gt; # A tibble: 1 x 6</span>
+<span class="co">#&gt;     edf   AIC   BIC logLik   df.residual  nobs</span>
+<span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;logLik&gt;       &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt; 1     7  187.  203. -86.4162          65    72</span>
 
-# in case no glance method is available (`NULL` will be returned)
-broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
-#&gt; NULL</dbl></dbl></loglik></dbl></dbl></int></int></int></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></int></dbl></dbl></dbl></dbl></dbl></pre></div>
+<span class="co"># in case no glance method is available (`NULL` will be returned)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span>(<span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="no">wt</span> ~ <span class="no">am</span>, <span class="no">mtcars</span>)))
+<span class="co">#&gt; NULL</span></pre></div>
 </div>
 <div id="augmented-dataframe" class="section level2">
 <h2 class="hasAnchor">
 <a href="#augmented-dataframe" class="anchor"></a>augmented dataframe</h2>
 <p>Getting a <code>tibble</code> by augmenting data with information from an object.</p>
-<div class="sourceCode" id="cb14"><pre class="r">set.seed(123)
-library(lme4)
-library(ordinal)
+<div class="sourceCode" id="cb14"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">lme4</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ordinal</span>)
 
-# mixed-effects model
-lmm.mod  # A tibble: 180 x 14
-#&gt;    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset
-#&gt;       <dbl><dbl><fct><dbl><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt;  1     250.     0 308        254.   -4.10 0.229  0.00496   251.  254.       0
-#&gt;  2     259.     1 308        273.  -14.6  0.170  0.0402    262.  273.       0
-#&gt;  3     251.     2 308        293.  -42.2  0.127  0.226     272.  293.       0
-#&gt;  4     321.     3 308        313.    8.78 0.101  0.00731   283.  313.       0
-#&gt;  5     357.     4 308        332.   24.5  0.0910 0.0506    293.  332.       0
-#&gt;  6     415.     5 308        352.   62.7  0.0981 0.362     304.  352.       0
-#&gt;  7     382.     6 308        372.   10.5  0.122  0.0134    314.  372.       0
-#&gt;  8     290.     7 308        391. -101.   0.162  1.81      325.  391.       0
-#&gt;  9     431.     8 308        411.   19.6  0.219  0.106     335.  411.       0
-#&gt; 10     466.     9 308        431.   35.7  0.293  0.571     346.  431.       0
-#&gt;    .sqrtXwt .sqrtrwt .weights  .wtres
-#&gt;       <dbl><dbl><dbl><dbl>
-#&gt;  1        1        1        1   -4.10
-#&gt;  2        1        1        1  -14.6 
-#&gt;  3        1        1        1  -42.2 
-#&gt;  4        1        1        1    8.78
-#&gt;  5        1        1        1   24.5 
-#&gt;  6        1        1        1   62.7 
-#&gt;  7        1        1        1   10.5 
-#&gt;  8        1        1        1 -101.  
-#&gt;  9        1        1        1   19.6 
-#&gt; 10        1        1        1   35.7 
-#&gt; # ... with 170 more rows
+<span class="co"># mixed-effects model</span>
+<span class="no">lmm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>(<span class="no">Reaction</span> ~ <span class="no">Days</span> + (<span class="no">Days</span> <span class="kw">|</span> <span class="no">Subject</span>), <span class="no">sleepstudy</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/augment.html">augment</a></span>(<span class="no">lmm.mod</span>)
+<span class="co">#&gt; # A tibble: 180 x 14</span>
+<span class="co">#&gt;    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset</span>
+<span class="co">#&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt;  1     250.     0 308        254.   -4.10 0.229  0.00496   251.  254.       0</span>
+<span class="co">#&gt;  2     259.     1 308        273.  -14.6  0.170  0.0402    262.  273.       0</span>
+<span class="co">#&gt;  3     251.     2 308        293.  -42.2  0.127  0.226     272.  293.       0</span>
+<span class="co">#&gt;  4     321.     3 308        313.    8.78 0.101  0.00731   283.  313.       0</span>
+<span class="co">#&gt;  5     357.     4 308        332.   24.5  0.0910 0.0506    293.  332.       0</span>
+<span class="co">#&gt;  6     415.     5 308        352.   62.7  0.0981 0.362     304.  352.       0</span>
+<span class="co">#&gt;  7     382.     6 308        372.   10.5  0.122  0.0134    314.  372.       0</span>
+<span class="co">#&gt;  8     290.     7 308        391. -101.   0.162  1.81      325.  391.       0</span>
+<span class="co">#&gt;  9     431.     8 308        411.   19.6  0.219  0.106     335.  411.       0</span>
+<span class="co">#&gt; 10     466.     9 308        431.   35.7  0.293  0.571     346.  431.       0</span>
+<span class="co">#&gt;    .sqrtXwt .sqrtrwt .weights  .wtres</span>
+<span class="co">#&gt;       &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt;  1        1        1        1   -4.10</span>
+<span class="co">#&gt;  2        1        1        1  -14.6 </span>
+<span class="co">#&gt;  3        1        1        1  -42.2 </span>
+<span class="co">#&gt;  4        1        1        1    8.78</span>
+<span class="co">#&gt;  5        1        1        1   24.5 </span>
+<span class="co">#&gt;  6        1        1        1   62.7 </span>
+<span class="co">#&gt;  7        1        1        1   10.5 </span>
+<span class="co">#&gt;  8        1        1        1 -101.  </span>
+<span class="co">#&gt;  9        1        1        1   19.6 </span>
+<span class="co">#&gt; 10        1        1        1   35.7 </span>
+<span class="co">#&gt; # ... with 170 more rows</span>
 
-# linear model
-lm.mod  # A tibble: 180 x 8
-#&gt;    Reaction  Days .fitted  .resid .std.resid    .hat .sigma   .cooksd
-#&gt;       <dbl><dbl><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt;  1     250.     0    251.    1.85    -0.0390 0.0192    47.8 0.0000149
-#&gt;  2     259.     1    262.    3.17    -0.0669 0.0138    47.8 0.0000313
-#&gt;  3     251.     2    272.   21.5     -0.454  0.00976   47.8 0.00101  
-#&gt;  4     321.     3    283.  -38.6      0.813  0.00707   47.8 0.00235  
-#&gt;  5     357.     4    293.  -63.6      1.34   0.00572   47.6 0.00514  
-#&gt;  6     415.     5    304. -111.       2.33   0.00572   47.1 0.0157   
-#&gt;  7     382.     6    314.  -68.0      1.43   0.00707   47.6 0.00728  
-#&gt;  8     290.     7    325.   34.5     -0.727  0.00976   47.8 0.00261  
-#&gt;  9     431.     8    335.  -95.4      2.01   0.0138    47.3 0.0284   
-#&gt; 10     466.     9    346. -121.       2.56   0.0192    47.0 0.0639   
-#&gt; # ... with 170 more rows
+<span class="co"># linear model</span>
+<span class="no">lm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="no">Reaction</span> ~ <span class="no">Days</span>, <span class="no">sleepstudy</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/augment.html">augment</a></span>(<span class="no">lm.mod</span>)
+<span class="co">#&gt; # A tibble: 180 x 8</span>
+<span class="co">#&gt;    Reaction  Days .fitted  .resid .std.resid    .hat .sigma   .cooksd</span>
+<span class="co">#&gt;       &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt;  1     250.     0    251.    1.85    -0.0390 0.0192    47.8 0.0000149</span>
+<span class="co">#&gt;  2     259.     1    262.    3.17    -0.0669 0.0138    47.8 0.0000313</span>
+<span class="co">#&gt;  3     251.     2    272.   21.5     -0.454  0.00976   47.8 0.00101  </span>
+<span class="co">#&gt;  4     321.     3    283.  -38.6      0.813  0.00707   47.8 0.00235  </span>
+<span class="co">#&gt;  5     357.     4    293.  -63.6      1.34   0.00572   47.6 0.00514  </span>
+<span class="co">#&gt;  6     415.     5    304. -111.       2.33   0.00572   47.1 0.0157   </span>
+<span class="co">#&gt;  7     382.     6    314.  -68.0      1.43   0.00707   47.6 0.00728  </span>
+<span class="co">#&gt;  8     290.     7    325.   34.5     -0.727  0.00976   47.8 0.00261  </span>
+<span class="co">#&gt;  9     431.     8    335.  -95.4      2.01   0.0138    47.3 0.0284   </span>
+<span class="co">#&gt; 10     466.     9    346. -121.       2.56   0.0192    47.0 0.0639   </span>
+<span class="co">#&gt; # ... with 170 more rows</span>
 
-# another example with `broom`
-# cumulative Link Models
-clm.mod  # A tibble: 72 x 7
-#&gt;    response rating temp  contact bottle judge .fitted
-#&gt;       <dbl><ord><fct><fct><fct><fct><dbl>
-#&gt;  1       36 2      cold  no      1      1      0.562 
-#&gt;  2       48 3      cold  no      2      1      0.209 
-#&gt;  3       47 3      cold  yes     3      1      0.435 
-#&gt;  4       67 4      cold  yes     4      1      0.0894
-#&gt;  5       77 4      warm  no      5      1      0.190 
-#&gt;  6       60 4      warm  no      6      1      0.190 
-#&gt;  7       83 5      warm  yes     7      1      0.286 
-#&gt;  8       90 5      warm  yes     8      1      0.286 
-#&gt;  9       17 1      cold  no      1      2      0.196 
-#&gt; 10       22 2      cold  no      2      2      0.562 
-#&gt; # ... with 62 more rows
+<span class="co"># another example with `broom`</span>
+<span class="co"># cumulative Link Models</span>
+<span class="no">clm.mod</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ordinal/man/clm.html">clm</a></span>(<span class="no">rating</span> ~ <span class="no">temp</span> * <span class="no">contact</span>, <span class="kw">data</span> <span class="kw">=</span> <span class="no">wine</span>)
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/augment.html">augment</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">clm.mod</span>, <span class="kw">newdata</span> <span class="kw">=</span> <span class="no">wine</span>, <span class="kw">type.predict</span> <span class="kw">=</span> <span class="st">"prob"</span>)
+<span class="co">#&gt; # A tibble: 72 x 7</span>
+<span class="co">#&gt;    response rating temp  contact bottle judge .fitted</span>
+<span class="co">#&gt;       &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;   &lt;fct&gt;  &lt;fct&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt;  1       36 2      cold  no      1      1      0.562 </span>
+<span class="co">#&gt;  2       48 3      cold  no      2      1      0.209 </span>
+<span class="co">#&gt;  3       47 3      cold  yes     3      1      0.435 </span>
+<span class="co">#&gt;  4       67 4      cold  yes     4      1      0.0894</span>
+<span class="co">#&gt;  5       77 4      warm  no      5      1      0.190 </span>
+<span class="co">#&gt;  6       60 4      warm  no      6      1      0.190 </span>
+<span class="co">#&gt;  7       83 5      warm  yes     7      1      0.286 </span>
+<span class="co">#&gt;  8       90 5      warm  yes     8      1      0.286 </span>
+<span class="co">#&gt;  9       17 1      cold  no      1      2      0.196 </span>
+<span class="co">#&gt; 10       22 2      cold  no      2      2      0.562 </span>
+<span class="co">#&gt; # ... with 62 more rows</span>
 
-# in case no augment method is available (`NULL` will be returned)
-broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
-#&gt; NULL</dbl></fct></fct></fct></fct></ord></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></fct></dbl></dbl></pre></div>
+<span class="co"># in case no augment method is available (`NULL` will be returned)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/augment.html">augment</a></span>(<span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span>(<span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="no">wt</span> ~ <span class="no">am</span>, <span class="no">mtcars</span>)))
+<span class="co">#&gt; NULL</span></pre></div>
 </div>
 </div>
 <div id="grouped_-variants-of-generics" class="section level1">
@@ -556,193 +637,193 @@ broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 <h2 class="hasAnchor">
 <a href="#grouped_tidy" class="anchor"></a><code>grouped_tidy</code>
 </h2>
-<div class="sourceCode" id="cb15"><pre class="r"># to speed up computation, let's use only 50% of the data
-set.seed(123)
-library(lme4)
-library(ggplot2)
+<div class="sourceCode" id="cb15"><pre class="r"><span class="co"># to speed up computation, let's use only 50% of the data</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">lme4</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)
 
-# linear model (tidy analysis across grouping combinations)
-broomExtra::grouped_tidy(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = c(cut, color),
-  formula = price ~ carat - 1,
-  ..f = stats::lm,
-  na.action = na.omit,
-  tidy.args = list(quick = TRUE)
+<span class="co"># linear model (tidy analysis across grouping combinations)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span>(
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">cut</span>, <span class="no">color</span>),
+  <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> - <span class="fl">1</span>,
+  <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
+  <span class="kw">na.action</span> <span class="kw">=</span> <span class="no">na.omit</span>,
+  <span class="kw">tidy.args</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="kw">quick</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
 )
-#&gt; # A tibble: 35 x 7
-#&gt;    cut   color term  estimate std.error statistic   p.value
-#&gt;    <ord><ord><chr><dbl><dbl><dbl><dbl>
-#&gt;  1 Fair  D     carat    5246.     207.       25.3 4.45e- 41
-#&gt;  2 Fair  E     carat    4202.     158.       26.6 3.52e- 47
-#&gt;  3 Fair  F     carat    4877.     149.       32.7 1.68e- 71
-#&gt;  4 Fair  G     carat    4538.     152.       29.8 1.03e- 66
-#&gt;  5 Fair  H     carat    4620.     146.       31.6 7.68e- 66
-#&gt;  6 Fair  I     carat    3969.     136.       29.2 4.86e- 44
-#&gt;  7 Fair  J     carat    4024.     197.       20.4 4.80e- 27
-#&gt;  8 Good  D     carat    5207.     115.       45.4 2.66e-145
-#&gt;  9 Good  E     carat    5102.      91.9      55.5 2.50e-206
-#&gt; 10 Good  F     carat    5151.      92.4      55.8 1.76e-204
-#&gt; # ... with 25 more rows
+<span class="co">#&gt; # A tibble: 35 x 7</span>
+<span class="co">#&gt;    cut   color term  estimate std.error statistic   p.value</span>
+<span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt; &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Fair  D     carat    5246.     207.       25.3 4.45e- 41</span>
+<span class="co">#&gt;  2 Fair  E     carat    4202.     158.       26.6 3.52e- 47</span>
+<span class="co">#&gt;  3 Fair  F     carat    4877.     149.       32.7 1.68e- 71</span>
+<span class="co">#&gt;  4 Fair  G     carat    4538.     152.       29.8 1.03e- 66</span>
+<span class="co">#&gt;  5 Fair  H     carat    4620.     146.       31.6 7.68e- 66</span>
+<span class="co">#&gt;  6 Fair  I     carat    3969.     136.       29.2 4.86e- 44</span>
+<span class="co">#&gt;  7 Fair  J     carat    4024.     197.       20.4 4.80e- 27</span>
+<span class="co">#&gt;  8 Good  D     carat    5207.     115.       45.4 2.66e-145</span>
+<span class="co">#&gt;  9 Good  E     carat    5102.      91.9      55.5 2.50e-206</span>
+<span class="co">#&gt; 10 Good  F     carat    5151.      92.4      55.8 1.76e-204</span>
+<span class="co">#&gt; # ... with 25 more rows</span>
 
-# linear mixed effects model (tidy analysis across grouping combinations)
-broomExtra::grouped_tidy(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = cut,
-  ..f = lme4::lmer,
-  formula = price ~ carat + (carat | color) - 1,
-  control = lme4::lmerControl(optimizer = "bobyqa"),
-  tidy.args = list(conf.int = TRUE, conf.level = 0.99)
+<span class="co"># linear mixed effects model (tidy analysis across grouping combinations)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span>(
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="no">cut</span>,
+  <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
+  <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> + (<span class="no">carat</span> <span class="kw">|</span> <span class="no">color</span>) - <span class="fl">1</span>,
+  <span class="kw">control</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html">lmerControl</a></span>(<span class="kw">optimizer</span> <span class="kw">=</span> <span class="st">"bobyqa"</span>),
+  <span class="kw">tidy.args</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="kw">conf.int</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">conf.level</span> <span class="kw">=</span> <span class="fl">0.99</span>)
 )
-#&gt; # A tibble: 25 x 9
-#&gt;    cut   effect   group    term                   estimate std.error statistic
-#&gt;    <ord><chr><chr><chr><dbl><dbl><dbl>
-#&gt;  1 Fair  fixed    <na>     carat                  3800.         228.      16.7
-#&gt;  2 Fair  ran_pars color    sd__(Intercept)        2158.          NA       NA  
-#&gt;  3 Fair  ran_pars color    cor__(Intercept).carat   -0.975       NA       NA  
-#&gt;  4 Fair  ran_pars color    sd__carat              2545.          NA       NA  
-#&gt;  5 Fair  ran_pars Residual sd__Observation        1830.          NA       NA  
-#&gt;  6 Good  fixed    <na>     carat                  9217.         105.      87.6
-#&gt;  7 Good  ran_pars color    sd__(Intercept)        2686.          NA       NA  
-#&gt;  8 Good  ran_pars color    cor__(Intercept).carat    0.998       NA       NA  
-#&gt;  9 Good  ran_pars color    sd__carat              1609.          NA       NA  
-#&gt; 10 Good  ran_pars Residual sd__Observation        1373.          NA       NA  
-#&gt;    conf.low conf.high
-#&gt;       <dbl><dbl>
-#&gt;  1    3212.     4387.
-#&gt;  2      NA        NA 
-#&gt;  3      NA        NA 
-#&gt;  4      NA        NA 
-#&gt;  5      NA        NA 
-#&gt;  6    8946.     9488.
-#&gt;  7      NA        NA 
-#&gt;  8      NA        NA 
-#&gt;  9      NA        NA 
-#&gt; 10      NA        NA 
-#&gt; # ... with 15 more rows</dbl></dbl></na></na></dbl></dbl></dbl></chr></chr></chr></ord></dbl></dbl></dbl></dbl></chr></ord></ord></pre></div>
+<span class="co">#&gt; # A tibble: 25 x 9</span>
+<span class="co">#&gt;    cut   effect   group    term                   estimate std.error statistic</span>
+<span class="co">#&gt;    &lt;ord&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;                     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Fair  fixed    &lt;NA&gt;     carat                  3800.         228.      16.7</span>
+<span class="co">#&gt;  2 Fair  ran_pars color    sd__(Intercept)        2158.          NA       NA  </span>
+<span class="co">#&gt;  3 Fair  ran_pars color    cor__(Intercept).carat   -0.975       NA       NA  </span>
+<span class="co">#&gt;  4 Fair  ran_pars color    sd__carat              2545.          NA       NA  </span>
+<span class="co">#&gt;  5 Fair  ran_pars Residual sd__Observation        1830.          NA       NA  </span>
+<span class="co">#&gt;  6 Good  fixed    &lt;NA&gt;     carat                  9217.         105.      87.6</span>
+<span class="co">#&gt;  7 Good  ran_pars color    sd__(Intercept)        2686.          NA       NA  </span>
+<span class="co">#&gt;  8 Good  ran_pars color    cor__(Intercept).carat    0.998       NA       NA  </span>
+<span class="co">#&gt;  9 Good  ran_pars color    sd__carat              1609.          NA       NA  </span>
+<span class="co">#&gt; 10 Good  ran_pars Residual sd__Observation        1373.          NA       NA  </span>
+<span class="co">#&gt;    conf.low conf.high</span>
+<span class="co">#&gt;       &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt;  1    3212.     4387.</span>
+<span class="co">#&gt;  2      NA        NA </span>
+<span class="co">#&gt;  3      NA        NA </span>
+<span class="co">#&gt;  4      NA        NA </span>
+<span class="co">#&gt;  5      NA        NA </span>
+<span class="co">#&gt;  6    8946.     9488.</span>
+<span class="co">#&gt;  7      NA        NA </span>
+<span class="co">#&gt;  8      NA        NA </span>
+<span class="co">#&gt;  9      NA        NA </span>
+<span class="co">#&gt; 10      NA        NA </span>
+<span class="co">#&gt; # ... with 15 more rows</span></pre></div>
 </div>
 <div id="grouped_glance" class="section level2">
 <h2 class="hasAnchor">
 <a href="#grouped_glance" class="anchor"></a><code>grouped_glance</code>
 </h2>
-<div class="sourceCode" id="cb16"><pre class="r"># to speed up computation, let's use only 50% of the data
-set.seed(123)
+<div class="sourceCode" id="cb16"><pre class="r"><span class="co"># to speed up computation, let's use only 50% of the data</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
 
-# linear model (model summaries across grouping combinations)
-broomExtra::grouped_glance(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = c(cut, color),
-  formula = price ~ carat - 1,
-  ..f = stats::lm,
-  na.action = na.omit
+<span class="co"># linear model (model summaries across grouping combinations)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span>(
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">cut</span>, <span class="no">color</span>),
+  <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> - <span class="fl">1</span>,
+  <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
+  <span class="kw">na.action</span> <span class="kw">=</span> <span class="no">na.omit</span>
 )
-#&gt; # A tibble: 35 x 14
-#&gt;    cut   color r.squared adj.r.squared sigma statistic   p.value    df logLik
-#&gt;    <ord><ord><dbl><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt;  1 Fair  D         0.884         0.883 1857.      641. 4.45e- 41     1  -760.
-#&gt;  2 Fair  E         0.876         0.875 1370.      708. 3.52e- 47     1  -872.
-#&gt;  3 Fair  F         0.874         0.873 1989.     1071. 1.68e- 71     1 -1406.
-#&gt;  4 Fair  G         0.849         0.848 2138.      887. 1.03e- 66     1 -1444.
-#&gt;  5 Fair  H         0.876         0.875 2412.      998. 7.68e- 66     1 -1307.
-#&gt;  6 Fair  I         0.915         0.914 1499.      850. 4.86e- 44     1  -698.
-#&gt;  7 Fair  J         0.885         0.883 2189.      416. 4.80e- 27     1  -501.
-#&gt;  8 Good  D         0.860         0.860 1729.     2065. 2.66e-145     1 -2981.
-#&gt;  9 Good  E         0.870         0.870 1674.     3084. 2.50e-206     1 -4084.
-#&gt; 10 Good  F         0.873         0.873 1677.     3110. 1.76e-204     1 -3997.
-#&gt;      AIC   BIC    deviance df.residual  nobs
-#&gt;    <dbl><dbl><dbl><int><int>
-#&gt;  1 1524. 1529.  289568733.          84    85
-#&gt;  2 1749. 1754.  187724139.         100   101
-#&gt;  3 2816. 2822.  613473518.         155   156
-#&gt;  4 2893. 2899.  722351124.         158   159
-#&gt;  5 2618. 2624.  820050299.         141   142
-#&gt;  6 1400. 1405.  177605917.          79    80
-#&gt;  7 1005. 1009.  258660541.          54    55
-#&gt;  8 5966. 5974. 1001144317.         335   336
-#&gt;  9 8173. 8181. 1291712250.         461   462
-#&gt; 10 7998. 8006. 1267954026.         451   452
-#&gt; # ... with 25 more rows
+<span class="co">#&gt; # A tibble: 35 x 14</span>
+<span class="co">#&gt;    cut   color r.squared adj.r.squared sigma statistic   p.value    df logLik</span>
+<span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt;     &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Fair  D         0.884         0.883 1857.      641. 4.45e- 41     1  -760.</span>
+<span class="co">#&gt;  2 Fair  E         0.876         0.875 1370.      708. 3.52e- 47     1  -872.</span>
+<span class="co">#&gt;  3 Fair  F         0.874         0.873 1989.     1071. 1.68e- 71     1 -1406.</span>
+<span class="co">#&gt;  4 Fair  G         0.849         0.848 2138.      887. 1.03e- 66     1 -1444.</span>
+<span class="co">#&gt;  5 Fair  H         0.876         0.875 2412.      998. 7.68e- 66     1 -1307.</span>
+<span class="co">#&gt;  6 Fair  I         0.915         0.914 1499.      850. 4.86e- 44     1  -698.</span>
+<span class="co">#&gt;  7 Fair  J         0.885         0.883 2189.      416. 4.80e- 27     1  -501.</span>
+<span class="co">#&gt;  8 Good  D         0.860         0.860 1729.     2065. 2.66e-145     1 -2981.</span>
+<span class="co">#&gt;  9 Good  E         0.870         0.870 1674.     3084. 2.50e-206     1 -4084.</span>
+<span class="co">#&gt; 10 Good  F         0.873         0.873 1677.     3110. 1.76e-204     1 -3997.</span>
+<span class="co">#&gt;      AIC   BIC    deviance df.residual  nobs</span>
+<span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;       &lt;int&gt; &lt;int&gt;</span>
+<span class="co">#&gt;  1 1524. 1529.  289568733.          84    85</span>
+<span class="co">#&gt;  2 1749. 1754.  187724139.         100   101</span>
+<span class="co">#&gt;  3 2816. 2822.  613473518.         155   156</span>
+<span class="co">#&gt;  4 2893. 2899.  722351124.         158   159</span>
+<span class="co">#&gt;  5 2618. 2624.  820050299.         141   142</span>
+<span class="co">#&gt;  6 1400. 1405.  177605917.          79    80</span>
+<span class="co">#&gt;  7 1005. 1009.  258660541.          54    55</span>
+<span class="co">#&gt;  8 5966. 5974. 1001144317.         335   336</span>
+<span class="co">#&gt;  9 8173. 8181. 1291712250.         461   462</span>
+<span class="co">#&gt; 10 7998. 8006. 1267954026.         451   452</span>
+<span class="co">#&gt; # ... with 25 more rows</span>
 
-# linear mixed effects model (model summaries across grouping combinations)
-broomExtra::grouped_glance(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = cut,
-  ..f = lme4::lmer,
-  formula = price ~ carat + (carat | color) - 1,
-  control = lme4::lmerControl(optimizer = "bobyqa")
+<span class="co"># linear mixed effects model (model summaries across grouping combinations)</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span>(
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="no">cut</span>,
+  <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
+  <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> + (<span class="no">carat</span> <span class="kw">|</span> <span class="no">color</span>) - <span class="fl">1</span>,
+  <span class="kw">control</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html">lmerControl</a></span>(<span class="kw">optimizer</span> <span class="kw">=</span> <span class="st">"bobyqa"</span>)
 )
-#&gt; # A tibble: 5 x 7
-#&gt;   cut       sigma  logLik     AIC     BIC REMLcrit df.residual
-#&gt;   <ord><dbl><dbl><dbl><dbl><dbl><int>
-#&gt; 1 Fair      1830.  -7257.  14525.  14548.   14515.         806
-#&gt; 2 Good      1373. -21027.  42064.  42093.   42054.        2425
-#&gt; 3 Very Good 1362. -51577. 103165. 103198.  103155.        5964
-#&gt; 4 Premium   1557. -60736. 121482. 121516.  121472.        6917
-#&gt; 5 Ideal     1257. -92766. 185542. 185579.  185532.       10833</int></dbl></dbl></dbl></dbl></dbl></ord></int></int></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></ord></ord></pre></div>
+<span class="co">#&gt; # A tibble: 5 x 7</span>
+<span class="co">#&gt;   cut       sigma  logLik     AIC     BIC REMLcrit df.residual</span>
+<span class="co">#&gt;   &lt;ord&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;</span>
+<span class="co">#&gt; 1 Fair      1830.  -7257.  14525.  14548.   14515.         806</span>
+<span class="co">#&gt; 2 Good      1373. -21027.  42064.  42093.   42054.        2425</span>
+<span class="co">#&gt; 3 Very Good 1362. -51577. 103165. 103198.  103155.        5964</span>
+<span class="co">#&gt; 4 Premium   1557. -60736. 121482. 121516.  121472.        6917</span>
+<span class="co">#&gt; 5 Ideal     1257. -92766. 185542. 185579.  185532.       10833</span></pre></div>
 </div>
 <div id="grouped_augment" class="section level2">
 <h2 class="hasAnchor">
 <a href="#grouped_augment" class="anchor"></a><code>grouped_augment</code>
 </h2>
-<div class="sourceCode" id="cb17"><pre class="r"># to speed up computation, let's use only 50% of the data
-set.seed(123)
+<div class="sourceCode" id="cb17"><pre class="r"><span class="co"># to speed up computation, let's use only 50% of the data</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">123</span>)
 
-# linear model
-broomExtra::grouped_augment(
-  data = ggplot2::diamonds,
-  grouping.vars = c(cut, color),
-  ..f = stats::lm,
-  formula = price ~ carat - 1
+<span class="co"># linear model</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span>(
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>,
+  <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">cut</span>, <span class="no">color</span>),
+  <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
+  <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> - <span class="fl">1</span>
 )
-#&gt; # A tibble: 53,940 x 10
-#&gt;    cut   color price carat .fitted .resid .std.resid    .hat .sigma  .cooksd
-#&gt;    <ord><ord><int><dbl><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt;  1 Fair  D      2848  0.75   3795.   947.     -0.522 0.00342  1822. 0.000933
-#&gt;  2 Fair  D      2858  0.71   3593.   735.     -0.405 0.00306  1823. 0.000503
-#&gt;  3 Fair  D      2885  0.9    4554.  1669.     -0.920 0.00492  1819. 0.00419 
-#&gt;  4 Fair  D      2974  1      5060.  2086.     -1.15  0.00607  1816. 0.00809 
-#&gt;  5 Fair  D      3003  1.01   5111.  2108.     -1.16  0.00620  1816. 0.00843 
-#&gt;  6 Fair  D      3047  0.73   3694.   647.     -0.356 0.00324  1823. 0.000412
-#&gt;  7 Fair  D      3077  0.71   3593.   516.     -0.284 0.00306  1823. 0.000248
-#&gt;  8 Fair  D      3079  0.91   4605.  1526.     -0.841 0.00503  1820. 0.00358 
-#&gt;  9 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 
-#&gt; 10 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 
-#&gt; # ... with 53,930 more rows
+<span class="co">#&gt; # A tibble: 53,940 x 10</span>
+<span class="co">#&gt;    cut   color price carat .fitted .resid .std.resid    .hat .sigma  .cooksd</span>
+<span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt; &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Fair  D      2848  0.75   3795.   947.     -0.522 0.00342  1822. 0.000933</span>
+<span class="co">#&gt;  2 Fair  D      2858  0.71   3593.   735.     -0.405 0.00306  1823. 0.000503</span>
+<span class="co">#&gt;  3 Fair  D      2885  0.9    4554.  1669.     -0.920 0.00492  1819. 0.00419 </span>
+<span class="co">#&gt;  4 Fair  D      2974  1      5060.  2086.     -1.15  0.00607  1816. 0.00809 </span>
+<span class="co">#&gt;  5 Fair  D      3003  1.01   5111.  2108.     -1.16  0.00620  1816. 0.00843 </span>
+<span class="co">#&gt;  6 Fair  D      3047  0.73   3694.   647.     -0.356 0.00324  1823. 0.000412</span>
+<span class="co">#&gt;  7 Fair  D      3077  0.71   3593.   516.     -0.284 0.00306  1823. 0.000248</span>
+<span class="co">#&gt;  8 Fair  D      3079  0.91   4605.  1526.     -0.841 0.00503  1820. 0.00358 </span>
+<span class="co">#&gt;  9 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 </span>
+<span class="co">#&gt; 10 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 </span>
+<span class="co">#&gt; # ... with 53,930 more rows</span>
 
-# linear mixed-effects model
-broomExtra::grouped_augment(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = cut,
-  ..f = lme4::lmer,
-  formula = price ~ carat + (carat | color) - 1,
-  control = lme4::lmerControl(optimizer = "bobyqa")
+<span class="co"># linear mixed-effects model</span>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span>(
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="no">cut</span>,
+  <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
+  <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> + (<span class="no">carat</span> <span class="kw">|</span> <span class="no">color</span>) - <span class="fl">1</span>,
+  <span class="kw">control</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html">lmerControl</a></span>(<span class="kw">optimizer</span> <span class="kw">=</span> <span class="st">"bobyqa"</span>)
 )
-#&gt; # A tibble: 26,970 x 15
-#&gt;    cut   price carat color .fitted .resid    .hat   .cooksd .fixed   .mu .offset
-#&gt;    <ord><int><dbl><ord><dbl><dbl><dbl><dbl><dbl><dbl><dbl>
-#&gt;  1 Fair   8818  1.52 H       7001.  1817. 0.00806 0.00837    3519. 7001.       0
-#&gt;  2 Fair   1881  0.65 F       2104.  -223. 0.00225 0.0000346  1505. 2104.       0
-#&gt;  3 Fair   2376  1.2  G       5439. -3063. 0.00651 0.0191     2778. 5439.       0
-#&gt;  4 Fair   1323  0.5  D       1069.   254. 0.00281 0.0000565  1158. 1069.       0
-#&gt;  5 Fair   3282  0.92 F       3935.  -653. 0.00338 0.000448   2130. 3935.       0
-#&gt;  6 Fair   2500  0.7  H       2259.   241. 0.00219 0.0000396  1621. 2259.       0
-#&gt;  7 Fair  13853  1.5  F       7868.  5985. 0.0149  0.170      3473. 7868.       0
-#&gt;  8 Fair   3869  1.01 H       4052.  -183. 0.00287 0.0000297  2338. 4052.       0
-#&gt;  9 Fair   1811  0.7  H       2259.  -448. 0.00219 0.000137   1621. 2259.       0
-#&gt; 10 Fair   2788  1.01 E       4406. -1618. 0.0135  0.0112     2338. 4406.       0
-#&gt;    .sqrtXwt .sqrtrwt .weights .wtres
-#&gt;       <dbl><dbl><dbl><dbl>
-#&gt;  1        1        1        1  1817.
-#&gt;  2        1        1        1  -223.
-#&gt;  3        1        1        1 -3063.
-#&gt;  4        1        1        1   254.
-#&gt;  5        1        1        1  -653.
-#&gt;  6        1        1        1   241.
-#&gt;  7        1        1        1  5985.
-#&gt;  8        1        1        1  -183.
-#&gt;  9        1        1        1  -448.
-#&gt; 10        1        1        1 -1618.
-#&gt; # ... with 26,960 more rows</dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></dbl></ord></dbl></int></ord></dbl></dbl></dbl></dbl></dbl></dbl></dbl></int></ord></ord></pre></div>
+<span class="co">#&gt; # A tibble: 26,970 x 15</span>
+<span class="co">#&gt;    cut   price carat color .fitted .resid    .hat   .cooksd .fixed   .mu .offset</span>
+<span class="co">#&gt;    &lt;ord&gt; &lt;int&gt; &lt;dbl&gt; &lt;ord&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Fair   8818  1.52 H       7001.  1817. 0.00806 0.00837    3519. 7001.       0</span>
+<span class="co">#&gt;  2 Fair   1881  0.65 F       2104.  -223. 0.00225 0.0000346  1505. 2104.       0</span>
+<span class="co">#&gt;  3 Fair   2376  1.2  G       5439. -3063. 0.00651 0.0191     2778. 5439.       0</span>
+<span class="co">#&gt;  4 Fair   1323  0.5  D       1069.   254. 0.00281 0.0000565  1158. 1069.       0</span>
+<span class="co">#&gt;  5 Fair   3282  0.92 F       3935.  -653. 0.00338 0.000448   2130. 3935.       0</span>
+<span class="co">#&gt;  6 Fair   2500  0.7  H       2259.   241. 0.00219 0.0000396  1621. 2259.       0</span>
+<span class="co">#&gt;  7 Fair  13853  1.5  F       7868.  5985. 0.0149  0.170      3473. 7868.       0</span>
+<span class="co">#&gt;  8 Fair   3869  1.01 H       4052.  -183. 0.00287 0.0000297  2338. 4052.       0</span>
+<span class="co">#&gt;  9 Fair   1811  0.7  H       2259.  -448. 0.00219 0.000137   1621. 2259.       0</span>
+<span class="co">#&gt; 10 Fair   2788  1.01 E       4406. -1618. 0.0135  0.0112     2338. 4406.       0</span>
+<span class="co">#&gt;    .sqrtXwt .sqrtrwt .weights .wtres</span>
+<span class="co">#&gt;       &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;</span>
+<span class="co">#&gt;  1        1        1        1  1817.</span>
+<span class="co">#&gt;  2        1        1        1  -223.</span>
+<span class="co">#&gt;  3        1        1        1 -3063.</span>
+<span class="co">#&gt;  4        1        1        1   254.</span>
+<span class="co">#&gt;  5        1        1        1  -653.</span>
+<span class="co">#&gt;  6        1        1        1   241.</span>
+<span class="co">#&gt;  7        1        1        1  5985.</span>
+<span class="co">#&gt;  8        1        1        1  -183.</span>
+<span class="co">#&gt;  9        1        1        1  -448.</span>
+<span class="co">#&gt; 10        1        1        1 -1618.</span>
+<span class="co">#&gt; # ... with 26,960 more rows</span></pre></div>
 </div>
 </div>
 <div id="code-coverage" class="section level1">
@@ -807,7 +888,7 @@ broomExtra::grouped_augment(
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
 </div>
 
       </footer>

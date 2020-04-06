@@ -1,10 +1,10 @@
-pandoc: 2.9.2
-pkgdown: 1.4.1.9000
-pkgdown_sha: 846840e436e9f47157fed894ba17b9c456cd99ce
+pandoc: 2.9.2.1
+pkgdown: 1.5.0.9000
+pkgdown_sha: cb9866146685f6924b67c2b95a97a9637e934714
 articles:
   available_methods: available_methods.html
   tests_and_coverage: tests_and_coverage.html
-last_built: 2020-03-23T17:15Z
+last_built: 2020-04-06T22:14Z
 urls:
   reference: https://indrajeetpatil.github.io/broomExtra//reference
   article: https://indrajeetpatil.github.io/broomExtra//articles

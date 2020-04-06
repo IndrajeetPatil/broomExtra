@@ -41,7 +41,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.5.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">2.6.0</span>
       </span>
     </div>
 
@@ -104,7 +104,7 @@
       <h1 data-toc-skip>Available methods</h1>
                         <h4 class="author">Indrajeet Patil</h4>
             
-            <h4 class="date">2020-03-23</h4>
+            <h4 class="date">2020-04-07</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/IndrajeetPatil/broomExtra/blob/master/vignettes/available_methods.Rmd"><code>vignettes/available_methods.Rmd</code></a></small>
       <div class="hidden name"><code>available_methods.Rmd</code></div>
@@ -116,10 +116,10 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<div class="sourceCode" id="cb1"><html><body><pre class="r">library(broomExtra)
-#&gt; Registered S3 method overwritten by 'broom.mixed':
-#&gt;   method      from 
-#&gt;   tidy.gamlss broom</pre></body></html></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">broomExtra</span>)
+<span class="co">#&gt; Registered S3 method overwritten by 'broom.mixed':</span>
+<span class="co">#&gt;   method      from </span>
+<span class="co">#&gt;   tidy.gamlss broom</span></pre></body></html></div>
 <p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <code>broom.mixed</code> package, while the rest of the object classes are included in the <code>broom</code> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::tidy()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::glance()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::augment()</a></code>”). Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="../reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="../reference/glance.html">broomExtra::glance()</a></code>/<code><a href="../reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
 </div>
 <div id="methods" class="section level1">
@@ -129,806 +129,806 @@
 <table class="table">
 <thead><tr class="header">
 <th align="left">class</th>
-<th align="center">tidy</th>
+<th align="left">tidy</th>
 <th align="left">glance</th>
 <th align="left">augment</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">aareg</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">acf</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">anova</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">aov</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">aovlist</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Arima</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">betareg</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">biglm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">binDesign</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">binWidth</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">boot</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">brmsfit</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">btergm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">cch</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">cld</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">clm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">clmm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">coeftest</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">confint.glht</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">confusionMatrix</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">coxph</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">cv.glmnet</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">default</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">density</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">dist</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">drc</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">durbinWatsonTest</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">emmGrid</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">epi.2by2</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">ergm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">factanal</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">felm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">fitdistr</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">ftable</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">gam</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Gam</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">gamlss</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">gamm4</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">garch</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">gee</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">geeglm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">glht</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">glm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">glmmadmb</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">glmmTMB</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">glmnet</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">glmrob</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">glmRob</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">gls</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">gmm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">htest</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">ivreg</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">kappa</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">kde</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Kendall</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">kmeans</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">lavaan</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Line</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">Lines</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">list</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">lm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">lm.beta</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">lme</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">lmList4</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">lmodel2</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">lmrob</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">lmRob</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">lsmobj</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">manova</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">map</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">mclogit</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">Mclust</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">mcmc</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">mcmc.list</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">MCMCglmm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">mediate</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">merMod</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">MixMod</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">mjoint</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">mle2</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">mlm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">muhaz</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">multinom</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">nlrq</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">nls</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">NULL</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">orcutt</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">pairwise.htest</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">pam</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">plm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">poLCA</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">polr</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">Polygon</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Polygons</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">power.htest</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">prcomp</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">pyears</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">rcorr</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">ref.grid</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">regsubsets</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">ridgelm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">rjags</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">rlm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">rlmerMod</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">rma</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">roc</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">rq</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">rqs</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">SpatialLinesDataFrame</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">SpatialPolygons</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">SpatialPolygonsDataFrame</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">spec</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">speedglm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="even">
 <td align="left">speedlm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">stanfit</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">stanreg</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">summary.glht</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">summary.manova</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">summary.plm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">summary_emm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">survdiff</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">survexp</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">survfit</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">survreg</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left">x</td>
 </tr>
 <tr class="odd">
 <td align="left">svyglm</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">svyolr</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left">x</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">systemfit</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">table</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">TMB</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">tobit</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">ts</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">TukeyHSD</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="left">zoo</td>
-<td align="center">x</td>
+<td align="left">x</td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -952,7 +952,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
 </div>
 
       </footer>
