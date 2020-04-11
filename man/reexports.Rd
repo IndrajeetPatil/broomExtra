@@ -6,10 +6,12 @@
 \alias{\%>\%}
 \alias{\%<>\%}
 \alias{\%$\%}
-\alias{tibble}
-\alias{as_tibble}
+\alias{\%<-\%}
 \alias{\%||\%}
 \alias{\%|\%}
+\alias{tibble}
+\alias{enframe}
+\alias{as_tibble}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -17,10 +19,8 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{magrittr}{\code{\link[magrittr]{\%$\%}}, \code{\link[magrittr]{\%<>\%}}, \code{\link[magrittr]{\%>\%}}}
+  \item{ipmisc}{\code{\link[ipmisc]{\%$\%}}, \code{\link[ipmisc]{\%<-\%}}, \code{\link[ipmisc]{\%<>\%}}, \code{\link[ipmisc]{\%>\%}}, \code{\link[ipmisc]{as_tibble}}, \code{\link[ipmisc]{enframe}}, \code{\link[ipmisc]{tibble}}}
 
   \item{rlang}{\code{\link[rlang]{\%|\%}}, \code{\link[rlang]{\%||\%}}}
-
-  \item{tibble}{\code{\link[tibble]{as_tibble}}, \code{\link[tibble]{tibble}}}
 }}
 

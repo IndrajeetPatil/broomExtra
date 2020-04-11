@@ -14,7 +14,7 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "2.6.0",
+  "version": "3.0.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -191,7 +191,7 @@
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
-      "version": ">= 3.5.0"
+      "version": ">= 3.6.0"
     },
     {
       "@type": "SoftwareApplication",
@@ -231,15 +231,15 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "magrittr",
-      "name": "magrittr",
+      "identifier": "ipmisc",
+      "name": "ipmisc",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=magrittr"
+      "sameAs": "https://CRAN.R-project.org/package=ipmisc"
     },
     {
       "@type": "SoftwareApplication",
@@ -276,18 +276,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=rlang"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "tibble",
-      "name": "tibble",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=tibble"
     }
   ],
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",

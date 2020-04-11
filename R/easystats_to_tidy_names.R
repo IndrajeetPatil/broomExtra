@@ -19,7 +19,7 @@
 #' @export
 
 easystats_to_tidy_names <- function(x) {
-  tibble::as_tibble(x) %>%
+  as_tibble(x) %>%
     dplyr::rename_all(
       .tbl = .,
       .funs = tolower

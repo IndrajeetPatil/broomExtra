@@ -1,5 +1,5 @@
 ## Test environments
-* local Windows OS install, R 3.6.2
+* local Windows OS install, R 4.0.0
 * ubuntu 14.04 (on travis-ci; devel and release)
 * win-builder (on appveyor; devel and release)
 
@@ -9,5 +9,4 @@
 
 ## Comments
 
-- Minor refactoring of internal functions.
-- Adds two new functions.
+- Minor refactoring of internal functions to depend on `ipmisc` package.

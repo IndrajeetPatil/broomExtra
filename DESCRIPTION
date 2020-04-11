@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 2.6.0
+Version: 3.0.0
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -22,16 +22,15 @@ URL: https://indrajeetpatil.github.io/broomExtra/,
     https://github.com/IndrajeetPatil/broomExtra
 BugReports: https://github.com/IndrajeetPatil/broomExtra/issues
 Depends: 
-    R (>= 3.5.0)
+    R (>= 3.6.0)
 Imports: 
     broom,
     broom.mixed,
     dplyr,
-    magrittr,
+    ipmisc,
     parameters,
     performance,
-    rlang,
-    tibble
+    rlang
 Suggests: 
     generics,
     ggplot2,
