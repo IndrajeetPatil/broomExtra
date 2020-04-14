@@ -41,7 +41,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">3.0.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">3.0.0.9000</span>
       </span>
     </div>
 
@@ -65,9 +65,6 @@
   <ul class="dropdown-menu" role="menu">
 <li>
       <a href="../articles/available_methods.html">Available methods</a>
-    </li>
-    <li>
-      <a href="../articles/tests_and_coverage.html">Tests and Coverage</a>
     </li>
   </ul>
 </li>
@@ -104,7 +101,7 @@
       <h1 data-toc-skip>Available methods</h1>
                         <h4 class="author">Indrajeet Patil</h4>
             
-            <h4 class="date">2020-04-11</h4>
+            <h4 class="date">2020-04-14</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/IndrajeetPatil/broomExtra/blob/master/vignettes/available_methods.Rmd"><code>vignettes/available_methods.Rmd</code></a></small>
       <div class="hidden name"><code>available_methods.Rmd</code></div>
@@ -116,16 +113,21 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">broomExtra</span>)
-<span class="co">#&gt; Registered S3 method overwritten by 'broom.mixed':</span>
-<span class="co">#&gt;   method      from </span>
-<span class="co">#&gt;   tidy.gamlss broom</span></pre></body></html></div>
-<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <code>broom.mixed</code> package, while the rest of the object classes are included in the <code>broom</code> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::tidy()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::glance()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::augment()</a></code>”). Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="../reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="../reference/glance.html">broomExtra::glance()</a></code>/<code><a href="../reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
+<p>The goal of <code>broomExtra</code> is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax to return tidy tibbles containing model parameters and summaries.</p>
+<p>The package internally relies on the following packages that I contribute to:</p>
+<ul>
+<li><code>broom</code></li>
+<li><code>broom.mixed</code></li>
+<li><code>parameters</code></li>
+<li><code>performance</code></li>
+</ul>
+<p>Here is a summary of supported methods across these ecosystems.</p>
 </div>
-<div id="methods" class="section level1">
+<div id="the-broom-ecosystem" class="section level1">
 <h1 class="hasAnchor">
-<a href="#methods" class="anchor"></a>Methods</h1>
-<p>In this vignette, we list all available methods currently available across these two packages.</p>
+<a href="#the-broom-ecosystem" class="anchor"></a>The <code>broom</code> ecosystem</h1>
+<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <code>broom.mixed</code> package, while the rest of the object classes are included in the <code>broom</code> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::tidy()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::glance()</a></code>/<code><a href="https://rdrr.io/pkg/broom.mixed/man/reexports.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::tidy()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::glance()</a></code>/<code><a href="http://broom.tidyverse.org/reference/reexports.html">broom::augment()</a></code>”). Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="../reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="../reference/glance.html">broomExtra::glance()</a></code>/<code><a href="../reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
+<p>Here are all available methods currently available in <code>broom</code> ecosystem:</p>
 <table class="table">
 <thead><tr class="header">
 <th align="left">class</th>
@@ -934,6 +936,52 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div id="the-easystats-ecosystem" class="section level1">
+<h1 class="hasAnchor">
+<a href="#the-easystats-ecosystem" class="anchor"></a>The <code>easystats</code> ecosystem</h1>
+<p>Here are all available methods currently available in <code>easystats</code> ecosystem:</p>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="kw pkg">insight</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/insight/man/is_model_supported.html">supported_models</a></span>()
+<span class="co">#&gt;   [1] "aareg"             "aov"               "aovlist"          </span>
+<span class="co">#&gt;   [4] "Arima"             "averaging"         "bamlss"           </span>
+<span class="co">#&gt;   [7] "bamlss.frame"      "bayesx"            "BBmm"             </span>
+<span class="co">#&gt;  [10] "BBreg"             "bcplm"             "betareg"          </span>
+<span class="co">#&gt;  [13] "BFBayesFactor"     "bife"              "bigglm"           </span>
+<span class="co">#&gt;  [16] "biglm"             "blavaan"           "bracl"            </span>
+<span class="co">#&gt;  [19] "brglm"             "brmsfit"           "brmultinom"       </span>
+<span class="co">#&gt;  [22] "censReg"           "cgam"              "cgamm"            </span>
+<span class="co">#&gt;  [25] "cglm"              "clm"               "clm2"             </span>
+<span class="co">#&gt;  [28] "clmm"              "clmm2"             "clogit"           </span>
+<span class="co">#&gt;  [31] "complmrob"         "coxme"             "coxph"            </span>
+<span class="co">#&gt;  [34] "cpglm"             "cpglmm"            "crch"             </span>
+<span class="co">#&gt;  [37] "crq"               "crqs"              "DirichletRegModel"</span>
+<span class="co">#&gt;  [40] "feglm"             "feis"              "felm"             </span>
+<span class="co">#&gt;  [43] "fixest"            "flexsurvreg"       "gam"              </span>
+<span class="co">#&gt;  [46] "Gam"               "gamlss"            "gamm"             </span>
+<span class="co">#&gt;  [49] "gamm4"             "gbm"               "gee"              </span>
+<span class="co">#&gt;  [52] "geeglm"            "glimML"            "glm"              </span>
+<span class="co">#&gt;  [55] "glmmadmb"          "glmmPQL"           "glmmTMB"          </span>
+<span class="co">#&gt;  [58] "glmrob"            "glmRob"            "glmx"             </span>
+<span class="co">#&gt;  [61] "gls"               "gmnl"              "htest"            </span>
+<span class="co">#&gt;  [64] "hurdle"            "iv_robust"         "ivreg"            </span>
+<span class="co">#&gt;  [67] "lavaan"            "lm"                "lm_robust"        </span>
+<span class="co">#&gt;  [70] "lme"               "lmerMod"           "lmerModLmerTest"  </span>
+<span class="co">#&gt;  [73] "lmrob"             "lmRob"             "logistf"          </span>
+<span class="co">#&gt;  [76] "LORgee"            "lrm"               "MANOVA"           </span>
+<span class="co">#&gt;  [79] "maxLik"            "mclogit"           "mcmc"             </span>
+<span class="co">#&gt;  [82] "MCMCglmm"          "merMod"            "mixed"            </span>
+<span class="co">#&gt;  [85] "MixMod"            "mixor"             "mlm"              </span>
+<span class="co">#&gt;  [88] "mlogit"            "mmlogit"           "multinom"         </span>
+<span class="co">#&gt;  [91] "ols"               "plm"               "polr"             </span>
+<span class="co">#&gt;  [94] "psm"               "rlm"               "rlmerMod"         </span>
+<span class="co">#&gt;  [97] "RM"                "rma"               "rma.uni"          </span>
+<span class="co">#&gt; [100] "rq"                "rqss"              "speedglm"         </span>
+<span class="co">#&gt; [103] "speedlm"           "stanmvreg"         "stanreg"          </span>
+<span class="co">#&gt; [106] "survfit"           "survreg"           "svyglm"           </span>
+<span class="co">#&gt; [109] "svyolr"            "tobit"             "truncreg"         </span>
+<span class="co">#&gt; [112] "vgam"              "vglm"              "wbgee"            </span>
+<span class="co">#&gt; [115] "wblm"              "wbm"               "zcpglm"           </span>
+<span class="co">#&gt; [118] "zeroinfl"          "zerotrunc"</span></pre></body></html></div>
 </div>
   </div>
 

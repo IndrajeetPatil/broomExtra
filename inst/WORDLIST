@@ -2,8 +2,6 @@ AppVeyor
 changedate
 codecov
 Codecov
-covr
-covrpage
 d'être
 d’être
 DOI
@@ -22,7 +20,6 @@ instantiations
 io
 Licence
 lifecycle
-mingw
 misspecified
 Nagelkerke's
 Nagelkerke’s
@@ -30,7 +27,6 @@ Otterstetter
 Raison
 Rdoc
 svg
-testthat
 tibble
 tibbles
 tidiers

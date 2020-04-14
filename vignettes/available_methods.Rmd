@@ -26,9 +26,21 @@ knitr::opts_chunk$set(
 
 # Introduction
 
-```{r setup}
-library(broomExtra)
-```
+The goal of `broomExtra` is to provide helper functions that assist in data
+analysis workflows involving regression analyses. The goal is to combine the
+functionality offered by different set of packages through a common syntax to
+return tidy tibbles containing model parameters and summaries.
+
+The package internally relies on the following packages that I contribute to:
+
+  - `broom`
+  - `broom.mixed`
+  - `parameters`
+  - `performance`
+
+Here is a summary of supported methods across these ecosystems.
+
+# The `broom` ecosystem
 
 Currently, `S3` methods for mixed-effects model objects are included in the
 `broom.mixed` package, while the rest of the object classes are included in the
@@ -41,10 +53,7 @@ as calling `broomExtra::tidy()`/`broomExtra::glance()`/`broomExtra::augment()`
 will search the appropriate method from these two packages and return the
 results.
 
-# Methods
-
-In this vignette, we list all available methods currently available across these
-two packages.
+Here are all available methods currently available in `broom` ecosystem:
 
 ```{r list, echo = FALSE, message = FALSE}
 # loading the needed libraries
@@ -71,4 +80,12 @@ method_df("tidy") %>%
   dplyr::left_join(x = ., y = method_df("augment")) %>%
   dplyr::mutate_all(.tbl = ., .funs = tidyr::replace_na, "") %>%
   knitr::kable()
+```
+
+# The `easystats` ecosystem
+
+Here are all available methods currently available in `easystats` ecosystem:
+
+```{r}
+insight::supported_models()
 ```

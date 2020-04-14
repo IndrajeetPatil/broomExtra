@@ -5,7 +5,7 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "broomExtra",
-  "description": "Provides helper functions that assist in data\n    analysis workflows involving regression analyses. The goal is to\n    combine the functionality offered by different set of packages\n    ('broom', 'broom.mixed', 'parameters', and 'performance') through a\n    common syntax to return tidy dataframes containing model parameters and\n    performance measure summaries. The 'grouped_' variants of the generics\n    provides a convenient way to execute functions across a combination of\n    grouping variable(s) in a dataframe.",
+  "description": "Provides helper functions that assist in data\n    analysis workflows involving regression analyses. The goal is to\n    combine the functionality offered by different set of packages\n    ('broom', 'broom.mixed', 'parameters', and 'performance') through a\n    common syntax to return tidy dataframes containing model parameters\n    and performance measure summaries. The 'grouped_' variants of the\n    generics provides a convenient way to execute functions across a\n    combination of grouping variable(s) in a dataframe.",
   "name": "broomExtra: Enhancements for 'broom' and 'easystats' Package Families",
   "codeRepository": "https://github.com/IndrajeetPatil/broomExtra",
   "relatedLink": [
@@ -14,7 +14,7 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "3.0.0",
+  "version": "3.0.0.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -64,6 +64,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=ggplot2"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "insight",
+      "name": "insight",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=insight"
     },
     {
       "@type": "SoftwareApplication",
