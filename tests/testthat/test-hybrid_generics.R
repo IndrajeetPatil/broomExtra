@@ -7,11 +7,21 @@ testthat::test_that(
     # merMord
     set.seed(123)
     lmm_mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
+    df_lmm <- tidy_parameters(lmm_mod, effects = "fixed")
 
     # test
     testthat::expect_equal(
-      tidy(lmm_mod, conf.int = TRUE, effects = "fixed"),
-      dplyr::select(tidy_parameters(lmm_mod, effects = "fixed"), -p.value)
+      df_lmm$estimate,
+      c(251.40510, 10.46729),
+      tolerance = 0.001
+    )
+
+    testthat::expect_identical(
+      names(df_lmm),
+      c(
+        "term", "estimate", "std.error", "conf.low", "conf.high", "statistic",
+        "df.error", "p.value"
+      )
     )
 
     testthat::expect_equal(
@@ -21,12 +31,10 @@ testthat::test_that(
     # lm
     set.seed(123)
     lm_mod <- lm(Reaction ~ Days, sleepstudy)
+    df_lm <- tidy_parameters(lm_mod, robust = TRUE)
 
     # test
-    testthat::expect_equal(
-      tidy(lm_mod, conf.int = TRUE, effects = "fixed"),
-      tidy_parameters(lm_mod, effects = "fixed")
-    )
+    testthat::expect_equal(df_lm$df.error[1], 178L)
 
     testthat::expect_equal(
       dim(glance_performance(lm_mod, effects = "fixed"))[[1]], 1L
@@ -85,7 +93,7 @@ testthat::test_that(
     df <- suppressMessages(suppressWarnings(tidy_parameters(tidy(mod))))
 
     # test
-    testthat::expect_equal(dim(df_rlm), c(4L, 7L))
+    testthat::expect_equal(dim(df_rlm), c(4L, 8L))
     testthat::expect_is(df, "tbl_df")
 
     # model

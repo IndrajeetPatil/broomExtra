@@ -1,11 +1,11 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 3.0.0.9000
+Version: 4.0.0
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
-           role = c("aut", "cre", "ctb"),
+           role = c("aut", "cre", "cph"),
            email = "patilindrajeet.science@gmail.com",
            comment = c(ORCID = "0000-0003-1995-6531"))
 Maintainer: Indrajeet Patil <patilindrajeet.science@gmail.com>
