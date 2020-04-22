@@ -2,6 +2,7 @@
 #' @title Tidy dataframes of model parameters using `broom` and `easystats`.
 #' @description Computes parameters for regression models.
 #'
+#' @inheritParams tidy
 #' @param conf.int Indicating whether or not to include a confidence interval in
 #'   the tidied output.
 #' @param ... Additional arguments that will be passed to

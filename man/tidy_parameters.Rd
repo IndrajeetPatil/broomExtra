@@ -7,6 +7,8 @@
 tidy_parameters(x, conf.int = TRUE, ...)
 }
 \arguments{
+\item{x}{An object to be converted into a tidy \code{\link[tibble:tibble]{tibble::tibble()}}.}
+
 \item{conf.int}{Indicating whether or not to include a confidence interval in
 the tidied output.}
 
