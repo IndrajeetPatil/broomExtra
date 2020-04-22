@@ -3,7 +3,7 @@
   - The `broom` package is not being actively maintained, which had become a
     bottleneck for both development and testing the current package. So, now the
     `tidy_parameters` function defaults to `parameters::model_parameters` and
-    uses `broom` packages only if that doesn't work. This also some other
+    uses `broom` packages only if that doesn't work. This also has some other
     benefits (#21).
 
 # broomExtra 3.0.0

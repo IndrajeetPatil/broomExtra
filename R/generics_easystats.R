@@ -2,22 +2,23 @@
 #' @title Tidy dataframes of model parameters using `broom` and `easystats`.
 #' @description Computes parameters for regression models.
 #'
-#' @inheritParams tidy
-#'
 #' @param conf.int Indicating whether or not to include a confidence interval in
 #'   the tidied output.
+#' @param ... Additional arguments that will be passed to
+#'   `parameters::model_parameters` and `broom::tidy`.
 #'
 #' @return A data frame of indices related to the model's parameters.
 #'
-#' @details The function will attempt to get these details either using
-#'   `broom::tidy` or `parameters::model_parameters`.
+#' @details The function will attempt to get these details first using
+#'   `parameters::model_parameters` and then using `broom::tidy`.
 #'
 #' @examples
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::tidy_parameters(mod)
+#'
 #' @importFrom rlang is_null
-#' @importFrom parameters model_parameters p_value
+#' @importFrom parameters model_parameters
 #'
 #' @export
 

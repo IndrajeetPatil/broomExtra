@@ -160,17 +160,14 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>An object to be converted into a tidy <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code>.</p></td>
-    </tr>
-    <tr>
       <th>conf.int</th>
       <td><p>Indicating whether or not to include a confidence interval in
 the tidied output.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Additional arguments to tidying method.</p></td>
+      <td><p>Additional arguments that will be passed to
+<code><a href='https://rdrr.io/pkg/parameters/man/model_parameters.html'>parameters::model_parameters</a></code> and <code><a href='http://broom.tidyverse.org/reference/reexports.html'>broom::tidy</a></code>.</p></td>
     </tr>
     </table>
 
@@ -179,18 +176,19 @@ the tidied output.</p></td>
     <p>A data frame of indices related to the model's parameters.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The function will attempt to get these details either using
-<code><a href='http://broom.tidyverse.org/reference/reexports.html'>broom::tidy</a></code> or <code><a href='https://rdrr.io/pkg/parameters/man/model_parameters.html'>parameters::model_parameters</a></code>.</p>
+    <p>The function will attempt to get these details first using
+<code><a href='https://rdrr.io/pkg/parameters/man/model_parameters.html'>parameters::model_parameters</a></code> and then using <code><a href='http://broom.tidyverse.org/reference/reexports.html'>broom::tidy</a></code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
 <span class='no'>mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>mpg</span> ~ <span class='no'>wt</span> + <span class='no'>cyl</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>mtcars</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>tidy_parameters</span>(<span class='no'>mod</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 3 x 8</span><span>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>tidy_parameters</span>(<span class='no'>mod</span>)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 8</span><span>
 #&gt;   term        estimate std.error conf.low conf.high statistic df.error  p.value
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> (Intercept)    39.7      1.71     36.2     43.2       23.1        29 3.04</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-20</span><span>
-#&gt; </span><span style='color: #555555;'>2</span><span> wt             -</span><span style='color: #BB0000;'>3.19</span><span>     0.757    -</span><span style='color: #BB0000;'>4.74</span><span>    -</span><span style='color: #BB0000;'>1.64</span><span>      -</span><span style='color: #BB0000;'>4.22</span><span>       29 2.22</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 4</span><span>
-#&gt; </span><span style='color: #555555;'>3</span><span> cyl            -</span><span style='color: #BB0000;'>1.51</span><span>     0.415    -</span><span style='color: #BB0000;'>2.36</span><span>    -</span><span style='color: #BB0000;'>0.660</span><span>     -</span><span style='color: #BB0000;'>3.64</span><span>       29 1.06</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>- 3</span><span></div></span></pre>
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> (Intercept)    39.7      1.71     36.2     43.2       23.1        29 3.04</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-20</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> wt             -</span><span style='color: #BB0000;'>3.19</span><span>     0.757    -</span><span style='color: #BB0000;'>4.74</span><span>    -</span><span style='color: #BB0000;'>1.64</span><span>      -</span><span style='color: #BB0000;'>4.22</span><span>       29 2.22</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 4</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span> cyl            -</span><span style='color: #BB0000;'>1.51</span><span>     0.415    -</span><span style='color: #BB0000;'>2.36</span><span>    -</span><span style='color: #BB0000;'>0.660</span><span>     -</span><span style='color: #BB0000;'>3.64</span><span>       29 1.06</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>- 3</span><span></div><div class='input'>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
