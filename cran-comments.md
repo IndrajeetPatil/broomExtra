@@ -9,4 +9,4 @@
 
 ## Comments
 
-- Minor refactoring of internal functions to depend on `ipmisc` package.
+- Minor changes made to fix warnings caused by `dplyr 1.0.0`.

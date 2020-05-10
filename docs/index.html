@@ -48,7 +48,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.1</span>
       </span>
     </div>
 
@@ -128,7 +128,7 @@
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="http://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></td>
 <td><a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis Build Status"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/"><img src="https://img.shields.io/badge/GitHub-4.0.0.9000-orange.svg?style=flat-square" alt="GitHub version"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/"><img src="https://img.shields.io/badge/GitHub-4.0.1.9000-orange.svg?style=flat-square" alt="GitHub version"></a></td>
 <td><a href="https://indrajeetpatil.github.io/broomExtra/"><img src="https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63" alt="Website"></a></td>
 </tr>
 <tr class="even">
@@ -156,7 +156,7 @@
 <td><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/badge/licence-GPL--3-blue.svg" alt="Licence"></a></td>
 <td><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></td>
 <td><a href="http://hits.dwyl.io/IndrajeetPatil/broomExtra"><img src="http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg" alt="HitCount"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--04--22-yellowgreen.svg" alt="Last-changedate"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--05--10-yellowgreen.svg" alt="Last-changedate"></a></td>
 <td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg" alt="GitHub last commit"></a></td>
 </tr>
 <tr class="even">
@@ -650,7 +650,7 @@
 
 <span class="co"># linear model (tidy analysis across grouping combinations)</span>
 <span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span>(
-  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
   <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">cut</span>, <span class="no">color</span>),
   <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> - <span class="fl">1</span>,
   <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
@@ -674,7 +674,7 @@
 
 <span class="co"># linear mixed effects model (tidy analysis across grouping combinations)</span>
 <span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span>(
-  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
   <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="no">cut</span>,
   <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
   <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> + (<span class="no">carat</span> <span class="kw">|</span> <span class="no">color</span>) - <span class="fl">1</span>,
@@ -717,7 +717,7 @@
 
 <span class="co"># linear model (model summaries across grouping combinations)</span>
 <span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span>(
-  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
   <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">cut</span>, <span class="no">color</span>),
   <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> - <span class="fl">1</span>,
   <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">stats</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
@@ -752,7 +752,7 @@
 
 <span class="co"># linear mixed effects model (model summaries across grouping combinations)</span>
 <span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span>(
-  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
   <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="no">cut</span>,
   <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
   <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> + (<span class="no">carat</span> <span class="kw">|</span> <span class="no">color</span>) - <span class="fl">1</span>,
@@ -798,7 +798,7 @@
 
 <span class="co"># linear mixed-effects model</span>
 <span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span>(
-  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
+  <span class="kw">data</span> <span class="kw">=</span> <span class="kw pkg">dplyr</span><span class="kw ns">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span>(<span class="kw">tbl</span> <span class="kw">=</span> <span class="kw pkg">ggplot2</span><span class="kw ns">::</span><span class="no"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">diamonds</a></span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">0.5</span>),
   <span class="kw">grouping.vars</span> <span class="kw">=</span> <span class="no">cut</span>,
   <span class="kw">..f</span> <span class="kw">=</span> <span class="kw pkg">lme4</span><span class="kw ns">::</span><span class="no"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
   <span class="kw">formula</span> <span class="kw">=</span> <span class="no">price</span> ~ <span class="no">carat</span> + (<span class="no">carat</span> <span class="kw">|</span> <span class="no">color</span>) - <span class="fl">1</span>,
@@ -894,7 +894,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>
