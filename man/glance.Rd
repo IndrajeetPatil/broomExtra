@@ -43,6 +43,3 @@ broomExtra::glance(lm.mod)
 \seealso{
 \code{\link{grouped_glance}}, \code{\link{glance_performance}}
 }
-\author{
-\href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
-}

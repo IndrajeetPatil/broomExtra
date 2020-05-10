@@ -17,7 +17,6 @@
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::tidy_parameters(mod)
-#'
 #' @importFrom rlang is_null
 #' @importFrom parameters model_parameters
 #'

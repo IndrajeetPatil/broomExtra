@@ -21,10 +21,6 @@ tibble, if not, return a \code{NULL}. In case of data frames, a tibble data
 frame is returned. In this case, you can try the
 \code{broomExtra::tidy_parameters} function.
 }
-\note{
-For available methods, see-
-\url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
-}
 \section{Methods}{
 
 
@@ -49,7 +45,4 @@ broomExtra::tidy(list(1, c("x", "y")))
 }
 \seealso{
 \code{\link{grouped_tidy}}, \code{\link{tidy_parameters}}
-}
-\author{
-\href{https://github.com/IndrajeetPatil}{Indrajeet Patil}
 }

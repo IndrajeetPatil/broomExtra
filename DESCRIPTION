@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 4.0.1
+Version: 4.0.2
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -34,8 +34,6 @@ Imports:
 Suggests: 
     generics,
     ggplot2,
-    insight,
-    knitr,
     lavaan,
     lme4,
     MASS,
@@ -43,10 +41,7 @@ Suggests:
     orcutt,
     rmarkdown,
     spelling,
-    testthat,
-    tidyr
-VignetteBuilder: 
-    knitr
+    testthat
 Encoding: UTF-8
 Language: en-US
 LazyData: true
