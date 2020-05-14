@@ -12,31 +12,31 @@ env:
     - _R_CHECK_FORCE_SUGGESTS_=true
     - _R_CHECK_CRAN_INCOMING_=true
 
-r_binary_packages:
-  - stringi
-  - magrittr
-  - curl
-  - jsonlite
-  - Rcpp
-  - RcppEigen
-  - openssl
-  - utf8
-  - gss
-  - haven
-  - minqa
-  - mvtnorm
-  - nloptr
-  - SparseM
-  - httpuv
-  - markdown
-  - pander
-  - lme4
-  - git2r
-  - rlang
-  - bindrcpp
-  - purrr
-  - tidyr
-  - dplyr
+# r_binary_packages:
+#   - stringi
+#   - magrittr
+#   - curl
+#   - jsonlite
+#   - Rcpp
+#   - RcppEigen
+#   - openssl
+#   - utf8
+#   - gss
+#   - haven
+#   - minqa
+#   - mvtnorm
+#   - nloptr
+#   - SparseM
+#   - httpuv
+#   - markdown
+#   - pander
+#   - lme4
+#   - git2r
+#   - rlang
+#   - bindrcpp
+#   - purrr
+#   - tidyr
+#   - dplyr
 
 addons:
   apt:
