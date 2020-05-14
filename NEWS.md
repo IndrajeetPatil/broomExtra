@@ -1,4 +1,4 @@
-# broomExtra 4.0.1
+# broomExtra 4.0.2
 
   - Minor changes made to fix warnings caused by `dplyr 1.0.0`.
   
