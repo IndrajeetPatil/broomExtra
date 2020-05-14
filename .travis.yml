@@ -37,8 +37,6 @@ r_binary_packages:
   - purrr
   - tidyr
   - dplyr
-  - broom.mixed
-  - broom
 
 addons:
   apt:
