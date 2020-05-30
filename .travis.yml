@@ -2,7 +2,7 @@
 language: r
 r:
   - release
-#  - devel
+  - devel
 
 latex: true
 warnings_are_errors: TRUE
