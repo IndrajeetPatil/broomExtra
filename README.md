@@ -6,10 +6,10 @@
 | Package                                                                                                                                                       | Status                                                                                                                                                                                     | Usage                                                                                                                                           | GitHub                                                                                                                                                       | References                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-4.0.2.9000-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)              | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
-| [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-3-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra)](https://www.rdocumentation.org/packages/broomExtra)                                        |
+| [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-3-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra/)](https://rdrr.io/cran/broomExtra/)                                                         |
 | [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.0.2-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
 | [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--05--30-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
+| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--06--16-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
 | [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)                                                   | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
 
 # Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
@@ -221,7 +221,7 @@ parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
 broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
 #> # A tibble: 12 x 9
 #>    to      operator from    estimate std.error conf.low conf.high  p.value
-#>    <fct>   <fct>    <fct>      <dbl>     <dbl>    <dbl>     <dbl>    <dbl>
+#>    <chr>   <chr>    <chr>      <dbl>     <dbl>    <dbl>     <dbl>    <dbl>
 #>  1 visual  =~       x1         1        0        1          1     0.      
 #>  2 visual  =~       x2         0.554    0.0997   0.358      0.749 2.80e- 8
 #>  3 visual  =~       x3         0.729    0.109    0.516      0.943 2.31e-11
@@ -535,18 +535,18 @@ broomExtra::augment(lmm.mod)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::augment(lm.mod)
 #> # A tibble: 180 x 8
-#>    Reaction  Days .fitted  .resid .std.resid    .hat .sigma   .cooksd
-#>       <dbl> <dbl>   <dbl>   <dbl>      <dbl>   <dbl>  <dbl>     <dbl>
-#>  1     250.     0    251.    1.85    -0.0390 0.0192    47.8 0.0000149
-#>  2     259.     1    262.    3.17    -0.0669 0.0138    47.8 0.0000313
-#>  3     251.     2    272.   21.5     -0.454  0.00976   47.8 0.00101  
-#>  4     321.     3    283.  -38.6      0.813  0.00707   47.8 0.00235  
-#>  5     357.     4    293.  -63.6      1.34   0.00572   47.6 0.00514  
-#>  6     415.     5    304. -111.       2.33   0.00572   47.1 0.0157   
-#>  7     382.     6    314.  -68.0      1.43   0.00707   47.6 0.00728  
-#>  8     290.     7    325.   34.5     -0.727  0.00976   47.8 0.00261  
-#>  9     431.     8    335.  -95.4      2.01   0.0138    47.3 0.0284   
-#> 10     466.     9    346. -121.       2.56   0.0192    47.0 0.0639   
+#>    Reaction  Days .fitted .resid .std.resid    .hat .sigma   .cooksd
+#>       <dbl> <dbl>   <dbl>  <dbl>      <dbl>   <dbl>  <dbl>     <dbl>
+#>  1     250.     0    251.  -1.85    -0.0390 0.0192    47.8 0.0000149
+#>  2     259.     1    262.  -3.17    -0.0669 0.0138    47.8 0.0000313
+#>  3     251.     2    272. -21.5     -0.454  0.00976   47.8 0.00101  
+#>  4     321.     3    283.  38.6      0.813  0.00707   47.8 0.00235  
+#>  5     357.     4    293.  63.6      1.34   0.00572   47.6 0.00514  
+#>  6     415.     5    304. 111.       2.33   0.00572   47.1 0.0157   
+#>  7     382.     6    314.  68.0      1.43   0.00707   47.6 0.00728  
+#>  8     290.     7    325. -34.5     -0.727  0.00976   47.8 0.00261  
+#>  9     431.     8    335.  95.4      2.01   0.0138    47.3 0.0284   
+#> 10     466.     9    346. 121.       2.56   0.0192    47.0 0.0639   
 #> # ... with 170 more rows
 
 # another example with `broom`
@@ -666,18 +666,18 @@ broomExtra::grouped_glance(
   na.action = na.omit
 )
 #> # A tibble: 35 x 14
-#>    cut   color r.squared adj.r.squared sigma statistic   p.value    df logLik
-#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl>
-#>  1 Fair  D         0.884         0.883 1857.      641. 4.45e- 41     1  -760.
-#>  2 Fair  E         0.876         0.875 1370.      708. 3.52e- 47     1  -872.
-#>  3 Fair  F         0.874         0.873 1989.     1071. 1.68e- 71     1 -1406.
-#>  4 Fair  G         0.849         0.848 2138.      887. 1.03e- 66     1 -1444.
-#>  5 Fair  H         0.876         0.875 2412.      998. 7.68e- 66     1 -1307.
-#>  6 Fair  I         0.915         0.914 1499.      850. 4.86e- 44     1  -698.
-#>  7 Fair  J         0.885         0.883 2189.      416. 4.80e- 27     1  -501.
-#>  8 Good  D         0.860         0.860 1729.     2065. 2.66e-145     1 -2981.
-#>  9 Good  E         0.870         0.870 1674.     3084. 2.50e-206     1 -4084.
-#> 10 Good  F         0.873         0.873 1677.     3110. 1.76e-204     1 -3997.
+#>    cut   color r.squared adj.r.squared sigma statistic p.value    df logLik
+#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl>
+#>  1 Fair  D         0.884         0.883 1857.        NA      NA    NA  -760.
+#>  2 Fair  E         0.876         0.875 1370.        NA      NA    NA  -872.
+#>  3 Fair  F         0.874         0.873 1989.        NA      NA    NA -1406.
+#>  4 Fair  G         0.849         0.848 2138.        NA      NA    NA -1444.
+#>  5 Fair  H         0.876         0.875 2412.        NA      NA    NA -1307.
+#>  6 Fair  I         0.915         0.914 1499.        NA      NA    NA  -698.
+#>  7 Fair  J         0.885         0.883 2189.        NA      NA    NA  -501.
+#>  8 Good  D         0.860         0.860 1729.        NA      NA    NA -2981.
+#>  9 Good  E         0.870         0.870 1674.        NA      NA    NA -4084.
+#> 10 Good  F         0.873         0.873 1677.        NA      NA    NA -3997.
 #>      AIC   BIC    deviance df.residual  nobs
 #>    <dbl> <dbl>       <dbl>       <int> <int>
 #>  1 1524. 1529.  289568733.          84    85
@@ -726,16 +726,16 @@ broomExtra::grouped_augment(
 #> # A tibble: 53,940 x 10
 #>    cut   color price carat .fitted .resid .std.resid    .hat .sigma  .cooksd
 #>    <ord> <ord> <int> <dbl>   <dbl>  <dbl>      <dbl>   <dbl>  <dbl>    <dbl>
-#>  1 Fair  D      2848  0.75   3795.   947.     -0.522 0.00342  1822. 0.000933
-#>  2 Fair  D      2858  0.71   3593.   735.     -0.405 0.00306  1823. 0.000503
-#>  3 Fair  D      2885  0.9    4554.  1669.     -0.920 0.00492  1819. 0.00419 
-#>  4 Fair  D      2974  1      5060.  2086.     -1.15  0.00607  1816. 0.00809 
-#>  5 Fair  D      3003  1.01   5111.  2108.     -1.16  0.00620  1816. 0.00843 
-#>  6 Fair  D      3047  0.73   3694.   647.     -0.356 0.00324  1823. 0.000412
-#>  7 Fair  D      3077  0.71   3593.   516.     -0.284 0.00306  1823. 0.000248
-#>  8 Fair  D      3079  0.91   4605.  1526.     -0.841 0.00503  1820. 0.00358 
-#>  9 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 
-#> 10 Fair  D      3205  0.9    4554.  1349.     -0.744 0.00492  1821. 0.00274 
+#>  1 Fair  D      2848  0.75   3795.  -947.     -0.522 0.00342  1822. 0.000933
+#>  2 Fair  D      2858  0.71   3593.  -735.     -0.405 0.00306  1823. 0.000503
+#>  3 Fair  D      2885  0.9    4554. -1669.     -0.920 0.00492  1819. 0.00419 
+#>  4 Fair  D      2974  1      5060. -2086.     -1.15  0.00607  1816. 0.00809 
+#>  5 Fair  D      3003  1.01   5111. -2108.     -1.16  0.00620  1816. 0.00843 
+#>  6 Fair  D      3047  0.73   3694.  -647.     -0.356 0.00324  1823. 0.000412
+#>  7 Fair  D      3077  0.71   3593.  -516.     -0.284 0.00306  1823. 0.000248
+#>  8 Fair  D      3079  0.91   4605. -1526.     -0.841 0.00503  1820. 0.00358 
+#>  9 Fair  D      3205  0.9    4554. -1349.     -0.744 0.00492  1821. 0.00274 
+#> 10 Fair  D      3205  0.9    4554. -1349.     -0.744 0.00492  1821. 0.00274 
 #> # ... with 53,930 more rows
 
 # linear mixed-effects model

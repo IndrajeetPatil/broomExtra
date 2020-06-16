@@ -17,10 +17,6 @@ Check if a \code{glance} method exits for a given object, either in
 dataframe, if not, return a \code{NULL}. In this case, you can try the
 \code{broomExtra::glance_performance} function.
 }
-\note{
-For available methods, see-
-\url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
-}
 \section{Methods}{
 
 

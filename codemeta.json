@@ -14,13 +14,13 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "4.0.2",
+  "version": "4.0.2.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R Under development (unstable) (2020-02-28 r77874)",
+  "runtimePlatform": "R Under development (unstable) (2020-06-03 r78637)",
   "author": [
     {
       "@type": "Person",
@@ -274,5 +274,5 @@
     }
   ],
   "funder": {},
-  "fileSize": "1696.199KB"
+  "fileSize": "1699.074KB"
 }

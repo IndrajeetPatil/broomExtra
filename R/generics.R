@@ -2,8 +2,7 @@
 #' @name tidy
 #' @description Checks if a `tidy` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, it turn an object into a tidy
-#'   tibble, if not, return a `NULL`. In case of data frames, a tibble data
-#'   frame is returned. In this case, you can try the
+#'   tibble, if not, return a `NULL`. In this case, you can try the
 #'   `broomExtra::tidy_parameters` function.
 #'
 #' @inheritParams generics::tidy
@@ -60,9 +59,6 @@ tidy <- function(x, ...) {
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`. In this case, you can try the
 #'   `broomExtra::glance_performance` function.
-#'
-#' @note For available methods, see-
-#' \url{https://indrajeetpatil.github.io/broomExtra/articles/available_methods.html}
 #'
 #' @inheritParams generics::glance
 #'
