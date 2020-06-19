@@ -9,4 +9,4 @@
 
 ## Comments
 
-- Minor changes made to fix warnings caused by `dplyr 1.0.0`.
+- Minor release to fix `NOTE` produced in new `R`-devel checks.

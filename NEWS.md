@@ -1,4 +1,6 @@
-# broomExtra 4.0.2.9000
+# broomExtra 4.0.3
+
+  - Minor release to fix `NOTE` produced in new `R`-devel checks.
 
 # broomExtra 4.0.2
 
