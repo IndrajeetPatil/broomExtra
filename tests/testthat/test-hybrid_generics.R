@@ -54,7 +54,7 @@ testthat::test_that(
       ))
 
     # test
-    testthat::expect_equal(dim(tidy_parameters(mod_mixor)), c(8L, 8L))
+    testthat::expect_equal(dim(tidy_parameters(mod_mixor))[[1]], 8L)
     testthat::expect_equal(
       tidy_parameters(mod_mixor),
       tidy_parameters(mod_mixor, effects = "fixed")
