@@ -363,7 +363,7 @@ clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::glance(clm.mod)
 
 # in case no glance method is available (`NULL` will be returned)
-broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
+broomExtra::glance(acf(lh, plot = FALSE))
 ```
 
 ## augmented dataframe

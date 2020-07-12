@@ -488,11 +488,8 @@ broomExtra::glance(clm.mod)
 #> 1     7  187.  203. -86.4162          65    72
 
 # in case no glance method is available (`NULL` will be returned)
-broomExtra::glance(stats::anova(stats::lm(wt ~ am, mtcars)))
-#> # A tibble: 1 x 4
-#>    nrow  ncol complete.obs na.fraction
-#>   <int> <int>        <int>       <dbl>
-#> 1     2     5            1         0.2
+broomExtra::glance(acf(lh, plot = FALSE))
+#> NULL
 ```
 
 ## augmented dataframe

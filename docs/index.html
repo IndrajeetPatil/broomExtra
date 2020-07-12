@@ -540,11 +540,8 @@
 <span class="co">#&gt; 1     7  187.  203. -86.4162          65    72</span>
 
 <span class="co"># in case no glance method is available (`NULL` will be returned)</span>
-<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span>(<span class="kw pkg">stats</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>(<span class="no">wt</span> ~ <span class="no">am</span>, <span class="no">mtcars</span>)))
-<span class="co">#&gt; # A tibble: 1 x 4</span>
-<span class="co">#&gt;    nrow  ncol complete.obs na.fraction</span>
-<span class="co">#&gt;   &lt;int&gt; &lt;int&gt;        &lt;int&gt;       &lt;dbl&gt;</span>
-<span class="co">#&gt; 1     2     5            1         0.2</span></pre></div>
+<span class="kw pkg">broomExtra</span><span class="kw ns">::</span><span class="fu"><a href="reference/glance.html">glance</a></span>(<span class="fu"><a href="https://rdrr.io/r/stats/acf.html">acf</a></span>(<span class="no">lh</span>, <span class="kw">plot</span> <span class="kw">=</span> <span class="fl">FALSE</span>))
+<span class="co">#&gt; NULL</span></pre></div>
 </div>
 <div id="augmented-dataframe" class="section level2">
 <h2 class="hasAnchor">
