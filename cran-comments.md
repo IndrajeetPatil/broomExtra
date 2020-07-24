@@ -9,4 +9,4 @@
 
 ## Comments
 
-- Minor release to fix `NOTE` produced in new `R`-devel checks.
+- Minor release to fix tests for the upcoming release of `parameters`.

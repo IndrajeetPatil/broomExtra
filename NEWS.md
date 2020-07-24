@@ -1,4 +1,6 @@
-# broomExtra 4.0.3.9000
+# broomExtra 4.0.4
+
+  - Adapts tests to changes made to `parameters` package. 
 
 # broomExtra 4.0.3
 

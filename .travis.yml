@@ -3,7 +3,7 @@ language: r
 r:
   - release
   - devel
-  #- oldrel
+  - oldrel
 
 latex: true
 warnings_are_errors: TRUE
@@ -19,6 +19,7 @@ addons:
       - libudunits2-dev
       - libgdal-dev
       - libproj-dev
+      - libnode-dev
 
 before_install:
   - mkdir -p ~/.R
