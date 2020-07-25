@@ -1,5 +1,3 @@
-context("grouped_generics works")
-
 # `grouped_tidy()` works ------------------------------------------------------
 
 testthat::test_that(

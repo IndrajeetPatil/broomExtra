@@ -38,7 +38,6 @@ Suggests:
     lme4,
     MASS,
     mixor,
-    orcutt,
     rmarkdown,
     spelling,
     testthat

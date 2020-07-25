@@ -96,14 +96,9 @@ testthat::test_that(
     testthat::expect_equal(dim(df_rlm), c(4L, 8L))
     testthat::expect_is(df, "tbl_df")
 
-    # model
-    library(orcutt)
-    set.seed(123)
-    reg <- stats::lm(formula = mpg ~ wt + qsec + disp, data = mtcars)
-    co <- orcutt::cochrane.orcutt(reg)
-
-    df_orcutt <- broomExtra::glance_performance(co)
-    # testthat::expect_equal(dim(df_orcutt), c(1L, 9L))
-    testthat::expect_is(df_orcutt, "tbl_df")
+    # model (not covered by easystats but covered by broom)
+    testthat::expect_equal(dim(broomExtra::tidy_parameters(acf(lh, plot = FALSE))),
+                           c(17L, 2L))
+    testthat::expect_null(broomExtra::glance_performance(acf(lh, plot = FALSE)))
   }
 )

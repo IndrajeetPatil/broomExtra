@@ -26,16 +26,14 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
   # easystats family ---------------------------------------
   # check if `easystats` family has a tidy method for a given object
   m <- tryCatch(
-    expr = parameters::model_parameters(x, ...) %>%
-      easystats_to_tidy_names(.),
+    expr = easystats_to_tidy_names(parameters::model_parameters(x, ...)),
     error = function(e) NULL
   )
 
 
   if (rlang::is_null(m)) {
     m <- tryCatch(
-      expr = parameters::model_parameters(x) %>%
-        easystats_to_tidy_names(.),
+      expr = easystats_to_tidy_names(parameters::model_parameters(x)),
       error = function(e) NULL
     )
   }
@@ -105,8 +103,7 @@ glance_performance <- function(x, ...) {
   # easystats family ---------------------------------------
   # check if `easystats` family has a tidy method for a given object
   df_performance <- tryCatch(
-    expr = performance::model_performance(x, metrics = "all") %>%
-      easystats_to_tidy_names(.),
+    expr = easystats_to_tidy_names(performance::model_performance(x, metrics = "all")),
     error = function(e) NULL
   )
 

@@ -20,7 +20,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R Under development (unstable) (2020-06-27 r78747)",
+  "runtimePlatform": "R Under development (unstable) (2020-07-22 r78897)",
   "author": [
     {
       "@type": "Person",
@@ -111,18 +111,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=mixor"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "orcutt",
-      "name": "orcutt",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=orcutt"
     },
     {
       "@type": "SoftwareApplication",
@@ -274,5 +262,5 @@
     }
   ],
   "funder": {},
-  "fileSize": "1701.779KB"
+  "fileSize": "1701.772KB"
 }
