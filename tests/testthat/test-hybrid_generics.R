@@ -97,8 +97,10 @@ testthat::test_that(
     testthat::expect_is(df, "tbl_df")
 
     # model (not covered by easystats but covered by broom)
-    testthat::expect_equal(dim(broomExtra::tidy_parameters(acf(lh, plot = FALSE))),
-                           c(17L, 2L))
+    testthat::expect_equal(
+      dim(broomExtra::tidy_parameters(acf(lh, plot = FALSE))),
+      c(17L, 2L)
+    )
     testthat::expect_null(broomExtra::glance_performance(acf(lh, plot = FALSE)))
   }
 )

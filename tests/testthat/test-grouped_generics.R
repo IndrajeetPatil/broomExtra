@@ -7,25 +7,29 @@ testthat::test_that(
     set.seed(123)
 
     # broom.mixed
-    lmer_df <- broomExtra::grouped_tidy(
-      data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-      grouping.vars = cut,
-      ..f = lme4::lmer,
-      formula = price ~ carat + (carat | color) - 1,
-      control = lme4::lmerControl(optimizer = "bobyqa"),
-      tidy.args = list(conf.int = TRUE, conf.level = 0.99)
-    )
-    testthat::expect_equal(dim(lmer_df), c(25L, 9L))
+    lmer_df <-
+      broomExtra::grouped_tidy(
+        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        grouping.vars = sex,
+        ..f = lme4::lmer,
+        formula = interval ~ age + (1 | status),
+        control = lme4::lmerControl(optimizer = "bobyqa"),
+        tidy.args = list(conf.int = TRUE, conf.level = 0.99)
+      )
+
 
     # broom
-    lm_df <- broomExtra::grouped_tidy(
-      data = ggplot2::diamonds,
-      grouping.vars = c(cut, "color"),
-      ..f = stats::lm,
-      formula = price ~ carat - 1,
-      tidy.args = list(conf.int = TRUE, conf.level = 0.99)
-    )
-    testthat::expect_equal(dim(lm_df), c(35L, 9L))
+    lm_df <-
+      broomExtra::grouped_tidy(
+        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        grouping.vars = sex,
+        ..f = stats::lm,
+        formula = interval ~ age,
+        tidy.args = list(conf.int = TRUE, conf.level = 0.99)
+      )
+
+    testthat::expect_equal(dim(lmer_df), c(8L, 9L))
+    testthat::expect_equal(dim(lm_df), c(4L, 8L))
   }
 )
 
@@ -38,23 +42,26 @@ testthat::test_that(
     set.seed(123)
 
     # broom.mixed
-    lmer_df <- broomExtra::grouped_glance(
-      data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-      grouping.vars = "cut",
-      ..f = lme4::lmer,
-      formula = price ~ carat + (carat | color) - 1,
-      control = lme4::lmerControl(optimizer = "bobyqa")
-    )
-    testthat::expect_equal(dim(lmer_df), c(5L, 7L))
+    lmer_df <-
+      broomExtra::grouped_glance(
+        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        grouping.vars = sex,
+        ..f = lme4::lmer,
+        formula = interval ~ age + (1 | status),
+        control = lme4::lmerControl(optimizer = "bobyqa")
+      )
 
     # broom
-    lm_df <- broomExtra::grouped_glance(
-      data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.1),
-      grouping.vars = c("cut", "color"),
-      ..f = stats::lm,
-      formula = price ~ carat
-    )
-    testthat::expect_equal(dim(lm_df)[1], 35L)
+    lm_df <-
+      broomExtra::grouped_glance(
+        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        grouping.vars = sex,
+        ..f = stats::lm,
+        formula = interval ~ age
+      )
+
+    testthat::expect_equal(dim(lmer_df), c(2L, 7L))
+    testthat::expect_equal(dim(lm_df)[1], 2L)
   }
 )
 
@@ -67,22 +74,25 @@ testthat::test_that(
     set.seed(123)
 
     # broom.mixed
-    lmer_df <- broomExtra::grouped_augment(
-      data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-      grouping.vars = cut,
-      ..f = lme4::lmer,
-      formula = price ~ carat + (carat | color) - 1,
-      control = lme4::lmerControl(optimizer = "bobyqa")
-    )
-    testthat::expect_equal(dim(lmer_df), c(26970L, 15L))
+    lmer_df <-
+      broomExtra::grouped_augment(
+        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        grouping.vars = sex,
+        ..f = lme4::lmer,
+        formula = interval ~ age + (1 | status),
+        control = lme4::lmerControl(optimizer = "bobyqa")
+      )
 
     # broom
-    lm_df <- broomExtra::grouped_augment(
-      data = ggplot2::diamonds,
-      grouping.vars = c(cut, color),
-      ..f = stats::lm,
-      formula = price ~ carat - 1
-    )
-    testthat::expect_equal(dim(lm_df)[1], 53940L)
+    lm_df <-
+      broomExtra::grouped_augment(
+        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        grouping.vars = sex,
+        ..f = stats::lm,
+        formula = interval ~ age
+      )
+
+    testthat::expect_equal(dim(lmer_df), c(2843L, 15L))
+    testthat::expect_equal(dim(lm_df)[1], 2843L)
   }
 )

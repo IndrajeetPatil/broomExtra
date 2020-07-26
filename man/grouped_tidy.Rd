@@ -34,24 +34,13 @@ argument in its function call.
 
 \examples{
 set.seed(123)
-# to speed up computation, let's use only 50\% of the data
-
-# linear model
-broomExtra::grouped_tidy(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = c(cut, color),
-  formula = price ~ carat - 1,
-  ..f = stats::lm,
-  na.action = na.omit,
-  tidy.args = list(quick = TRUE)
-)
 
 # linear mixed effects model
 broomExtra::grouped_tidy(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
-  grouping.vars = "cut",
+  data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+  grouping.vars = sex,
   ..f = lme4::lmer,
-  formula = price ~ carat + (carat | color) - 1,
+  formula = interval ~ age + (1 | status),
   control = lme4::lmerControl(optimizer = "bobyqa"),
   tidy.args = list(conf.int = TRUE, conf.level = 0.99)
 )

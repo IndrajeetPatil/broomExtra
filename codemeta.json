@@ -14,7 +14,7 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "4.0.4",
+  "version": "4.0.4.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -51,18 +51,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=generics"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "ggplot2",
-      "name": "ggplot2",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
     },
     {
       "@type": "SoftwareApplication",
@@ -262,5 +250,5 @@
     }
   ],
   "funder": {},
-  "fileSize": "1701.772KB"
+  "fileSize": "1668.673KB"
 }

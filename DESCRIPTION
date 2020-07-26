@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 4.0.4
+Version: 4.0.4.9000
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -33,7 +33,6 @@ Imports:
     rlang
 Suggests: 
     generics,
-    ggplot2,
     lavaan,
     lme4,
     MASS,
