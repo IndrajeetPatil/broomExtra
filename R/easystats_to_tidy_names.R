@@ -47,6 +47,7 @@ easystats_to_tidy_names <- function(x) {
       "z" = "statistic",
       "t / f" = "statistic",
       "z / f" = "statistic",
+      "chisq" = "statistic",
       "p" = "p.value",
       # effectsize
       "cohens.d" = "estimate",
