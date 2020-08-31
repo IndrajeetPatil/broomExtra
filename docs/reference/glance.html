@@ -91,7 +91,7 @@ broomExtra::glance_performance function." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.4.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.5</span>
       </span>
     </div>
 
@@ -190,7 +190,7 @@ dataframe, if not, return a <code>NULL</code>. In this case, you can try the
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.felm.html'>glance.felm</a></code>: <code>felm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.fitdistr.html'>glance.fitdistr</a></code>: <code>fitdistr</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.fixest.html'>glance.fixest</a></code>: <code>fixest</code></p></li>
-<li><p><code>glance.Gam</code>: <code>gam</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.gam.html'>glance.gam</a></code>: <code>gam</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.garch.html'>glance.garch</a></code>: <code>garch</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.geeglm.html'>glance.geeglm</a></code>: <code>geeglm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.glm.html'>glance.glm</a></code>: <code>glm</code></p></li>
@@ -203,9 +203,11 @@ dataframe, if not, return a <code>NULL</code>. In this case, you can try the
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.lm.html'>glance.lm</a></code>: <code>lm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.lmodel2.html'>glance.lmodel2</a></code>: <code>lmodel2</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.lmRob.html'>glance.lmRob</a></code>: <code>lmRob</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.margins.html'>glance.margins</a></code>: <code>margins</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.Mclust.html'>glance.Mclust</a></code>: <code>Mclust</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.mfx.html'>glance.mfx</a></code>: <code>logitmfx</code>, <code>mfx</code>, <code>negbinmfx</code>, <code>poissonmfx</code>, <code>probitmfx</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.mjoint.html'>glance.mjoint</a></code>: <code>mjoint</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.mlogit.html'>glance.mlogit</a></code>: <code>mlogit</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.muhaz.html'>glance.muhaz</a></code>: <code>muhaz</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.multinom.html'>glance.multinom</a></code>: <code>multinom</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.nlrq.html'>glance.nlrq</a></code>: <code>nlrq</code></p></li>
@@ -255,19 +257,19 @@ dataframe, if not, return a <code>NULL</code>. In this case, you can try the
 
 <span class='co'># mixed-effects models (`broom.mixed` will be used)</span>
 <span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>glance</span>(<span class='no'>lmm.mod</span>)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 1 x 6</span><span>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>glance</span>(<span class='no'>lmm.mod</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 6</span><span>
 #&gt;   sigma logLik   AIC   BIC REMLcrit df.residual
-#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span>  25.6  -</span><span style='color: #BB0000;'>872.</span><span> </span><span style='text-decoration: underline;'>1</span><span>756. </span><span style='text-decoration: underline;'>1</span><span>775.    </span><span style='text-decoration: underline;'>1</span><span>744.         174</div><div class='input'>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span>  25.6  -</span><span style='color: #BB0000;'>872.</span><span> </span><span style='text-decoration: underline;'>1</span><span>756. </span><span style='text-decoration: underline;'>1</span><span>775.    </span><span style='text-decoration: underline;'>1</span><span>744.         174</div><div class='input'>
 <span class='co'># linear model (`broom` will be used)</span>
 <span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>glance</span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 1 x 12</span><span>
+<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>glance</span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 12</span><span>
 #&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
-#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span>     0.286         0.282  47.7      71.5 9.89</span><span style='color: #949494;'>e</span><span style='color: #BB0000;'>-15</span><span>     1  -</span><span style='color: #BB0000;'>950.</span><span> </span><span style='text-decoration: underline;'>1</span><span>906. </span><span style='text-decoration: underline;'>1</span><span>916.
+#&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span>     0.286         0.282  47.7      71.5 9.89</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-15</span><span>     1  -</span><span style='color: #BB0000;'>950.</span><span> </span><span style='text-decoration: underline;'>1</span><span>906. </span><span style='text-decoration: underline;'>1</span><span>916.
 #&gt;   deviance df.residual  nobs
-#&gt;      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span>  </span><span style='text-decoration: underline;'>405</span><span>252.         178   180</div></span></pre>
+#&gt;      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span>  </span><span style='text-decoration: underline;'>405</span><span>252.         178   180</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

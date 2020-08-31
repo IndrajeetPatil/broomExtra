@@ -91,7 +91,7 @@ argument in its function call." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.4.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.5</span>
       </span>
     </div>
 
@@ -225,7 +225,7 @@ argument in its function call.</p>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.fitdistr.html'>tidy.fitdistr</a></code>: <code>fitdistr</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.fixest.html'>tidy.fixest</a></code>: <code>fixest</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.ftable.html'>tidy.ftable</a></code>: <code>ftable</code></p></li>
-<li><p><code>tidy.Gam</code>: <code>gam</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/tidy.gam.html'>tidy.gam</a></code>: <code>gam</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.garch.html'>tidy.garch</a></code>: <code>garch</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.geeglm.html'>tidy.geeglm</a></code>: <code>geeglm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.glht.html'>tidy.glht</a></code>: <code>glht</code></p></li>
@@ -247,12 +247,14 @@ argument in its function call.</p>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.lsmobj.html'>tidy.lsmobj</a></code>: <code>lsmobj</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.manova.html'>tidy.manova</a></code>: <code>manova</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.map.html'>tidy.map</a></code>: <code>map</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/tidy.margins.html'>tidy.margins</a></code>: <code>margins</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.Mclust.html'>tidy.Mclust</a></code>: <code>Mclust</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.mediate.html'>tidy.mediate</a></code>: <code>mediate</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.mfx.html'>tidy.mfx</a></code>: <code>logitmfx</code>, <code>mfx</code>, <code>negbinmfx</code>, <code>poissonmfx</code>, <code>probitmfx</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.mjoint.html'>tidy.mjoint</a></code>: <code>mjoint</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.mle2.html'>tidy.mle2</a></code>: <code>mle2</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.mlm.html'>tidy.mlm</a></code>: <code>mlm</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/tidy.mlogit.html'>tidy.mlogit</a></code>: <code>mlogit</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.muhaz.html'>tidy.muhaz</a></code>: <code>muhaz</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.multinom.html'>tidy.multinom</a></code>: <code>multinom</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/tidy.nlrq.html'>tidy.nlrq</a></code>: <code>nlrq</code></p></li>
@@ -322,27 +324,27 @@ argument in its function call.</p>
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>interval</span> ~ <span class='no'>age</span> + (<span class='fl'>1</span> <span class='kw'>|</span> <span class='no'>status</span>),
   <span class='kw'>control</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmerControl.html'>lmerControl</a></span>(<span class='kw'>optimizer</span> <span class='kw'>=</span> <span class='st'>"bobyqa"</span>),
   <span class='kw'>tidy.args</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.99</span>)
-)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 8 x 9</span><span>
+)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 9</span><span>
 #&gt;   sex   effect   group    term            estimate std.error statistic conf.low
-#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;fct&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span> F     fixed    </span><span style='color: #BB0000;'>NA</span><span>       (Intercept)       623.     161.         3.88   209.  
-#&gt; </span><span style='color: #BCBCBC;'>2</span><span> F     fixed    </span><span style='color: #BB0000;'>NA</span><span>       age                -</span><span style='color: #BB0000;'>4.34</span><span>     2.61      -</span><span style='color: #BB0000;'>1.66</span><span>   -</span><span style='color: #BB0000;'>11.1</span><span> 
-#&gt; </span><span style='color: #BCBCBC;'>3</span><span> F     ran_pars status   sd__(Intercept)   169.      </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
-#&gt; </span><span style='color: #BCBCBC;'>4</span><span> F     ran_pars Residual sd__Observation   415.      </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
-#&gt; </span><span style='color: #BCBCBC;'>5</span><span> M     fixed    </span><span style='color: #BB0000;'>NA</span><span>       (Intercept)       553.      62.5        8.84   392.  
-#&gt; </span><span style='color: #BCBCBC;'>6</span><span> M     fixed    </span><span style='color: #BB0000;'>NA</span><span>       age                -</span><span style='color: #BB0000;'>3.60</span><span>     0.696     -</span><span style='color: #BB0000;'>5.17</span><span>    -</span><span style='color: #BB0000;'>5.39</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>7</span><span> M     ran_pars status   sd__(Intercept)    79.8     </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
-#&gt; </span><span style='color: #BCBCBC;'>8</span><span> M     ran_pars Residual sd__Observation   355.      </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> F     fixed    </span><span style='color: #BB0000;'>NA</span><span>       (Intercept)       623.     161.         3.88   209.  
+#&gt; </span><span style='color: #555555;'>2</span><span> F     fixed    </span><span style='color: #BB0000;'>NA</span><span>       age                -</span><span style='color: #BB0000;'>4.34</span><span>     2.61      -</span><span style='color: #BB0000;'>1.66</span><span>   -</span><span style='color: #BB0000;'>11.1</span><span> 
+#&gt; </span><span style='color: #555555;'>3</span><span> F     ran_pars status   sd__(Intercept)   169.      </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt; </span><span style='color: #555555;'>4</span><span> F     ran_pars Residual sd__Observation   415.      </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt; </span><span style='color: #555555;'>5</span><span> M     fixed    </span><span style='color: #BB0000;'>NA</span><span>       (Intercept)       553.      62.5        8.84   392.  
+#&gt; </span><span style='color: #555555;'>6</span><span> M     fixed    </span><span style='color: #BB0000;'>NA</span><span>       age                -</span><span style='color: #BB0000;'>3.60</span><span>     0.696     -</span><span style='color: #BB0000;'>5.17</span><span>    -</span><span style='color: #BB0000;'>5.39</span><span>
+#&gt; </span><span style='color: #555555;'>7</span><span> M     ran_pars status   sd__(Intercept)    79.8     </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt; </span><span style='color: #555555;'>8</span><span> M     ran_pars Residual sd__Observation   355.      </span><span style='color: #BB0000;'>NA</span><span>         </span><span style='color: #BB0000;'>NA</span><span>       </span><span style='color: #BB0000;'>NA</span><span>   
 #&gt;   conf.high
-#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span>   </span><span style='text-decoration: underline;'>1</span><span>037.  
-#&gt; </span><span style='color: #BCBCBC;'>2</span><span>      2.38
-#&gt; </span><span style='color: #BCBCBC;'>3</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   
-#&gt; </span><span style='color: #BCBCBC;'>4</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   
-#&gt; </span><span style='color: #BCBCBC;'>5</span><span>    714.  
-#&gt; </span><span style='color: #BCBCBC;'>6</span><span>     -</span><span style='color: #BB0000;'>1.80</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>7</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   
-#&gt; </span><span style='color: #BCBCBC;'>8</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   </div></span></pre>
+#&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span>   </span><span style='text-decoration: underline;'>1</span><span>037.  
+#&gt; </span><span style='color: #555555;'>2</span><span>      2.38
+#&gt; </span><span style='color: #555555;'>3</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt; </span><span style='color: #555555;'>4</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt; </span><span style='color: #555555;'>5</span><span>    714.  
+#&gt; </span><span style='color: #555555;'>6</span><span>     -</span><span style='color: #BB0000;'>1.80</span><span>
+#&gt; </span><span style='color: #555555;'>7</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt; </span><span style='color: #555555;'>8</span><span>     </span><span style='color: #BB0000;'>NA</span><span>   </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

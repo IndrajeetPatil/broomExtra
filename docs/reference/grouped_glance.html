@@ -91,7 +91,7 @@ data argument in its function call." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.4.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.5</span>
       </span>
     </div>
 
@@ -197,7 +197,7 @@ data argument in its function call." />
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.felm.html'>glance.felm</a></code>: <code>felm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.fitdistr.html'>glance.fitdistr</a></code>: <code>fitdistr</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.fixest.html'>glance.fixest</a></code>: <code>fixest</code></p></li>
-<li><p><code>glance.Gam</code>: <code>gam</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.gam.html'>glance.gam</a></code>: <code>gam</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.garch.html'>glance.garch</a></code>: <code>garch</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.geeglm.html'>glance.geeglm</a></code>: <code>geeglm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.glm.html'>glance.glm</a></code>: <code>glm</code></p></li>
@@ -210,9 +210,11 @@ data argument in its function call." />
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.lm.html'>glance.lm</a></code>: <code>lm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.lmodel2.html'>glance.lmodel2</a></code>: <code>lmodel2</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.lmRob.html'>glance.lmRob</a></code>: <code>lmRob</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.margins.html'>glance.margins</a></code>: <code>margins</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.Mclust.html'>glance.Mclust</a></code>: <code>Mclust</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.mfx.html'>glance.mfx</a></code>: <code>logitmfx</code>, <code>mfx</code>, <code>negbinmfx</code>, <code>poissonmfx</code>, <code>probitmfx</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.mjoint.html'>glance.mjoint</a></code>: <code>mjoint</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.mlogit.html'>glance.mlogit</a></code>: <code>mlogit</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.muhaz.html'>glance.muhaz</a></code>: <code>muhaz</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.multinom.html'>glance.multinom</a></code>: <code>multinom</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.nlrq.html'>glance.nlrq</a></code>: <code>nlrq</code></p></li>
@@ -266,11 +268,11 @@ data argument in its function call." />
   <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>,
   <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>interval</span> ~ <span class='no'>age</span> + (<span class='fl'>1</span> <span class='kw'>|</span> <span class='no'>status</span>),
   <span class='kw'>control</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmerControl.html'>lmerControl</a></span>(<span class='kw'>optimizer</span> <span class='kw'>=</span> <span class='st'>"bobyqa"</span>)
-)</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 x 7</span><span>
+)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 7</span><span>
 #&gt;   sex   sigma  logLik    AIC    BIC REMLcrit df.residual
-#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;fct&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span> F      415.   -</span><span style='color: #BB0000;'>656.</span><span>  </span><span style='text-decoration: underline;'>1</span><span>321.  </span><span style='text-decoration: underline;'>1</span><span>331.    </span><span style='text-decoration: underline;'>1</span><span>313.          85
-#&gt; </span><span style='color: #BCBCBC;'>2</span><span> M      355. -</span><span style='color: #BB0000;text-decoration: underline;'>20</span><span style='color: #BB0000;'>079.</span><span> </span><span style='text-decoration: underline;'>40</span><span>165. </span><span style='text-decoration: underline;'>40</span><span>189.   </span><span style='text-decoration: underline;'>40</span><span>157.        </span><span style='text-decoration: underline;'>2</span><span>750</div></span></pre>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> F      415.   -</span><span style='color: #BB0000;'>656.</span><span>  </span><span style='text-decoration: underline;'>1</span><span>321.  </span><span style='text-decoration: underline;'>1</span><span>331.    </span><span style='text-decoration: underline;'>1</span><span>313.          85
+#&gt; </span><span style='color: #555555;'>2</span><span> M      355. -</span><span style='color: #BB0000;text-decoration: underline;'>20</span><span style='color: #BB0000;'>079.</span><span> </span><span style='text-decoration: underline;'>40</span><span>165. </span><span style='text-decoration: underline;'>40</span><span>189.   </span><span style='text-decoration: underline;'>40</span><span>157.        </span><span style='text-decoration: underline;'>2</span><span>750</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

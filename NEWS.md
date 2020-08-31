@@ -1,4 +1,6 @@
-# broomExtra 4.0.4.9000
+# broomExtra 4.0.5
+
+  - More comprehensive coverage of terms from `easystats` packages.
 
 # broomExtra 4.0.4
 

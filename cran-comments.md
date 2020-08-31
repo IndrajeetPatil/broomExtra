@@ -9,4 +9,4 @@
 
 ## Comments
 
-- Minor release to fix tests for the upcoming release of `parameters`.
+- Maintenance release.
