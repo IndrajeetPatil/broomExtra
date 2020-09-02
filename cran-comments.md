@@ -10,3 +10,4 @@
 ## Comments
 
 - Maintenance release.
+- Fixed a `NOTE` produced in `README` due to changed URL.

@@ -231,7 +231,7 @@
   ],
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
   "contIntegration": ["https://travis-ci.org/IndrajeetPatil/broomExtra", "https://ci.appveyor.com/project/IndrajeetPatil/broomExtra", "https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master", "https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"],
-  "developmentStatus": ["https://www.tidyverse.org/lifecycle/", "http://www.repostatus.org/#active"],
+  "developmentStatus": ["https://www.tidyverse.org/lifecycle/", "https://www.repostatus.org/#active"],
   "releaseNotes": "https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md",
   "provider": {
     "@id": "https://cran.r-project.org",
@@ -250,5 +250,5 @@
     }
   ],
   "funder": {},
-  "fileSize": "1668.733KB"
+  "fileSize": "1699.373KB"
 }
