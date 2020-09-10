@@ -17,6 +17,7 @@
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::tidy_parameters(mod)
+#'
 #' @importFrom rlang is_null
 #' @importFrom parameters model_parameters
 #'
@@ -56,12 +57,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
   # last attempt: dataframe ---------------------------------------
   # if not, try to convert it to a tibble (relevant for dataframe)
-  if (rlang::is_null(m)) {
-    m <- tryCatch(
-      expr = as_tibble(x, ...),
-      error = function(e) NULL
-    )
-  }
+  if (rlang::is_null(m)) m <- tryCatch(as_tibble(x, ...), error = function(e) NULL)
 
   # return the final object
   return(m)
@@ -83,6 +79,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::glance_performance(mod)
+#'
 #' @importFrom dplyr select intersect
 #' @importFrom rlang is_null
 #' @importFrom performance model_performance
@@ -92,10 +89,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 glance_performance <- function(x, ...) {
   # broom family --------------------------------------------
   # check if `broom` family has a tidy method for a given object
-  df_broom <- tryCatch(
-    expr = broomExtra::glance(x),
-    error = function(e) NULL
-  )
+  df_broom <- tryCatch(broomExtra::glance(x), error = function(e) NULL)
 
   # for consistency with `performance` output, convert column names to lowercase
   if (!rlang::is_null(df_broom)) df_broom %<>% dplyr::rename_all(., .f = tolower)

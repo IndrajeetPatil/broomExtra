@@ -29,7 +29,7 @@ dataframe, if not, return a \code{NULL}.
 
 \examples{
 set.seed(123)
-lm.mod <- lm(Reaction ~ Days, sleepstudy)
+lm.mod <- lm(Sepal.Length~ Species, iris)
 broomExtra::augment(lm.mod)
 }
 \seealso{

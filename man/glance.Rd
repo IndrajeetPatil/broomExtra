@@ -26,7 +26,7 @@ dataframe, if not, return a \code{NULL}. In this case, you can try the
 
 \examples{
 set.seed(123)
-lm.mod <- lm(Reaction ~ Days, sleepstudy)
+lm.mod <- lm(Sepal.Length~ Species, iris)
 broomExtra::glance(lm.mod)
 }
 \seealso{
