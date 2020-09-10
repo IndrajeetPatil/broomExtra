@@ -36,7 +36,6 @@ grouped_tidy <- function(data,
                          ..f,
                          ...,
                          tidy.args = list()) {
-
   # functions passed to `group_modify` must accept
   # `.x` and `.y` arguments, where `.x` is the data
   tidy_group <- function(.x, .y) {

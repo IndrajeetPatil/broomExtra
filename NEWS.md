@@ -1,3 +1,7 @@
+# broomExtra 4.0.5.9000
+
+  - Minor tweak to the documentation.
+
 # broomExtra 4.0.5
 
   - More comprehensive coverage of terms from `easystats` packages.

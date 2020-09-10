@@ -13,7 +13,7 @@ tidy_parameters(x, conf.int = TRUE, ...)
 the tidied output.}
 
 \item{...}{Additional arguments that will be passed to
-\code{parameters::model_parameters} and \code{broom::tidy}.}
+\code{\link[parameters:model_parameters]{parameters::model_parameters()}} and \code{\link[broom:reexports]{broom::tidy()}}.}
 }
 \value{
 A data frame of indices related to the model's parameters.
@@ -23,7 +23,7 @@ Computes parameters for regression models.
 }
 \details{
 The function will attempt to get these details first using
-\code{parameters::model_parameters} and then using \code{broom::tidy}.
+\code{\link[parameters:model_parameters]{parameters::model_parameters()}} and then using \code{\link[broom:reexports]{broom::tidy()}}.
 }
 \examples{
 set.seed(123)

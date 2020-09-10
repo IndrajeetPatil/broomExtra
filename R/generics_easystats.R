@@ -6,12 +6,12 @@
 #' @param conf.int Indicating whether or not to include a confidence interval in
 #'   the tidied output.
 #' @param ... Additional arguments that will be passed to
-#'   `parameters::model_parameters` and `broom::tidy`.
+#'   [parameters::model_parameters()] and [broom::tidy()].
 #'
 #' @return A data frame of indices related to the model's parameters.
 #'
 #' @details The function will attempt to get these details first using
-#'   `parameters::model_parameters` and then using `broom::tidy`.
+#'   [parameters::model_parameters()] and then using [broom::tidy()].
 #'
 #' @examples
 #' set.seed(123)
@@ -75,7 +75,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' @return A data frame (with one row) and one column per "index".
 #'
 #' @details The function will attempt to get these details either using
-#'   `broom::glance` or `performance::model_performance`. If both function
+#'   [broom::glance()] or [performance::model_performance()]. If both function
 #'   provide model performance measure summaries, the function will try to
 #'   combine them into a single dataframe.
 #'

@@ -58,7 +58,7 @@
 <meta property="og:description" content="Check if a glance method exits for a given object, either in
 broom or in broom.mixed. If it does, return the model summary
 dataframe, if not, return a NULL. In this case, you can try the
-broomExtra::glance_performance function." />
+glance_performance() function." />
 <meta property="og:image" content="https://indrajeetpatil.github.io/broomExtra/logo.png" />
 
 
@@ -91,7 +91,7 @@ broomExtra::glance_performance function." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.5</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.5.9000</span>
       </span>
     </div>
 
@@ -145,7 +145,7 @@ broomExtra::glance_performance function." />
     <p>Check if a <code>glance</code> method exits for a given object, either in
 <code>broom</code> or in <code>broom.mixed</code>. If it does, return the model summary
 dataframe, if not, return a <code>NULL</code>. In this case, you can try the
-<code><a href='glance_performance.html'>broomExtra::glance_performance</a></code> function.</p>
+<code><a href='glance_performance.html'>glance_performance()</a></code> function.</p>
     </div>
 
     <pre class="usage"><span class='fu'>glance</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
@@ -258,16 +258,16 @@ dataframe, if not, return a <code>NULL</code>. In this case, you can try the
 <span class='co'># mixed-effects models (`broom.mixed` will be used)</span>
 <span class='no'>lmm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span> + (<span class='no'>Days</span> <span class='kw'>|</span> <span class='no'>Subject</span>), <span class='no'>sleepstudy</span>)
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>glance</span>(<span class='no'>lmm.mod</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 6</span><span>
-#&gt;   sigma logLik   AIC   BIC REMLcrit df.residual
+#&gt;   </span><span style='font-weight: bold;'>sigma</span><span> </span><span style='font-weight: bold;'>logLik</span><span>   </span><span style='font-weight: bold;'>AIC</span><span>   </span><span style='font-weight: bold;'>BIC</span><span> </span><span style='font-weight: bold;'>REMLcrit</span><span> </span><span style='font-weight: bold;'>df.residual</span><span>
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
 #&gt; </span><span style='color: #555555;'>1</span><span>  25.6  -</span><span style='color: #BB0000;'>872.</span><span> </span><span style='text-decoration: underline;'>1</span><span>756. </span><span style='text-decoration: underline;'>1</span><span>775.    </span><span style='text-decoration: underline;'>1</span><span>744.         174</div><div class='input'>
 <span class='co'># linear model (`broom` will be used)</span>
 <span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Reaction</span> ~ <span class='no'>Days</span>, <span class='no'>sleepstudy</span>)
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>glance</span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 12</span><span>
-#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
+#&gt;   </span><span style='font-weight: bold;'>r.squared</span><span> </span><span style='font-weight: bold;'>adj.r.squared</span><span> </span><span style='font-weight: bold;'>sigma</span><span> </span><span style='font-weight: bold;'>statistic</span><span>  </span><span style='font-weight: bold;'>p.value</span><span>    </span><span style='font-weight: bold;'>df</span><span> </span><span style='font-weight: bold;'>logLik</span><span>   </span><span style='font-weight: bold;'>AIC</span><span>   </span><span style='font-weight: bold;'>BIC</span><span>
 #&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
 #&gt; </span><span style='color: #555555;'>1</span><span>     0.286         0.282  47.7      71.5 9.89</span><span style='color: #555555;'>e</span><span style='color: #BB0000;'>-15</span><span>     1  -</span><span style='color: #BB0000;'>950.</span><span> </span><span style='text-decoration: underline;'>1</span><span>906. </span><span style='text-decoration: underline;'>1</span><span>916.
-#&gt;   deviance df.residual  nobs
+#&gt;   </span><span style='font-weight: bold;'>deviance</span><span> </span><span style='font-weight: bold;'>df.residual</span><span>  </span><span style='font-weight: bold;'>nobs</span><span>
 #&gt;      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
 #&gt; </span><span style='color: #555555;'>1</span><span>  </span><span style='text-decoration: underline;'>405</span><span>252.         178   180</div></span></pre>
   </div>

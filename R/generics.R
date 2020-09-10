@@ -3,7 +3,7 @@
 #' @description Checks if a `tidy` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, it turn an object into a tidy
 #'   tibble, if not, return a `NULL`. In this case, you can try the
-#'   `broomExtra::tidy_parameters` function.
+#'   [broomExtra::tidy_parameters()] function.
 #'
 #' @inheritParams generics::tidy
 #'
@@ -33,7 +33,6 @@
 #' @export
 
 tidy <- function(x, ...) {
-
   # check if `broom` has a tidy method for a given object
   f <- tryCatch(
     expr = broom::tidy(x, ...),
@@ -58,7 +57,7 @@ tidy <- function(x, ...) {
 #' @description Check if a `glance` method exits for a given object, either in
 #'   `broom` or in `broom.mixed`. If it does, return the model summary
 #'   dataframe, if not, return a `NULL`. In this case, you can try the
-#'   `broomExtra::glance_performance` function.
+#'   [broomExtra::glance_performance()] function.
 #'
 #' @inheritParams generics::glance
 #'
@@ -84,7 +83,6 @@ tidy <- function(x, ...) {
 #' @export
 
 glance <- function(x, ...) {
-
   # check if `broom` has a glance method for a given object
   f <- tryCatch(
     expr = broom::glance(x, ...),
@@ -133,7 +131,6 @@ glance <- function(x, ...) {
 #' @export
 
 augment <- function(x, ...) {
-
   # check if `broom` has a augment method for a given object
   f <- tryCatch(
     expr = broom::augment(x, ...),

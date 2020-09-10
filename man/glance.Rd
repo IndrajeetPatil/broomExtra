@@ -15,7 +15,7 @@ glance(x, ...)
 Check if a \code{glance} method exits for a given object, either in
 \code{broom} or in \code{broom.mixed}. If it does, return the model summary
 dataframe, if not, return a \code{NULL}. In this case, you can try the
-\code{broomExtra::glance_performance} function.
+\code{\link[=glance_performance]{glance_performance()}} function.
 }
 \section{Methods}{
 

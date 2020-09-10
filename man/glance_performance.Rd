@@ -19,7 +19,7 @@ Computes indices of model performance for regression models.
 }
 \details{
 The function will attempt to get these details either using
-\code{broom::glance} or \code{performance::model_performance}. If both function
+\code{\link[broom:reexports]{broom::glance()}} or \code{\link[performance:model_performance]{performance::model_performance()}}. If both function
 provide model performance measure summaries, the function will try to
 combine them into a single dataframe.
 }

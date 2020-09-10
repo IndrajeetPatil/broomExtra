@@ -20,18 +20,8 @@
 
 easystats_to_tidy_names <- function(x) {
   as_tibble(x) %>%
-    dplyr::rename_all(
-      .tbl = .,
-      .funs = tolower
-    ) %>%
-    dplyr::rename_all(
-      .tbl = .,
-      .funs = ~ gsub(
-        x = .,
-        pattern = "_",
-        replacement = "."
-      )
-    ) %>%
+    dplyr::rename_all(.tbl = ., .funs = tolower) %>%
+    dplyr::rename_all(.tbl = ., .funs = ~ gsub(x = ., pattern = "_", replacement = ".")) %>%
     dplyr::rename_all(
       .tbl = .,
       .funs = dplyr::recode,
