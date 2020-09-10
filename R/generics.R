@@ -18,34 +18,16 @@
 #'
 #' @examples
 #' set.seed(123)
-#' library(lme4)
-#'
-#' # mixed-effects models (`broom.mixed` will be used)
-#' lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
-#' broomExtra::tidy(x = lmm.mod, effects = "fixed", exponentiate = TRUE)
-#'
-#' # linear model (`broom` will be used)
 #' lm.mod <- lm(Reaction ~ Days, sleepstudy)
 #' broomExtra::tidy(x = lm.mod, conf.int = TRUE)
-#'
-#' # unsupported object (the function will return `NULL` in such cases)
-#' broomExtra::tidy(list(1, c("x", "y")))
 #' @export
 
 tidy <- function(x, ...) {
   # check if `broom` has a tidy method for a given object
-  f <- tryCatch(
-    expr = broom::tidy(x, ...),
-    error = function(e) NULL
-  )
+  f <- tryCatch(broom::tidy(x, ...), error = function(e) NULL)
 
   # if not, check if `broom.mixed` has a tidy method for a given object
-  if (rlang::is_null(f)) {
-    f <- tryCatch(
-      expr = broom.mixed::tidy(x, ...),
-      error = function(e) NULL
-    )
-  }
+  if (rlang::is_null(f)) f <- tryCatch(broom.mixed::tidy(x, ...), error = function(e) NULL)
 
   # return the tidy
   return(f)
@@ -71,31 +53,17 @@ tidy <- function(x, ...) {
 #'
 #' @examples
 #' set.seed(123)
-#' library(lme4)
-#'
-#' # mixed-effects models (`broom.mixed` will be used)
-#' lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
-#' broomExtra::glance(lmm.mod)
-#'
-#' # linear model (`broom` will be used)
 #' lm.mod <- lm(Reaction ~ Days, sleepstudy)
 #' broomExtra::glance(lm.mod)
 #' @export
 
 glance <- function(x, ...) {
   # check if `broom` has a glance method for a given object
-  f <- tryCatch(
-    expr = broom::glance(x, ...),
-    error = function(e) NULL
-  )
+  f <- tryCatch(broom::glance(x, ...), error = function(e) NULL)
 
   # if not, check if `broom.mixed` has a glance method for a given object
-  if (rlang::is_null(f)) {
-    f <- tryCatch(
-      expr = broom.mixed::glance(x, ...),
-      error = function(e) NULL
-    )
-  }
+  if (rlang::is_null(f)) f <- tryCatch(broom.mixed::glance(x, ...), error = function(e) NULL)
+
 
   # return the glance
   return(f)
@@ -119,31 +87,16 @@ glance <- function(x, ...) {
 #'
 #' @examples
 #' set.seed(123)
-#' library(lme4)
-#'
-#' # mixed-effects models (`broom.mixed` will be used)
-#' lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
-#' broomExtra::augment(lmm.mod)
-#'
-#' # linear model (`broom` will be used)
 #' lm.mod <- lm(Reaction ~ Days, sleepstudy)
 #' broomExtra::augment(lm.mod)
 #' @export
 
 augment <- function(x, ...) {
   # check if `broom` has a augment method for a given object
-  f <- tryCatch(
-    expr = broom::augment(x, ...),
-    error = function(e) NULL
-  )
+  f <- tryCatch(broom::augment(x, ...), error = function(e) NULL)
 
   # if not, check if `broom.mixed` has a augment method for a given object
-  if (rlang::is_null(f)) {
-    f <- tryCatch(
-      expr = broom.mixed::augment(x, ...),
-      error = function(e) NULL
-    )
-  }
+  if (rlang::is_null(f)) f <- tryCatch(broom.mixed::augment(x, ...), error = function(e) NULL)
 
   # return the augment
   return(f)

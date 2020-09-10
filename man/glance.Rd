@@ -26,13 +26,6 @@ dataframe, if not, return a \code{NULL}. In this case, you can try the
 
 \examples{
 set.seed(123)
-library(lme4)
-
-# mixed-effects models (`broom.mixed` will be used)
-lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
-broomExtra::glance(lmm.mod)
-
-# linear model (`broom` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 }

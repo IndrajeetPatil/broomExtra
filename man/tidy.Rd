@@ -29,18 +29,8 @@ tibble, if not, return a \code{NULL}. In this case, you can try the
 
 \examples{
 set.seed(123)
-library(lme4)
-
-# mixed-effects models (`broom.mixed` will be used)
-lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
-broomExtra::tidy(x = lmm.mod, effects = "fixed", exponentiate = TRUE)
-
-# linear model (`broom` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::tidy(x = lm.mod, conf.int = TRUE)
-
-# unsupported object (the function will return `NULL` in such cases)
-broomExtra::tidy(list(1, c("x", "y")))
 }
 \seealso{
 \code{\link{grouped_tidy}}, \code{\link{tidy_parameters}}
