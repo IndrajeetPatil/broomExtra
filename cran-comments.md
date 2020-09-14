@@ -9,5 +9,4 @@
 
 ## Comments
 
-- Maintenance release.
-- Fixed a `NOTE` produced in `README` due to changed URL.
+- Adapts to changes made in the `ipmisc` dependency.

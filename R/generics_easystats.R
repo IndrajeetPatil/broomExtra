@@ -17,7 +17,6 @@
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::tidy_parameters(mod)
-#'
 #' @importFrom rlang is_null
 #' @importFrom parameters model_parameters
 #'
@@ -79,7 +78,6 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::glance_performance(mod)
-#'
 #' @importFrom dplyr select intersect
 #' @importFrom rlang is_null
 #' @importFrom performance model_performance

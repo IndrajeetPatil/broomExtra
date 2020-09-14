@@ -18,7 +18,7 @@
 #'
 #' @examples
 #' set.seed(123)
-#' lm.mod <- lm(Sepal.Length~ Species, iris)
+#' lm.mod <- lm(Sepal.Length ~ Species, iris)
 #' broomExtra::tidy(x = lm.mod, conf.int = TRUE)
 #' @export
 
@@ -53,7 +53,7 @@ tidy <- function(x, ...) {
 #'
 #' @examples
 #' set.seed(123)
-#' lm.mod <- lm(Sepal.Length~ Species, iris)
+#' lm.mod <- lm(Sepal.Length ~ Species, iris)
 #' broomExtra::glance(lm.mod)
 #' @export
 
@@ -87,7 +87,7 @@ glance <- function(x, ...) {
 #'
 #' @examples
 #' set.seed(123)
-#' lm.mod <- lm(Sepal.Length~ Species, iris)
+#' lm.mod <- lm(Sepal.Length ~ Species, iris)
 #' broomExtra::augment(lm.mod)
 #' @export
 

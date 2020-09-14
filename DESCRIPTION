@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 4.0.5.9000
+Version: 4.0.6
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -24,10 +24,10 @@ BugReports: https://github.com/IndrajeetPatil/broomExtra/issues
 Depends: 
     R (>= 3.6.0)
 Imports: 
-    broom,
+    broom (>= 0.7.0),
     broom.mixed,
     dplyr,
-    ipmisc,
+    ipmisc (>= 3.2.0),
     parameters,
     performance,
     rlang
@@ -43,5 +43,6 @@ Suggests:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-Roxygen: list(markdown = TRUE)
+Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace",
+    "collate", "pkgapi::api_roclet"))
 RoxygenNote: 7.1.1

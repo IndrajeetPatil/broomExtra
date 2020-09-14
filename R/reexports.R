@@ -36,3 +36,9 @@ ipmisc::enframe
 #' @export
 #' @importFrom ipmisc as_tibble
 ipmisc::as_tibble
+
+# ----------------------- other -------------------------------------
+
+#' @export
+#' @importFrom ipmisc easystats_to_tidy_names
+ipmisc::easystats_to_tidy_names

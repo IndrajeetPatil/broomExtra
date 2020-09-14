@@ -29,7 +29,7 @@ tibble, if not, return a \code{NULL}. In this case, you can try the
 
 \examples{
 set.seed(123)
-lm.mod <- lm(Sepal.Length~ Species, iris)
+lm.mod <- lm(Sepal.Length ~ Species, iris)
 broomExtra::tidy(x = lm.mod, conf.int = TRUE)
 }
 \seealso{

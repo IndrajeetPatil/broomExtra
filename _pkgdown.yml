@@ -15,18 +15,18 @@ authors:
     href: https://sites.google.com/site/indrajeetspatilmorality/
 
 reference:
+  - title: Hybrid functions from `broom` and `easystats`
+    desc:  These are the primary functions that combine functionalities from these two ecosystems.
+    contents:
+      - tidy_parameters
+      - glance_performance
+
   - title: Generics for `broom` and `broom.mixed`
     desc:  Generic functions used for tidy tibbles, model summaries, and augmented data frames.
     contents:
       - tidy
       - glance
       - augment
-
-  - title: Hybrid functions from `broom` and `easystats`
-    desc:  These functions combine functionalities from these two packages.
-    contents:
-      - tidy_parameters
-      - glance_performance
 
   - title: Grouped variants of generics
     desc: Using generic functions across all combinations of grouping variables in a dataframe.
@@ -37,14 +37,3 @@ reference:
     desc:  Useful functions re-exported from other packages.
     contents:
       - "%>%"
-      - "%<>%"
-      - "%$%"
-      - "%||%"
-      - "%|%"
-      - tibble
-      - as_tibble
-
-  - title: Helper functions
-    desc: For data wrangling.
-    contents:
-      - easystats_to_tidy_names

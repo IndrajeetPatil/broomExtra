@@ -91,7 +91,7 @@ glance_performance() function." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.5.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.6</span>
       </span>
     </div>
 
@@ -182,6 +182,7 @@ dataframe, if not, return a <code>NULL</code>. In this case, you can try the
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.cch.html'>glance.cch</a></code>: <code>cch</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.clm.html'>glance.clm</a></code>: <code>clm</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.clmm.html'>glance.clmm</a></code>: <code>clmm</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.coeftest.html'>glance.coeftest</a></code>: <code>coeftest</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.coxph.html'>glance.coxph</a></code>: <code>coxph</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.cv.glmnet.html'>glance.cv.glmnet</a></code>: <code>cv.glmnet</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.drc.html'>glance.drc</a></code>: <code>drc</code></p></li>
@@ -253,7 +254,7 @@ dataframe, if not, return a <code>NULL</code>. In this case, you can try the
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
-<span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Sepal.Length</span>~ <span class='no'>Species</span>, <span class='no'>iris</span>)
+<span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Sepal.Length</span> ~ <span class='no'>Species</span>, <span class='no'>iris</span>)
 <span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>glance</span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 12</span><span>
 #&gt;   </span><span style='font-weight: bold;'>r.squared</span><span> </span><span style='font-weight: bold;'>adj.r.squared</span><span> </span><span style='font-weight: bold;'>sigma</span><span> </span><span style='font-weight: bold;'>statistic</span><span>  </span><span style='font-weight: bold;'>p.value</span><span>    </span><span style='font-weight: bold;'>df</span><span> </span><span style='font-weight: bold;'>logLik</span><span>   </span><span style='font-weight: bold;'>AIC</span><span>   </span><span style='font-weight: bold;'>BIC</span><span>
 #&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>

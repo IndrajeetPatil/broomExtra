@@ -1,6 +1,8 @@
-# broomExtra 4.0.5.9000
+# broomExtra 4.0.6
 
   - Minor tweak to the documentation.
+  
+  - `easystats_to_tidy_names` is now reexported from `ipmisc`.
 
 # broomExtra 4.0.5
 
