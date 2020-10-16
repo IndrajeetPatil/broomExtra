@@ -1,19 +1,18 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-`broomExtra`: Enhancements for `broom` and `easystats` Package Families
-=======================================================================
+# `broomExtra`: Enhancements for `broom` and `easystats` Package Families
 
 | Package                                                                                                                                                       | Status                                                                                                                                                                                     | Usage                                                                                                                                           | GitHub                                                                                                                                                       | References                                                                                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                    | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-4.0.5-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)                   | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
+| [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-4.0.5-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)                   | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
 | [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-4-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra/)](https://rdrr.io/cran/broomExtra/)                                                         |
 | [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.0.5-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
 | [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--09--14-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
+| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--10--16-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
 | [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)                                                  | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
 
-Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
-==========================================================================
+# Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
 
 The goal of `broomExtra` is to provide helper functions that assist in
 data analysis workflows involving regression analyses. The goal is to
@@ -45,8 +44,7 @@ has the following advantages over the underlying individual packages
 If you want to add support for a regression model, the natural place to
 do this would be to contribute either to `broom` or to `parameters`.
 
-Installation
-============
+# Installation
 
 To get the latest, stable `CRAN` release:
 
@@ -57,8 +55,7 @@ install.packages("broomExtra")
 You can get the **development** version of the package from `GitHub`. To
 see what new changes (and bug fixes) have been made to the package since
 the last release on `CRAN`, you can check the detailed log of changes
-here:
-<a href="https://indrajeetpatil.github.io/broomExtra/news/index.html" class="uri">https://indrajeetpatil.github.io/broomExtra/news/index.html</a>
+here: <https://indrajeetpatil.github.io/broomExtra/news/index.html>
 
 If you are in hurry and want to reduce the time of installation, prefer-
 
@@ -87,8 +84,7 @@ Otherwise, the quicker option is-
 remotes::install_github("IndrajeetPatil/broomExtra")
 ```
 
-hybrid generics
-===============
+# hybrid generics
 
 The `broom`-family of packages are not the only ones which return such
 tidy summaries for model parameters and model performance. The
@@ -107,8 +103,7 @@ summaries with the appropriate method and do so robustly:
 -   `broom::glance` + `performance::model_performance` =
     `broomExtra::glance_performance`
 
-Benefits of using `tidy_parameters`
------------------------------------
+## Benefits of using `tidy_parameters`
 
 <font color="green"> The `tidy_parameters` will return a model summary
 either from `broomExtra::tidy` or `parameters::model_parameters`.
@@ -141,16 +136,26 @@ broomExtra::tidy(mod_mixor)
 # using hybrid function
 broomExtra::tidy_parameters(mod_mixor)
 #> # A tibble: 8 x 9
-#>   term               estimate std.error conf.low conf.high statistic df.error p.value effects
-#>   <chr>                 <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <dbl>   <dbl> <chr>  
-#> 1 (Intercept)          0.0882    0.313   -0.526      0.702     0.282      Inf  0.778  fixed  
-#> 2 Threshold2           1.24      0.0883   1.07       1.41     14.1        Inf  0      fixed  
-#> 3 Threshold3           2.42      0.0836   2.26       2.58     28.9        Inf  0      fixed  
-#> 4 thkspre              0.403     0.0429   0.319      0.487     9.39       Inf  0      fixed  
-#> 5 cc                   0.924     0.371    0.196      1.65      2.49       Inf  0.0128 fixed  
-#> 6 tv                   0.275     0.315   -0.342      0.893     0.873      Inf  0.383  fixed  
-#> 7 cctv                -0.466     0.406   -1.26       0.330    -1.15       Inf  0.251  fixed  
-#> 8 Random.(Intercept)   0.0735    0.0495  -0.0235     0.170     1.49       Inf  0.137  random
+#>   term               estimate std.error conf.low conf.high statistic df.error
+#>   <chr>                 <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <dbl>
+#> 1 (Intercept)          0.0882    0.313   -0.526      0.702     0.282      Inf
+#> 2 Threshold2           1.24      0.0883   1.07       1.41     14.1        Inf
+#> 3 Threshold3           2.42      0.0836   2.26       2.58     28.9        Inf
+#> 4 thkspre              0.403     0.0429   0.319      0.487     9.39       Inf
+#> 5 cc                   0.924     0.371    0.196      1.65      2.49       Inf
+#> 6 tv                   0.275     0.315   -0.342      0.893     0.873      Inf
+#> 7 cctv                -0.466     0.406   -1.26       0.330    -1.15       Inf
+#> 8 Random.(Intercept)   0.0735    0.0495  -0.0235     0.170     1.49       Inf
+#>   p.value effects
+#>     <dbl> <chr>  
+#> 1  0.778  fixed  
+#> 2  0      fixed  
+#> 3  0      fixed  
+#> 4  0      fixed  
+#> 5  0.0128 fixed  
+#> 6  0.383  fixed  
+#> 7  0.251  fixed  
+#> 8  0.137  random
 ```
 
 While other times, it will be the other way around:
@@ -215,20 +220,34 @@ parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
 # using hybrid function
 broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
 #> # A tibble: 12 x 9
-#>    to      operator from    estimate std.error conf.low conf.high  p.value type       
-#>    <chr>   <chr>    <chr>      <dbl>     <dbl>    <dbl>     <dbl>    <dbl> <chr>      
-#>  1 visual  =~       x1         1        0        1          1     0.       Loading    
-#>  2 visual  =~       x2         0.554    0.0997   0.358      0.749 2.80e- 8 Loading    
-#>  3 visual  =~       x3         0.729    0.109    0.516      0.943 2.31e-11 Loading    
-#>  4 textual =~       x4         1        0        1          1     0.       Loading    
-#>  5 textual =~       x5         1.11     0.0654   0.985      1.24  0.       Loading    
-#>  6 textual =~       x6         0.926    0.0554   0.817      1.03  0.       Loading    
-#>  7 speed   =~       x7         1        0        1          1     0.       Loading    
-#>  8 speed   =~       x8         1.18     0.165    0.857      1.50  8.56e-13 Loading    
-#>  9 speed   =~       x9         1.08     0.151    0.785      1.38  8.40e-13 Loading    
-#> 10 visual  ~~       textual    0.408    0.0735   0.264      0.552 2.82e- 8 Correlation
-#> 11 visual  ~~       speed      0.262    0.0563   0.152      0.373 3.17e- 6 Correlation
-#> 12 textual ~~       speed      0.173    0.0493   0.0768     0.270 4.35e- 4 Correlation
+#>    to      operator from    estimate std.error conf.low conf.high  p.value
+#>    <chr>   <chr>    <chr>      <dbl>     <dbl>    <dbl>     <dbl>    <dbl>
+#>  1 visual  =~       x1         1        0        1          1     0.      
+#>  2 visual  =~       x2         0.554    0.0997   0.358      0.749 2.80e- 8
+#>  3 visual  =~       x3         0.729    0.109    0.516      0.943 2.31e-11
+#>  4 textual =~       x4         1        0        1          1     0.      
+#>  5 textual =~       x5         1.11     0.0654   0.985      1.24  0.      
+#>  6 textual =~       x6         0.926    0.0554   0.817      1.03  0.      
+#>  7 speed   =~       x7         1        0        1          1     0.      
+#>  8 speed   =~       x8         1.18     0.165    0.857      1.50  8.56e-13
+#>  9 speed   =~       x9         1.08     0.151    0.785      1.38  8.40e-13
+#> 10 visual  ~~       textual    0.408    0.0735   0.264      0.552 2.82e- 8
+#> 11 visual  ~~       speed      0.262    0.0563   0.152      0.373 3.17e- 6
+#> 12 textual ~~       speed      0.173    0.0493   0.0768     0.270 4.35e- 4
+#>    type       
+#>    <chr>      
+#>  1 Loading    
+#>  2 Loading    
+#>  3 Loading    
+#>  4 Loading    
+#>  5 Loading    
+#>  6 Loading    
+#>  7 Loading    
+#>  8 Loading    
+#>  9 Loading    
+#> 10 Correlation
+#> 11 Correlation
+#> 12 Correlation
 ```
 
 <font color="green"> Additionally, the *p*-values and confidence
@@ -253,16 +272,21 @@ broomExtra::tidy(mod, conf.int = TRUE)
 # using `tidy_parameters` (p-values present)
 broomExtra::tidy_parameters(mod)
 #> # A tibble: 4 x 8
-#>   term        estimate std.error conf.low conf.high statistic df.error     p.value
-#>   <chr>          <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <int>       <dbl>
-#> 1 (Intercept)  -41.0       9.81   -61.7     -20.3      -4.18        17 0.000624   
-#> 2 Air.Flow       0.829     0.111    0.595     1.06      7.46        17 0.000000933
-#> 3 Water.Temp     0.926     0.303    0.286     1.57      3.05        17 0.00720    
-#> 4 Acid.Conc.    -0.128     0.129   -0.400     0.144    -0.992       17 0.335
+#>   term        estimate std.error conf.low conf.high statistic df.error
+#>   <chr>          <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <int>
+#> 1 (Intercept)  -41.0       9.81   -61.7     -20.3      -4.18        17
+#> 2 Air.Flow       0.829     0.111    0.595     1.06      7.46        17
+#> 3 Water.Temp     0.926     0.303    0.286     1.57      3.05        17
+#> 4 Acid.Conc.    -0.128     0.129   -0.400     0.144    -0.992       17
+#>       p.value
+#>         <dbl>
+#> 1 0.000624   
+#> 2 0.000000933
+#> 3 0.00720    
+#> 4 0.335
 ```
 
-Benefits of using `glance_performance`
---------------------------------------
+## Benefits of using `glance_performance`
 
 <font color="green"> The `glance_performance` will return a model
 summary either from `broom::glance` or `performance::model_performance`.
@@ -315,9 +339,12 @@ performance::model_performance(co)
 # `glance_performance` doesn't fail
 broomExtra::glance_performance(co)
 #> # A tibble: 1 x 9
-#>   r.squared adj.r.squared   rho number.interaction dw.original p.value.original dw.transformed p.value.transformed  nobs
-#>       <dbl>         <dbl> <dbl>              <dbl>       <dbl>            <dbl>          <dbl>               <dbl> <int>
-#> 1     0.799         0.777 0.268                  7        1.50           0.0406           2.06               0.521    32
+#>   r.squared adj.r.squared   rho number.interaction dw.original p.value.original
+#>       <dbl>         <dbl> <dbl>              <dbl>       <dbl>            <dbl>
+#> 1     0.799         0.777 0.268                  7        1.50           0.0406
+#>   dw.transformed p.value.transformed  nobs
+#>            <dbl>               <dbl> <int>
+#> 1           2.06               0.521    32
 ```
 
 <font color="green"> Additionally, it will return model summary that
@@ -348,14 +375,16 @@ broomExtra::glance(model)
 
 # combined output
 broomExtra::glance_performance(model)
-#> # A tibble: 1 x 14
-#>   null.deviance df.null loglik   aic   bic deviance df.residual  nobs r2.tjur  rmse logloss score.log score.spherical   pcp
-#>           <dbl>   <int>  <dbl> <dbl> <dbl>    <dbl>       <int> <int>   <dbl> <dbl>   <dbl>     <dbl>           <dbl> <dbl>
-#> 1          43.2      31  -7.37  20.7  25.1     14.7          29    32   0.705 0.678   0.230     -19.0           0.116 0.858
+#> # A tibble: 1 x 15
+#>   null.deviance df.null loglik   aic   bic deviance df.residual  nobs r2.tjur
+#>           <dbl>   <int>  <dbl> <dbl> <dbl>    <dbl>       <int> <int>   <dbl>
+#> 1          43.2      31  -7.37  20.7  25.1     14.7          29    32   0.705
+#>    rmse sigma log.loss score.log score.spherical   pcp
+#>   <dbl> <dbl>    <dbl>     <dbl>           <dbl> <dbl>
+#> 1 0.678 0.713    0.230     -19.0           0.116 0.858
 ```
 
-generic functions
-=================
+# generic functions
 
 Currently, `S3` methods for mixed-effects model objects are included in
 the `broom.mixed` package, while the rest of the object classes are
@@ -372,8 +401,7 @@ this, as calling
 search the appropriate method from these two packages and return the
 results.
 
-tidy dataframe
---------------
+## tidy dataframe
 
 Let’s get a tidy tibble back containing results from various regression
 models.
@@ -421,8 +449,7 @@ broomExtra::tidy(list(1, c("x", "y")))
 #> NULL
 ```
 
-model summaries
----------------
+## model summaries
 
 Getting a `tibble` containing model summary and other performance
 measures.
@@ -444,9 +471,12 @@ broomExtra::glance(lmm.mod)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 #> # A tibble: 1 x 12
-#>   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC deviance df.residual  nobs
-#>       <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>  <dbl> <dbl> <dbl>    <dbl>       <int> <int>
-#> 1     0.286         0.282  47.7      71.5 9.89e-15     1  -950. 1906. 1916.  405252.         178   180
+#>   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
+#>       <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>  <dbl> <dbl> <dbl>
+#> 1     0.286         0.282  47.7      71.5 9.89e-15     1  -950. 1906. 1916.
+#>   deviance df.residual  nobs
+#>      <dbl>       <int> <int>
+#> 1  405252.         178   180
 
 # another example with `broom`
 # cumulative Link Models
@@ -462,8 +492,7 @@ broomExtra::glance(acf(lh, plot = FALSE))
 #> NULL
 ```
 
-augmented dataframe
--------------------
+## augmented dataframe
 
 Getting a `tibble` by augmenting data with information from an object.
 
@@ -476,18 +505,30 @@ library(ordinal)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::augment(lmm.mod)
 #> # A tibble: 180 x 14
-#>    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset .sqrtXwt .sqrtrwt .weights  .wtres
-#>       <dbl> <dbl> <fct>     <dbl>   <dbl>  <dbl>   <dbl>  <dbl> <dbl>   <dbl>    <dbl>    <dbl>    <dbl>   <dbl>
-#>  1     250.     0 308        254.   -4.10 0.229  0.00496   251.  254.       0        1        1        1   -4.10
-#>  2     259.     1 308        273.  -14.6  0.170  0.0402    262.  273.       0        1        1        1  -14.6 
-#>  3     251.     2 308        293.  -42.2  0.127  0.226     272.  293.       0        1        1        1  -42.2 
-#>  4     321.     3 308        313.    8.78 0.101  0.00731   283.  313.       0        1        1        1    8.78
-#>  5     357.     4 308        332.   24.5  0.0910 0.0506    293.  332.       0        1        1        1   24.5 
-#>  6     415.     5 308        352.   62.7  0.0981 0.362     304.  352.       0        1        1        1   62.7 
-#>  7     382.     6 308        372.   10.5  0.122  0.0134    314.  372.       0        1        1        1   10.5 
-#>  8     290.     7 308        391. -101.   0.162  1.81      325.  391.       0        1        1        1 -101.  
-#>  9     431.     8 308        411.   19.6  0.219  0.106     335.  411.       0        1        1        1   19.6 
-#> 10     466.     9 308        431.   35.7  0.293  0.571     346.  431.       0        1        1        1   35.7 
+#>    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset
+#>       <dbl> <dbl> <fct>     <dbl>   <dbl>  <dbl>   <dbl>  <dbl> <dbl>   <dbl>
+#>  1     250.     0 308        254.   -4.10 0.229  0.00496   251.  254.       0
+#>  2     259.     1 308        273.  -14.6  0.170  0.0402    262.  273.       0
+#>  3     251.     2 308        293.  -42.2  0.127  0.226     272.  293.       0
+#>  4     321.     3 308        313.    8.78 0.101  0.00731   283.  313.       0
+#>  5     357.     4 308        332.   24.5  0.0910 0.0506    293.  332.       0
+#>  6     415.     5 308        352.   62.7  0.0981 0.362     304.  352.       0
+#>  7     382.     6 308        372.   10.5  0.122  0.0134    314.  372.       0
+#>  8     290.     7 308        391. -101.   0.162  1.81      325.  391.       0
+#>  9     431.     8 308        411.   19.6  0.219  0.106     335.  411.       0
+#> 10     466.     9 308        431.   35.7  0.293  0.571     346.  431.       0
+#>    .sqrtXwt .sqrtrwt .weights  .wtres
+#>       <dbl>    <dbl>    <dbl>   <dbl>
+#>  1        1        1        1   -4.10
+#>  2        1        1        1  -14.6 
+#>  3        1        1        1  -42.2 
+#>  4        1        1        1    8.78
+#>  5        1        1        1   24.5 
+#>  6        1        1        1   62.7 
+#>  7        1        1        1   10.5 
+#>  8        1        1        1 -101.  
+#>  9        1        1        1   19.6 
+#> 10        1        1        1   35.7 
 #> # ... with 170 more rows
 
 # linear model
@@ -532,8 +573,7 @@ broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 #> NULL
 ```
 
-`grouped_` variants of generics
-===============================
+# `grouped_` variants of generics
 
 `grouped` variants of the generic functions (`tidy`, `glance`, and
 `augment`) make it easy to execute the same analysis for all
@@ -542,8 +582,7 @@ functions work only for methods that depend on a `data` argument (e.g.,
 `stats::lm`), but not for functions that don’t (e.g.,
 `stats::prop.test()`).
 
-`grouped_tidy`
---------------
+## `grouped_tidy`
 
 ``` r
 # to speed up computation, let's use only 50% of the data
@@ -585,23 +624,34 @@ broomExtra::grouped_tidy(
   tidy.args = list(conf.int = TRUE, conf.level = 0.99)
 )
 #> # A tibble: 25 x 9
-#>    cut   effect   group    term                   estimate std.error statistic conf.low conf.high
-#>    <ord> <chr>    <chr>    <chr>                     <dbl>     <dbl>     <dbl>    <dbl>     <dbl>
-#>  1 Fair  fixed    <NA>     carat                  3800.         228.      16.7    3212.     4387.
-#>  2 Fair  ran_pars color    sd__(Intercept)        2158.          NA       NA        NA        NA 
-#>  3 Fair  ran_pars color    cor__(Intercept).carat   -0.975       NA       NA        NA        NA 
-#>  4 Fair  ran_pars color    sd__carat              2545.          NA       NA        NA        NA 
-#>  5 Fair  ran_pars Residual sd__Observation        1830.          NA       NA        NA        NA 
-#>  6 Good  fixed    <NA>     carat                  9217.         105.      87.6    8946.     9488.
-#>  7 Good  ran_pars color    sd__(Intercept)        2686.          NA       NA        NA        NA 
-#>  8 Good  ran_pars color    cor__(Intercept).carat    0.998       NA       NA        NA        NA 
-#>  9 Good  ran_pars color    sd__carat              1609.          NA       NA        NA        NA 
-#> 10 Good  ran_pars Residual sd__Observation        1373.          NA       NA        NA        NA 
+#>    cut   effect   group    term                   estimate std.error statistic
+#>    <ord> <chr>    <chr>    <chr>                     <dbl>     <dbl>     <dbl>
+#>  1 Fair  fixed    <NA>     carat                  3800.         228.      16.7
+#>  2 Fair  ran_pars color    sd__(Intercept)        2158.          NA       NA  
+#>  3 Fair  ran_pars color    cor__(Intercept).carat   -0.975       NA       NA  
+#>  4 Fair  ran_pars color    sd__carat              2545.          NA       NA  
+#>  5 Fair  ran_pars Residual sd__Observation        1830.          NA       NA  
+#>  6 Good  fixed    <NA>     carat                  9217.         105.      87.6
+#>  7 Good  ran_pars color    sd__(Intercept)        2686.          NA       NA  
+#>  8 Good  ran_pars color    cor__(Intercept).carat    0.998       NA       NA  
+#>  9 Good  ran_pars color    sd__carat              1609.          NA       NA  
+#> 10 Good  ran_pars Residual sd__Observation        1373.          NA       NA  
+#>    conf.low conf.high
+#>       <dbl>     <dbl>
+#>  1    3212.     4387.
+#>  2      NA        NA 
+#>  3      NA        NA 
+#>  4      NA        NA 
+#>  5      NA        NA 
+#>  6    8946.     9488.
+#>  7      NA        NA 
+#>  8      NA        NA 
+#>  9      NA        NA 
+#> 10      NA        NA 
 #> # ... with 15 more rows
 ```
 
-`grouped_glance`
-----------------
+## `grouped_glance`
 
 ``` r
 # to speed up computation, let's use only 50% of the data
@@ -616,18 +666,30 @@ broomExtra::grouped_glance(
   na.action = na.omit
 )
 #> # A tibble: 35 x 14
-#>    cut   color r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC    deviance df.residual  nobs
-#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl> <dbl> <dbl>       <dbl>       <int> <int>
-#>  1 Fair  D         0.884         0.883 1857.        NA      NA    NA  -760. 1524. 1529.  289568733.          84    85
-#>  2 Fair  E         0.876         0.875 1370.        NA      NA    NA  -872. 1749. 1754.  187724139.         100   101
-#>  3 Fair  F         0.874         0.873 1989.        NA      NA    NA -1406. 2816. 2822.  613473518.         155   156
-#>  4 Fair  G         0.849         0.848 2138.        NA      NA    NA -1444. 2893. 2899.  722351124.         158   159
-#>  5 Fair  H         0.876         0.875 2412.        NA      NA    NA -1307. 2618. 2624.  820050299.         141   142
-#>  6 Fair  I         0.915         0.914 1499.        NA      NA    NA  -698. 1400. 1405.  177605917.          79    80
-#>  7 Fair  J         0.885         0.883 2189.        NA      NA    NA  -501. 1005. 1009.  258660541.          54    55
-#>  8 Good  D         0.860         0.860 1729.        NA      NA    NA -2981. 5966. 5974. 1001144317.         335   336
-#>  9 Good  E         0.870         0.870 1674.        NA      NA    NA -4084. 8173. 8181. 1291712250.         461   462
-#> 10 Good  F         0.873         0.873 1677.        NA      NA    NA -3997. 7998. 8006. 1267954026.         451   452
+#>    cut   color r.squared adj.r.squared sigma statistic p.value    df logLik
+#>    <ord> <ord>     <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl>
+#>  1 Fair  D         0.884         0.883 1857.        NA      NA    NA  -760.
+#>  2 Fair  E         0.876         0.875 1370.        NA      NA    NA  -872.
+#>  3 Fair  F         0.874         0.873 1989.        NA      NA    NA -1406.
+#>  4 Fair  G         0.849         0.848 2138.        NA      NA    NA -1444.
+#>  5 Fair  H         0.876         0.875 2412.        NA      NA    NA -1307.
+#>  6 Fair  I         0.915         0.914 1499.        NA      NA    NA  -698.
+#>  7 Fair  J         0.885         0.883 2189.        NA      NA    NA  -501.
+#>  8 Good  D         0.860         0.860 1729.        NA      NA    NA -2981.
+#>  9 Good  E         0.870         0.870 1674.        NA      NA    NA -4084.
+#> 10 Good  F         0.873         0.873 1677.        NA      NA    NA -3997.
+#>      AIC   BIC    deviance df.residual  nobs
+#>    <dbl> <dbl>       <dbl>       <int> <int>
+#>  1 1524. 1529.  289568733.          84    85
+#>  2 1749. 1754.  187724139.         100   101
+#>  3 2816. 2822.  613473518.         155   156
+#>  4 2893. 2899.  722351124.         158   159
+#>  5 2618. 2624.  820050299.         141   142
+#>  6 1400. 1405.  177605917.          79    80
+#>  7 1005. 1009.  258660541.          54    55
+#>  8 5966. 5974. 1001144317.         335   336
+#>  9 8173. 8181. 1291712250.         461   462
+#> 10 7998. 8006. 1267954026.         451   452
 #> # ... with 25 more rows
 
 # linear mixed effects model (model summaries across grouping combinations)
@@ -648,8 +710,7 @@ broomExtra::grouped_glance(
 #> 5 Ideal     1257. -92766. 185542. 185579.  185532.       10833
 ```
 
-`grouped_augment`
------------------
+## `grouped_augment`
 
 ``` r
 # to speed up computation, let's use only 50% of the data
@@ -686,30 +747,40 @@ broomExtra::grouped_augment(
   control = lme4::lmerControl(optimizer = "bobyqa")
 )
 #> # A tibble: 26,970 x 15
-#>    cut   price carat color .fitted .resid    .hat   .cooksd .fixed   .mu .offset .sqrtXwt .sqrtrwt .weights .wtres
-#>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>     <dbl>  <dbl> <dbl>   <dbl>    <dbl>    <dbl>    <dbl>  <dbl>
-#>  1 Fair   8818  1.52 H       7001.  1817. 0.00806 0.00837    3519. 7001.       0        1        1        1  1817.
-#>  2 Fair   1881  0.65 F       2104.  -223. 0.00225 0.0000346  1505. 2104.       0        1        1        1  -223.
-#>  3 Fair   2376  1.2  G       5439. -3063. 0.00651 0.0191     2778. 5439.       0        1        1        1 -3063.
-#>  4 Fair   1323  0.5  D       1069.   254. 0.00281 0.0000565  1158. 1069.       0        1        1        1   254.
-#>  5 Fair   3282  0.92 F       3935.  -653. 0.00338 0.000448   2130. 3935.       0        1        1        1  -653.
-#>  6 Fair   2500  0.7  H       2259.   241. 0.00219 0.0000396  1621. 2259.       0        1        1        1   241.
-#>  7 Fair  13853  1.5  F       7868.  5985. 0.0149  0.170      3473. 7868.       0        1        1        1  5985.
-#>  8 Fair   3869  1.01 H       4052.  -183. 0.00287 0.0000297  2338. 4052.       0        1        1        1  -183.
-#>  9 Fair   1811  0.7  H       2259.  -448. 0.00219 0.000137   1621. 2259.       0        1        1        1  -448.
-#> 10 Fair   2788  1.01 E       4406. -1618. 0.0135  0.0112     2338. 4406.       0        1        1        1 -1618.
+#>    cut   price carat color .fitted .resid    .hat   .cooksd .fixed   .mu .offset
+#>    <ord> <int> <dbl> <ord>   <dbl>  <dbl>   <dbl>     <dbl>  <dbl> <dbl>   <dbl>
+#>  1 Fair   8818  1.52 H       7001.  1817. 0.00806 0.00837    3519. 7001.       0
+#>  2 Fair   1881  0.65 F       2104.  -223. 0.00225 0.0000346  1505. 2104.       0
+#>  3 Fair   2376  1.2  G       5439. -3063. 0.00651 0.0191     2778. 5439.       0
+#>  4 Fair   1323  0.5  D       1069.   254. 0.00281 0.0000565  1158. 1069.       0
+#>  5 Fair   3282  0.92 F       3935.  -653. 0.00338 0.000448   2130. 3935.       0
+#>  6 Fair   2500  0.7  H       2259.   241. 0.00219 0.0000396  1621. 2259.       0
+#>  7 Fair  13853  1.5  F       7868.  5985. 0.0149  0.170      3473. 7868.       0
+#>  8 Fair   3869  1.01 H       4052.  -183. 0.00287 0.0000297  2338. 4052.       0
+#>  9 Fair   1811  0.7  H       2259.  -448. 0.00219 0.000137   1621. 2259.       0
+#> 10 Fair   2788  1.01 E       4406. -1618. 0.0135  0.0112     2338. 4406.       0
+#>    .sqrtXwt .sqrtrwt .weights .wtres
+#>       <dbl>    <dbl>    <dbl>  <dbl>
+#>  1        1        1        1  1817.
+#>  2        1        1        1  -223.
+#>  3        1        1        1 -3063.
+#>  4        1        1        1   254.
+#>  5        1        1        1  -653.
+#>  6        1        1        1   241.
+#>  7        1        1        1  5985.
+#>  8        1        1        1  -183.
+#>  9        1        1        1  -448.
+#> 10        1        1        1 -1618.
 #> # ... with 26,960 more rows
 ```
 
-Code coverage
-=============
+# Code coverage
 
 As the code stands right now, here is the code coverage for all primary
 functions involved:
-<a href="https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R" class="uri">https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R</a>
+<https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R>
 
-Contributing
-============
+# Contributing
 
 I’m happy to receive bug reports, suggestions, questions, and (most of
 all) contributions to fix problems and add features. I personally prefer
@@ -721,8 +792,7 @@ Please note that this project is released with a [Contributor Code of
 Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md).
 By participating in this project you agree to abide by its terms.
 
-Acknowledgments
-===============
+# Acknowledgments
 
 The hexsticker was generously designed by Sarah Otterstetter (Max Planck
 Institute for Human Development, Berlin). Thanks are also due to the

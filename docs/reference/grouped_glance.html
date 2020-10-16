@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Model summary output from grouped analysis of any function that has
-<code>data</code> argument in its function call. — grouped_glance • broomExtra</title>
+data argument in its function call. — grouped_glance • broomExtra</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -56,7 +56,7 @@
   
 
 <meta property="og:title" content="Model summary output from grouped analysis of any function that has
-<code>data</code> argument in its function call. — grouped_glance" />
+data argument in its function call. — grouped_glance" />
 <meta property="og:description" content="Model summary output from grouped analysis of any function that has
 data argument in its function call." />
 <meta property="og:image" content="https://indrajeetpatil.github.io/broomExtra/logo.png" />
@@ -91,7 +91,7 @@ data argument in its function call." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.6</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.1.0.9000</span>
       </span>
     </div>
 
@@ -147,7 +147,7 @@ data argument in its function call." />
 <code>data</code> argument in its function call.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>grouped_glance</span>(<span class='no'>data</span>, <span class='no'>grouping.vars</span>, <span class='no'>..f</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>grouped_glance</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>grouping.vars</span>, <span class='va'>..f</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -260,20 +260,21 @@ data argument in its function call." />
     <div class='dont-index'><p><code><a href='glance.html'>glance</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span>
 
 <span class='co'># linear mixed effects model</span>
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>grouped_glance</span>(
-  <span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw pkg'>MASS</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/MASS/man/Aids2.html'>Aids2</a></span>, <span class='kw'>interval</span> <span class='kw'>=</span> <span class='no'>death</span> - <span class='no'>diag</span>),
-  <span class='kw'>grouping.vars</span> <span class='kw'>=</span> <span class='no'>sex</span>,
-  <span class='kw'>..f</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='no'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>,
-  <span class='kw'>formula</span> <span class='kw'>=</span> <span class='no'>interval</span> ~ <span class='no'>age</span> + (<span class='fl'>1</span> <span class='kw'>|</span> <span class='no'>status</span>),
-  <span class='kw'>control</span> <span class='kw'>=</span> <span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmerControl.html'>lmerControl</a></span>(<span class='kw'>optimizer</span> <span class='kw'>=</span> <span class='st'>"bobyqa"</span>)
-)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 7</span><span>
+<span class='fu'>broomExtra</span><span class='fu'>::</span><span class='fu'>grouped_glance</span><span class='op'>(</span>
+  data <span class='op'>=</span> <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span><span class='fu'>MASS</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/MASS/man/Aids2.html'>Aids2</a></span>, interval <span class='op'>=</span> <span class='va'>death</span> <span class='op'>-</span> <span class='va'>diag</span><span class='op'>)</span>,
+  grouping.vars <span class='op'>=</span> <span class='va'>sex</span>,
+  ..f <span class='op'>=</span> <span class='fu'>lme4</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span>,
+  formula <span class='op'>=</span> <span class='va'>interval</span> <span class='op'>~</span> <span class='va'>age</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>status</span><span class='op'>)</span>,
+  control <span class='op'>=</span> <span class='fu'>lme4</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmerControl.html'>lmerControl</a></span><span class='op'>(</span>optimizer <span class='op'>=</span> <span class='st'>"bobyqa"</span><span class='op'>)</span>
+<span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 7</span><span>
 #&gt;   </span><span style='font-weight: bold;'>sex</span><span>   </span><span style='font-weight: bold;'>sigma</span><span>  </span><span style='font-weight: bold;'>logLik</span><span>    </span><span style='font-weight: bold;'>AIC</span><span>    </span><span style='font-weight: bold;'>BIC</span><span> </span><span style='font-weight: bold;'>REMLcrit</span><span> </span><span style='font-weight: bold;'>df.residual</span><span>
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> F      415.   -</span><span style='color: #BB0000;'>656.</span><span>  </span><span style='text-decoration: underline;'>1</span><span>321.  </span><span style='text-decoration: underline;'>1</span><span>331.    </span><span style='text-decoration: underline;'>1</span><span>313.          85
-#&gt; </span><span style='color: #555555;'>2</span><span> M      355. -</span><span style='color: #BB0000;text-decoration: underline;'>20</span><span style='color: #BB0000;'>079.</span><span> </span><span style='text-decoration: underline;'>40</span><span>165. </span><span style='text-decoration: underline;'>40</span><span>189.   </span><span style='text-decoration: underline;'>40</span><span>157.        </span><span style='text-decoration: underline;'>2</span><span>750</div></span></pre>
+#&gt; </span><span style='color: #555555;'>1</span><span> F      415.   -</span><span style='color: #BB0000;'>656.</span><span>  </span><span style='text-decoration: underline;'>1</span><span>32</span><span style='color: #555555;'>1</span><span>.  </span><span style='text-decoration: underline;'>1</span><span>33</span><span style='color: #555555;'>1</span><span>.    </span><span style='text-decoration: underline;'>1</span><span>31</span><span style='color: #555555;'>3</span><span>.          85
+#&gt; </span><span style='color: #555555;'>2</span><span> M      355. -</span><span style='color: #BB0000;text-decoration: underline;'>20</span><span style='color: #BB0000;'>0</span><span style='color: #555555;'>79</span><span style='color: #BB0000;'>.</span><span> </span><span style='text-decoration: underline;'>40</span><span>1</span><span style='color: #555555;'>65</span><span>. </span><span style='text-decoration: underline;'>40</span><span>1</span><span style='color: #555555;'>89</span><span>.   </span><span style='text-decoration: underline;'>40</span><span>1</span><span style='color: #555555;'>57</span><span>.        </span><span style='text-decoration: underline;'>2</span><span>75</span><span style='color: #555555;'>0</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -289,7 +290,7 @@ data argument in its function call." />
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

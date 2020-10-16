@@ -90,7 +90,7 @@ dataframe, if not, return a NULL." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.0.6</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.1.0.9000</span>
       </span>
     </div>
 
@@ -146,7 +146,7 @@ dataframe, if not, return a NULL." />
 dataframe, if not, return a <code>NULL</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>augment</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>augment</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -164,7 +164,7 @@ observations.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code><a href='https://rdrr.io/pkg/tibble/man/tibble.html'>tibble::tibble()</a></code> with information about data points.</p>
+    <p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code> with information about data points.</p>
     <h2 class="hasAnchor" id="methods"><a class="anchor" href="#methods"></a>Methods</h2>
 
     
@@ -228,21 +228,22 @@ observations.</p></td>
     <div class='dont-index'><p><code><a href='grouped_augment.html'>grouped_augment</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
-<span class='no'>lm.mod</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>Sepal.Length</span> ~ <span class='no'>Species</span>, <span class='no'>iris</span>)
-<span class='kw pkg'>broomExtra</span><span class='kw ns'>::</span><span class='fu'>augment</span>(<span class='no'>lm.mod</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 150 x 8</span><span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span>
+<span class='va'>lm.mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Sepal.Length</span> <span class='op'>~</span> <span class='va'>Species</span>, <span class='va'>iris</span><span class='op'>)</span>
+<span class='fu'>broomExtra</span><span class='fu'>::</span><span class='fu'>augment</span><span class='op'>(</span><span class='va'>lm.mod</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 150 x 8</span><span>
 #&gt;    </span><span style='font-weight: bold;'>Sepal.Length</span><span> </span><span style='font-weight: bold;'>Species</span><span> </span><span style='font-weight: bold;'>.fitted</span><span>   </span><span style='font-weight: bold;'>.resid</span><span> </span><span style='font-weight: bold;'>.std.resid</span><span>   </span><span style='font-weight: bold;'>.hat</span><span> </span><span style='font-weight: bold;'>.sigma</span><span>     </span><span style='font-weight: bold;'>.cooksd</span><span>
 #&gt;           </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span>          5.1 setosa     5.01  0.094       0.184  0.020</span><span style='text-decoration: underline;'>0</span><span>  0.516 0.000</span><span style='text-decoration: underline;'>231</span><span>   
-#&gt; </span><span style='color: #555555;'> 2</span><span>          4.9 setosa     5.01 -</span><span style='color: #BB0000;'>0.106</span><span>      -</span><span style='color: #BB0000;'>0.208</span><span>  0.02    0.516 0.000</span><span style='text-decoration: underline;'>294</span><span>   
-#&gt; </span><span style='color: #555555;'> 3</span><span>          4.7 setosa     5.01 -</span><span style='color: #BB0000;'>0.306</span><span>      -</span><span style='color: #BB0000;'>0.600</span><span>  0.02    0.516 0.002</span><span style='text-decoration: underline;'>45</span><span>    
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4.6 setosa     5.01 -</span><span style='color: #BB0000;'>0.406</span><span>      -</span><span style='color: #BB0000;'>0.797</span><span>  0.02    0.515 0.004</span><span style='text-decoration: underline;'>32</span><span>    
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5   setosa     5.01 -</span><span style='color: #BB0000;'>0.006</span><span style='color: #BB0000;text-decoration: underline;'>00</span><span>    -</span><span style='color: #BB0000;'>0.011</span><span style='color: #BB0000;text-decoration: underline;'>8</span><span> 0.02    0.517 0.000</span><span style='text-decoration: underline;'>000</span><span>943
-#&gt; </span><span style='color: #555555;'> 6</span><span>          5.4 setosa     5.01  0.394       0.773  0.02    0.515 0.004</span><span style='text-decoration: underline;'>07</span><span>    
-#&gt; </span><span style='color: #555555;'> 7</span><span>          4.6 setosa     5.01 -</span><span style='color: #BB0000;'>0.406</span><span>      -</span><span style='color: #BB0000;'>0.797</span><span>  0.02    0.515 0.004</span><span style='text-decoration: underline;'>32</span><span>    
-#&gt; </span><span style='color: #555555;'> 8</span><span>          5   setosa     5.01 -</span><span style='color: #BB0000;'>0.006</span><span style='color: #BB0000;text-decoration: underline;'>00</span><span>    -</span><span style='color: #BB0000;'>0.011</span><span style='color: #BB0000;text-decoration: underline;'>8</span><span> 0.02    0.517 0.000</span><span style='text-decoration: underline;'>000</span><span>943
-#&gt; </span><span style='color: #555555;'> 9</span><span>          4.4 setosa     5.01 -</span><span style='color: #BB0000;'>0.606</span><span>      -</span><span style='color: #BB0000;'>1.19</span><span>   0.02    0.514 0.009</span><span style='text-decoration: underline;'>62</span><span>    
-#&gt; </span><span style='color: #555555;'>10</span><span>          4.9 setosa     5.01 -</span><span style='color: #BB0000;'>0.106</span><span>      -</span><span style='color: #BB0000;'>0.208</span><span>  0.02    0.516 0.000</span><span style='text-decoration: underline;'>294</span><span>   
+#&gt; </span><span style='color: #555555;'> 1</span><span>          5.1 setosa     5.01  </span><span style='color: #555555;'>0.0</span><span>94       </span><span style='color: #555555;'>0.</span><span>184  </span><span style='color: #555555;'>0.0</span><span>20</span><span style='text-decoration: underline;'>0</span><span>  </span><span style='color: #555555;'>0.</span><span>516 </span><span style='color: #555555;'>0.000</span><span style='text-decoration: underline;'>231</span><span>   
+#&gt; </span><span style='color: #555555;'> 2</span><span>          4.9 setosa     5.01 -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>106</span><span>      -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>208</span><span>  </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>516 </span><span style='color: #555555;'>0.000</span><span style='text-decoration: underline;'>294</span><span>   
+#&gt; </span><span style='color: #555555;'> 3</span><span>          4.7 setosa     5.01 -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>306</span><span>      -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>600</span><span>  </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>516 </span><span style='color: #555555;'>0.00</span><span>2</span><span style='text-decoration: underline;'>45</span><span>    
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4.6 setosa     5.01 -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>406</span><span>      -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>797</span><span>  </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>515 </span><span style='color: #555555;'>0.00</span><span>4</span><span style='text-decoration: underline;'>32</span><span>    
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5   setosa     5.01 -</span><span style='color: #555555;'>0.00</span><span style='color: #BB0000;'>6</span><span style='color: #BB0000;text-decoration: underline;'>00</span><span>    -</span><span style='color: #555555;'>0.0</span><span style='color: #BB0000;'>11</span><span style='color: #BB0000;text-decoration: underline;'>8</span><span> </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>517 </span><span style='color: #555555;'>0.000</span><span style='color: #555555;text-decoration: underline;'>000</span><span>943
+#&gt; </span><span style='color: #555555;'> 6</span><span>          5.4 setosa     5.01  </span><span style='color: #555555;'>0.</span><span>394       </span><span style='color: #555555;'>0.</span><span>773  </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>515 </span><span style='color: #555555;'>0.00</span><span>4</span><span style='text-decoration: underline;'>07</span><span>    
+#&gt; </span><span style='color: #555555;'> 7</span><span>          4.6 setosa     5.01 -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>406</span><span>      -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>797</span><span>  </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>515 </span><span style='color: #555555;'>0.00</span><span>4</span><span style='text-decoration: underline;'>32</span><span>    
+#&gt; </span><span style='color: #555555;'> 8</span><span>          5   setosa     5.01 -</span><span style='color: #555555;'>0.00</span><span style='color: #BB0000;'>6</span><span style='color: #BB0000;text-decoration: underline;'>00</span><span>    -</span><span style='color: #555555;'>0.0</span><span style='color: #BB0000;'>11</span><span style='color: #BB0000;text-decoration: underline;'>8</span><span> </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>517 </span><span style='color: #555555;'>0.000</span><span style='color: #555555;text-decoration: underline;'>000</span><span>943
+#&gt; </span><span style='color: #555555;'> 9</span><span>          4.4 setosa     5.01 -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>606</span><span>      -</span><span style='color: #BB0000;'>1.19</span><span>   </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>514 </span><span style='color: #555555;'>0.00</span><span>9</span><span style='text-decoration: underline;'>62</span><span>    
+#&gt; </span><span style='color: #555555;'>10</span><span>          4.9 setosa     5.01 -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>106</span><span>      -</span><span style='color: #555555;'>0.</span><span style='color: #BB0000;'>208</span><span>  </span><span style='color: #555555;'>0.0</span><span>2    </span><span style='color: #555555;'>0.</span><span>516 </span><span style='color: #555555;'>0.000</span><span style='text-decoration: underline;'>294</span><span>   
 #&gt; </span><span style='color: #555555;'># ... with 140 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -259,7 +260,7 @@ observations.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

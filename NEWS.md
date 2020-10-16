@@ -1,3 +1,7 @@
+# broomExtra 4.1.0
+
+  - `...` are now passed to individual methods in `glance_performance`.
+
 # broomExtra 4.0.6
 
   - Minor tweak to the documentation.
