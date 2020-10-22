@@ -9,4 +9,4 @@
 
 ## Comments
 
-- Adapts to changes made in the `ipmisc` dependency.
+- Internal refactoring to get rid of the `ipmisc` dependency.

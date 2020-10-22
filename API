@@ -14,15 +14,12 @@ tidy_parameters(x, conf.int = TRUE, ...)
 ## Reexported objects
 
 magrittr::%$%
-zeallot::%<-%
 magrittr::%<>%
 magrittr::%>%
 rlang::%|%
 rlang::%||%
 tibble::as_tibble
 generics::augment
-ipmisc::easystats_to_tidy_names
-tibble::enframe
 generics::glance
 tibble::tibble
 generics::tidy

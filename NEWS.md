@@ -1,6 +1,8 @@
 # broomExtra 4.1.0
 
   - `...` are now passed to individual methods in `glance_performance`.
+  
+  - Removes `ipmisc` from dependencies.
 
 # broomExtra 4.0.6
 

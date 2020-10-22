@@ -48,7 +48,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.1.0</span>
       </span>
     </div>
 
@@ -144,7 +144,7 @@
 <td><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/badge/licence-GPL--3-blue.svg" alt="Licence"></a></td>
 <td><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></td>
 <td><a href="http://hits.dwyl.io/IndrajeetPatil/broomExtra"><img src="http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg" alt="HitCount"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--10--16-yellowgreen.svg" alt="Last-changedate"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2020--10--22-yellowgreen.svg" alt="Last-changedate"></a></td>
 <td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg" alt="GitHub last commit"></a></td>
 </tr>
 <tr class="even">
@@ -244,25 +244,25 @@
 <span class="co"># using hybrid function</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span><span class="op">(</span><span class="va">mod_mixor</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 8 x 9</span>
-<span class="co">#&gt;   term               estimate std.error conf.low conf.high statistic df.error</span>
-<span class="co">#&gt;   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 (Intercept)          0.0882    0.313   -0.526      0.702     0.282      Inf</span>
-<span class="co">#&gt; 2 Threshold2           1.24      0.0883   1.07       1.41     14.1        Inf</span>
-<span class="co">#&gt; 3 Threshold3           2.42      0.0836   2.26       2.58     28.9        Inf</span>
-<span class="co">#&gt; 4 thkspre              0.403     0.0429   0.319      0.487     9.39       Inf</span>
-<span class="co">#&gt; 5 cc                   0.924     0.371    0.196      1.65      2.49       Inf</span>
-<span class="co">#&gt; 6 tv                   0.275     0.315   -0.342      0.893     0.873      Inf</span>
-<span class="co">#&gt; 7 cctv                -0.466     0.406   -1.26       0.330    -1.15       Inf</span>
-<span class="co">#&gt; 8 Random.(Intercept)   0.0735    0.0495  -0.0235     0.170     1.49       Inf</span>
-<span class="co">#&gt;   p.value effects</span>
-<span class="co">#&gt;     &lt;dbl&gt; &lt;chr&gt;  </span>
-<span class="co">#&gt; 1  0.778  fixed  </span>
-<span class="co">#&gt; 2  0      fixed  </span>
-<span class="co">#&gt; 3  0      fixed  </span>
-<span class="co">#&gt; 4  0      fixed  </span>
-<span class="co">#&gt; 5  0.0128 fixed  </span>
-<span class="co">#&gt; 6  0.383  fixed  </span>
-<span class="co">#&gt; 7  0.251  fixed  </span>
+<span class="co">#&gt;   term               estimate std.error conf.low conf.high statistic den.df</span>
+<span class="co">#&gt;   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 (Intercept)          0.0882    0.313   -0.526      0.702     0.282    Inf</span>
+<span class="co">#&gt; 2 Threshold2           1.24      0.0883   1.07       1.41     14.1      Inf</span>
+<span class="co">#&gt; 3 Threshold3           2.42      0.0836   2.26       2.58     28.9      Inf</span>
+<span class="co">#&gt; 4 thkspre              0.403     0.0429   0.319      0.487     9.39     Inf</span>
+<span class="co">#&gt; 5 cc                   0.924     0.371    0.196      1.65      2.49     Inf</span>
+<span class="co">#&gt; 6 tv                   0.275     0.315   -0.342      0.893     0.873    Inf</span>
+<span class="co">#&gt; 7 cctv                -0.466     0.406   -1.26       0.330    -1.15     Inf</span>
+<span class="co">#&gt; 8 Random.(Intercept)   0.0735    0.0495  -0.0235     0.170     1.49     Inf</span>
+<span class="co">#&gt;   p.value effect</span>
+<span class="co">#&gt;     &lt;dbl&gt; &lt;chr&gt; </span>
+<span class="co">#&gt; 1  0.778  fixed </span>
+<span class="co">#&gt; 2  0      fixed </span>
+<span class="co">#&gt; 3  0      fixed </span>
+<span class="co">#&gt; 4  0      fixed </span>
+<span class="co">#&gt; 5  0.0128 fixed </span>
+<span class="co">#&gt; 6  0.383  fixed </span>
+<span class="co">#&gt; 7  0.251  fixed </span>
 <span class="co">#&gt; 8  0.137  random</span></pre></div>
 <p>While other times, it will be the other way around:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
@@ -366,18 +366,12 @@
 <span class="co"># using `tidy_parameters` (p-values present)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 4 x 8</span>
-<span class="co">#&gt;   term        estimate std.error conf.low conf.high statistic df.error</span>
-<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;int&gt;</span>
-<span class="co">#&gt; 1 (Intercept)  -41.0       9.81   -61.7     -20.3      -4.18        17</span>
-<span class="co">#&gt; 2 Air.Flow       0.829     0.111    0.595     1.06      7.46        17</span>
-<span class="co">#&gt; 3 Water.Temp     0.926     0.303    0.286     1.57      3.05        17</span>
-<span class="co">#&gt; 4 Acid.Conc.    -0.128     0.129   -0.400     0.144    -0.992       17</span>
-<span class="co">#&gt;       p.value</span>
-<span class="co">#&gt;         &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 0.000624   </span>
-<span class="co">#&gt; 2 0.000000933</span>
-<span class="co">#&gt; 3 0.00720    </span>
-<span class="co">#&gt; 4 0.335</span></pre></div>
+<span class="co">#&gt;   term        estimate std.error conf.low conf.high statistic den.df     p.value</span>
+<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;  &lt;int&gt;       &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 (Intercept)  -41.0       9.81   -61.7     -20.3      -4.18      17 0.000624   </span>
+<span class="co">#&gt; 2 Air.Flow       0.829     0.111    0.595     1.06      7.46      17 0.000000933</span>
+<span class="co">#&gt; 3 Water.Temp     0.926     0.303    0.286     1.57      3.05      17 0.00720    </span>
+<span class="co">#&gt; 4 Acid.Conc.    -0.128     0.129   -0.400     0.144    -0.992     17 0.335</span></pre></div>
 </div>
 <div id="benefits-of-using-glance_performance" class="section level2">
 <h2 class="hasAnchor">
@@ -886,7 +880,8 @@
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://sites.google.com/site/indrajeetspatilmorality/">Indrajeet Patil</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0003-1995-6531" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<a href="https://sites.google.com/site/indrajeetspatilmorality/">Indrajeet Patil</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0003-1995-6531" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> <br><small>(@patilindrajeets)</small>
+</li>
 </ul>
 </div>
 

@@ -2,20 +2,16 @@
 # ----------------------- tidyverse -------------------------------------
 
 #' @export
-#' @importFrom ipmisc "%>%"
-ipmisc::`%>%`
+#' @importFrom magrittr "%>%"
+magrittr::`%>%`
 
 #' @export
-#' @importFrom ipmisc "%<>%"
-ipmisc::`%<>%`
+#' @importFrom magrittr "%<>%"
+magrittr::`%<>%`
 
 #' @export
-#' @importFrom ipmisc "%$%"
-ipmisc::`%$%`
-
-#' @export
-#' @importFrom ipmisc "%<-%"
-ipmisc::`%<-%`
+#' @importFrom magrittr "%$%"
+magrittr::`%$%`
 
 #' @export
 #' @importFrom rlang "%||%"
@@ -26,19 +22,9 @@ rlang::`%||%`
 rlang::`%|%`
 
 #' @export
-#' @importFrom ipmisc tibble
-ipmisc::tibble
+#' @importFrom tibble tibble
+tibble::tibble
 
 #' @export
-#' @importFrom ipmisc enframe
-ipmisc::enframe
-
-#' @export
-#' @importFrom ipmisc as_tibble
-ipmisc::as_tibble
-
-# ----------------------- other -------------------------------------
-
-#' @export
-#' @importFrom ipmisc easystats_to_tidy_names
-ipmisc::easystats_to_tidy_names
+#' @importFrom tibble as_tibble
+tibble::as_tibble
