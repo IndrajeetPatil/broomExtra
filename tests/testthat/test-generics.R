@@ -1,10 +1,10 @@
-context("generics work")
-
 # `tidy()` works ------------------------------------------------------
 
 testthat::test_that(
   desc = "`tidy()` works",
   code = {
+    testthat::skip_on_cran()
+
     library(lme4)
     set.seed(123)
 
@@ -25,6 +25,8 @@ testthat::test_that(
 testthat::test_that(
   desc = "`glance()` works",
   code = {
+    testthat::skip_on_cran()
+
     library(lme4)
     set.seed(123)
 
@@ -51,6 +53,8 @@ testthat::test_that(
 testthat::test_that(
   desc = "`augment()` works",
   code = {
+    testthat::skip_on_cran()
+
     library(lme4)
     set.seed(123)
 

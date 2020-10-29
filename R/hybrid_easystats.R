@@ -24,6 +24,7 @@
 
 tidy_parameters <- function(x, conf.int = TRUE, ...) {
   # easystats family ---------------------------------------
+
   # check if `easystats` family has a tidy method for a given object
   m <- tryCatch(
     expr = standardize_names(parameters::model_parameters(x, ...), style = "broom"),
@@ -39,6 +40,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
   }
 
   # broom family --------------------------------------------
+
   # check if `broom` family has a tidy method for a given object
   if (rlang::is_null(m)) {
     m <- tryCatch(
@@ -46,17 +48,6 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
       error = function(e) NULL
     )
   }
-
-  if (rlang::is_null(m)) {
-    m <- tryCatch(
-      expr = broomExtra::tidy(x, conf.int = conf.int),
-      error = function(e) NULL
-    )
-  }
-
-  # last attempt: dataframe ---------------------------------------
-  # if not, try to convert it to a tibble (relevant for dataframe)
-  if (rlang::is_null(m)) m <- tryCatch(as_tibble(x, ...), error = function(e) NULL)
 
   # return the final object
   if (rlang::is_null(m)) m else as_tibble(m)
@@ -95,7 +86,8 @@ glance_performance <- function(x, ...) {
   # easystats family ---------------------------------------
   # check if `easystats` family has a tidy method for a given object
   df_performance <- tryCatch(
-    expr = standardize_names(performance::model_performance(x, metrics = "all", ...),
+    expr = standardize_names(
+      data = performance::model_performance(x, metrics = "all", ...),
       style = "broom"
     ),
     error = function(e) NULL

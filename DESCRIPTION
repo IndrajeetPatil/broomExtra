@@ -28,8 +28,8 @@ Imports:
     broom.mixed,
     dplyr,
     magrittr,
-    parameters,
-    performance,
+    parameters (>= 0.9.0),
+    performance (>= 0.5.0),
     rlang,
     tibble
 Suggests: 
@@ -37,7 +37,6 @@ Suggests:
     lavaan,
     lme4,
     MASS,
-    mixor,
     rmarkdown,
     spelling,
     testthat

@@ -3,6 +3,8 @@
 testthat::test_that(
   desc = "hybrid methods works",
   code = {
+    testthat::skip_on_cran()
+
     library(lme4)
     # merMord
     set.seed(123)
@@ -30,30 +32,6 @@ testthat::test_that(
 
     testthat::expect_equal(
       dim(glance_performance(lm_mod, effects = "fixed"))[[1]], 1L
-    )
-
-    # mixor object
-    set.seed(123)
-    library(mixor)
-    data("SmokingPrevention")
-    SmokingPrevention <- SmokingPrevention[order(SmokingPrevention$class), ]
-    suppressWarnings(mod_mixor <-
-      mixor(
-        formula = thksord ~ thkspre + cc + tv + cctv,
-        data = SmokingPrevention,
-        id = school,
-        link = "logit"
-      ))
-
-    # test
-    testthat::expect_equal(dim(suppressWarnings(tidy_parameters(mod_mixor)))[[1]], 8L)
-    testthat::expect_equal(
-      suppressWarnings(tidy_parameters(mod_mixor)),
-      suppressWarnings(tidy_parameters(mod_mixor, effects = "fixed"))
-    )
-    testthat::expect_equal(
-      dim(suppressWarnings(glance_performance(mod_mixor))),
-      c(1L, 2L)
     )
 
     # setup
@@ -96,6 +74,9 @@ testthat::test_that(
       dim(broomExtra::tidy_parameters(acf(lh, plot = FALSE))),
       c(17L, 2L)
     )
+
+    # where functions are not supposed to work
     testthat::expect_null(broomExtra::glance_performance(acf(lh, plot = FALSE)))
+    testthat::expect_null(broomExtra::tidy_parameters(list(1, c("x", "y")), verbose = FALSE))
   }
 )
