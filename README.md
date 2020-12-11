@@ -7,9 +7,9 @@
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-4.1.0-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)                   | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
 | [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-4-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra/)](https://rdrr.io/cran/broomExtra/)                                                         |
-| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-1-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.1.0-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
+| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.1.0-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
 | [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--10--29-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
+| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--12--11-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
 | [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)                                                  | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
 
 # Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
@@ -169,17 +169,22 @@ co <- orcutt::cochrane.orcutt(reg)
 
 # no tidier available in `parameters`
 parameters::model_parameters(co)
-#> Error in `[.data.frame`(md, , needed.vars, drop = FALSE): undefined columns selected
+#> Parameter   | Coefficient |   SE |         95% CI | t(27) |     p
+#> -----------------------------------------------------------------
+#> (Intercept) |       21.81 | 6.63 | [ 8.82, 34.81] |  3.29 | 0.003
+#> wt          |       -4.85 | 1.33 | [-7.46, -2.24] | -3.65 | 0.001
+#> qsec        |        0.80 | 0.37 | [ 0.07,  1.52] |  2.15 | 0.040
+#> disp        |   -1.36e-03 | 0.01 | [-0.02,  0.02] | -0.12 | 0.903
 
 # `tidy_parameters` still won't fail
 broomExtra::tidy_parameters(co)
-#> # A tibble: 4 x 5
-#>   term        estimate std.error statistic p.value
-#>   <chr>          <dbl>     <dbl>     <dbl>   <dbl>
-#> 1 (Intercept) 21.8        6.63       3.29  0.00279
-#> 2 wt          -4.85       1.33      -3.65  0.00112
-#> 3 qsec         0.797      0.370      2.15  0.0402 
-#> 4 disp        -0.00136    0.0110    -0.123 0.903
+#> # A tibble: 4 x 8
+#>   term        estimate std.error conf.low conf.high statistic df.error p.value
+#>   <chr>          <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <dbl>   <dbl>
+#> 1 (Intercept) 21.8        6.63     8.82     34.8        3.29        27 0.00279
+#> 2 wt          -4.85       1.33    -7.46     -2.24      -3.65        27 0.00112
+#> 3 qsec         0.797      0.370    0.0722    1.52       2.15        27 0.0402 
+#> 4 disp        -0.00136    0.0110  -0.0230    0.0203    -0.123       27 0.903
 ```
 
 <font color="green"> These functions are robust such that they won’t
@@ -215,7 +220,27 @@ broom::tidy(mod_lavaan, exponentiate = TRUE)
 
 # parameters method with additional arguments
 parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
-#> Error in lavaan::parameterEstimates(model, se = TRUE, level = ci, ...): unused argument (exponentiate = TRUE)
+#> # Loading
+#> 
+#> Link          | Coefficient |   SE |       95% CI |      p
+#> ----------------------------------------------------------
+#> visual =~ x1  |        1.00 | 0.00 | [1.00, 1.00] | < .001
+#> visual =~ x2  |        0.55 | 0.10 | [0.36, 0.75] | < .001
+#> visual =~ x3  |        0.73 | 0.11 | [0.52, 0.94] | < .001
+#> textual =~ x4 |        1.00 | 0.00 | [1.00, 1.00] | < .001
+#> textual =~ x5 |        1.11 | 0.07 | [0.98, 1.24] | < .001
+#> textual =~ x6 |        0.93 | 0.06 | [0.82, 1.03] | < .001
+#> speed =~ x7   |        1.00 | 0.00 | [1.00, 1.00] | < .001
+#> speed =~ x8   |        1.18 | 0.16 | [0.86, 1.50] | < .001
+#> speed =~ x9   |        1.08 | 0.15 | [0.79, 1.38] | < .001
+#> 
+#> # Correlation
+#> 
+#> Link              | Coefficient |   SE |       95% CI |      p
+#> --------------------------------------------------------------
+#> visual ~~ textual |        0.41 | 0.07 | [0.26, 0.55] | < .001
+#> visual ~~ speed   |        0.26 | 0.06 | [0.15, 0.37] | < .001
+#> textual ~~ speed  |        0.17 | 0.05 | [0.08, 0.27] | < .001
 
 # using hybrid function
 broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
@@ -334,10 +359,11 @@ co <- orcutt::cochrane.orcutt(reg)
 
 # no method available in `performance`
 performance::model_performance(co)
-#> Error in UseMethod("model_performance"): no applicable method for 'model_performance' applied to an object of class "orcutt"
+#> NULL
 
 # `glance_performance` doesn't fail
 broomExtra::glance_performance(co)
+#> Objects of class 'NULL' are currently not supported.
 #> # A tibble: 1 x 9
 #>   r.squared adj.r.squared   rho number.interaction dw.original p.value.original
 #>       <dbl>         <dbl> <dbl>              <dbl>       <dbl>            <dbl>
@@ -381,7 +407,7 @@ broomExtra::glance_performance(model)
 #> 1          43.2      31  -7.37  20.7  25.1     14.7          29    32   0.705
 #>    rmse sigma log.loss score.log score.spherical   pcp
 #>   <dbl> <dbl>    <dbl>     <dbl>           <dbl> <dbl>
-#> 1 0.678 0.713    0.230     -19.0           0.116 0.858
+#> 1 0.271 0.713    0.230     -19.0           0.116 0.858
 ```
 
 # generic functions

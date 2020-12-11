@@ -67,16 +67,16 @@ testthat::test_that(
 
     # test
     testthat::expect_equal(dim(df_rlm), c(4L, 8L))
-    testthat::expect_is(df, "tbl_df")
+    testthat::expect_s3_class(df, "tbl_df")
 
     # model (not covered by easystats but covered by broom)
     testthat::expect_equal(
-      dim(broomExtra::tidy_parameters(acf(lh, plot = FALSE))),
+      dim(suppressWarnings(broomExtra::tidy_parameters(acf(lh, plot = FALSE)))),
       c(17L, 2L)
     )
 
     # where functions are not supposed to work
-    testthat::expect_null(broomExtra::glance_performance(acf(lh, plot = FALSE)))
+    testthat::expect_null(suppressWarnings(broomExtra::glance_performance(acf(lh, plot = FALSE))))
     testthat::expect_null(broomExtra::tidy_parameters(list(1, c("x", "y")), verbose = FALSE))
   }
 )

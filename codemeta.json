@@ -14,13 +14,13 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "4.1.0",
+  "version": "4.1.0.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R Under development (unstable) (2020-10-07 r79310)",
+  "runtimePlatform": "R Under development (unstable) (2020-12-03 r79553)",
   "author": [
     {
       "@type": "Person",
@@ -184,7 +184,6 @@
       "@type": "SoftwareApplication",
       "identifier": "parameters",
       "name": "parameters",
-      "version": ">= 0.9.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -197,7 +196,6 @@
       "@type": "SoftwareApplication",
       "identifier": "performance",
       "name": "performance",
-      "version": ">= 0.5.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -252,5 +250,5 @@
     }
   ],
   "funder": {},
-  "fileSize": "1436.005KB"
+  "fileSize": "1438.727KB"
 }
