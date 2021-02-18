@@ -15,7 +15,11 @@
 #' @param conf.int Indicating whether or not to include a confidence interval in
 #'   the tidied output (defaults to `TRUE`).
 #' @param ... Additional arguments that will be passed to
-#'   [parameters::model_parameters()] and [broom::tidy()].
+#'   [parameters::model_parameters()] or [broom::tidy()], whichever method
+#'   works. Note that you should pay attention to different naming conventions
+#'   across these packages. For example, the required confidence interval width
+#'   is specified using `ci` argument in `parameters::model_parameters`, while
+#'   using `conf.level` in `broom::tidy`.
 #'
 #' @return A data frame of indices related to the model's parameters.
 #'

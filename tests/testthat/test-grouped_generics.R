@@ -3,8 +3,6 @@
 test_that(
   desc = "`grouped_tidy()` works",
   code = {
-    # skip_on_cran()
-
     library(lme4)
     set.seed(123)
 
@@ -40,8 +38,6 @@ test_that(
 test_that(
   desc = "`grouped_glance()` works",
   code = {
-    # skip_on_cran()
-
     library(lme4)
     set.seed(123)
 
@@ -74,8 +70,6 @@ test_that(
 test_that(
   desc = "`grouped_augment()` works",
   code = {
-    # skip_on_cran()
-
     library(lme4)
     set.seed(123)
 

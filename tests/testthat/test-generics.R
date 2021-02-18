@@ -3,8 +3,6 @@
 test_that(
   desc = "`tidy()` works",
   code = {
-    # skip_on_cran()
-
     library(lme4)
     set.seed(123)
 
@@ -25,8 +23,6 @@ test_that(
 test_that(
   desc = "`glance()` works",
   code = {
-    # skip_on_cran()
-
     library(lme4)
     set.seed(123)
 
@@ -53,8 +49,6 @@ test_that(
 test_that(
   desc = "`augment()` works",
   code = {
-    # skip_on_cran()
-
     library(lme4)
     set.seed(123)
 

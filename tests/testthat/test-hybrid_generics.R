@@ -3,8 +3,6 @@
 test_that(
   desc = "hybrid methods works",
   code = {
-    # skip_on_cran()
-
     library(lme4)
     # merMord
     set.seed(123)
