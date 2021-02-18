@@ -1,3 +1,7 @@
+# broomExtra 4.2.0
+
+  - The tests are no longer skipped on `CRAN`.
+
 # broomExtra 4.1.0
 
   - `...` are now passed to individual methods in `glance_performance`.

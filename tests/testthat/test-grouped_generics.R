@@ -1,9 +1,9 @@
 # `grouped_tidy()` works ------------------------------------------------------
 
-testthat::test_that(
+test_that(
   desc = "`grouped_tidy()` works",
   code = {
-    testthat::skip_on_cran()
+    # skip_on_cran()
 
     library(lme4)
     set.seed(123)
@@ -30,17 +30,17 @@ testthat::test_that(
         tidy.args = list(conf.int = TRUE, conf.level = 0.99)
       )
 
-    testthat::expect_equal(dim(lmer_df), c(8L, 9L))
-    testthat::expect_equal(dim(lm_df), c(4L, 8L))
+    expect_equal(dim(lmer_df), c(8L, 9L))
+    expect_equal(dim(lm_df), c(4L, 8L))
   }
 )
 
 # `grouped_glance()` works ------------------------------------------------------
 
-testthat::test_that(
+test_that(
   desc = "`grouped_glance()` works",
   code = {
-    testthat::skip_on_cran()
+    # skip_on_cran()
 
     library(lme4)
     set.seed(123)
@@ -64,17 +64,17 @@ testthat::test_that(
         formula = interval ~ age
       )
 
-    testthat::expect_equal(dim(lmer_df), c(2L, 7L))
-    testthat::expect_equal(dim(lm_df)[1], 2L)
+    expect_equal(dim(lmer_df), c(2L, 7L))
+    expect_equal(dim(lm_df)[1], 2L)
   }
 )
 
 # `grouped_augment()` works ------------------------------------------------------
 
-testthat::test_that(
+test_that(
   desc = "`grouped_augment()` works",
   code = {
-    testthat::skip_on_cran()
+    # skip_on_cran()
 
     library(lme4)
     set.seed(123)
@@ -98,7 +98,7 @@ testthat::test_that(
         formula = interval ~ age
       )
 
-    testthat::expect_equal(dim(lmer_df), c(2843L, 15L))
-    testthat::expect_equal(dim(lm_df)[1], 2843L)
+    expect_equal(dim(lmer_df), c(2843L, 15L))
+    expect_equal(dim(lm_df)[1], 2843L)
   }
 )

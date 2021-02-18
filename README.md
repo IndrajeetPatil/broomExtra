@@ -7,9 +7,9 @@
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-4.1.0-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)                   | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
 | [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-4-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra/)](https://rdrr.io/cran/broomExtra/)                                                         |
-| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)                                                                             | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.1.0-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
+| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)                                                                 | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.1.0-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
 | [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2020--12--11-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
+| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2021--02--18-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
 | [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)                                                  | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
 
 # Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
@@ -135,27 +135,27 @@ broomExtra::tidy(mod_mixor)
 
 # using hybrid function
 broomExtra::tidy_parameters(mod_mixor)
-#> # A tibble: 8 x 9
-#>   term               estimate std.error conf.low conf.high statistic df.error
-#>   <chr>                 <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <dbl>
-#> 1 (Intercept)          0.0882    0.313   -0.526      0.702     0.282      Inf
-#> 2 Threshold2           1.24      0.0883   1.07       1.41     14.1        Inf
-#> 3 Threshold3           2.42      0.0836   2.26       2.58     28.9        Inf
-#> 4 thkspre              0.403     0.0429   0.319      0.487     9.39       Inf
-#> 5 cc                   0.924     0.371    0.196      1.65      2.49       Inf
-#> 6 tv                   0.275     0.315   -0.342      0.893     0.873      Inf
-#> 7 cctv                -0.466     0.406   -1.26       0.330    -1.15       Inf
-#> 8 Random.(Intercept)   0.0735    0.0495  -0.0235     0.170     1.49       Inf
-#>   p.value effect
-#>     <dbl> <chr> 
-#> 1  0.778  fixed 
-#> 2  0      fixed 
-#> 3  0      fixed 
-#> 4  0      fixed 
-#> 5  0.0128 fixed 
-#> 6  0.383  fixed 
-#> 7  0.251  fixed 
-#> 8  0.137  random
+#> # A tibble: 8 x 10
+#>   term               estimate std.error conf.level conf.low conf.high statistic
+#>   <chr>                 <dbl>     <dbl>      <dbl>    <dbl>     <dbl>     <dbl>
+#> 1 (Intercept)          0.0882    0.313        0.95  -0.526      0.702     0.282
+#> 2 Threshold2           1.24      0.0883       0.95   1.07       1.41     14.1  
+#> 3 Threshold3           2.42      0.0836       0.95   2.26       2.58     28.9  
+#> 4 thkspre              0.403     0.0429       0.95   0.319      0.487     9.39 
+#> 5 cc                   0.924     0.371        0.95   0.196      1.65      2.49 
+#> 6 tv                   0.275     0.315        0.95  -0.342      0.893     0.873
+#> 7 cctv                -0.466     0.406        0.95  -1.26       0.330    -1.15 
+#> 8 Random.(Intercept)   0.0735    0.0495       0.95  -0.0235     0.170     1.49 
+#>   df.error p.value effect
+#>      <dbl>   <dbl> <chr> 
+#> 1      Inf  0.778  fixed 
+#> 2      Inf  0      fixed 
+#> 3      Inf  0      fixed 
+#> 4      Inf  0      fixed 
+#> 5      Inf  0.0128 fixed 
+#> 6      Inf  0.383  fixed 
+#> 7      Inf  0.251  fixed 
+#> 8      Inf  0.137  random
 ```
 
 While other times, it will be the other way around:
@@ -178,13 +178,19 @@ parameters::model_parameters(co)
 
 # `tidy_parameters` still won't fail
 broomExtra::tidy_parameters(co)
-#> # A tibble: 4 x 8
-#>   term        estimate std.error conf.low conf.high statistic df.error p.value
-#>   <chr>          <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <dbl>   <dbl>
-#> 1 (Intercept) 21.8        6.63     8.82     34.8        3.29        27 0.00279
-#> 2 wt          -4.85       1.33    -7.46     -2.24      -3.65        27 0.00112
-#> 3 qsec         0.797      0.370    0.0722    1.52       2.15        27 0.0402 
-#> 4 disp        -0.00136    0.0110  -0.0230    0.0203    -0.123       27 0.903
+#> # A tibble: 4 x 9
+#>   term        estimate std.error conf.level conf.low conf.high statistic
+#>   <chr>          <dbl>     <dbl>      <dbl>    <dbl>     <dbl>     <dbl>
+#> 1 (Intercept) 21.8        6.63         0.95   8.82     34.8        3.29 
+#> 2 wt          -4.85       1.33         0.95  -7.46     -2.24      -3.65 
+#> 3 qsec         0.797      0.370        0.95   0.0722    1.52       2.15 
+#> 4 disp        -0.00136    0.0110       0.95  -0.0230    0.0203    -0.123
+#>   df.error p.value
+#>      <dbl>   <dbl>
+#> 1       27 0.00279
+#> 2       27 0.00112
+#> 3       27 0.0402 
+#> 4       27 0.903
 ```
 
 <font color="green"> These functions are robust such that they won’t
@@ -296,19 +302,19 @@ broomExtra::tidy(mod, conf.int = TRUE)
 
 # using `tidy_parameters` (p-values present)
 broomExtra::tidy_parameters(mod)
-#> # A tibble: 4 x 8
-#>   term        estimate std.error conf.low conf.high statistic df.error
-#>   <chr>          <dbl>     <dbl>    <dbl>     <dbl>     <dbl>    <int>
-#> 1 (Intercept)  -41.0       9.81   -61.7     -20.3      -4.18        17
-#> 2 Air.Flow       0.829     0.111    0.595     1.06      7.46        17
-#> 3 Water.Temp     0.926     0.303    0.286     1.57      3.05        17
-#> 4 Acid.Conc.    -0.128     0.129   -0.400     0.144    -0.992       17
-#>       p.value
-#>         <dbl>
-#> 1 0.000624   
-#> 2 0.000000933
-#> 3 0.00720    
-#> 4 0.335
+#> # A tibble: 4 x 9
+#>   term        estimate std.error conf.level conf.low conf.high statistic
+#>   <chr>          <dbl>     <dbl>      <dbl>    <dbl>     <dbl>     <dbl>
+#> 1 (Intercept)  -41.0       9.81        0.95  -61.7     -20.3      -4.18 
+#> 2 Air.Flow       0.829     0.111       0.95    0.595     1.06      7.46 
+#> 3 Water.Temp     0.926     0.303       0.95    0.286     1.57      3.05 
+#> 4 Acid.Conc.    -0.128     0.129       0.95   -0.400     0.144    -0.992
+#>   df.error     p.value
+#>      <int>       <dbl>
+#> 1       17 0.000624   
+#> 2       17 0.000000933
+#> 3       17 0.00720    
+#> 4       17 0.335
 ```
 
 ## Benefits of using `glance_performance`
@@ -561,18 +567,18 @@ broomExtra::augment(lmm.mod)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::augment(lm.mod)
 #> # A tibble: 180 x 8
-#>    Reaction  Days .fitted .resid .std.resid    .hat .sigma   .cooksd
-#>       <dbl> <dbl>   <dbl>  <dbl>      <dbl>   <dbl>  <dbl>     <dbl>
-#>  1     250.     0    251.  -1.85    -0.0390 0.0192    47.8 0.0000149
-#>  2     259.     1    262.  -3.17    -0.0669 0.0138    47.8 0.0000313
-#>  3     251.     2    272. -21.5     -0.454  0.00976   47.8 0.00101  
-#>  4     321.     3    283.  38.6      0.813  0.00707   47.8 0.00235  
-#>  5     357.     4    293.  63.6      1.34   0.00572   47.6 0.00514  
-#>  6     415.     5    304. 111.       2.33   0.00572   47.1 0.0157   
-#>  7     382.     6    314.  68.0      1.43   0.00707   47.6 0.00728  
-#>  8     290.     7    325. -34.5     -0.727  0.00976   47.8 0.00261  
-#>  9     431.     8    335.  95.4      2.01   0.0138    47.3 0.0284   
-#> 10     466.     9    346. 121.       2.56   0.0192    47.0 0.0639   
+#>    Reaction  Days .fitted .resid    .hat .sigma   .cooksd .std.resid
+#>       <dbl> <dbl>   <dbl>  <dbl>   <dbl>  <dbl>     <dbl>      <dbl>
+#>  1     250.     0    251.  -1.85 0.0192    47.8 0.0000149    -0.0390
+#>  2     259.     1    262.  -3.17 0.0138    47.8 0.0000313    -0.0669
+#>  3     251.     2    272. -21.5  0.00976   47.8 0.00101      -0.454 
+#>  4     321.     3    283.  38.6  0.00707   47.8 0.00235       0.813 
+#>  5     357.     4    293.  63.6  0.00572   47.6 0.00514       1.34  
+#>  6     415.     5    304. 111.   0.00572   47.1 0.0157        2.33  
+#>  7     382.     6    314.  68.0  0.00707   47.6 0.00728       1.43  
+#>  8     290.     7    325. -34.5  0.00976   47.8 0.00261      -0.727 
+#>  9     431.     8    335.  95.4  0.0138    47.3 0.0284        2.01  
+#> 10     466.     9    346. 121.   0.0192    47.0 0.0639        2.56  
 #> # ... with 170 more rows
 
 # another example with `broom`
@@ -750,18 +756,18 @@ broomExtra::grouped_augment(
   formula = price ~ carat - 1
 )
 #> # A tibble: 53,940 x 10
-#>    cut   color price carat .fitted .resid .std.resid    .hat .sigma  .cooksd
-#>    <ord> <ord> <int> <dbl>   <dbl>  <dbl>      <dbl>   <dbl>  <dbl>    <dbl>
-#>  1 Fair  D      2848  0.75   3795.  -947.     -0.522 0.00342  1822. 0.000933
-#>  2 Fair  D      2858  0.71   3593.  -735.     -0.405 0.00306  1823. 0.000503
-#>  3 Fair  D      2885  0.9    4554. -1669.     -0.920 0.00492  1819. 0.00419 
-#>  4 Fair  D      2974  1      5060. -2086.     -1.15  0.00607  1816. 0.00809 
-#>  5 Fair  D      3003  1.01   5111. -2108.     -1.16  0.00620  1816. 0.00843 
-#>  6 Fair  D      3047  0.73   3694.  -647.     -0.356 0.00324  1823. 0.000412
-#>  7 Fair  D      3077  0.71   3593.  -516.     -0.284 0.00306  1823. 0.000248
-#>  8 Fair  D      3079  0.91   4605. -1526.     -0.841 0.00503  1820. 0.00358 
-#>  9 Fair  D      3205  0.9    4554. -1349.     -0.744 0.00492  1821. 0.00274 
-#> 10 Fair  D      3205  0.9    4554. -1349.     -0.744 0.00492  1821. 0.00274 
+#>    cut   color price carat .fitted .resid    .hat .sigma  .cooksd .std.resid
+#>    <ord> <ord> <int> <dbl>   <dbl>  <dbl>   <dbl>  <dbl>    <dbl>      <dbl>
+#>  1 Fair  D      2848  0.75   3795.  -947. 0.00342  1822. 0.000933     -0.522
+#>  2 Fair  D      2858  0.71   3593.  -735. 0.00306  1823. 0.000503     -0.405
+#>  3 Fair  D      2885  0.9    4554. -1669. 0.00492  1819. 0.00419      -0.920
+#>  4 Fair  D      2974  1      5060. -2086. 0.00607  1816. 0.00809      -1.15 
+#>  5 Fair  D      3003  1.01   5111. -2108. 0.00620  1816. 0.00843      -1.16 
+#>  6 Fair  D      3047  0.73   3694.  -647. 0.00324  1823. 0.000412     -0.356
+#>  7 Fair  D      3077  0.71   3593.  -516. 0.00306  1823. 0.000248     -0.284
+#>  8 Fair  D      3079  0.91   4605. -1526. 0.00503  1820. 0.00358      -0.841
+#>  9 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744
+#> 10 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744
 #> # ... with 53,930 more rows
 
 # linear mixed-effects model

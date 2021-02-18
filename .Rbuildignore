@@ -1,3 +1,4 @@
+^\cache$
 ^codemeta\.json$
 ^Meta$
 ^doc$
@@ -30,9 +31,15 @@ tests\^spelling
 ^LICENSE\.md$
 ^\.lintr$
 ^\.circleci$
+^tests/manual$
+^revdep$
+^\.covrignore$
 ^\.github/ISSUE_TEMPLATE$
+^paper.*$
+references.bib
 ^API$
 ^\.pre-commit-config\.yaml$
 ^\.github/workflows/R\.yaml$
 ^\.github/workflows/pr-commands\.yaml$
 hextools
+^WIP/.

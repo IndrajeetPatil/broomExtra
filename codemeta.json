@@ -14,13 +14,13 @@
   ],
   "issueTracker": "https://github.com/IndrajeetPatil/broomExtra/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "4.1.0.9000",
+  "version": "4.2.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R Under development (unstable) (2020-12-03 r79553)",
+  "runtimePlatform": "R Under development (unstable) (2021-02-11 r79990)",
   "author": [
     {
       "@type": "Person",
@@ -136,6 +136,7 @@
       "@type": "SoftwareApplication",
       "identifier": "broom",
       "name": "broom",
+      "version": ">= 0.7.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -184,6 +185,7 @@
       "@type": "SoftwareApplication",
       "identifier": "parameters",
       "name": "parameters",
+      "version": ">= 0.11.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -196,6 +198,7 @@
       "@type": "SoftwareApplication",
       "identifier": "performance",
       "name": "performance",
+      "version": ">= 0.7.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -227,11 +230,23 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "lifecycle",
+      "name": "lifecycle",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=lifecycle"
     }
   ],
   "readme": "https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md",
   "contIntegration": ["https://travis-ci.org/IndrajeetPatil/broomExtra", "https://ci.appveyor.com/project/IndrajeetPatil/broomExtra", "https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master", "https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"],
-  "developmentStatus": ["https://www.tidyverse.org/lifecycle/", "https://www.repostatus.org/#active"],
+  "developmentStatus": ["https://lifecycle.r-lib.org/articles/stages.html", "https://www.repostatus.org/#active"],
   "releaseNotes": "https://github.com/IndrajeetPatil/broomExtra/blob/master/NEWS.md",
   "provider": {
     "@id": "https://cran.r-project.org",
@@ -250,5 +265,5 @@
     }
   ],
   "funder": {},
-  "fileSize": "1438.727KB"
+  "fileSize": "1472.665KB"
 }

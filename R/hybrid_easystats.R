@@ -1,17 +1,23 @@
 #' @name tidy_parameters
 #' @title Tidy dataframes of model parameters using `broom` and `easystats`.
-#' @description Computes parameters for regression models.
+#'
+#' @description
+#'
+#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
+#'
+#' Computes parameters for regression models.
+#'
+#' @details The function will attempt to get these details first using
+#'   [parameters::model_parameters()], and if this fails, then using
+#'   [broom::tidy()].
 #'
 #' @inheritParams tidy
 #' @param conf.int Indicating whether or not to include a confidence interval in
-#'   the tidied output.
+#'   the tidied output (defaults to `TRUE`).
 #' @param ... Additional arguments that will be passed to
 #'   [parameters::model_parameters()] and [broom::tidy()].
 #'
 #' @return A data frame of indices related to the model's parameters.
-#'
-#' @details The function will attempt to get these details first using
-#'   [parameters::model_parameters()] and then using [broom::tidy()].
 #'
 #' @examples
 #' set.seed(123)
@@ -56,14 +62,22 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
 #' @name glance_performance
 #' @title Model performance summary dataframes using `broom` and `easystats`.
-#' @description Computes indices of model performance for regression models.
-#' @inheritParams glance
+#'
+#' @description
+#'
+#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
+#'
+#' Computes indices of model performance for regression models.
+#'
 #' @return A data frame (with one row) and one column per "index".
 #'
 #' @details The function will attempt to get these details either using
 #'   [broom::glance()] or [performance::model_performance()]. If both function
 #'   provide model performance measure summaries, the function will try to
-#'   combine them into a single dataframe.
+#'   combine them into a single dataframe. Measures for which these two packages
+#'   have different naming conventions, both will be retained.
+#'
+#' @inheritParams glance
 #'
 #' @examples
 #' set.seed(123)
