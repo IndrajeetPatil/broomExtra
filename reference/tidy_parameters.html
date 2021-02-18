@@ -161,7 +161,11 @@ the tidied output (defaults to <code>TRUE</code>).</p></td>
     <tr>
       <th>...</th>
       <td><p>Additional arguments that will be passed to
-<code><a href='https://easystats.github.io/parameters/reference/model_parameters.html'>parameters::model_parameters()</a></code> and <code><a href='https://generics.r-lib.org/reference/tidy.html'>broom::tidy()</a></code>.</p></td>
+<code><a href='https://easystats.github.io/parameters/reference/model_parameters.html'>parameters::model_parameters()</a></code> or <code><a href='https://generics.r-lib.org/reference/tidy.html'>broom::tidy()</a></code>, whichever method
+works. Note that you should pay attention to different naming conventions
+across these packages. For example, the required confidence interval width
+is specified using <code>ci</code> argument in <code><a href='https://easystats.github.io/parameters/reference/model_parameters.html'>parameters::model_parameters</a></code>, while
+using <code>conf.level</code> in <code><a href='https://generics.r-lib.org/reference/tidy.html'>broom::tidy</a></code>.</p></td>
     </tr>
     </table>
 
