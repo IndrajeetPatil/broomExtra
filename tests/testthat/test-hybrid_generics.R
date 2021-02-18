@@ -66,7 +66,7 @@ test_that(
     df <- suppressMessages(suppressWarnings(tidy_parameters(tidy(mod))))
 
     # test
-    expect_equal(dim(df_rlm), c(4L, 9L))
+    expect_equal(dim(df_rlm)[[1]], 4L)
     expect_s3_class(df, "tbl_df")
 
     # model (not covered by easystats but covered by broom)
