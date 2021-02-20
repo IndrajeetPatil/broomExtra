@@ -10,7 +10,7 @@
 
 0 errors | 0 warnings | 0 note
 
-  - The tests are no longer skipped on `CRAN`.
+  - Removes `lifecycle` from `Imports` to get rid of `NOTE` in CRAN daily checks.
 
 ## revdepcheck results
 

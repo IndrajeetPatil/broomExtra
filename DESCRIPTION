@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 4.2.0.9000
+Version: 4.2.1
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -31,8 +31,7 @@ Imports:
     parameters (>= 0.11.0),
     performance (>= 0.7.0),
     rlang,
-    tibble,
-    lifecycle
+    tibble
 Suggests: 
     generics,
     lavaan,
@@ -48,4 +47,3 @@ Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate", "pkgapi
 RoxygenNote: 7.1.1.9001
 Config/testthat/edition: 3
 Config/testthat/parallel: true
-Config/testthat/start-first: watcher, parallel*
