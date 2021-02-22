@@ -15,7 +15,13 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 
-options(tibble.width = Inf)
+options(
+  tibble.width = Inf,
+  pillar.bold = TRUE,
+  pillar.neg = TRUE,
+  pillar.subtle_num = TRUE,
+  pillar.min_chars = Inf
+)
 ```
 
 # `broomExtra`: Enhancements for `broom` and `easystats` Package Families 
