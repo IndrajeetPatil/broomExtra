@@ -91,7 +91,7 @@ data argument in its function call." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">broomExtra</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.2.1</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">4.2.1.9000</span>
       </span>
     </div>
 
@@ -219,6 +219,7 @@ data argument in its function call." />
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.mlogit.html'>glance.mlogit</a></code>: <code>mlogit</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.muhaz.html'>glance.muhaz</a></code>: <code>muhaz</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.multinom.html'>glance.multinom</a></code>: <code>multinom</code></p></li>
+<li><p><code><a href='https://broom.tidymodels.org/reference/glance.negbin.html'>glance.negbin</a></code>: <code>negbin</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.nlrq.html'>glance.nlrq</a></code>: <code>nlrq</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.nls.html'>glance.nls</a></code>: <code>nls</code></p></li>
 <li><p><code><a href='https://broom.tidymodels.org/reference/glance.orcutt.html'>glance.orcutt</a></code>: <code>orcutt</code></p></li>
@@ -274,11 +275,11 @@ data argument in its function call." />
   formula <span class='op'>=</span> <span class='va'>interval</span> <span class='op'>~</span> <span class='va'>age</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>|</span> <span class='va'>status</span><span class='op'>)</span>,
   control <span class='op'>=</span> <span class='fu'>lme4</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmerControl.html'>lmerControl</a></span><span class='op'>(</span>optimizer <span class='op'>=</span> <span class='st'>"bobyqa"</span><span class='op'>)</span>
 <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2 x 7</span><span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 x 7</span><span>
 #&gt;   sex   sigma  logLik    AIC    BIC REMLcrit df.residual
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> F      415.   -</span><span style='color: #BB0000;'>656.</span><span>  </span><span style='text-decoration: underline;'>1</span><span>321.  </span><span style='text-decoration: underline;'>1</span><span>331.    </span><span style='text-decoration: underline;'>1</span><span>313.          85
-#&gt; </span><span style='color: #555555;'>2</span><span> M      355. -</span><span style='color: #BB0000;text-decoration: underline;'>20</span><span style='color: #BB0000;'>079.</span><span> </span><span style='text-decoration: underline;'>40</span><span>165. </span><span style='text-decoration: underline;'>40</span><span>189.   </span><span style='text-decoration: underline;'>40</span><span>157.        </span><span style='text-decoration: underline;'>2</span><span>750</div></span></pre>
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;fct&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> F      415.   -</span><span style='color: #BB0000;'>656.</span><span>  </span><span style='text-decoration: underline;'>1</span><span>321.  </span><span style='text-decoration: underline;'>1</span><span>331.    </span><span style='text-decoration: underline;'>1</span><span>313.          85
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> M      355. -</span><span style='color: #BB0000;text-decoration: underline;'>20</span><span style='color: #BB0000;'>079.</span><span> </span><span style='text-decoration: underline;'>40</span><span>165. </span><span style='text-decoration: underline;'>40</span><span>189.   </span><span style='text-decoration: underline;'>40</span><span>157.        </span><span style='text-decoration: underline;'>2</span><span>750</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
