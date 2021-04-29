@@ -1,14 +1,7 @@
 url: https://indrajeetpatil.github.io/broomExtra/
 
 template:
-  params:
-    bootswatch: simplex
-    docsearch:
-      api_key: b861237de2a5d9010def96267ae0a583
-      index_name: broomextra
-
-development:
-  mode: unreleased
+  package: preferably
 
 authors:
   Indrajeet Patil:
