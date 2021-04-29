@@ -28,7 +28,7 @@ Imports:
     broom.mixed,
     dplyr,
     magrittr,
-    parameters (>= 0.12.0),
+    parameters (>= 0.13.0),
     performance (>= 0.7.0),
     rlang,
     tibble
