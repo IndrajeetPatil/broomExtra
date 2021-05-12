@@ -3,7 +3,7 @@
 #'
 #' @description
 #'
-#'  \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
+#'  
 #'
 #' Checks if a `tidy` method exits for a given object, either in `broom` or in
 #' `broom.mixed`. If it does, it turn an object into a tidy tibble, if not,
@@ -44,7 +44,7 @@ tidy <- function(x, ...) {
 #'
 #' @description
 #'
-#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
+#' 
 #'
 #' Checks if a `glance` method exits for a given object, either in `broom` or in
 #' `broom.mixed`. If it does, return the model summary dataframe, if not, return
@@ -83,7 +83,7 @@ glance <- function(x, ...) {
 #' @name augment
 #' @description
 #'
-#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
+#' 
 #'
 #' Checks if a `augment` method exits for a given object, either in `broom` or
 #' in `broom.mixed`. If it does, return the model summary dataframe, if not,

@@ -3,7 +3,7 @@
 #'
 #' @description
 #'
-#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
+#' 
 #'
 #' Computes parameters for regression models.
 #'
@@ -69,7 +69,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #'
 #' @description
 #'
-#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
+#' 
 #'
 #' Computes indices of model performance for regression models.
 #'

@@ -15,8 +15,6 @@ glance_performance(x, ...)
 A data frame (with one row) and one column per "index".
 }
 \description{
-\Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
-
 Computes indices of model performance for regression models.
 }
 \details{

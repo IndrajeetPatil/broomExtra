@@ -23,8 +23,6 @@ using \code{conf.level} in \code{broom::tidy}.}
 A data frame of indices related to the model's parameters.
 }
 \description{
-\Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
-
 Computes parameters for regression models.
 }
 \details{

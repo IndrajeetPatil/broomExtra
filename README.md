@@ -11,7 +11,7 @@ Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](http
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra)
 [![pkgdown](https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions)
-[![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Daily downloads
 badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 [![Total downloads
@@ -89,7 +89,20 @@ Otherwise, the quicker option is-
 remotes::install_github("IndrajeetPatil/broomExtra")
 ```
 
-# hybrid generics
+# Lifecycle
+
+| Function             | Lifecycle                                                                                                                       |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `tidy_parameters`    | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+| `glance_performance` | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+| `tidy`               | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+| `glance`             | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+| `augment`            | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+| `grouped_tidy`       | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+| `grouped_glance`     | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+| `grouped_augment`    | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html) |
+
+# Hybrid generics
 
 The `broom`-family of packages are not the only ones which return such
 tidy summaries for model parameters and model performance. The
@@ -423,7 +436,7 @@ broomExtra::glance_performance(model)
 #> 1 0.271 0.713    0.230     -19.0           0.116 0.858
 ```
 
-# generic functions
+# Generic functions
 
 Currently, `S3` methods for mixed-effects model objects are included in
 the `broom.mixed` package, while the rest of the object classes are
@@ -812,24 +825,6 @@ broomExtra::grouped_augment(
 #> 10        1        1        1 -1618.
 #> # … with 26,960 more rows
 ```
-
-# Code coverage
-
-As the code stands right now, here is the code coverage for all primary
-functions involved:
-<https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R>
-
-# Contributing
-
-I’m happy to receive bug reports, suggestions, questions, and (most of
-all) contributions to fix problems and add features. I personally prefer
-using the `GitHub` issues system over trying to reach out to me in other
-ways (personal e-mail, Twitter, etc.). Pull requests for contributions
-are encouraged.
-
-Please note that this project is released with a [Contributor Code of
-Conduct](https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md).
-By participating in this project you agree to abide by its terms.
 
 # Acknowledgments
 
