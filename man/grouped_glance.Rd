@@ -20,13 +20,6 @@ grouped_glance(data, grouping.vars, ..f, ...)
 Model summary output from grouped analysis of any function that has
 \code{data} argument in its function call.
 }
-\section{Methods}{
-
-
-\Sexpr[stage=render,results=rd]{generics:::methods_rd("glance")}
-
-}
-
 \examples{
 set.seed(123)
 

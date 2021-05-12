@@ -20,13 +20,6 @@ Checks if a \code{augment} method exits for a given object, either in \code{broo
 in \code{broom.mixed}. If it does, return the model summary dataframe, if not,
 return a \code{NULL}.
 }
-\section{Methods}{
-
-
-\Sexpr[stage=render,results=rd]{generics:::methods_rd("augment")}
-
-}
-
 \examples{
 set.seed(123)
 lm.mod <- lm(Sepal.Length ~ Species, iris)

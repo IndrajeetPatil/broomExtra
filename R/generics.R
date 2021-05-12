@@ -3,8 +3,6 @@
 #'
 #' @description
 #'
-#'  
-#'
 #' Checks if a `tidy` method exits for a given object, either in `broom` or in
 #' `broom.mixed`. If it does, it turn an object into a tidy tibble, if not,
 #' return a `NULL`. In this case, you can try the
@@ -17,7 +15,6 @@
 #' @importFrom broom.mixed tidy
 #'
 #' @inherit generics::tidy return value
-#' @inheritSection generics::tidy Methods
 #'
 #' @seealso \code{\link{grouped_tidy}}, \code{\link{tidy_parameters}}
 #'
@@ -44,8 +41,6 @@ tidy <- function(x, ...) {
 #'
 #' @description
 #'
-#' 
-#'
 #' Checks if a `glance` method exits for a given object, either in `broom` or in
 #' `broom.mixed`. If it does, return the model summary dataframe, if not, return
 #' a `NULL`. In this case, you can try the [broomExtra::glance_performance()]
@@ -57,7 +52,6 @@ tidy <- function(x, ...) {
 #' @importFrom broom.mixed glance
 #'
 #' @inherit generics::glance return value
-#' @inheritSection generics::glance Methods
 #'
 #' @seealso \code{\link{grouped_glance}}, \code{\link{glance_performance}}
 #'
@@ -74,7 +68,6 @@ glance <- function(x, ...) {
   # if not, check if `broom.mixed` has a glance method for a given object
   if (rlang::is_null(f)) f <- tryCatch(broom.mixed::glance(x, ...), error = function(e) NULL)
 
-
   # return the glance
   return(f)
 }
@@ -82,8 +75,6 @@ glance <- function(x, ...) {
 #' @title Retrieve augmented dataframe if it exists.
 #' @name augment
 #' @description
-#'
-#' 
 #'
 #' Checks if a `augment` method exits for a given object, either in `broom` or
 #' in `broom.mixed`. If it does, return the model summary dataframe, if not,
@@ -95,7 +86,6 @@ glance <- function(x, ...) {
 #' @importFrom broom.mixed augment
 #'
 #' @inherit generics::augment return value
-#' @inheritSection generics::augment Methods
 #'
 #' @seealso \code{\link{grouped_augment}}
 #'

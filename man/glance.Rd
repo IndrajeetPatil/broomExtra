@@ -17,13 +17,6 @@ Checks if a \code{glance} method exits for a given object, either in \code{broom
 a \code{NULL}. In this case, you can try the \code{\link[=glance_performance]{glance_performance()}}
 function.
 }
-\section{Methods}{
-
-
-\Sexpr[stage=render,results=rd]{generics:::methods_rd("glance")}
-
-}
-
 \examples{
 set.seed(123)
 lm.mod <- lm(Sepal.Length ~ Species, iris)

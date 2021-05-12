@@ -3,8 +3,6 @@
 #'
 #' @description
 #'
-#' 
-#'
 #' Computes parameters for regression models.
 #'
 #' @details The function will attempt to get these details first using
@@ -68,8 +66,6 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' @title Model performance summary dataframes using `broom` and `easystats`.
 #'
 #' @description
-#'
-#' 
 #'
 #' Computes indices of model performance for regression models.
 #'

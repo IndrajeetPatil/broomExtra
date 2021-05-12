@@ -25,13 +25,6 @@ A \code{\link[tibble:tibble]{tibble::tibble()}} with information about model com
 Tidy output from grouped analysis of any function that has \code{data}
 argument in its function call.
 }
-\section{Methods}{
-
-
-\Sexpr[stage=render,results=rd]{generics:::methods_rd("tidy")}
-
-}
-
 \examples{
 set.seed(123)
 
