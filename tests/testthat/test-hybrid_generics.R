@@ -34,9 +34,6 @@ test_that(
       dim(glance_performance(lm_mod, effects = "fixed"))[[1]], 1L
     )
 
-    # snapshots
-    expect_snapshot(df_lm)
-
     # setup
     set.seed(123)
     library(lavaan)

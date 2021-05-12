@@ -1,21 +1,6 @@
 # hybrid methods works
 
     Code
-      df_lm
-    Output
-      # A tibble: 2 x 9
-        term        estimate std.error conf.level conf.low conf.high statistic
-        <chr>          <dbl>     <dbl>      <dbl>    <dbl>     <dbl>     <dbl>
-      1 (Intercept)    251.       5.18       0.95   241.       262.      48.5 
-      2 Days            10.5      1.28       0.95     7.94      13.0      8.17
-        df.error   p.value
-           <int>     <dbl>
-      1      178 1.55e-104
-      2      178 5.63e- 14
-
----
-
-    Code
       df_rlm
     Output
       # A tibble: 4 x 9
