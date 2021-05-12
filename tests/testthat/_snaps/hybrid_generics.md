@@ -1,9 +1,8 @@
 # hybrid methods works
 
     Code
-      list(df_lm, df_lmm)
+      df_lm
     Output
-      [[1]]
       # A tibble: 2 x 9
         term        estimate std.error conf.level conf.low conf.high statistic
         <chr>          <dbl>     <dbl>      <dbl>    <dbl>     <dbl>     <dbl>
@@ -13,18 +12,6 @@
            <int>     <dbl>
       1      178 1.55e-104
       2      178 5.63e- 14
-      
-      [[2]]
-      # A tibble: 2 x 10
-        term        estimate std.error conf.level conf.low conf.high statistic
-        <chr>          <dbl>     <dbl>      <dbl>    <dbl>     <dbl>     <dbl>
-      1 (Intercept)    251.       6.82       0.95   238.       265.      36.8 
-      2 Days            10.5      1.55       0.95     7.44      13.5      6.77
-        df.error   p.value effect
-           <int>     <dbl> <chr> 
-      1      174 4.54e-297 fixed 
-      2      174 1.27e- 11 fixed 
-      
 
 ---
 

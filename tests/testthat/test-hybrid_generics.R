@@ -35,7 +35,7 @@ test_that(
     )
 
     # snapshots
-    expect_snapshot(list(df_lm, df_lmm))
+    expect_snapshot(df_lm)
 
     # setup
     set.seed(123)
