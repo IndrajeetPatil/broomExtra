@@ -159,9 +159,53 @@
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"IndrajeetPatil/broomExtra"</span><span class="op">)</span></code></pre></div>
 </div>
+<div id="lifecycle" class="section level1">
+<h1 class="hasAnchor">
+<a href="#lifecycle" class="anchor"></a>Lifecycle</h1>
+<table class="table">
+<thead><tr class="header">
+<th>Function</th>
+<th>Lifecycle</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>tidy_parameters</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+<tr class="even">
+<td><code>glance_performance</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+<tr class="odd">
+<td><code>tidy</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+<tr class="even">
+<td><code>glance</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+<tr class="odd">
+<td><code>augment</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+<tr class="even">
+<td><code>grouped_tidy</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+<tr class="odd">
+<td><code>grouped_glance</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+<tr class="even">
+<td><code>grouped_augment</code></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="hybrid-generics" class="section level1">
 <h1 class="hasAnchor">
-<a href="#hybrid-generics" class="anchor"></a>hybrid generics</h1>
+<a href="#hybrid-generics" class="anchor"></a>Hybrid generics</h1>
 <p>The <code>broom</code>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>easystats</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <code>broom</code> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>easystats</code> packages would and <em>vice versa</em>.</p>
 <p>The hybrid functions in <code>broomExtra</code> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
 <ul>
@@ -454,7 +498,7 @@
 </div>
 <div id="generic-functions" class="section level1">
 <h1 class="hasAnchor">
-<a href="#generic-functions" class="anchor"></a>generic functions</h1>
+<a href="#generic-functions" class="anchor"></a>Generic functions</h1>
 <p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <code>broom.mixed</code> package, while the rest of the object classes are included in the <code>broom</code> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom.mixed::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom.mixed::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom::augment()</a></code>”).</p>
 <p>Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="reference/glance.html">broomExtra::glance()</a></code>/<code><a href="reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
 <div id="tidy-dataframe" class="section level2">
@@ -825,17 +869,6 @@
 <span class="co">#&gt; # … with 26,960 more rows</span></code></pre></div>
 </div>
 </div>
-<div id="code-coverage" class="section level1">
-<h1 class="hasAnchor">
-<a href="#code-coverage" class="anchor"></a>Code coverage</h1>
-<p>As the code stands right now, here is the code coverage for all primary functions involved: <a href="https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R" class="uri">https://codecov.io/gh/IndrajeetPatil/broomExtra/tree/master/R</a></p>
-</div>
-<div id="contributing" class="section level1">
-<h1 class="hasAnchor">
-<a href="#contributing" class="anchor"></a>Contributing</h1>
-<p>I’m happy to receive bug reports, suggestions, questions, and (most of all) contributions to fix problems and add features. I personally prefer using the <code>GitHub</code> issues system over trying to reach out to me in other ways (personal e-mail, Twitter, etc.). Pull requests for contributions are encouraged.</p>
-<p>Please note that this project is released with a <a href="https://github.com/IndrajeetPatil/broomExtra/blob/master/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
-</div>
 <div id="acknowledgments" class="section level1">
 <h1 class="hasAnchor">
 <a href="#acknowledgments" class="anchor"></a>Acknowledgments</h1>
@@ -887,7 +920,7 @@
 <li><a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis Build Status"></a></li>
 <li><a href="https://ci.appveyor.com/project/IndrajeetPatil/broomExtra"><img src="https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
 <li><a href="https://github.com/IndrajeetPatil/broomExtra/actions"><img src="https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-green.svg" alt="lifecycle"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></li>
 <li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a></li>
 <li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue" alt="Total downloads badge"></a></li>
 </ul>
