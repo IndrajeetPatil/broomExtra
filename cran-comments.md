@@ -1,8 +1,8 @@
 ## Test environments
 
-* local OS X install, R 4.0.3
+* local OS X install, R 4.0.5
 
-* ubuntu 14.04 (on travis-ci), R 4.0.3
+* ubuntu 14.04 (on github-actions), R 4.0.5
 
 * win-builder (devel and release)
 
@@ -10,7 +10,7 @@
 
 0 errors | 0 warnings | 0 note
 
-  - Removes `lifecycle` from `Imports` to get rid of `NOTE` in CRAN daily checks.
+  - Removes `NOTE` about `LazyData` in CRAN's daily checks.
 
 ## revdepcheck results
 

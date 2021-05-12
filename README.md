@@ -7,9 +7,9 @@
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                  | [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)                                               | [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)     | [![GitHub version](https://img.shields.io/badge/GitHub-4.1.0-orange.svg?style=flat-square)](https://github.com/IndrajeetPatil/broomExtra/)                   | [![Website](https://img.shields.io/badge/website-broomExtra-orange.svg?colorB=E91E63)](https://indrajeetpatil.github.io/broomExtra/)                           |
 | [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)                      | [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra) | [![Weekly downloads badge](https://cranlogs.r-pkg.org/badges/last-week/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)   | [![Forks](https://img.shields.io/badge/forks-4-blue.svg)](https://github.com/IndrajeetPatil/broomExtra/)                                                     | [![Rdoc](https://www.rdocumentation.org/badges/version/broomExtra/)](https://rdrr.io/cran/broomExtra/)                                                         |
-| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)                                                                 | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-0-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.1.0-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
+| [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)                                                    | [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)                                                                 | [![Monthly downloads badge](https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra) | [![Github Issues](https://img.shields.io/badge/issues-1-red.svg)](https://github.com/IndrajeetPatil/broomExtra/issues)                                       | [![vignettes](https://img.shields.io/badge/vignettes-4.1.0-orange.svg?colorB=FF5722)](https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md)      |
 | [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra) | [![Coverage Status](https://coveralls.io/repos/github/IndrajeetPatil/broomExtra/badge.svg?branch=master)](https://coveralls.io/github/IndrajeetPatil/broomExtra?branch=master)             | [![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)  | [![Github Stars](https://img.shields.io/github/stars/IndrajeetPatil/broomExtra.svg?style=social&label=Github)](https://github.com/IndrajeetPatil/broomExtra) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3597451.svg)](https://doi.org/10.5281/zenodo.3597451)                                                      |
-| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2021--02--18-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
+| [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)                                              | [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg)](https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master)                   | [![HitCount](http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg)](http://hits.dwyl.io/IndrajeetPatil/broomExtra)                                 | [![Last-changedate](https://img.shields.io/badge/last%20change-2021--05--12-yellowgreen.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)   | [![GitHub last commit](https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg)](https://github.com/IndrajeetPatil/broomExtra/commits/master)  |
 | [![status](https://tinyverse.netlify.com/badge/broomExtra)](https://CRAN.R-project.org/package=broomExtra)                                                    | [![R build status](https://github.com/IndrajeetPatil/broomExtra/workflows/R-CMD-check/badge.svg)](https://github.com/IndrajeetPatil/broomExtra)                                            | [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/broomExtra/community)                                          | [![Project Status](http://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)                                                  | [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/IndrajeetPatil/broomExtra/issues) |
 
 # Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
@@ -169,6 +169,8 @@ co <- orcutt::cochrane.orcutt(reg)
 
 # no tidier available in `parameters`
 parameters::model_parameters(co)
+#> # Fixed Effects
+#> 
 #> Parameter   | Coefficient |   SE |         95% CI | t(27) |     p
 #> -----------------------------------------------------------------
 #> (Intercept) |       21.81 | 6.63 | [ 8.82, 34.81] |  3.29 | 0.003
@@ -228,57 +230,57 @@ broom::tidy(mod_lavaan, exponentiate = TRUE)
 parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
 #> # Loading
 #> 
-#> Link          | Coefficient |   SE |       95% CI |      p
-#> ----------------------------------------------------------
-#> visual =~ x1  |        1.00 | 0.00 | [1.00, 1.00] | < .001
-#> visual =~ x2  |        0.55 | 0.10 | [0.36, 0.75] | < .001
-#> visual =~ x3  |        0.73 | 0.11 | [0.52, 0.94] | < .001
-#> textual =~ x4 |        1.00 | 0.00 | [1.00, 1.00] | < .001
-#> textual =~ x5 |        1.11 | 0.07 | [0.98, 1.24] | < .001
-#> textual =~ x6 |        0.93 | 0.06 | [0.82, 1.03] | < .001
-#> speed =~ x7   |        1.00 | 0.00 | [1.00, 1.00] | < .001
-#> speed =~ x8   |        1.18 | 0.16 | [0.86, 1.50] | < .001
-#> speed =~ x9   |        1.08 | 0.15 | [0.79, 1.38] | < .001
+#> Link          | Coefficient |   SE |       95% CI |     z |      p
+#> ------------------------------------------------------------------
+#> visual =~ x1  |        1.00 | 0.00 | [1.00, 1.00] |       | < .001
+#> visual =~ x2  |        0.55 | 0.10 | [0.36, 0.75] |  5.55 | < .001
+#> visual =~ x3  |        0.73 | 0.11 | [0.52, 0.94] |  6.68 | < .001
+#> textual =~ x4 |        1.00 | 0.00 | [1.00, 1.00] |       | < .001
+#> textual =~ x5 |        1.11 | 0.07 | [0.98, 1.24] | 17.01 | < .001
+#> textual =~ x6 |        0.93 | 0.06 | [0.82, 1.03] | 16.70 | < .001
+#> speed =~ x7   |        1.00 | 0.00 | [1.00, 1.00] |       | < .001
+#> speed =~ x8   |        1.18 | 0.16 | [0.86, 1.50] |  7.15 | < .001
+#> speed =~ x9   |        1.08 | 0.15 | [0.79, 1.38] |  7.15 | < .001
 #> 
 #> # Correlation
 #> 
-#> Link              | Coefficient |   SE |       95% CI |      p
-#> --------------------------------------------------------------
-#> visual ~~ textual |        0.41 | 0.07 | [0.26, 0.55] | < .001
-#> visual ~~ speed   |        0.26 | 0.06 | [0.15, 0.37] | < .001
-#> textual ~~ speed  |        0.17 | 0.05 | [0.08, 0.27] | < .001
+#> Link              | Coefficient |   SE |       95% CI |    z |      p
+#> ---------------------------------------------------------------------
+#> visual ~~ textual |        0.41 | 0.07 | [0.26, 0.55] | 5.55 | < .001
+#> visual ~~ speed   |        0.26 | 0.06 | [0.15, 0.37] | 4.66 | < .001
+#> textual ~~ speed  |        0.17 | 0.05 | [0.08, 0.27] | 3.52 | < .001
 
 # using hybrid function
 broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
-#> # A tibble: 12 x 9
-#>    to      operator from    estimate std.error conf.low conf.high  p.value
-#>    <chr>   <chr>    <chr>      <dbl>     <dbl>    <dbl>     <dbl>    <dbl>
-#>  1 visual  =~       x1         1        0        1          1     0.      
-#>  2 visual  =~       x2         0.554    0.0997   0.358      0.749 2.80e- 8
-#>  3 visual  =~       x3         0.729    0.109    0.516      0.943 2.31e-11
-#>  4 textual =~       x4         1        0        1          1     0.      
-#>  5 textual =~       x5         1.11     0.0654   0.985      1.24  0.      
-#>  6 textual =~       x6         0.926    0.0554   0.817      1.03  0.      
-#>  7 speed   =~       x7         1        0        1          1     0.      
-#>  8 speed   =~       x8         1.18     0.165    0.857      1.50  8.56e-13
-#>  9 speed   =~       x9         1.08     0.151    0.785      1.38  8.40e-13
-#> 10 visual  ~~       textual    0.408    0.0735   0.264      0.552 2.82e- 8
-#> 11 visual  ~~       speed      0.262    0.0563   0.152      0.373 3.17e- 6
-#> 12 textual ~~       speed      0.173    0.0493   0.0768     0.270 4.35e- 4
-#>    type       
-#>    <chr>      
-#>  1 Loading    
-#>  2 Loading    
-#>  3 Loading    
-#>  4 Loading    
-#>  5 Loading    
-#>  6 Loading    
-#>  7 Loading    
-#>  8 Loading    
-#>  9 Loading    
-#> 10 Correlation
-#> 11 Correlation
-#> 12 Correlation
+#> # A tibble: 12 x 10
+#>    to      operator from    estimate std.error conf.low conf.high statistic
+#>    <chr>   <chr>    <chr>      <dbl>     <dbl>    <dbl>     <dbl>     <dbl>
+#>  1 visual  =~       x1         1        0        1          1         NA   
+#>  2 visual  =~       x2         0.554    0.0997   0.358      0.749      5.55
+#>  3 visual  =~       x3         0.729    0.109    0.516      0.943      6.68
+#>  4 textual =~       x4         1        0        1          1         NA   
+#>  5 textual =~       x5         1.11     0.0654   0.985      1.24      17.0 
+#>  6 textual =~       x6         0.926    0.0554   0.817      1.03      16.7 
+#>  7 speed   =~       x7         1        0        1          1         NA   
+#>  8 speed   =~       x8         1.18     0.165    0.857      1.50       7.15
+#>  9 speed   =~       x9         1.08     0.151    0.785      1.38       7.15
+#> 10 visual  ~~       textual    0.408    0.0735   0.264      0.552      5.55
+#> 11 visual  ~~       speed      0.262    0.0563   0.152      0.373      4.66
+#> 12 textual ~~       speed      0.173    0.0493   0.0768     0.270      3.52
+#>     p.value component  
+#>       <dbl> <chr>      
+#>  1 0        Loading    
+#>  2 2.80e- 8 Loading    
+#>  3 2.31e-11 Loading    
+#>  4 0        Loading    
+#>  5 0        Loading    
+#>  6 0        Loading    
+#>  7 0        Loading    
+#>  8 8.56e-13 Loading    
+#>  9 8.40e-13 Loading    
+#> 10 2.82e- 8 Correlation
+#> 11 3.17e- 6 Correlation
+#> 12 4.35e- 4 Correlation
 ```
 
 <font color="green"> Additionally, the *p*-values and confidence
@@ -515,9 +517,9 @@ broomExtra::glance(lm.mod)
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::glance(clm.mod)
 #> # A tibble: 1 x 6
-#>     edf   AIC   BIC logLik   df.residual  nobs
-#>   <int> <dbl> <dbl> <logLik>       <dbl> <dbl>
-#> 1     7  187.  203. -86.4162          65    72
+#>     edf   AIC   BIC logLik df.residual  nobs
+#>   <int> <dbl> <dbl>  <dbl>       <dbl> <dbl>
+#> 1     7  187.  203.  -86.4          65    72
 
 # in case no glance method is available (`NULL` will be returned)
 broomExtra::glance(acf(lh, plot = FALSE))
@@ -561,7 +563,7 @@ broomExtra::augment(lmm.mod)
 #>  8        1        1        1 -101.  
 #>  9        1        1        1   19.6 
 #> 10        1        1        1   35.7 
-#> # ... with 170 more rows
+#> # … with 170 more rows
 
 # linear model
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
@@ -579,7 +581,7 @@ broomExtra::augment(lm.mod)
 #>  8     290.     7    325. -34.5  0.00976   47.8 0.00261      -0.727 
 #>  9     431.     8    335.  95.4  0.0138    47.3 0.0284        2.01  
 #> 10     466.     9    346. 121.   0.0192    47.0 0.0639        2.56  
-#> # ... with 170 more rows
+#> # … with 170 more rows
 
 # another example with `broom`
 # cumulative Link Models
@@ -598,7 +600,7 @@ broomExtra::augment(x = clm.mod, newdata = wine, type.predict = "prob")
 #>  8       90 5      warm  yes     8      1      0.286 
 #>  9       17 1      cold  no      1      2      0.196 
 #> 10       22 2      cold  no      2      2      0.562 
-#> # ... with 62 more rows
+#> # … with 62 more rows
 
 # in case no augment method is available (`NULL` will be returned)
 broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
@@ -644,7 +646,7 @@ broomExtra::grouped_tidy(
 #>  8 Good  D     carat    5207.     115.       45.4 2.66e-145
 #>  9 Good  E     carat    5102.      91.9      55.5 2.50e-206
 #> 10 Good  F     carat    5151.      92.4      55.8 1.76e-204
-#> # ... with 25 more rows
+#> # … with 25 more rows
 
 # linear mixed effects model (tidy analysis across grouping combinations)
 broomExtra::grouped_tidy(
@@ -680,7 +682,7 @@ broomExtra::grouped_tidy(
 #>  8      NA        NA 
 #>  9      NA        NA 
 #> 10      NA        NA 
-#> # ... with 15 more rows
+#> # … with 15 more rows
 ```
 
 ## `grouped_glance`
@@ -722,7 +724,7 @@ broomExtra::grouped_glance(
 #>  8 5966. 5974. 1001144317.         335   336
 #>  9 8173. 8181. 1291712250.         461   462
 #> 10 7998. 8006. 1267954026.         451   452
-#> # ... with 25 more rows
+#> # … with 25 more rows
 
 # linear mixed effects model (model summaries across grouping combinations)
 broomExtra::grouped_glance(
@@ -768,7 +770,7 @@ broomExtra::grouped_augment(
 #>  8 Fair  D      3079  0.91   4605. -1526. 0.00503  1820. 0.00358      -0.841
 #>  9 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744
 #> 10 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744
-#> # ... with 53,930 more rows
+#> # … with 53,930 more rows
 
 # linear mixed-effects model
 broomExtra::grouped_augment(
@@ -803,7 +805,7 @@ broomExtra::grouped_augment(
 #>  8        1        1        1  -183.
 #>  9        1        1        1  -448.
 #> 10        1        1        1 -1618.
-#> # ... with 26,960 more rows
+#> # … with 26,960 more rows
 ```
 
 # Code coverage

@@ -1,4 +1,6 @@
-# broomExtra 4.2.1.9000
+# broomExtra 4.2.2
+
+  - Removes `NOTE` about `LazyData` in CRAN's daily checks.
 
 # broomExtra 4.2.1
 

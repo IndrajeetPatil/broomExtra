@@ -99,7 +99,7 @@ glance_performance <- function(x, ...) {
   df_broom <- tryCatch(broomExtra::glance(x, ...), error = function(e) NULL)
 
   # for consistency with `performance` output, convert column names to lowercase
-  if (!rlang::is_null(df_broom)) df_broom %<>% dplyr::rename_all(., .f = tolower)
+  if (!rlang::is_null(df_broom)) df_broom %<>% dplyr::rename_all(.f = tolower)
 
   # easystats family ---------------------------------------
   # check if `easystats` family has a tidy method for a given object
@@ -114,11 +114,10 @@ glance_performance <- function(x, ...) {
   # marry the families ---------------------------------------
   # combine if both are available
   if (!rlang::is_null(df_broom) && !rlang::is_null(df_performance)) {
-    df_combined <-
-      dplyr::bind_cols(
-        df_broom,
-        dplyr::select(df_performance, -dplyr::intersect(names(df_broom), names(df_performance))),
-      )
+    df_combined <- dplyr::bind_cols(
+      df_broom,
+      dplyr::select(df_performance, -dplyr::intersect(names(df_broom), names(df_performance))),
+    )
   }
 
   # otherwise return what's not a `NULL`

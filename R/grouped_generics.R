@@ -43,7 +43,7 @@ grouped_tidy <- function(data,
     model <- ..f(.y = ..., data = .x)
 
     # variation on `do.call` to call function with list of arguments
-    rlang::exec(.fn = broomExtra::tidy, model, !!!tidy.args)
+    rlang::exec(broomExtra::tidy, model, !!!tidy.args)
   }
 
   # dataframe with grouped analysis results
@@ -89,7 +89,7 @@ grouped_glance <- function(data,
     model <- ..f(.y = ..., data = .x)
 
     # variation on `do.call` to call function with list of arguments
-    rlang::exec(.fn = broomExtra::glance, model)
+    rlang::exec(broomExtra::glance, model)
   }
 
   # dataframe with grouped analysis results
@@ -137,7 +137,7 @@ grouped_augment <- function(data,
     model <- ..f(.y = ..., data = .x)
 
     # variation on `do.call` to call function with list of arguments
-    rlang::exec(.fn = broomExtra::augment, model, !!!augment.args)
+    rlang::exec(broomExtra::augment, model, !!!augment.args)
   }
 
   # dataframe with grouped analysis results
