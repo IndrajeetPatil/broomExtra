@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">4.2.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">4.2.2</span>
       </span>
     </div>
 
@@ -143,7 +143,7 @@
 <td><a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg" alt="minimal R version"></a></td>
 <td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></td>
 <td><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-month/broomExtra?color=blue" alt="Monthly downloads badge"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-0-red.svg" alt="Github Issues"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/issues"><img src="https://img.shields.io/badge/issues-1-red.svg" alt="Github Issues"></a></td>
 <td><a href="https://github.com/IndrajeetPatil/broomExtra/blob/master/README.md"><img src="https://img.shields.io/badge/vignettes-4.1.0-orange.svg?colorB=FF5722" alt="vignettes"></a></td>
 </tr>
 <tr class="even">
@@ -157,7 +157,7 @@
 <td><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="https://img.shields.io/badge/licence-GPL--3-blue.svg" alt="Licence"></a></td>
 <td><a href="https://codecov.io/gh/IndrajeetPatil/broomExtra?branch=master"><img src="https://codecov.io/gh/IndrajeetPatil/broomExtra/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></td>
 <td><a href="http://hits.dwyl.io/IndrajeetPatil/broomExtra"><img src="http://hits.dwyl.io/IndrajeetPatil/broomExtra.svg" alt="HitCount"></a></td>
-<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2021--02--18-yellowgreen.svg" alt="Last-changedate"></a></td>
+<td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/badge/last%20change-2021--05--12-yellowgreen.svg" alt="Last-changedate"></a></td>
 <td><a href="https://github.com/IndrajeetPatil/broomExtra/commits/master"><img src="https://img.shields.io/github/last-commit/IndrajeetPatil/broomExtra.svg" alt="GitHub last commit"></a></td>
 </tr>
 <tr class="even">
@@ -287,6 +287,8 @@
 
 <span class="co"># no tidier available in `parameters`</span>
 <span class="fu">parameters</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/parameters/reference/model_parameters.html">model_parameters</a></span><span class="op">(</span><span class="va">co</span><span class="op">)</span>
+<span class="co">#&gt; # Fixed Effects</span>
+<span class="co">#&gt; </span>
 <span class="co">#&gt; Parameter   | Coefficient |   SE |         95% CI | t(27) |     p</span>
 <span class="co">#&gt; -----------------------------------------------------------------</span>
 <span class="co">#&gt; (Intercept) |       21.81 | 6.63 | [ 8.82, 34.81] |  3.29 | 0.003</span>
@@ -339,57 +341,57 @@
 <span class="fu">parameters</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/parameters/reference/model_parameters.html">model_parameters</a></span><span class="op">(</span><span class="va">mod_lavaan</span>, exponentiate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt; # Loading</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Link          | Coefficient |   SE |       95% CI |      p</span>
-<span class="co">#&gt; ----------------------------------------------------------</span>
-<span class="co">#&gt; visual =~ x1  |        1.00 | 0.00 | [1.00, 1.00] | &lt; .001</span>
-<span class="co">#&gt; visual =~ x2  |        0.55 | 0.10 | [0.36, 0.75] | &lt; .001</span>
-<span class="co">#&gt; visual =~ x3  |        0.73 | 0.11 | [0.52, 0.94] | &lt; .001</span>
-<span class="co">#&gt; textual =~ x4 |        1.00 | 0.00 | [1.00, 1.00] | &lt; .001</span>
-<span class="co">#&gt; textual =~ x5 |        1.11 | 0.07 | [0.98, 1.24] | &lt; .001</span>
-<span class="co">#&gt; textual =~ x6 |        0.93 | 0.06 | [0.82, 1.03] | &lt; .001</span>
-<span class="co">#&gt; speed =~ x7   |        1.00 | 0.00 | [1.00, 1.00] | &lt; .001</span>
-<span class="co">#&gt; speed =~ x8   |        1.18 | 0.16 | [0.86, 1.50] | &lt; .001</span>
-<span class="co">#&gt; speed =~ x9   |        1.08 | 0.15 | [0.79, 1.38] | &lt; .001</span>
+<span class="co">#&gt; Link          | Coefficient |   SE |       95% CI |     z |      p</span>
+<span class="co">#&gt; ------------------------------------------------------------------</span>
+<span class="co">#&gt; visual =~ x1  |        1.00 | 0.00 | [1.00, 1.00] |       | &lt; .001</span>
+<span class="co">#&gt; visual =~ x2  |        0.55 | 0.10 | [0.36, 0.75] |  5.55 | &lt; .001</span>
+<span class="co">#&gt; visual =~ x3  |        0.73 | 0.11 | [0.52, 0.94] |  6.68 | &lt; .001</span>
+<span class="co">#&gt; textual =~ x4 |        1.00 | 0.00 | [1.00, 1.00] |       | &lt; .001</span>
+<span class="co">#&gt; textual =~ x5 |        1.11 | 0.07 | [0.98, 1.24] | 17.01 | &lt; .001</span>
+<span class="co">#&gt; textual =~ x6 |        0.93 | 0.06 | [0.82, 1.03] | 16.70 | &lt; .001</span>
+<span class="co">#&gt; speed =~ x7   |        1.00 | 0.00 | [1.00, 1.00] |       | &lt; .001</span>
+<span class="co">#&gt; speed =~ x8   |        1.18 | 0.16 | [0.86, 1.50] |  7.15 | &lt; .001</span>
+<span class="co">#&gt; speed =~ x9   |        1.08 | 0.15 | [0.79, 1.38] |  7.15 | &lt; .001</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; # Correlation</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Link              | Coefficient |   SE |       95% CI |      p</span>
-<span class="co">#&gt; --------------------------------------------------------------</span>
-<span class="co">#&gt; visual ~~ textual |        0.41 | 0.07 | [0.26, 0.55] | &lt; .001</span>
-<span class="co">#&gt; visual ~~ speed   |        0.26 | 0.06 | [0.15, 0.37] | &lt; .001</span>
-<span class="co">#&gt; textual ~~ speed  |        0.17 | 0.05 | [0.08, 0.27] | &lt; .001</span>
+<span class="co">#&gt; Link              | Coefficient |   SE |       95% CI |    z |      p</span>
+<span class="co">#&gt; ---------------------------------------------------------------------</span>
+<span class="co">#&gt; visual ~~ textual |        0.41 | 0.07 | [0.26, 0.55] | 5.55 | &lt; .001</span>
+<span class="co">#&gt; visual ~~ speed   |        0.26 | 0.06 | [0.15, 0.37] | 4.66 | &lt; .001</span>
+<span class="co">#&gt; textual ~~ speed  |        0.17 | 0.05 | [0.08, 0.27] | 3.52 | &lt; .001</span>
 
 <span class="co"># using hybrid function</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span><span class="op">(</span><span class="va">mod_lavaan</span>, exponentiate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 12 x 9</span>
-<span class="co">#&gt;    to      operator from    estimate std.error conf.low conf.high  p.value</span>
-<span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 visual  =~       x1         1        0        1          1     0.      </span>
-<span class="co">#&gt;  2 visual  =~       x2         0.554    0.0997   0.358      0.749 2.80e- 8</span>
-<span class="co">#&gt;  3 visual  =~       x3         0.729    0.109    0.516      0.943 2.31e-11</span>
-<span class="co">#&gt;  4 textual =~       x4         1        0        1          1     0.      </span>
-<span class="co">#&gt;  5 textual =~       x5         1.11     0.0654   0.985      1.24  0.      </span>
-<span class="co">#&gt;  6 textual =~       x6         0.926    0.0554   0.817      1.03  0.      </span>
-<span class="co">#&gt;  7 speed   =~       x7         1        0        1          1     0.      </span>
-<span class="co">#&gt;  8 speed   =~       x8         1.18     0.165    0.857      1.50  8.56e-13</span>
-<span class="co">#&gt;  9 speed   =~       x9         1.08     0.151    0.785      1.38  8.40e-13</span>
-<span class="co">#&gt; 10 visual  ~~       textual    0.408    0.0735   0.264      0.552 2.82e- 8</span>
-<span class="co">#&gt; 11 visual  ~~       speed      0.262    0.0563   0.152      0.373 3.17e- 6</span>
-<span class="co">#&gt; 12 textual ~~       speed      0.173    0.0493   0.0768     0.270 4.35e- 4</span>
-<span class="co">#&gt;    type       </span>
-<span class="co">#&gt;    &lt;chr&gt;      </span>
-<span class="co">#&gt;  1 Loading    </span>
-<span class="co">#&gt;  2 Loading    </span>
-<span class="co">#&gt;  3 Loading    </span>
-<span class="co">#&gt;  4 Loading    </span>
-<span class="co">#&gt;  5 Loading    </span>
-<span class="co">#&gt;  6 Loading    </span>
-<span class="co">#&gt;  7 Loading    </span>
-<span class="co">#&gt;  8 Loading    </span>
-<span class="co">#&gt;  9 Loading    </span>
-<span class="co">#&gt; 10 Correlation</span>
-<span class="co">#&gt; 11 Correlation</span>
-<span class="co">#&gt; 12 Correlation</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 12 x 10</span>
+<span class="co">#&gt;    to      operator from    estimate std.error conf.low conf.high statistic</span>
+<span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 visual  =~       x1         1        0        1          1         NA   </span>
+<span class="co">#&gt;  2 visual  =~       x2         0.554    0.0997   0.358      0.749      5.55</span>
+<span class="co">#&gt;  3 visual  =~       x3         0.729    0.109    0.516      0.943      6.68</span>
+<span class="co">#&gt;  4 textual =~       x4         1        0        1          1         NA   </span>
+<span class="co">#&gt;  5 textual =~       x5         1.11     0.0654   0.985      1.24      17.0 </span>
+<span class="co">#&gt;  6 textual =~       x6         0.926    0.0554   0.817      1.03      16.7 </span>
+<span class="co">#&gt;  7 speed   =~       x7         1        0        1          1         NA   </span>
+<span class="co">#&gt;  8 speed   =~       x8         1.18     0.165    0.857      1.50       7.15</span>
+<span class="co">#&gt;  9 speed   =~       x9         1.08     0.151    0.785      1.38       7.15</span>
+<span class="co">#&gt; 10 visual  ~~       textual    0.408    0.0735   0.264      0.552      5.55</span>
+<span class="co">#&gt; 11 visual  ~~       speed      0.262    0.0563   0.152      0.373      4.66</span>
+<span class="co">#&gt; 12 textual ~~       speed      0.173    0.0493   0.0768     0.270      3.52</span>
+<span class="co">#&gt;     p.value component  </span>
+<span class="co">#&gt;       &lt;dbl&gt; &lt;chr&gt;      </span>
+<span class="co">#&gt;  1 0        Loading    </span>
+<span class="co">#&gt;  2 2.80e- 8 Loading    </span>
+<span class="co">#&gt;  3 2.31e-11 Loading    </span>
+<span class="co">#&gt;  4 0        Loading    </span>
+<span class="co">#&gt;  5 0        Loading    </span>
+<span class="co">#&gt;  6 0        Loading    </span>
+<span class="co">#&gt;  7 0        Loading    </span>
+<span class="co">#&gt;  8 8.56e-13 Loading    </span>
+<span class="co">#&gt;  9 8.40e-13 Loading    </span>
+<span class="co">#&gt; 10 2.82e- 8 Correlation</span>
+<span class="co">#&gt; 11 3.17e- 6 Correlation</span>
+<span class="co">#&gt; 12 4.35e- 4 Correlation</span></code></pre></div>
 <p><font color="green"> Additionally, the <em>p</em>-values and confidence intervals for regression estimates are consistently included. </font></p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># setup</span>
@@ -593,9 +595,9 @@
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">clm.mod</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 6</span>
-<span class="co">#&gt;     edf   AIC   BIC logLik   df.residual  nobs</span>
-<span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;logLik&gt;       &lt;dbl&gt; &lt;dbl&gt;</span>
-<span class="co">#&gt; 1     7  187.  203. -86.4162          65    72</span>
+<span class="co">#&gt;     edf   AIC   BIC logLik df.residual  nobs</span>
+<span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt; 1     7  187.  203.  -86.4          65    72</span>
 
 <span class="co"># in case no glance method is available (`NULL` will be returned)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/acf.html">acf</a></span><span class="op">(</span><span class="va">lh</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span>
@@ -638,7 +640,7 @@
 <span class="co">#&gt;  8        1        1        1 -101.  </span>
 <span class="co">#&gt;  9        1        1        1   19.6 </span>
 <span class="co">#&gt; 10        1        1        1   35.7 </span>
-<span class="co">#&gt; # ... with 170 more rows</span>
+<span class="co">#&gt; # … with 170 more rows</span>
 
 <span class="co"># linear model</span>
 <span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
@@ -656,7 +658,7 @@
 <span class="co">#&gt;  8     290.     7    325. -34.5  0.00976   47.8 0.00261      -0.727 </span>
 <span class="co">#&gt;  9     431.     8    335.  95.4  0.0138    47.3 0.0284        2.01  </span>
 <span class="co">#&gt; 10     466.     9    346. 121.   0.0192    47.0 0.0639        2.56  </span>
-<span class="co">#&gt; # ... with 170 more rows</span>
+<span class="co">#&gt; # … with 170 more rows</span>
 
 <span class="co"># another example with `broom`</span>
 <span class="co"># cumulative Link Models</span>
@@ -675,7 +677,7 @@
 <span class="co">#&gt;  8       90 5      warm  yes     8      1      0.286 </span>
 <span class="co">#&gt;  9       17 1      cold  no      1      2      0.196 </span>
 <span class="co">#&gt; 10       22 2      cold  no      2      2      0.562 </span>
-<span class="co">#&gt; # ... with 62 more rows</span>
+<span class="co">#&gt; # … with 62 more rows</span>
 
 <span class="co"># in case no augment method is available (`NULL` will be returned)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">wt</span> <span class="op">~</span> <span class="va">am</span>, <span class="va">mtcars</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
@@ -718,7 +720,7 @@
 <span class="co">#&gt;  8 Good  D     carat    5207.     115.       45.4 2.66e-145</span>
 <span class="co">#&gt;  9 Good  E     carat    5102.      91.9      55.5 2.50e-206</span>
 <span class="co">#&gt; 10 Good  F     carat    5151.      92.4      55.8 1.76e-204</span>
-<span class="co">#&gt; # ... with 25 more rows</span>
+<span class="co">#&gt; # … with 25 more rows</span>
 
 <span class="co"># linear mixed effects model (tidy analysis across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span><span class="op">(</span>
@@ -754,7 +756,7 @@
 <span class="co">#&gt;  8      NA        NA </span>
 <span class="co">#&gt;  9      NA        NA </span>
 <span class="co">#&gt; 10      NA        NA </span>
-<span class="co">#&gt; # ... with 15 more rows</span></code></pre></div>
+<span class="co">#&gt; # … with 15 more rows</span></code></pre></div>
 </div>
 <div id="grouped_glance" class="section level2">
 <h2 class="hasAnchor">
@@ -797,7 +799,7 @@
 <span class="co">#&gt;  8 5966. 5974. 1001144317.         335   336</span>
 <span class="co">#&gt;  9 8173. 8181. 1291712250.         461   462</span>
 <span class="co">#&gt; 10 7998. 8006. 1267954026.         451   452</span>
-<span class="co">#&gt; # ... with 25 more rows</span>
+<span class="co">#&gt; # … with 25 more rows</span>
 
 <span class="co"># linear mixed effects model (model summaries across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span><span class="op">(</span>
@@ -844,7 +846,7 @@
 <span class="co">#&gt;  8 Fair  D      3079  0.91   4605. -1526. 0.00503  1820. 0.00358      -0.841</span>
 <span class="co">#&gt;  9 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744</span>
 <span class="co">#&gt; 10 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744</span>
-<span class="co">#&gt; # ... with 53,930 more rows</span>
+<span class="co">#&gt; # … with 53,930 more rows</span>
 
 <span class="co"># linear mixed-effects model</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span><span class="op">(</span>
@@ -879,7 +881,7 @@
 <span class="co">#&gt;  8        1        1        1  -183.</span>
 <span class="co">#&gt;  9        1        1        1  -448.</span>
 <span class="co">#&gt; 10        1        1        1 -1618.</span>
-<span class="co">#&gt; # ... with 26,960 more rows</span></code></pre></div>
+<span class="co">#&gt; # … with 26,960 more rows</span></code></pre></div>
 </div>
 </div>
 <div id="code-coverage" class="section level1">
