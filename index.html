@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">4.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">4.2.3.9000</span>
       </span>
     </div>
 
@@ -136,28 +136,25 @@
 <div id="installation" class="section level1">
 <h1 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h1>
-<p>To get the latest, stable <code>CRAN</code> release:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"broomExtra"</span><span class="op">)</span></code></pre></div>
-<p>You can get the <strong>development</strong> version of the package from <code>GitHub</code>. To see what new changes (and bug fixes) have been made to the package since the last release on <code>CRAN</code>, you can check the detailed log of changes here: <a href="https://indrajeetpatil.github.io/broomExtra/news/index.html" class="uri">https://indrajeetpatil.github.io/broomExtra/news/index.html</a></p>
-<p>If you are in hurry and want to reduce the time of installation, prefer-</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># needed package to download from GitHub repo</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span>
-  repo <span class="op">=</span> <span class="st">"IndrajeetPatil/broomExtra"</span>, <span class="co"># package path on GitHub</span>
-  quick <span class="op">=</span> <span class="cn">TRUE</span> <span class="co"># skips docs, demos, and vignettes</span>
-<span class="op">)</span></code></pre></div>
-<p>If time is not a constraint-</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span>
-  repo <span class="op">=</span> <span class="st">"IndrajeetPatil/broomExtra"</span>, <span class="co"># package path on GitHub</span>
-  dependencies <span class="op">=</span> <span class="cn">TRUE</span>, <span class="co"># installs packages which broomExtra depends on</span>
-  upgrade_dependencies <span class="op">=</span> <span class="cn">TRUE</span> <span class="co"># updates any out of date dependencies</span>
-<span class="op">)</span></code></pre></div>
-<p>Otherwise, the quicker option is-</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"IndrajeetPatil/broomExtra"</span><span class="op">)</span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th>Type</th>
+<th>Source</th>
+<th>Command</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Release</td>
+<td>CRAN</td>
+<td><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("broomExtra")</a></code></td>
+</tr>
+<tr class="even">
+<td>Development</td>
+<td>GitHub</td>
+<td><code><a href="https://remotes.r-lib.org/reference/install_github.html">remotes::install_github("IndrajeetPatil/broomExtra")</a></code></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="lifecycle" class="section level1">
 <h1 class="hasAnchor">
@@ -206,7 +203,7 @@
 </h2>
 <p><font color="green"> The <code>tidy_parameters</code> will return a model summary either from <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>. </font></p>
 <p>Sometimes the method will not be available in <code>broom</code>, while it will be in <code>parameters</code>:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># mixor object</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st">"mixor"</span><span class="op">)</span>
@@ -251,7 +248,7 @@
 <span class="co">#&gt; 7      Inf  0.251  fixed </span>
 <span class="co">#&gt; 8      Inf  0.137  random</span></code></pre></div>
 <p>While other times, it will be the other way around:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># model</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">orcutt</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
@@ -286,7 +283,7 @@
 <span class="co">#&gt; 4       27 0.903</span></code></pre></div>
 <p><font color="green"> These functions are robust such that they won’t fail if the <code>...</code> contains misspecified arguments. </font></p>
 <p>This makes these functions much easier to work with while writing wrapper functions around <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># setup</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lavaan.ugent.be">lavaan</a></span><span class="op">)</span>
@@ -366,7 +363,7 @@
 <span class="co">#&gt; 11 3.17e- 6 Correlation</span>
 <span class="co">#&gt; 12 4.35e- 4 Correlation</span></code></pre></div>
 <p><font color="green"> Additionally, the <em>p</em>-values and confidence intervals for regression estimates are consistently included. </font></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># setup</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.stats.ox.ac.uk/pub/MASS4/">MASS</a></span><span class="op">)</span>
@@ -403,7 +400,7 @@
 <a href="#benefits-of-using-glance_performance" class="anchor"></a>Benefits of using <code>glance_performance</code>
 </h2>
 <p><font color="green"> The <code>glance_performance</code> will return a model summary either from <code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance</a></code> or <code><a href="https://easystats.github.io/performance/reference/model_performance.html">performance::model_performance</a></code>. </font></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># mixor object</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st">"mixor"</span><span class="op">)</span>
@@ -431,7 +428,7 @@
 <span class="co">#&gt;    &lt;dbl&gt;  &lt;dbl&gt;</span>
 <span class="co">#&gt; 1 -2128. -2133.</span></code></pre></div>
 <p>Sometimes the method will be available in <code>broom</code>, but not in <code>easystats</code>, but <code>glance_performance</code> will manage to choose the appropriate method for you. For example-</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># model</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">orcutt</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
@@ -454,7 +451,7 @@
 <span class="co">#&gt; 1           2.06               0.521    32</span></code></pre></div>
 <p><font color="green"> Additionally, it will return model summary that contains combined metrics from these two packages. </font></p>
 <p>For example, some unique performance measures are present only in the <code>performance</code> package contains (e.g., Nagelkerke’s <em>R</em>-squared, Tjur’s <em>R</em>-squared, etc.), but not <code>broom</code> package and <em>vice versa</em>.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># setup</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 
@@ -493,7 +490,7 @@
 <h2 class="hasAnchor">
 <a href="#tidy-dataframe" class="anchor"></a>tidy dataframe</h2>
 <p>Let’s get a tidy tibble back containing results from various regression models.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
@@ -539,7 +536,7 @@
 <h2 class="hasAnchor">
 <a href="#model-summaries" class="anchor"></a>model summaries</h2>
 <p>Getting a <code>tibble</code> containing model summary and other performance measures.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
@@ -568,9 +565,9 @@
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">clm.mod</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 6</span>
-<span class="co">#&gt;     edf   AIC   BIC logLik df.residual  nobs</span>
-<span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;</span>
-<span class="co">#&gt; 1     7  187.  203.  -86.4          65    72</span>
+<span class="co">#&gt;     edf   AIC   BIC logLik   df.residual  nobs</span>
+<span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;logLik&gt;       &lt;dbl&gt; &lt;dbl&gt;</span>
+<span class="co">#&gt; 1     7  187.  203. -86.4162          65    72</span>
 
 <span class="co"># in case no glance method is available (`NULL` will be returned)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/acf.html">acf</a></span><span class="op">(</span><span class="va">lh</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span>
@@ -580,7 +577,7 @@
 <h2 class="hasAnchor">
 <a href="#augmented-dataframe" class="anchor"></a>augmented dataframe</h2>
 <p>Getting a <code>tibble</code> by augmenting data with information from an object.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
@@ -665,7 +662,7 @@
 <h2 class="hasAnchor">
 <a href="#grouped_tidy" class="anchor"></a><code>grouped_tidy</code>
 </h2>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
@@ -735,7 +732,7 @@
 <h2 class="hasAnchor">
 <a href="#grouped_glance" class="anchor"></a><code>grouped_glance</code>
 </h2>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 
@@ -795,7 +792,7 @@
 <h2 class="hasAnchor">
 <a href="#grouped_augment" class="anchor"></a><code>grouped_augment</code>
 </h2>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 
@@ -906,7 +903,6 @@
 <li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></li>
 <li><a href="https://cran.r-project.org/web/checks/check_results_broomExtra.html"><img src="https://cranchecks.info/badges/summary/broomExtra" alt="CRAN Checks"></a></li>
 <li><a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis Build Status"></a></li>
-<li><a href="https://ci.appveyor.com/project/IndrajeetPatil/broomExtra"><img src="https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
 <li><a href="https://github.com/IndrajeetPatil/broomExtra/actions"><img src="https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></li>
 <li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a></li>
