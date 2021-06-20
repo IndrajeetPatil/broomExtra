@@ -8,8 +8,6 @@
 Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
 [![Travis Build
 Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra)
 [![pkgdown](https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Daily downloads
@@ -51,43 +49,10 @@ do this would be to contribute either to `broom` or to `parameters`.
 
 # Installation
 
-To get the latest, stable `CRAN` release:
-
-``` r
-install.packages("broomExtra")
-```
-
-You can get the **development** version of the package from `GitHub`. To
-see what new changes (and bug fixes) have been made to the package since
-the last release on `CRAN`, you can check the detailed log of changes
-here: <https://indrajeetpatil.github.io/broomExtra/news/index.html>
-
-If you are in hurry and want to reduce the time of installation, prefer-
-
-``` r
-# needed package to download from GitHub repo
-install.packages("remotes")
-remotes::install_github(
-  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  quick = TRUE # skips docs, demos, and vignettes
-)
-```
-
-If time is not a constraint-
-
-``` r
-remotes::install_github(
-  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  dependencies = TRUE, # installs packages which broomExtra depends on
-  upgrade_dependencies = TRUE # updates any out of date dependencies
-)
-```
-
-Otherwise, the quicker option is-
-
-``` r
-remotes::install_github("IndrajeetPatil/broomExtra")
-```
+| Type        | Source | Command                                                |
+|-------------|--------|--------------------------------------------------------|
+| Release     | CRAN   | `install.packages("broomExtra")`                       |
+| Development | GitHub | `remotes::install_github("IndrajeetPatil/broomExtra")` |
 
 # Lifecycle
 
@@ -531,9 +496,9 @@ broomExtra::glance(lm.mod)
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::glance(clm.mod)
 #> # A tibble: 1 x 6
-#>     edf   AIC   BIC logLik df.residual  nobs
-#>   <int> <dbl> <dbl>  <dbl>       <dbl> <dbl>
-#> 1     7  187.  203.  -86.4          65    72
+#>     edf   AIC   BIC logLik   df.residual  nobs
+#>   <int> <dbl> <dbl> <logLik>       <dbl> <dbl>
+#> 1     7  187.  203. -86.4162          65    72
 
 # in case no glance method is available (`NULL` will be returned)
 broomExtra::glance(acf(lh, plot = FALSE))

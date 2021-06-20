@@ -29,7 +29,6 @@ options(
 [![CRAN_Release_Badge](https://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
 [![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra) 
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/broomExtra?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/broomExtra)
 [![pkgdown](https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
@@ -65,43 +64,10 @@ would be to contribute either to `broom` or to `parameters`.
 
 # Installation
 
-To get the latest, stable `CRAN` release:
-
-```{r installation1, eval = FALSE, warning = FALSE, messsage = FALSE}
-install.packages("broomExtra")
-```
-
-You can get the **development** version of the package from `GitHub`. To see
-what new changes (and bug fixes) have been made to the package since the last
-release on `CRAN`, you can check the detailed log of changes here:
-<https://indrajeetpatil.github.io/broomExtra/news/index.html>
-
-If you are in hurry and want to reduce the time of installation, prefer-
-
-```{r installation2, eval = FALSE, warning = FALSE, messsage = FALSE}
-# needed package to download from GitHub repo
-install.packages("remotes")
-remotes::install_github(
-  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  quick = TRUE # skips docs, demos, and vignettes
-)
-```
-
-If time is not a constraint-
-
-```{r installation3, eval = FALSE, warning = FALSE, messsage = FALSE}
-remotes::install_github(
-  repo = "IndrajeetPatil/broomExtra", # package path on GitHub
-  dependencies = TRUE, # installs packages which broomExtra depends on
-  upgrade_dependencies = TRUE # updates any out of date dependencies
-)
-```
-
-Otherwise, the quicker option is-
-
-```{r install, eval = FALSE}
-remotes::install_github("IndrajeetPatil/broomExtra")
-```
+Type | Source | Command
+---|---|---
+Release | CRAN | `install.packages("broomExtra")`
+Development | GitHub | `remotes::install_github("IndrajeetPatil/broomExtra")`
 
 # Lifecycle
 
