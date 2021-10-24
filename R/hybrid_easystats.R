@@ -1,5 +1,5 @@
 #' @name tidy_parameters
-#' @title Tidy dataframes of model parameters using `broom` and `easystats`.
+#' @title Tidy dataframes of model parameters using `{broom}` and `easystats`.
 #'
 #' @description
 #'
@@ -49,7 +49,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
   # broom family --------------------------------------------
 
-  # check if `broom` family has a tidy method for a given object
+  # check if `{broom}` family has a tidy method for a given object
   if (rlang::is_null(m)) {
     m <- tryCatch(
       expr = broomExtra::tidy(x, conf.int = conf.int, ...),
@@ -63,7 +63,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
 
 #' @name glance_performance
-#' @title Model performance summary dataframes using `broom` and `easystats`.
+#' @title Model performance summary dataframes using `{broom}` and `easystats`.
 #'
 #' @description
 #'
@@ -91,10 +91,10 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
 glance_performance <- function(x, ...) {
   # broom family --------------------------------------------
-  # check if `broom` family has a tidy method for a given object
+  # check if `{broom}` family has a tidy method for a given object
   df_broom <- tryCatch(broomExtra::glance(x, ...), error = function(e) NULL)
 
-  # for consistency with `performance` output, convert column names to lowercase
+  # for consistency with `{performance}` output, convert column names to lowercase
   if (!rlang::is_null(df_broom)) df_broom %<>% dplyr::rename_all(.f = tolower)
 
   # easystats family ---------------------------------------

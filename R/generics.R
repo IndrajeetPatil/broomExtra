@@ -3,8 +3,8 @@
 #'
 #' @description
 #'
-#' Checks if a `tidy` method exits for a given object, either in `broom` or in
-#' `broom.mixed`. If it does, it turn an object into a tidy tibble, if not,
+#' Checks if a `tidy` method exits for a given object, either in `{broom}` or in
+#' `{broom.mixed}`. If it does, it turn an object into a tidy tibble, if not,
 #' return a `NULL`. In this case, you can try the
 #' [broomExtra::tidy_parameters()] function.
 #'
@@ -25,10 +25,10 @@
 #' @export
 
 tidy <- function(x, ...) {
-  # check if `broom` has a tidy method for a given object
+  # check if `{broom}` has a tidy method for a given object
   f <- tryCatch(broom::tidy(x, ...), error = function(e) NULL)
 
-  # if not, check if `broom.mixed` has a tidy method for a given object
+  # if not, check if `{broom.mixed}` has a tidy method for a given object
   if (rlang::is_null(f)) f <- tryCatch(broom.mixed::tidy(x, ...), error = function(e) NULL)
 
   # return the tidy
@@ -41,8 +41,8 @@ tidy <- function(x, ...) {
 #'
 #' @description
 #'
-#' Checks if a `glance` method exits for a given object, either in `broom` or in
-#' `broom.mixed`. If it does, return the model summary dataframe, if not, return
+#' Checks if a `glance` method exits for a given object, either in `{broom}` or in
+#' `{broom.mixed}`. If it does, return the model summary dataframe, if not, return
 #' a `NULL`. In this case, you can try the [broomExtra::glance_performance()]
 #' function.
 #'
@@ -62,10 +62,10 @@ tidy <- function(x, ...) {
 #' @export
 
 glance <- function(x, ...) {
-  # check if `broom` has a glance method for a given object
+  # check if `{broom}` has a glance method for a given object
   f <- tryCatch(broom::glance(x, ...), error = function(e) NULL)
 
-  # if not, check if `broom.mixed` has a glance method for a given object
+  # if not, check if `{broom.mixed}` has a glance method for a given object
   if (rlang::is_null(f)) f <- tryCatch(broom.mixed::glance(x, ...), error = function(e) NULL)
 
   # return the glance
@@ -76,8 +76,8 @@ glance <- function(x, ...) {
 #' @name augment
 #' @description
 #'
-#' Checks if a `augment` method exits for a given object, either in `broom` or
-#' in `broom.mixed`. If it does, return the model summary dataframe, if not,
+#' Checks if a `augment` method exits for a given object, either in `{broom}` or
+#' in `{broom.mixed}`. If it does, return the model summary dataframe, if not,
 #' return a `NULL`.
 #'
 #' @inheritParams generics::augment
@@ -96,10 +96,10 @@ glance <- function(x, ...) {
 #' @export
 
 augment <- function(x, ...) {
-  # check if `broom` has a augment method for a given object
+  # check if `{broom}` has a augment method for a given object
   f <- tryCatch(broom::augment(x, ...), error = function(e) NULL)
 
-  # if not, check if `broom.mixed` has a augment method for a given object
+  # if not, check if `{broom.mixed}` has a augment method for a given object
   if (rlang::is_null(f)) f <- tryCatch(broom.mixed::augment(x, ...), error = function(e) NULL)
 
   # return the augment

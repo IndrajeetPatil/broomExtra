@@ -16,8 +16,8 @@ observations.}
 A \code{\link[tibble:tibble]{tibble::tibble()}} with information about data points.
 }
 \description{
-Checks if a \code{augment} method exits for a given object, either in \code{broom} or
-in \code{broom.mixed}. If it does, return the model summary dataframe, if not,
+Checks if a \code{augment} method exits for a given object, either in \code{{broom}} or
+in \code{{broom.mixed}}. If it does, return the model summary dataframe, if not,
 return a \code{NULL}.
 }
 \examples{

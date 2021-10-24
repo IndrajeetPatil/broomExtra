@@ -24,15 +24,11 @@ options(
 )
 ```
 
-# `broomExtra`: Enhancements for `broom` and `easystats` Package Families 
+# `broomExtra`: Enhancements for `{broom}` and `easystats` Package Families 
 
 [![CRAN_Release_Badge](https://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
-[![CRAN Checks](https://cranchecks.info/badges/summary/broomExtra)](https://cran.r-project.org/web/checks/check_results_broomExtra.html)
-[![Travis Build Status](https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/broomExtra) 
 [![pkgdown](https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![Daily downloads badge](https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
-[![Total downloads badge](https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue)](https://CRAN.R-project.org/package=broomExtra)
 
 # Raison d'être <img src="man/figures/logo.png" align="right" width="360" />
 
@@ -43,10 +39,10 @@ return tidy tibbles containing model parameters and summaries.
 
 The package internally relies on the following packages that I contribute to:
 
-  - `broom`
-  - `broom.mixed`
-  - `parameters`
-  - `performance`
+  - `{broom}`
+  - `{broom.mixed}`
+  - `{parameters}`
+  - `{performance}`
 
 Since it combines functionality from these two ecosystems, this package has the
 following advantages over the underlying individual packages (see examples
@@ -60,7 +56,7 @@ below for concrete instantiations of these benefits):
   - Returns a more comprehensive model performance measure summary.
 
 If you want to add support for a regression model, the natural place to do this
-would be to contribute either to `broom` or to `parameters`.
+would be to contribute either to `{broom}` or to `{parameters}`.
 
 # Installation
 
@@ -80,11 +76,11 @@ Function | Lifecycle
 
 # Hybrid generics
 
-The `broom`-family of packages are not the only ones which return such tidy
+The `{broom}`-family of packages are not the only ones which return such tidy
 summaries for model parameters and model performance. The `easystats`-family of
 packages also provide similar functions, more specifically
 [parameters](https://easystats.github.io/parameters/) and
-[performance](https://easystats.github.io/performance/). Sometimes the `broom`
+[performance](https://easystats.github.io/performance/). Sometimes the `{broom}`
 packages might not contain a `tidy`/`glance` method for a given regression
 object, while `easystats` packages would and *vice versa*. 
 
@@ -97,194 +93,21 @@ with the appropriate method and do so robustly:
   - `broom::glance` + `performance::model_performance` =
     `broomExtra::glance_performance`
 
-## Benefits of using `tidy_parameters` 
+Benefits of using hybrid generics
 
-<font color="green">
-The `tidy_parameters` will return a model summary either from `broomExtra::tidy`
-or `parameters::model_parameters`.
-</font>
+- The `tidy_parameters` will return a model summary either from `broomExtra::tidy`
+or `parameters::model_parameters`, so you get best of the both worlds.
 
-Sometimes the method will not be available in `broom`, while it will be in
-`parameters`:
 
-```{r tidy_parameters1}
-# mixor object
-set.seed(123)
-library("mixor")
-data("SmokingPrevention")
-
-# data frame must be sorted by id variable
-SmokingPrevention <- SmokingPrevention[order(SmokingPrevention$class), ]
-
-# school model
-mod_mixor <-
-  mixor(
-    formula = thksord ~ thkspre + cc + tv + cctv,
-    data = SmokingPrevention,
-    id = school, link = "logit"
-  )
-
-# tidier in `broom`-family?
-broomExtra::tidy(mod_mixor)
-
-# using hybrid function
-broomExtra::tidy_parameters(mod_mixor)
-```
-
-While other times, it will be the other way around:
-
-```{r tidy_parameters2}
-# model
-library(orcutt)
-set.seed(123)
-reg <- stats::lm(formula = mpg ~ wt + qsec + disp, data = mtcars)
-co <- orcutt::cochrane.orcutt(reg)
-
-# no tidier available in `parameters`
-parameters::model_parameters(co)
-
-# `tidy_parameters` still won't fail
-broomExtra::tidy_parameters(co)
-```
-
-<font color="green">
-These functions are robust such that they won't fail if the `...` contains
-misspecified arguments.
-</font>
-
-This makes these functions much easier to work with while writing wrapper
+- These functions are robust such that they won't fail if the `...` contains
+misspecified arguments. This makes these functions much easier to work with while writing wrapper
 functions around `broomExtra::tidy` or `parameters::model_parameters`.
-
-```{r tidy_parameters3}
-# setup
-set.seed(123)
-library(lavaan)
-
-# model specs
-HS.model <- " visual  =~ x1 + x2 + x3
-              textual =~ x4 + x5 + x6
-              speed   =~ x7 + x8 + x9 "
-
-# model
-mod_lavaan <-
-  lavaan(
-    HS.model,
-    data = HolzingerSwineford1939,
-    auto.var = TRUE,
-    auto.fix.first = TRUE,
-    auto.cov.lv.x = TRUE
-  )
-
-# tidy method with additional arguments
-broom::tidy(mod_lavaan, exponentiate = TRUE)
-
-# parameters method with additional arguments
-parameters::model_parameters(mod_lavaan, exponentiate = TRUE)
-
-# using hybrid function
-broomExtra::tidy_parameters(mod_lavaan, exponentiate = TRUE)
-```
-
-<font color="green">
-Additionally, the *p*-values and confidence intervals for regression estimates
-are consistently included.
-</font>
-
-```{r tidy_parameters4}
-# setup
-set.seed(123)
-library(MASS)
-mod <- rlm(stack.loss ~ ., stackloss)
-
-# broom output (no p-values present)
-broomExtra::tidy(mod, conf.int = TRUE)
-
-# using `tidy_parameters` (p-values present)
-broomExtra::tidy_parameters(mod)
-```
-
-## Benefits of using `glance_performance`
-
-<font color="green">
-The `glance_performance` will return a model summary either from `broom::glance`
-or `performance::model_performance`.
-</font>
-
-```{r glance_performanc1}
-# mixor object
-set.seed(123)
-library("mixor")
-data("SmokingPrevention")
-
-# data frame must be sorted by id variable
-SmokingPrevention <- SmokingPrevention[order(SmokingPrevention$class), ]
-
-# school model
-mod_mixor <-
-  mixor(
-    formula = thksord ~ thkspre + cc + tv + cctv,
-    data = SmokingPrevention,
-    id = school, link = "logit"
-  )
-
-# glance method in `broom`-family?
-broomExtra::glance(mod_mixor)
-
-# using hybrid function
-broomExtra::glance_performance(mod_mixor)
-```
-
-Sometimes the method will be available in `broom`, but not in `easystats`, but
-`glance_performance` will manage to choose the appropriate method for you. For
-example-
-
-```{r glance_performanc2}
-# model
-library(orcutt)
-set.seed(123)
-reg <- stats::lm(formula = mpg ~ wt + qsec + disp, data = mtcars)
-co <- orcutt::cochrane.orcutt(reg)
-
-# no method available in `performance`
-performance::model_performance(co)
-
-# `glance_performance` doesn't fail
-broomExtra::glance_performance(co)
-```
-
-<font color="green">
-Additionally, it will return model summary that contains combined metrics from
-these two packages.
-</font>
-
-For example, some unique performance measures are present only in the
-`performance` package contains (e.g., Nagelkerke's *R*-squared, Tjur's
-*R*-squared, etc.), but not `broom` package and *vice versa*.
-
-```{r glance_performanc3}
-# setup
-set.seed(123)
-
-# model
-model <-
-  stats::glm(
-    formula = am ~ wt + cyl,
-    data = mtcars,
-    family = binomial
-  )
-
-# `broom` output
-broomExtra::glance(model)
-
-# combined output
-broomExtra::glance_performance(model)
-```
 
 # Generic functions
 
 Currently, `S3` methods for mixed-effects model objects are included in the
-`broom.mixed` package, while the rest of the object classes are included in the
-`broom` package. This means that you constantly need to keep track of the class
+`{broom.mixed}` package, while the rest of the object classes are included in the
+`{broom}` package. This means that you constantly need to keep track of the class
 of the object (e.g., "if it is `merMod` object, use
 `broom.mixed::tidy()`/`broom.mixed::glance()`/`broom.mixed::augment()`, but if
 it is `polr` object, use `broom::tidy()`/`broom::glance()`/`broom::augment()`").
@@ -303,15 +126,15 @@ set.seed(123)
 library(lme4)
 library(ordinal)
 
-# mixed-effects models (`broom.mixed` will be used)
+# mixed-effects models (`{broom.mixed}` will be used)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::tidy(x = lmm.mod, effects = "fixed")
 
-# linear model (`broom` will be used)
+# linear model (`{broom}` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::tidy(lm.mod, conf.int = TRUE)
 
-# another example with `broom`
+# another example with `{broom}`
 # cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::tidy(x = clm.mod, exponentiate = TRUE)
@@ -337,7 +160,7 @@ broomExtra::glance(lmm.mod)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 
-# another example with `broom`
+# another example with `{broom}`
 # cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::glance(clm.mod)
@@ -363,7 +186,7 @@ broomExtra::augment(lmm.mod)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::augment(lm.mod)
 
-# another example with `broom`
+# another example with `{broom}`
 # cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::augment(x = clm.mod, newdata = wine, type.predict = "prob")
@@ -462,5 +285,5 @@ broomExtra::grouped_augment(
 
 The hexsticker was generously designed by Sarah Otterstetter (Max Planck
 Institute for Human Development, Berlin). Thanks are also due to the maintainers
-and contributors to `broom`- and `easystats`-package families who have indulged
+and contributors to `{broom}`- and `easystats`-package families who have indulged
 in all my feature requests. `r emo::ji("smile")`

@@ -2,7 +2,7 @@
 % Please edit documentation in R/hybrid_easystats.R
 \name{glance_performance}
 \alias{glance_performance}
-\title{Model performance summary dataframes using \code{broom} and \code{easystats}.}
+\title{Model performance summary dataframes using \code{{broom}} and \code{easystats}.}
 \usage{
 glance_performance(x, ...)
 }
