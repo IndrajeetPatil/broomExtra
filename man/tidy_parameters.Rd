@@ -2,7 +2,7 @@
 % Please edit documentation in R/hybrid_easystats.R
 \name{tidy_parameters}
 \alias{tidy_parameters}
-\title{Tidy dataframes of model parameters using \code{{broom}} and \code{easystats}.}
+\title{Tidy dataframes of model parameters using \code{{broom}} and \code{{easystats}}.}
 \usage{
 tidy_parameters(x, conf.int = TRUE, ...)
 }

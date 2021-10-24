@@ -1,5 +1,5 @@
 #' @name tidy_parameters
-#' @title Tidy dataframes of model parameters using `{broom}` and `easystats`.
+#' @title Tidy dataframes of model parameters using `{broom}` and `{easystats}`.
 #'
 #' @description
 #'
@@ -33,7 +33,7 @@
 tidy_parameters <- function(x, conf.int = TRUE, ...) {
   # easystats family ---------------------------------------
 
-  # check if `easystats` family has a tidy method for a given object
+  # check if `{easystats}` family has a tidy method for a given object
   m <- tryCatch(
     expr = standardize_names(parameters::model_parameters(x, ...), style = "broom"),
     error = function(e) NULL
@@ -63,7 +63,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
 
 #' @name glance_performance
-#' @title Model performance summary dataframes using `{broom}` and `easystats`.
+#' @title Model performance summary dataframes using `{broom}` and `{easystats}`.
 #'
 #' @description
 #'
@@ -98,7 +98,7 @@ glance_performance <- function(x, ...) {
   if (!rlang::is_null(df_broom)) df_broom %<>% dplyr::rename_all(.f = tolower)
 
   # easystats family ---------------------------------------
-  # check if `easystats` family has a tidy method for a given object
+  # check if `{easystats}` family has a tidy method for a given object
   df_performance <- tryCatch(
     expr = standardize_names(
       data = performance::model_performance(x, metrics = "all", ...),

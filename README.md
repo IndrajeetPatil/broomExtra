@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `broomExtra`: Enhancements for `{broom}` and `easystats` Package Families
+# `{broomExtra}`: Enhancements for `{broom}` and `{easystats}` Package Families
 
 [![CRAN_Release_Badge](https://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![pkgdown](https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions)
@@ -9,7 +9,7 @@
 
 # Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
 
-The goal of `broomExtra` is to provide helper functions that assist in
+The goal of `{broomExtra}` is to provide helper functions that assist in
 data analysis workflows involving regression analyses. The goal is to
 combine the functionality offered by different set of packages through a
 common syntax to return tidy tibbles containing model parameters and
@@ -59,14 +59,14 @@ do this would be to contribute either to `{broom}` or to `{parameters}`.
 
 The `{broom}`-family of packages are not the only ones which return such
 tidy summaries for model parameters and model performance. The
-`easystats`-family of packages also provide similar functions, more
+`{easystats}`-family of packages also provide similar functions, more
 specifically [parameters](https://easystats.github.io/parameters/) and
 [performance](https://easystats.github.io/performance/). Sometimes the
 `{broom}` packages might not contain a `tidy`/`glance` method for a
-given regression object, while `easystats` packages would and *vice
+given regression object, while `{easystats}` packages would and *vice
 versa*.
 
-The hybrid functions in `broomExtra` make it easy to retrieve these
+The hybrid functions in `{broomExtra}` make it easy to retrieve these
 summaries with the appropriate method and do so robustly:
 
 -   `broom::tidy` + `parameters::model_parameters` =
@@ -97,8 +97,8 @@ object, use
 but if it is `polr` object, use
 `broom::tidy()`/`broom::glance()`/`broom::augment()`”).
 
-Using generics from `broomExtra` means you no longer have to worry about
-this, as calling
+Using generics from `{broomExtra}` means you no longer have to worry
+about this, as calling
 `broomExtra::tidy()`/`broomExtra::glance()`/`broomExtra::augment()` will
 search the appropriate method from these two packages and return the
 results.
@@ -480,5 +480,5 @@ broomExtra::grouped_augment(
 
 The hexsticker was generously designed by Sarah Otterstetter (Max Planck
 Institute for Human Development, Berlin). Thanks are also due to the
-maintainers and contributors to `{broom}`- and `easystats`-package
+maintainers and contributors to `{broom}`- and `{easystats}`-package
 families who have indulged in all my feature requests. 😄
