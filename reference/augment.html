@@ -75,8 +75,8 @@
   
 
 <meta property="og:title" content="Retrieve augmented dataframe if it exists. — augment" />
-<meta property="og:description" content="Checks if a augment method exits for a given object, either in broom or
-in broom.mixed. If it does, return the model summary dataframe, if not,
+<meta property="og:description" content="Checks if a augment method exits for a given object, either in {broom} or
+in {broom.mixed}. If it does, return the model summary dataframe, if not,
 return a NULL." />
 <meta property="og:image" content="https://indrajeetpatil.github.io/broomExtra/logo.png" />
 
@@ -163,8 +163,8 @@ return a NULL." />
     </div>
 
     <div class="ref-description">
-    <p>Checks if a <code>augment</code> method exits for a given object, either in <code>broom</code> or
-in <code>broom.mixed</code>. If it does, return the model summary dataframe, if not,
+    <p>Checks if a <code>augment</code> method exits for a given object, either in <code>{broom}</code> or
+in <code>{broom.mixed}</code>. If it does, return the model summary dataframe, if not,
 return a <code>NULL</code>.</p>
     </div>
 
@@ -195,7 +195,7 @@ observations.</p></td>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span>
 <span class='va'>lm.mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Sepal.Length</span> <span class='op'>~</span> <span class='va'>Species</span>, <span class='va'>iris</span><span class='op'>)</span>
 <span class='fu'>broomExtra</span><span class='fu'>::</span><span class='fu'>augment</span><span class='op'>(</span><span class='va'>lm.mod</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 150 x 8</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 150 × 8</span>
 #&gt;    Sepal.Length Species .fitted   .resid   .hat .sigma     .cooksd .std.resid
 #&gt;           <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>
 #&gt; <span style='color: #BCBCBC;'> 1</span>          5.1 setosa     5.01  0.094<span style='text-decoration: underline;'>0</span>  0.020<span style='text-decoration: underline;'>0</span>  0.516 0.000<span style='text-decoration: underline;'>231</span>        0.184 

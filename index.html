@@ -108,7 +108,7 @@
 
 <div id="broomextra-enhancements-for-broom-and-easystats-package-families" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#broomextra-enhancements-for-broom-and-easystats-package-families" class="anchor"></a><code>broomExtra</code>: Enhancements for <code>broom</code> and <code>easystats</code> Package Families</h1></div>
+<a href="#broomextra-enhancements-for-broom-and-easystats-package-families" class="anchor"></a><code>broomExtra</code>: Enhancements for <code>{broom}</code> and <code>easystats</code> Package Families</h1></div>
 
 </div>
 <div id="raison-dêtre-" class="section level1">
@@ -118,10 +118,10 @@
 <p>The goal of <code>broomExtra</code> is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax to return tidy tibbles containing model parameters and summaries.</p>
 <p>The package internally relies on the following packages that I contribute to:</p>
 <ul>
-<li><code>broom</code></li>
-<li><code>broom.mixed</code></li>
-<li><code>parameters</code></li>
-<li><code>performance</code></li>
+<li><a href="https://broom.tidymodels.org/">broom</a></li>
+<li><a href="https://github.com/bbolker/broom.mixed">broom.mixed</a></li>
+<li><a href="https://easystats.github.io/parameters/">parameters</a></li>
+<li><a href="https://easystats.github.io/performance/">performance</a></li>
 </ul>
 <p>Since it combines functionality from these two ecosystems, this package has the following advantages over the underlying individual packages (see examples below for concrete instantiations of these benefits):</p>
 <ul>
@@ -131,7 +131,7 @@
 <li>Follows consistent <code>tidymodels</code> column-naming schema.</li>
 <li>Returns a more comprehensive model performance measure summary.</li>
 </ul>
-<p>If you want to add support for a regression model, the natural place to do this would be to contribute either to <code>broom</code> or to <code>parameters</code>.</p>
+<p>If you want to add support for a regression model, the natural place to do this would be to contribute either to <a href="https://broom.tidymodels.org/">broom</a> or to <a href="https://easystats.github.io/parameters/">parameters</a>.</p>
 </div>
 <div id="installation" class="section level1">
 <h1 class="hasAnchor">
@@ -191,311 +191,33 @@
 <div id="hybrid-generics" class="section level1">
 <h1 class="hasAnchor">
 <a href="#hybrid-generics" class="anchor"></a>Hybrid generics</h1>
-<p>The <code>broom</code>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>easystats</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <code>broom</code> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>easystats</code> packages would and <em>vice versa</em>.</p>
+<p>The <a href="https://broom.tidymodels.org/">broom</a>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>easystats</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <a href="https://broom.tidymodels.org/">broom</a> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>easystats</code> packages would and <em>vice versa</em>.</p>
 <p>The hybrid functions in <code>broomExtra</code> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
 <ul>
 <li><p><code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy</a></code> + <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code> = <code><a href="reference/tidy_parameters.html">broomExtra::tidy_parameters</a></code></p></li>
 <li><p><code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance</a></code> + <code><a href="https://easystats.github.io/performance/reference/model_performance.html">performance::model_performance</a></code> = <code><a href="reference/glance_performance.html">broomExtra::glance_performance</a></code></p></li>
 </ul>
-<div id="benefits-of-using-tidy_parameters" class="section level2">
-<h2 class="hasAnchor">
-<a href="#benefits-of-using-tidy_parameters" class="anchor"></a>Benefits of using <code>tidy_parameters</code>
-</h2>
-<p><font color="green"> The <code>tidy_parameters</code> will return a model summary either from <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>. </font></p>
-<p>Sometimes the method will not be available in <code>broom</code>, while it will be in <code>parameters</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># mixor object</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st">"mixor"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"SmokingPrevention"</span><span class="op">)</span>
-
-<span class="co"># data frame must be sorted by id variable</span>
-<span class="va">SmokingPrevention</span> <span class="op">&lt;-</span> <span class="va">SmokingPrevention</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="va">SmokingPrevention</span><span class="op">$</span><span class="va">class</span><span class="op">)</span>, <span class="op">]</span>
-
-<span class="co"># school model</span>
-<span class="va">mod_mixor</span> <span class="op">&lt;-</span>
-  <span class="fu">mixor</span><span class="op">(</span>
-    formula <span class="op">=</span> <span class="va">thksord</span> <span class="op">~</span> <span class="va">thkspre</span> <span class="op">+</span> <span class="va">cc</span> <span class="op">+</span> <span class="va">tv</span> <span class="op">+</span> <span class="va">cctv</span>,
-    data <span class="op">=</span> <span class="va">SmokingPrevention</span>,
-    id <span class="op">=</span> <span class="va">school</span>, link <span class="op">=</span> <span class="st">"logit"</span>
-  <span class="op">)</span>
-
-<span class="co"># tidier in `broom`-family?</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">mod_mixor</span><span class="op">)</span>
-<span class="co">#&gt; NULL</span>
-
-<span class="co"># using hybrid function</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span><span class="op">(</span><span class="va">mod_mixor</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 8 x 10</span>
-<span class="co">#&gt;   term               estimate std.error conf.level conf.low conf.high statistic</span>
-<span class="co">#&gt;   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 (Intercept)          0.0882    0.313        0.95  -0.526      0.702     0.282</span>
-<span class="co">#&gt; 2 Threshold2           1.24      0.0883       0.95   1.07       1.41     14.1  </span>
-<span class="co">#&gt; 3 Threshold3           2.42      0.0836       0.95   2.26       2.58     28.9  </span>
-<span class="co">#&gt; 4 thkspre              0.403     0.0429       0.95   0.319      0.487     9.39 </span>
-<span class="co">#&gt; 5 cc                   0.924     0.371        0.95   0.196      1.65      2.49 </span>
-<span class="co">#&gt; 6 tv                   0.275     0.315        0.95  -0.342      0.893     0.873</span>
-<span class="co">#&gt; 7 cctv                -0.466     0.406        0.95  -1.26       0.330    -1.15 </span>
-<span class="co">#&gt; 8 Random.(Intercept)   0.0735    0.0495       0.95  -0.0235     0.170     1.49 </span>
-<span class="co">#&gt;   df.error p.value effect</span>
-<span class="co">#&gt;      &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; </span>
-<span class="co">#&gt; 1      Inf  0.778  fixed </span>
-<span class="co">#&gt; 2      Inf  0      fixed </span>
-<span class="co">#&gt; 3      Inf  0      fixed </span>
-<span class="co">#&gt; 4      Inf  0      fixed </span>
-<span class="co">#&gt; 5      Inf  0.0128 fixed </span>
-<span class="co">#&gt; 6      Inf  0.383  fixed </span>
-<span class="co">#&gt; 7      Inf  0.251  fixed </span>
-<span class="co">#&gt; 8      Inf  0.137  random</span></code></pre></div>
-<p>While other times, it will be the other way around:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># model</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">orcutt</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="va">reg</span> <span class="op">&lt;-</span> <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="va">mpg</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">qsec</span> <span class="op">+</span> <span class="va">disp</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span>
-<span class="va">co</span> <span class="op">&lt;-</span> <span class="fu">orcutt</span><span class="fu">::</span><span class="fu">cochrane.orcutt</span><span class="op">(</span><span class="va">reg</span><span class="op">)</span>
-
-<span class="co"># no tidier available in `parameters`</span>
-<span class="fu">parameters</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/parameters/reference/model_parameters.html">model_parameters</a></span><span class="op">(</span><span class="va">co</span><span class="op">)</span>
-<span class="co">#&gt; # Fixed Effects</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Parameter   | Coefficient |   SE |         95% CI | t(27) |     p</span>
-<span class="co">#&gt; -----------------------------------------------------------------</span>
-<span class="co">#&gt; (Intercept) |       21.81 | 6.63 | [ 8.82, 34.81] |  3.29 | 0.003</span>
-<span class="co">#&gt; wt          |       -4.85 | 1.33 | [-7.46, -2.24] | -3.65 | 0.001</span>
-<span class="co">#&gt; qsec        |        0.80 | 0.37 | [ 0.07,  1.52] |  2.15 | 0.040</span>
-<span class="co">#&gt; disp        |   -1.36e-03 | 0.01 | [-0.02,  0.02] | -0.12 | 0.903</span>
-
-<span class="co"># `tidy_parameters` still won't fail</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span><span class="op">(</span><span class="va">co</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 4 x 9</span>
-<span class="co">#&gt;   term        estimate std.error conf.level conf.low conf.high statistic</span>
-<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 (Intercept) 21.8        6.63         0.95   8.82     34.8        3.29 </span>
-<span class="co">#&gt; 2 wt          -4.85       1.33         0.95  -7.46     -2.24      -3.65 </span>
-<span class="co">#&gt; 3 qsec         0.797      0.370        0.95   0.0722    1.52       2.15 </span>
-<span class="co">#&gt; 4 disp        -0.00136    0.0110       0.95  -0.0230    0.0203    -0.123</span>
-<span class="co">#&gt;   df.error p.value</span>
-<span class="co">#&gt;      &lt;dbl&gt;   &lt;dbl&gt;</span>
-<span class="co">#&gt; 1       27 0.00279</span>
-<span class="co">#&gt; 2       27 0.00112</span>
-<span class="co">#&gt; 3       27 0.0402 </span>
-<span class="co">#&gt; 4       27 0.903</span></code></pre></div>
-<p><font color="green"> These functions are robust such that they won’t fail if the <code>...</code> contains misspecified arguments. </font></p>
-<p>This makes these functions much easier to work with while writing wrapper functions around <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># setup</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lavaan.ugent.be">lavaan</a></span><span class="op">)</span>
-
-<span class="co"># model specs</span>
-<span class="va">HS.model</span> <span class="op">&lt;-</span> <span class="st">" visual  =~ x1 + x2 + x3
-              textual =~ x4 + x5 + x6
-              speed   =~ x7 + x8 + x9 "</span>
-
-<span class="co"># model</span>
-<span class="va">mod_lavaan</span> <span class="op">&lt;-</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/lavaan.html">lavaan</a></span><span class="op">(</span>
-    <span class="va">HS.model</span>,
-    data <span class="op">=</span> <span class="va">HolzingerSwineford1939</span>,
-    auto.var <span class="op">=</span> <span class="cn">TRUE</span>,
-    auto.fix.first <span class="op">=</span> <span class="cn">TRUE</span>,
-    auto.cov.lv.x <span class="op">=</span> <span class="cn">TRUE</span>
-  <span class="op">)</span>
-
-<span class="co"># tidy method with additional arguments</span>
-<span class="fu">broom</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">mod_lavaan</span>, exponentiate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; Error in lavaan::parameterEstimates(x, ci = conf.int, level = conf.level, : unused argument (exponentiate = TRUE)</span>
-
-<span class="co"># parameters method with additional arguments</span>
-<span class="fu">parameters</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/parameters/reference/model_parameters.html">model_parameters</a></span><span class="op">(</span><span class="va">mod_lavaan</span>, exponentiate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; # Loading</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Link          | Coefficient |   SE |       95% CI |     z |      p</span>
-<span class="co">#&gt; ------------------------------------------------------------------</span>
-<span class="co">#&gt; visual =~ x1  |        1.00 | 0.00 | [1.00, 1.00] |       | &lt; .001</span>
-<span class="co">#&gt; visual =~ x2  |        0.55 | 0.10 | [0.36, 0.75] |  5.55 | &lt; .001</span>
-<span class="co">#&gt; visual =~ x3  |        0.73 | 0.11 | [0.52, 0.94] |  6.68 | &lt; .001</span>
-<span class="co">#&gt; textual =~ x4 |        1.00 | 0.00 | [1.00, 1.00] |       | &lt; .001</span>
-<span class="co">#&gt; textual =~ x5 |        1.11 | 0.07 | [0.98, 1.24] | 17.01 | &lt; .001</span>
-<span class="co">#&gt; textual =~ x6 |        0.93 | 0.06 | [0.82, 1.03] | 16.70 | &lt; .001</span>
-<span class="co">#&gt; speed =~ x7   |        1.00 | 0.00 | [1.00, 1.00] |       | &lt; .001</span>
-<span class="co">#&gt; speed =~ x8   |        1.18 | 0.16 | [0.86, 1.50] |  7.15 | &lt; .001</span>
-<span class="co">#&gt; speed =~ x9   |        1.08 | 0.15 | [0.79, 1.38] |  7.15 | &lt; .001</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; # Correlation</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Link              | Coefficient |   SE |       95% CI |    z |      p</span>
-<span class="co">#&gt; ---------------------------------------------------------------------</span>
-<span class="co">#&gt; visual ~~ textual |        0.41 | 0.07 | [0.26, 0.55] | 5.55 | &lt; .001</span>
-<span class="co">#&gt; visual ~~ speed   |        0.26 | 0.06 | [0.15, 0.37] | 4.66 | &lt; .001</span>
-<span class="co">#&gt; textual ~~ speed  |        0.17 | 0.05 | [0.08, 0.27] | 3.52 | &lt; .001</span>
-
-<span class="co"># using hybrid function</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span><span class="op">(</span><span class="va">mod_lavaan</span>, exponentiate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 12 x 10</span>
-<span class="co">#&gt;    to      operator from    estimate std.error conf.low conf.high statistic</span>
-<span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 visual  =~       x1         1        0        1          1         NA   </span>
-<span class="co">#&gt;  2 visual  =~       x2         0.554    0.0997   0.358      0.749      5.55</span>
-<span class="co">#&gt;  3 visual  =~       x3         0.729    0.109    0.516      0.943      6.68</span>
-<span class="co">#&gt;  4 textual =~       x4         1        0        1          1         NA   </span>
-<span class="co">#&gt;  5 textual =~       x5         1.11     0.0654   0.985      1.24      17.0 </span>
-<span class="co">#&gt;  6 textual =~       x6         0.926    0.0554   0.817      1.03      16.7 </span>
-<span class="co">#&gt;  7 speed   =~       x7         1        0        1          1         NA   </span>
-<span class="co">#&gt;  8 speed   =~       x8         1.18     0.165    0.857      1.50       7.15</span>
-<span class="co">#&gt;  9 speed   =~       x9         1.08     0.151    0.785      1.38       7.15</span>
-<span class="co">#&gt; 10 visual  ~~       textual    0.408    0.0735   0.264      0.552      5.55</span>
-<span class="co">#&gt; 11 visual  ~~       speed      0.262    0.0563   0.152      0.373      4.66</span>
-<span class="co">#&gt; 12 textual ~~       speed      0.173    0.0493   0.0768     0.270      3.52</span>
-<span class="co">#&gt;     p.value component  </span>
-<span class="co">#&gt;       &lt;dbl&gt; &lt;chr&gt;      </span>
-<span class="co">#&gt;  1 0        Loading    </span>
-<span class="co">#&gt;  2 2.80e- 8 Loading    </span>
-<span class="co">#&gt;  3 2.31e-11 Loading    </span>
-<span class="co">#&gt;  4 0        Loading    </span>
-<span class="co">#&gt;  5 0        Loading    </span>
-<span class="co">#&gt;  6 0        Loading    </span>
-<span class="co">#&gt;  7 0        Loading    </span>
-<span class="co">#&gt;  8 8.56e-13 Loading    </span>
-<span class="co">#&gt;  9 8.40e-13 Loading    </span>
-<span class="co">#&gt; 10 2.82e- 8 Correlation</span>
-<span class="co">#&gt; 11 3.17e- 6 Correlation</span>
-<span class="co">#&gt; 12 4.35e- 4 Correlation</span></code></pre></div>
-<p><font color="green"> Additionally, the <em>p</em>-values and confidence intervals for regression estimates are consistently included. </font></p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># setup</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.stats.ox.ac.uk/pub/MASS4/">MASS</a></span><span class="op">)</span>
-<span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MASS/man/rlm.html">rlm</a></span><span class="op">(</span><span class="va">stack.loss</span> <span class="op">~</span> <span class="va">.</span>, <span class="va">stackloss</span><span class="op">)</span>
-
-<span class="co"># broom output (no p-values present)</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">mod</span>, conf.int <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 4 x 6</span>
-<span class="co">#&gt;   term        estimate std.error statistic conf.low conf.high</span>
-<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 (Intercept)  -41.0       9.81     -4.18   -60.2     -21.8  </span>
-<span class="co">#&gt; 2 Air.Flow       0.829     0.111     7.46     0.611     1.05 </span>
-<span class="co">#&gt; 3 Water.Temp     0.926     0.303     3.05     0.331     1.52 </span>
-<span class="co">#&gt; 4 Acid.Conc.    -0.128     0.129    -0.992   -0.380     0.125</span>
-
-<span class="co"># using `tidy_parameters` (p-values present)</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy_parameters.html">tidy_parameters</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 4 x 9</span>
-<span class="co">#&gt;   term        estimate std.error conf.level conf.low conf.high statistic</span>
-<span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 (Intercept)  -41.0       9.81        0.95  -61.7     -20.3      -4.18 </span>
-<span class="co">#&gt; 2 Air.Flow       0.829     0.111       0.95    0.595     1.06      7.46 </span>
-<span class="co">#&gt; 3 Water.Temp     0.926     0.303       0.95    0.286     1.57      3.05 </span>
-<span class="co">#&gt; 4 Acid.Conc.    -0.128     0.129       0.95   -0.400     0.144    -0.992</span>
-<span class="co">#&gt;   df.error     p.value</span>
-<span class="co">#&gt;      &lt;int&gt;       &lt;dbl&gt;</span>
-<span class="co">#&gt; 1       17 0.000624   </span>
-<span class="co">#&gt; 2       17 0.000000933</span>
-<span class="co">#&gt; 3       17 0.00720    </span>
-<span class="co">#&gt; 4       17 0.335</span></code></pre></div>
-</div>
-<div id="benefits-of-using-glance_performance" class="section level2">
-<h2 class="hasAnchor">
-<a href="#benefits-of-using-glance_performance" class="anchor"></a>Benefits of using <code>glance_performance</code>
-</h2>
-<p><font color="green"> The <code>glance_performance</code> will return a model summary either from <code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance</a></code> or <code><a href="https://easystats.github.io/performance/reference/model_performance.html">performance::model_performance</a></code>. </font></p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># mixor object</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st">"mixor"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"SmokingPrevention"</span><span class="op">)</span>
-
-<span class="co"># data frame must be sorted by id variable</span>
-<span class="va">SmokingPrevention</span> <span class="op">&lt;-</span> <span class="va">SmokingPrevention</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="va">SmokingPrevention</span><span class="op">$</span><span class="va">class</span><span class="op">)</span>, <span class="op">]</span>
-
-<span class="co"># school model</span>
-<span class="va">mod_mixor</span> <span class="op">&lt;-</span>
-  <span class="fu">mixor</span><span class="op">(</span>
-    formula <span class="op">=</span> <span class="va">thksord</span> <span class="op">~</span> <span class="va">thkspre</span> <span class="op">+</span> <span class="va">cc</span> <span class="op">+</span> <span class="va">tv</span> <span class="op">+</span> <span class="va">cctv</span>,
-    data <span class="op">=</span> <span class="va">SmokingPrevention</span>,
-    id <span class="op">=</span> <span class="va">school</span>, link <span class="op">=</span> <span class="st">"logit"</span>
-  <span class="op">)</span>
-
-<span class="co"># glance method in `broom`-family?</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">mod_mixor</span><span class="op">)</span>
-<span class="co">#&gt; NULL</span>
-
-<span class="co"># using hybrid function</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance_performance.html">glance_performance</a></span><span class="op">(</span><span class="va">mod_mixor</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 2</span>
-<span class="co">#&gt;      aic    bic</span>
-<span class="co">#&gt;    &lt;dbl&gt;  &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 -2128. -2133.</span></code></pre></div>
-<p>Sometimes the method will be available in <code>broom</code>, but not in <code>easystats</code>, but <code>glance_performance</code> will manage to choose the appropriate method for you. For example-</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># model</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">orcutt</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="va">reg</span> <span class="op">&lt;-</span> <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span>formula <span class="op">=</span> <span class="va">mpg</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">qsec</span> <span class="op">+</span> <span class="va">disp</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span>
-<span class="va">co</span> <span class="op">&lt;-</span> <span class="fu">orcutt</span><span class="fu">::</span><span class="fu">cochrane.orcutt</span><span class="op">(</span><span class="va">reg</span><span class="op">)</span>
-
-<span class="co"># no method available in `performance`</span>
-<span class="fu">performance</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/performance/reference/model_performance.html">model_performance</a></span><span class="op">(</span><span class="va">co</span><span class="op">)</span>
-<span class="co">#&gt; NULL</span>
-
-<span class="co"># `glance_performance` doesn't fail</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance_performance.html">glance_performance</a></span><span class="op">(</span><span class="va">co</span><span class="op">)</span>
-<span class="co">#&gt; Objects of class 'NULL' are currently not supported.</span>
-<span class="co">#&gt; # A tibble: 1 x 9</span>
-<span class="co">#&gt;   r.squared adj.r.squared   rho number.interaction dw.original p.value.original</span>
-<span class="co">#&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;              &lt;dbl&gt;       &lt;dbl&gt;            &lt;dbl&gt;</span>
-<span class="co">#&gt; 1     0.799         0.777 0.268                  7        1.50           0.0406</span>
-<span class="co">#&gt;   dw.transformed p.value.transformed  nobs</span>
-<span class="co">#&gt;            &lt;dbl&gt;               &lt;dbl&gt; &lt;int&gt;</span>
-<span class="co">#&gt; 1           2.06               0.521    32</span></code></pre></div>
-<p><font color="green"> Additionally, it will return model summary that contains combined metrics from these two packages. </font></p>
-<p>For example, some unique performance measures are present only in the <code>performance</code> package contains (e.g., Nagelkerke’s <em>R</em>-squared, Tjur’s <em>R</em>-squared, etc.), but not <code>broom</code> package and <em>vice versa</em>.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># setup</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-
-<span class="co"># model</span>
-<span class="va">model</span> <span class="op">&lt;-</span>
-  <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span>
-    formula <span class="op">=</span> <span class="va">am</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">cyl</span>,
-    data <span class="op">=</span> <span class="va">mtcars</span>,
-    family <span class="op">=</span> <span class="va">binomial</span>
-  <span class="op">)</span>
-
-<span class="co"># `broom` output</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 8</span>
-<span class="co">#&gt;   null.deviance df.null logLik   AIC   BIC deviance df.residual  nobs</span>
-<span class="co">#&gt;           &lt;dbl&gt;   &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt; &lt;int&gt;</span>
-<span class="co">#&gt; 1          43.2      31  -7.37  20.7  25.1     14.7          29    32</span>
-
-<span class="co"># combined output</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance_performance.html">glance_performance</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 15</span>
-<span class="co">#&gt;   null.deviance df.null loglik   aic   bic deviance df.residual  nobs r2.tjur</span>
-<span class="co">#&gt;           &lt;dbl&gt;   &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;</span>
-<span class="co">#&gt; 1          43.2      31  -7.37  20.7  25.1     14.7          29    32   0.705</span>
-<span class="co">#&gt;    rmse sigma log.loss score.log score.spherical   pcp</span>
-<span class="co">#&gt;   &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;           &lt;dbl&gt; &lt;dbl&gt;</span>
-<span class="co">#&gt; 1 0.271 0.713    0.230     -19.0           0.116 0.858</span></code></pre></div>
-</div>
+<p>Benefits of using hybrid generics</p>
+<ul>
+<li><p>The <code>tidy_parameters</code> will return a model summary either from <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>, so you get best of the both worlds.</p></li>
+<li><p>These functions are robust such that they won’t fail if the <code>...</code> contains misspecified arguments. This makes these functions much easier to work with while writing wrapper functions around <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>.</p></li>
+</ul>
 </div>
 <div id="generic-functions" class="section level1">
 <h1 class="hasAnchor">
 <a href="#generic-functions" class="anchor"></a>Generic functions</h1>
-<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <code>broom.mixed</code> package, while the rest of the object classes are included in the <code>broom</code> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom.mixed::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom.mixed::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom::augment()</a></code>”).</p>
+<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <a href="https://github.com/bbolker/broom.mixed">broom.mixed</a> package, while the rest of the object classes are included in the <a href="https://broom.tidymodels.org/">broom</a> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom.mixed::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom.mixed::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom::augment()</a></code>”).</p>
 <p>Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="reference/glance.html">broomExtra::glance()</a></code>/<code><a href="reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
 <div id="tidy-dataframe" class="section level2">
 <h2 class="hasAnchor">
 <a href="#tidy-dataframe" class="anchor"></a>tidy dataframe</h2>
 <p>Let’s get a tidy tibble back containing results from various regression models.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
 
-<span class="co"># mixed-effects models (`broom.mixed` will be used)</span>
+<span class="co"># mixed-effects models (`{broom.mixed}` will be used)</span>
 <span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lmm.mod</span>, effects <span class="op">=</span> <span class="st">"fixed"</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 2 x 5</span>
@@ -504,7 +226,7 @@
 <span class="co">#&gt; 1 fixed  (Intercept)    251.       6.82     36.8 </span>
 <span class="co">#&gt; 2 fixed  Days            10.5      1.55      6.77</span>
 
-<span class="co"># linear model (`broom` will be used)</span>
+<span class="co"># linear model (`{broom}` will be used)</span>
 <span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">lm.mod</span>, conf.int <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 2 x 7</span>
@@ -513,7 +235,7 @@
 <span class="co">#&gt; 1 (Intercept)    251.       6.61     38.0  2.16e-87   238.       264. </span>
 <span class="co">#&gt; 2 Days            10.5      1.24      8.45 9.89e-15     8.02      12.9</span>
 
-<span class="co"># another example with `broom`</span>
+<span class="co"># another example with `{broom}`</span>
 <span class="co"># cumulative Link Models</span>
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">clm.mod</span>, exponentiate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
@@ -536,7 +258,7 @@
 <h2 class="hasAnchor">
 <a href="#model-summaries" class="anchor"></a>model summaries</h2>
 <p>Getting a <code>tibble</code> containing model summary and other performance measures.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
@@ -560,7 +282,7 @@
 <span class="co">#&gt;      &lt;dbl&gt;       &lt;int&gt; &lt;int&gt;</span>
 <span class="co">#&gt; 1  405252.         178   180</span>
 
-<span class="co"># another example with `broom`</span>
+<span class="co"># another example with `{broom}`</span>
 <span class="co"># cumulative Link Models</span>
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">clm.mod</span><span class="op">)</span>
@@ -577,7 +299,7 @@
 <h2 class="hasAnchor">
 <a href="#augmented-dataframe" class="anchor"></a>augmented dataframe</h2>
 <p>Getting a <code>tibble</code> by augmenting data with information from an object.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
@@ -610,7 +332,7 @@
 <span class="co">#&gt;  8        1        1        1 -101.  </span>
 <span class="co">#&gt;  9        1        1        1   19.6 </span>
 <span class="co">#&gt; 10        1        1        1   35.7 </span>
-<span class="co">#&gt; # … with 170 more rows</span>
+<span class="co">#&gt; # ... with 170 more rows</span>
 
 <span class="co"># linear model</span>
 <span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
@@ -628,9 +350,9 @@
 <span class="co">#&gt;  8     290.     7    325. -34.5  0.00976   47.8 0.00261      -0.727 </span>
 <span class="co">#&gt;  9     431.     8    335.  95.4  0.0138    47.3 0.0284        2.01  </span>
 <span class="co">#&gt; 10     466.     9    346. 121.   0.0192    47.0 0.0639        2.56  </span>
-<span class="co">#&gt; # … with 170 more rows</span>
+<span class="co">#&gt; # ... with 170 more rows</span>
 
-<span class="co"># another example with `broom`</span>
+<span class="co"># another example with `{broom}`</span>
 <span class="co"># cumulative Link Models</span>
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">clm.mod</span>, newdata <span class="op">=</span> <span class="va">wine</span>, type.predict <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span>
@@ -647,7 +369,7 @@
 <span class="co">#&gt;  8       90 5      warm  yes     8      1      0.286 </span>
 <span class="co">#&gt;  9       17 1      cold  no      1      2      0.196 </span>
 <span class="co">#&gt; 10       22 2      cold  no      2      2      0.562 </span>
-<span class="co">#&gt; # … with 62 more rows</span>
+<span class="co">#&gt; # ... with 62 more rows</span>
 
 <span class="co"># in case no augment method is available (`NULL` will be returned)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">wt</span> <span class="op">~</span> <span class="va">am</span>, <span class="va">mtcars</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
@@ -662,7 +384,7 @@
 <h2 class="hasAnchor">
 <a href="#grouped_tidy" class="anchor"></a><code>grouped_tidy</code>
 </h2>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
@@ -690,7 +412,7 @@
 <span class="co">#&gt;  8 Good  D     carat    5207.     115.       45.4 2.66e-145</span>
 <span class="co">#&gt;  9 Good  E     carat    5102.      91.9      55.5 2.50e-206</span>
 <span class="co">#&gt; 10 Good  F     carat    5151.      92.4      55.8 1.76e-204</span>
-<span class="co">#&gt; # … with 25 more rows</span>
+<span class="co">#&gt; # ... with 25 more rows</span>
 
 <span class="co"># linear mixed effects model (tidy analysis across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span><span class="op">(</span>
@@ -726,13 +448,13 @@
 <span class="co">#&gt;  8      NA        NA </span>
 <span class="co">#&gt;  9      NA        NA </span>
 <span class="co">#&gt; 10      NA        NA </span>
-<span class="co">#&gt; # … with 15 more rows</span></code></pre></div>
+<span class="co">#&gt; # ... with 15 more rows</span></code></pre></div>
 </div>
 <div id="grouped_glance" class="section level2">
 <h2 class="hasAnchor">
 <a href="#grouped_glance" class="anchor"></a><code>grouped_glance</code>
 </h2>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 
@@ -769,7 +491,7 @@
 <span class="co">#&gt;  8 5966. 5974. 1001144317.         335   336</span>
 <span class="co">#&gt;  9 8173. 8181. 1291712250.         461   462</span>
 <span class="co">#&gt; 10 7998. 8006. 1267954026.         451   452</span>
-<span class="co">#&gt; # … with 25 more rows</span>
+<span class="co">#&gt; # ... with 25 more rows</span>
 
 <span class="co"># linear mixed effects model (model summaries across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span><span class="op">(</span>
@@ -792,7 +514,7 @@
 <h2 class="hasAnchor">
 <a href="#grouped_augment" class="anchor"></a><code>grouped_augment</code>
 </h2>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 
@@ -816,7 +538,7 @@
 <span class="co">#&gt;  8 Fair  D      3079  0.91   4605. -1526. 0.00503  1820. 0.00358      -0.841</span>
 <span class="co">#&gt;  9 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744</span>
 <span class="co">#&gt; 10 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744</span>
-<span class="co">#&gt; # … with 53,930 more rows</span>
+<span class="co">#&gt; # ... with 53,930 more rows</span>
 
 <span class="co"># linear mixed-effects model</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span><span class="op">(</span>
@@ -851,13 +573,13 @@
 <span class="co">#&gt;  8        1        1        1  -183.</span>
 <span class="co">#&gt;  9        1        1        1  -448.</span>
 <span class="co">#&gt; 10        1        1        1 -1618.</span>
-<span class="co">#&gt; # … with 26,960 more rows</span></code></pre></div>
+<span class="co">#&gt; # ... with 26,960 more rows</span></code></pre></div>
 </div>
 </div>
 <div id="acknowledgments" class="section level1">
 <h1 class="hasAnchor">
 <a href="#acknowledgments" class="anchor"></a>Acknowledgments</h1>
-<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <code>broom</code>- and <code>easystats</code>-package families who have indulged in all my feature requests. 😄</p>
+<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <a href="https://broom.tidymodels.org/">broom</a>- and <code>easystats</code>-package families who have indulged in all my feature requests. 😄</p>
 </div>
 
   </div>
@@ -901,12 +623,8 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></li>
-<li><a href="https://cran.r-project.org/web/checks/check_results_broomExtra.html"><img src="https://cranchecks.info/badges/summary/broomExtra" alt="CRAN Checks"></a></li>
-<li><a href="https://travis-ci.org/IndrajeetPatil/broomExtra"><img src="https://travis-ci.org/IndrajeetPatil/broomExtra.svg?branch=master" alt="Travis Build Status"></a></li>
 <li><a href="https://github.com/IndrajeetPatil/broomExtra/actions"><img src="https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></li>
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/last-day/broomExtra?color=blue" alt="Daily downloads badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://cranlogs.r-pkg.org/badges/grand-total/broomExtra?color=blue" alt="Total downloads badge"></a></li>
 </ul>
 </div>
 </div>
