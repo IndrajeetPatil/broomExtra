@@ -108,14 +108,14 @@
 
 <div id="broomextra-enhancements-for-broom-and-easystats-package-families" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#broomextra-enhancements-for-broom-and-easystats-package-families" class="anchor"></a><code>broomExtra</code>: Enhancements for <code>{broom}</code> and <code>easystats</code> Package Families</h1></div>
+<a href="#broomextra-enhancements-for-broom-and-easystats-package-families" class="anchor"></a><code>{broomExtra}</code>: Enhancements for <code>{broom}</code> and <code>{easystats}</code> Package Families</h1></div>
 
 </div>
 <div id="raison-dêtre-" class="section level1">
 <h1 class="hasAnchor">
 <a href="#raison-d%C3%AAtre-" class="anchor"></a>Raison d’être <img src="reference/figures/logo.png" align="right" width="360">
 </h1>
-<p>The goal of <code>broomExtra</code> is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax to return tidy tibbles containing model parameters and summaries.</p>
+<p>The goal of <a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a> is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax to return tidy tibbles containing model parameters and summaries.</p>
 <p>The package internally relies on the following packages that I contribute to:</p>
 <ul>
 <li><a href="https://broom.tidymodels.org/">broom</a></li>
@@ -191,8 +191,8 @@
 <div id="hybrid-generics" class="section level1">
 <h1 class="hasAnchor">
 <a href="#hybrid-generics" class="anchor"></a>Hybrid generics</h1>
-<p>The <a href="https://broom.tidymodels.org/">broom</a>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>easystats</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <a href="https://broom.tidymodels.org/">broom</a> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>easystats</code> packages would and <em>vice versa</em>.</p>
-<p>The hybrid functions in <code>broomExtra</code> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
+<p>The <a href="https://broom.tidymodels.org/">broom</a>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>{easystats}</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <a href="https://broom.tidymodels.org/">broom</a> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>{easystats}</code> packages would and <em>vice versa</em>.</p>
+<p>The hybrid functions in <a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
 <ul>
 <li><p><code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy</a></code> + <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code> = <code><a href="reference/tidy_parameters.html">broomExtra::tidy_parameters</a></code></p></li>
 <li><p><code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance</a></code> + <code><a href="https://easystats.github.io/performance/reference/model_performance.html">performance::model_performance</a></code> = <code><a href="reference/glance_performance.html">broomExtra::glance_performance</a></code></p></li>
@@ -207,7 +207,7 @@
 <h1 class="hasAnchor">
 <a href="#generic-functions" class="anchor"></a>Generic functions</h1>
 <p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <a href="https://github.com/bbolker/broom.mixed">broom.mixed</a> package, while the rest of the object classes are included in the <a href="https://broom.tidymodels.org/">broom</a> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom.mixed::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom.mixed::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom::augment()</a></code>”).</p>
-<p>Using generics from <code>broomExtra</code> means you no longer have to worry about this, as calling <code><a href="reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="reference/glance.html">broomExtra::glance()</a></code>/<code><a href="reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
+<p>Using generics from <a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a> means you no longer have to worry about this, as calling <code><a href="reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="reference/glance.html">broomExtra::glance()</a></code>/<code><a href="reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
 <div id="tidy-dataframe" class="section level2">
 <h2 class="hasAnchor">
 <a href="#tidy-dataframe" class="anchor"></a>tidy dataframe</h2>
@@ -579,7 +579,7 @@
 <div id="acknowledgments" class="section level1">
 <h1 class="hasAnchor">
 <a href="#acknowledgments" class="anchor"></a>Acknowledgments</h1>
-<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <a href="https://broom.tidymodels.org/">broom</a>- and <code>easystats</code>-package families who have indulged in all my feature requests. 😄</p>
+<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <a href="https://broom.tidymodels.org/">broom</a>- and <code>{easystats}</code>-package families who have indulged in all my feature requests. 😄</p>
 </div>
 
   </div>
