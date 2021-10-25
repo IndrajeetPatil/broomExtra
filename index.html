@@ -51,6 +51,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -63,18 +65,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">broomExtra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">4.2.3.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">4.2.3.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -84,7 +80,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/IndrajeetPatil/broomExtra/">
+  <a href="https://github.com/IndrajeetPatil/broomExtra/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -106,22 +102,22 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div id="broomextra-enhancements-for-broom-and-easystats-package-families" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#broomextra-enhancements-for-broom-and-easystats-package-families" class="anchor"></a><code>{broomExtra}</code>: Enhancements for <code>{broom}</code> and <code>{easystats}</code> Package Families</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="broomextra-enhancements-for-broom-and-easystats-package-families">
+<code>{broomExtra}</code>: Enhancements for <code>{broom}</code> and <code>{easystats}</code> Package Families<a class="anchor" aria-label="anchor" href="#broomextra-enhancements-for-broom-and-easystats-package-families"></a>
+</h1></div>
 
 </div>
-<div id="raison-dêtre-" class="section level1">
-<h1 class="hasAnchor">
-<a href="#raison-d%C3%AAtre-" class="anchor"></a>Raison d’être <img src="reference/figures/logo.png" align="right" width="360">
+<div class="section level1">
+<h1 id="raison-dêtre-">Raison d’être <img src="reference/figures/logo.png" align="right" width="360"><a class="anchor" aria-label="anchor" href="#raison-d%C3%AAtre-"></a>
 </h1>
 <p>The goal of <a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a> is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax to return tidy tibbles containing model parameters and summaries.</p>
 <p>The package internally relies on the following packages that I contribute to:</p>
 <ul>
-<li><a href="https://broom.tidymodels.org/">broom</a></li>
-<li><a href="https://github.com/bbolker/broom.mixed">broom.mixed</a></li>
-<li><a href="https://easystats.github.io/parameters/">parameters</a></li>
-<li><a href="https://easystats.github.io/performance/">performance</a></li>
+<li><a href="https://broom.tidymodels.org/" class="external-link">broom</a></li>
+<li><a href="https://github.com/bbolker/broom.mixed" class="external-link">broom.mixed</a></li>
+<li><a href="https://easystats.github.io/parameters/" class="external-link">parameters</a></li>
+<li><a href="https://easystats.github.io/performance/" class="external-link">performance</a></li>
 </ul>
 <p>Since it combines functionality from these two ecosystems, this package has the following advantages over the underlying individual packages (see examples below for concrete instantiations of these benefits):</p>
 <ul>
@@ -131,11 +127,11 @@
 <li>Follows consistent <code>tidymodels</code> column-naming schema.</li>
 <li>Returns a more comprehensive model performance measure summary.</li>
 </ul>
-<p>If you want to add support for a regression model, the natural place to do this would be to contribute either to <a href="https://broom.tidymodels.org/">broom</a> or to <a href="https://easystats.github.io/parameters/">parameters</a>.</p>
+<p>If you want to add support for a regression model, the natural place to do this would be to contribute either to <a href="https://broom.tidymodels.org/" class="external-link">broom</a> or to <a href="https://easystats.github.io/parameters/" class="external-link">parameters</a>.</p>
 </div>
-<div id="installation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h1>
+<div class="section level1">
+<h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h1>
 <table class="table">
 <thead><tr class="header">
 <th>Type</th>
@@ -146,19 +142,19 @@
 <tr class="odd">
 <td>Release</td>
 <td>CRAN</td>
-<td><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("broomExtra")</a></code></td>
+<td><code>install.packages("broomExtra")</code></td>
 </tr>
 <tr class="even">
 <td>Development</td>
 <td>GitHub</td>
-<td><code><a href="https://remotes.r-lib.org/reference/install_github.html">remotes::install_github("IndrajeetPatil/broomExtra")</a></code></td>
+<td><code>remotes::install_github("IndrajeetPatil/broomExtra")</code></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="lifecycle" class="section level1">
-<h1 class="hasAnchor">
-<a href="#lifecycle" class="anchor"></a>Lifecycle</h1>
+<div class="section level1">
+<h1 id="lifecycle">Lifecycle<a class="anchor" aria-label="anchor" href="#lifecycle"></a>
+</h1>
 <table class="table">
 <thead><tr class="header">
 <th>Function</th>
@@ -167,58 +163,58 @@
 <tbody>
 <tr class="odd">
 <td><code>tidy_parameters</code></td>
-<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
 </tr>
 <tr class="even">
 <td><code>glance_performance</code></td>
-<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
 </tr>
 <tr class="odd">
 <td>
 <code>tidy</code>, <code>glance</code>, <code>augment</code>
 </td>
-<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
 </tr>
 <tr class="even">
 <td>
 <code>grouped_tidy</code>, <code>grouped_glance</code>, <code>grouped_augment</code>
 </td>
-<td><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
+<td><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="hybrid-generics" class="section level1">
-<h1 class="hasAnchor">
-<a href="#hybrid-generics" class="anchor"></a>Hybrid generics</h1>
-<p>The <a href="https://broom.tidymodels.org/">broom</a>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>{easystats}</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/">parameters</a> and <a href="https://easystats.github.io/performance/">performance</a>. Sometimes the <a href="https://broom.tidymodels.org/">broom</a> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>{easystats}</code> packages would and <em>vice versa</em>.</p>
+<div class="section level1">
+<h1 id="hybrid-generics">Hybrid generics<a class="anchor" aria-label="anchor" href="#hybrid-generics"></a>
+</h1>
+<p>The <a href="https://broom.tidymodels.org/" class="external-link">broom</a>-family of packages are not the only ones which return such tidy summaries for model parameters and model performance. The <code>{easystats}</code>-family of packages also provide similar functions, more specifically <a href="https://easystats.github.io/parameters/" class="external-link">parameters</a> and <a href="https://easystats.github.io/performance/" class="external-link">performance</a>. Sometimes the <a href="https://broom.tidymodels.org/" class="external-link">broom</a> packages might not contain a <code>tidy</code>/<code>glance</code> method for a given regression object, while <code>{easystats}</code> packages would and <em>vice versa</em>.</p>
 <p>The hybrid functions in <a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a> make it easy to retrieve these summaries with the appropriate method and do so robustly:</p>
 <ul>
-<li><p><code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy</a></code> + <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code> = <code><a href="reference/tidy_parameters.html">broomExtra::tidy_parameters</a></code></p></li>
-<li><p><code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance</a></code> + <code><a href="https://easystats.github.io/performance/reference/model_performance.html">performance::model_performance</a></code> = <code><a href="reference/glance_performance.html">broomExtra::glance_performance</a></code></p></li>
+<li><p><code><a href="https://generics.r-lib.org/reference/tidy.html" class="external-link">broom::tidy</a></code> + <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html" class="external-link">parameters::model_parameters</a></code> = <code><a href="reference/tidy_parameters.html">broomExtra::tidy_parameters</a></code></p></li>
+<li><p><code><a href="https://generics.r-lib.org/reference/glance.html" class="external-link">broom::glance</a></code> + <code><a href="https://easystats.github.io/performance/reference/model_performance.html" class="external-link">performance::model_performance</a></code> = <code><a href="reference/glance_performance.html">broomExtra::glance_performance</a></code></p></li>
 </ul>
 <p>Benefits of using hybrid generics</p>
 <ul>
-<li><p>The <code>tidy_parameters</code> will return a model summary either from <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>, so you get best of the both worlds.</p></li>
-<li><p>These functions are robust such that they won’t fail if the <code>...</code> contains misspecified arguments. This makes these functions much easier to work with while writing wrapper functions around <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html">parameters::model_parameters</a></code>.</p></li>
+<li><p>The <code>tidy_parameters</code> will return a model summary either from <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html" class="external-link">parameters::model_parameters</a></code>, so you get best of the both worlds.</p></li>
+<li><p>These functions are robust such that they won’t fail if the <code>...</code> contains misspecified arguments. This makes these functions much easier to work with while writing wrapper functions around <code><a href="reference/tidy.html">broomExtra::tidy</a></code> or <code><a href="https://easystats.github.io/parameters/reference/model_parameters.html" class="external-link">parameters::model_parameters</a></code>.</p></li>
 </ul>
 </div>
-<div id="generic-functions" class="section level1">
-<h1 class="hasAnchor">
-<a href="#generic-functions" class="anchor"></a>Generic functions</h1>
-<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <a href="https://github.com/bbolker/broom.mixed">broom.mixed</a> package, while the rest of the object classes are included in the <a href="https://broom.tidymodels.org/">broom</a> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom.mixed::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom.mixed::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html">broom::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html">broom::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html">broom::augment()</a></code>”).</p>
+<div class="section level1">
+<h1 id="generic-functions">Generic functions<a class="anchor" aria-label="anchor" href="#generic-functions"></a>
+</h1>
+<p>Currently, <code>S3</code> methods for mixed-effects model objects are included in the <a href="https://github.com/bbolker/broom.mixed" class="external-link">broom.mixed</a> package, while the rest of the object classes are included in the <a href="https://broom.tidymodels.org/" class="external-link">broom</a> package. This means that you constantly need to keep track of the class of the object (e.g., “if it is <code>merMod</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html" class="external-link">broom.mixed::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html" class="external-link">broom.mixed::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html" class="external-link">broom.mixed::augment()</a></code>, but if it is <code>polr</code> object, use <code><a href="https://generics.r-lib.org/reference/tidy.html" class="external-link">broom::tidy()</a></code>/<code><a href="https://generics.r-lib.org/reference/glance.html" class="external-link">broom::glance()</a></code>/<code><a href="https://generics.r-lib.org/reference/augment.html" class="external-link">broom::augment()</a></code>”).</p>
 <p>Using generics from <a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a> means you no longer have to worry about this, as calling <code><a href="reference/tidy.html">broomExtra::tidy()</a></code>/<code><a href="reference/glance.html">broomExtra::glance()</a></code>/<code><a href="reference/augment.html">broomExtra::augment()</a></code> will search the appropriate method from these two packages and return the results.</p>
-<div id="tidy-dataframe" class="section level2">
-<h2 class="hasAnchor">
-<a href="#tidy-dataframe" class="anchor"></a>tidy dataframe</h2>
+<div class="section level2">
+<h2 id="tidy-dataframe">tidy dataframe<a class="anchor" aria-label="anchor" href="#tidy-dataframe"></a>
+</h2>
 <p>Let’s get a tidy tibble back containing results from various regression models.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
 
 <span class="co"># mixed-effects models (`{broom.mixed}` will be used)</span>
-<span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
+<span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lmm.mod</span>, effects <span class="op">=</span> <span class="st">"fixed"</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 2 x 5</span>
 <span class="co">#&gt;   effect term        estimate std.error statistic</span>
@@ -227,7 +223,7 @@
 <span class="co">#&gt; 2 fixed  Days            10.5      1.55      6.77</span>
 
 <span class="co"># linear model (`{broom}` will be used)</span>
-<span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
+<span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">lm.mod</span>, conf.int <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 2 x 7</span>
 <span class="co">#&gt;   term        estimate std.error statistic  p.value conf.low conf.high</span>
@@ -251,20 +247,20 @@
 <span class="co">#&gt; 7 tempwarm:contactyes    1.43      0.924     0.389 6.97e- 1 location</span>
 
 <span class="co"># unsupported object (the function will return `NULL` in such cases)</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="st">"y"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
+<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="st">"y"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; NULL</span></code></pre></div>
 </div>
-<div id="model-summaries" class="section level2">
-<h2 class="hasAnchor">
-<a href="#model-summaries" class="anchor"></a>model summaries</h2>
+<div class="section level2">
+<h2 id="model-summaries">model summaries<a class="anchor" aria-label="anchor" href="#model-summaries"></a>
+</h2>
 <p>Getting a <code>tibble</code> containing model summary and other performance measures.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
 
 <span class="co"># mixed-effects model</span>
-<span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
+<span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">lmm.mod</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 6</span>
 <span class="co">#&gt;   sigma logLik   AIC   BIC REMLcrit df.residual</span>
@@ -272,7 +268,7 @@
 <span class="co">#&gt; 1  25.6  -872. 1756. 1775.    1744.         174</span>
 
 <span class="co"># linear model</span>
-<span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
+<span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">lm.mod</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 12</span>
 <span class="co">#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC</span>
@@ -292,20 +288,20 @@
 <span class="co">#&gt; 1     7  187.  203. -86.4162          65    72</span>
 
 <span class="co"># in case no glance method is available (`NULL` will be returned)</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/acf.html">acf</a></span><span class="op">(</span><span class="va">lh</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span>
+<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/acf.html" class="external-link">acf</a></span><span class="op">(</span><span class="va">lh</span>, plot <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; NULL</span></code></pre></div>
 </div>
-<div id="augmented-dataframe" class="section level2">
-<h2 class="hasAnchor">
-<a href="#augmented-dataframe" class="anchor"></a>augmented dataframe</h2>
+<div class="section level2">
+<h2 id="augmented-dataframe">augmented dataframe<a class="anchor" aria-label="anchor" href="#augmented-dataframe"></a>
+</h2>
 <p>Getting a <code>tibble</code> by augmenting data with information from an object.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
 
 <span class="co"># mixed-effects model</span>
-<span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
+<span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="va">lmm.mod</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 180 x 14</span>
 <span class="co">#&gt;    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset</span>
@@ -335,7 +331,7 @@
 <span class="co">#&gt; # ... with 170 more rows</span>
 
 <span class="co"># linear model</span>
-<span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
+<span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="va">lm.mod</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 180 x 8</span>
 <span class="co">#&gt;    Reaction  Days .fitted .resid    .hat .sigma   .cooksd .std.resid</span>
@@ -372,32 +368,33 @@
 <span class="co">#&gt; # ... with 62 more rows</span>
 
 <span class="co"># in case no augment method is available (`NULL` will be returned)</span>
-<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html">anova</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">wt</span> <span class="op">~</span> <span class="va">am</span>, <span class="va">mtcars</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
+<span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html" class="external-link">anova</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">wt</span> <span class="op">~</span> <span class="va">am</span>, <span class="va">mtcars</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; NULL</span></code></pre></div>
 </div>
 </div>
-<div id="grouped_-variants-of-generics" class="section level1">
-<h1 class="hasAnchor">
-<a href="#grouped_-variants-of-generics" class="anchor"></a><code>grouped_</code> variants of generics</h1>
-<p><code>grouped</code> variants of the generic functions (<code>tidy</code>, <code>glance</code>, and <code>augment</code>) make it easy to execute the same analysis for all combinations of grouping variable(s) in a dataframe. Currently, these functions work only for methods that depend on a <code>data</code> argument (e.g., <code><a href="https://rdrr.io/r/stats/lm.html">stats::lm</a></code>), but not for functions that don’t (e.g., <code><a href="https://rdrr.io/r/stats/prop.test.html">stats::prop.test()</a></code>).</p>
-<div id="grouped_tidy" class="section level2">
-<h2 class="hasAnchor">
-<a href="#grouped_tidy" class="anchor"></a><code>grouped_tidy</code>
+<div class="section level1">
+<h1 id="grouped_-variants-of-generics">
+<code>grouped_</code> variants of generics<a class="anchor" aria-label="anchor" href="#grouped_-variants-of-generics"></a>
+</h1>
+<p><code>grouped</code> variants of the generic functions (<code>tidy</code>, <code>glance</code>, and <code>augment</code>) make it easy to execute the same analysis for all combinations of grouping variable(s) in a dataframe. Currently, these functions work only for methods that depend on a <code>data</code> argument (e.g., <code><a href="https://rdrr.io/r/stats/lm.html" class="external-link">stats::lm</a></code>), but not for functions that don’t (e.g., <code><a href="https://rdrr.io/r/stats/prop.test.html" class="external-link">stats::prop.test()</a></code>).</p>
+<div class="section level2">
+<h2 id="grouped_tidy">
+<code>grouped_tidy</code><a class="anchor" aria-label="anchor" href="#grouped_tidy"></a>
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span>
 
 <span class="co"># linear model (tidy analysis across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
-  grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">-</span> <span class="fl">1</span>,
-  ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
+  ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
   na.action <span class="op">=</span> <span class="va">na.omit</span>,
-  tidy.args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>quick <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+  tidy.args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>quick <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 35 x 7</span>
 <span class="co">#&gt;    cut   color term  estimate std.error statistic   p.value</span>
@@ -416,12 +413,12 @@
 
 <span class="co"># linear mixed effects model (tidy analysis across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="va">cut</span>,
-  ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
+  ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
-  control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>,
-  tidy.args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>conf.int <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.99</span><span class="op">)</span>
+  control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html" class="external-link">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>,
+  tidy.args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>conf.int <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.99</span><span class="op">)</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 25 x 9</span>
 <span class="co">#&gt;    cut   effect   group    term                   estimate std.error statistic</span>
@@ -450,20 +447,20 @@
 <span class="co">#&gt; 10      NA        NA </span>
 <span class="co">#&gt; # ... with 15 more rows</span></code></pre></div>
 </div>
-<div id="grouped_glance" class="section level2">
-<h2 class="hasAnchor">
-<a href="#grouped_glance" class="anchor"></a><code>grouped_glance</code>
+<div class="section level2">
+<h2 id="grouped_glance">
+<code>grouped_glance</code><a class="anchor" aria-label="anchor" href="#grouped_glance"></a>
 </h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 
 <span class="co"># linear model (model summaries across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
-  grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">-</span> <span class="fl">1</span>,
-  ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
+  ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
   na.action <span class="op">=</span> <span class="va">na.omit</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 35 x 14</span>
@@ -495,11 +492,11 @@
 
 <span class="co"># linear mixed effects model (model summaries across grouping combinations)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="va">cut</span>,
-  ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
+  ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
-  control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>
+  control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html" class="external-link">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 5 x 7</span>
 <span class="co">#&gt;   cut       sigma  logLik     AIC     BIC REMLcrit df.residual</span>
@@ -510,19 +507,19 @@
 <span class="co">#&gt; 4 Premium   1557. -60736. 121482. 121516.  121472.        6917</span>
 <span class="co">#&gt; 5 Ideal     1257. -92766. 185542. 185579.  185532.       10833</span></code></pre></div>
 </div>
-<div id="grouped_augment" class="section level2">
-<h2 class="hasAnchor">
-<a href="#grouped_augment" class="anchor"></a><code>grouped_augment</code>
+<div class="section level2">
+<h2 id="grouped_augment">
+<code>grouped_augment</code><a class="anchor" aria-label="anchor" href="#grouped_augment"></a>
 </h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 
 <span class="co"># linear model</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span><span class="op">(</span>
   data <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>,
-  grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
-  ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span>,
+  grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
+  ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">-</span> <span class="fl">1</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 53,940 x 10</span>
@@ -542,11 +539,11 @@
 
 <span class="co"># linear mixed-effects model</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span>tbl <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="va">cut</span>,
-  ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html">lmer</a></span>,
+  ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
-  control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>
+  control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html" class="external-link">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>
 <span class="op">)</span>
 <span class="co">#&gt; # A tibble: 26,970 x 15</span>
 <span class="co">#&gt;    cut   price carat color .fitted .resid    .hat   .cooksd .fixed   .mu .offset</span>
@@ -576,67 +573,71 @@
 <span class="co">#&gt; # ... with 26,960 more rows</span></code></pre></div>
 </div>
 </div>
-<div id="acknowledgments" class="section level1">
-<h1 class="hasAnchor">
-<a href="#acknowledgments" class="anchor"></a>Acknowledgments</h1>
-<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <a href="https://broom.tidymodels.org/">broom</a>- and <code>{easystats}</code>-package families who have indulged in all my feature requests. 😄</p>
+<div class="section level1">
+<h1 id="acknowledgments">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>
+</h1>
+<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <a href="https://broom.tidymodels.org/" class="external-link">broom</a>- and <code>{easystats}</code>-package families who have indulged in all my feature requests. 😄</p>
 </div>
 
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=broomExtra">https://​cloud.r-project.org/​package=broomExtra</a>
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=broomExtra" class="external-link">https://​cloud.r-project.org/​package=broomExtra</a>
 </li>
-<li>Browse source code at <br><a href="https://github.com/IndrajeetPatil/broomExtra/">https://​github.com/​IndrajeetPatil/​broomExtra/​</a>
+<li>Browse source code at <br><a href="https://github.com/IndrajeetPatil/broomExtra/" class="external-link">https://​github.com/​IndrajeetPatil/​broomExtra/​</a>
 </li>
-<li>Report a bug at <br><a href="https://github.com/IndrajeetPatil/broomExtra/issues">https://​github.com/​IndrajeetPatil/​broomExtra/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/IndrajeetPatil/broomExtra/issues" class="external-link">https://​github.com/​IndrajeetPatil/​broomExtra/​issues</a>
 </li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a> | file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a> | file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
 <div class="community">
-<h2>Community</h2>
+<h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CONTRIBUTING.html">Contributing guide</a></li>
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://sites.google.com/site/indrajeetspatilmorality/">Indrajeet Patil</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0003-1995-6531" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> <br><small>(@patilindrajeets)</small>
-</li>
+<a href="https://sites.google.com/site/indrajeetspatilmorality/" class="external-link">Indrajeet Patil</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0003-1995-6531" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html">More on authors...</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://CRAN.R-project.org/package=broomExtra"><img src="https://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></li>
-<li><a href="https://github.com/IndrajeetPatil/broomExtra/actions"><img src="https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></li>
+<li><a href="https://CRAN.R-project.org/package=broomExtra" class="external-link"><img src="https://www.r-pkg.org/badges/version-ago/broomExtra" alt="CRAN_Release_Badge"></a></li>
+<li><a href="https://github.com/IndrajeetPatil/broomExtra/actions" class="external-link"><img src="https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://sites.google.com/site/indrajeetspatilmorality/">Indrajeet Patil</a>.</p>
+  <p>Developed by .</p>
 </div>
 
 <div class="pkgdown">
-  <p>Made with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1, using <a href="https://preferably.amirmasoudabdol.name/?source=footer">preferably</a> template.</p>
+  <p>Made with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> , using <a href="https://preferably.amirmasoudabdol.name/?source=footer" class="external-link">preferably</a> template.</p>
 </div>
 
       </footer>
@@ -644,6 +645,8 @@
 
   
 
+
+  
 
   </body>
 </html>

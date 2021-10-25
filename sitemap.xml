@@ -1,33 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//index.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/404.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/augment.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/glance.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/glance_performance.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/ISSUE_TEMPLATE.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/grouped_augment.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/grouped_glance.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/grouped_tidy.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/SUPPORT.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/reexports.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/authors.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/tidy.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/index.html</loc>
   </url>
   <url>
-    <loc>https://indrajeetpatil.github.io/broomExtra//reference/tidy_parameters.html</loc>
+    <loc>https://indrajeetpatil.github.io/broomExtra/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/augment.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/glance.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/glance_performance.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/grouped_augment.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/grouped_glance.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/grouped_tidy.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/reexports.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/tidy.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/broomExtra/reference/tidy_parameters.html</loc>
   </url>
 </urlset>
