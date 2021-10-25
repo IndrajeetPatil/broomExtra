@@ -1,7 +1,19 @@
 url: https://indrajeetpatil.github.io/broomExtra/
 
+# template:
+#   package: preferably
+
 template:
-  package: preferably
+  bootstrap: 5
+  bootswatch: cyborg
+  theme: arrow-dark
+  bslib:
+    primary: "#0054AD"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+
+development:
+  mode: auto
 
 authors:
   Indrajeet Patil:
