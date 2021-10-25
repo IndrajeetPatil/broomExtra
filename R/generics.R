@@ -1,4 +1,4 @@
-#' @title Retrieve tidy dataframe if it exists.
+#' @title Retrieve tidy dataframe if it exists
 #' @name tidy
 #'
 #' @description

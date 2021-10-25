@@ -1,5 +1,6 @@
-#' @title Tidy output from grouped analysis of any function that has `data`
-#'   argument in its function call.
+#' @title Grouped tidy analysis
+#' @description Tidy output from grouped analysis of any function that has
+#'   `data` argument in its function call
 #' @name grouped_tidy
 #'
 #' @param data Dataframe (or tibble) from which variables are to be taken.
@@ -49,8 +50,9 @@ grouped_tidy <- function(data,
   grouped_cleanup(data, rlang::enquos(grouping.vars), tidy_group)
 }
 
-#' @title Model summary output from grouped analysis of any function that has
-#'   `data` argument in its function call.
+#' @title Grouped model summary
+#' @description Model summary output from grouped analysis of any function that
+#'   has `data` argument in its function call.
 #' @name grouped_glance
 #'
 #' @inheritParams grouped_tidy
@@ -94,8 +96,9 @@ grouped_glance <- function(data,
   grouped_cleanup(data, rlang::enquos(grouping.vars), glance_group)
 }
 
-#' @title Augmented data from grouped analysis of any function that has `data`
-#'   argument in its function call.
+#' @title Grouped augment
+#' @description Augmented data from grouped analysis of any function that has
+#'   `data` argument in its function call.
 #' @name grouped_augment
 #'
 #' @inheritParams grouped_tidy
@@ -148,5 +151,5 @@ grouped_cleanup <- function(data, .vars, .f) {
   data %>%
     dplyr::group_by_at(.vars, .drop = TRUE) %>%
     dplyr::group_modify(.f) %>%
-    dplyr::ungroup(.)
+    dplyr::ungroup()
 }

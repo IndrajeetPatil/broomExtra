@@ -2,8 +2,7 @@
 % Please edit documentation in R/grouped_generics.R
 \name{grouped_tidy}
 \alias{grouped_tidy}
-\title{Tidy output from grouped analysis of any function that has \code{data}
-argument in its function call.}
+\title{Grouped tidy analysis}
 \usage{
 grouped_tidy(data, grouping.vars, ..f, ..., tidy.args = list())
 }
@@ -22,8 +21,8 @@ grouped_tidy(data, grouping.vars, ..f, ..., tidy.args = list())
 A \code{\link[tibble:tibble]{tibble::tibble()}} with information about model components.
 }
 \description{
-Tidy output from grouped analysis of any function that has \code{data}
-argument in its function call.
+Tidy output from grouped analysis of any function that has
+\code{data} argument in its function call
 }
 \examples{
 set.seed(123)

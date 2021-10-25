@@ -1,5 +1,5 @@
 #' @name tidy_parameters
-#' @title Tidy dataframes of model parameters using `{broom}` and `{easystats}`.
+#' @title Tidy dataframes of model parameters using `{broom}` and `{easystats}`
 #'
 #' @description
 #'
@@ -63,7 +63,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
 
 #' @name glance_performance
-#' @title Model performance summary dataframes using `{broom}` and `{easystats}`.
+#' @title Model performance summary dataframes using `{broom}` and `{easystats}`
 #'
 #' @description
 #'

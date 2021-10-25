@@ -2,7 +2,7 @@
 % Please edit documentation in R/generics.R
 \name{tidy}
 \alias{tidy}
-\title{Retrieve tidy dataframe if it exists.}
+\title{Retrieve tidy dataframe if it exists}
 \usage{
 tidy(x, ...)
 }

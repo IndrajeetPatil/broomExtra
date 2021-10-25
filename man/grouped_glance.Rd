@@ -2,8 +2,7 @@
 % Please edit documentation in R/grouped_generics.R
 \name{grouped_glance}
 \alias{grouped_glance}
-\title{Model summary output from grouped analysis of any function that has
-\code{data} argument in its function call.}
+\title{Grouped model summary}
 \usage{
 grouped_glance(data, grouping.vars, ..f, ...)
 }
@@ -17,8 +16,8 @@ grouped_glance(data, grouping.vars, ..f, ...)
 \item{...}{<\link[rlang:dyn-dots]{dynamic}> Arguments for \code{.fn}.}
 }
 \description{
-Model summary output from grouped analysis of any function that has
-\code{data} argument in its function call.
+Model summary output from grouped analysis of any function that
+has \code{data} argument in its function call.
 }
 \examples{
 set.seed(123)

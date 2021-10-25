@@ -2,8 +2,7 @@
 % Please edit documentation in R/grouped_generics.R
 \name{grouped_augment}
 \alias{grouped_augment}
-\title{Augmented data from grouped analysis of any function that has \code{data}
-argument in its function call.}
+\title{Grouped augment}
 \usage{
 grouped_augment(data, grouping.vars, ..f, ..., augment.args = list())
 }
@@ -22,8 +21,8 @@ grouped_augment(data, grouping.vars, ..f, ..., augment.args = list())
 A \code{\link[tibble:tibble]{tibble::tibble()}} with information about data points.
 }
 \description{
-Augmented data from grouped analysis of any function that has \code{data}
-argument in its function call.
+Augmented data from grouped analysis of any function that has
+\code{data} argument in its function call.
 }
 \examples{
 set.seed(123)

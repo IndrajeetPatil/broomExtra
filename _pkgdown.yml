@@ -4,7 +4,7 @@ url: https://indrajeetpatil.github.io/broomExtra/
 #   package: preferably
 
 template:
-  bootstrap: 5
+  bootstrap: 4
   bootswatch: cyborg
   theme: arrow-dark
   bslib:
