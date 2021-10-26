@@ -1,4 +1,6 @@
-# broomExtra 4.2.3.9000
+# broomExtra 4.3.0
+
+  - Bumps needed `{easystats}` package versions.
 
 # broomExtra 4.2.3
 

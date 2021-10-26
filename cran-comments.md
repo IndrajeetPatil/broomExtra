@@ -1,8 +1,8 @@
 ## Test environments
 
-* local OS X install, R 4.0.5
+* local OS X install, R 4.1.1
 
-* ubuntu 14.04 (on github-actions), R 4.0.5
+* ubuntu 14.04 (on github-actions), R 4.1.1
 
 * win-builder (devel and release)
 
