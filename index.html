@@ -87,24 +87,14 @@
 </h1>
 </div>
 
-</div>
-<div class="section level1">
-<h1 id="raison-dêtre-">Raison d’être <a class="anchor" aria-label="anchor" href="#raison-d%C3%AAtre-"></a>
-</h1>
+<p><img src="reference/figures/logo.png" align="right" width="360"></p>
 <p>The goal of <a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a> is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax to return tidy tibbles containing model parameters and summaries.</p>
-<p>The package internally relies on the following packages that I contribute to:</p>
-<ul>
-<li><a href="https://broom.tidymodels.org/" class="external-link">broom</a></li>
-<li><a href="https://github.com/bbolker/broom.mixed" class="external-link">broom.mixed</a></li>
-<li><a href="https://easystats.github.io/parameters/" class="external-link">parameters</a></li>
-<li><a href="https://easystats.github.io/performance/" class="external-link">performance</a></li>
-</ul>
-<p>Since it combines functionality from these two ecosystems, this package has the following advantages over the underlying individual packages (see examples below for concrete instantiations of these benefits):</p>
+<p>It combines functionality from <a href="https://broom.tidymodels.org/" class="external-link">broom</a> and <code>{easystats}</code> ecosystems, and this package has the following advantages over the underlying individual packages (see examples below for concrete instantiations of these benefits):</p>
 <ul>
 <li>Covers more number of regression models than these individual packages.</li>
 <li>If possible to compute, the output tibbles contains a <em>p</em>-value column.</li>
 <li>More robust to extraneous input arguments that might sometimes cause problems for the underlying methods.</li>
-<li>Follows consistent <code>tidymodels</code> column-naming schema.</li>
+<li>Follows consistent <code>{tidymodels}</code> column-naming schema.</li>
 <li>Returns a more comprehensive model performance measure summary.</li>
 </ul>
 <p>If you want to add support for a regression model, the natural place to do this would be to contribute either to <a href="https://broom.tidymodels.org/" class="external-link">broom</a> or to <a href="https://easystats.github.io/parameters/" class="external-link">parameters</a>.</p>
