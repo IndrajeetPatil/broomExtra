@@ -20,13 +20,13 @@ authors:
     href: https://sites.google.com/site/indrajeetspatilmorality/
 
 reference:
-  - title: Hybrid functions from `broom` and `easystats`
+  - title: Hybrid functions from `{broom}` and `{easystats}`
     desc:  These are the primary functions that combine functionalities from these two ecosystems.
     contents:
       - tidy_parameters
       - glance_performance
 
-  - title: Generics for `broom` and `broom.mixed`
+  - title: Generics for `{broom}` and `{broom.mixed}`
     desc:  Generic functions used for tidy tibbles, model summaries, and augmented data frames.
     contents:
       - tidy

@@ -7,7 +7,7 @@
 [![pkgdown](https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 
-# Raison d’être <img src="man/figures/logo.png" align="right" width="360" />
+<img src="man/figures/logo.png" align="right" width="360" />
 
 The goal of `{broomExtra}` is to provide helper functions that assist in
 data analysis workflows involving regression analyses. The goal is to
@@ -15,17 +15,10 @@ combine the functionality offered by different set of packages through a
 common syntax to return tidy tibbles containing model parameters and
 summaries.
 
-The package internally relies on the following packages that I
-contribute to:
-
--   `{broom}`
--   `{broom.mixed}`
--   `{parameters}`
--   `{performance}`
-
-Since it combines functionality from these two ecosystems, this package
-has the following advantages over the underlying individual packages
-(see examples below for concrete instantiations of these benefits):
+It combines functionality from `{broom}` and `{easystats}` ecosystems,
+and this package has the following advantages over the underlying
+individual packages (see examples below for concrete instantiations of
+these benefits):
 
 -   Covers more number of regression models than these individual
     packages.
@@ -33,7 +26,7 @@ has the following advantages over the underlying individual packages
     column.
 -   More robust to extraneous input arguments that might sometimes cause
     problems for the underlying methods.
--   Follows consistent `tidymodels` column-naming schema.
+-   Follows consistent `{tidymodels}` column-naming schema.
 -   Returns a more comprehensive model performance measure summary.
 
 If you want to add support for a regression model, the natural place to
