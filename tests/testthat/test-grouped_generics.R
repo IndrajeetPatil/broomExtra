@@ -10,7 +10,7 @@ test_that(
     set.seed(123)
     lmer_df <-
       broomExtra::grouped_tidy(
-        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        data = mutate(MASS::Aids2, interval = death - diag),
         grouping.vars = sex,
         ..f = lme4::lmer,
         formula = interval ~ age + (1 | status),
@@ -22,7 +22,7 @@ test_that(
     set.seed(123)
     lm_df <-
       broomExtra::grouped_tidy(
-        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        data = mutate(MASS::Aids2, interval = death - diag),
         grouping.vars = sex,
         ..f = stats::lm,
         formula = interval ~ age,
@@ -48,7 +48,7 @@ test_that(
     set.seed(123)
     lmer_df <-
       broomExtra::grouped_glance(
-        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        data = mutate(MASS::Aids2, interval = death - diag),
         grouping.vars = sex,
         ..f = lme4::lmer,
         formula = interval ~ age + (1 | status),
@@ -59,7 +59,7 @@ test_that(
     set.seed(123)
     lm_df <-
       broomExtra::grouped_glance(
-        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        data = mutate(MASS::Aids2, interval = death - diag),
         grouping.vars = sex,
         ..f = stats::lm,
         formula = interval ~ age
@@ -83,7 +83,7 @@ test_that(
     set.seed(123)
     lmer_df <-
       broomExtra::grouped_augment(
-        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        data = mutate(MASS::Aids2, interval = death - diag),
         grouping.vars = sex,
         ..f = lme4::lmer,
         formula = interval ~ age + (1 | status),
@@ -94,7 +94,7 @@ test_that(
     set.seed(123)
     lm_df <-
       broomExtra::grouped_augment(
-        data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+        data = mutate(MASS::Aids2, interval = death - diag),
         grouping.vars = sex,
         ..f = stats::lm,
         formula = interval ~ age

@@ -105,6 +105,8 @@ models.
 set.seed(123)
 library(lme4)
 library(ordinal)
+library(broomExtra)
+library(dplyr)
 
 # mixed-effects models (`{broom.mixed}` will be used)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
@@ -287,7 +289,7 @@ library(ggplot2)
 
 # linear model (tidy analysis across grouping combinations)
 broomExtra::grouped_tidy(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
   grouping.vars = c(cut, color),
   formula = price ~ carat - 1,
   ..f = stats::lm,
@@ -311,7 +313,7 @@ broomExtra::grouped_tidy(
 
 # linear mixed effects model (tidy analysis across grouping combinations)
 broomExtra::grouped_tidy(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
   ..f = lme4::lmer,
   formula = price ~ carat + (carat | color) - 1,
@@ -354,7 +356,7 @@ set.seed(123)
 
 # linear model (model summaries across grouping combinations)
 broomExtra::grouped_glance(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
   grouping.vars = c(cut, color),
   formula = price ~ carat - 1,
   ..f = stats::lm,
@@ -389,7 +391,7 @@ broomExtra::grouped_glance(
 
 # linear mixed effects model (model summaries across grouping combinations)
 broomExtra::grouped_glance(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
   ..f = lme4::lmer,
   formula = price ~ carat + (carat | color) - 1,
@@ -435,7 +437,7 @@ broomExtra::grouped_augment(
 
 # linear mixed-effects model
 broomExtra::grouped_augment(
-  data = dplyr::sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
   ..f = lme4::lmer,
   formula = price ~ carat + (carat | color) - 1,

@@ -21,10 +21,11 @@ has \code{data} argument in its function call.
 }
 \examples{
 set.seed(123)
+library(dplyr)
 
 # linear mixed effects model
-broomExtra::grouped_glance(
-  data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+grouped_glance(
+  data = mutate(MASS::Aids2, interval = death - diag),
   grouping.vars = sex,
   ..f = lme4::lmer,
   formula = interval ~ age + (1 | status),

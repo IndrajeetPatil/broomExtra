@@ -30,8 +30,7 @@ Imports:
     magrittr,
     parameters (>= 0.15.0),
     performance (>= 0.8.0),
-    rlang,
-    tibble
+    rlang
 Suggests: 
     generics,
     lavaan,

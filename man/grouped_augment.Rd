@@ -26,10 +26,11 @@ Augmented data from grouped analysis of any function that has
 }
 \examples{
 set.seed(123)
+library(dplyr)
 
 # linear mixed effects model
-broomExtra::grouped_augment(
-  data = dplyr::mutate(MASS::Aids2, interval = death - diag),
+grouped_augment(
+  data = mutate(MASS::Aids2, interval = death - diag),
   grouping.vars = sex,
   ..f = lme4::lmer,
   formula = interval ~ age + (1 | status),

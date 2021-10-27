@@ -9,21 +9,9 @@ magrittr::`%>%`
 magrittr::`%<>%`
 
 #' @export
-#' @importFrom magrittr "%$%"
-magrittr::`%$%`
+#' @importFrom dplyr tibble
+dplyr::tibble
 
 #' @export
-#' @importFrom rlang "%||%"
-rlang::`%||%`
-
-#' @export
-#' @importFrom rlang "%|%"
-rlang::`%|%`
-
-#' @export
-#' @importFrom tibble tibble
-tibble::tibble
-
-#' @export
-#' @importFrom tibble as_tibble
-tibble::as_tibble
+#' @importFrom dplyr as_tibble
+dplyr::as_tibble

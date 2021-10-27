@@ -1,6 +1,8 @@
 # broomExtra 4.3.0
 
   - Bumps needed `{easystats}` package versions.
+  
+  - `{rlang}` operators are no longer re-exported.
 
 # broomExtra 4.2.3
 

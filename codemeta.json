@@ -217,18 +217,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=rlang"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "tibble",
-      "name": "tibble",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=tibble"
     }
   ],
   "contIntegration": "https://github.com/IndrajeetPatil/broomExtra/actions",
@@ -251,7 +239,7 @@
     }
   ],
   "funder": {},
-  "fileSize": "208.234KB",
+  "fileSize": "207.718KB",
   "keywords": [
     "regression-models",
     "tidy",

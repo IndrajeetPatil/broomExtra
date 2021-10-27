@@ -10,7 +10,6 @@
 #'
 #' @inheritParams generics::tidy
 #'
-#' @importFrom rlang is_null
 #' @importFrom broom tidy
 #' @importFrom broom.mixed tidy
 #'
@@ -29,7 +28,7 @@ tidy <- function(x, ...) {
   f <- tryCatch(broom::tidy(x, ...), error = function(e) NULL)
 
   # if not, check if `{broom.mixed}` has a tidy method for a given object
-  if (rlang::is_null(f)) f <- tryCatch(broom.mixed::tidy(x, ...), error = function(e) NULL)
+  if (is_null(f)) f <- tryCatch(broom.mixed::tidy(x, ...), error = function(e) NULL)
 
   # return the tidy
   return(f)
@@ -66,7 +65,7 @@ glance <- function(x, ...) {
   f <- tryCatch(broom::glance(x, ...), error = function(e) NULL)
 
   # if not, check if `{broom.mixed}` has a glance method for a given object
-  if (rlang::is_null(f)) f <- tryCatch(broom.mixed::glance(x, ...), error = function(e) NULL)
+  if (is_null(f)) f <- tryCatch(broom.mixed::glance(x, ...), error = function(e) NULL)
 
   # return the glance
   return(f)
@@ -100,7 +99,7 @@ augment <- function(x, ...) {
   f <- tryCatch(broom::augment(x, ...), error = function(e) NULL)
 
   # if not, check if `{broom.mixed}` has a augment method for a given object
-  if (rlang::is_null(f)) f <- tryCatch(broom.mixed::augment(x, ...), error = function(e) NULL)
+  if (is_null(f)) f <- tryCatch(broom.mixed::augment(x, ...), error = function(e) NULL)
 
   # return the augment
   return(f)

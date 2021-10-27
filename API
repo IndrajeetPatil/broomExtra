@@ -13,11 +13,8 @@ tidy_parameters(x, conf.int = TRUE, ...)
 
 ## Reexported objects
 
-magrittr::%$%
 magrittr::%<>%
 magrittr::%>%
-rlang::%|%
-rlang::%||%
 tibble::as_tibble
 generics::augment
 generics::glance

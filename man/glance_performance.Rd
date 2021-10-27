@@ -25,7 +25,9 @@ combine them into a single dataframe. Measures for which these two packages
 have different naming conventions, both will be retained.
 }
 \examples{
+
 set.seed(123)
 mod <- lm(mpg ~ wt + cyl, data = mtcars)
 broomExtra::glance_performance(mod)
+
 }

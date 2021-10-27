@@ -25,8 +25,7 @@
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::tidy_parameters(mod)
-#' @importFrom rlang is_null
-#' @importFrom parameters model_parameters standardize_names
+#' @import parameters
 #'
 #' @export
 
@@ -35,14 +34,14 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 
   # check if `{easystats}` family has a tidy method for a given object
   m <- tryCatch(
-    expr = standardize_names(parameters::model_parameters(x, ...), style = "broom"),
+    expr = standardize_names(model_parameters(x, ...), style = "broom"),
     error = function(e) NULL
   )
 
 
-  if (rlang::is_null(m)) {
+  if (is_null(m)) {
     m <- tryCatch(
-      expr = standardize_names(parameters::model_parameters(x), style = "broom"),
+      expr = standardize_names(model_parameters(x), style = "broom"),
       error = function(e) NULL
     )
   }
@@ -50,7 +49,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
   # broom family --------------------------------------------
 
   # check if `{broom}` family has a tidy method for a given object
-  if (rlang::is_null(m)) {
+  if (is_null(m)) {
     m <- tryCatch(
       expr = broomExtra::tidy(x, conf.int = conf.int, ...),
       error = function(e) NULL
@@ -58,7 +57,7 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
   }
 
   # return the final object
-  if (rlang::is_null(m)) m else as_tibble(m)
+  if (is_null(m)) m else as_tibble(m)
 }
 
 
@@ -80,12 +79,11 @@ tidy_parameters <- function(x, conf.int = TRUE, ...) {
 #' @inheritParams glance
 #'
 #' @examples
+#'
 #' set.seed(123)
 #' mod <- lm(mpg ~ wt + cyl, data = mtcars)
 #' broomExtra::glance_performance(mod)
-#' @importFrom dplyr select intersect
-#' @importFrom rlang is_null
-#' @importFrom performance model_performance
+#' @import performance
 #'
 #' @export
 
@@ -95,13 +93,13 @@ glance_performance <- function(x, ...) {
   df_broom <- tryCatch(broomExtra::glance(x, ...), error = function(e) NULL)
 
   # for consistency with `{performance}` output, convert column names to lowercase
-  if (!rlang::is_null(df_broom)) df_broom %<>% dplyr::rename_all(.f = tolower)
+  if (!is_null(df_broom)) df_broom %<>% rename_all(.funs = tolower)
 
   # easystats family ---------------------------------------
   # check if `{easystats}` family has a tidy method for a given object
   df_performance <- tryCatch(
     expr = standardize_names(
-      data = performance::model_performance(x, metrics = "all", ...),
+      data = model_performance(x, metrics = "all", ...),
       style = "broom"
     ),
     error = function(e) NULL
@@ -109,17 +107,17 @@ glance_performance <- function(x, ...) {
 
   # marry the families ---------------------------------------
   # combine if both are available
-  if (!rlang::is_null(df_broom) && !rlang::is_null(df_performance)) {
-    df_combined <- dplyr::bind_cols(
+  if (!is_null(df_broom) && !is_null(df_performance)) {
+    df_combined <- bind_cols(
       df_broom,
-      dplyr::select(df_performance, -dplyr::intersect(names(df_broom), names(df_performance))),
+      select(df_performance, -intersect(names(df_broom), names(df_performance))),
     )
   }
 
   # otherwise return what's not a `NULL`
-  if (rlang::is_null(df_broom)) df_combined <- df_performance
-  if (rlang::is_null(df_performance)) df_combined <- df_broom
+  if (is_null(df_broom)) df_combined <- df_performance
+  if (is_null(df_performance)) df_combined <- df_broom
 
   # return the final object
-  if (rlang::is_null(df_combined)) df_combined else as_tibble(df_combined)
+  if (is_null(df_combined)) df_combined else as_tibble(df_combined)
 }
