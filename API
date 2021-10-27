@@ -16,7 +16,4 @@ tidy_parameters(x, conf.int = TRUE, ...)
 magrittr::%<>%
 magrittr::%>%
 tibble::as_tibble
-generics::augment
-generics::glance
 tibble::tibble
-generics::tidy

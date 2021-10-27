@@ -34,5 +34,4 @@ The function will attempt to get these details first using
 set.seed(123)
 mod <- lm(mpg ~ wt + cyl, data = mtcars)
 broomExtra::tidy_parameters(mod)
-
 }

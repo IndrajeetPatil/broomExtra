@@ -29,5 +29,4 @@ have different naming conventions, both will be retained.
 set.seed(123)
 mod <- lm(mpg ~ wt + cyl, data = mtcars)
 broomExtra::glance_performance(mod)
-
 }

@@ -10,9 +10,6 @@
 #'
 #' @inheritParams generics::tidy
 #'
-#' @importFrom broom tidy
-#' @importFrom broom.mixed tidy
-#'
 #' @inherit generics::tidy return value
 #'
 #' @seealso \code{\link{grouped_tidy}}, \code{\link{tidy_parameters}}
@@ -47,9 +44,6 @@ tidy <- function(x, ...) {
 #'
 #' @inheritParams generics::glance
 #'
-#' @importFrom broom glance
-#' @importFrom broom.mixed glance
-#'
 #' @inherit generics::glance return value
 #'
 #' @seealso \code{\link{grouped_glance}}, \code{\link{glance_performance}}
@@ -80,9 +74,6 @@ glance <- function(x, ...) {
 #' return a `NULL`.
 #'
 #' @inheritParams generics::augment
-#'
-#' @importFrom broom augment
-#' @importFrom broom.mixed augment
 #'
 #' @inherit generics::augment return value
 #'
