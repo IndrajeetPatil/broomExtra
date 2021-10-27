@@ -40,7 +40,7 @@ data argument in its function call"><meta property="og:image" content="https://i
   <div class="col-md-9 contents">
     <div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Grouped tidy analysis</h1>
-      <small class="dont-index">Source: <a href="https://github.com/IndrajeetPatil/broomExtra/blob/master/R/grouped_generics.R" class="external-link"><code>R/grouped_generics.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/IndrajeetPatil/broomExtra/blob/HEAD/R/grouped_generics.R" class="external-link"><code>R/grouped_generics.R</code></a></small>
       <div class="d-none name"><code>grouped_tidy.Rd</code></div>
     </div>
 
@@ -56,13 +56,16 @@ data argument in its function call"><meta property="og:image" content="https://i
     <div id="ref-sections">
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    
-
-<dl><dt>data</dt><dd><p>Dataframe (or tibble) from which variables are to be taken.</p></dd>
-</dl><dl><dt>grouping.vars</dt><dd><p>Grouping variables.</p></dd>
-</dl><dl><dt>..f</dt><dd><p>A function, or function name as a string.</p></dd>
-</dl><dl><dt>...</dt><dd><p>&lt;<a href="https://rlang.r-lib.org/reference/dyn-dots.html" class="external-link">dynamic</a>&gt; Arguments for <code>.fn</code>.</p></dd>
-</dl><dl><dt>tidy.args</dt><dd><p>A list of arguments to be used in the relevant <code>S3</code> method.</p></dd>
+    <dl><dt>data</dt>
+<dd><p>Dataframe (or tibble) from which variables are to be taken.</p></dd>
+<dt>grouping.vars</dt>
+<dd><p>Grouping variables.</p></dd>
+<dt>..f</dt>
+<dd><p>A function, or function name as a string.</p></dd>
+<dt>...</dt>
+<dd><p>&lt;<a href="https://rlang.r-lib.org/reference/dyn-dots.html" class="external-link">dynamic</a>&gt; Arguments for <code>.fn</code>.</p></dd>
+<dt>tidy.args</dt>
+<dd><p>A list of arguments to be used in the relevant <code>S3</code> method.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -77,10 +80,11 @@ data argument in its function call"><meta property="og:image" content="https://i
     <div id="examples">
     <h2>Examples</h2>
     <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># linear mixed effects model</span></span>
-<span class="r-in"><span class="fu">broomExtra</span><span class="fu">::</span><span class="fu">grouped_tidy</span><span class="op">(</span></span>
-<span class="r-in">  data <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="fu">MASS</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/MASS/man/Aids2.html" class="external-link">Aids2</a></span>, interval <span class="op">=</span> <span class="va">death</span> <span class="op">-</span> <span class="va">diag</span><span class="op">)</span>,</span>
+<span class="r-in"><span class="fu">grouped_tidy</span><span class="op">(</span></span>
+<span class="r-in">  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="fu">MASS</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/MASS/man/Aids2.html" class="external-link">Aids2</a></span>, interval <span class="op">=</span> <span class="va">death</span> <span class="op">-</span> <span class="va">diag</span><span class="op">)</span>,</span>
 <span class="r-in">  grouping.vars <span class="op">=</span> <span class="va">sex</span>,</span>
 <span class="r-in">  ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span>,</span>
 <span class="r-in">  formula <span class="op">=</span> <span class="va">interval</span> <span class="op">~</span> <span class="va">age</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">status</span><span class="op">)</span>,</span>
