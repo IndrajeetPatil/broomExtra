@@ -98,10 +98,7 @@ glance_performance <- function(x, ...) {
   # easystats family ---------------------------------------
   # check if `{easystats}` family has a tidy method for a given object
   df_performance <- tryCatch(
-    expr = standardize_names(
-      data = model_performance(x, metrics = "all", ...),
-      style = "broom"
-    ),
+    expr = standardize_names(model_performance(x, metrics = "all", ...), style = "broom"),
     error = function(e) NULL
   )
 

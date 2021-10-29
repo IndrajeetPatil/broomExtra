@@ -286,10 +286,11 @@ functions work only for methods that depend on a `data` argument (e.g.,
 set.seed(123)
 library(lme4)
 library(ggplot2)
+library(broomExtra)
 
 # linear model (tidy analysis across grouping combinations)
-broomExtra::grouped_tidy(
-  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+grouped_tidy(
+  data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = c(cut, color),
   formula = price ~ carat - 1,
   ..f = stats::lm,
@@ -312,8 +313,8 @@ broomExtra::grouped_tidy(
 #> # ... with 25 more rows
 
 # linear mixed effects model (tidy analysis across grouping combinations)
-broomExtra::grouped_tidy(
-  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+grouped_tidy(
+  data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
   ..f = lme4::lmer,
   formula = price ~ carat + (carat | color) - 1,
@@ -355,8 +356,8 @@ broomExtra::grouped_tidy(
 set.seed(123)
 
 # linear model (model summaries across grouping combinations)
-broomExtra::grouped_glance(
-  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+grouped_glance(
+  data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = c(cut, color),
   formula = price ~ carat - 1,
   ..f = stats::lm,
@@ -390,8 +391,8 @@ broomExtra::grouped_glance(
 #> # ... with 25 more rows
 
 # linear mixed effects model (model summaries across grouping combinations)
-broomExtra::grouped_glance(
-  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+grouped_glance(
+  data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
   ..f = lme4::lmer,
   formula = price ~ carat + (carat | color) - 1,
@@ -414,7 +415,7 @@ broomExtra::grouped_glance(
 set.seed(123)
 
 # linear model
-broomExtra::grouped_augment(
+grouped_augment(
   data = ggplot2::diamonds,
   grouping.vars = c(cut, color),
   ..f = stats::lm,
@@ -436,8 +437,8 @@ broomExtra::grouped_augment(
 #> # ... with 53,930 more rows
 
 # linear mixed-effects model
-broomExtra::grouped_augment(
-  data = sample_frac(tbl = ggplot2::diamonds, size = 0.5),
+grouped_augment(
+  data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
   ..f = lme4::lmer,
   formula = price ~ carat + (carat | color) - 1,
