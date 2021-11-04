@@ -41,7 +41,7 @@
 <![endif]-->
 </head>
 <body>
-    <a href="#container" class="visually-hidden-focusable">Skip to content</a>
+    <a href="#container" class="visually-hidden-focusable">Skip to contents</a>
     
 
     <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
@@ -63,7 +63,7 @@
 </li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Search" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search..." autocomplete="off">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
       <ul class="navbar-nav">
@@ -94,7 +94,7 @@
 <li>Covers more number of regression models than these individual packages.</li>
 <li>If possible to compute, the output tibbles contains a <em>p</em>-value column.</li>
 <li>More robust to extraneous input arguments that might sometimes cause problems for the underlying methods.</li>
-<li>Follows consistent <code>{tidymodels}</code> column-naming schema.</li>
+<li>Follows consistent <a href="https://tidymodels.tidymodels.org" class="external-link">tidymodels</a> column-naming schema.</li>
 <li>Returns a more comprehensive model performance measure summary.</li>
 </ul>
 <p>If you want to add support for a regression model, the natural place to do this would be to contribute either to <a href="https://broom.tidymodels.org/" class="external-link">broom</a> or to <a href="https://easystats.github.io/parameters/" class="external-link">parameters</a>.</p>
@@ -181,7 +181,7 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/runehaubo/ordinal" class="external-link">ordinal</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span>
 
@@ -229,7 +229,7 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/runehaubo/ordinal" class="external-link">ordinal</a></span><span class="op">)</span>
 
 <span class="co"># mixed-effects model</span>
 <span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
@@ -270,7 +270,7 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ordinal</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/runehaubo/ordinal" class="external-link">ordinal</a></span><span class="op">)</span>
 
 <span class="co"># mixed-effects model</span>
 <span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
@@ -357,12 +357,12 @@
 <code class="sourceCode R"><span class="co"># to speed up computation, let's use only 50% of the data</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://indrajeetpatil.github.io/broomExtra/">broomExtra</a></span><span class="op">)</span>
 
 <span class="co"># linear model (tidy analysis across grouping combinations)</span>
 <span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html" class="external-link">diamonds</a></span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">-</span> <span class="fl">1</span>,
   ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
@@ -386,7 +386,7 @@
 
 <span class="co"># linear mixed effects model (tidy analysis across grouping combinations)</span>
 <span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html" class="external-link">diamonds</a></span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="va">cut</span>,
   ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
@@ -430,7 +430,7 @@
 
 <span class="co"># linear model (model summaries across grouping combinations)</span>
 <span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html" class="external-link">diamonds</a></span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">-</span> <span class="fl">1</span>,
   ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
@@ -465,7 +465,7 @@
 
 <span class="co"># linear mixed effects model (model summaries across grouping combinations)</span>
 <span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html" class="external-link">diamonds</a></span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="va">cut</span>,
   ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
@@ -490,7 +490,7 @@
 
 <span class="co"># linear model</span>
 <span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>,
+  data <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html" class="external-link">diamonds</a></span>,
   grouping.vars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">cut</span>, <span class="va">color</span><span class="op">)</span>,
   ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">-</span> <span class="fl">1</span>
@@ -512,7 +512,7 @@
 
 <span class="co"># linear mixed-effects model</span>
 <span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va">diamonds</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
+  data <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/sample_n.html" class="external-link">sample_frac</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va"><a href="https://ggplot2.tidyverse.org/reference/diamonds.html" class="external-link">diamonds</a></span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,
   grouping.vars <span class="op">=</span> <span class="va">cut</span>,
   ..f <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
@@ -585,7 +585,7 @@
 <ul class="list-unstyled">
 <li>
 <a href="https://sites.google.com/site/indrajeetspatilmorality/" class="external-link">Indrajeet Patil</a> <br><small class="roles"> Author, maintainer, copyright holder </small> <a href="https://orcid.org/0000-0003-1995-6531" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li><a href="authors.html">More on authors...</a></li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 
