@@ -7,7 +7,7 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
+  comment = "##>",
   message = FALSE,
   warning = FALSE,
   fig.path = "man/figures/README-",
@@ -23,7 +23,7 @@ options(
 )
 ```
 
-# `{broomExtra}`: Enhancements for `{broom}` and `{easystats}` Package Families 
+## `{broomExtra}`: Enhancements for `{broom}` and `{easystats}` Package Families 
 
 [![CRAN_Release_Badge](https://www.r-pkg.org/badges/version-ago/broomExtra)](https://CRAN.R-project.org/package=broomExtra)
 [![pkgdown](https://github.com/IndrajeetPatil/broomExtra/workflows/pkgdown/badge.svg)](https://github.com/IndrajeetPatil/broomExtra/actions)
@@ -50,14 +50,14 @@ below for concrete instantiations of these benefits):
 If you want to add support for a regression model, the natural place to do this
 would be to contribute either to `{broom}` or to `{parameters}`.
 
-# Installation
+## Installation
 
 Type | Source | Command
 ---|---|---
 Release | CRAN | `install.packages("broomExtra")`
 Development | GitHub | `remotes::install_github("IndrajeetPatil/broomExtra")`
 
-# Lifecycle
+## Lifecycle
 
 Function | Lifecycle
 ------------------------ | ----- 
@@ -66,7 +66,7 @@ Function | Lifecycle
 `tidy`, `glance`, `augment` | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 `grouped_tidy`, `grouped_glance`, `grouped_augment` | [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 
-# Hybrid generics
+## Hybrid generics
 
 The `{broom}`-family of packages are not the only ones which return such tidy
 summaries for model parameters and model performance. The `{easystats}`-family of
@@ -95,7 +95,7 @@ or `parameters::model_parameters`, so you get best of the both worlds.
 misspecified arguments. This makes these functions much easier to work with while writing wrapper
 functions around `broomExtra::tidy` or `parameters::model_parameters`.
 
-# Generic functions
+## Generic functions
 
 Currently, `S3` methods for mixed-effects model objects are included in the
 `{broom.mixed}` package, while the rest of the object classes are included in the
@@ -109,7 +109,7 @@ as calling `broomExtra::tidy()`/`broomExtra::glance()`/`broomExtra::augment()`
 will search the appropriate method from these two packages and return the
 results.
 
-## tidy dataframe
+#### tidy dataframe
 
 Let's get a tidy tibble back containing results from various regression models.
 
@@ -120,24 +120,24 @@ library(ordinal)
 library(broomExtra)
 library(dplyr)
 
-# mixed-effects models (`{broom.mixed}` will be used)
+## mixed-effects models (`{broom.mixed}` will be used)
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::tidy(x = lmm.mod, effects = "fixed")
 
-# linear model (`{broom}` will be used)
+## linear model (`{broom}` will be used)
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::tidy(lm.mod, conf.int = TRUE)
 
-# another example with `{broom}`
-# cumulative Link Models
+## another example with `{broom}`
+## cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::tidy(x = clm.mod, exponentiate = TRUE)
 
-# unsupported object (the function will return `NULL` in such cases)
+## unsupported object (the function will return `NULL` in such cases)
 broomExtra::tidy(list(1, c("x", "y")))
 ```
 
-## model summaries
+#### model summaries
 
 Getting a `tibble` containing model summary and other performance measures.
 
@@ -146,24 +146,24 @@ set.seed(123)
 library(lme4)
 library(ordinal)
 
-# mixed-effects model
+## mixed-effects model
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::glance(lmm.mod)
 
-# linear model
+## linear model
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::glance(lm.mod)
 
-# another example with `{broom}`
-# cumulative Link Models
+## another example with `{broom}`
+## cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::glance(clm.mod)
 
-# in case no glance method is available (`NULL` will be returned)
+## in case no glance method is available (`NULL` will be returned)
 broomExtra::glance(acf(lh, plot = FALSE))
 ```
 
-## augmented dataframe
+#### augmented dataframe
 
 Getting a `tibble` by augmenting data with information from an object.
 
@@ -172,24 +172,24 @@ set.seed(123)
 library(lme4)
 library(ordinal)
 
-# mixed-effects model
+## mixed-effects model
 lmm.mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
 broomExtra::augment(lmm.mod)
 
-# linear model
+## linear model
 lm.mod <- lm(Reaction ~ Days, sleepstudy)
 broomExtra::augment(lm.mod)
 
-# another example with `{broom}`
-# cumulative Link Models
+## another example with `{broom}`
+## cumulative Link Models
 clm.mod <- clm(rating ~ temp * contact, data = wine)
 broomExtra::augment(x = clm.mod, newdata = wine, type.predict = "prob")
 
-# in case no augment method is available (`NULL` will be returned)
+## in case no augment method is available (`NULL` will be returned)
 broomExtra::augment(stats::anova(stats::lm(wt ~ am, mtcars)))
 ```
 
-# `grouped_` variants of generics
+## `grouped_` variants of generics
 
 `grouped` variants of the generic functions (`tidy`, `glance`, and `augment`)
 make it easy to execute the same analysis for all combinations of grouping
@@ -197,16 +197,16 @@ variable(s) in a dataframe. Currently, these functions work only for methods
 that depend on a `data` argument (e.g., `stats::lm`), but not for functions that
 don't (e.g., `stats::prop.test()`).
 
-## `grouped_tidy`
+#### `grouped_tidy`
 
 ```{r grouped_tidy}
-# to speed up computation, let's use only 50% of the data
+## to speed up computation, let's use only 50% of the data
 set.seed(123)
 library(lme4)
 library(ggplot2)
 library(broomExtra)
 
-# linear model (tidy analysis across grouping combinations)
+## linear model (tidy analysis across grouping combinations)
 grouped_tidy(
   data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = c(cut, color),
@@ -216,7 +216,7 @@ grouped_tidy(
   tidy.args = list(quick = TRUE)
 )
 
-# linear mixed effects model (tidy analysis across grouping combinations)
+## linear mixed effects model (tidy analysis across grouping combinations)
 grouped_tidy(
   data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
@@ -227,13 +227,13 @@ grouped_tidy(
 )
 ```
 
-## `grouped_glance`
+#### `grouped_glance`
 
 ```{r grouped_glance}
-# to speed up computation, let's use only 50% of the data
+## to speed up computation, let's use only 50% of the data
 set.seed(123)
 
-# linear model (model summaries across grouping combinations)
+## linear model (model summaries across grouping combinations)
 grouped_glance(
   data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = c(cut, color),
@@ -242,7 +242,7 @@ grouped_glance(
   na.action = na.omit
 )
 
-# linear mixed effects model (model summaries across grouping combinations)
+## linear mixed effects model (model summaries across grouping combinations)
 grouped_glance(
   data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
@@ -252,13 +252,13 @@ grouped_glance(
 )
 ```
 
-## `grouped_augment`
+#### `grouped_augment`
 
 ```{r grouped_augment}
-# to speed up computation, let's use only 50% of the data
+## to speed up computation, let's use only 50% of the data
 set.seed(123)
 
-# linear model
+## linear model
 grouped_augment(
   data = ggplot2::diamonds,
   grouping.vars = c(cut, color),
@@ -266,7 +266,7 @@ grouped_augment(
   formula = price ~ carat - 1
 )
 
-# linear mixed-effects model
+## linear mixed-effects model
 grouped_augment(
   data = sample_frac(ggplot2::diamonds, size = 0.5),
   grouping.vars = cut,
@@ -276,7 +276,7 @@ grouped_augment(
 )
 ```
 
-# Acknowledgments
+## Acknowledgments
 
 The hexsticker was generously designed by Sarah Otterstetter (Max Planck
 Institute for Human Development, Berlin). Thanks are also due to the maintainers
