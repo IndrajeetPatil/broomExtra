@@ -9,7 +9,7 @@ template:
     border-radius: 0.5rem
     btn-border-radius: 0.25rem
     base_font: {google: "Roboto"}
-    heading_font: {google: "Roboto Slab"}
+    heading_font: {google: "Roboto"}
     code_font: {google: "JetBrains Mono"}
 
 # development:
