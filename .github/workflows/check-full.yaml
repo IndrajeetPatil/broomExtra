@@ -19,9 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: macOS-latest,   r: 'devel'}
+          #- {os: macOS-latest,   r: 'devel'}
           - {os: macOS-latest,   r: 'release'}
-          - {os: macOS-latest,   r: 'oldrel-1'}
+          #- {os: macOS-latest,   r: 'oldrel-1'}
 
           - {os: windows-latest, r: 'devel', rtools-version: '42'}
           - {os: windows-latest, r: 'devel'}
