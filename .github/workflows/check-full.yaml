@@ -23,6 +23,7 @@ jobs:
           - {os: macOS-latest,   r: 'release'}
           #- {os: macOS-latest,   r: 'oldrel-1'}
 
+          - {os: windows-latest, r: 'devel', rtools-version: '42'}
           - {os: windows-latest, r: 'devel'}
           - {os: windows-latest, r: 'release'}
           - {os: windows-latest, r: 'oldrel-1'}
@@ -44,6 +45,7 @@ jobs:
       - uses: r-lib/actions/setup-r@master
         with:
           r-version: ${{ matrix.config.r }}
+          rtools-version: ${{ matrix.config.rtools-version }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
