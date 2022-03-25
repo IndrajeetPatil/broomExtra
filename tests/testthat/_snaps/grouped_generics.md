@@ -42,11 +42,11 @@
       list(lmer_df, lm_df)
     Output
       [[1]]
-      # A tibble: 2 x 7
-        sex   sigma  logLik    AIC    BIC REMLcrit df.residual
-        <fct> <dbl>   <dbl>  <dbl>  <dbl>    <dbl>       <int>
-      1 F      415.   -656.  1321.  1331.    1313.          85
-      2 M      355. -20079. 40165. 40189.   40157.        2750
+      # A tibble: 2 x 8
+        sex    nobs sigma  logLik    AIC    BIC REMLcrit df.residual
+        <fct> <int> <dbl>   <dbl>  <dbl>  <dbl>    <dbl>       <int>
+      1 F        89  415.   -656.  1321.  1331.    1313.          85
+      2 M      2754  355. -20079. 40165. 40189.   40157.        2750
       
       [[2]]
       # A tibble: 2 x 13

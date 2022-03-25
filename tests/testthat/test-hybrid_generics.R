@@ -18,9 +18,10 @@ test_that(
       tolerance = 0.001
     )
 
-    expect_equal(
-      dim(glance_performance(lmm_mod, effects = "fixed")), c(1L, 10L)
-    )
+    lmm_glance <- glance_performance(lmm_mod, effects = "fixed")
+    expect_equal(nrow(lmm_glance), 1)
+    ## allow for nobs to be included in later versions of broom.mixed
+    expect_true(ncol(lmm_glance) %in% c(10,11))
 
     # lm
     set.seed(123)
