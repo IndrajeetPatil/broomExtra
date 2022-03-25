@@ -190,7 +190,7 @@
 <span class="co">## mixed-effects models (`{broom.mixed}` will be used)</span>
 <span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lmm.mod</span>, effects <span class="op">=</span> <span class="st">"fixed"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 2 x 5</span>
+<span class="co">#&gt; # A tibble: 2 × 5</span>
 <span class="co">#&gt;   effect term        estimate std.error statistic</span>
 <span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
 <span class="co">#&gt; 1 fixed  (Intercept)    251.       6.82     36.8 </span>
@@ -199,7 +199,7 @@
 <span class="co">## linear model (`{broom}` will be used)</span>
 <span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">lm.mod</span>, conf.int <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 2 x 7</span>
+<span class="co">#&gt; # A tibble: 2 × 7</span>
 <span class="co">#&gt;   term        estimate std.error statistic  p.value conf.low conf.high</span>
 <span class="co">#&gt;   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span>
 <span class="co">#&gt; 1 (Intercept)    251.       6.61     38.0  2.16e-87   238.       264. </span>
@@ -209,7 +209,7 @@
 <span class="co">## cumulative Link Models</span>
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/tidy.html">tidy</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">clm.mod</span>, exponentiate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 7 x 6</span>
+<span class="co">#&gt; # A tibble: 7 × 6</span>
 <span class="co">#&gt;   term                estimate std.error statistic  p.value coef.type</span>
 <span class="co">#&gt;   &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;    </span>
 <span class="co">#&gt; 1 1|2                    0.244     0.545    -2.59  9.66e- 3 intercept</span>
@@ -236,15 +236,15 @@
 <span class="co">## mixed-effects model</span>
 <span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">lmm.mod</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 6</span>
-<span class="co">#&gt;   sigma logLik   AIC   BIC REMLcrit df.residual</span>
-<span class="co">#&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;</span>
-<span class="co">#&gt; 1  25.6  -872. 1756. 1775.    1744.         174</span>
+<span class="co">#&gt; # A tibble: 1 × 7</span>
+<span class="co">#&gt;    nobs sigma logLik   AIC   BIC REMLcrit df.residual</span>
+<span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;</span>
+<span class="co">#&gt; 1   180  25.6  -872. 1756. 1775.    1744.         174</span>
 
 <span class="co">## linear model</span>
 <span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">lm.mod</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 12</span>
+<span class="co">#&gt; # A tibble: 1 × 12</span>
 <span class="co">#&gt;   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC</span>
 <span class="co">#&gt;       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span>
 <span class="co">#&gt; 1     0.286         0.282  47.7      71.5 9.89e-15     1  -950. 1906. 1916.</span>
@@ -256,7 +256,7 @@
 <span class="co">## cumulative Link Models</span>
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/glance.html">glance</a></span><span class="op">(</span><span class="va">clm.mod</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 6</span>
+<span class="co">#&gt; # A tibble: 1 × 6</span>
 <span class="co">#&gt;     edf   AIC   BIC logLik   df.residual  nobs</span>
 <span class="co">#&gt;   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;logLik&gt;       &lt;dbl&gt; &lt;dbl&gt;</span>
 <span class="co">#&gt; 1     7  187.  203. -86.4162          65    72</span>
@@ -277,7 +277,7 @@
 <span class="co">## mixed-effects model</span>
 <span class="va">lmm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span> <span class="op">+</span> <span class="op">(</span><span class="va">Days</span> <span class="op">|</span> <span class="va">Subject</span><span class="op">)</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="va">lmm.mod</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 180 x 14</span>
+<span class="co">#&gt; # A tibble: 180 × 14</span>
 <span class="co">#&gt;    Reaction  Days Subject .fitted  .resid   .hat .cooksd .fixed   .mu .offset</span>
 <span class="co">#&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;</span>
 <span class="co">#&gt;  1     250.     0 308        254.   -4.10 0.229  0.00496   251.  254.       0</span>
@@ -302,12 +302,12 @@
 <span class="co">#&gt;  8        1        1        1 -101.  </span>
 <span class="co">#&gt;  9        1        1        1   19.6 </span>
 <span class="co">#&gt; 10        1        1        1   35.7 </span>
-<span class="co">#&gt; # ... with 170 more rows</span>
+<span class="co">#&gt; # … with 170 more rows</span>
 
 <span class="co">## linear model</span>
 <span class="va">lm.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">Reaction</span> <span class="op">~</span> <span class="va">Days</span>, <span class="va">sleepstudy</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="va">lm.mod</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 180 x 8</span>
+<span class="co">#&gt; # A tibble: 180 × 8</span>
 <span class="co">#&gt;    Reaction  Days .fitted .resid    .hat .sigma   .cooksd .std.resid</span>
 <span class="co">#&gt;       &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;</span>
 <span class="co">#&gt;  1     250.     0    251.  -1.85 0.0192    47.8 0.0000149    -0.0390</span>
@@ -320,13 +320,13 @@
 <span class="co">#&gt;  8     290.     7    325. -34.5  0.00976   47.8 0.00261      -0.727 </span>
 <span class="co">#&gt;  9     431.     8    335.  95.4  0.0138    47.3 0.0284        2.01  </span>
 <span class="co">#&gt; 10     466.     9    346. 121.   0.0192    47.0 0.0639        2.56  </span>
-<span class="co">#&gt; # ... with 170 more rows</span>
+<span class="co">#&gt; # … with 170 more rows</span>
 
 <span class="co">## another example with `{broom}`</span>
 <span class="co">## cumulative Link Models</span>
 <span class="va">clm.mod</span> <span class="op">&lt;-</span> <span class="fu">clm</span><span class="op">(</span><span class="va">rating</span> <span class="op">~</span> <span class="va">temp</span> <span class="op">*</span> <span class="va">contact</span>, data <span class="op">=</span> <span class="va">wine</span><span class="op">)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">clm.mod</span>, newdata <span class="op">=</span> <span class="va">wine</span>, type.predict <span class="op">=</span> <span class="st">"prob"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 72 x 7</span>
+<span class="co">#&gt; # A tibble: 72 × 7</span>
 <span class="co">#&gt;    response rating temp  contact bottle judge .fitted</span>
 <span class="co">#&gt;       &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;   &lt;fct&gt;  &lt;fct&gt;   &lt;dbl&gt;</span>
 <span class="co">#&gt;  1       36 2      cold  no      1      1      0.562 </span>
@@ -339,7 +339,7 @@
 <span class="co">#&gt;  8       90 5      warm  yes     8      1      0.286 </span>
 <span class="co">#&gt;  9       17 1      cold  no      1      2      0.196 </span>
 <span class="co">#&gt; 10       22 2      cold  no      2      2      0.562 </span>
-<span class="co">#&gt; # ... with 62 more rows</span>
+<span class="co">#&gt; # … with 62 more rows</span>
 
 <span class="co">## in case no augment method is available (`NULL` will be returned)</span>
 <span class="fu">broomExtra</span><span class="fu">::</span><span class="fu"><a href="reference/augment.html">augment</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html" class="external-link">anova</a></span><span class="op">(</span><span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">wt</span> <span class="op">~</span> <span class="va">am</span>, <span class="va">mtcars</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
@@ -371,7 +371,7 @@
   na.action <span class="op">=</span> <span class="va">na.omit</span>,
   tidy.args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>quick <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 35 x 7</span>
+<span class="co">#&gt; # A tibble: 35 × 7</span>
 <span class="co">#&gt;    cut   color term  estimate std.error statistic   p.value</span>
 <span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt; &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 Fair  D     carat    5246.     207.       25.3 4.45e- 41</span>
@@ -384,7 +384,7 @@
 <span class="co">#&gt;  8 Good  D     carat    5207.     115.       45.4 2.66e-145</span>
 <span class="co">#&gt;  9 Good  E     carat    5102.      91.9      55.5 2.50e-206</span>
 <span class="co">#&gt; 10 Good  F     carat    5151.      92.4      55.8 1.76e-204</span>
-<span class="co">#&gt; # ... with 25 more rows</span>
+<span class="co">#&gt; # … with 25 more rows</span>
 
 <span class="co">## linear mixed effects model (tidy analysis across grouping combinations)</span>
 <span class="fu"><a href="reference/grouped_tidy.html">grouped_tidy</a></span><span class="op">(</span>
@@ -395,7 +395,7 @@
   control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html" class="external-link">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>,
   tidy.args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>conf.int <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.99</span><span class="op">)</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 25 x 9</span>
+<span class="co">#&gt; # A tibble: 25 × 9</span>
 <span class="co">#&gt;    cut   effect   group    term                   estimate std.error statistic</span>
 <span class="co">#&gt;    &lt;ord&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;                     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 Fair  fixed    &lt;NA&gt;     carat                  3800.         228.      16.7</span>
@@ -420,7 +420,7 @@
 <span class="co">#&gt;  8      NA        NA </span>
 <span class="co">#&gt;  9      NA        NA </span>
 <span class="co">#&gt; 10      NA        NA </span>
-<span class="co">#&gt; # ... with 15 more rows</span></code></pre></div>
+<span class="co">#&gt; # … with 15 more rows</span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="grouped_glance">
@@ -438,7 +438,7 @@
   ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
   na.action <span class="op">=</span> <span class="va">na.omit</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 35 x 14</span>
+<span class="co">#&gt; # A tibble: 35 × 14</span>
 <span class="co">#&gt;    cut   color r.squared adj.r.squared sigma statistic p.value    df logLik</span>
 <span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt;     &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 Fair  D         0.884         0.883 1857.        NA      NA    NA  -760.</span>
@@ -463,7 +463,7 @@
 <span class="co">#&gt;  8 5966. 5974. 1001144317.         335   336</span>
 <span class="co">#&gt;  9 8173. 8181. 1291712250.         461   462</span>
 <span class="co">#&gt; 10 7998. 8006. 1267954026.         451   452</span>
-<span class="co">#&gt; # ... with 25 more rows</span>
+<span class="co">#&gt; # … with 25 more rows</span>
 
 <span class="co">## linear mixed effects model (model summaries across grouping combinations)</span>
 <span class="fu"><a href="reference/grouped_glance.html">grouped_glance</a></span><span class="op">(</span>
@@ -473,14 +473,14 @@
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
   control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html" class="external-link">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 5 x 7</span>
-<span class="co">#&gt;   cut       sigma  logLik     AIC     BIC REMLcrit df.residual</span>
-<span class="co">#&gt;   &lt;ord&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;</span>
-<span class="co">#&gt; 1 Fair      1830.  -7257.  14525.  14548.   14515.         806</span>
-<span class="co">#&gt; 2 Good      1373. -21027.  42064.  42093.   42054.        2425</span>
-<span class="co">#&gt; 3 Very Good 1362. -51577. 103165. 103198.  103155.        5964</span>
-<span class="co">#&gt; 4 Premium   1557. -60736. 121482. 121516.  121472.        6917</span>
-<span class="co">#&gt; 5 Ideal     1257. -92766. 185542. 185579.  185532.       10833</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 5 × 8</span>
+<span class="co">#&gt;   cut        nobs sigma  logLik     AIC     BIC REMLcrit df.residual</span>
+<span class="co">#&gt;   &lt;ord&gt;     &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;int&gt;</span>
+<span class="co">#&gt; 1 Fair        811 1830.  -7257.  14525.  14548.   14515.         806</span>
+<span class="co">#&gt; 2 Good       2430 1373. -21027.  42064.  42093.   42054.        2425</span>
+<span class="co">#&gt; 3 Very Good  5969 1362. -51577. 103165. 103198.  103155.        5964</span>
+<span class="co">#&gt; 4 Premium    6922 1557. -60736. 121482. 121516.  121472.        6917</span>
+<span class="co">#&gt; 5 Ideal     10838 1257. -92766. 185542. 185579.  185532.       10833</span></code></pre></div>
 </div>
 <div class="section level4">
 <h4 id="grouped_augment">
@@ -497,7 +497,7 @@
   ..f <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span>,
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">-</span> <span class="fl">1</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 53,940 x 10</span>
+<span class="co">#&gt; # A tibble: 53,940 × 10</span>
 <span class="co">#&gt;    cut   color price carat .fitted .resid    .hat .sigma  .cooksd .std.resid</span>
 <span class="co">#&gt;    &lt;ord&gt; &lt;ord&gt; &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 Fair  D      2848  0.75   3795.  -947. 0.00342  1822. 0.000933     -0.522</span>
@@ -510,7 +510,7 @@
 <span class="co">#&gt;  8 Fair  D      3079  0.91   4605. -1526. 0.00503  1820. 0.00358      -0.841</span>
 <span class="co">#&gt;  9 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744</span>
 <span class="co">#&gt; 10 Fair  D      3205  0.9    4554. -1349. 0.00492  1821. 0.00274      -0.744</span>
-<span class="co">#&gt; # ... with 53,930 more rows</span>
+<span class="co">#&gt; # … with 53,930 more rows</span>
 
 <span class="co">## linear mixed-effects model</span>
 <span class="fu"><a href="reference/grouped_augment.html">grouped_augment</a></span><span class="op">(</span>
@@ -520,7 +520,7 @@
   formula <span class="op">=</span> <span class="va">price</span> <span class="op">~</span> <span class="va">carat</span> <span class="op">+</span> <span class="op">(</span><span class="va">carat</span> <span class="op">|</span> <span class="va">color</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span>,
   control <span class="op">=</span> <span class="fu">lme4</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmerControl.html" class="external-link">lmerControl</a></span><span class="op">(</span>optimizer <span class="op">=</span> <span class="st">"bobyqa"</span><span class="op">)</span>
 <span class="op">)</span>
-<span class="co">#&gt; # A tibble: 26,970 x 15</span>
+<span class="co">#&gt; # A tibble: 26,970 × 15</span>
 <span class="co">#&gt;    cut   price carat color .fitted .resid    .hat   .cooksd .fixed   .mu .offset</span>
 <span class="co">#&gt;    &lt;ord&gt; &lt;int&gt; &lt;dbl&gt; &lt;ord&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;</span>
 <span class="co">#&gt;  1 Fair   8818  1.52 H       7001.  1817. 0.00806 0.00837    3519. 7001.       0</span>
@@ -545,13 +545,13 @@
 <span class="co">#&gt;  8        1        1        1  -183.</span>
 <span class="co">#&gt;  9        1        1        1  -448.</span>
 <span class="co">#&gt; 10        1        1        1 -1618.</span>
-<span class="co">#&gt; # ... with 26,960 more rows</span></code></pre></div>
+<span class="co">#&gt; # … with 26,960 more rows</span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
 <h2 id="acknowledgments">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>
 </h2>
-<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <a href="https://broom.tidymodels.org/" class="external-link">broom</a>- and <code>{easystats}</code>-package families who have indulged in all my feature requests. 😄</p>
+<p>The hexsticker was generously designed by Sarah Otterstetter (Max Planck Institute for Human Development, Berlin). Thanks are also due to the maintainers and contributors to <a href="https://broom.tidymodels.org/" class="external-link">broom</a>- and <code>{easystats}</code>-package families who have indulged in all my feature requests!</p>
 </div>
 
   </main><aside class="col-md-3"><div class="links">
