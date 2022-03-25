@@ -25,10 +25,10 @@ Depends:
     R (>= 3.6.0)
 Imports: 
     broom,
-    broom.mixed,
+    broom.mixed (>= 0.2.9.2),
     dplyr,
     magrittr,
-    parameters (>= 0.15.0),
+    parameters (>= 0.17.0),
     performance (>= 0.8.0),
     rlang
 Suggests: 
@@ -39,6 +39,8 @@ Suggests:
     rmarkdown,
     spelling,
     testthat
+Remotes:
+    bbolker/broom.mixed
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate", "pkgapi::api_roclet"))

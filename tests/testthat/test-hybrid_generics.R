@@ -21,12 +21,12 @@ test_that(
     lmm_glance <- glance_performance(lmm_mod, effects = "fixed")
     expect_equal(nrow(lmm_glance), 1)
     ## allow for nobs to be included in later versions of broom.mixed
-    expect_true(ncol(lmm_glance) %in% c(10,11))
+    expect_true(ncol(lmm_glance) %in% c(10, 11))
 
     # lm
     set.seed(123)
     lm_mod <- lm(Reaction ~ Days, sleepstudy)
-    df_lm <- tidy_parameters(lm_mod, robust = TRUE)
+    df_lm <- tidy_parameters(lm_mod, vcov = TRUE)
 
     # test
     expect_equal(df_lm$estimate[1], 251.4051, tolerance = 0.001)

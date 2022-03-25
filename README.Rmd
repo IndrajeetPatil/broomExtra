@@ -281,4 +281,4 @@ grouped_augment(
 The hexsticker was generously designed by Sarah Otterstetter (Max Planck
 Institute for Human Development, Berlin). Thanks are also due to the maintainers
 and contributors to `{broom}`- and `{easystats}`-package families who have indulged
-in all my feature requests. `r emo::ji("smile")`
+in all my feature requests!

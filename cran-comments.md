@@ -1,8 +1,8 @@
 ## Test environments
 
-* local OS X install, R 4.1.1
+* local OS X install, R 4.1.2
 
-* ubuntu 14.04 (on github-actions), R 4.1.1
+* ubuntu 14.04 (on github-actions), R 4.1.2
 
 * win-builder (devel and release)
 
@@ -10,7 +10,7 @@
 
 0 errors | 0 warnings | 0 note
 
-  - Maintenance release.
+  - Fixes tests for `{broom.mixed}` package update.
 
 ## revdepcheck results
 

@@ -1,4 +1,6 @@
-# broomExtra 4.3.0.9000
+# broomExtra 4.3.1
+
+- Fixes tests for `{broom.mixed}` package update.
 
 # broomExtra 4.3.0
 
