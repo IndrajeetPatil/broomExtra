@@ -1,8 +1,8 @@
-pandoc: 2.16.2
-pkgdown: 1.9000.9000.9000
-pkgdown_sha: 38fca24beac66f50d8fa3f35d710b5cc358a8010
+pandoc: 2.14.2
+pkgdown: 2.0.2.9000
+pkgdown_sha: 98d5a5c735eb244cb98b2e6bab1d54bb27c0af95
 articles: {}
-last_built: 2021-11-29T18:46Z
+last_built: 2022-03-28T13:59Z
 urls:
   reference: https://indrajeetpatil.github.io/broomExtra/reference
   article: https://indrajeetpatil.github.io/broomExtra/articles
