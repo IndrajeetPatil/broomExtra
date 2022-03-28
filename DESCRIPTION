@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 4.3.0.9000
+Version: 4.3.1
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -25,7 +25,7 @@ Depends:
     R (>= 3.6.0)
 Imports: 
     broom,
-    broom.mixed (>= 0.2.9.2),
+    broom.mixed (>= 0.2.9.3),
     dplyr,
     magrittr,
     parameters (>= 0.17.0),
@@ -39,8 +39,6 @@ Suggests:
     rmarkdown,
     spelling,
     testthat
-Remotes:
-    bbolker/broom.mixed
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate", "pkgapi::api_roclet"))
