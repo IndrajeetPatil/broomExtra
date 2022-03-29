@@ -10,7 +10,7 @@
 
 0 errors | 0 warnings | 0 note
 
-  - Fixes tests for `{broom.mixed}` package update.
+  - Fixes tests for `{performance}` package update.
 
 ## revdepcheck results
 

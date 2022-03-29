@@ -1,3 +1,7 @@
+# broomExtra 4.3.2
+
+- Fixes tests for `{performance}` package update.
+
 # broomExtra 4.3.1
 
 - Fixes tests for `{broom.mixed}` package update.

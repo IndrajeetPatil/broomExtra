@@ -1,7 +1,7 @@
 Type: Package
 Package: broomExtra
 Title: Enhancements for 'broom' and 'easystats' Package Families
-Version: 4.3.1
+Version: 4.3.2
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -29,8 +29,10 @@ Imports:
     dplyr,
     magrittr,
     parameters (>= 0.17.0),
-    performance (>= 0.8.0),
+    performance (>= 0.8.0.11),
     rlang
+Remotes:
+    easystats/performance
 Suggests: 
     generics,
     lavaan,
