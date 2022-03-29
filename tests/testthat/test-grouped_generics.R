@@ -29,9 +29,6 @@ test_that(
         tidy.args = list(conf.int = TRUE, conf.level = 0.99)
       )
 
-    expect_equal(dim(lmer_df), c(8L, 9L))
-    expect_equal(dim(lm_df), c(4L, 8L))
-
     expect_snapshot(list(lmer_df, lm_df))
   }
 )
@@ -65,11 +62,6 @@ test_that(
         formula = interval ~ age
       )
 
-    expect_equal(nrow(lmer_df), 2)
-    ## allow for nobs to be included in later versions of broom.mixed
-    expect_true(ncol(lmer_df) %in% c(7, 8))
-    expect_equal(dim(lm_df)[1], 2L)
-
     expect_snapshot(list(lmer_df, lm_df))
   }
 )
@@ -102,7 +94,7 @@ test_that(
         formula = interval ~ age
       )
 
-    expect_equal(dim(lmer_df), c(2843L, 15L))
+    expect_equal(dim(lmer_df)[1], 2843L)
     expect_equal(dim(lm_df)[1], 2843L)
   }
 )
