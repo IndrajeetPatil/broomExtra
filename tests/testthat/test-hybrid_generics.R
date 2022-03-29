@@ -9,31 +9,20 @@ test_that(
     # merMord
     set.seed(123)
     lmm_mod <- lmer(Reaction ~ Days + (Days | Subject), sleepstudy)
-    df_lmm <- tidy_parameters(lmm_mod, effects = "fixed")
+    lmm_tidy <- tidy_parameters(lmm_mod, effects = "fixed")
+    lmm_glance <- glance_performance(lmm_mod)
 
-    # test
-    expect_equal(
-      df_lmm$estimate,
-      c(251.40510, 10.46729),
-      tolerance = 0.001
-    )
-
-    lmm_glance <- glance_performance(lmm_mod, effects = "fixed")
-    expect_equal(nrow(lmm_glance), 1)
-    ## allow for nobs to be included in later versions of broom.mixed
-    expect_true(ncol(lmm_glance) %in% c(10, 11))
+    expect_snapshot(lmm_tidy)
+    expect_snapshot(lmm_glance)
 
     # lm
     set.seed(123)
     lm_mod <- lm(Reaction ~ Days, sleepstudy)
-    df_lm <- tidy_parameters(lm_mod, vcov = TRUE)
+    lm_tidy <- tidy_parameters(lm_mod, vcov = TRUE)
+    lm_glance <- glance_performance(lm_mod)
 
-    # test
-    expect_equal(df_lm$estimate[1], 251.4051, tolerance = 0.001)
-
-    expect_equal(
-      dim(glance_performance(lm_mod, effects = "fixed"))[[1]], 1L
-    )
+    expect_snapshot(lm_tidy)
+    expect_snapshot(lm_glance)
 
     # setup
     set.seed(123)
