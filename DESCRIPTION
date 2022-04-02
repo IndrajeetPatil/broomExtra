@@ -29,10 +29,8 @@ Imports:
     dplyr,
     magrittr,
     parameters (>= 0.17.0),
-    performance (>= 0.8.0.11),
+    performance (>= 0.9.0),
     rlang
-Remotes:
-    easystats/performance
 Suggests: 
     generics,
     lavaan,
