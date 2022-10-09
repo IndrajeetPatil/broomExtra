@@ -1,3 +1,7 @@
+# broomExtra 5.0.0
+
+- Archived on CRAN and deprecated in favour of [easystats](https://easystats.github.io/easystats/) project.
+
 # broomExtra 4.3.2
 
 - Fixes tests for `{performance}` package update.
