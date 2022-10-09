@@ -49,18 +49,6 @@ test_that(
       tidy_parameters(mod_lavaan, effects = "fixed", exponentiate = TRUE)
     )
 
-    # p-value check
-    library(MASS)
-    set.seed(123)
-    mod <- rlm(stack.loss ~ ., stackloss)
-    df_rlm <- tidy_parameters(mod)
-    df <- suppressMessages(suppressWarnings(tidy_parameters(tidy(mod))))
-
-    # test
-    expect_snapshot(df_rlm)
-    expect_equal(dim(df_rlm)[[1]], 4L)
-    expect_s3_class(df, "tbl_df")
-
     # model (not covered by easystats but covered by broom)
     expect_equal(
       dim(suppressWarnings(broomExtra::tidy_parameters(acf(lh, plot = FALSE)))),

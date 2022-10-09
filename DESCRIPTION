@@ -37,10 +37,9 @@ Suggests:
     lme4,
     MASS,
     rmarkdown,
-    spelling,
     testthat
 Encoding: UTF-8
 Language: en-US
-Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate", "pkgapi::api_roclet"))
-RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
+RoxygenNote: 7.2.1
 Config/testthat/edition: 3
